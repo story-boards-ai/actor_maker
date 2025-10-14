@@ -41,3 +41,31 @@ export interface StyleRegistry {
   last_synced: string;
   styles: Style[];
 }
+
+export interface Actor {
+  id: number;
+  img: string;
+  age: string;
+  sex: string;
+  ethnicity: string;
+  face_prompt: string;
+  name: string;
+  image: string;
+  outfit: string;
+  poster_frames: {
+    standard: {
+      webp_sm: string;
+      webp_md: string;
+      webp_lg: string;
+      png: string;
+    };
+    accelerated: {
+      webp_sm: string;
+      webp_md: string;
+      webp_lg: string;
+      png: string;
+    };
+  };
+  description: string;
+  url: string;
+}

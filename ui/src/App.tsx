@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
-import { StylesGrid } from "./components/StylesGrid";
+import { ActorsGrid } from "./components/ActorsGrid";
 import { PromptEditor } from "./components/PromptEditor";
 import { CaptionEditor } from "./components/CaptionEditor";
 import { ImageGenerator } from "./components/ImageGenerator";
@@ -11,7 +11,7 @@ import { TrainingDataManager } from "./components/TrainingDataManager";
 import { TrainingDataS3Manager } from "./components/TrainingDataS3Manager";
 import { LoRATrainingTab } from "./components/LoRATrainingTab";
 import { Validator } from "./components/Validator/Validator";
-import { toast, Toaster } from "sonner";
+import { Toaster } from "sonner";
 import { ExportToBackendButton } from "./components/ExportToBackendButton";
 
 interface TrainingTab {
@@ -58,7 +58,7 @@ function App() {
 
   const handleCloseTrainingTab = () => {
     setTrainingTab(null);
-    setActiveTab("tab1"); // Go back to Style Library
+    setActiveTab("tab1"); // Go back to Actors Library
   };
 
   const handleOpenTrainingManager = (style: Style) => {
@@ -73,7 +73,7 @@ function App() {
 
   const handleCloseTrainingManager = () => {
     setTrainingManagerTab(null);
-    setActiveTab("tab1"); // Go back to Style Library
+    setActiveTab("tab1"); // Go back to Actors Library
   };
 
   const handleOpenS3Manager = (style: Style) => {
@@ -88,7 +88,7 @@ function App() {
 
   const handleCloseS3Manager = () => {
     setS3ManagerTab(null);
-    setActiveTab("tab1"); // Go back to Style Library
+    setActiveTab("tab1"); // Go back to Actors Library
   };
 
 
@@ -97,9 +97,9 @@ function App() {
       <Toaster position="top-right" richColors />
       <header className="header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <h1>Styles Maker</h1>
+          <h1>Actors Maker</h1>
           <span className="header-separator">•</span>
-          <p>LoRA style model training and image generation toolkit</p>
+          <p>LoRA actor model training and image generation toolkit</p>
         </div>
         <ExportToBackendButton />
       </header>
@@ -109,9 +109,9 @@ function App() {
         value={activeTab}
         onValueChange={setActiveTab}
       >
-        <Tabs.List className="TabsList" aria-label="Manage your styles">
+        <Tabs.List className="TabsList" aria-label="Manage your actors">
           <Tabs.Trigger className="TabsTrigger" value="tab1">
-            Style Library
+            Actors Library
           </Tabs.Trigger>
           <Tabs.Trigger className="TabsTrigger" value="tab2">
             Prompt Editor
@@ -192,11 +192,7 @@ function App() {
         </Tabs.List>
 
         <Tabs.Content className="TabsContent" value="tab1">
-          <StylesGrid
-            onOpenTrainingTab={handleOpenTrainingTab}
-            onOpenTrainingManager={handleOpenTrainingManager}
-            onOpenS3Manager={handleOpenS3Manager}
-          />
+          <ActorsGrid />
         </Tabs.Content>
 
         <Tabs.Content className="TabsContent" value="tab2">
