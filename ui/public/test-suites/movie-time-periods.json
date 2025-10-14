@@ -1,0 +1,248 @@
+{
+  "id": "movie-time-periods-v1",
+  "name": "Movie Time Periods",
+  "description": "40 diverse movie scenes spanning from prehistoric times to 2020s cinema, including ancient civilizations, medieval periods, and modern film eras",
+  "version": "1.0",
+  "prompts": [
+    {
+      "id": "tp-01",
+      "prompt": "Prehistoric caveman hunting woolly mammoth with stone spear, ice age landscape, dramatic clash, early human survival struggle",
+      "category": "prehistoric",
+      "description": "Prehistoric epic - human vs nature"
+    },
+    {
+      "id": "tp-02",
+      "prompt": "Ancient Egyptian pharaoh on golden throne, massive stone columns with hieroglyphics, servants with palm fans, grand palace interior, Cecil B. DeMille style",
+      "category": "ancient-egypt",
+      "description": "Ancient Egyptian epic grandeur"
+    },
+    {
+      "id": "tp-03",
+      "prompt": "Roman gladiator standing in Colosseum arena, sword and shield raised, crowd of spectators in background, dramatic ancient Rome spectacle",
+      "category": "ancient-rome",
+      "description": "Roman gladiator combat scene"
+    },
+    {
+      "id": "tp-04",
+      "prompt": "Roman legion marching in formation, shields and spears aligned, dusty road through conquered territory, empire expansion epic",
+      "category": "ancient-rome",
+      "description": "Roman military might"
+    },
+    {
+      "id": "tp-05",
+      "prompt": "Greek philosopher teaching students in marble columned forum, togas and sandals, Athens backdrop, golden hour lighting, classical antiquity",
+      "category": "ancient-greece",
+      "description": "Ancient Greek philosophy scene"
+    },
+    {
+      "id": "tp-06",
+      "prompt": "Spartan warrior with bronze helmet and red cape on battlefield, spear in hand, dramatic hero pose, 300-style aesthetic",
+      "category": "ancient-greece",
+      "description": "Spartan warrior battle moment"
+    },
+    {
+      "id": "tp-07",
+      "prompt": "Viking longship sailing through stormy seas, dragon figurehead prominent, warriors with axes and shields, Nordic conquest voyage",
+      "category": "viking-age",
+      "description": "Viking seafaring adventure"
+    },
+    {
+      "id": "tp-08",
+      "prompt": "Medieval knight in full armor on horseback, jousting lance ready, castle tournament grounds, colorful heraldic banners flying",
+      "category": "medieval",
+      "description": "Medieval jousting tournament"
+    },
+    {
+      "id": "tp-09",
+      "prompt": "King Arthur and Knights of the Round Table in candlelit castle hall, swords on table, medieval feast setting, Excalibur visible",
+      "category": "medieval",
+      "description": "Arthurian legend gathering"
+    },
+    {
+      "id": "tp-10",
+      "prompt": "Peasant village under siege, archers on castle walls, battering ram approaching gate, medieval warfare chaos",
+      "category": "medieval",
+      "description": "Medieval siege warfare"
+    },
+    {
+      "id": "tp-11",
+      "prompt": "Joan of Arc in armor holding banner, leading army across battlefield, divine light breaking through clouds, epic medieval heroism",
+      "category": "medieval",
+      "description": "Medieval religious warrior"
+    },
+    {
+      "id": "tp-12",
+      "prompt": "Renaissance artist's studio, painter working on masterpiece, elaborate period costumes, Florence interior, natural window light, 15th century Italy",
+      "category": "renaissance",
+      "description": "Renaissance artistic setting"
+    },
+    {
+      "id": "tp-13",
+      "prompt": "Pirate captain standing on ship deck, tricorn hat and long coat, treasure map in hand, Caribbean seas, 1700s golden age of piracy",
+      "category": "1700s-pirates",
+      "description": "18th century pirate adventure"
+    },
+    {
+      "id": "tp-14",
+      "prompt": "Colonial American Revolution battle, minutemen firing muskets behind stone wall, British redcoats advancing, 1770s historical war scene",
+      "category": "1700s-colonial",
+      "description": "Revolutionary War battle"
+    },
+    {
+      "id": "tp-15",
+      "prompt": "Baroque ballroom dance in palace of Versailles, elaborate powdered wigs and silk gowns, chandeliers glowing, 1700s French aristocracy",
+      "category": "1700s-baroque",
+      "description": "18th century royal court opulence"
+    },
+    {
+      "id": "tp-16",
+      "prompt": "Wild West gunslinger showdown on dusty main street, high noon sun, tumbleweeds rolling, classic 1800s Western duel",
+      "category": "1800s-western",
+      "description": "Classic Western standoff"
+    },
+    {
+      "id": "tp-17",
+      "prompt": "Victorian London street at night, gas lamps glowing in fog, horse-drawn carriage, Sherlock Holmes era detective atmosphere, 1800s mystery",
+      "category": "1800s-victorian",
+      "description": "Victorian detective setting"
+    },
+    {
+      "id": "tp-18",
+      "prompt": "Civil War battlefield, Union and Confederate soldiers clashing, cannon smoke, tattered flags, 1860s American conflict drama",
+      "category": "1800s-civil-war",
+      "description": "American Civil War battle"
+    },
+    {
+      "id": "tp-19",
+      "prompt": "Victorian-era scientist in laboratory with bubbling beakers and electrical equipment, steampunk aesthetic, 1890s scientific discovery",
+      "category": "1800s-victorian",
+      "description": "Victorian science fiction"
+    },
+    {
+      "id": "tp-20",
+      "prompt": "A woman tied to railroad tracks, dramatic hand gesture of distress, wide-eyed expression, black and white silent film style, 1920s aesthetic",
+      "category": "1920s-silent",
+      "description": "Silent era melodrama - damsel in distress"
+    },
+    {
+      "id": "tp-21",
+      "prompt": "Charlie Chaplin-style tramp character with bowler hat and cane, comedic stumbling pose, street corner backdrop, black and white silent film",
+      "category": "1920s-silent",
+      "description": "Silent comedy character moment"
+    },
+    {
+      "id": "tp-22",
+      "prompt": "Sophisticated couple in Art Deco nightclub, elegant 1930s formal wear, champagne glasses raised, glamorous Hollywood golden age lighting",
+      "category": "1930s-golden-age",
+      "description": "Pre-Code Hollywood glamour"
+    },
+    {
+      "id": "tp-23",
+      "prompt": "Gangster in pinstripe suit and fedora standing beside vintage 1930s car, tommy gun visible, prohibition era atmosphere",
+      "category": "1930s-golden-age",
+      "description": "Classic gangster film aesthetic"
+    },
+    {
+      "id": "tp-24",
+      "prompt": "World War II bomber cockpit interior, pilot in leather jacket and aviator goggles, dramatic clouds visible through windscreen, 1940s war film",
+      "category": "1940s-war-noir",
+      "description": "WWII aviation drama"
+    },
+    {
+      "id": "tp-25",
+      "prompt": "Femme fatale in evening gown emerging from shadows, cigarette smoke curling, venetian blind shadows on wall, 1940s film noir aesthetic",
+      "category": "1940s-war-noir",
+      "description": "Classic noir femme fatale entrance"
+    },
+    {
+      "id": "tp-26",
+      "prompt": "Rebel teenager in leather jacket leaning against 1950s hot rod, pompadour hairstyle, small town main street, James Dean inspired",
+      "category": "1950s-americana",
+      "description": "1950s rebellious youth culture"
+    },
+    {
+      "id": "tp-27",
+      "prompt": "Happy suburban family at dinner table, pastel kitchen, mother in apron, father in suit, idealized 1950s Technicolor aesthetic",
+      "category": "1950s-americana",
+      "description": "Idealized 1950s family values"
+    },
+    {
+      "id": "tp-28",
+      "prompt": "Epic biblical scene with Moses parting the Red Sea, thousands of extras, grand 1950s Cinemascope spectacle, vivid Technicolor",
+      "category": "1950s-epics",
+      "description": "Biblical epic grandeur"
+    },
+    {
+      "id": "tp-29",
+      "prompt": "Hippie protesters with peace signs and flowers, colorful 1960s counterculture fashion, Vietnam era demonstration, documentary-style realism",
+      "category": "1960s-new-wave",
+      "description": "1960s social revolution scene"
+    },
+    {
+      "id": "tp-30",
+      "prompt": "Mod fashion couple in psychedelic London club, vibrant colors, go-go dancers, 1960s swinging sixties aesthetic, stylized composition",
+      "category": "1960s-new-wave",
+      "description": "Swinging Sixties pop culture"
+    },
+    {
+      "id": "tp-31",
+      "prompt": "Mafia family gathering around dinner table, 1970s Italian-American setting, warm lighting, powerful patriarch at head of table",
+      "category": "1970s-new-hollywood",
+      "description": "1970s crime family drama"
+    },
+    {
+      "id": "tp-32",
+      "prompt": "Vietnam War soldier in jungle, exhausted expression, monsoon rain, gritty 1970s war film realism, handheld camera aesthetic",
+      "category": "1970s-new-hollywood",
+      "description": "Gritty 1970s war realism"
+    },
+    {
+      "id": "tp-33",
+      "prompt": "Disco dance floor with mirrored ball reflections, colorful platform shoes and bell-bottoms, 1970s Saturday Night Fever style energy",
+      "category": "1970s-disco",
+      "description": "Disco era dance sequence"
+    },
+    {
+      "id": "tp-34",
+      "prompt": "Neon-lit cyberpunk cityscape, flying cars, rain-soaked streets reflecting advertisements, 1980s Blade Runner inspired aesthetic",
+      "category": "1980s-blockbusters",
+      "description": "1980s sci-fi dystopia"
+    },
+    {
+      "id": "tp-35",
+      "prompt": "Muscular action hero with machine gun, explosive background, dramatic 1980s action movie pose, high-key lighting and saturated colors",
+      "category": "1980s-blockbusters",
+      "description": "1980s action hero moment"
+    },
+    {
+      "id": "tp-36",
+      "prompt": "Suburban teens in mall food court, big hair and bright 1980s fashion, arcade machines visible, John Hughes film aesthetic",
+      "category": "1980s-teen",
+      "description": "1980s teen comedy setting"
+    },
+    {
+      "id": "tp-37",
+      "prompt": "Yuppie businessman in power suit with brick-sized cell phone, Wall Street trading floor chaos, 1980s corporate excess",
+      "category": "1980s-wall-street",
+      "description": "1980s corporate greed era"
+    },
+    {
+      "id": "tp-38",
+      "prompt": "Grunge musician on stage, flannel shirt and ripped jeans, Seattle dive bar, 1990s alternative rock aesthetic, moody lighting",
+      "category": "1990s-indie",
+      "description": "1990s grunge culture moment"
+    },
+    {
+      "id": "tp-39",
+      "prompt": "The Matrix-style bullet time shot, character dodging in slow motion, digital rain code in background, late 1990s digital revolution",
+      "category": "1990s-digital",
+      "description": "Late 90s digital cinematography"
+    },
+    {
+      "id": "tp-40",
+      "prompt": "Superhero landing pose in destroyed city street, dramatic CGI effects, 2010s Marvel Cinematic Universe style, dynamic composition",
+      "category": "2010s-superhero",
+      "description": "2010s superhero spectacle"
+    }
+  ]
+}

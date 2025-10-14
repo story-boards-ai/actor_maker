@@ -1,0 +1,375 @@
+{
+  "input": {
+    "workflow": {
+      "2": {
+        "inputs": {
+          "transformer": "flux1-dev-fp8.safetensors",
+          "vae": "ae.safetensors",
+          "clip_l": "clip_l.safetensors",
+          "t5": "t5xxl_fp8.safetensors"
+        },
+        "class_type": "FluxTrainModelSelect",
+        "_meta": {
+          "title": "FluxTrain ModelSelect"
+        }
+      },
+      "4": {
+        "inputs": {
+          "steps": 3600,
+          "network_trainer": [
+            "107",
+            0
+          ]
+        },
+        "class_type": "FluxTrainLoop",
+        "_meta": {
+          "title": "Flux Train Loop"
+        }
+      },
+      "14": {
+        "inputs": {
+          "save_state": false,
+          "copy_to_comfy_lora_folder": false,
+          "network_trainer": [
+            "4",
+            0
+          ]
+        },
+        "class_type": "FluxTrainSave",
+        "_meta": {
+          "title": "Flux Train Save LoRA"
+        }
+      },
+      "37": {
+        "inputs": {
+          "steps": 2,
+          "width": 1024,
+          "height": 1024,
+          "guidance_scale": 3,
+          "seed": 42,
+          "shift": true,
+          "base_shift": 0.5,
+          "max_shift": 1.15
+        },
+        "class_type": "FluxTrainValidationSettings",
+        "_meta": {
+          "title": "Flux Train Validation Settings"
+        }
+      },
+      "88": {
+        "inputs": {
+          "output": "",
+          "source": [
+            "107",
+            1
+          ]
+        },
+        "class_type": "Display Any (rgthree)",
+        "_meta": {
+          "title": "Number of epochs"
+        }
+      },
+      "95": {
+        "inputs": {
+          "optimizer_type": "adamw8bit",
+          "max_grad_norm": 1,
+          "lr_scheduler": "cosine_with_restarts",
+          "lr_warmup_steps": 0,
+          "lr_scheduler_num_cycles": 3,
+          "lr_scheduler_power": 1,
+          "min_snr_gamma": 5,
+          "extra_optimizer_args": ""
+        },
+        "class_type": "OptimizerConfig",
+        "_meta": {
+          "title": "Optimizer Config"
+        }
+      },
+      "97": {
+        "inputs": {
+          "plot_style": "seaborn-v0_8-dark-palette",
+          "window_size": 100,
+          "normalize_y": true,
+          "width": 768,
+          "height": 512,
+          "log_scale": false,
+          "network_trainer": [
+            "4",
+            0
+          ]
+        },
+        "class_type": "VisualizeLoss",
+        "_meta": {
+          "title": "Visualize Loss"
+        }
+      },
+      "98": {
+        "inputs": {
+          "filename_prefix": "flux_lora_loss_plot",
+          "images": [
+            "97",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "Save Image"
+        }
+      },
+      "105": {
+        "inputs": {
+          "output": "",
+          "source": [
+            "107",
+            2
+          ]
+        },
+        "class_type": "Display Any (rgthree)",
+        "_meta": {
+          "title": "Display Any (rgthree)"
+        }
+      },
+      "107": {
+        "inputs": {
+          "output_name": "flux_lora_file_name",
+          "output_dir": "/model_output",
+          "network_dim": 16,
+          "network_alpha": 16,
+          "learning_rate": 0.0003,
+          "max_train_steps": 3600,
+          "apply_t5_attn_mask": true,
+          "cache_latents": "memory",
+          "cache_text_encoder_outputs": "memory",
+          "blocks_to_swap": 0,
+          "weighting_scheme": "logit_normal",
+          "logit_mean": 0,
+          "logit_std": 1,
+          "mode_scale": 1.29,
+          "timestep_sampling": "shift",
+          "sigmoid_scale": 1,
+          "model_prediction_type": "raw",
+          "guidance_scale": 1,
+          "discrete_flow_shift": 3.1582000000000003,
+          "highvram": true,
+          "fp8_base": true,
+          "gradient_dtype": "bf16",
+          "save_dtype": "bf16",
+          "attention_mode": "sdpa",
+          "sample_prompts": [
+            "146",
+            0
+          ],
+          "additional_args": "",
+          "train_text_encoder": "disabled",
+          "clip_l_lr": 0,
+          "T5_lr": 0,
+          "gradient_checkpointing": "enabled",
+          "flux_models": [
+            "2",
+            0
+          ],
+          "dataset": [
+            "109",
+            0
+          ],
+          "optimizer_settings": [
+            "95",
+            0
+          ]
+        },
+        "class_type": "InitFluxLoRATraining",
+        "_meta": {
+          "title": "Init Flux LoRA Training"
+        }
+      },
+      "108": {
+        "inputs": {
+          "color_aug": false,
+          "flip_aug": false,
+          "shuffle_caption": false,
+          "caption_dropout_rate": 0,
+          "alpha_mask": false,
+          "reset_on_queue": false,
+          "caption_extension": ".txt"
+        },
+        "class_type": "TrainDatasetGeneralConfig",
+        "_meta": {
+          "title": "TrainDatasetGeneralConfig"
+        }
+      },
+      "109": {
+        "inputs": {
+          "width": 512,
+          "height": 512,
+          "batch_size": 2,
+          "dataset_path": "/training_data",
+          "class_tokens": "style SBai_style_2",
+          "enable_bucket": true,
+          "bucket_no_upscale": false,
+          "num_repeats": 1,
+          "min_bucket_reso": 256,
+          "max_bucket_reso": 1024,
+          "dataset_config": [
+            "108",
+            0
+          ]
+        },
+        "class_type": "TrainDatasetAdd",
+        "_meta": {
+          "title": "Train 512x512 Dataset"
+        }
+      },
+      "133": {
+        "inputs": {
+          "save_state": false,
+          "network_trainer": [
+            "14",
+            0
+          ]
+        },
+        "class_type": "FluxTrainEnd",
+        "_meta": {
+          "title": "Flux LoRA Train End"
+        }
+      },
+      "146": {
+        "inputs": {
+          "string": "portrait of a young woman, style SBai_style_2|a young woman walking in New York at night, style SBai_style_2|a woman wearing a colorful outfit on a tropical beach, style SBai_style_2|portrait of a young woman wearing a leather jacket in New York at sunset, style SBai_style_2",
+          "strip_newlines": true
+        },
+        "class_type": "StringConstantMultiline",
+        "_meta": {
+          "title": "Prompts for Validation"
+        }
+      }
+    },
+    "training_data": {
+      "s3_urls": [
+        "s3://story-boards-assets/styles/2/a_night_to_remember_scene_1_shot_2_1.jpg",
+        "s3://story-boards-assets/styles/2/a_night_to_remember_scene_1_shot_2_1.txt",
+        "s3://story-boards-assets/styles/2/a_night_to_remember_scene_2_shot_1.jpg",
+        "s3://story-boards-assets/styles/2/a_night_to_remember_scene_2_shot_1.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_10.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_10.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_11.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_11.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_12.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_12.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_13.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_13.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_14.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_14.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_15.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_15.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_16.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_16.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_5.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_5.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_6.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_6.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_7.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_7.txt",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_8.jpg",
+        "s3://story-boards-assets/styles/2/abandoned_villa_exploration_scene_1_shot_8.txt",
+        "s3://story-boards-assets/styles/2/input_001_training.jpg",
+        "s3://story-boards-assets/styles/2/input_001_training.txt",
+        "s3://story-boards-assets/styles/2/input_002_training.jpg",
+        "s3://story-boards-assets/styles/2/input_002_training.txt",
+        "s3://story-boards-assets/styles/2/input_003_training.jpg",
+        "s3://story-boards-assets/styles/2/input_003_training.txt",
+        "s3://story-boards-assets/styles/2/input_005_training.jpg",
+        "s3://story-boards-assets/styles/2/input_005_training.txt",
+        "s3://story-boards-assets/styles/2/input_006_training.jpg",
+        "s3://story-boards-assets/styles/2/input_006_training.txt",
+        "s3://story-boards-assets/styles/2/input_007_training.jpg",
+        "s3://story-boards-assets/styles/2/input_007_training.txt",
+        "s3://story-boards-assets/styles/2/input_008_training.jpg",
+        "s3://story-boards-assets/styles/2/input_008_training.txt",
+        "s3://story-boards-assets/styles/2/input_010_training.jpg",
+        "s3://story-boards-assets/styles/2/input_010_training.txt",
+        "s3://story-boards-assets/styles/2/input_014_training.jpg",
+        "s3://story-boards-assets/styles/2/input_014_training.txt",
+        "s3://story-boards-assets/styles/2/input_073_training.jpg",
+        "s3://story-boards-assets/styles/2/input_073_training.txt",
+        "s3://story-boards-assets/styles/2/input_077_training.jpg",
+        "s3://story-boards-assets/styles/2/input_077_training.txt",
+        "s3://story-boards-assets/styles/2/input_079_training.jpg",
+        "s3://story-boards-assets/styles/2/input_079_training.txt",
+        "s3://story-boards-assets/styles/2/input_098_training.jpg",
+        "s3://story-boards-assets/styles/2/input_098_training.txt",
+        "s3://story-boards-assets/styles/2/input_099_training.jpg",
+        "s3://story-boards-assets/styles/2/input_099_training.txt",
+        "s3://story-boards-assets/styles/2/input_108_training.jpg",
+        "s3://story-boards-assets/styles/2/input_108_training.txt",
+        "s3://story-boards-assets/styles/2/input_110_training.jpg",
+        "s3://story-boards-assets/styles/2/input_110_training.txt",
+        "s3://story-boards-assets/styles/2/input_119_training.jpg",
+        "s3://story-boards-assets/styles/2/input_119_training.txt",
+        "s3://story-boards-assets/styles/2/input_121_training.jpg",
+        "s3://story-boards-assets/styles/2/input_121_training.txt",
+        "s3://story-boards-assets/styles/2/input_132_training.jpg",
+        "s3://story-boards-assets/styles/2/input_132_training.txt",
+        "s3://story-boards-assets/styles/2/input_136_training.jpg",
+        "s3://story-boards-assets/styles/2/input_136_training.txt",
+        "s3://story-boards-assets/styles/2/input_137_training.jpg",
+        "s3://story-boards-assets/styles/2/input_137_training.txt",
+        "s3://story-boards-assets/styles/2/input_153_training.jpg",
+        "s3://story-boards-assets/styles/2/input_153_training.txt",
+        "s3://story-boards-assets/styles/2/input_155_training.jpg",
+        "s3://story-boards-assets/styles/2/input_155_training.txt",
+        "s3://story-boards-assets/styles/2/input_161_training.jpg",
+        "s3://story-boards-assets/styles/2/input_161_training.txt",
+        "s3://story-boards-assets/styles/2/input_165_training.jpg",
+        "s3://story-boards-assets/styles/2/input_165_training.txt",
+        "s3://story-boards-assets/styles/2/input_177_training.jpg",
+        "s3://story-boards-assets/styles/2/input_177_training.txt",
+        "s3://story-boards-assets/styles/2/input_178_training.jpg",
+        "s3://story-boards-assets/styles/2/input_178_training.txt",
+        "s3://story-boards-assets/styles/2/input_188_training.jpg",
+        "s3://story-boards-assets/styles/2/input_188_training.txt",
+        "s3://story-boards-assets/styles/2/input_203_training.jpg",
+        "s3://story-boards-assets/styles/2/input_203_training.txt",
+        "s3://story-boards-assets/styles/2/input_210_training.jpg",
+        "s3://story-boards-assets/styles/2/input_210_training.txt",
+        "s3://story-boards-assets/styles/2/input_213_training.jpg",
+        "s3://story-boards-assets/styles/2/input_213_training.txt",
+        "s3://story-boards-assets/styles/2/input_214_training.jpg",
+        "s3://story-boards-assets/styles/2/input_214_training.txt",
+        "s3://story-boards-assets/styles/2/input_222_training.jpg",
+        "s3://story-boards-assets/styles/2/input_222_training.txt",
+        "s3://story-boards-assets/styles/2/input_241_training.jpg",
+        "s3://story-boards-assets/styles/2/input_241_training.txt",
+        "s3://story-boards-assets/styles/2/input_249_training.jpg",
+        "s3://story-boards-assets/styles/2/input_249_training.txt",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_1_1.jpg",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_1_1.txt",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_4.jpg",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_4.txt",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_5.jpg",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_5.txt",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_6.jpg",
+        "s3://story-boards-assets/styles/2/life_in_different_places_scene_1_shot_6.txt",
+        "s3://story-boards-assets/styles/2/queen_of_the_jungle_scene_1_shot_1.jpeg",
+        "s3://story-boards-assets/styles/2/queen_of_the_jungle_scene_1_shot_1.txt",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_3.jpg",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_3.txt",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_4.jpg",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_4.txt",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_5.jpg",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_5.txt",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_7_1.jpg",
+        "s3://story-boards-assets/styles/2/swiftcard_promotion_scene_1_shot_7_1.txt"
+      ]
+    },
+    "training_config": {
+      "mode": "custom-styles",
+      "user_id": "actor_maker_user",
+      "tenant_id": "actor_maker",
+      "request_id": "2_1760436196251",
+      "model_name": "style_2_vV2",
+      "learning_rate": 0.0003,
+      "max_train_steps": 3600
+    }
+  },
+  "webhook": "https://8b942449ac3e.ngrok-free.app/api/training-webhook"
+}

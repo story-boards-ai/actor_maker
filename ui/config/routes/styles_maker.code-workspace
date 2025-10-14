@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "../../.."
+	},
+	{
+		"path": "../../../../story-boards-backend"
+	},
+	{
+		"path": "../../../../story-boards-app"
+	},
+	{
+		"path": "../../../../character_model_training"
+	}
+],
+  "settings": {}
+}

@@ -1,0 +1,1553 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import fs from 'fs'
+import path from 'path'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    // Custom plugin to serve multiple directories
+    {
+      name: 'serve-multiple-dirs',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          // Serve styles_registry.json from ../data
+          if (req.url === '/styles_registry.json') {
+            const filePath = path.join(__dirname, '..', 'data', 'styles_registry.json')
+            if (fs.existsSync(filePath)) {
+              res.setHeader('Content-Type', 'application/json')
+              res.setHeader('Cache-Control', 'no-cache')
+              fs.createReadStream(filePath).pipe(res)
+              return
+            }
+          }
+          
+          // Serve workflows from ../workflows
+          if (req.url?.startsWith('/workflows/')) {
+            const filePath = path.join(__dirname, '..', req.url)
+            if (fs.existsSync(filePath)) {
+              res.setHeader('Content-Type', 'application/json')
+              fs.createReadStream(filePath).pipe(res)
+              return
+            }
+          }
+          
+          // Serve debug files from ../debug
+          if (req.url?.startsWith('/debug/')) {
+            // Remove query params for file path
+            const urlWithoutQuery = req.url.split('?')[0]
+            const decodedUrl = decodeURIComponent(urlWithoutQuery)
+            const filePath = path.join(__dirname, '..', decodedUrl)
+            
+            if (fs.existsSync(filePath)) {
+              const ext = path.extname(filePath).toLowerCase()
+              const contentTypes: Record<string, string> = {
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.png': 'image/png',
+                '.gif': 'image/gif',
+                '.webp': 'image/webp',
+                '.json': 'application/json'
+              }
+              res.setHeader('Content-Type', contentTypes[ext] || 'application/octet-stream')
+              // Aggressive no-cache headers
+              res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
+              res.setHeader('Pragma', 'no-cache')
+              res.setHeader('Expires', '0')
+              res.setHeader('Surrogate-Control', 'no-store')
+              fs.createReadStream(filePath).pipe(res)
+              return
+            }
+          }
+          
+          // Serve resources (images) from ../resources
+          if (req.url?.startsWith('/resources/')) {
+            // Remove query params for file path (e.g., ?v=123 for cache busting)
+            const urlWithoutQuery = req.url.split('?')[0]
+            // Decode URL to handle special characters in filenames
+            const decodedUrl = decodeURIComponent(urlWithoutQuery)
+            const filePath = path.join(__dirname, '..', decodedUrl)
+            
+            if (fs.existsSync(filePath)) {
+              // Set appropriate content type based on file extension
+              const ext = path.extname(filePath).toLowerCase()
+              const contentTypes: Record<string, string> = {
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.png': 'image/png',
+                '.gif': 'image/gif',
+                '.webp': 'image/webp',
+                '.avif': 'image/avif',
+                '.bmp': 'image/bmp',
+                '.svg': 'image/svg+xml'
+              }
+              res.setHeader('Content-Type', contentTypes[ext] || 'application/octet-stream')
+              
+              // Use no-cache for training images (they change frequently), cache others
+              if (decodedUrl.includes('_training.')) {
+                res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate')
+                res.setHeader('Pragma', 'no-cache')
+              } else {
+                res.setHeader('Cache-Control', 'public, max-age=31536000')
+              }
+              
+              fs.createReadStream(filePath).pipe(res)
+              return
+            }
+          }
+          
+          // Serve style poster images from public folder
+          if (req.url?.startsWith('/public/')) {
+            const decodedUrl = decodeURIComponent(req.url)
+            const filePath = path.join(__dirname, decodedUrl)
+            
+            if (fs.existsSync(filePath)) {
+              const ext = path.extname(filePath).toLowerCase()
+              const contentTypes: Record<string, string> = {
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.png': 'image/png',
+                '.gif': 'image/gif',
+                '.webp': 'image/webp',
+                '.avif': 'image/avif',
+                '.bmp': 'image/bmp',
+                '.svg': 'image/svg+xml'
+              }
+              res.setHeader('Content-Type', contentTypes[ext] || 'application/octet-stream')
+              res.setHeader('Cache-Control', 'public, max-age=31536000')
+              fs.createReadStream(filePath).pipe(res)
+              return
+            }
+          }
+          
+          // API endpoint to get training images for a specific style by ID and version
+          if (req.url?.startsWith('/api/styles/')) {
+            const styleMatch = req.url.match(/\/api\/styles\/(\d+)\/training-images\?version=(.+)/)
+            if (styleMatch) {
+              const styleId = styleMatch[1]
+              const version = styleMatch[2] // 'v1' or 'v2'
+              
+              // V2: Show baseline input images for all styles
+              if (version === 'v2') {
+                const inputImagesPath = path.join(__dirname, '..', 'resources', 'input_images')
+                
+                if (fs.existsSync(inputImagesPath) && fs.statSync(inputImagesPath).isDirectory()) {
+                  const files = fs.readdirSync(inputImagesPath)
+                    .filter(file => /\.(jpg|jpeg|png|gif|webp|avif|bmp)$/i.test(file))
+                    .sort() // Sort alphabetically
+                    .map(file => {
+                      const encodedFile = encodeURIComponent(file)
+                      const basename = file.replace(/\.[^.]+$/, '')
+                      const captionPath = path.join(inputImagesPath, `${basename}.txt`)
+                      const hasCaption = fs.existsSync(captionPath)
+                      
+                      return {
+                        filename: file,
+                        path: `/resources/input_images/${encodedFile}`,
+                        hasCaption,
+                        isBaseline: true // Mark as baseline image
+                      }
+                    })
+                  
+                  res.setHeader('Content-Type', 'application/json')
+                  res.end(JSON.stringify({ 
+                    images: files, 
+                    count: files.length,
+                    isBaseline: true,
+                    message: 'Baseline input images - will be replaced with styled versions'
+                  }))
+                  return
+                }
+              }
+              
+              // V1: Load style-specific training images
+              const registryPath = path.join(__dirname, '..', 'data', 'styles_registry.json')
+              if (fs.existsSync(registryPath)) {
+                try {
+                  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                  const style = registry.styles.find((s: any) => s.id === styleId)
+                  
+                  if (style) {
+                    // Construct folder path based on style ID and title
+                    const titleSimplified = style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+                    const folderName = `${styleId}_${titleSimplified}`
+                    const dirPath = path.join(__dirname, '..', 'resources', 'style_images', folderName)
+                    
+                    if (fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory()) {
+                      const files = fs.readdirSync(dirPath)
+                        .filter(file => /\.(jpg|jpeg|png|gif|webp|avif|bmp)$/i.test(file))
+                        .sort()
+                        .map(file => {
+                          const encodedFile = encodeURIComponent(file)
+                          return {
+                            filename: file,
+                            path: `/resources/style_images/${folderName}/${encodedFile}`,
+                            isBaseline: false
+                          }
+                        })
+                      
+                      res.setHeader('Content-Type', 'application/json')
+                      res.end(JSON.stringify({ 
+                        images: files, 
+                        count: files.length,
+                        isBaseline: false
+                      }))
+                      return
+                    }
+                  }
+                } catch (err) {
+                  console.error('Error reading styles registry:', err)
+                }
+              }
+              
+              res.statusCode = 404
+              res.end(JSON.stringify({ error: 'Training images not found', images: [] }))
+              return
+            }
+          }
+          
+          // Legacy API endpoint to list training images for a style folder (backward compatibility)
+          if (req.url?.startsWith('/api/training-images/')) {
+            const styleFolderMatch = req.url.match(/\/api\/training-images\/(.+)/)
+            if (styleFolderMatch) {
+              const styleFolder = styleFolderMatch[1]
+              const dirPath = path.join(__dirname, '..', 'resources', 'style_images', styleFolder)
+              
+              if (fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory()) {
+                const files = fs.readdirSync(dirPath)
+                  .filter(file => /\.(jpg|jpeg|png|gif|webp|avif|bmp)$/i.test(file))
+                  .map(file => {
+                    // URL encode filenames with special characters
+                    const encodedFile = encodeURIComponent(file)
+                    return `/resources/style_images/${styleFolder}/${encodedFile}`
+                  })
+                
+                res.setHeader('Content-Type', 'application/json')
+                res.end(JSON.stringify({ images: files, count: files.length }))
+                return
+              }
+            }
+            res.statusCode = 404
+            res.end(JSON.stringify({ error: 'Style folder not found' }))
+            return
+          }
+          
+          // API endpoint to list input images with captions
+          if (req.url === '/api/input-images') {
+            const dirPath = path.join(__dirname, '..', 'resources', 'input_images')
+            
+            if (fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory()) {
+              const files = fs.readdirSync(dirPath)
+                .filter(file => /\.(jpg|jpeg|png|gif|webp|avif|bmp)$/i.test(file))
+                .map(file => {
+                  const basename = file.replace(/\.[^.]+$/, '')
+                  const captionPath = path.join(dirPath, `${basename}.txt`)
+                  const hasCaption = fs.existsSync(captionPath)
+                  
+                  // URL encode filename for proper serving
+                  const encodedFile = encodeURIComponent(file)
+                  
+                  return {
+                    filename: file,
+                    path: `/resources/input_images/${encodedFile}`,
+                    captionFile: `${basename}.txt`,
+                    hasCaption
+                  }
+                })
+              
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify({ images: files, count: files.length }))
+              return
+            }
+            
+            res.statusCode = 404
+            res.end(JSON.stringify({ error: 'Input images folder not found' }))
+            return
+          }
+          
+          // API endpoint to read a caption file
+          if (req.url?.startsWith('/api/caption/read/')) {
+            const filename = req.url.replace('/api/caption/read/', '')
+            const captionPath = path.join(__dirname, '..', 'resources', 'input_images', filename)
+            
+            if (fs.existsSync(captionPath)) {
+              const content = fs.readFileSync(captionPath, 'utf-8')
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify({ caption: content }))
+              return
+            }
+            
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify({ caption: '' }))
+            return
+          }
+          
+          // API endpoint to save a caption file
+          if (req.url?.startsWith('/api/caption/save/') && req.method === 'POST') {
+            const filename = req.url.replace('/api/caption/save/', '')
+            const captionPath = path.join(__dirname, '..', 'resources', 'input_images', filename)
+            
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', () => {
+              try {
+                const { caption } = JSON.parse(body)
+                fs.writeFileSync(captionPath, caption, 'utf-8')
+                res.setHeader('Content-Type', 'application/json')
+                res.end(JSON.stringify({ success: true }))
+              } catch (err) {
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: 'Failed to save caption' }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to generate images with RunPod serverless
+          if (req.url === '/api/generate-image' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const requestData = JSON.parse(body)
+                const { payload, styleId, imageName } = requestData
+                
+                console.log('='.repeat(80))
+                console.log('[IMG2IMG] Image generation request received')
+                console.log('[IMG2IMG] Style ID:', styleId)
+                console.log('[IMG2IMG] Image Name:', imageName)
+                console.log('[IMG2IMG] Payload workflow nodes:', Object.keys(payload.input?.workflow || {}).length)
+                console.log('[IMG2IMG] Model URLs:', payload.input?.model_urls?.length || 0)
+                
+                // Save request to debug file
+                const debugDir = path.join(__dirname, '..', 'debug')
+                if (!fs.existsSync(debugDir)) {
+                  fs.mkdirSync(debugDir, { recursive: true })
+                }
+                const requestPath = path.join(debugDir, 'img2img_request.json')
+                fs.writeFileSync(requestPath, JSON.stringify(requestData, null, 2))
+                console.log('[IMG2IMG] Request saved to:', requestPath)
+                
+                // Spawn Python process to call RunPod
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                const pythonPath = path.join(projectRoot, 'scripts', 'generate_image.py')
+                
+                // Use venv Python if available
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                console.log('[IMG2IMG] Spawning Python process:', pythonExecutable)
+                console.log('[IMG2IMG] Script path:', pythonPath)
+                
+                const python = spawn(pythonExecutable, [pythonPath], {
+                  cwd: projectRoot
+                })
+                
+                // Send payload to Python via stdin
+                python.stdin.write(JSON.stringify(payload))
+                python.stdin.end()
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  const text = data.toString()
+                  output += text
+                  
+                  // Don't log base64 image data (truncate long responses)
+                  const trimmed = text.trim()
+                  if (trimmed.length > 200) {
+                    console.log('[IMG2IMG] Python stdout:', trimmed.substring(0, 200) + '... [truncated ' + (trimmed.length - 200) + ' bytes]')
+                  } else {
+                    console.log('[IMG2IMG] Python stdout:', trimmed)
+                  }
+                })
+                
+                python.stderr.on('data', (data) => {
+                  const text = data.toString()
+                  errorOutput += text
+                  console.error('[IMG2IMG] Python stderr:', text.trim())
+                })
+                
+                python.on('close', async (code) => {
+                  console.log('[IMG2IMG] Python process exited with code:', code)
+                  
+                  if (code !== 0) {
+                    console.error('[IMG2IMG] Generation FAILED')
+                    console.error('[IMG2IMG] Exit code:', code)
+                    console.error('[IMG2IMG] STDERR:', errorOutput)
+                    console.error('[IMG2IMG] STDOUT (first 500 chars):', output.substring(0, 500))
+                    console.log('='.repeat(80))
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ 
+                      error: errorOutput || 'Image generation failed',
+                      details: {
+                        exitCode: code,
+                        stderr: errorOutput,
+                        stdout: output.substring(0, 500)
+                      }
+                    }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log('[IMG2IMG] ✅ SUCCESS')
+                    console.log('[IMG2IMG] Result status:', result.status)
+                    
+                    // Save response to debug file
+                    const responsePath = path.join(debugDir, 'img2img_response.json')
+                    fs.writeFileSync(responsePath, JSON.stringify(result, null, 2))
+                    console.log('[IMG2IMG] Response saved to:', responsePath)
+                    
+                    // Download and save the generated image
+                    if (result.status === 'COMPLETED' && result.output) {
+                      let imageUrl = null
+                      
+                      // Try to find image URL in various response formats
+                      if (result.output.job_results?.images?.[0]) {
+                        const img = result.output.job_results.images[0]
+                        imageUrl = typeof img === 'string' ? img : img.url
+                      } else if (result.output.output?.images?.[0]) {
+                        const img = result.output.output.images[0]
+                        imageUrl = typeof img === 'string' ? img : img.url
+                      } else if (result.output.images?.[0]) {
+                        const img = result.output.images[0]
+                        imageUrl = typeof img === 'string' ? img : img.url
+                      }
+                      
+                      if (imageUrl) {
+                        console.log('[IMG2IMG] Processing generated image...')
+                        
+                        const imagePath = path.join(debugDir, 'img2img_result.jpg')
+                        const localUrl = '/debug/img2img_result.jpg'
+                        
+                        // Check if it's base64 data or a URL
+                        const isBase64 = !imageUrl.startsWith('http://') && !imageUrl.startsWith('https://')
+                        
+                        if (isBase64) {
+                          // It's base64 data - decode and save directly
+                          console.log('[IMG2IMG] Image is base64 data, decoding...')
+                          try {
+                            const base64Data = imageUrl.includes(',') ? imageUrl.split(',')[1] : imageUrl
+                            const imageBuffer = Buffer.from(base64Data, 'base64')
+                            fs.writeFileSync(imagePath, imageBuffer)
+                            console.log('[IMG2IMG] Image saved to:', imagePath)
+                            
+                            // Replace base64 with local URL
+                            if (result.output.job_results?.images?.[0]) {
+                              if (typeof result.output.job_results.images[0] === 'string') {
+                                result.output.job_results.images[0] = localUrl
+                              } else {
+                                result.output.job_results.images[0].url = localUrl
+                              }
+                            } else if (result.output.output?.images?.[0]) {
+                              if (typeof result.output.output.images[0] === 'string') {
+                                result.output.output.images[0] = localUrl
+                              } else {
+                                result.output.output.images[0].url = localUrl
+                              }
+                            } else if (result.output.images?.[0]) {
+                              if (typeof result.output.images[0] === 'string') {
+                                result.output.images[0] = localUrl
+                              } else {
+                                result.output.images[0].url = localUrl
+                              }
+                            }
+                            
+                            console.log('[IMG2IMG] Returning local URL:', localUrl)
+                            console.log('='.repeat(80))
+                            res.setHeader('Content-Type', 'application/json')
+                            res.end(JSON.stringify(result))
+                          } catch (err) {
+                            console.error('[IMG2IMG] Error decoding base64:', err)
+                            console.log('='.repeat(80))
+                            res.setHeader('Content-Type', 'application/json')
+                            res.end(JSON.stringify(result))
+                          }
+                        } else {
+                          // It's a URL - download it
+                          console.log('[IMG2IMG] Image is URL, downloading...')
+                          const https = await import('https')
+                          const http = await import('http')
+                          const urlModule = await import('url')
+                          
+                          try {
+                            const urlObj = new urlModule.URL(imageUrl)
+                            console.log('[IMG2IMG] Image URL host:', urlObj.host)
+                          } catch (e) {
+                            console.log('[IMG2IMG] Image URL (first 100 chars):', imageUrl.substring(0, 100) + '...')
+                          }
+                          
+                          const parsedUrl = new urlModule.URL(imageUrl)
+                          const protocol = parsedUrl.protocol === 'https:' ? https : http
+                          
+                          protocol.get(imageUrl, (imgRes) => {
+                            const fileStream = fs.createWriteStream(imagePath)
+                            imgRes.pipe(fileStream)
+                            
+                            fileStream.on('finish', () => {
+                              fileStream.close()
+                              console.log('[IMG2IMG] Image saved to:', imagePath)
+                              
+                              // Replace URL with local path
+                              if (result.output.job_results?.images?.[0]) {
+                                if (typeof result.output.job_results.images[0] === 'string') {
+                                  result.output.job_results.images[0] = localUrl
+                                } else {
+                                  result.output.job_results.images[0].url = localUrl
+                                }
+                              } else if (result.output.output?.images?.[0]) {
+                                if (typeof result.output.output.images[0] === 'string') {
+                                  result.output.output.images[0] = localUrl
+                                } else {
+                                  result.output.output.images[0].url = localUrl
+                                }
+                              } else if (result.output.images?.[0]) {
+                                if (typeof result.output.images[0] === 'string') {
+                                  result.output.images[0] = localUrl
+                                } else {
+                                  result.output.images[0].url = localUrl
+                                }
+                              }
+                              
+                              console.log('[IMG2IMG] Returning local URL:', localUrl)
+                              console.log('='.repeat(80))
+                              res.setHeader('Content-Type', 'application/json')
+                              res.end(JSON.stringify(result))
+                            })
+                            
+                            fileStream.on('error', (err) => {
+                              console.error('[IMG2IMG] Error saving image:', err)
+                              console.log('='.repeat(80))
+                              res.setHeader('Content-Type', 'application/json')
+                              res.end(JSON.stringify(result))
+                            })
+                          }).on('error', (err) => {
+                            console.error('[IMG2IMG] Error downloading image:', err)
+                            console.log('='.repeat(80))
+                            res.setHeader('Content-Type', 'application/json')
+                            res.end(JSON.stringify(result))
+                          })
+                        }
+                      } else {
+                        console.log('[IMG2IMG] No image URL found in response')
+                        console.log('='.repeat(80))
+                        res.setHeader('Content-Type', 'application/json')
+                        res.end(JSON.stringify(result))
+                      }
+                    } else {
+                      console.log('='.repeat(80))
+                      res.setHeader('Content-Type', 'application/json')
+                      res.end(JSON.stringify(result))
+                    }
+                  } catch (err) {
+                    console.error('[IMG2IMG] Failed to parse Python output')
+                    console.error('[IMG2IMG] Parse error:', err)
+                    console.error('[IMG2IMG] Raw output (first 500 chars):', output.substring(0, 500))
+                    console.log('='.repeat(80))
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ 
+                      error: 'Failed to parse generation results',
+                      details: {
+                        parseError: String(err),
+                        rawOutput: output.substring(0, 500)
+                      }
+                    }))
+                  }
+                })
+              } catch (err) {
+                console.error('[IMG2IMG] Request processing error:', err)
+                console.log('='.repeat(80))
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to save settings (style-specific)
+          if (req.url?.startsWith('/api/settings/save') && req.method === 'POST') {
+            const urlObj = new URL(req.url, `http://${req.headers.host}`)
+            const styleId = urlObj.searchParams.get('styleId') || 'default'
+            
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', () => {
+              try {
+                const settings = JSON.parse(body)
+                const settingsDir = path.join(__dirname, '..', 'data', 'settings')
+                
+                // Create settings directory if it doesn't exist
+                if (!fs.existsSync(settingsDir)) {
+                  fs.mkdirSync(settingsDir, { recursive: true })
+                }
+                
+                const settingsPath = path.join(settingsDir, `style_${styleId}.json`)
+                fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2))
+                console.log(`[Settings] Saved to: ${settingsPath}`)
+                res.setHeader('Content-Type', 'application/json')
+                res.end(JSON.stringify({ success: true }))
+              } catch (err) {
+                console.error('[Settings] Save error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: 'Failed to save settings' }))
+              }
+            })
+            return
+          }
+
+          // API endpoint to load settings (style-specific)
+          if (req.url?.startsWith('/api/settings/load') && req.method === 'GET') {
+            const urlObj = new URL(req.url, `http://${req.headers.host}`)
+            const styleId = urlObj.searchParams.get('styleId') || 'default'
+            
+            try {
+              const settingsPath = path.join(__dirname, '..', 'data', 'settings', `style_${styleId}.json`)
+              if (fs.existsSync(settingsPath)) {
+                const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
+                console.log(`[Settings] Loaded from: ${settingsPath}`)
+                res.setHeader('Content-Type', 'application/json')
+                res.end(JSON.stringify(settings))
+              } else {
+                res.statusCode = 404
+                res.end(JSON.stringify({ error: 'No saved settings' }))
+              }
+            } catch (err) {
+              console.error('[Settings] Load error:', err)
+              res.statusCode = 500
+              res.end(JSON.stringify({ error: 'Failed to load settings' }))
+            }
+            return
+          }
+
+          // API endpoint to update style frontpad/backpad in registry
+          if (req.url === '/api/styles/update-prompts' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', () => {
+              try {
+                const { styleId, frontpad, backpad } = JSON.parse(body)
+                const registryPath = path.join(__dirname, '..', 'data', 'styles_registry.json')
+                
+                if (fs.existsSync(registryPath)) {
+                  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                  const style = registry.styles.find((s: any) => s.id === styleId)
+                  
+                  if (style) {
+                    style.frontpad = frontpad
+                    style.backpad = backpad
+                    style.metadata.updated_at = new Date().toISOString()
+                    
+                    fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2))
+                    console.log(`[Styles] Updated frontpad/backpad for style ${styleId}`)
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify({ success: true, style }))
+                  } else {
+                    res.statusCode = 404
+                    res.end(JSON.stringify({ error: 'Style not found' }))
+                  }
+                } else {
+                  res.statusCode = 404
+                  res.end(JSON.stringify({ error: 'Styles registry not found' }))
+                }
+              } catch (err) {
+                console.error('[Styles] Update error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: 'Failed to update style' }))
+              }
+            })
+            return
+          }
+
+          // API endpoint to generate training images in batch
+          if (req.url === '/api/training-data/generate' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const requestData = JSON.parse(body)
+                const { images, workflow, settings, styleId, styleLoraName, loraStrengthModel, loraStrengthClip, promptFrontpad, promptBackpad, isMonochrome, monochromeContrast, monochromeBrightness } = requestData
+                
+                console.log('='.repeat(80))
+                console.log('[TRAINING-DATA] Batch generation request received')
+                console.log('[TRAINING-DATA] Style ID:', styleId)
+                console.log('[TRAINING-DATA] Images to process:', images.length)
+                console.log('[TRAINING-DATA] LoRA:', styleLoraName)
+                console.log('[TRAINING-DATA] Monochrome:', isMonochrome)
+                if (isMonochrome) {
+                  console.log('[TRAINING-DATA]   - Contrast:', monochromeContrast)
+                  console.log('[TRAINING-DATA]   - Brightness:', monochromeBrightness)
+                }
+                
+                // Spawn Python process to generate training images
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                const pythonPath = path.join(projectRoot, 'scripts', 'generate_training_images.py')
+                
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                console.log('[TRAINING-DATA] Spawning Python process:', pythonExecutable)
+                
+                const python = spawn(pythonExecutable, [pythonPath], {
+                  cwd: projectRoot
+                })
+                
+                // Send payload to Python via stdin
+                python.stdin.write(JSON.stringify({
+                  images,
+                  workflow,
+                  settings,
+                  styleLoraName,
+                  loraStrengthModel,
+                  loraStrengthClip,
+                  promptFrontpad,
+                  promptBackpad,
+                  isMonochrome: isMonochrome || false,
+                  monochromeContrast: monochromeContrast || 1.0,
+                  monochromeBrightness: monochromeBrightness || 1.0
+                }))
+                python.stdin.end()
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  const text = data.toString()
+                  errorOutput += text
+                  console.log('[TRAINING-DATA] Python stderr:', text.trim())
+                })
+                
+                python.on('close', async (code) => {
+                  console.log('[TRAINING-DATA] Python process exited with code:', code)
+                  
+                  if (code !== 0) {
+                    console.error('[TRAINING-DATA] Generation FAILED')
+                    console.log('='.repeat(80))
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ 
+                      error: errorOutput || 'Training data generation failed',
+                      details: { exitCode: code, stderr: errorOutput }
+                    }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log('[TRAINING-DATA] ✅ Batch complete')
+                    console.log('[TRAINING-DATA] Success:', result.successful, 'Failed:', result.failed)
+                    
+                    // Save successful images to training data folder
+                    const registryPath = path.join(projectRoot, 'data', 'styles_registry.json')
+                    if (fs.existsSync(registryPath)) {
+                      const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                      const style = registry.styles.find((s: any) => s.id === styleId)
+                      
+                      if (style) {
+                        const titleSimplified = style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+                        const folderName = `${styleId}_${titleSimplified}`
+                        const trainingDir = path.join(projectRoot, 'resources', 'style_images', folderName)
+                        
+                        // Create directory if it doesn't exist
+                        if (!fs.existsSync(trainingDir)) {
+                          fs.mkdirSync(trainingDir, { recursive: true })
+                        }
+                        
+                        // Save each successful image and add training filename to result
+                        for (const item of result.results) {
+                          if (item.success && item.result) {
+                            const genResult = item.result
+                            console.log('[TRAINING-DATA] Processing result for:', item.filename)
+                            
+                            // Extract image from result - check all possible locations
+                            let imageData = null
+                            let dataSource = 'none'
+                            
+                            if (genResult.output?.job_results?.images?.[0]) {
+                              imageData = genResult.output.job_results.images[0]
+                              dataSource = 'job_results.images[0]'
+                            } else if (genResult.output?.output?.images?.[0]) {
+                              imageData = genResult.output.output.images[0]
+                              dataSource = 'output.images[0]'
+                            } else if (genResult.output?.images?.[0]) {
+                              imageData = genResult.output.images[0]
+                              dataSource = 'images[0]'
+                            } else if (genResult.output?.message?.images?.[0]) {
+                              imageData = genResult.output.message.images[0]
+                              dataSource = 'message.images[0]'
+                            } else if (genResult.output?.image) {
+                              imageData = genResult.output.image
+                              dataSource = 'image'
+                            }
+                            
+                            console.log('[TRAINING-DATA] Image data source:', dataSource)
+                            
+                            if (imageData) {
+                              let base64Data = null
+                              
+                              if (typeof imageData === 'string') {
+                                // Check if it's base64 or URL
+                                if (!imageData.startsWith('http')) {
+                                  base64Data = imageData.includes(',') ? imageData.split(',')[1] : imageData
+                                  console.log('[TRAINING-DATA] Found base64 string (length:', base64Data.length, ')')
+                                }
+                              } else if (imageData.url && !imageData.url.startsWith('http')) {
+                                base64Data = imageData.url.includes(',') ? imageData.url.split(',')[1] : imageData.url
+                                console.log('[TRAINING-DATA] Found base64 in url property (length:', base64Data.length, ')')
+                              } else if (imageData.data) {
+                                // Sometimes it's in a 'data' property
+                                base64Data = imageData.data.includes(',') ? imageData.data.split(',')[1] : imageData.data
+                                console.log('[TRAINING-DATA] Found base64 in data property (length:', base64Data.length, ')')
+                              }
+                              
+                              if (base64Data) {
+                                try {
+                                  const imageBuffer = Buffer.from(base64Data, 'base64')
+                                  const basename = item.filename.replace(/\.[^.]+$/, '')
+                                  const trainingFilename = `${basename}_training.jpg`
+                                  const savePath = path.join(trainingDir, trainingFilename)
+                                  
+                                  // Check if file already exists (recreating)
+                                  const fileExists = fs.existsSync(savePath)
+                                  if (fileExists) {
+                                    console.log('[TRAINING-DATA] 🔄 Overwriting existing:', savePath)
+                                  }
+                                  
+                                  fs.writeFileSync(savePath, imageBuffer)
+                                  console.log('[TRAINING-DATA] ✅ Saved:', savePath)
+                                  
+                                  // Add training filename to result for frontend
+                                  item.trainingFilename = trainingFilename
+                                } catch (saveErr) {
+                                  console.error('[TRAINING-DATA] ❌ Failed to save:', item.filename, saveErr)
+                                }
+                              } else {
+                                console.warn('[TRAINING-DATA] ⚠️ No base64 data found for:', item.filename)
+                              }
+                            } else {
+                              console.warn('[TRAINING-DATA] ⚠️ No image data found for:', item.filename)
+                              console.log('[TRAINING-DATA] Result output structure:', JSON.stringify(genResult.output, null, 2).substring(0, 500))
+                            }
+                          }
+                        }
+                      }
+                    }
+                    
+                    console.log('='.repeat(80))
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('[TRAINING-DATA] Failed to parse Python output:', err)
+                    console.log('='.repeat(80))
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: 'Failed to parse generation results' }))
+                  }
+                })
+              } catch (err) {
+                console.error('[TRAINING-DATA] Request processing error:', err)
+                console.log('='.repeat(80))
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to delete a training image
+          if (req.url?.startsWith('/api/training-data/delete') && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', () => {
+              try {
+                const { styleId, filename } = JSON.parse(body)
+                
+                const registryPath = path.join(__dirname, '..', 'data', 'styles_registry.json')
+                if (fs.existsSync(registryPath)) {
+                  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                  const style = registry.styles.find((s: any) => s.id === styleId)
+                  
+                  if (style) {
+                    const titleSimplified = style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+                    const folderName = `${styleId}_${titleSimplified}`
+                    const filePath = path.join(__dirname, '..', 'resources', 'style_images', folderName, filename)
+                    
+                    if (fs.existsSync(filePath)) {
+                      fs.unlinkSync(filePath)
+                      console.log('[TRAINING-DATA] Deleted:', filePath)
+                      res.setHeader('Content-Type', 'application/json')
+                      res.end(JSON.stringify({ success: true }))
+                      return
+                    }
+                  }
+                }
+                
+                res.statusCode = 404
+                res.end(JSON.stringify({ error: 'File not found' }))
+              } catch (err) {
+                console.error('[TRAINING-DATA] Delete error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: 'Failed to delete file' }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to save a generated image as training image
+          if (req.url === '/api/training-data/save-generated' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { styleId, baseImageFilename, generatedImageUrl } = JSON.parse(body)
+                
+                console.log('[SAVE-TRAINING] Request received')
+                console.log('[SAVE-TRAINING] Style ID:', styleId)
+                console.log('[SAVE-TRAINING] Base image:', baseImageFilename)
+                console.log('[SAVE-TRAINING] Generated image URL:', generatedImageUrl?.substring(0, 100) + '...')
+                
+                const registryPath = path.join(__dirname, '..', 'data', 'styles_registry.json')
+                if (!fs.existsSync(registryPath)) {
+                  throw new Error('Styles registry not found')
+                }
+                
+                const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                const style = registry.styles.find((s: any) => s.id === styleId)
+                
+                if (!style) {
+                  throw new Error(`Style ${styleId} not found`)
+                }
+                
+                // Create training directory
+                const titleSimplified = style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+                const folderName = `${styleId}_${titleSimplified}`
+                const trainingDir = path.join(__dirname, '..', 'resources', 'style_images', folderName)
+                
+                if (!fs.existsSync(trainingDir)) {
+                  fs.mkdirSync(trainingDir, { recursive: true })
+                  console.log('[SAVE-TRAINING] Created directory:', trainingDir)
+                }
+                
+                // Generate training filename
+                const basename = baseImageFilename.replace(/\.[^.]+$/, '')
+                const trainingFilename = `${basename}_training.jpg`
+                const savePath = path.join(trainingDir, trainingFilename)
+                
+                // Download or decode the image
+                if (generatedImageUrl.startsWith('/debug/')) {
+                  // It's a local file, copy it
+                  // Strip query parameters (cache busting timestamps)
+                  const cleanUrl = generatedImageUrl.split('?')[0]
+                  const sourcePath = path.join(__dirname, '..', cleanUrl)
+                  if (fs.existsSync(sourcePath)) {
+                    fs.copyFileSync(sourcePath, savePath)
+                    console.log('[SAVE-TRAINING] ✅ Copied from:', sourcePath)
+                    console.log('[SAVE-TRAINING] ✅ Saved to:', savePath)
+                  } else {
+                    throw new Error(`Source file not found: ${sourcePath}`)
+                  }
+                } else if (generatedImageUrl.startsWith('data:') || !generatedImageUrl.startsWith('http')) {
+                  // It's base64 data
+                  const base64Data = generatedImageUrl.includes(',') ? generatedImageUrl.split(',')[1] : generatedImageUrl
+                  const imageBuffer = Buffer.from(base64Data, 'base64')
+                  fs.writeFileSync(savePath, imageBuffer)
+                  console.log('[SAVE-TRAINING] ✅ Saved from base64:', savePath)
+                } else {
+                  // It's a URL, download it
+                  const https = await import('https')
+                  const http = await import('http')
+                  const urlModule = await import('url')
+                  
+                  const parsedUrl = new urlModule.URL(generatedImageUrl)
+                  const protocol = parsedUrl.protocol === 'https:' ? https : http
+                  
+                  await new Promise<void>((resolve, reject) => {
+                    protocol.get(generatedImageUrl, (imgRes) => {
+                      const fileStream = fs.createWriteStream(savePath)
+                      imgRes.pipe(fileStream)
+                      
+                      fileStream.on('finish', () => {
+                        fileStream.close()
+                        console.log('[SAVE-TRAINING] ✅ Downloaded and saved:', savePath)
+                        resolve()
+                      })
+                      
+                      fileStream.on('error', reject)
+                    }).on('error', reject)
+                  })
+                }
+                
+                res.setHeader('Content-Type', 'application/json')
+                res.end(JSON.stringify({ 
+                  success: true, 
+                  filename: trainingFilename,
+                  path: `/resources/style_images/${folderName}/${encodeURIComponent(trainingFilename)}`
+                }))
+              } catch (err) {
+                console.error('[SAVE-TRAINING] Error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to check S3 sync status for a style
+          if (req.url?.startsWith('/api/s3/check-status') && req.method === 'GET') {
+            const urlObj = new URL(req.url, `http://${req.headers.host}`)
+            const styleId = urlObj.searchParams.get('styleId')
+            
+            if (!styleId) {
+              res.statusCode = 400
+              res.end(JSON.stringify({ error: 'styleId is required' }))
+              return
+            }
+            
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                
+                // Create a simple Python script call to check S3 status
+                const pythonScript = `
+import sys
+import json
+import os
+from src.utils.s3 import S3Client
+
+try:
+    style_id = "${styleId}"
+    bucket = os.getenv("AWS_ASSETS_BUCKET", "storyboard-user-files")
+    prefix = f"styles/{style_id}/"
+    
+    client = S3Client()
+    files = client.list_files(bucket, prefix)
+    
+    # Extract just filenames from keys
+    filenames = [f['Key'].split('/')[-1] for f in files]
+    
+    print(json.dumps({"files": filenames, "count": len(filenames)}))
+except Exception as e:
+    print(json.dumps({"error": str(e), "files": []}), file=sys.stderr)
+    sys.exit(1)
+`
+                
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                const python = spawn(pythonExecutable, ['-c', pythonScript], {
+                  cwd: projectRoot
+                })
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  errorOutput += data.toString()
+                })
+                
+                python.on('close', (code) => {
+                  if (code !== 0) {
+                    console.error('[S3-CHECK] Error:', errorOutput)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: errorOutput || 'Failed to check S3 status', files: [] }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log(`[S3-CHECK] Found ${result.count} files for style ${styleId}`)
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('[S3-CHECK] Parse error:', err)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: 'Failed to parse results', files: [] }))
+                  }
+                })
+              } catch (err) {
+                console.error('[S3-CHECK] Request error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err), files: [] }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to upload images to S3
+          if (req.url === '/api/s3/upload' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { styleId, images } = JSON.parse(body)
+                
+                console.log('[S3-UPLOAD] Request received')
+                console.log('[S3-UPLOAD] Style ID:', styleId)
+                console.log('[S3-UPLOAD] Images to upload:', images.length)
+                
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                
+                // Create Python script to upload images
+                const pythonScript = `
+import sys
+import json
+import os
+from pathlib import Path
+from src.utils.s3 import S3Client
+
+try:
+    data = json.loads(sys.stdin.read())
+    style_id = data['styleId']
+    images = data['images']
+    bucket = os.getenv("AWS_ASSETS_BUCKET", "storyboard-user-files")
+    
+    client = S3Client()
+    uploaded = 0
+    failed = 0
+    
+    for img in images:
+        try:
+            # Convert web path to filesystem path
+            local_path = img['localPath'].replace('/resources/', 'resources/')
+            file_path = Path(local_path)
+            
+            if not file_path.exists():
+                print(f"File not found: {file_path}", file=sys.stderr)
+                failed += 1
+                continue
+            
+            with open(file_path, 'rb') as f:
+                file_data = f.read()
+            
+            s3_key = f"styles/{style_id}/{img['filename']}"
+            ext = img['filename'].split('.')[-1].lower()
+            
+            result = client.upload_image(file_data, bucket, s3_key, extension=ext)
+            print(f"Uploaded: {img['filename']}", file=sys.stderr)
+            uploaded += 1
+        except Exception as e:
+            print(f"Failed to upload {img['filename']}: {e}", file=sys.stderr)
+            failed += 1
+    
+    print(json.dumps({"uploaded": uploaded, "failed": failed}))
+except Exception as e:
+    print(json.dumps({"error": str(e), "uploaded": 0, "failed": 0}), file=sys.stderr)
+    sys.exit(1)
+`
+                
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                const python = spawn(pythonExecutable, ['-c', pythonScript], {
+                  cwd: projectRoot
+                })
+                
+                python.stdin.write(JSON.stringify({ styleId, images }))
+                python.stdin.end()
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  errorOutput += data.toString()
+                  console.log('[S3-UPLOAD]', data.toString().trim())
+                })
+                
+                python.on('close', (code) => {
+                  if (code !== 0) {
+                    console.error('[S3-UPLOAD] Error:', errorOutput)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: errorOutput || 'Failed to upload to S3' }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log(`[S3-UPLOAD] ✅ Uploaded: ${result.uploaded}, Failed: ${result.failed}`)
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('[S3-UPLOAD] Parse error:', err)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: 'Failed to parse results' }))
+                  }
+                })
+              } catch (err) {
+                console.error('[S3-UPLOAD] Request error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to delete images from S3
+          if (req.url === '/api/s3/delete' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { styleId, filenames } = JSON.parse(body)
+                
+                console.log('[S3-DELETE] Request received')
+                console.log('[S3-DELETE] Style ID:', styleId)
+                console.log('[S3-DELETE] Files to delete:', filenames.length)
+                
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                
+                const pythonScript = `
+import sys
+import json
+import os
+from src.utils.s3 import S3Client
+
+try:
+    data = json.loads(sys.stdin.read())
+    style_id = data['styleId']
+    filenames = data['filenames']
+    bucket = os.getenv("AWS_ASSETS_BUCKET", "storyboard-user-files")
+    
+    client = S3Client()
+    deleted = 0
+    failed = 0
+    
+    for filename in filenames:
+        try:
+            s3_key = f"styles/{style_id}/{filename}"
+            client.delete_file(bucket, s3_key)
+            print(f"Deleted: {filename}", file=sys.stderr)
+            deleted += 1
+        except Exception as e:
+            print(f"Failed to delete {filename}: {e}", file=sys.stderr)
+            failed += 1
+    
+    print(json.dumps({"deleted": deleted, "failed": failed}))
+except Exception as e:
+    print(json.dumps({"error": str(e), "deleted": 0, "failed": 0}), file=sys.stderr)
+    sys.exit(1)
+`
+                
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                const python = spawn(pythonExecutable, ['-c', pythonScript], {
+                  cwd: projectRoot
+                })
+                
+                python.stdin.write(JSON.stringify({ styleId, filenames }))
+                python.stdin.end()
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  errorOutput += data.toString()
+                  console.log('[S3-DELETE]', data.toString().trim())
+                })
+                
+                python.on('close', (code) => {
+                  if (code !== 0) {
+                    console.error('[S3-DELETE] Error:', errorOutput)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: errorOutput || 'Failed to delete from S3' }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log(`[S3-DELETE] ✅ Deleted: ${result.deleted}, Failed: ${result.failed}`)
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('[S3-DELETE] Parse error:', err)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: 'Failed to parse results' }))
+                  }
+                })
+              } catch (err) {
+                console.error('[S3-DELETE] Request error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to download all style images from S3
+          if (req.url === '/api/s3/download' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { styleId } = JSON.parse(body)
+                
+                console.log('[S3-DOWNLOAD] Request received')
+                console.log('[S3-DOWNLOAD] Style ID:', styleId)
+                
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                const registryPath = path.join(projectRoot, 'data', 'styles_registry.json')
+                
+                if (!fs.existsSync(registryPath)) {
+                  throw new Error('Styles registry not found')
+                }
+                
+                const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'))
+                const style = registry.styles.find((s: any) => s.id === styleId)
+                
+                if (!style) {
+                  throw new Error(`Style ${styleId} not found`)
+                }
+                
+                const titleSimplified = style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+                const folderName = `${styleId}_${titleSimplified}`
+                const localDir = path.join(projectRoot, 'resources', 'style_images', folderName)
+                
+                const pythonScript = \`
+import sys
+import json
+import os
+from pathlib import Path
+from src.utils.s3 import S3Client
+
+try:
+    style_id = "\${styleId}"
+    bucket = os.getenv("AWS_ASSETS_BUCKET", "storyboard-user-files")
+    prefix = f"styles/{style_id}/"
+    local_dir = Path("\${localDir}")
+    
+    # Create local directory if it doesn't exist
+    local_dir.mkdir(parents=True, exist_ok=True)
+    
+    client = S3Client()
+    files = client.list_files(bucket, prefix)
+    
+    downloaded = 0
+    failed = 0
+    
+    for file_obj in files:
+        try:
+            s3_key = file_obj['Key']
+            filename = s3_key.split('/')[-1]
+            local_path = local_dir / filename
+            
+            # Download file
+            file_data = client.download_file(bucket, s3_key)
+            
+            # Save to local disk
+            with open(local_path, 'wb') as f:
+                f.write(file_data)
+            
+            print(f"Downloaded: {filename}", file=sys.stderr)
+            downloaded += 1
+        except Exception as e:
+            print(f"Failed to download {s3_key}: {e}", file=sys.stderr)
+            failed += 1
+    
+    print(json.dumps({"downloaded": downloaded, "failed": failed}))
+except Exception as e:
+    print(json.dumps({"error": str(e), "downloaded": 0, "failed": 0}), file=sys.stderr)
+    sys.exit(1)
+\`
+                
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                const python = spawn(pythonExecutable, ['-c', pythonScript], {
+                  cwd: projectRoot
+                })
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  errorOutput += data.toString()
+                  console.log('[S3-DOWNLOAD]', data.toString().trim())
+                })
+                
+                python.on('close', (code) => {
+                  if (code !== 0) {
+                    console.error('[S3-DOWNLOAD] Error:', errorOutput)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: errorOutput || 'Failed to download from S3' }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    console.log(`[S3-DOWNLOAD] ✅ Downloaded: ${result.downloaded}, Failed: ${result.failed}`)
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('[S3-DOWNLOAD] Parse error:', err)
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ error: 'Failed to parse results' }))
+                  }
+                })
+              } catch (err) {
+                console.error('[S3-DOWNLOAD] Request error:', err)
+                res.statusCode = 500
+                res.end(JSON.stringify({ error: String(err) }))
+              }
+            })
+            return
+          }
+          
+          // API endpoint to generate captions with GPT
+          if (req.url === '/api/caption/generate' && req.method === 'POST') {
+            let body = ''
+            req.on('data', chunk => { body += chunk.toString() })
+            req.on('end', async () => {
+              try {
+                const { images, systemPrompt, userPrompt, model } = JSON.parse(body)
+                
+                // Spawn Python process to generate captions
+                const { spawn } = await import('child_process')
+                const projectRoot = path.join(__dirname, '..')
+                const pythonPath = path.join(projectRoot, 'scripts', 'generate_captions.py')
+                
+                // Use venv Python if available, otherwise fall back to system python
+                const venvPython = path.join(projectRoot, 'venv', 'bin', 'python')
+                const pythonExecutable = fs.existsSync(venvPython) ? venvPython : 'python3'
+                
+                const python = spawn(pythonExecutable, [pythonPath], {
+                  cwd: projectRoot
+                })
+                
+                // Send request data to Python script via stdin
+                python.stdin.write(JSON.stringify({ images, systemPrompt, userPrompt, model: model || 'gpt-4o' }))
+                python.stdin.end()
+                
+                let output = ''
+                let errorOutput = ''
+                
+                python.stdout.on('data', (data) => {
+                  output += data.toString()
+                })
+                
+                python.stderr.on('data', (data) => {
+                  errorOutput += data.toString()
+                })
+                
+                python.on('close', (code) => {
+                  if (code !== 0) {
+                    console.error('==========================================')
+                    console.error('CAPTION GENERATION FAILED')
+                    console.error('Exit code:', code)
+                    console.error('Python executable:', pythonExecutable)
+                    console.error('Script path:', pythonPath)
+                    console.error('STDERR output:')
+                    console.error(errorOutput)
+                    console.error('STDOUT output:')
+                    console.error(output)
+                    console.error('==========================================')
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ 
+                      error: errorOutput || 'Failed to generate captions',
+                      details: {
+                        exitCode: code,
+                        pythonPath: pythonExecutable,
+                        stderr: errorOutput,
+                        stdout: output
+                      }
+                    }))
+                    return
+                  }
+                  
+                  try {
+                    const result = JSON.parse(output)
+                    
+                    // Log based on actual success/failure
+                    if (result.successful > 0) {
+                      console.log(`✅ Caption generation: ${result.successful} succeeded, ${result.failed} failed (${result.total} total)`)
+                    } else {
+                      console.error(`❌ Caption generation FAILED: ${result.failed} failed (${result.total} total)`)
+                      if (result.results && result.results.length > 0) {
+                        result.results.forEach((r: any) => {
+                          if (!r.success) {
+                            console.error(`   - ${r.filename}: ${r.error}`)
+                          }
+                        })
+                      }
+                    }
+                    
+                    res.setHeader('Content-Type', 'application/json')
+                    res.end(JSON.stringify(result))
+                  } catch (err) {
+                    console.error('==========================================')
+                    console.error('FAILED TO PARSE PYTHON OUTPUT')
+                    console.error('Parse error:', err)
+                    console.error('Raw output:', output)
+                    console.error('Raw stderr:', errorOutput)
+                    console.error('==========================================')
+                    res.statusCode = 500
+                    res.end(JSON.stringify({ 
+                      error: 'Failed to parse generation results',
+                      details: {
+                        parseError: String(err),
+                        rawOutput: output.substring(0, 500),
+                        rawStderr: errorOutput.substring(0, 500)
+                      }
+                    }))
+                  }
+                })
+              } catch (err) {
+                console.error('==========================================')
+                console.error('CAPTION GENERATION REQUEST ERROR')
+                console.error('Error:', err)
+                console.error('Stack:', err instanceof Error ? err.stack : 'N/A')
+                console.error('==========================================')
+                res.statusCode = 500
+                res.end(JSON.stringify({ 
+                  error: String(err),
+                  details: {
+                    message: err instanceof Error ? err.message : String(err),
+                    stack: err instanceof Error ? err.stack : undefined
+                  }
+                }))
+              }
+            })
+            return
+          }
+          
+          next()
+        })
+      }
+    }
+  ],
+  server: {
+    port: 3000,
+    open: true,
+    fs: {
+      // Allow serving files from parent directories
+      allow: ['..']
+    }
+  },
+  publicDir: '../data'
+})

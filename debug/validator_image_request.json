@@ -1,0 +1,293 @@
+{
+  "payload": {
+    "input": {
+      "workflow": {
+        "1": {
+          "inputs": {
+            "unet_name": "flux1-dev-fp8.safetensors",
+            "weight_dtype": "fp8_e4m3fn"
+          },
+          "class_type": "UNETLoader",
+          "_meta": {
+            "title": "Load Diffusion Model"
+          }
+        },
+        "2": {
+          "inputs": {
+            "vae_name": "flux-dev-vae.safetensors"
+          },
+          "class_type": "VAELoader",
+          "_meta": {
+            "title": "Load VAE"
+          }
+        },
+        "3": {
+          "inputs": {
+            "clip_name1": "clip_l.safetensors",
+            "clip_name2": "t5xxl_fp8.safetensors",
+            "type": "flux",
+            "device": "default"
+          },
+          "class_type": "DualCLIPLoader",
+          "_meta": {
+            "title": "DualCLIPLoader"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "style SBai_style_2, hand-drawn storyboard, sketch, dynamic perspective, a woman entering a train carriage with other people already sitting, (strong hatching++), (graphite texture), (realistic perspective)",
+            "clip": [
+              "40",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "CLIP Text Encode (Positive Prompt)"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "13",
+              0
+            ],
+            "vae": [
+              "2",
+              0
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "13": {
+          "inputs": {
+            "noise": [
+              "25",
+              0
+            ],
+            "guider": [
+              "22",
+              0
+            ],
+            "sampler": [
+              "16",
+              0
+            ],
+            "sigmas": [
+              "17",
+              0
+            ],
+            "latent_image": [
+              "27",
+              0
+            ]
+          },
+          "class_type": "SamplerCustomAdvanced",
+          "_meta": {
+            "title": "SamplerCustomAdvanced"
+          }
+        },
+        "16": {
+          "inputs": {
+            "sampler_name": "euler"
+          },
+          "class_type": "KSamplerSelect",
+          "_meta": {
+            "title": "KSamplerSelect"
+          }
+        },
+        "17": {
+          "inputs": {
+            "scheduler": "ddim_uniform",
+            "steps": 20,
+            "denoise": 1,
+            "model": [
+              "30",
+              0
+            ]
+          },
+          "class_type": "BasicScheduler",
+          "_meta": {
+            "title": "BasicScheduler"
+          }
+        },
+        "22": {
+          "inputs": {
+            "model": [
+              "30",
+              0
+            ],
+            "conditioning": [
+              "26",
+              0
+            ]
+          },
+          "class_type": "BasicGuider",
+          "_meta": {
+            "title": "BasicGuider"
+          }
+        },
+        "25": {
+          "inputs": {
+            "noise_seed": 195372
+          },
+          "class_type": "RandomNoise",
+          "_meta": {
+            "title": "RandomNoise"
+          }
+        },
+        "26": {
+          "inputs": {
+            "guidance": 3.5,
+            "conditioning": [
+              "6",
+              0
+            ]
+          },
+          "class_type": "FluxGuidance",
+          "_meta": {
+            "title": "FluxGuidance"
+          }
+        },
+        "27": {
+          "inputs": {
+            "width": 1360,
+            "height": 768,
+            "batch_size": 1
+          },
+          "class_type": "EmptySD3LatentImage",
+          "_meta": {
+            "title": "EmptySD3LatentImage"
+          }
+        },
+        "30": {
+          "inputs": {
+            "max_shift": 1.15,
+            "base_shift": 0.5,
+            "width": 1360,
+            "height": 768,
+            "model": [
+              "41",
+              0
+            ]
+          },
+          "class_type": "ModelSamplingFlux",
+          "_meta": {
+            "title": "ModelSamplingFlux"
+          }
+        },
+        "38": {
+          "inputs": {
+            "filename_prefix": "output",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Save Image"
+          }
+        },
+        "40": {
+          "inputs": {
+            "lora_stack": [
+              "43",
+              0
+            ],
+            "model": [
+              "1",
+              0
+            ],
+            "optional_clip": [
+              "3",
+              0
+            ]
+          },
+          "class_type": "easy loraStackApply",
+          "_meta": {
+            "title": "Easy Apply LoraStack"
+          }
+        },
+        "41": {
+          "inputs": {
+            "model_type": "flux",
+            "rel_l1_thresh": 0.2,
+            "max_skip_steps": 1,
+            "model": [
+              "40",
+              0
+            ]
+          },
+          "class_type": "TeaCache",
+          "_meta": {
+            "title": "TeaCache"
+          }
+        },
+        "43": {
+          "inputs": {
+            "toggle": true,
+            "mode": "simple",
+            "num_loras": 1,
+            "lora_1_name": "style_2_vV2.safetensors",
+            "lora_1_strength": 0.8,
+            "lora_1_model_strength": 0.8,
+            "lora_1_clip_strength": 0.8,
+            "lora_2_name": "None",
+            "lora_2_strength": 1,
+            "lora_2_model_strength": 1,
+            "lora_2_clip_strength": 1,
+            "lora_3_name": "None",
+            "lora_3_strength": 1,
+            "lora_3_model_strength": 1,
+            "lora_3_clip_strength": 1,
+            "lora_4_name": "None",
+            "lora_4_strength": 1,
+            "lora_4_model_strength": 1,
+            "lora_4_clip_strength": 1,
+            "lora_5_name": "None",
+            "lora_5_strength": 1,
+            "lora_5_model_strength": 1,
+            "lora_5_clip_strength": 1,
+            "lora_6_name": "None",
+            "lora_6_strength": 1,
+            "lora_6_model_strength": 1,
+            "lora_6_clip_strength": 1,
+            "lora_7_name": "None",
+            "lora_7_strength": 1,
+            "lora_7_model_strength": 1,
+            "lora_7_clip_strength": 1,
+            "lora_8_name": "None",
+            "lora_8_strength": 1,
+            "lora_8_model_strength": 1,
+            "lora_8_clip_strength": 1,
+            "lora_9_name": "None",
+            "lora_9_strength": 1,
+            "lora_9_model_strength": 1,
+            "lora_9_clip_strength": 1,
+            "lora_10_name": "None",
+            "lora_10_strength": 1,
+            "lora_10_model_strength": 1,
+            "lora_10_clip_strength": 1
+          },
+          "class_type": "easy loraStack",
+          "_meta": {
+            "title": "EasyLoraStack"
+          }
+        }
+      },
+      "model_urls": [
+        {
+          "id": "style_2_vV2.safetensors",
+          "url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-styles-models/style_2_vV2.safetensors"
+        }
+      ],
+      "force_download": false
+    }
+  },
+  "styleId": "2",
+  "mode": "text-to-image"
+}

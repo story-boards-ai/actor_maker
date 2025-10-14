@@ -1,0 +1,601 @@
+{
+  "10": {
+    "inputs": {
+      "width": [
+        "72",
+        1
+      ],
+      "height": [
+        "72",
+        2
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "72": {
+    "inputs": {
+      "width": [
+        "83",
+        0
+      ],
+      "height": [
+        "84",
+        0
+      ],
+      "interpolation": "bicubic",
+      "method": "keep proportion",
+      "condition": "always",
+      "multiple_of": 16,
+      "image": [
+        "458",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "83": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "84": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "174": {
+    "inputs": {
+      "text": "a medium wide shot of a soldier and an indian man with feathers in his hair, sitting on horses, with their faces visible",
+      "clip": [
+        "319",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "175": {
+    "inputs": {
+      "text": "purple",
+      "clip": [
+        "319",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "197": {
+    "inputs": {
+      "pixels": [
+        "360",
+        0
+      ],
+      "vae": [
+        "359",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "271": {
+    "inputs": {
+      "Input": 1,
+      "conditioning1": [
+        "431",
+        0
+      ],
+      "conditioning2": [
+        "431",
+        0
+      ]
+    },
+    "class_type": "CR Conditioning Input Switch",
+    "_meta": {
+      "title": "🔀 CR Conditioning Input Switch"
+    }
+  },
+  "272": {
+    "inputs": {
+      "Input": 1,
+      "conditioning1": [
+        "431",
+        1
+      ],
+      "conditioning2": [
+        "431",
+        1
+      ]
+    },
+    "class_type": "CR Conditioning Input Switch",
+    "_meta": {
+      "title": "🔀 CR Conditioning Input Switch"
+    }
+  },
+  "319": {
+    "inputs": {
+      "Input": 1,
+      "clip1": [
+        "357",
+        0
+      ],
+      "clip2": [
+        "357",
+        0
+      ]
+    },
+    "class_type": "CR Clip Input Switch",
+    "_meta": {
+      "title": "🔀 CR Clip Input Switch"
+    }
+  },
+  "320": {
+    "inputs": {
+      "Input": 1,
+      "model1": [
+        "358",
+        0
+      ],
+      "model2": [
+        "358",
+        0
+      ]
+    },
+    "class_type": "CR Model Input Switch",
+    "_meta": {
+      "title": "🔀 CR Model Input Switch"
+    }
+  },
+  "321": {
+    "inputs": {
+      "samples": [
+        "362",
+        0
+      ],
+      "vae": [
+        "359",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "327": {
+    "inputs": {
+      "filename_prefix": [
+        "454",
+        0
+      ],
+      "images": [
+        "321",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "final_output"
+    }
+  },
+  "357": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "358": {
+    "inputs": {
+      "unet_name": "flux1-depth-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "359": {
+    "inputs": {
+      "vae_name": "flux-dev-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "360": {
+    "inputs": {
+      "image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "362": {
+    "inputs": {
+      "noise": [
+        "365",
+        0
+      ],
+      "guider": [
+        "366",
+        0
+      ],
+      "sampler": [
+        "363",
+        0
+      ],
+      "sigmas": [
+        "364",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "363": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "364": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 28,
+      "denoise": 1,
+      "model": [
+        "320",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "BasicScheduler"
+    }
+  },
+  "365": {
+    "inputs": {
+      "noise_seed": 846489052800331
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "366": {
+    "inputs": {
+      "model": [
+        "320",
+        0
+      ],
+      "conditioning": [
+        "442",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "374": {
+    "inputs": {
+      "images": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "379": {
+    "inputs": {
+      "strength": 0.3,
+      "start_percent": 0,
+      "end_percent": 0.5,
+      "positive": [
+        "174",
+        0
+      ],
+      "negative": [
+        "175",
+        0
+      ],
+      "control_net": [
+        "380",
+        0
+      ],
+      "image": [
+        "426",
+        0
+      ],
+      "vae": [
+        "359",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "380": {
+    "inputs": {
+      "control_net_name": "flux_1_dev_controlnet_union_pro.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "382": {
+    "inputs": {
+      "guidance": 4,
+      "conditioning": [
+        "272",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "426": {
+    "inputs": {
+      "low_threshold": 0.4,
+      "high_threshold": 0.8,
+      "image": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "Canny",
+    "_meta": {
+      "title": "Canny"
+    }
+  },
+  "427": {
+    "inputs": {
+      "images": [
+        "426",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "430": {
+    "inputs": {
+      "guidance": 15,
+      "conditioning": [
+        "379",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "431": {
+    "inputs": {
+      "positive": [
+        "430",
+        0
+      ],
+      "negative": [
+        "379",
+        1
+      ],
+      "vae": [
+        "359",
+        0
+      ],
+      "pixels": [
+        "436",
+        0
+      ]
+    },
+    "class_type": "InstructPixToPixConditioning",
+    "_meta": {
+      "title": "InstructPixToPixConditioning"
+    }
+  },
+  "435": {
+    "inputs": {
+      "images": [
+        "436",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "436": {
+    "inputs": {
+      "da_model": [
+        "437",
+        0
+      ],
+      "images": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "DepthAnything_V2",
+    "_meta": {
+      "title": "Depth Anything V2"
+    }
+  },
+  "437": {
+    "inputs": {
+      "model": "depth_anything_v2_vitl_fp32.safetensors",
+      "precision": "auto"
+    },
+    "class_type": "DownloadAndLoadDepthAnythingV2Model",
+    "_meta": {
+      "title": "DownloadAndLoadDepthAnythingV2Model"
+    }
+  },
+  "438": {
+    "inputs": {
+      "clip_name": "sigclip_vision_patch14_384.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "439": {
+    "inputs": {
+      "crop": "center",
+      "clip_vision": [
+        "438",
+        0
+      ],
+      "image": [
+        "459",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP Vision Encode"
+    }
+  },
+  "441": {
+    "inputs": {
+      "style_model_name": "flux1-redux-dev.safetensors"
+    },
+    "class_type": "StyleModelLoader",
+    "_meta": {
+      "title": "Load Style Model"
+    }
+  },
+  "442": {
+    "inputs": {
+      "strength": 0.5,
+      "conditioning": [
+        "431",
+        0
+      ],
+      "style_model": [
+        "441",
+        0
+      ],
+      "clip_vision_output": [
+        "439",
+        0
+      ]
+    },
+    "class_type": "StyleModelApplyAdvanced",
+    "_meta": {
+      "title": "Style Model Apply Advanced"
+    }
+  },
+  "447": {
+    "inputs": {
+      "width": 2000,
+      "height": 2000,
+      "position": "top-center",
+      "x_offset": 0,
+      "y_offset": 0,
+      "image": [
+        "459",
+        0
+      ]
+    },
+    "class_type": "ImageCrop+",
+    "_meta": {
+      "title": "🔧 Image Crop"
+    }
+  },
+  "448": {
+    "inputs": {
+      "images": [
+        "447",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "454": {
+    "inputs": {
+      "text": "style"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "458": {
+    "inputs": {
+      "base64Images": "[\"\"]"
+    },
+    "class_type": "Base64ToImage",
+    "_meta": {
+      "title": "source_input"
+    }
+  },
+  "459": {
+    "inputs": {
+      "base64Images": "[\"\"]"
+    },
+    "class_type": "Base64ToImage",
+    "_meta": {
+      "title": "style_input"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "delayTime": 1557,
+  "executionTime": 5345,
+  "id": "sync-2c251f81-98a0-45db-ad48-9eb6bf7815a7-e1",
+  "output": {
+    "output": {
+      "images": [
+        "/debug/generated_result.jpg"
+      ],
+      "model_info": {
+        "model_ids": [
+          "style_2_vV2.safetensors"
+        ],
+        "model_paths": {
+          "style_2_vV2.safetensors": "/ComfyUI/models/loras/style_2_vV2.safetensors"
+        }
+      }
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "qoycvvyspx1gab"
+}

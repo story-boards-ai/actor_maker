@@ -1,0 +1,188 @@
+{
+  "id": "cinematography-techniques-v1",
+  "name": "Cinematography Techniques",
+  "description": "30 prompts testing camera angles, lenses, framing, composition, and advanced cinematographic techniques",
+  "version": "1.0",
+  "prompts": [
+    {
+      "id": "ct-01",
+      "prompt": "Extreme close-up of a human eye, eyelashes in sharp focus, iris detail visible, dramatic macro photography",
+      "category": "framing-ecu",
+      "description": "Extreme close-up framing"
+    },
+    {
+      "id": "ct-02",
+      "prompt": "Close-up shot of hands holding a coffee cup, shallow depth of field, background blurred, intimate detail",
+      "category": "framing-cu",
+      "description": "Close-up with shallow DOF"
+    },
+    {
+      "id": "ct-03",
+      "prompt": "Medium shot of character from waist up, neutral background, standard portrait framing, conversational distance",
+      "category": "framing-ms",
+      "description": "Medium shot standard framing"
+    },
+    {
+      "id": "ct-04",
+      "prompt": "Full body shot of character standing, head to toe visible, environmental context, classic full frame",
+      "category": "framing-fs",
+      "description": "Full shot framing"
+    },
+    {
+      "id": "ct-05",
+      "prompt": "Extreme wide shot of tiny figure in massive landscape, scale emphasized, environmental dominance, epic scope",
+      "category": "framing-ews",
+      "description": "Extreme wide shot"
+    },
+    {
+      "id": "ct-06",
+      "prompt": "Low angle shot looking up at towering character, dramatic power dynamic, sky background, hero perspective",
+      "category": "angle-low",
+      "description": "Low angle - power shot"
+    },
+    {
+      "id": "ct-07",
+      "prompt": "High angle shot looking down at character from above, vulnerability emphasized, diminished presence",
+      "category": "angle-high",
+      "description": "High angle - vulnerability"
+    },
+    {
+      "id": "ct-08",
+      "prompt": "Bird's eye view directly overhead, character small in frame, geometric patterns visible, top-down perspective",
+      "category": "angle-birds-eye",
+      "description": "Bird's eye overhead view"
+    },
+    {
+      "id": "ct-09",
+      "prompt": "Worm's eye view from ground level looking straight up, extreme low angle, ceiling or sky dominant",
+      "category": "angle-worms-eye",
+      "description": "Worm's eye extreme low"
+    },
+    {
+      "id": "ct-10",
+      "prompt": "Dutch angle with tilted horizon, disorienting composition, 45-degree tilt, psychological tension",
+      "category": "angle-dutch",
+      "description": "Dutch angle - tilted frame"
+    },
+    {
+      "id": "ct-11",
+      "prompt": "Over-the-shoulder shot, character's shoulder and back of head in foreground, subject in background, conversational framing",
+      "category": "angle-ots",
+      "description": "Over-the-shoulder perspective"
+    },
+    {
+      "id": "ct-12",
+      "prompt": "Point-of-view shot from character's perspective, seeing exactly what they see, first-person viewpoint",
+      "category": "angle-pov",
+      "description": "POV first-person shot"
+    },
+    {
+      "id": "ct-13",
+      "prompt": "Wide angle lens distortion, curved edges, exaggerated perspective, faces and architecture stretched at frame edges",
+      "category": "lens-wide",
+      "description": "Wide angle lens distortion"
+    },
+    {
+      "id": "ct-14",
+      "prompt": "Telephoto lens compression, flattened depth, background appears closer, stacked visual elements",
+      "category": "lens-telephoto",
+      "description": "Telephoto compression effect"
+    },
+    {
+      "id": "ct-15",
+      "prompt": "Fisheye lens extreme distortion, spherical warping, 180-degree field of view, circular vignette edges",
+      "category": "lens-fisheye",
+      "description": "Fisheye spherical distortion"
+    },
+    {
+      "id": "ct-16",
+      "prompt": "Tilt-shift lens miniature effect, selective focus plane, toy-like appearance, blurred top and bottom",
+      "category": "lens-tilt-shift",
+      "description": "Tilt-shift miniature effect"
+    },
+    {
+      "id": "ct-17",
+      "prompt": "Macro lens extreme magnification, tiny subject fills frame, intricate surface details, shallow focus plane",
+      "category": "lens-macro",
+      "description": "Macro extreme close detail"
+    },
+    {
+      "id": "ct-18",
+      "prompt": "Rule of thirds composition, subject on intersection points, balanced asymmetry, professional framing",
+      "category": "composition-thirds",
+      "description": "Rule of thirds positioning"
+    },
+    {
+      "id": "ct-19",
+      "prompt": "Perfect symmetry composition, mirror-like balance, centered subject, architectural precision, Wes Anderson style",
+      "category": "composition-symmetry",
+      "description": "Symmetrical composition"
+    },
+    {
+      "id": "ct-20",
+      "prompt": "Leading lines composition, roads or rails converging to vanishing point, depth guidance, linear perspective",
+      "category": "composition-leading-lines",
+      "description": "Leading lines perspective"
+    },
+    {
+      "id": "ct-21",
+      "prompt": "Golden ratio spiral composition, Fibonacci curve layout, natural eye flow, mathematical harmony",
+      "category": "composition-golden-ratio",
+      "description": "Golden ratio spiral"
+    },
+    {
+      "id": "ct-22",
+      "prompt": "Frame within frame composition, doorway or window creating natural frame, layered depth, nested boundaries",
+      "category": "composition-frame-in-frame",
+      "description": "Frame within frame layering"
+    },
+    {
+      "id": "ct-23",
+      "prompt": "Negative space composition, subject small in vast empty area, isolation emphasized, minimalist framing",
+      "category": "composition-negative-space",
+      "description": "Negative space isolation"
+    },
+    {
+      "id": "ct-24",
+      "prompt": "Forced perspective, nearby object appears same size as distant large object, optical illusion, depth manipulation",
+      "category": "perspective-forced",
+      "description": "Forced perspective illusion"
+    },
+    {
+      "id": "ct-25",
+      "prompt": "Deep depth of field, everything sharp from foreground to background, f/22 aperture look, maximum clarity throughout",
+      "category": "dof-deep",
+      "description": "Deep focus everything sharp"
+    },
+    {
+      "id": "ct-26",
+      "prompt": "Shallow depth of field, subject sharp, background completely blurred bokeh, f/1.4 aperture look, cinematic isolation",
+      "category": "dof-shallow",
+      "description": "Shallow DOF bokeh background"
+    },
+    {
+      "id": "ct-27",
+      "prompt": "Rack focus shift, foreground starts sharp then blurs as background comes into focus, attention guidance, focus pull",
+      "category": "focus-rack",
+      "description": "Rack focus transition"
+    },
+    {
+      "id": "ct-28",
+      "prompt": "Split diopter shot, near and far both sharp with blurred middle, dual focus planes, complex focus rig",
+      "category": "focus-split-diopter",
+      "description": "Split diopter dual focus"
+    },
+    {
+      "id": "ct-29",
+      "prompt": "Dolly zoom vertigo effect, subject stays same size while background perspective shifts, Hitchcock zoom, disorienting effect",
+      "category": "movement-dolly-zoom",
+      "description": "Dolly zoom vertigo effect"
+    },
+    {
+      "id": "ct-30",
+      "prompt": "Silhouette composition, subject completely black against bright background, shape emphasis, high contrast backlight",
+      "category": "lighting-silhouette",
+      "description": "Silhouette backlight composition"
+    }
+  ]
+}

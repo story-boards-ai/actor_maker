@@ -1,0 +1,91 @@
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding-bottom: 0.875rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.status-grid.loading {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.status-loading {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.status-key {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-val {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Status-specific colors */
+.status-val.complete {
+  color: #10b981;
+}
+
+.status-val.incomplete {
+  color: #f59e0b;
+}
+
+.status-val.validated {
+  color: #10b981;
+}
+
+.status-val.unvalidated {
+  color: var(--color-text-secondary);
+}
+
+/* Load status button */
+.load-status-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: 0.375rem;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.load-status-btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .status-grid {
+    gap: 0.4rem;
+  }
+  
+  .status-key {
+    font-size: 0.625rem;
+  }
+  
+  .status-val {
+    font-size: 0.8125rem;
+  }
+}

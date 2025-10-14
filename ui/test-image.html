@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>S3 Image Test</h1>
+    
+    <h2>Style 01 (Should work):</h2>
+    <img src="https://story-boards-static-dev.s3.us-west-1.amazonaws.com/styles/style01.webp" alt="Style 01" style="max-width: 300px;">
+    
+    <h2>Style 02 (Should work):</h2>
+    <img src="https://story-boards-static-dev.s3.us-west-1.amazonaws.com/styles/style02.webp" alt="Style 02" style="max-width: 300px;">
+    
+    <h2>Style 03 (Should work):</h2>
+    <img src="https://story-boards-static-dev.s3.us-west-1.amazonaws.com/styles/style03.webp" alt="Style 03" style="max-width: 300px;">
+    
+    <h2>Style_5_91 (Should work):</h2>
+    <img src="https://story-boards-static-dev.s3.us-west-1.amazonaws.com/styles/style_5_91.webp" alt="Style 5_91" style="max-width: 300px;">
+
+    <script>
+        // Log any image errors
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', (e) => {
+                console.error('Failed to load:', img.src);
+            });
+            img.addEventListener('load', (e) => {
+                console.log('Successfully loaded:', img.src);
+            });
+        });
+    </script>
+</body>
+</html>

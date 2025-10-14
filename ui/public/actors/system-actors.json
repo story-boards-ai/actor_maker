@@ -1,0 +1,35 @@
+{
+  "actors": [
+    {
+      "id": 0,
+      "name": "0000_european_16_male",
+      "description": "16 year old young man, with european complexion, with very short curly brown hair",
+      "age": "16",
+      "sex": "male",
+      "ethnicity": "european",
+      "url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0000_european_16_male.safetensors",
+      "poster_frames": {
+        "accelerated": {
+          "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0000_european_16_male_poster_sm.webp",
+          "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0000_european_16_male_poster_md.webp"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "name": "0001_european_20_female",
+      "description": "A 20 year old freckled european woman, with long curly red hair",
+      "age": "20",
+      "sex": "female",
+      "ethnicity": "european",
+      "url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0001_european_20_female.safetensors",
+      "poster_frames": {
+        "accelerated": {
+          "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0001_european_20_female_poster_sm.webp",
+          "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0001_european_20_female_poster_md.webp"
+        }
+      }
+    }
+  ],
+  "total": 2
+}

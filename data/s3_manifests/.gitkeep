@@ -1,0 +1,2 @@
+# This file ensures the s3_manifests directory is tracked by git
+# Manifest files will be created automatically when files are synced to S3
