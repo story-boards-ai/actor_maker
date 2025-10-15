@@ -1,0 +1,40 @@
+{
+  "character_id": "0096",
+  "character_name": "0096_south_american_30_female",
+  "metadata": {
+    "img": "0096_south_american_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Hilda Degaborez as a 30 year old stunningly beautiful south american woman, with long wavy black hair",
+    "id": "0096",
+    "name": "0096_south_american_30_female",
+    "image": "image97",
+    "outfit": "Glamorous deep purple bodycon dress with off-shoulder neckline, gold statement necklace, diamond stud earrings, and black strappy stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.779336",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0096_south_american_30_female/base_image/0096_south_american_30_female_base.png",
+      "relative_path": "characters/0096_south_american_30_female/base_image/0096_south_american_30_female_base.png",
+      "size_bytes": 1243077,
+      "size_mb": 1.19,
+      "created_timestamp": 1746897431.1957746,
+      "created_date": "2025-05-10T19:17:11.195775",
+      "modified_timestamp": 1746897431.1960704,
+      "modified_date": "2025-05-10T19:17:11.196070",
+      "md5_hash": "2b4747dbc64817ebedea351451b8ab93",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0096_south_american_30_female/base_image/0096_south_american_30_female_base.png",
+      "moved_relative_path": "data/actors/0096_south_american_30_female/base_image/0096_south_american_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1243077,
+    "total_size_mb": 1.19,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

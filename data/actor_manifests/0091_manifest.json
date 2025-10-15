@@ -1,0 +1,40 @@
+{
+  "character_id": "0091",
+  "character_name": "0091_middle_eastern_65_male",
+  "metadata": {
+    "img": "0091_middle_eastern_65_male.webp",
+    "age": "65",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Hamide Hasiro | Jesus Gantalios] as a 65 year old Middle Eastern man, with short grey hair and a short grey beard and kind eyes",
+    "id": "0091",
+    "name": "0091_middle_eastern_65_male",
+    "image": "image92",
+    "outfit": "Dignified white thobe with subtle beige embroidery, brown leather vest, dark brown wool pants, and well-worn brown leather shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.750747",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0091_middle_eastern_65_male/base_image/0091_middle_eastern_65_male_base.png",
+      "relative_path": "characters/0091_middle_eastern_65_male/base_image/0091_middle_eastern_65_male_base.png",
+      "size_bytes": 1260508,
+      "size_mb": 1.2,
+      "created_timestamp": 1746897273.1663122,
+      "created_date": "2025-05-10T19:14:33.166312",
+      "modified_timestamp": 1746897273.1666615,
+      "modified_date": "2025-05-10T19:14:33.166662",
+      "md5_hash": "75e52997c732ceac65ae101a92dac1ee",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0091_middle_eastern_65_male/base_image/0091_middle_eastern_65_male_base.png",
+      "moved_relative_path": "data/actors/0091_middle_eastern_65_male/base_image/0091_middle_eastern_65_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1260508,
+    "total_size_mb": 1.2,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0263",
+  "character_name": "0263_indian_49_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "49",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Priya Gupta as a 49 year old indian woman with long, black hair worn in a single braid and gold hoop earrings",
+    "id": "0263",
+    "name": "0263_indian_49_female",
+    "image": "image264"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.953967",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

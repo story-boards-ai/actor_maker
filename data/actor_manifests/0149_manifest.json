@@ -1,0 +1,40 @@
+{
+  "character_id": "0149",
+  "character_name": "0149_indian_24_female",
+  "metadata": {
+    "img": "0149_indian_24_female.webp",
+    "age": "24",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Shanaya Kapoor | Banita Sandhu] as a 24 year old Indian woman with a chic bob cut and a modern flair",
+    "id": "0149",
+    "name": "0149_indian_24_female",
+    "image": "image150",
+    "outfit": "Contemporary mustard yellow off-shoulder top, high-waisted black culottes, gold geometric earrings, and black strappy heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.163875",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0149_indian_24_female/base_image/0149_indian_24_female_base.png",
+      "relative_path": "characters/0149_indian_24_female/base_image/0149_indian_24_female_base.png",
+      "size_bytes": 1122260,
+      "size_mb": 1.07,
+      "created_timestamp": 1746907211.3384278,
+      "created_date": "2025-05-10T22:00:11.338428",
+      "modified_timestamp": 1746907211.3390217,
+      "modified_date": "2025-05-10T22:00:11.339022",
+      "md5_hash": "6be570ae9ce38c61742be704c4fb5957",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0149_indian_24_female/base_image/0149_indian_24_female_base.png",
+      "moved_relative_path": "data/actors/0149_indian_24_female/base_image/0149_indian_24_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1122260,
+    "total_size_mb": 1.07,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

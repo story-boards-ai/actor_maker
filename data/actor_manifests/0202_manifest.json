@@ -1,0 +1,39 @@
+{
+  "character_id": "0202",
+  "character_name": "0202_indian_32_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "32",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Arjun Reddy as a 32 year old indian man, with short black hair combed to the side and a trimmed beard",
+    "id": "0202",
+    "name": "0202_indian_32_male",
+    "image": "image203"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.545723",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0202_indian_32_male/base_image/0202_indian_32_male_base.png",
+      "relative_path": "characters/0202_indian_32_male/base_image/0202_indian_32_male_base.png",
+      "size_bytes": 1330817,
+      "size_mb": 1.27,
+      "created_timestamp": 1746899660.8747091,
+      "created_date": "2025-05-10T19:54:20.874709",
+      "modified_timestamp": 1746899660.875447,
+      "modified_date": "2025-05-10T19:54:20.875447",
+      "md5_hash": "23699ef29e426cbb9755b911c5bd6572",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0202_indian_32_male/base_image/0202_indian_32_male_base.png",
+      "moved_relative_path": "data/actors/0202_indian_32_male/base_image/0202_indian_32_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1330817,
+    "total_size_mb": 1.27,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

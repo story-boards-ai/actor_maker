@@ -1,0 +1,32 @@
+{
+  "delayTime": 5106,
+  "executionTime": 364785,
+  "id": "cba12185-a92d-4af9-9f4f-e93c16567588-e1",
+  "output": {
+    "output": {
+      "actor_id": "0195_indian_29_female",
+      "job_id": "1163ede9-cbb0-4689-82ed-a6b8a2622ece",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0195_indian_29_female/0195_indian_29_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "jgvnya7hlz7lkt"
+}

@@ -1,0 +1,31 @@
+{
+  "delayTime": 174,
+  "executionTime": 343468,
+  "id": "f175c0de-e60b-4cbd-8835-b1faf353ad0f-e1",
+  "output": {
+    "output": {
+      "character_id": "0085_middle_eastern_35_male",
+      "job_id": "f02b40df-3734-46c6-8a12-9f997324b2c9",
+      "s3_image_urls": [
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_0.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_1.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_2.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_3.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_4.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_5.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_6.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_7.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_8.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_9.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_10.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_11.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_12.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0085_middle_eastern_35_male/training_data/0085_middle_eastern_35_male_13.png"
+      ],
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "e3bhyk6zyktc05"
+}

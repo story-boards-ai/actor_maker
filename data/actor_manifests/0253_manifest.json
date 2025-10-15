@@ -1,0 +1,39 @@
+{
+  "character_id": "0253",
+  "character_name": "0253_black_39_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "39",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Kwame Osei as a 39 year old black man with short, curly black hair and a closely trimmed beard",
+    "id": "0253",
+    "name": "0253_black_39_male",
+    "image": "image254"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.889493",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0253_black_39_male/base_image/0253_black_39_male_base.png",
+      "relative_path": "characters/0253_black_39_male/base_image/0253_black_39_male_base.png",
+      "size_bytes": 1382888,
+      "size_mb": 1.32,
+      "created_timestamp": 1746901078.7389593,
+      "created_date": "2025-05-10T20:17:58.738959",
+      "modified_timestamp": 1746901078.7392774,
+      "modified_date": "2025-05-10T20:17:58.739277",
+      "md5_hash": "e9b5b6318214afa4acef8147def19ec6",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0253_black_39_male/base_image/0253_black_39_male_base.png",
+      "moved_relative_path": "data/actors/0253_black_39_male/base_image/0253_black_39_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1382888,
+    "total_size_mb": 1.32,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

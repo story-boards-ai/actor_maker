@@ -1,0 +1,25 @@
+{
+  "character_id": "0186",
+  "character_name": "0186_south_american_28_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "28",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Valentina Herrera as a 28 year old south american woman, with long wavy brown hair and tanned skin",
+    "id": "0186",
+    "name": "0186_south_american_28_female",
+    "image": "image187"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.484042",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

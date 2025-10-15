@@ -1,0 +1,40 @@
+{
+  "character_id": "0152",
+  "character_name": "0152_indian_45_male",
+  "metadata": {
+    "img": "0152_indian_45_male.webp",
+    "age": "45",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Hrithik Roshan | John Abraham] as a 45 year old Indian man with short, styled black hair showing early signs of greying",
+    "id": "0152",
+    "name": "0152_indian_45_male",
+    "image": "image153",
+    "outfit": "Sophisticated navy blue linen blazer, crisp white button-down shirt, tan chinos, gold watch with brown leather strap, and brown suede loafers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.183866",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0152_indian_45_male/base_image/0152_indian_45_male_base.png",
+      "relative_path": "characters/0152_indian_45_male/base_image/0152_indian_45_male_base.png",
+      "size_bytes": 1192440,
+      "size_mb": 1.14,
+      "created_timestamp": 1746907230.8835592,
+      "created_date": "2025-05-10T22:00:30.883559",
+      "modified_timestamp": 1746907230.883863,
+      "modified_date": "2025-05-10T22:00:30.883863",
+      "md5_hash": "0dfb346845571cd6861b8088acd48f97",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0152_indian_45_male/base_image/0152_indian_45_male_base.png",
+      "moved_relative_path": "data/actors/0152_indian_45_male/base_image/0152_indian_45_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1192440,
+    "total_size_mb": 1.14,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

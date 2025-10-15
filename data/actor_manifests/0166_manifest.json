@@ -1,0 +1,40 @@
+{
+  "character_id": "0166",
+  "character_name": "0166_black_32_female",
+  "metadata": {
+    "img": "0166_black_32_female.webp",
+    "age": "32",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Kristen Young | Tasha Turner] as a (32 year old) black woman) , with curly short (black hair:1.1) ",
+    "id": "0166",
+    "name": "0166_black_32_female",
+    "image": "image167",
+    "outfit": "Elegant mustard yellow midi dress with subtle pleating, fitted navy blue blazer, gold geometric drop earrings, and navy blue suede pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.386814",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0166_black_32_female/base_image/0166_black_32_female_base.png",
+      "relative_path": "characters/0166_black_32_female/base_image/0166_black_32_female_base.png",
+      "size_bytes": 1254190,
+      "size_mb": 1.2,
+      "created_timestamp": 1746898921.0111208,
+      "created_date": "2025-05-10T19:42:01.011121",
+      "modified_timestamp": 1746898921.0113177,
+      "modified_date": "2025-05-10T19:42:01.011318",
+      "md5_hash": "2108bfaf070c437510a2490fcf8c0c3e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0166_black_32_female/base_image/0166_black_32_female_base.png",
+      "moved_relative_path": "data/actors/0166_black_32_female/base_image/0166_black_32_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1254190,
+    "total_size_mb": 1.2,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

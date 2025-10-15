@@ -1,0 +1,25 @@
+{
+  "character_id": "0197",
+  "character_name": "0197_european_26_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "26",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Alina Popescu as a 26 year old european woman, with long straight blonde hair and winged eyeliner",
+    "id": "0197",
+    "name": "0197_european_26_female",
+    "image": "image198"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.533823",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

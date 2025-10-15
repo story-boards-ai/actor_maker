@@ -1,0 +1,26 @@
+{
+  "character_id": "0175",
+  "character_name": "0175_european_22_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "22",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Lukas Novak as a 22 year old european man, with medium length messy blonde hair",
+    "id": "0175",
+    "name": "0175_european_22_male",
+    "image": "image176",
+    "outfit": "Trendy navy blue graphic t-shirt with abstract design, light wash distressed jeans, black leather bracelet, and white high-top sneakers with blue details."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.440836",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

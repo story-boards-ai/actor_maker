@@ -1,0 +1,40 @@
+{
+  "character_id": "0071",
+  "character_name": "0071_european_16_female",
+  "metadata": {
+    "img": "0071_european_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Marcella Beaumont as a 16 year old european woman , nerdy look, two long dark braids, cute, thick glasses, braces, no makeup",
+    "id": "0071",
+    "name": "0071_european_16_female",
+    "image": "image72",
+    "outfit": "Buttoned-up mustard yellow cardigan over a white collared shirt, navy blue pleated knee-length skirt, thick black-rimmed glasses, and brown penny loafers with white socks."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.645209",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0071_european_16_female/base_image/0071_european_16_female_base.png",
+      "relative_path": "characters/0071_european_16_female/base_image/0071_european_16_female_base.png",
+      "size_bytes": 1354962,
+      "size_mb": 1.29,
+      "created_timestamp": 1746896837.0375502,
+      "created_date": "2025-05-10T19:07:17.037550",
+      "modified_timestamp": 1746896837.0378733,
+      "modified_date": "2025-05-10T19:07:17.037873",
+      "md5_hash": "d2004a1b0b7e2b79370b379512cd3813",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0071_european_16_female/base_image/0071_european_16_female_base.png",
+      "moved_relative_path": "data/actors/0071_european_16_female/base_image/0071_european_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1354962,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

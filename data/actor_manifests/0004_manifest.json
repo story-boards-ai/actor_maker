@@ -1,0 +1,40 @@
+{
+  "character_id": "0004",
+  "character_name": "0004_european_35_male",
+  "metadata": {
+    "img": "0004_european_35_male.webp",
+    "age": "35",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "35 year old Christopher, with curly very short short brown hair with buzzed sides and european complexion",
+    "id": "0004",
+    "name": "0004_european_35_male",
+    "image": "image5",
+    "outfit": "Smart-casual work attire with a button-up shirt, chinos, and leather loafers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.280047",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0004_european_35_male/base_image/0004_european_35_male_base.png",
+      "relative_path": "characters/0004_european_35_male/base_image/0004_european_35_male_base.png",
+      "size_bytes": 1278196,
+      "size_mb": 1.22,
+      "created_timestamp": 1746856861.7327495,
+      "created_date": "2025-05-10T08:01:01.732749",
+      "modified_timestamp": 1746894475.521896,
+      "modified_date": "2025-05-10T18:27:55.521896",
+      "md5_hash": "6ed139fa0ec7080c527484fc50c2692f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0004_european_35_male/base_image/0004_european_35_male_base.png",
+      "moved_relative_path": "data/actors/0004_european_35_male/base_image/0004_european_35_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1278196,
+    "total_size_mb": 1.22,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0113",
+  "character_name": "0113_nordic_16_female",
+  "metadata": {
+    "img": "01134_nordic_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "nordic",
+    "face_prompt": "Alina Popescu as a 16 year old Nordic woman, with long blonde hair and ",
+    "id": "0113",
+    "name": "0113_nordic_16_female",
+    "image": "image114"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.927335",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
+      "relative_path": "characters/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
+      "size_bytes": 1470794,
+      "size_mb": 1.4,
+      "created_timestamp": 1746897807.7593212,
+      "created_date": "2025-05-10T19:23:27.759321",
+      "modified_timestamp": 1746897807.7595894,
+      "modified_date": "2025-05-10T19:23:27.759589",
+      "md5_hash": "d3a45a5dab887921cfc28285f7b9b7b1",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
+      "moved_relative_path": "data/actors/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1470794,
+    "total_size_mb": 1.4,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

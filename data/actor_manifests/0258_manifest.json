@@ -1,0 +1,39 @@
+{
+  "character_id": "0258",
+  "character_name": "0258_european_58_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "58",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Luca Rossi as a 58 year old european man with short, gray hair and a well-groomed, graying beard",
+    "id": "0258",
+    "name": "0258_european_58_male",
+    "image": "image259"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.929963",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0258_european_58_male/base_image/0258_european_58_male_base.png",
+      "relative_path": "characters/0258_european_58_male/base_image/0258_european_58_male_base.png",
+      "size_bytes": 1190232,
+      "size_mb": 1.14,
+      "created_timestamp": 1746901176.4670374,
+      "created_date": "2025-05-10T20:19:36.467037",
+      "modified_timestamp": 1746901176.4674137,
+      "modified_date": "2025-05-10T20:19:36.467414",
+      "md5_hash": "0ffdf07748fc2249d96b8c968ab55b6e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0258_european_58_male/base_image/0258_european_58_male_base.png",
+      "moved_relative_path": "data/actors/0258_european_58_male/base_image/0258_european_58_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1190232,
+    "total_size_mb": 1.14,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

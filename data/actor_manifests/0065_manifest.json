@@ -1,0 +1,40 @@
+{
+  "character_id": "0065",
+  "character_name": "0065_south_american_16_male",
+  "metadata": {
+    "img": "0065_south_american_16_male.webp",
+    "age": "16",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Aleksandr Cho, as a 16 year old south american man, with short brown hair",
+    "id": "0065",
+    "name": "0065_south_american_16_male",
+    "image": "image66",
+    "outfit": "Bright orange graphic skateboard t-shirt, baggy dark blue jeans with a studded black belt, and green and black high-top skate shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.614173",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0065_south_american_16_male/base_image/0065_south_american_16_male_base.png",
+      "relative_path": "characters/0065_south_american_16_male/base_image/0065_south_american_16_male_base.png",
+      "size_bytes": 1208949,
+      "size_mb": 1.15,
+      "created_timestamp": 1746893949.9789054,
+      "created_date": "2025-05-10T18:19:09.978905",
+      "modified_timestamp": 1746896719.5422726,
+      "modified_date": "2025-05-10T19:05:19.542273",
+      "md5_hash": "37f84c95560c63597e6893fea8383d32",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0065_south_american_16_male/base_image/0065_south_american_16_male_base.png",
+      "moved_relative_path": "data/actors/0065_south_american_16_male/base_image/0065_south_american_16_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1208949,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

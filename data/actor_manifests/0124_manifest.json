@@ -1,0 +1,40 @@
+{
+  "character_id": "0124",
+  "character_name": "0124_middle_eastern_50_female",
+  "metadata": {
+    "img": "0124_middle_eastern_50_female.webp",
+    "age": "50",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amirul Rahma as a tasteful 50 year old Middle Eastern woman, with straight gray hair",
+    "id": "0124",
+    "name": "0124_middle_eastern_50_female",
+    "image": "image125",
+    "outfit": "Sophisticated royal blue tunic with intricate gold embroidery at the neckline, flowing black palazzo pants, gold bangles, and comfortable black leather flats."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.987949",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0124_middle_eastern_50_female/base_image/0124_middle_eastern_50_female_base.png",
+      "relative_path": "characters/0124_middle_eastern_50_female/base_image/0124_middle_eastern_50_female_base.png",
+      "size_bytes": 1151937,
+      "size_mb": 1.1,
+      "created_timestamp": 1746898097.1055288,
+      "created_date": "2025-05-10T19:28:17.105529",
+      "modified_timestamp": 1746898097.1058314,
+      "modified_date": "2025-05-10T19:28:17.105831",
+      "md5_hash": "be200e2c5e1db4519fd158a4e4c158a2",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0124_middle_eastern_50_female/base_image/0124_middle_eastern_50_female_base.png",
+      "moved_relative_path": "data/actors/0124_middle_eastern_50_female/base_image/0124_middle_eastern_50_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1151937,
+    "total_size_mb": 1.1,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0130",
+  "character_name": "0130_middle_eastern_40_female",
+  "metadata": {
+    "img": "0130_middle_eastern_40_female.webp",
+    "age": "40",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Midra Hamada | Naveena Andrews] as a 40 year old Middle Eastern woman, with straight brown hair and ",
+    "id": "0130",
+    "name": "0130_middle_eastern_40_female",
+    "image": "image131",
+    "outfit": "Professional maroon wrap dress with subtle gold pattern, black tailored blazer, gold drop earrings, and black leather pointed-toe pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.024595",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0130_middle_eastern_40_female/base_image/0130_middle_eastern_40_female_base.png",
+      "relative_path": "characters/0130_middle_eastern_40_female/base_image/0130_middle_eastern_40_female_base.png",
+      "size_bytes": 1151057,
+      "size_mb": 1.1,
+      "created_timestamp": 1746898213.7595117,
+      "created_date": "2025-05-10T19:30:13.759512",
+      "modified_timestamp": 1746898213.7597046,
+      "modified_date": "2025-05-10T19:30:13.759705",
+      "md5_hash": "79e3b74ba05adbcbd1d7e2d311abd116",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0130_middle_eastern_40_female/base_image/0130_middle_eastern_40_female_base.png",
+      "moved_relative_path": "data/actors/0130_middle_eastern_40_female/base_image/0130_middle_eastern_40_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1151057,
+    "total_size_mb": 1.1,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

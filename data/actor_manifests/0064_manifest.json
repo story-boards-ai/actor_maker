@@ -1,0 +1,40 @@
+{
+  "character_id": "0064",
+  "character_name": "0064_south_american_65_male",
+  "metadata": {
+    "img": "0064_south_american_65_male.webp",
+    "age": "65",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "[Henry Tigen | Andrew Pascales], as a 65 year old mexican man, with short wavy silver hair, wrinkles,tanned, happy",
+    "id": "0064",
+    "name": "0064_south_american_65_male",
+    "image": "image65",
+    "outfit": "Colorful red and blue striped traditional poncho over a white button-up shirt, dark blue jeans, and brown leather cowboy boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.607727",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0064_south_american_65_male/base_image/0064_south_american_65_male_base.png",
+      "relative_path": "characters/0064_south_american_65_male/base_image/0064_south_american_65_male_base.png",
+      "size_bytes": 1493022,
+      "size_mb": 1.42,
+      "created_timestamp": 1746893936.5319026,
+      "created_date": "2025-05-10T18:18:56.531903",
+      "modified_timestamp": 1746896700.1671677,
+      "modified_date": "2025-05-10T19:05:00.167168",
+      "md5_hash": "4301a33d7f9f6f63ba6f4c5f689b6f32",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0064_south_american_65_male/base_image/0064_south_american_65_male_base.png",
+      "moved_relative_path": "data/actors/0064_south_american_65_male/base_image/0064_south_american_65_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1493022,
+    "total_size_mb": 1.42,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

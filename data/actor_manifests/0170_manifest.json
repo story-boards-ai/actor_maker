@@ -1,0 +1,40 @@
+{
+  "character_id": "0170",
+  "character_name": "0170_black_40_female",
+  "metadata": {
+    "img": "0170_black_40_female.webp",
+    "age": "40",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Linda Bailey | Tara Patterson] as a radiant (40 year old) black woman) , with straight long (black hair:1.1) ",
+    "id": "0170",
+    "name": "0170_black_40_female",
+    "image": "image171",
+    "outfit": "Elegant royal blue cowl neck midi dress with draped silhouette, silver statement bracelet, diamond drop earrings, and silver metallic strappy heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.419492",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0170_black_40_female/base_image/0170_black_40_female_base.png",
+      "relative_path": "characters/0170_black_40_female/base_image/0170_black_40_female_base.png",
+      "size_bytes": 1227241,
+      "size_mb": 1.17,
+      "created_timestamp": 1746907332.531407,
+      "created_date": "2025-05-10T22:02:12.531407",
+      "modified_timestamp": 1746907332.5317402,
+      "modified_date": "2025-05-10T22:02:12.531740",
+      "md5_hash": "29e78d792e9c3b5a4d492ebb35fc619e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0170_black_40_female/base_image/0170_black_40_female_base.png",
+      "moved_relative_path": "data/actors/0170_black_40_female/base_image/0170_black_40_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1227241,
+    "total_size_mb": 1.17,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

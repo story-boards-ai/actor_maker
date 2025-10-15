@@ -1,0 +1,40 @@
+{
+  "character_id": "0039",
+  "character_name": "0039_asian_21_female",
+  "metadata": {
+    "img": "0039_asian_21_female.webp",
+    "age": "21",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Elysia Harcourt as a 21 year old asian woman, dark medium length hair, natural makeup, outdoor clothes",
+    "id": "0039",
+    "name": "0039_asian_21_female",
+    "image": "image40",
+    "outfit": "Navy blue puffer vest over a maroon long-sleeve henley, black stretch hiking pants, and gray and teal trail running shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.469950",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0039_asian_21_female/base_image/0039_asian_21_female_base.png",
+      "relative_path": "characters/0039_asian_21_female/base_image/0039_asian_21_female_base.png",
+      "size_bytes": 968990,
+      "size_mb": 0.92,
+      "created_timestamp": 1746906876.498198,
+      "created_date": "2025-05-10T21:54:36.498198",
+      "modified_timestamp": 1746906876.5016098,
+      "modified_date": "2025-05-10T21:54:36.501610",
+      "md5_hash": "bd6c212f3cbd2eae583817569d5089ca",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0039_asian_21_female/base_image/0039_asian_21_female_base.png",
+      "moved_relative_path": "data/actors/0039_asian_21_female/base_image/0039_asian_21_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 968990,
+    "total_size_mb": 0.92,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

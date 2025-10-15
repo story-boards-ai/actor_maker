@@ -1,0 +1,39 @@
+{
+  "character_id": "0195",
+  "character_name": "0195_indian_29_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "29",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Divya Gupta as a 29 year old indian woman, with long black hair in a side braid and a nose stud",
+    "id": "0195",
+    "name": "0195_indian_29_female",
+    "image": "image196"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.526976",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0195_indian_29_female/base_image/0195_indian_29_female_base.png",
+      "relative_path": "characters/0195_indian_29_female/base_image/0195_indian_29_female_base.png",
+      "size_bytes": 1397651,
+      "size_mb": 1.33,
+      "created_timestamp": 1746899524.7105048,
+      "created_date": "2025-05-10T19:52:04.710505",
+      "modified_timestamp": 1746899524.7107685,
+      "modified_date": "2025-05-10T19:52:04.710768",
+      "md5_hash": "2c8f8d6add1cf03161b7d898c24c4f18",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0195_indian_29_female/base_image/0195_indian_29_female_base.png",
+      "moved_relative_path": "data/actors/0195_indian_29_female/base_image/0195_indian_29_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1397651,
+    "total_size_mb": 1.33,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

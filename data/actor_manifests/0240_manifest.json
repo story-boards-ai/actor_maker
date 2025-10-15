@@ -1,0 +1,25 @@
+{
+  "character_id": "0240",
+  "character_name": "0240_asian_49_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "49",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae-sung Park as a 49 year old asian man, with short black hair and thin-framed glasses",
+    "id": "0240",
+    "name": "0240_asian_49_male",
+    "image": "image241"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.825799",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

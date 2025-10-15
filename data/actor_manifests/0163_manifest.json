@@ -1,0 +1,40 @@
+{
+  "character_id": "0163",
+  "character_name": "0163_black_26_female",
+  "metadata": {
+    "img": "0163_black_26_female.webp",
+    "age": "26",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Kendra Hall as a supermodel (26 year old) black woman, with curly medium length (black hair:1.1) ",
+    "id": "0163",
+    "name": "0163_black_26_female",
+    "image": "image164",
+    "outfit": "High-fashion ivory silk jumpsuit with wide legs and plunging neckline, gold statement belt, oversized gold hoop earrings, and metallic gold stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.366473",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0163_black_26_female/base_image/0163_black_26_female_base.png",
+      "relative_path": "characters/0163_black_26_female/base_image/0163_black_26_female_base.png",
+      "size_bytes": 1189282,
+      "size_mb": 1.13,
+      "created_timestamp": 1746898860.622569,
+      "created_date": "2025-05-10T19:41:00.622569",
+      "modified_timestamp": 1746898860.6227798,
+      "modified_date": "2025-05-10T19:41:00.622780",
+      "md5_hash": "87135280d4f9fad0714a0031f4019558",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0163_black_26_female/base_image/0163_black_26_female_base.png",
+      "moved_relative_path": "data/actors/0163_black_26_female/base_image/0163_black_26_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1189282,
+    "total_size_mb": 1.13,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

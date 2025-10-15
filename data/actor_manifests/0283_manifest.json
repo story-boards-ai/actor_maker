@@ -1,0 +1,25 @@
+{
+  "character_id": "0283",
+  "character_name": "0283_black_10_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "10",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Kwame Mensah as a 10 year old black boy with short, curly black hair and a wide, friendly smile",
+    "id": "0283",
+    "name": "0283_black_10_male",
+    "image": "image284"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.009650",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

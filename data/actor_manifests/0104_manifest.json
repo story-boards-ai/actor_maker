@@ -1,0 +1,39 @@
+{
+  "character_id": "0104",
+  "character_name": "0104_asian_20_male",
+  "metadata": {
+    "img": "01045_asian_20_male.webp",
+    "age": "20",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Haruto Takahashi as a 20 year old asian man, with short thick black hair",
+    "id": "0104",
+    "name": "0104_asian_20_male",
+    "image": "image105"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.871320",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0104_asian_20_male/base_image/0104_asian_20_male_base.png",
+      "relative_path": "characters/0104_asian_20_male/base_image/0104_asian_20_male_base.png",
+      "size_bytes": 1375585,
+      "size_mb": 1.31,
+      "created_timestamp": 1746897631.0037386,
+      "created_date": "2025-05-10T19:20:31.003739",
+      "modified_timestamp": 1746897631.0040627,
+      "modified_date": "2025-05-10T19:20:31.004063",
+      "md5_hash": "b9fc5c310df9ea25c2f1bb52c0c03e07",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0104_asian_20_male/base_image/0104_asian_20_male_base.png",
+      "moved_relative_path": "data/actors/0104_asian_20_male/base_image/0104_asian_20_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1375585,
+    "total_size_mb": 1.31,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

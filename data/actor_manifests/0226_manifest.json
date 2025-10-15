@@ -1,0 +1,39 @@
+{
+  "character_id": "0226",
+  "character_name": "0226_middle_eastern_48_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "48",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Fatima Nassari as a 48 year old middle eastern woman, with long dark hair worn in a loose braid and a serene, peaceful expression",
+    "id": "0226",
+    "name": "0226_middle_eastern_48_female",
+    "image": "image227"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.767033",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0226_middle_eastern_48_female/base_image/0226_middle_eastern_48_female_base.png",
+      "relative_path": "characters/0226_middle_eastern_48_female/base_image/0226_middle_eastern_48_female_base.png",
+      "size_bytes": 1309773,
+      "size_mb": 1.25,
+      "created_timestamp": 1746900459.048154,
+      "created_date": "2025-05-10T20:07:39.048154",
+      "modified_timestamp": 1746900459.0485122,
+      "modified_date": "2025-05-10T20:07:39.048512",
+      "md5_hash": "3fa6ac49ddb0c5d207a4a5a8010ca9c0",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0226_middle_eastern_48_female/base_image/0226_middle_eastern_48_female_base.png",
+      "moved_relative_path": "data/actors/0226_middle_eastern_48_female/base_image/0226_middle_eastern_48_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1309773,
+    "total_size_mb": 1.25,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

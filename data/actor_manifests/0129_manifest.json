@@ -1,0 +1,40 @@
+{
+  "character_id": "0129",
+  "character_name": "0129_middle_eastern_30_female",
+  "metadata": {
+    "img": "0129_middle_eastern_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Anna Smirnova as a 30 year old Middle Eastern woman, with wavy black hair",
+    "id": "0129",
+    "name": "0129_middle_eastern_30_female",
+    "image": "image130",
+    "outfit": "Stylish teal silk blouse with V-neck, fitted black pencil skirt, delicate gold layered necklaces, and black suede pumps with gold accents."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.019466",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0129_middle_eastern_30_female/base_image/0129_middle_eastern_30_female_base.png",
+      "relative_path": "characters/0129_middle_eastern_30_female/base_image/0129_middle_eastern_30_female_base.png",
+      "size_bytes": 1134713,
+      "size_mb": 1.08,
+      "created_timestamp": 1746898194.3495612,
+      "created_date": "2025-05-10T19:29:54.349561",
+      "modified_timestamp": 1746898194.3498337,
+      "modified_date": "2025-05-10T19:29:54.349834",
+      "md5_hash": "8728f49ebf77b14bad143e104d8721e5",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0129_middle_eastern_30_female/base_image/0129_middle_eastern_30_female_base.png",
+      "moved_relative_path": "data/actors/0129_middle_eastern_30_female/base_image/0129_middle_eastern_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1134713,
+    "total_size_mb": 1.08,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

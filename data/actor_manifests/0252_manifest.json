@@ -1,0 +1,39 @@
+{
+  "character_id": "0252",
+  "character_name": "0252_european_62_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "62",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Günther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
+    "id": "0252",
+    "name": "0252_european_62_male",
+    "image": "image253"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.882461",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0252_european_62_male/base_image/0252_european_62_male_base.png",
+      "relative_path": "characters/0252_european_62_male/base_image/0252_european_62_male_base.png",
+      "size_bytes": 1376405,
+      "size_mb": 1.31,
+      "created_timestamp": 1746901059.3019068,
+      "created_date": "2025-05-10T20:17:39.301907",
+      "modified_timestamp": 1746901059.302232,
+      "modified_date": "2025-05-10T20:17:39.302232",
+      "md5_hash": "dbdf6fad7c4871a8cc2cbe9f54622b0b",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0252_european_62_male/base_image/0252_european_62_male_base.png",
+      "moved_relative_path": "data/actors/0252_european_62_male/base_image/0252_european_62_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1376405,
+    "total_size_mb": 1.31,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

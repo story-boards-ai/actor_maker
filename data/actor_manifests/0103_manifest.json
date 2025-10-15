@@ -1,0 +1,39 @@
+{
+  "character_id": "0103",
+  "character_name": "0103_south_american_70_female",
+  "metadata": {
+    "img": "01034_south_american_70_female.webp",
+    "age": "70",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Celeste Whitmore as a 70 year old south american woman, with straight gray hair and hazel eyes",
+    "id": "0103",
+    "name": "0103_south_american_70_female",
+    "image": "image104"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.861838",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0103_south_american_70_female/base_image/0103_south_american_70_female_base.png",
+      "relative_path": "characters/0103_south_american_70_female/base_image/0103_south_american_70_female_base.png",
+      "size_bytes": 1443240,
+      "size_mb": 1.38,
+      "created_timestamp": 1746897611.4878185,
+      "created_date": "2025-05-10T19:20:11.487818",
+      "modified_timestamp": 1746897611.488116,
+      "modified_date": "2025-05-10T19:20:11.488116",
+      "md5_hash": "20b87418f43d7e47656c70b2f58f3a9a",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0103_south_american_70_female/base_image/0103_south_american_70_female_base.png",
+      "moved_relative_path": "data/actors/0103_south_american_70_female/base_image/0103_south_american_70_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1443240,
+    "total_size_mb": 1.38,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

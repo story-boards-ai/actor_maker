@@ -1,0 +1,25 @@
+{
+  "character_id": "0238",
+  "character_name": "0238_black_44_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "44",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Imani Williams as a 44 year old black woman, with long dreadlocks tied back and round glasses",
+    "id": "0238",
+    "name": "0238_black_44_female",
+    "image": "image239"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.822379",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

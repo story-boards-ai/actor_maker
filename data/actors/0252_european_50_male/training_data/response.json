@@ -1,0 +1,32 @@
+{
+  "delayTime": 1416,
+  "executionTime": 363038,
+  "id": "549cb7c9-0c11-42b6-8ccc-e8d7205cbe81-e1",
+  "output": {
+    "output": {
+      "actor_id": "0252_european_50_male",
+      "job_id": "fd90b6f5-82b0-486b-849a-3be058f2fe7d",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0252_european_50_male/0252_european_50_male_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "26rfneskoyho85"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0192",
+  "character_name": "0192_south_american_31_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "31",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Diego Oliveira as a 31 year old south american man, with short messy black hair and a goatee",
+    "id": "0192",
+    "name": "0192_south_american_31_male",
+    "image": "image193"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.512643",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0192_south_american_31_male/base_image/0192_south_american_31_male_base.png",
+      "relative_path": "characters/0192_south_american_31_male/base_image/0192_south_american_31_male_base.png",
+      "size_bytes": 1209188,
+      "size_mb": 1.15,
+      "created_timestamp": 1746899466.5504053,
+      "created_date": "2025-05-10T19:51:06.550405",
+      "modified_timestamp": 1746899466.5505996,
+      "modified_date": "2025-05-10T19:51:06.550600",
+      "md5_hash": "a69509773d855ea6242fdad0d02d40f8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0192_south_american_31_male/base_image/0192_south_american_31_male_base.png",
+      "moved_relative_path": "data/actors/0192_south_american_31_male/base_image/0192_south_american_31_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1209188,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

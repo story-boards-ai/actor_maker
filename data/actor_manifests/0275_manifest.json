@@ -1,0 +1,25 @@
+{
+  "character_id": "0275",
+  "character_name": "0275_asian_8_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "8",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Mei Ling as an 8 year old asian girl with short, bobbed black hair and a Hello Kitty t-shirt",
+    "id": "0275",
+    "name": "0275_asian_8_female",
+    "image": "image276"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.995861",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

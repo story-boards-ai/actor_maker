@@ -1,0 +1,25 @@
+{
+  "character_id": "0281",
+  "character_name": "0281_asian_12_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "12",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Takeshi Sato as a 12 year old asian boy with short, straight black hair and glasses",
+    "id": "0281",
+    "name": "0281_asian_12_male",
+    "image": "image282"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.007202",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

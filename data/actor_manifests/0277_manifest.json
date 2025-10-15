@@ -1,0 +1,25 @@
+{
+  "character_id": "0277",
+  "character_name": "0277_black_6_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "6",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Amara Okafor as a 6 year old black girl with short, curly black hair tied in two puffs and a missing front tooth",
+    "id": "0277",
+    "name": "0277_black_6_female",
+    "image": "image278"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.998858",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

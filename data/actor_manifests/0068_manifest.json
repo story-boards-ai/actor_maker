@@ -1,0 +1,40 @@
+{
+  "character_id": "0068",
+  "character_name": "0068_south_american_25_male",
+  "metadata": {
+    "img": "0068_south_american_25_male.webp",
+    "age": "25",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Leonidas Mwang, as a 25 year old south american man, with straight black hair and hazel eyes",
+    "id": "0068",
+    "name": "0068_south_american_25_male",
+    "image": "image69",
+    "outfit": "Trendy maroon and gold patterned button-up shirt, slim-fit black jeans, silver chain necklace, and white designer sneakers with gold accents."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.629521",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0068_south_american_25_male/base_image/0068_south_american_25_male_base.png",
+      "relative_path": "characters/0068_south_american_25_male/base_image/0068_south_american_25_male_base.png",
+      "size_bytes": 1282043,
+      "size_mb": 1.22,
+      "created_timestamp": 1746893983.0416799,
+      "created_date": "2025-05-10T18:19:43.041680",
+      "modified_timestamp": 1746896778.588222,
+      "modified_date": "2025-05-10T19:06:18.588222",
+      "md5_hash": "4d8e5ba0124fa2523fd5e7e0b38ea341",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0068_south_american_25_male/base_image/0068_south_american_25_male_base.png",
+      "moved_relative_path": "data/actors/0068_south_american_25_male/base_image/0068_south_american_25_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1282043,
+    "total_size_mb": 1.22,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

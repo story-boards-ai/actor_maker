@@ -1,0 +1,40 @@
+{
+  "character_id": "0035",
+  "character_name": "0035_black_65_male",
+  "metadata": {
+    "img": "0035_black_65_male.webp",
+    "age": "65",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "a man ([Carl Hanson | Roberto Union] as a 65-year-old black man), with short afro hair and a weathered look",
+    "id": "0035",
+    "name": "0035_black_65_male",
+    "image": "image36",
+    "outfit": "Comfortable forest green cardigan over a beige henley shirt, dark brown corduroy pants, and well-worn tan leather boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.447077",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0035_black_65_male/base_image/0035_black_65_male_base.png",
+      "relative_path": "characters/0035_black_65_male/base_image/0035_black_65_male_base.png",
+      "size_bytes": 1558779,
+      "size_mb": 1.49,
+      "created_timestamp": 1746893513.7853465,
+      "created_date": "2025-05-10T18:11:53.785347",
+      "modified_timestamp": 1746895079.9143147,
+      "modified_date": "2025-05-10T18:37:59.914315",
+      "md5_hash": "b4f58ae4a2c26d50e4c62daa98555ec9",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0035_black_65_male/base_image/0035_black_65_male_base.png",
+      "moved_relative_path": "data/actors/0035_black_65_male/base_image/0035_black_65_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1558779,
+    "total_size_mb": 1.49,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

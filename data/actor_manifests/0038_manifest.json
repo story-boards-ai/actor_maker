@@ -1,0 +1,40 @@
+{
+  "character_id": "0038",
+  "character_name": "0038_european_21_female",
+  "metadata": {
+    "img": "0038_european_21_female.webp",
+    "age": "21",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Isolde Mercer as a 21 year old european woman, dark medium length hair, natural makeup, outdoor clothes",
+    "id": "0038",
+    "name": "0038_european_21_female",
+    "image": "image39",
+    "outfit": "Forest green waterproof jacket over a light gray thermal shirt, khaki hiking pants, and sturdy brown hiking boots with red laces."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.464430",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0038_european_21_female/base_image/0038_european_21_female_base.png",
+      "relative_path": "characters/0038_european_21_female/base_image/0038_european_21_female_base.png",
+      "size_bytes": 1162132,
+      "size_mb": 1.11,
+      "created_timestamp": 1746893546.9044785,
+      "created_date": "2025-05-10T18:12:26.904479",
+      "modified_timestamp": 1746895138.4583204,
+      "modified_date": "2025-05-10T18:38:58.458320",
+      "md5_hash": "8ae159257f79578f7162d99d03327e7e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0038_european_21_female/base_image/0038_european_21_female_base.png",
+      "moved_relative_path": "data/actors/0038_european_21_female/base_image/0038_european_21_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1162132,
+    "total_size_mb": 1.11,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

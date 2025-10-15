@@ -1,0 +1,39 @@
+{
+  "character_id": "0194",
+  "character_name": "0194_middle_eastern_38_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "38",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Rashid Daoud as a 38 year old middle eastern man, with short curly black hair and a full beard",
+    "id": "0194",
+    "name": "0194_middle_eastern_38_male",
+    "image": "image195"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.521225",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0194_middle_eastern_38_male/base_image/0194_middle_eastern_38_male_base.png",
+      "relative_path": "characters/0194_middle_eastern_38_male/base_image/0194_middle_eastern_38_male_base.png",
+      "size_bytes": 1206648,
+      "size_mb": 1.15,
+      "created_timestamp": 1746899505.3916934,
+      "created_date": "2025-05-10T19:51:45.391693",
+      "modified_timestamp": 1746899505.3938575,
+      "modified_date": "2025-05-10T19:51:45.393857",
+      "md5_hash": "09af9b0779fc1346fdbfe296c5cfb3c8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0194_middle_eastern_38_male/base_image/0194_middle_eastern_38_male_base.png",
+      "moved_relative_path": "data/actors/0194_middle_eastern_38_male/base_image/0194_middle_eastern_38_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1206648,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

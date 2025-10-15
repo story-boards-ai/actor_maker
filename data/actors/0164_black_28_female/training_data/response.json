@@ -1,0 +1,31 @@
+{
+  "delayTime": 64907,
+  "executionTime": 356715,
+  "id": "5b2300dc-b06e-4399-8ca2-cd7b4756db09-e1",
+  "output": {
+    "output": {
+      "character_id": "0164_black_28_female",
+      "job_id": "8459e5fb-4045-49d0-b749-ad2c751972c0",
+      "s3_image_urls": [
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_0.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_1.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_2.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_3.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_4.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_5.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_6.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_7.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_8.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_9.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_10.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_11.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_12.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0164_black_28_female/training_data/0164_black_28_female_13.png"
+      ],
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "gt46i4nq8488bk"
+}

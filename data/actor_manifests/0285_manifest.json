@@ -1,0 +1,25 @@
+{
+  "character_id": "0285",
+  "character_name": "0285_indian_8_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "8",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Rohan Patel as an 8 year old indian boy with short, wavy black hair and a missing front tooth",
+    "id": "0285",
+    "name": "0285_indian_8_male",
+    "image": "image286"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.013257",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

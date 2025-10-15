@@ -1,0 +1,39 @@
+{
+  "character_id": "0213",
+  "character_name": "0213_european_12_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "12",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Liam Novak as a 12 year old european boy, with shaggy blonde hair and a mischievous grin",
+    "id": "0213",
+    "name": "0213_european_12_male",
+    "image": "image214"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.697660",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0213_european_12_male/base_image/0213_european_12_male_base.png",
+      "relative_path": "characters/0213_european_12_male/base_image/0213_european_12_male_base.png",
+      "size_bytes": 1345128,
+      "size_mb": 1.28,
+      "created_timestamp": 1746900205.2737672,
+      "created_date": "2025-05-10T20:03:25.273767",
+      "modified_timestamp": 1746900205.2740958,
+      "modified_date": "2025-05-10T20:03:25.274096",
+      "md5_hash": "fe8edfa5742708649e9ed11066457db0",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0213_european_12_male/base_image/0213_european_12_male_base.png",
+      "moved_relative_path": "data/actors/0213_european_12_male/base_image/0213_european_12_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1345128,
+    "total_size_mb": 1.28,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

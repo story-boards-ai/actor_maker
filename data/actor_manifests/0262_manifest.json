@@ -1,0 +1,25 @@
+{
+  "character_id": "0262",
+  "character_name": "0262_asian_31_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "31",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Takeshi Sato as a 31 year old asian man with medium-length, straight black hair pulled back into a small ponytail",
+    "id": "0262",
+    "name": "0262_asian_31_male",
+    "image": "image263"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.949800",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

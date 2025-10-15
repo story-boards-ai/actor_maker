@@ -1,0 +1,40 @@
+{
+  "character_id": "0146",
+  "character_name": "0146_indian_20_male",
+  "metadata": {
+    "img": "0146_indian_20_male.webp",
+    "age": "20",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Ahaan Shetty | Aryan Khan] as a 20 year old Indian man with a short, spiky hairstyle and an energetic presence",
+    "id": "0146",
+    "name": "0146_indian_20_male",
+    "image": "image147",
+    "outfit": "Vibrant yellow graphic t-shirt with urban print, black skinny jeans with ripped knees, chunky white sneakers, and silver chain necklace."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.143682",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0146_indian_20_male/base_image/0146_indian_20_male_base.png",
+      "relative_path": "characters/0146_indian_20_male/base_image/0146_indian_20_male_base.png",
+      "size_bytes": 1317762,
+      "size_mb": 1.26,
+      "created_timestamp": 1746907191.6803193,
+      "created_date": "2025-05-10T21:59:51.680319",
+      "modified_timestamp": 1746907191.6807225,
+      "modified_date": "2025-05-10T21:59:51.680722",
+      "md5_hash": "83c257b23fc417a696152691a9b8b810",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0146_indian_20_male/base_image/0146_indian_20_male_base.png",
+      "moved_relative_path": "data/actors/0146_indian_20_male/base_image/0146_indian_20_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1317762,
+    "total_size_mb": 1.26,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

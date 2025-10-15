@@ -1,0 +1,40 @@
+{
+  "character_id": "0060",
+  "character_name": "0060_south_american_55_male",
+  "metadata": {
+    "img": "0060_south_american_55_male.webp",
+    "age": "55",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "George Longoria, as a 55 year old south american man, with short greying hair",
+    "id": "0060",
+    "name": "0060_south_american_55_male",
+    "image": "image61",
+    "outfit": "Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.584446",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0060_south_american_55_male/base_image/0060_south_american_55_male_base.png",
+      "relative_path": "characters/0060_south_american_55_male/base_image/0060_south_american_55_male_base.png",
+      "size_bytes": 1290489,
+      "size_mb": 1.23,
+      "created_timestamp": 1746906993.7800097,
+      "created_date": "2025-05-10T21:56:33.780010",
+      "modified_timestamp": 1746906993.7804995,
+      "modified_date": "2025-05-10T21:56:33.780499",
+      "md5_hash": "cefaeb2a87cb1aa4a1c14e151ec1aef8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0060_south_american_55_male/base_image/0060_south_american_55_male_base.png",
+      "moved_relative_path": "data/actors/0060_south_american_55_male/base_image/0060_south_american_55_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1290489,
+    "total_size_mb": 1.23,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

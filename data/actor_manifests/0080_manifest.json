@@ -1,0 +1,40 @@
+{
+  "character_id": "0080",
+  "character_name": "0080_european_45_female",
+  "metadata": {
+    "img": "0080_european_45_female.webp",
+    "age": "45",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "a woman ([Pamela Rivera | Kim Hae-Sung] as a 45 year old european woman), with curly black hair reaching her ears and , heavy makeup",
+    "id": "0080",
+    "name": "0080_european_45_female",
+    "image": "image81",
+    "outfit": "Glamorous ruby red cocktail dress with black lace overlay, statement diamond earrings, sheer black stockings, and black patent leather stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.692689",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0080_european_45_female/base_image/0080_european_45_female_base.png",
+      "relative_path": "characters/0080_european_45_female/base_image/0080_european_45_female_base.png",
+      "size_bytes": 1353432,
+      "size_mb": 1.29,
+      "created_timestamp": 1746897012.388937,
+      "created_date": "2025-05-10T19:10:12.388937",
+      "modified_timestamp": 1746897012.3892365,
+      "modified_date": "2025-05-10T19:10:12.389236",
+      "md5_hash": "a809e09ca071f6ad077c7c7e65542824",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0080_european_45_female/base_image/0080_european_45_female_base.png",
+      "moved_relative_path": "data/actors/0080_european_45_female/base_image/0080_european_45_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1353432,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

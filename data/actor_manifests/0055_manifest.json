@@ -1,0 +1,40 @@
+{
+  "character_id": "0055",
+  "character_name": "0055_european_35_female",
+  "metadata": {
+    "img": "0055_european_35_female.webp",
+    "age": "35",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "a woman ([Rahel Vollweider | Tanja Vasinova] as a slender 35 year old european woman), with light skin, long brown hair in a ponytail, wearing glasses",
+    "id": "0055",
+    "name": "0055_european_35_female",
+    "image": "image56",
+    "outfit": "Professional sage green blouse with small white polka dots, charcoal gray pencil skirt, tortoiseshell glasses, and burgundy leather pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.557339",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0055_european_35_female/base_image/0055_european_35_female_base.png",
+      "relative_path": "characters/0055_european_35_female/base_image/0055_european_35_female_base.png",
+      "size_bytes": 1233404,
+      "size_mb": 1.18,
+      "created_timestamp": 1746906954.6313634,
+      "created_date": "2025-05-10T21:55:54.631363",
+      "modified_timestamp": 1746906954.6317747,
+      "modified_date": "2025-05-10T21:55:54.631775",
+      "md5_hash": "92efd7b0ce716b672a32d9f78f297437",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0055_european_35_female/base_image/0055_european_35_female_base.png",
+      "moved_relative_path": "data/actors/0055_european_35_female/base_image/0055_european_35_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1233404,
+    "total_size_mb": 1.18,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

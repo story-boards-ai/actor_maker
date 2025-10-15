@@ -1,0 +1,25 @@
+{
+  "character_id": "0215",
+  "character_name": "0215_asian_11_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "11",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae Park as an 11 year old asian boy, with short black hair and a cheerful, gap-toothed smile",
+    "id": "0215",
+    "name": "0215_asian_11_male",
+    "image": "image216"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.711113",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0063",
+  "character_name": "0063_south_american_60_male",
+  "metadata": {
+    "img": "0063_south_american_60_male.webp",
+    "age": "60",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "[Walton Dawson | Peter Gomez], as a 60 year old south american man, with straight short greying hair and a three day beard",
+    "id": "0063",
+    "name": "0063_south_american_60_male",
+    "image": "image64",
+    "outfit": "Relaxed olive green linen shirt with rolled sleeves, beige chinos, brown leather belt with a silver buckle, and well-worn brown leather boat shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.601405",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0063_south_american_60_male/base_image/0063_south_american_60_male_base.png",
+      "relative_path": "characters/0063_south_american_60_male/base_image/0063_south_american_60_male_base.png",
+      "size_bytes": 1304912,
+      "size_mb": 1.24,
+      "created_timestamp": 1746893924.9797187,
+      "created_date": "2025-05-10T18:18:44.979719",
+      "modified_timestamp": 1746896680.6406703,
+      "modified_date": "2025-05-10T19:04:40.640670",
+      "md5_hash": "a03bda3c88527600d9e4ffe513568ead",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0063_south_american_60_male/base_image/0063_south_american_60_male_base.png",
+      "moved_relative_path": "data/actors/0063_south_american_60_male/base_image/0063_south_american_60_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1304912,
+    "total_size_mb": 1.24,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

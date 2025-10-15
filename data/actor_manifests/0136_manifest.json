@@ -1,0 +1,40 @@
+{
+  "character_id": "0136",
+  "character_name": "0136_indian_28_male",
+  "metadata": {
+    "img": "0136_indian_28_male.webp",
+    "age": "28",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Ranbir Kapoor | Siddharth Malhotra] as a 28 year old Indian man with short, wavy black hair",
+    "id": "0136",
+    "name": "0136_indian_28_male",
+    "image": "image137",
+    "outfit": "Stylish royal blue kurta with subtle gold embroidery, fitted white trousers, silver watch, and polished brown leather loafers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.064655",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0136_indian_28_male/base_image/0136_indian_28_male_base.png",
+      "relative_path": "characters/0136_indian_28_male/base_image/0136_indian_28_male_base.png",
+      "size_bytes": 1134484,
+      "size_mb": 1.08,
+      "created_timestamp": 1746898330.2705083,
+      "created_date": "2025-05-10T19:32:10.270508",
+      "modified_timestamp": 1746898330.270752,
+      "modified_date": "2025-05-10T19:32:10.270752",
+      "md5_hash": "390d5c1da4044d1297a84acc989c827f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0136_indian_28_male/base_image/0136_indian_28_male_base.png",
+      "moved_relative_path": "data/actors/0136_indian_28_male/base_image/0136_indian_28_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1134484,
+    "total_size_mb": 1.08,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

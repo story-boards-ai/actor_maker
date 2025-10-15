@@ -1,0 +1,25 @@
+{
+  "character_id": "0200",
+  "character_name": "0200_european_34_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "34",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Matteo Ricci as a 34 year old european man, with medium length wavy black hair and a soul patch",
+    "id": "0200",
+    "name": "0200_european_34_male",
+    "image": "image201"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.543118",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

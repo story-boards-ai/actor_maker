@@ -1,0 +1,25 @@
+{
+  "character_id": "0282",
+  "character_name": "0282_hispanic_11_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "11",
+    "sex": "female",
+    "ethnicity": "hispanic",
+    "face_prompt": "Valentina Morales as an 11 year old hispanic girl with long, straight brown hair in a side braid and freckles",
+    "id": "0282",
+    "name": "0282_hispanic_11_female",
+    "image": "image283"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.008424",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { ActorCard } from "./ActorCard";
-import type { Actor } from "../types";
-import "./StylesGrid.css";
+import React, { useEffect, useState } from 'react';
+import { ActorCard } from './ActorCard';
+import type { Actor } from '../types';
+import './ActorsGrid.css';
 
 export function ActorsGrid() {
   const [actors, setActors] = useState<Actor[]>([]);
@@ -12,12 +12,11 @@ export function ActorsGrid() {
     async function loadActors() {
       try {
         // Import the actorsData from the data directory
-        // Since publicDir is '../data', we need to import from the actual file path
-        const module = await import("../../../data/actorsData.ts");
+        const module = await import('../../../data/actorsData.ts');
         setActors(module.actorsLibraryData);
       } catch (err) {
-        console.error("Error loading actors:", err);
-        setError(err instanceof Error ? err.message : "Failed to load actors");
+        console.error('Error loading actors:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load actors');
       } finally {
         setLoading(false);
       }
@@ -26,9 +25,10 @@ export function ActorsGrid() {
     loadActors();
   }, []);
 
+
   if (loading) {
     return (
-      <div className="styles-grid-loading">
+      <div className="actors-grid-loading">
         <div className="spinner"></div>
         <p>Loading actors...</p>
       </div>
@@ -37,7 +37,7 @@ export function ActorsGrid() {
 
   if (error) {
     return (
-      <div className="styles-grid-error">
+      <div className="actors-grid-error">
         <div className="error-icon">⚠️</div>
         <h3>Error Loading Actors</h3>
         <p>{error}</p>
@@ -47,27 +47,30 @@ export function ActorsGrid() {
 
   if (actors.length === 0) {
     return (
-      <div className="styles-grid-empty">
+      <div className="actors-grid-empty">
         <div className="empty-icon">🎭</div>
         <h3>No Actors Found</h3>
-        <p>Start by creating your first actor model</p>
+        <p>Start by adding your first actor</p>
       </div>
     );
   }
 
   return (
-    <div className="styles-container">
-      <div className="styles-header">
-        <div className="styles-header-left">
-          <h2>Actors Library</h2>
-          <p className="styles-count">
-            {actors.length} {actors.length === 1 ? "actor" : "actors"} available
+    <div className="actors-container">
+      <div className="actors-header">
+        <div className="actors-header-left">
+          <h2>Actor Library</h2>
+          <p className="actors-count">
+            {actors.length} {actors.length === 1 ? 'actor' : 'actors'} available
           </p>
         </div>
       </div>
-      <div className="styles-grid">
+      <div className="actors-grid">
         {actors.map((actor) => (
-          <ActorCard key={actor.id} actor={actor} />
+          <ActorCard 
+            key={actor.id} 
+            actor={actor}
+          />
         ))}
       </div>
     </div>

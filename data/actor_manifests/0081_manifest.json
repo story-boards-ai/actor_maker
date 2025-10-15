@@ -1,0 +1,40 @@
+{
+  "character_id": "0081",
+  "character_name": "0081_south_american_55_male",
+  "metadata": {
+    "img": "0081_south_american_55_male.webp",
+    "age": "55",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "[Philipp Martinez | Juan Carlos Depalma], as a 55 year old south american man, with short salt-and-pepper hair",
+    "id": "0081",
+    "name": "0081_south_american_55_male",
+    "image": "image82",
+    "outfit": "Distinguished navy blue blazer with brass buttons, light blue oxford shirt, khaki trousers, and brown leather loafers with a matching leather belt."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.697884",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0081_south_american_55_male/base_image/0081_south_american_55_male_base.png",
+      "relative_path": "characters/0081_south_american_55_male/base_image/0081_south_american_55_male_base.png",
+      "size_bytes": 1089567,
+      "size_mb": 1.04,
+      "created_timestamp": 1746897032.0578315,
+      "created_date": "2025-05-10T19:10:32.057832",
+      "modified_timestamp": 1746897032.0580754,
+      "modified_date": "2025-05-10T19:10:32.058075",
+      "md5_hash": "7db67547d00d5b2dc4fd4eb274a2bc10",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0081_south_american_55_male/base_image/0081_south_american_55_male_base.png",
+      "moved_relative_path": "data/actors/0081_south_american_55_male/base_image/0081_south_american_55_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1089567,
+    "total_size_mb": 1.04,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

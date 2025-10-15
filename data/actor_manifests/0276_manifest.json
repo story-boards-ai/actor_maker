@@ -1,0 +1,25 @@
+{
+  "character_id": "0276",
+  "character_name": "0276_hispanic_7_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "7",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Miguel Ramirez as a 7 year old hispanic boy with short, straight brown hair and a mischievous grin",
+    "id": "0276",
+    "name": "0276_hispanic_7_male",
+    "image": "image277"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.997289",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0188",
+  "character_name": "0188_european_25_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "25",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Mila Petrov as a 25 year old european woman, with a short blonde pixie cut and a nose ring",
+    "id": "0188",
+    "name": "0188_european_25_female",
+    "image": "image189"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.491821",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

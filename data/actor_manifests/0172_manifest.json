@@ -1,0 +1,26 @@
+{
+  "character_id": "0172",
+  "character_name": "0172_black_66_female",
+  "metadata": {
+    "img": "0172_black_66_female.webp",
+    "age": "66",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Gloria Stevens | Deborah Robinson] as a (66 year old) black woman) , with curly short (gray hair:1.1) and ",
+    "id": "0172",
+    "name": "0172_black_66_female",
+    "image": "image173",
+    "outfit": "Dignified navy blue dress with three-quarter sleeves and subtle floral pattern, pearl necklace and matching earrings, silver watch, and comfortable navy blue low-heeled pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.431299",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0181",
+  "character_name": "0181_european_33_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "33",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Niklas Johansson as a 33 year old european man, with short brown hair and a full beard",
+    "id": "0181",
+    "name": "0181_european_33_male",
+    "image": "image182"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.458317",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0181_european_33_male/base_image/0181_european_33_male_base.png",
+      "relative_path": "characters/0181_european_33_male/base_image/0181_european_33_male_base.png",
+      "size_bytes": 1324252,
+      "size_mb": 1.26,
+      "created_timestamp": 1746899248.7428398,
+      "created_date": "2025-05-10T19:47:28.742840",
+      "modified_timestamp": 1746899248.74309,
+      "modified_date": "2025-05-10T19:47:28.743090",
+      "md5_hash": "2377204eb14b2e64ada29e1b4d6901e9",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0181_european_33_male/base_image/0181_european_33_male_base.png",
+      "moved_relative_path": "data/actors/0181_european_33_male/base_image/0181_european_33_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1324252,
+    "total_size_mb": 1.26,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

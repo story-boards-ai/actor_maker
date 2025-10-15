@@ -1,0 +1,40 @@
+{
+  "character_id": "0095",
+  "character_name": "0095_middle_eastern_30_male",
+  "metadata": {
+    "img": "0095_middle_eastern_30_male.webp",
+    "age": "30",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "a man ([Roberto Ramirez | Tom Langer] as a 30 year old muscular middle eastern man), with wavy short brown hair and a mustache",
+    "id": "0095",
+    "name": "0095_middle_eastern_30_male",
+    "image": "image96",
+    "outfit": "Fitted dark green henley shirt showing muscular physique, tan chinos, brown leather belt with silver buckle, and brown leather Chelsea boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.773059",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0095_middle_eastern_30_male/base_image/0095_middle_eastern_30_male_base.png",
+      "relative_path": "characters/0095_middle_eastern_30_male/base_image/0095_middle_eastern_30_male_base.png",
+      "size_bytes": 1250888,
+      "size_mb": 1.19,
+      "created_timestamp": 1746897401.3212602,
+      "created_date": "2025-05-10T19:16:41.321260",
+      "modified_timestamp": 1746897401.3216357,
+      "modified_date": "2025-05-10T19:16:41.321636",
+      "md5_hash": "6778721496e8cf63bee6f26912ff480c",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0095_middle_eastern_30_male/base_image/0095_middle_eastern_30_male_base.png",
+      "moved_relative_path": "data/actors/0095_middle_eastern_30_male/base_image/0095_middle_eastern_30_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1250888,
+    "total_size_mb": 1.19,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

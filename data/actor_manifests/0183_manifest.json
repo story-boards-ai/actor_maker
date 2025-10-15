@@ -1,0 +1,25 @@
+{
+  "character_id": "0183",
+  "character_name": "0183_middle_eastern_39_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "39",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Omar Mansour as a 39 year old middle eastern man, with short black hair and a trimmed beard",
+    "id": "0183",
+    "name": "0183_middle_eastern_39_male",
+    "image": "image184"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.471212",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

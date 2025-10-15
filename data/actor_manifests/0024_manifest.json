@@ -1,0 +1,40 @@
+{
+  "character_id": "0024",
+  "character_name": "0024_black_35_male",
+  "metadata": {
+    "img": "0024_black_35_male.webp",
+    "age": "35",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "[Ludwig Ramires | W. M. Henson] as a 35-year-old very good looking black man, with buzzed hair",
+    "id": "0024",
+    "name": "0024_black_35_male",
+    "image": "image25",
+    "outfit": "Tailored charcoal gray suit with a crisp white shirt, burgundy tie, and polished black leather shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.389945",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0024_black_35_male/base_image/0024_black_35_male_base.png",
+      "relative_path": "characters/0024_black_35_male/base_image/0024_black_35_male_base.png",
+      "size_bytes": 1430871,
+      "size_mb": 1.36,
+      "created_timestamp": 1746892357.4424765,
+      "created_date": "2025-05-10T17:52:37.442477",
+      "modified_timestamp": 1746894865.8182154,
+      "modified_date": "2025-05-10T18:34:25.818215",
+      "md5_hash": "7c0419d9b123cbdfb2dd133138c11b6f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0024_black_35_male/base_image/0024_black_35_male_base.png",
+      "moved_relative_path": "data/actors/0024_black_35_male/base_image/0024_black_35_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1430871,
+    "total_size_mb": 1.36,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

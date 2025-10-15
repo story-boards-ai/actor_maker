@@ -1,0 +1,40 @@
+{
+  "character_id": "0150",
+  "character_name": "0150_indian_38_male",
+  "metadata": {
+    "img": "0150_indian_38_male.webp",
+    "age": "38",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Farhan Akhtar | Abhishek Bachchan] as a 38 year old Indian man with a short, groomed beard and slightly wavy black hair",
+    "id": "0150",
+    "name": "0150_indian_38_male",
+    "image": "image151",
+    "outfit": "Professional charcoal gray bandhgala suit with subtle maroon piping, crisp white shirt, silver cufflinks, and polished black leather oxford shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.170078",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0150_indian_38_male/base_image/0150_indian_38_male_base.png",
+      "relative_path": "characters/0150_indian_38_male/base_image/0150_indian_38_male_base.png",
+      "size_bytes": 1421304,
+      "size_mb": 1.36,
+      "created_timestamp": 1746898603.9046688,
+      "created_date": "2025-05-10T19:36:43.904669",
+      "modified_timestamp": 1746898603.9050202,
+      "modified_date": "2025-05-10T19:36:43.905020",
+      "md5_hash": "8b05da4b748ad0f3366e750af9fce9dd",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0150_indian_38_male/base_image/0150_indian_38_male_base.png",
+      "moved_relative_path": "data/actors/0150_indian_38_male/base_image/0150_indian_38_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1421304,
+    "total_size_mb": 1.36,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

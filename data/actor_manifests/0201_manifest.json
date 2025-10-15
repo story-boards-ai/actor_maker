@@ -1,0 +1,25 @@
+{
+  "character_id": "0201",
+  "character_name": "0201_middle_eastern_28_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "28",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Layla Khoury as a 28 year old middle eastern woman, with long black hair in loose curls and bold eyebrows",
+    "id": "0201",
+    "name": "0201_middle_eastern_28_female",
+    "image": "image202"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.544288",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

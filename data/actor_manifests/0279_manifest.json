@@ -1,0 +1,25 @@
+{
+  "character_id": "0279",
+  "character_name": "0279_indian_14_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "14",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Arjun Gupta as a 14 year old indian boy with short, spiky black hair and a small scar on his chin",
+    "id": "0279",
+    "name": "0279_indian_14_male",
+    "image": "image280"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.003121",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

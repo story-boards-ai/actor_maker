@@ -1,0 +1,25 @@
+{
+  "character_id": "0284",
+  "character_name": "0284_middle_eastern_9_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "9",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amira Haddad as a 9 year old middle eastern girl with medium-length, wavy black hair and a colorful headband",
+    "id": "0284",
+    "name": "0284_middle_eastern_9_female",
+    "image": "image285"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.010993",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

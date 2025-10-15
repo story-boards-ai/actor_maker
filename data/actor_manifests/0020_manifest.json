@@ -1,0 +1,40 @@
+{
+  "character_id": "0020",
+  "character_name": "0020_black_20_female",
+  "metadata": {
+    "img": "0020_black_20_female.webp",
+    "age": "20",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Tanisha Covington as a 20 year old cute black woman, with an afro haircut",
+    "id": "0020",
+    "name": "0020_black_20_female",
+    "image": "image21",
+    "outfit": "Vibrant yellow sundress with a navy blue denim jacket and white canvas sneakers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.368740",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0020_black_20_female/base_image/0020_black_20_female_base.png",
+      "relative_path": "characters/0020_black_20_female/base_image/0020_black_20_female_base.png",
+      "size_bytes": 1074470,
+      "size_mb": 1.02,
+      "created_timestamp": 1746906778.639611,
+      "created_date": "2025-05-10T21:52:58.639611",
+      "modified_timestamp": 1746906778.6398706,
+      "modified_date": "2025-05-10T21:52:58.639871",
+      "md5_hash": "24421ea05e572c7383421cac4cb69ffa",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0020_black_20_female/base_image/0020_black_20_female_base.png",
+      "moved_relative_path": "data/actors/0020_black_20_female/base_image/0020_black_20_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1074470,
+    "total_size_mb": 1.02,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

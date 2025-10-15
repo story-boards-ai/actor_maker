@@ -1,0 +1,32 @@
+{
+  "delayTime": 5078,
+  "executionTime": 391495,
+  "id": "e65a6326-7f1d-4e73-9cf9-f82f62e52c14-e1",
+  "output": {
+    "output": {
+      "actor_id": "0202_indian_32_male",
+      "job_id": "f4157529-5896-49ef-a065-7db62eab263f",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0202_indian_32_male/0202_indian_32_male_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "jgvnya7hlz7lkt"
+}

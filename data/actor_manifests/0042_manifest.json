@@ -1,0 +1,40 @@
+{
+  "character_id": "0042",
+  "character_name": "0042_black_25_female",
+  "metadata": {
+    "img": "0042_black_25_female.webp",
+    "age": "25",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Synthia Riwalso as a 25 year old black woman, dark long hair, lots of makeup",
+    "id": "0042",
+    "name": "0042_black_25_female",
+    "image": "image43",
+    "outfit": "Glamorous gold sequined mini dress with a black leather moto jacket, sheer black tights, and red patent leather stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.483781",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0042_black_25_female/base_image/0042_black_25_female_base.png",
+      "relative_path": "characters/0042_black_25_female/base_image/0042_black_25_female_base.png",
+      "size_bytes": 1568567,
+      "size_mb": 1.5,
+      "created_timestamp": 1746893667.6638885,
+      "created_date": "2025-05-10T18:14:27.663888",
+      "modified_timestamp": 1746895264.7945068,
+      "modified_date": "2025-05-10T18:41:04.794507",
+      "md5_hash": "83885562080f605e6da8dcd13c8c7133",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0042_black_25_female/base_image/0042_black_25_female_base.png",
+      "moved_relative_path": "data/actors/0042_black_25_female/base_image/0042_black_25_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1568567,
+    "total_size_mb": 1.5,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

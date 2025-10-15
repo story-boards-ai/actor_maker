@@ -1,0 +1,40 @@
+{
+  "character_id": "0066",
+  "character_name": "0066_european_16_female",
+  "metadata": {
+    "img": "0066_european_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "[Patricia Villiger | Magdalena Bruskowa] as a 16 year old european woman, with medium length blonde hair",
+    "id": "0066",
+    "name": "0066_european_16_female",
+    "image": "image67",
+    "outfit": "Baby pink cropped hoodie with white text, light blue high-waisted mom jeans, white platform sneakers, and multiple colorful friendship bracelets."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.619435",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0066_european_16_female/base_image/0066_european_16_female_base.png",
+      "relative_path": "characters/0066_european_16_female/base_image/0066_european_16_female_base.png",
+      "size_bytes": 1329638,
+      "size_mb": 1.27,
+      "created_timestamp": 1746893961.046668,
+      "created_date": "2025-05-10T18:19:21.046668",
+      "modified_timestamp": 1746896739.282073,
+      "modified_date": "2025-05-10T19:05:39.282073",
+      "md5_hash": "a4d40c403aeba55e0c7f9504a5b1fd5f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0066_european_16_female/base_image/0066_european_16_female_base.png",
+      "moved_relative_path": "data/actors/0066_european_16_female/base_image/0066_european_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1329638,
+    "total_size_mb": 1.27,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0148",
+  "character_name": "0148_indian_24_male",
+  "metadata": {
+    "img": "0148_indian_24_male.webp",
+    "age": "24",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Karan Deol | Dhruv Vikram] as a 24 year old Indian man with medium-length black hair and a determined gaze",
+    "id": "0148",
+    "name": "0148_indian_24_male",
+    "image": "image149",
+    "outfit": "Modern teal blue cotton kurta with subtle white embroidery, fitted white cotton pants, silver watch, and brown leather sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.157215",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0148_indian_24_male/base_image/0148_indian_24_male_base.png",
+      "relative_path": "characters/0148_indian_24_male/base_image/0148_indian_24_male_base.png",
+      "size_bytes": 1139270,
+      "size_mb": 1.09,
+      "created_timestamp": 1746898565.1945615,
+      "created_date": "2025-05-10T19:36:05.194561",
+      "modified_timestamp": 1746898565.1947658,
+      "modified_date": "2025-05-10T19:36:05.194766",
+      "md5_hash": "14bb31aa95bdb9a8e80630b28ba14a47",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0148_indian_24_male/base_image/0148_indian_24_male_base.png",
+      "moved_relative_path": "data/actors/0148_indian_24_male/base_image/0148_indian_24_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1139270,
+    "total_size_mb": 1.09,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

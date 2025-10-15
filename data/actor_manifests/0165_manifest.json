@@ -1,0 +1,40 @@
+{
+  "character_id": "0165",
+  "character_name": "0165_black_30_female",
+  "metadata": {
+    "img": "0165_black_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Maya Baker | Simone Carter] as a (30 year old) black woman) , with braided medium length (black hair:1.1) ",
+    "id": "0165",
+    "name": "0165_black_30_female",
+    "image": "image166",
+    "outfit": "Professional teal blue tailored blazer, ivory silk blouse, fitted black pencil skirt, delicate gold chain necklace, and black leather pumps with subtle gold hardware."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.380667",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0165_black_30_female/base_image/0165_black_30_female_base.png",
+      "relative_path": "characters/0165_black_30_female/base_image/0165_black_30_female_base.png",
+      "size_bytes": 972673,
+      "size_mb": 0.93,
+      "created_timestamp": 1746907289.3713808,
+      "created_date": "2025-05-10T22:01:29.371381",
+      "modified_timestamp": 1746907289.3720202,
+      "modified_date": "2025-05-10T22:01:29.372020",
+      "md5_hash": "afb6f305b9dd7f8bb21f29d6aff1dab2",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0165_black_30_female/base_image/0165_black_30_female_base.png",
+      "moved_relative_path": "data/actors/0165_black_30_female/base_image/0165_black_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 972673,
+    "total_size_mb": 0.93,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

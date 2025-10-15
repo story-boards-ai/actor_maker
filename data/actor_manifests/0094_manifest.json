@@ -1,0 +1,40 @@
+{
+  "character_id": "0094",
+  "character_name": "0094_middle_eastern_25_male",
+  "metadata": {
+    "img": "0094_middle_eastern_25_male.webp",
+    "age": "25",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Frank Blunt | Keira Kinosis] as a 25 year old Middle Eastern man, with very short straight black hair",
+    "id": "0094",
+    "name": "0094_middle_eastern_25_male",
+    "image": "image95",
+    "outfit": "Stylish black leather jacket over a white t-shirt, dark blue slim-fit jeans, silver chain necklace, and black and white high-top sneakers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.766912",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0094_middle_eastern_25_male/base_image/0094_middle_eastern_25_male_base.png",
+      "relative_path": "characters/0094_middle_eastern_25_male/base_image/0094_middle_eastern_25_male_base.png",
+      "size_bytes": 1276569,
+      "size_mb": 1.22,
+      "created_timestamp": 1746897381.82758,
+      "created_date": "2025-05-10T19:16:21.827580",
+      "modified_timestamp": 1746897381.8279166,
+      "modified_date": "2025-05-10T19:16:21.827917",
+      "md5_hash": "374765c866c6b03c4ce673b1bd92cc86",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0094_middle_eastern_25_male/base_image/0094_middle_eastern_25_male_base.png",
+      "moved_relative_path": "data/actors/0094_middle_eastern_25_male/base_image/0094_middle_eastern_25_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1276569,
+    "total_size_mb": 1.22,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

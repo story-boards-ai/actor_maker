@@ -1,0 +1,39 @@
+{
+  "character_id": "0259",
+  "character_name": "0259_black_35_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "35",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Kofi Mensah as a 35 year old black man with short dreadlocks and a thin mustache",
+    "id": "0259",
+    "name": "0259_black_35_male",
+    "image": "image260"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.936652",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0259_black_35_male/base_image/0259_black_35_male_base.png",
+      "relative_path": "characters/0259_black_35_male/base_image/0259_black_35_male_base.png",
+      "size_bytes": 1420406,
+      "size_mb": 1.35,
+      "created_timestamp": 1746901196.2124946,
+      "created_date": "2025-05-10T20:19:56.212495",
+      "modified_timestamp": 1746901196.2128901,
+      "modified_date": "2025-05-10T20:19:56.212890",
+      "md5_hash": "561b9aa828397e3e6218d96f543f01a2",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0259_black_35_male/base_image/0259_black_35_male_base.png",
+      "moved_relative_path": "data/actors/0259_black_35_male/base_image/0259_black_35_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1420406,
+    "total_size_mb": 1.35,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

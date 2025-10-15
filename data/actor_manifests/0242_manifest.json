@@ -1,0 +1,25 @@
+{
+  "character_id": "0242",
+  "character_name": "0242_middle_eastern_51_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "51",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Rashid Mansour as a 51 year old middle eastern man, with short black hair and a closely cropped beard",
+    "id": "0242",
+    "name": "0242_middle_eastern_51_male",
+    "image": "image243"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.829465",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

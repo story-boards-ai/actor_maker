@@ -1,0 +1,40 @@
+{
+  "character_id": "0098",
+  "character_name": "0098_middle_eastern_40_male",
+  "metadata": {
+    "img": "0098_middle_eastern_40_male.webp",
+    "age": "40",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[HAsan Palmirez | Tony Stephenson] as a 40 year old Middle Eastern man, with straight short brown hair",
+    "id": "0098",
+    "name": "0098_middle_eastern_40_male",
+    "image": "image99",
+    "outfit": "Crisp white button-up shirt with rolled sleeves, navy blue dress pants, brown leather belt, silver watch, and polished cognac leather loafers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.793533",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0098_middle_eastern_40_male/base_image/0098_middle_eastern_40_male_base.png",
+      "relative_path": "characters/0098_middle_eastern_40_male/base_image/0098_middle_eastern_40_male_base.png",
+      "size_bytes": 923669,
+      "size_mb": 0.88,
+      "created_timestamp": 1746907074.45875,
+      "created_date": "2025-05-10T21:57:54.458750",
+      "modified_timestamp": 1746907074.459134,
+      "modified_date": "2025-05-10T21:57:54.459134",
+      "md5_hash": "a3e2a38c9659df73eae87d4e7582da59",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0098_middle_eastern_40_male/base_image/0098_middle_eastern_40_male_base.png",
+      "moved_relative_path": "data/actors/0098_middle_eastern_40_male/base_image/0098_middle_eastern_40_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 923669,
+    "total_size_mb": 0.88,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0005",
+  "character_name": "0005_european_50_female",
+  "metadata": {
+    "img": "0005_european_50_female.webp",
+    "age": "50",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "50 year old beautiful (Hilda Spryer) with european look and wavy blonde hair",
+    "id": "0005",
+    "name": "0005_european_50_female",
+    "image": "image6",
+    "outfit": "Sophisticated ensemble with a cashmere sweater, tailored trousers, and designer accessories."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.285905",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0005_european_50_female/base_image/0005_european_50_female_base.png",
+      "relative_path": "characters/0005_european_50_female/base_image/0005_european_50_female_base.png",
+      "size_bytes": 1500214,
+      "size_mb": 1.43,
+      "created_timestamp": 1746856874.7701507,
+      "created_date": "2025-05-10T08:01:14.770151",
+      "modified_timestamp": 1746894495.109088,
+      "modified_date": "2025-05-10T18:28:15.109088",
+      "md5_hash": "da3baf2499c3e8b8bb3f09f0f1094f4c",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0005_european_50_female/base_image/0005_european_50_female_base.png",
+      "moved_relative_path": "data/actors/0005_european_50_female/base_image/0005_european_50_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1500214,
+    "total_size_mb": 1.43,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

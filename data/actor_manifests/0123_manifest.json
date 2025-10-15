@@ -1,0 +1,40 @@
+{
+  "character_id": "0123",
+  "character_name": "0123_middle_eastern_35_female",
+  "metadata": {
+    "img": "0123_middle_eastern_35_female.webp",
+    "age": "35",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Fariha Khan as a stunningly beautiful 35 year old Middle Eastern woman, with curly black hair",
+    "id": "0123",
+    "name": "0123_middle_eastern_35_female",
+    "image": "image124",
+    "outfit": "Luxurious emerald green silk blouse with gold embroidery, fitted black trousers, ornate gold statement earrings, and black suede pointed-toe heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.982415",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0123_middle_eastern_35_female/base_image/0123_middle_eastern_35_female_base.png",
+      "relative_path": "characters/0123_middle_eastern_35_female/base_image/0123_middle_eastern_35_female_base.png",
+      "size_bytes": 1210166,
+      "size_mb": 1.15,
+      "created_timestamp": 1746898077.2971492,
+      "created_date": "2025-05-10T19:27:57.297149",
+      "modified_timestamp": 1746898077.297361,
+      "modified_date": "2025-05-10T19:27:57.297361",
+      "md5_hash": "9bd1db80208b8f33f0dc59334e5f4b94",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0123_middle_eastern_35_female/base_image/0123_middle_eastern_35_female_base.png",
+      "moved_relative_path": "data/actors/0123_middle_eastern_35_female/base_image/0123_middle_eastern_35_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1210166,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

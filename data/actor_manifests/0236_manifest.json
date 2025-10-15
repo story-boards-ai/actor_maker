@@ -1,0 +1,25 @@
+{
+  "character_id": "0236",
+  "character_name": "0236_indian_42_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "42",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Siddharth Patel as a 42 year old indian man, with short black hair and a thick mustache",
+    "id": "0236",
+    "name": "0236_indian_42_male",
+    "image": "image237"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.817724",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

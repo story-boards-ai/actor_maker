@@ -1,0 +1,40 @@
+{
+  "character_id": "0058",
+  "character_name": "0058_south_american_50_male",
+  "metadata": {
+    "img": "0058_south_american_50_male.webp",
+    "age": "50",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "[Rodriguez Mendes | Arthur Mandela], as a 50 year old chilean man, with very short greying hair",
+    "id": "0058",
+    "name": "0058_south_american_50_male",
+    "image": "image59",
+    "outfit": "Formal light gray suit with subtle pinstripes, crisp white dress shirt, deep purple tie, and polished black leather shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.573746",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0058_south_american_50_male/base_image/0058_south_american_50_male_base.png",
+      "relative_path": "characters/0058_south_american_50_male/base_image/0058_south_american_50_male_base.png",
+      "size_bytes": 1364291,
+      "size_mb": 1.3,
+      "created_timestamp": 1746893863.4974463,
+      "created_date": "2025-05-10T18:17:43.497446",
+      "modified_timestamp": 1746896541.1489084,
+      "modified_date": "2025-05-10T19:02:21.148908",
+      "md5_hash": "e4127b1552efd6b0d203ec27e30249ba",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0058_south_american_50_male/base_image/0058_south_american_50_male_base.png",
+      "moved_relative_path": "data/actors/0058_south_american_50_male/base_image/0058_south_american_50_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1364291,
+    "total_size_mb": 1.3,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

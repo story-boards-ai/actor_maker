@@ -1,0 +1,39 @@
+{
+  "character_id": "0209",
+  "character_name": "0209_black_50_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "50",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Nia Johnson as a 50 year old black woman, with chin length straightened black hair and a confident smile",
+    "id": "0209",
+    "name": "0209_black_50_female",
+    "image": "image210"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.657990",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0209_black_50_female/base_image/0209_black_50_female_base.png",
+      "relative_path": "characters/0209_black_50_female/base_image/0209_black_50_female_base.png",
+      "size_bytes": 1473862,
+      "size_mb": 1.41,
+      "created_timestamp": 1746900127.045873,
+      "created_date": "2025-05-10T20:02:07.045873",
+      "modified_timestamp": 1746900127.046232,
+      "modified_date": "2025-05-10T20:02:07.046232",
+      "md5_hash": "3748879db156d5c5d3fc202060fe1559",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0209_black_50_female/base_image/0209_black_50_female_base.png",
+      "moved_relative_path": "data/actors/0209_black_50_female/base_image/0209_black_50_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1473862,
+    "total_size_mb": 1.41,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

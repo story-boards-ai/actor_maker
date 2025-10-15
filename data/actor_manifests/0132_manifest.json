@@ -1,0 +1,40 @@
+{
+  "character_id": "0132",
+  "character_name": "0132_middle_eastern_45_female",
+  "metadata": {
+    "img": "0132_middle_eastern_45_female.webp",
+    "age": "45",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Oded Fehr | Khaled Abol Naga] as a 45 year old Middle Eastern woman, with curly salt-and-pepper hair ",
+    "id": "0132",
+    "name": "0132_middle_eastern_45_female",
+    "image": "image133",
+    "outfit": "Elegant olive green silk tunic with gold thread embroidery, loose black pants, gold bangle bracelets, and comfortable black leather flats with gold buckles."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.034639",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
+      "relative_path": "characters/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
+      "size_bytes": 1240239,
+      "size_mb": 1.18,
+      "created_timestamp": 1746898252.5634003,
+      "created_date": "2025-05-10T19:30:52.563400",
+      "modified_timestamp": 1746898252.563638,
+      "modified_date": "2025-05-10T19:30:52.563638",
+      "md5_hash": "57dbcdf16f659b6b1b84a5ca28cf17ba",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
+      "moved_relative_path": "data/actors/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1240239,
+    "total_size_mb": 1.18,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

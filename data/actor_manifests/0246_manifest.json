@@ -1,0 +1,39 @@
+{
+  "character_id": "0246",
+  "character_name": "0246_asian_52_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "52",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Hiroshi Sato as a 52 year old asian man, with short black hair and wire-rimmed glasses",
+    "id": "0246",
+    "name": "0246_asian_52_male",
+    "image": "image247"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.845249",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0246_asian_52_male/base_image/0246_asian_52_male_base.png",
+      "relative_path": "characters/0246_asian_52_male/base_image/0246_asian_52_male_base.png",
+      "size_bytes": 1179456,
+      "size_mb": 1.12,
+      "created_timestamp": 1746900943.0779948,
+      "created_date": "2025-05-10T20:15:43.077995",
+      "modified_timestamp": 1746900943.078224,
+      "modified_date": "2025-05-10T20:15:43.078224",
+      "md5_hash": "060e6f41bd24ece36e0b146cb9a9b29f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0246_asian_52_male/base_image/0246_asian_52_male_base.png",
+      "moved_relative_path": "data/actors/0246_asian_52_male/base_image/0246_asian_52_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1179456,
+    "total_size_mb": 1.12,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

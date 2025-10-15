@@ -1,0 +1,40 @@
+{
+  "character_id": "0077",
+  "character_name": "0077_asian_40_female",
+  "metadata": {
+    "img": "0077_asian_40_female.webp",
+    "age": "40",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Tunia Patusa as a 40 year old philipino woman, chin length standard haircut",
+    "id": "0077",
+    "name": "0077_asian_40_female",
+    "image": "image78",
+    "outfit": "Traditional burgundy batik-patterned dress with three-quarter sleeves, gold bangles, pearl earrings, and comfortable black ballet flats."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.675546",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0077_asian_40_female/base_image/0077_asian_40_female_base.png",
+      "relative_path": "characters/0077_asian_40_female/base_image/0077_asian_40_female_base.png",
+      "size_bytes": 1376931,
+      "size_mb": 1.31,
+      "created_timestamp": 1746896953.890988,
+      "created_date": "2025-05-10T19:09:13.890988",
+      "modified_timestamp": 1746896953.8913074,
+      "modified_date": "2025-05-10T19:09:13.891307",
+      "md5_hash": "bc36b66d3ed2ec7e9001dbe8b8d22415",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0077_asian_40_female/base_image/0077_asian_40_female_base.png",
+      "moved_relative_path": "data/actors/0077_asian_40_female/base_image/0077_asian_40_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1376931,
+    "total_size_mb": 1.31,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

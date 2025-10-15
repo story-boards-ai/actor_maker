@@ -1,0 +1,25 @@
+{
+  "character_id": "0266",
+  "character_name": "0266_hispanic_43_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "43",
+    "sex": "female",
+    "ethnicity": "hispanic",
+    "face_prompt": "Valeria Torres as a 43 year old hispanic woman with shoulder-length, curly brown hair and a small nose stud",
+    "id": "0266",
+    "name": "0266_hispanic_43_female",
+    "image": "image267"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.971079",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

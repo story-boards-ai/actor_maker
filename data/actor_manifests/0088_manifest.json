@@ -1,0 +1,40 @@
+{
+  "character_id": "0088",
+  "character_name": "0088_middle_eastern_60_male",
+  "metadata": {
+    "img": "0088_middle_eastern_60_male.webp",
+    "age": "60",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Sebastian Morello | Yu Han] as a 60 year old Middle Eastern man, with short curly gray hair",
+    "id": "0088",
+    "name": "0088_middle_eastern_60_male",
+    "image": "image89",
+    "outfit": "Traditional olive green kaftan with intricate gold embroidery, cream-colored loose pants, and brown leather sandals with a matching leather belt."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.734923",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0088_middle_eastern_60_male/base_image/0088_middle_eastern_60_male_base.png",
+      "relative_path": "characters/0088_middle_eastern_60_male/base_image/0088_middle_eastern_60_male_base.png",
+      "size_bytes": 1255223,
+      "size_mb": 1.2,
+      "created_timestamp": 1746897204.1525784,
+      "created_date": "2025-05-10T19:13:24.152578",
+      "modified_timestamp": 1746897204.152885,
+      "modified_date": "2025-05-10T19:13:24.152885",
+      "md5_hash": "0c12f48e35eecae0b114eff946cea0b1",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0088_middle_eastern_60_male/base_image/0088_middle_eastern_60_male_base.png",
+      "moved_relative_path": "data/actors/0088_middle_eastern_60_male/base_image/0088_middle_eastern_60_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1255223,
+    "total_size_mb": 1.2,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

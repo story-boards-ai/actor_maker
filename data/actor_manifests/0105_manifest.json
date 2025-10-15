@@ -1,0 +1,39 @@
+{
+  "character_id": "0105",
+  "character_name": "0105_asian_35_male",
+  "metadata": {
+    "img": "01056_asian_35_male.webp",
+    "age": "35",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "[Peter Johansson | Paul Lawrence] as an attractive 35 year old asian man, with wavy medium short black hair",
+    "id": "0105",
+    "name": "0105_asian_35_male",
+    "image": "image106"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.877529",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0105_asian_35_male/base_image/0105_asian_35_male_base.png",
+      "relative_path": "characters/0105_asian_35_male/base_image/0105_asian_35_male_base.png",
+      "size_bytes": 1215259,
+      "size_mb": 1.16,
+      "created_timestamp": 1746897650.4253778,
+      "created_date": "2025-05-10T19:20:50.425378",
+      "modified_timestamp": 1746897650.4257307,
+      "modified_date": "2025-05-10T19:20:50.425731",
+      "md5_hash": "fddc911b8ae0a79ae0d93be56e5bd3a9",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0105_asian_35_male/base_image/0105_asian_35_male_base.png",
+      "moved_relative_path": "data/actors/0105_asian_35_male/base_image/0105_asian_35_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1215259,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

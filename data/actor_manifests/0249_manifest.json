@@ -1,0 +1,39 @@
+{
+  "character_id": "0249",
+  "character_name": "0249_asian_29_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "29",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae-sung Kim as a 29 year old asian man with medium-length, straight black hair and rectangular glasses",
+    "id": "0249",
+    "name": "0249_asian_29_male",
+    "image": "image250"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.862872",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0249_asian_29_male/base_image/0249_asian_29_male_base.png",
+      "relative_path": "characters/0249_asian_29_male/base_image/0249_asian_29_male_base.png",
+      "size_bytes": 1172257,
+      "size_mb": 1.12,
+      "created_timestamp": 1746901001.3007126,
+      "created_date": "2025-05-10T20:16:41.300713",
+      "modified_timestamp": 1746901001.3009205,
+      "modified_date": "2025-05-10T20:16:41.300920",
+      "md5_hash": "8cf6f4e085e4cbfb586633c705715a8b",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0249_asian_29_male/base_image/0249_asian_29_male_base.png",
+      "moved_relative_path": "data/actors/0249_asian_29_male/base_image/0249_asian_29_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1172257,
+    "total_size_mb": 1.12,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

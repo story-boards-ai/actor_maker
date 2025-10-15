@@ -1,0 +1,40 @@
+{
+  "character_id": "0134",
+  "character_name": "0134_middle_eastern_55_female",
+  "metadata": {
+    "img": "0134_middle_eastern_55_female.webp",
+    "age": "55",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "[Yahya Abdul | Hazuri Sleiman] as a 55 year old Middle Eastern woman, with short black hair",
+    "id": "0134",
+    "name": "0134_middle_eastern_55_female",
+    "image": "image135",
+    "outfit": "Traditional deep burgundy abaya with intricate gold embroidery, matching hijab with gold accents, simple gold earrings, and comfortable black leather flats."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.048211",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0134_middle_eastern_55_female/base_image/0134_middle_eastern_55_female_base.png",
+      "relative_path": "characters/0134_middle_eastern_55_female/base_image/0134_middle_eastern_55_female_base.png",
+      "size_bytes": 1218125,
+      "size_mb": 1.16,
+      "created_timestamp": 1746898291.5330868,
+      "created_date": "2025-05-10T19:31:31.533087",
+      "modified_timestamp": 1746898291.5333085,
+      "modified_date": "2025-05-10T19:31:31.533309",
+      "md5_hash": "8c496b6273ba797602b859c6383987fd",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0134_middle_eastern_55_female/base_image/0134_middle_eastern_55_female_base.png",
+      "moved_relative_path": "data/actors/0134_middle_eastern_55_female/base_image/0134_middle_eastern_55_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1218125,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

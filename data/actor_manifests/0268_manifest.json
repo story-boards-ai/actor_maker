@@ -1,0 +1,25 @@
+{
+  "character_id": "0268",
+  "character_name": "0268_asian_15_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "15",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae Park as a 15 year old asian boy with short, spiky black hair and braces",
+    "id": "0268",
+    "name": "0268_asian_15_male",
+    "image": "image269"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.983597",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

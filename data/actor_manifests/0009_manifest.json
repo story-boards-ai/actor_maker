@@ -1,0 +1,40 @@
+{
+  "character_id": "0009",
+  "character_name": "0009_european_65_male",
+  "metadata": {
+    "img": "00090_european_65_male.webp",
+    "age": "65",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Peter Walzu as a 65 year old european man, with short gray hair and a long beard",
+    "id": "0009",
+    "name": "0009_european_65_male",
+    "image": "image10",
+    "outfit": "Comfortable retirement wear with a flannel shirt, well-worn jeans, and sturdy hiking boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.308217",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0009_european_65_male/base_image/0009_european_65_male_base.png",
+      "relative_path": "characters/0009_european_65_male/base_image/0009_european_65_male_base.png",
+      "size_bytes": 1484270,
+      "size_mb": 1.42,
+      "created_timestamp": 1746856927.1580894,
+      "created_date": "2025-05-10T08:02:07.158089",
+      "modified_timestamp": 1746894573.3088548,
+      "modified_date": "2025-05-10T18:29:33.308855",
+      "md5_hash": "276a25e355b6d902a212b68f913183ac",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0009_european_65_male/base_image/0009_european_65_male_base.png",
+      "moved_relative_path": "data/actors/0009_european_65_male/base_image/0009_european_65_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1484270,
+    "total_size_mb": 1.42,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

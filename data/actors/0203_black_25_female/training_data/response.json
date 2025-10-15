@@ -1,0 +1,32 @@
+{
+  "delayTime": 5165,
+  "executionTime": 443601,
+  "id": "de33fd37-9b08-4967-b3f9-9624d9393b1a-e1",
+  "output": {
+    "output": {
+      "actor_id": "0203_black_25_female",
+      "job_id": "50c67bde-14f5-44c7-8c50-685da9a0d36c",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0203_black_25_female/0203_black_25_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "26rfneskoyho85"
+}

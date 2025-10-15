@@ -1,0 +1,40 @@
+{
+  "character_id": "0046",
+  "character_name": "0046_black_14_female",
+  "metadata": {
+    "img": "0046_black_14_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Ego Otomas as a 14 year old black girl, pigtails",
+    "id": "0046",
+    "name": "0046_black_14_female",
+    "image": "image47",
+    "outfit": "Bright teal hoodie with rainbow striped sleeves, purple denim overalls, colorful beaded bracelets, and yellow canvas high-tops."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.505960",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0046_black_14_female/base_image/0046_black_14_female_base.png",
+      "relative_path": "characters/0046_black_14_female/base_image/0046_black_14_female_base.png",
+      "size_bytes": 1476219,
+      "size_mb": 1.41,
+      "created_timestamp": 1746893724.2789176,
+      "created_date": "2025-05-10T18:15:24.278918",
+      "modified_timestamp": 1746895342.7319124,
+      "modified_date": "2025-05-10T18:42:22.731912",
+      "md5_hash": "7cd1fb0b7a164b969fa58712bbdc46c8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0046_black_14_female/base_image/0046_black_14_female_base.png",
+      "moved_relative_path": "data/actors/0046_black_14_female/base_image/0046_black_14_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1476219,
+    "total_size_mb": 1.41,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

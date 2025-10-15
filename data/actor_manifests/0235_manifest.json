@@ -1,0 +1,25 @@
+{
+  "character_id": "0235",
+  "character_name": "0235_middle_eastern_53_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "53",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Tariq Haddad as a 53 year old middle eastern man, with short graying hair and a full beard",
+    "id": "0235",
+    "name": "0235_middle_eastern_53_male",
+    "image": "image236"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.813480",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0144",
+  "character_name": "0144_indian_16_male",
+  "metadata": {
+    "img": "0144_indian_16_male.webp",
+    "age": "16",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "[Ishaan Khatter | Anmol Thakeria Dhillon] as a 16 year old Indian boy with tousled black hair and a youthful glow",
+    "id": "0144",
+    "name": "0144_indian_16_male",
+    "image": "image145",
+    "outfit": "Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.131796",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0144_indian_16_male/base_image/0144_indian_16_male_base.png",
+      "relative_path": "characters/0144_indian_16_male/base_image/0144_indian_16_male_base.png",
+      "size_bytes": 1232579,
+      "size_mb": 1.18,
+      "created_timestamp": 1746898487.721961,
+      "created_date": "2025-05-10T19:34:47.721961",
+      "modified_timestamp": 1746898487.7223651,
+      "modified_date": "2025-05-10T19:34:47.722365",
+      "md5_hash": "03310760d10ff42c3ddd1ea48ddb8a9e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0144_indian_16_male/base_image/0144_indian_16_male_base.png",
+      "moved_relative_path": "data/actors/0144_indian_16_male/base_image/0144_indian_16_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1232579,
+    "total_size_mb": 1.18,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

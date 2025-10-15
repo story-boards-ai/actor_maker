@@ -1,0 +1,39 @@
+{
+  "character_id": "0111",
+  "character_name": "0111_nordic_65_female",
+  "metadata": {
+    "img": "01112_nordic_65_female.webp",
+    "age": "65",
+    "sex": "female",
+    "ethnicity": "nordic",
+    "face_prompt": "[Evelyn Stormare | Talia Wollter] as a 65 year old Nordic woman, with straight grey hair, golden ear rings",
+    "id": "0111",
+    "name": "0111_nordic_65_female",
+    "image": "image112"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.915679",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0111_nordic_65_female/base_image/0111_nordic_65_female_base.png",
+      "relative_path": "characters/0111_nordic_65_female/base_image/0111_nordic_65_female_base.png",
+      "size_bytes": 1599689,
+      "size_mb": 1.53,
+      "created_timestamp": 1746897768.9533029,
+      "created_date": "2025-05-10T19:22:48.953303",
+      "modified_timestamp": 1746897768.9535875,
+      "modified_date": "2025-05-10T19:22:48.953588",
+      "md5_hash": "48694801c2fc1d7b19349ab0b162de47",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0111_nordic_65_female/base_image/0111_nordic_65_female_base.png",
+      "moved_relative_path": "data/actors/0111_nordic_65_female/base_image/0111_nordic_65_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1599689,
+    "total_size_mb": 1.53,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

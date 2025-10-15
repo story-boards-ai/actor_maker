@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Actor } from '../types';
-import './StyleCard.css';
+import './ActorCard.css';
 
 interface ActorCardProps {
   actor: Actor;
@@ -8,35 +8,18 @@ interface ActorCardProps {
 
 export function ActorCard({ actor }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
-  
-  // Use the poster frame images from the actor data
-  const imageSrc = actor.poster_frames.accelerated.webp_md;
-  
-  // Debug logging
-  useEffect(() => {
-    console.log(`Actor ${actor.name} (#${actor.id}):`, imageSrc);
-  }, [actor.name, actor.id, imageSrc]);
+
+  // Build the image path - use the img field from actor data
+  const imageSrc = actor.url || `/actors/${actor.img}`;
 
   const handleImageError = () => {
     console.error(`Image failed for ${actor.name}:`, imageSrc);
     setImageError(true);
   };
 
-  // Generate a gradient based on ethnicity for placeholder
-  const getGradientForActor = (ethnicity: string) => {
-    const gradients: Record<string, string> = {
-      european: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      asian: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-      african: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-      latino: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-      'middle-eastern': 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    };
-    return gradients[ethnicity.toLowerCase()] || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-  };
-
   return (
-    <div className="style-card">
-      <div className="style-card-image">
+    <div className="actor-card">
+      <div className="actor-card-image">
         {!imageError ? (
           <img 
             src={imageSrc}
@@ -45,41 +28,34 @@ export function ActorCard({ actor }: ActorCardProps) {
             onError={handleImageError}
           />
         ) : (
-          <div 
-            className="style-card-placeholder"
-            style={{ background: getGradientForActor(actor.ethnicity) }}
-          >
+          <div className="actor-card-placeholder">
             <div className="placeholder-text">{actor.name}</div>
           </div>
         )}
-        <div className="style-card-overlay">
-          <span className="style-index">#{actor.id}</span>
-          <span className="style-tag">{actor.ethnicity}</span>
+        <div className="actor-card-overlay">
+          <span className="actor-index">#{actor.id}</span>
+          <span className="actor-tag">{actor.sex}</span>
         </div>
       </div>
       
-      <div className="style-card-content">
-        <div className="style-card-header">
-          <h3 className="style-card-title">{actor.name}</h3>
+      <div className="actor-card-content">
+        <div className="actor-card-header">
+          <h3 className="actor-card-title">{actor.name}</h3>
         </div>
         
-        <div className="style-card-info">
+        <div className="actor-card-info">
           <div className="info-row">
             <span className="info-label">Age</span>
             <span className="info-value">{actor.age}</span>
           </div>
           <div className="info-row">
-            <span className="info-label">Sex</span>
-            <span className="info-value">{actor.sex}</span>
-          </div>
-          <div className="info-row">
             <span className="info-label">Ethnicity</span>
             <span className="info-value">{actor.ethnicity}</span>
           </div>
-        </div>
-
-        <div className="style-card-description">
-          <p>{actor.description}</p>
+          <div className="info-row">
+            <span className="info-label">Description</span>
+            <span className="info-value">{actor.face_prompt}</span>
+          </div>
         </div>
       </div>
     </div>

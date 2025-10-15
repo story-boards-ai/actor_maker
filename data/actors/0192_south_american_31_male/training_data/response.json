@@ -1,0 +1,31 @@
+{
+  "delayTime": 184,
+  "executionTime": 342314,
+  "id": "939e0403-7f73-4529-88c1-528e125f2d39-e1",
+  "output": {
+    "output": {
+      "character_id": "0192_south_american_31_male",
+      "job_id": "4957e94e-9ff4-4abf-9f21-9f10c18c1b0c",
+      "s3_image_urls": [
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_0.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_1.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_2.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_3.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_4.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_5.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_6.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_7.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_8.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_9.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_10.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_11.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_12.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0192_south_american_31_male/training_data/0192_south_american_31_male_13.png"
+      ],
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "0v3sou7kc72rim"
+}

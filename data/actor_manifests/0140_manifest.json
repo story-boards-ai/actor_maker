@@ -1,0 +1,40 @@
+{
+  "character_id": "0140",
+  "character_name": "0140_indian_32_male",
+  "metadata": {
+    "img": "0140_indian_32_male.webp",
+    "age": "32",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Kartik Aaryan as a 32 year old Indian man with a buzzed haircut",
+    "id": "0140",
+    "name": "0140_indian_32_male",
+    "image": "image141",
+    "outfit": "Casual navy blue Nehru jacket over crisp white cotton shirt, slim-fit khaki chinos, brown leather belt, and tan suede loafers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.103637",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0140_indian_32_male/base_image/0140_indian_32_male_base.png",
+      "relative_path": "characters/0140_indian_32_male/base_image/0140_indian_32_male_base.png",
+      "size_bytes": 1105747,
+      "size_mb": 1.05,
+      "created_timestamp": 1746907133.161351,
+      "created_date": "2025-05-10T21:58:53.161351",
+      "modified_timestamp": 1746907133.1638324,
+      "modified_date": "2025-05-10T21:58:53.163832",
+      "md5_hash": "63d3c8dcf1ab800306af31dcbdbc7c63",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0140_indian_32_male/base_image/0140_indian_32_male_base.png",
+      "moved_relative_path": "data/actors/0140_indian_32_male/base_image/0140_indian_32_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1105747,
+    "total_size_mb": 1.05,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

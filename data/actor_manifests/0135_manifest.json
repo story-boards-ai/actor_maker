@@ -1,0 +1,40 @@
+{
+  "character_id": "0135",
+  "character_name": "0135_middle_eastern_70_female",
+  "metadata": {
+    "img": "0135_middle_eastern_70_female.webp",
+    "age": "70",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Noor Abdullah as a 70 year old Middle Eastern woman, with wavy european hairs",
+    "id": "0135",
+    "name": "0135_middle_eastern_70_female",
+    "image": "image136",
+    "outfit": "Dignified navy blue long dress with subtle silver embroidery at the neckline, cream-colored lightweight shawl, pearl necklace, and comfortable beige orthopedic shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.058510",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0135_middle_eastern_70_female/base_image/0135_middle_eastern_70_female_base.png",
+      "relative_path": "characters/0135_middle_eastern_70_female/base_image/0135_middle_eastern_70_female_base.png",
+      "size_bytes": 1211848,
+      "size_mb": 1.16,
+      "created_timestamp": 1746898310.9487047,
+      "created_date": "2025-05-10T19:31:50.948705",
+      "modified_timestamp": 1746898310.948976,
+      "modified_date": "2025-05-10T19:31:50.948976",
+      "md5_hash": "6abe5534e0e0bb848e66fc9c6c0c68d1",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0135_middle_eastern_70_female/base_image/0135_middle_eastern_70_female_base.png",
+      "moved_relative_path": "data/actors/0135_middle_eastern_70_female/base_image/0135_middle_eastern_70_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1211848,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

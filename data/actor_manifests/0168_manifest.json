@@ -1,0 +1,40 @@
+{
+  "character_id": "0168",
+  "character_name": "0168_black_36_female",
+  "metadata": {
+    "img": "0168_black_36_female.webp",
+    "age": "36",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Carla Campbell | Latoya Mitchell] as a average (36 year old) black woman) , with braided long (black hair:1.1) ",
+    "id": "0168",
+    "name": "0168_black_36_female",
+    "image": "image169",
+    "outfit": "Vibrant orange and blue African print maxi dress with wide sleeves, wooden bangle bracelets, large gold hoop earrings, and brown leather sandals with beaded details."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.400525",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0168_black_36_female/base_image/0168_black_36_female_base.png",
+      "relative_path": "characters/0168_black_36_female/base_image/0168_black_36_female_base.png",
+      "size_bytes": 1805798,
+      "size_mb": 1.72,
+      "created_timestamp": 1746898962.0332217,
+      "created_date": "2025-05-10T19:42:42.033222",
+      "modified_timestamp": 1746898962.0335479,
+      "modified_date": "2025-05-10T19:42:42.033548",
+      "md5_hash": "b7b553226b62b7aa62432526e2506731",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0168_black_36_female/base_image/0168_black_36_female_base.png",
+      "moved_relative_path": "data/actors/0168_black_36_female/base_image/0168_black_36_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1805798,
+    "total_size_mb": 1.72,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

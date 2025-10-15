@@ -1,0 +1,32 @@
+{
+  "delayTime": 19154,
+  "executionTime": 383934,
+  "id": "47623ccd-bee3-45a1-a512-70becae534f0-e1",
+  "output": {
+    "output": {
+      "actor_id": "0235_south_american_49_female",
+      "job_id": "546e1024-3c9e-4c69-b208-4d0e10d194f7",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0235_south_american_49_female/0235_south_american_49_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "k7uw4jglcjjah6"
+}

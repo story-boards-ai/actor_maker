@@ -1,0 +1,40 @@
+{
+  "character_id": "0025",
+  "character_name": "0025_european_35_female",
+  "metadata": {
+    "img": "0025_european_35_female.webp",
+    "age": "35",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "a woman [Petra Harris | Samantha Etter] as a 35 year old white woman, with shoulder-length black hair",
+    "id": "0025",
+    "name": "0025_european_35_female",
+    "image": "image26",
+    "outfit": "Professional navy blue blazer over a light blue silk blouse, gray pencil skirt, and black pumps with subtle gold jewelry."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.395419",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0025_european_35_female/base_image/0025_european_35_female_base.png",
+      "relative_path": "characters/0025_european_35_female/base_image/0025_european_35_female_base.png",
+      "size_bytes": 1355023,
+      "size_mb": 1.29,
+      "created_timestamp": 1746892368.4283123,
+      "created_date": "2025-05-10T17:52:48.428312",
+      "modified_timestamp": 1746894885.3170028,
+      "modified_date": "2025-05-10T18:34:45.317003",
+      "md5_hash": "7eb99b3153803996848fbac817b83a7d",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0025_european_35_female/base_image/0025_european_35_female_base.png",
+      "moved_relative_path": "data/actors/0025_european_35_female/base_image/0025_european_35_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1355023,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

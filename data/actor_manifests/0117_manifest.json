@@ -1,0 +1,40 @@
+{
+  "character_id": "0117",
+  "character_name": "0117_asian_40_male",
+  "metadata": {
+    "img": "0117_asian_40_male.webp",
+    "age": "40",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "[Hannes Grunz | Travis Menson] as a 40 year old asian man, with straight very short black hair",
+    "id": "0117",
+    "name": "0117_asian_40_male",
+    "image": "image118",
+    "outfit": "Sophisticated charcoal gray business suit with subtle texture, pale lavender dress shirt, navy silk tie with small pattern, and polished black leather oxfords."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.949432",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0117_asian_40_male/base_image/0117_asian_40_male_base.png",
+      "relative_path": "characters/0117_asian_40_male/base_image/0117_asian_40_male_base.png",
+      "size_bytes": 1213895,
+      "size_mb": 1.16,
+      "created_timestamp": 1746897887.7611551,
+      "created_date": "2025-05-10T19:24:47.761155",
+      "modified_timestamp": 1746897887.7613463,
+      "modified_date": "2025-05-10T19:24:47.761346",
+      "md5_hash": "97e5c357c4f1cc94d3380a2c75a4af04",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0117_asian_40_male/base_image/0117_asian_40_male_base.png",
+      "moved_relative_path": "data/actors/0117_asian_40_male/base_image/0117_asian_40_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1213895,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0229",
+  "character_name": "0229_hispanic_15_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "15",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Miguel Hernandez as a 15 year old hispanic boy, with short curly black hair and a friendly, outgoing personality",
+    "id": "0229",
+    "name": "0229_hispanic_15_male",
+    "image": "image230"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.779337",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0229_hispanic_15_male/base_image/0229_hispanic_15_male_base.png",
+      "relative_path": "characters/0229_hispanic_15_male/base_image/0229_hispanic_15_male_base.png",
+      "size_bytes": 1248254,
+      "size_mb": 1.19,
+      "created_timestamp": 1746900517.466489,
+      "created_date": "2025-05-10T20:08:37.466489",
+      "modified_timestamp": 1746900517.4672728,
+      "modified_date": "2025-05-10T20:08:37.467273",
+      "md5_hash": "7828af64b08fcab2be4eea8fd4a602d9",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0229_hispanic_15_male/base_image/0229_hispanic_15_male_base.png",
+      "moved_relative_path": "data/actors/0229_hispanic_15_male/base_image/0229_hispanic_15_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1248254,
+    "total_size_mb": 1.19,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

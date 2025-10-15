@@ -1,0 +1,25 @@
+{
+  "character_id": "0225",
+  "character_name": "0225_hispanic_41_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "41",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Diego Ramirez as a 41 year old hispanic man, with short messy black hair and a charming, lopsided grin",
+    "id": "0225",
+    "name": "0225_hispanic_41_male",
+    "image": "image226"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.765670",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

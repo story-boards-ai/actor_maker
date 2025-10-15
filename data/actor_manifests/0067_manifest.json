@@ -1,0 +1,40 @@
+{
+  "character_id": "0067",
+  "character_name": "0067_asian_16_female",
+  "metadata": {
+    "img": "0067_asian_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Yu Yo  as a 35 year old asian woman, black shoulder length straight cut hair",
+    "id": "0067",
+    "name": "0067_asian_16_female",
+    "image": "image68",
+    "outfit": "Mint green oversized sweater with kawaii character print, black pleated mini skirt, white knee-high socks, and black Mary Jane shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.624722",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0067_asian_16_female/base_image/0067_asian_16_female_base.png",
+      "relative_path": "characters/0067_asian_16_female/base_image/0067_asian_16_female_base.png",
+      "size_bytes": 1188504,
+      "size_mb": 1.13,
+      "created_timestamp": 1746893972.0862243,
+      "created_date": "2025-05-10T18:19:32.086224",
+      "modified_timestamp": 1746896759.0382311,
+      "modified_date": "2025-05-10T19:05:59.038231",
+      "md5_hash": "6746565f7c626fcb55d7c44087d683d4",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0067_asian_16_female/base_image/0067_asian_16_female_base.png",
+      "moved_relative_path": "data/actors/0067_asian_16_female/base_image/0067_asian_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1188504,
+    "total_size_mb": 1.13,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

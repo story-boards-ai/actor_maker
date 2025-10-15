@@ -1,0 +1,25 @@
+{
+  "character_id": "0278",
+  "character_name": "0278_middle_eastern_15_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "15",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Layla Khoury as a 15 year old middle eastern girl with long, wavy black hair and a nose ring",
+    "id": "0278",
+    "name": "0278_middle_eastern_15_female",
+    "image": "image279"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.000386",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

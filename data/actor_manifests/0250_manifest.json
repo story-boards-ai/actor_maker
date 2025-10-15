@@ -1,0 +1,39 @@
+{
+  "character_id": "0250",
+  "character_name": "0250_hispanic_43_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "43",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Alejandro Vargas as a 43 year old hispanic man with short, spiky black hair and a goatee",
+    "id": "0250",
+    "name": "0250_hispanic_43_male",
+    "image": "image251"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.869425",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0250_hispanic_43_male/base_image/0250_hispanic_43_male_base.png",
+      "relative_path": "characters/0250_hispanic_43_male/base_image/0250_hispanic_43_male_base.png",
+      "size_bytes": 1457665,
+      "size_mb": 1.39,
+      "created_timestamp": 1746901020.6343234,
+      "created_date": "2025-05-10T20:17:00.634323",
+      "modified_timestamp": 1746901020.6345825,
+      "modified_date": "2025-05-10T20:17:00.634583",
+      "md5_hash": "2d9c96b822fa1a5736db90ded2848b5c",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0250_hispanic_43_male/base_image/0250_hispanic_43_male_base.png",
+      "moved_relative_path": "data/actors/0250_hispanic_43_male/base_image/0250_hispanic_43_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1457665,
+    "total_size_mb": 1.39,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

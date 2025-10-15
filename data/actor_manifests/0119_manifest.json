@@ -1,0 +1,40 @@
+{
+  "character_id": "0119",
+  "character_name": "0119_nordic_45_female",
+  "metadata": {
+    "img": "0119_nordic_45_female.webp",
+    "age": "45",
+    "sex": "female",
+    "ethnicity": "nordic",
+    "face_prompt": "Emilie JÃ¸rgensen as a 45 year old nordic woman, with straight blonde hair and ",
+    "id": "0119",
+    "name": "0119_nordic_45_female",
+    "image": "image120",
+    "outfit": "Elegant cream cashmere sweater with cowl neck, tailored navy blue wool trousers, pearl drop earrings, and tan leather ankle boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.959535",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0119_nordic_45_female/base_image/0119_nordic_45_female_base.png",
+      "relative_path": "characters/0119_nordic_45_female/base_image/0119_nordic_45_female_base.png",
+      "size_bytes": 1224166,
+      "size_mb": 1.17,
+      "created_timestamp": 1746897999.5517502,
+      "created_date": "2025-05-10T19:26:39.551750",
+      "modified_timestamp": 1746897999.5521173,
+      "modified_date": "2025-05-10T19:26:39.552117",
+      "md5_hash": "413c21acf67bb132ba55c4b8bb128939",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0119_nordic_45_female/base_image/0119_nordic_45_female_base.png",
+      "moved_relative_path": "data/actors/0119_nordic_45_female/base_image/0119_nordic_45_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1224166,
+    "total_size_mb": 1.17,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0061",
+  "character_name": "0061_european_60_female",
+  "metadata": {
+    "img": "0061_european_60_female.webp",
+    "age": "60",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "[Kendra Smith | Shannon Soberty] as a 60 year old european woman, with medium length curly grey hair",
+    "id": "0061",
+    "name": "0061_european_60_female",
+    "image": "image62",
+    "outfit": "Sophisticated lavender cashmere sweater, cream wool trousers, pearl earrings and necklace, and beige comfortable low-heeled pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.590413",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0061_european_60_female/base_image/0061_european_60_female_base.png",
+      "relative_path": "characters/0061_european_60_female/base_image/0061_european_60_female_base.png",
+      "size_bytes": 1233277,
+      "size_mb": 1.18,
+      "created_timestamp": 1746893900.9418068,
+      "created_date": "2025-05-10T18:18:20.941807",
+      "modified_timestamp": 1746896631.1747236,
+      "modified_date": "2025-05-10T19:03:51.174724",
+      "md5_hash": "c784e265db16ed1409f1753d32246df8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0061_european_60_female/base_image/0061_european_60_female_base.png",
+      "moved_relative_path": "data/actors/0061_european_60_female/base_image/0061_european_60_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1233277,
+    "total_size_mb": 1.18,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

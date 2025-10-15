@@ -1,0 +1,40 @@
+{
+  "character_id": "0087",
+  "character_name": "0087_middle_eastern_55_male",
+  "metadata": {
+    "img": "0087_middle_eastern_55_male.webp",
+    "age": "55",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "a man [Rudger Navaly | Jesus Theron] as a 55 year old Middle Eastern man, with short straight silver hair",
+    "id": "0087",
+    "name": "0087_middle_eastern_55_male",
+    "image": "image88",
+    "outfit": "Sophisticated navy blue business suit with subtle pinstripes, light blue dress shirt, gold and red patterned tie, and black leather oxfords."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.729433",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0087_middle_eastern_55_male/base_image/0087_middle_eastern_55_male_base.png",
+      "relative_path": "characters/0087_middle_eastern_55_male/base_image/0087_middle_eastern_55_male_base.png",
+      "size_bytes": 1184572,
+      "size_mb": 1.13,
+      "created_timestamp": 1746897184.6976774,
+      "created_date": "2025-05-10T19:13:04.697677",
+      "modified_timestamp": 1746897184.698,
+      "modified_date": "2025-05-10T19:13:04.698000",
+      "md5_hash": "9ff96f5abc0109c0498f7c1eaf8ab8bb",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0087_middle_eastern_55_male/base_image/0087_middle_eastern_55_male_base.png",
+      "moved_relative_path": "data/actors/0087_middle_eastern_55_male/base_image/0087_middle_eastern_55_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1184572,
+    "total_size_mb": 1.13,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

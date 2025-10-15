@@ -1,0 +1,40 @@
+{
+  "character_id": "0052",
+  "character_name": "0052_black_55_male",
+  "metadata": {
+    "img": "0052_black_55_male.webp",
+    "age": "55",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "David Nwosu as a 55-year-old black man, with a balding head and salt-and-pepper beard",
+    "id": "0052",
+    "name": "0052_black_55_male",
+    "image": "image53",
+    "outfit": "Distinguished dark green tweed blazer with leather elbow patches, cream turtleneck sweater, brown wool trousers, and polished tan brogues."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.539420",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0052_black_55_male/base_image/0052_black_55_male_base.png",
+      "relative_path": "characters/0052_black_55_male/base_image/0052_black_55_male_base.png",
+      "size_bytes": 1495297,
+      "size_mb": 1.43,
+      "created_timestamp": 1746893790.6074622,
+      "created_date": "2025-05-10T18:16:30.607462",
+      "modified_timestamp": 1746895460.2412362,
+      "modified_date": "2025-05-10T18:44:20.241236",
+      "md5_hash": "5f52a865ef5720b3221d09073e30d82e",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0052_black_55_male/base_image/0052_black_55_male_base.png",
+      "moved_relative_path": "data/actors/0052_black_55_male/base_image/0052_black_55_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1495297,
+    "total_size_mb": 1.43,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,32 @@
+{
+  "delayTime": 5134,
+  "executionTime": 379580,
+  "id": "682f9b4f-1ef4-4769-b64e-a36ddd015f57-e1",
+  "output": {
+    "output": {
+      "actor_id": "0265_south_american_43_male",
+      "job_id": "f111d54f-e0ea-4f50-82c7-94c813c521a8",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0265_south_american_43_male/0265_south_american_43_male_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "m0z9x2m9a3km7o"
+}

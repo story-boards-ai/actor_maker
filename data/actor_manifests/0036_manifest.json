@@ -1,0 +1,40 @@
+{
+  "character_id": "0036",
+  "character_name": "0036_european_16_female",
+  "metadata": {
+    "img": "0036_european_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "a white woman ([Priska Barionah | Hannah Twain] as a 16 year old white girl), with braided black hair and friendly eyes",
+    "id": "0036",
+    "name": "0036_european_16_female",
+    "image": "image37",
+    "outfit": "Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.453447",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0036_european_16_female/base_image/0036_european_16_female_base.png",
+      "relative_path": "characters/0036_european_16_female/base_image/0036_european_16_female_base.png",
+      "size_bytes": 1462570,
+      "size_mb": 1.39,
+      "created_timestamp": 1746893524.837824,
+      "created_date": "2025-05-10T18:12:04.837824",
+      "modified_timestamp": 1746895099.4083738,
+      "modified_date": "2025-05-10T18:38:19.408374",
+      "md5_hash": "2d910c4d96582c9d44ae8c5cbae25006",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0036_european_16_female/base_image/0036_european_16_female_base.png",
+      "moved_relative_path": "data/actors/0036_european_16_female/base_image/0036_european_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1462570,
+    "total_size_mb": 1.39,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

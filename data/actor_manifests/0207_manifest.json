@@ -1,0 +1,25 @@
+{
+  "character_id": "0207",
+  "character_name": "0207_indian_46_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "46",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Priya Kapoor as a 46 year old indian woman, with long black hair in a low bun and a red bindi on her forehead",
+    "id": "0207",
+    "name": "0207_indian_46_female",
+    "image": "image208"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.654313",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

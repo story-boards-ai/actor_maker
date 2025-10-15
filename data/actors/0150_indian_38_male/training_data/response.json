@@ -1,0 +1,31 @@
+{
+  "delayTime": 382,
+  "executionTime": 357955,
+  "id": "01429b62-4b39-4def-9c5c-37bec7626ded-e1",
+  "output": {
+    "output": {
+      "character_id": "0150_indian_38_male",
+      "job_id": "72ef6eed-e6a4-4239-9451-040c1cd4ed46",
+      "s3_image_urls": [
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_0.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_1.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_2.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_3.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_4.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_5.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_6.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_7.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_8.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_9.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_10.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_11.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_12.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0150_indian_38_male/training_data/0150_indian_38_male_13.png"
+      ],
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "vvinuq98dlmv28"
+}

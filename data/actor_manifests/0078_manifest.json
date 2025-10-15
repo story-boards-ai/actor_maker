@@ -1,0 +1,40 @@
+{
+  "character_id": "0078",
+  "character_name": "0078_south_american_40_male",
+  "metadata": {
+    "img": "0078_south_american_40_male.webp",
+    "age": "40",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "[Gustavo Paloma | Henry McMan], as a 40 year old south american man, with straight black hair",
+    "id": "0078",
+    "name": "0078_south_american_40_male",
+    "image": "image79",
+    "outfit": "Professional light blue dress shirt with subtle white stripes, navy blue suit pants, burgundy leather belt, and polished brown oxford shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.681005",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0078_south_american_40_male/base_image/0078_south_american_40_male_base.png",
+      "relative_path": "characters/0078_south_american_40_male/base_image/0078_south_american_40_male_base.png",
+      "size_bytes": 1216243,
+      "size_mb": 1.16,
+      "created_timestamp": 1746896973.3532333,
+      "created_date": "2025-05-10T19:09:33.353233",
+      "modified_timestamp": 1746896973.3535936,
+      "modified_date": "2025-05-10T19:09:33.353594",
+      "md5_hash": "67e61546c0d3e0a43b7f367aa193c8d6",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0078_south_american_40_male/base_image/0078_south_american_40_male_base.png",
+      "moved_relative_path": "data/actors/0078_south_american_40_male/base_image/0078_south_american_40_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1216243,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0272",
+  "character_name": "0272_middle_eastern_11_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "11",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amir Karimi as an 11 year old middle eastern boy with short, wavy black hair and a missing front tooth",
+    "id": "0272",
+    "name": "0272_middle_eastern_11_male",
+    "image": "image273"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.991486",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

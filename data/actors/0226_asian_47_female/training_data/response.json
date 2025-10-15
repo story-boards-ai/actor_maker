@@ -1,0 +1,32 @@
+{
+  "delayTime": 5009,
+  "executionTime": 336418,
+  "id": "57364f95-b3cd-4fd7-8f61-327fe61d0ff4-e1",
+  "output": {
+    "output": {
+      "actor_id": "0226_asian_47_female",
+      "job_id": "f9a0ddd0-95bd-487f-bf3e-44333c4722cb",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0226_asian_47_female/0226_asian_47_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "g1xn0ll80orqhc"
+}

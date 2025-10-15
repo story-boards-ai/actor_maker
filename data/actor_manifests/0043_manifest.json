@@ -1,0 +1,40 @@
+{
+  "character_id": "0043",
+  "character_name": "0043_european_30_female",
+  "metadata": {
+    "img": "0043_european_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "[Michaele Rmshaw | Danielle Splice] as a supermodel type 30 year old european woman, with short blonde hair",
+    "id": "0043",
+    "name": "0043_european_30_female",
+    "image": "image44",
+    "outfit": "Sleek white tailored pantsuit with a pale pink silk camisole, minimalist gold jewelry, and nude pointed-toe stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.490190",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0043_european_30_female/base_image/0043_european_30_female_base.png",
+      "relative_path": "characters/0043_european_30_female/base_image/0043_european_30_female_base.png",
+      "size_bytes": 1039963,
+      "size_mb": 0.99,
+      "created_timestamp": 1746893678.7232969,
+      "created_date": "2025-05-10T18:14:38.723297",
+      "modified_timestamp": 1746895284.225679,
+      "modified_date": "2025-05-10T18:41:24.225679",
+      "md5_hash": "f1d1e1deca96f5861f8ecd7dc7980500",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0043_european_30_female/base_image/0043_european_30_female_base.png",
+      "moved_relative_path": "data/actors/0043_european_30_female/base_image/0043_european_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1039963,
+    "total_size_mb": 0.99,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

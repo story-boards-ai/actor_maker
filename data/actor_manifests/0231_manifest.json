@@ -1,0 +1,25 @@
+{
+  "character_id": "0231",
+  "character_name": "0231_hispanic_84_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "84",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Hector Morales as an 84 year old hispanic man, with thin gray hair and a weathered, but kind face",
+    "id": "0231",
+    "name": "0231_hispanic_84_male",
+    "image": "image232"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.791764",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

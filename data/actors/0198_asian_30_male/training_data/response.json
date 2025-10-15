@@ -1,0 +1,32 @@
+{
+  "delayTime": 1177,
+  "executionTime": 338965,
+  "id": "9ed6a64f-1467-4680-aa73-cf8cc5f953f3-e1",
+  "output": {
+    "output": {
+      "actor_id": "0198_asian_30_male",
+      "job_id": "29c4a21e-6ec0-483f-9a30-b22b7595612e",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0198_asian_30_male/0198_asian_30_male_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "g1xn0ll80orqhc"
+}

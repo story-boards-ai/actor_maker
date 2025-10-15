@@ -1,0 +1,40 @@
+{
+  "character_id": "0147",
+  "character_name": "0147_indian_20_female",
+  "metadata": {
+    "img": "0147_indian_20_female.webp",
+    "age": "20",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Janhvi Kapoor | Tara Sutaria] as a 20 year old Indian woman with a long, braided black hairstyle and a radiant look",
+    "id": "0147",
+    "name": "0147_indian_20_female",
+    "image": "image148",
+    "outfit": "Trendy mint green crop top with silver sequin details, high-waisted white palazzo pants, silver anklets, and white platform sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.149966",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0147_indian_20_female/base_image/0147_indian_20_female_base.png",
+      "relative_path": "characters/0147_indian_20_female/base_image/0147_indian_20_female_base.png",
+      "size_bytes": 1196129,
+      "size_mb": 1.14,
+      "created_timestamp": 1746898545.785348,
+      "created_date": "2025-05-10T19:35:45.785348",
+      "modified_timestamp": 1746898545.7855322,
+      "modified_date": "2025-05-10T19:35:45.785532",
+      "md5_hash": "11599ba86f4964c60b36573f3184af7c",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0147_indian_20_female/base_image/0147_indian_20_female_base.png",
+      "moved_relative_path": "data/actors/0147_indian_20_female/base_image/0147_indian_20_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1196129,
+    "total_size_mb": 1.14,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

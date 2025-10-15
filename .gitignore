@@ -193,6 +193,21 @@ debug/img2img_result.jpg
 !debug/img2img_settings.json
 htmlcov/
 
+# Actor and scene images (migrated from wm-characters)
+# Keep directory structure but ignore image files
+data/actors/**/*.png
+data/actors/**/*.jpg
+data/actors/**/*.jpeg
+data/actors/**/*.webp
+data/actors/**/*.avif
+data/actors/**/*.gif
+data/scenes/**/*.png
+data/scenes/**/*.jpg
+data/scenes/**/*.jpeg
+data/scenes/**/*.webp
+data/scenes/**/*.avif
+data/scenes/**/*.gif
+
 # User settings (per-style configuration)
 data/settings/
 

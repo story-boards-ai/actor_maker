@@ -1,0 +1,25 @@
+{
+  "character_id": "0198",
+  "character_name": "0198_asian_30_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "30",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Takeshi Nakamura as a 30 year old asian man, with short black hair styled in an undercut and glasses",
+    "id": "0198",
+    "name": "0198_asian_30_male",
+    "image": "image199"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.535774",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

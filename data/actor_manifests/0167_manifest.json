@@ -1,0 +1,40 @@
+{
+  "character_id": "0167",
+  "character_name": "0167_black_34_female",
+  "metadata": {
+    "img": "0167_black_34_female.webp",
+    "age": "34",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Chloe Parker | Asia Phillips] as a stunning (34 year old) black woman) , with straight short (black hair:1.1) ",
+    "id": "0167",
+    "name": "0167_black_34_female",
+    "image": "image168",
+    "outfit": "Sophisticated burgundy sheath dress with asymmetrical neckline, thin gold belt, diamond stud earrings, and nude patent leather pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.393594",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0167_black_34_female/base_image/0167_black_34_female_base.png",
+      "relative_path": "characters/0167_black_34_female/base_image/0167_black_34_female_base.png",
+      "size_bytes": 1212837,
+      "size_mb": 1.16,
+      "created_timestamp": 1746907310.9818544,
+      "created_date": "2025-05-10T22:01:50.981854",
+      "modified_timestamp": 1746907310.9821491,
+      "modified_date": "2025-05-10T22:01:50.982149",
+      "md5_hash": "5d8a121dabaadff5f34d64107c12ba2d",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0167_black_34_female/base_image/0167_black_34_female_base.png",
+      "moved_relative_path": "data/actors/0167_black_34_female/base_image/0167_black_34_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1212837,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

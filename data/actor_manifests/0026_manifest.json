@@ -1,0 +1,40 @@
+{
+  "character_id": "0026",
+  "character_name": "0026_black_35_female",
+  "metadata": {
+    "img": "0026_black_35_female.webp",
+    "age": "35",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Tunia Patusa as a 35 year old black woman, dark shoulder length hair",
+    "id": "0026",
+    "name": "0026_black_35_female",
+    "image": "image27",
+    "outfit": "Stylish emerald green wrap dress with a gold statement belt, black leather jacket, and leopard print ankle boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.400414",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0026_black_35_female/base_image/0026_black_35_female_base.png",
+      "relative_path": "characters/0026_black_35_female/base_image/0026_black_35_female_base.png",
+      "size_bytes": 1085921,
+      "size_mb": 1.04,
+      "created_timestamp": 1746906817.7149985,
+      "created_date": "2025-05-10T21:53:37.714998",
+      "modified_timestamp": 1746906817.7152448,
+      "modified_date": "2025-05-10T21:53:37.715245",
+      "md5_hash": "e50726495fb189d1816a90b84859e59f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0026_black_35_female/base_image/0026_black_35_female_base.png",
+      "moved_relative_path": "data/actors/0026_black_35_female/base_image/0026_black_35_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1085921,
+    "total_size_mb": 1.04,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

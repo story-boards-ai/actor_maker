@@ -1,0 +1,25 @@
+{
+  "character_id": "0241",
+  "character_name": "0241_indian_55_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "55",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Arjun Mehta as a 55 year old indian man, with short graying hair and a well-trimmed beard",
+    "id": "0241",
+    "name": "0241_indian_55_male",
+    "image": "image242"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.827517",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

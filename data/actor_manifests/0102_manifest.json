@@ -1,0 +1,39 @@
+{
+  "character_id": "0102",
+  "character_name": "0102_middle_eastern_70_male",
+  "metadata": {
+    "img": "01023_middle_eastern_70_male.webp",
+    "age": "70",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "a man [Hunter Streep | Wasimir Slovenko] as a overweight 70 year old Middle Eastern man, with thin grey hair",
+    "id": "0102",
+    "name": "0102_middle_eastern_70_male",
+    "image": "image103"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.850692",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0102_middle_eastern_70_male/base_image/0102_middle_eastern_70_male_base.png",
+      "relative_path": "characters/0102_middle_eastern_70_male/base_image/0102_middle_eastern_70_male_base.png",
+      "size_bytes": 1432419,
+      "size_mb": 1.37,
+      "created_timestamp": 1746897591.9742756,
+      "created_date": "2025-05-10T19:19:51.974276",
+      "modified_timestamp": 1746897591.9746082,
+      "modified_date": "2025-05-10T19:19:51.974608",
+      "md5_hash": "b888710a2c1b69307329acec3da4d625",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0102_middle_eastern_70_male/base_image/0102_middle_eastern_70_male_base.png",
+      "moved_relative_path": "data/actors/0102_middle_eastern_70_male/base_image/0102_middle_eastern_70_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1432419,
+    "total_size_mb": 1.37,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

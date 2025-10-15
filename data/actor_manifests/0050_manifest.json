@@ -1,0 +1,40 @@
+{
+  "character_id": "0050",
+  "character_name": "0050_black_28_female",
+  "metadata": {
+    "img": "0050_black_28_female.webp",
+    "age": "40",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Sabine Kerch as a 28 year old nerdy black woman, dark short hair",
+    "id": "0050",
+    "name": "0050_black_28_female",
+    "image": "image51",
+    "outfit": "Quirky mustard yellow cardigan over a white button-up with small polka dots, navy blue A-line skirt, and burgundy oxford shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.527661",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0050_black_28_female/base_image/0050_black_28_female_base.png",
+      "relative_path": "characters/0050_black_28_female/base_image/0050_black_28_female_base.png",
+      "size_bytes": 1302585,
+      "size_mb": 1.24,
+      "created_timestamp": 1746906915.416471,
+      "created_date": "2025-05-10T21:55:15.416471",
+      "modified_timestamp": 1746906915.4168944,
+      "modified_date": "2025-05-10T21:55:15.416894",
+      "md5_hash": "cb00b5218cf16c30e24d2a4d8645c1b4",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0050_black_28_female/base_image/0050_black_28_female_base.png",
+      "moved_relative_path": "data/actors/0050_black_28_female/base_image/0050_black_28_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1302585,
+    "total_size_mb": 1.24,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0196",
+  "character_name": "0196_black_33_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "33",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Kofi Mensah as a 33 year old black man, with short dreadlocks pulled back and a thin mustache",
+    "id": "0196",
+    "name": "0196_black_33_male",
+    "image": "image197"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.532612",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0264",
+  "character_name": "0264_european_60_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "60",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sofia Bianchi as a 60 year old european woman with chin-length, wavy silver hair and tortoiseshell glasses",
+    "id": "0264",
+    "name": "0264_european_60_female",
+    "image": "image265"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.961166",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0073",
+  "character_name": "0073_asian_30_female",
+  "metadata": {
+    "img": "0073_asian_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Ming Ying as a 30 year old north korean woman, dark shoulder length hair",
+    "id": "0073",
+    "name": "0073_asian_30_female",
+    "image": "image74",
+    "outfit": "Modest navy blue high-necked blouse with small white polka dots, gray pencil skirt, black opaque tights, and simple black flats."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.655973",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0073_asian_30_female/base_image/0073_asian_30_female_base.png",
+      "relative_path": "characters/0073_asian_30_female/base_image/0073_asian_30_female_base.png",
+      "size_bytes": 998733,
+      "size_mb": 0.95,
+      "created_timestamp": 1746896875.9765837,
+      "created_date": "2025-05-10T19:07:55.976584",
+      "modified_timestamp": 1746896875.9769087,
+      "modified_date": "2025-05-10T19:07:55.976909",
+      "md5_hash": "09c9de380ed1b882945468f3b4c04293",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0073_asian_30_female/base_image/0073_asian_30_female_base.png",
+      "moved_relative_path": "data/actors/0073_asian_30_female/base_image/0073_asian_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 998733,
+    "total_size_mb": 0.95,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

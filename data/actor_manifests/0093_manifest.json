@@ -1,0 +1,40 @@
+{
+  "character_id": "0093",
+  "character_name": "0093_middle_eastern_14_male",
+  "metadata": {
+    "img": "0093_middle_eastern_14_male.webp",
+    "age": "14",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "a man [Pablino Charaz | Achmud Achmad] as a 14 year old Middle Eastern boy, with short curly brown hair",
+    "id": "0093",
+    "name": "0093_middle_eastern_14_male",
+    "image": "image94",
+    "outfit": "Casual royal blue and white striped t-shirt, khaki cargo shorts with multiple pockets, digital watch with black strap, and green and white athletic sneakers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.761994",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0093_middle_eastern_14_male/base_image/0093_middle_eastern_14_male_base.png",
+      "relative_path": "characters/0093_middle_eastern_14_male/base_image/0093_middle_eastern_14_male_base.png",
+      "size_bytes": 1171448,
+      "size_mb": 1.12,
+      "created_timestamp": 1746907054.6198277,
+      "created_date": "2025-05-10T21:57:34.619828",
+      "modified_timestamp": 1746907054.6201825,
+      "modified_date": "2025-05-10T21:57:34.620183",
+      "md5_hash": "c79ed2c85006c767216860f29a1cfdb0",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0093_middle_eastern_14_male/base_image/0093_middle_eastern_14_male_base.png",
+      "moved_relative_path": "data/actors/0093_middle_eastern_14_male/base_image/0093_middle_eastern_14_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1171448,
+    "total_size_mb": 1.12,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

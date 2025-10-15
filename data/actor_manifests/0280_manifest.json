@@ -1,0 +1,25 @@
+{
+  "character_id": "0280",
+  "character_name": "0280_european_13_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "13",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sofia Rossi as a 13 year old european girl with shoulder-length, curly brown hair and braces",
+    "id": "0280",
+    "name": "0280_european_13_female",
+    "image": "image281"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.005641",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

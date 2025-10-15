@@ -1,0 +1,39 @@
+{
+  "character_id": "0247",
+  "character_name": "0247_indian_48_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "48",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Vikram Singh as a 48 year old indian man, with short black hair and a neatly trimmed beard",
+    "id": "0247",
+    "name": "0247_indian_48_male",
+    "image": "image248"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.850566",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0247_indian_48_male/base_image/0247_indian_48_male_base.png",
+      "relative_path": "characters/0247_indian_48_male/base_image/0247_indian_48_male_base.png",
+      "size_bytes": 1406865,
+      "size_mb": 1.34,
+      "created_timestamp": 1746900962.4340203,
+      "created_date": "2025-05-10T20:16:02.434020",
+      "modified_timestamp": 1746900962.434363,
+      "modified_date": "2025-05-10T20:16:02.434363",
+      "md5_hash": "403003264a28026e4c04ca1c98eb1286",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0247_indian_48_male/base_image/0247_indian_48_male_base.png",
+      "moved_relative_path": "data/actors/0247_indian_48_male/base_image/0247_indian_48_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1406865,
+    "total_size_mb": 1.34,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,32 @@
+{
+  "delayTime": 5038,
+  "executionTime": 361825,
+  "id": "42d62edd-91e5-43cf-9bc6-4ebfca2bbcd1-e1",
+  "output": {
+    "output": {
+      "actor_id": "0113_nordic_16_female",
+      "job_id": "90a0f5e7-e900-4378-849e-ba1a499570c6",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "g1xn0ll80orqhc"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0012",
+  "character_name": "0012_european_30_male",
+  "metadata": {
+    "img": "0012_european_30_male.webp",
+    "age": "30",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "a man ([Peter McCintosh | Howard Conings] as a 30 year old european man), with short blonde balding hair and a goatie beard",
+    "id": "0012",
+    "name": "0012_european_30_male",
+    "image": "image13",
+    "outfit": "Casual tech startup attire with a plaid button-up shirt, dark jeans, and casual leather shoes."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.325135",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0012_european_30_male/base_image/0012_european_30_male_base.png",
+      "relative_path": "characters/0012_european_30_male/base_image/0012_european_30_male_base.png",
+      "size_bytes": 1278277,
+      "size_mb": 1.22,
+      "created_timestamp": 1746906720.1105373,
+      "created_date": "2025-05-10T21:52:00.110537",
+      "modified_timestamp": 1746906720.1112874,
+      "modified_date": "2025-05-10T21:52:00.111287",
+      "md5_hash": "05c04048a671f33c51a825e8c23a6803",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0012_european_30_male/base_image/0012_european_30_male_base.png",
+      "moved_relative_path": "data/actors/0012_european_30_male/base_image/0012_european_30_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1278277,
+    "total_size_mb": 1.22,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0265",
+  "character_name": "0265_black_37_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "37",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Zuri Adebayo as a 37 year old black woman with long, braided black hair and large, gold statement earrings",
+    "id": "0265",
+    "name": "0265_black_37_female",
+    "image": "image266"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.962741",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

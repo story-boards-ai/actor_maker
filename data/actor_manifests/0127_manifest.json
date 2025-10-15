@@ -1,0 +1,40 @@
+{
+  "character_id": "0127",
+  "character_name": "0127_middle_eastern_25_female",
+  "metadata": {
+    "img": "0127_middle_eastern_25_female.webp",
+    "age": "25",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Regula Siddig as a 25 year old attractive Middle Eastern woman, with curly brown hair and a warm smile",
+    "id": "0127",
+    "name": "0127_middle_eastern_25_female",
+    "image": "image128",
+    "outfit": "Modern coral pink blouse with delicate gold embroidery, fitted white jeans, gold hoop earrings, and tan leather ankle boots with decorative tassels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.007514",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0127_middle_eastern_25_female/base_image/0127_middle_eastern_25_female_base.png",
+      "relative_path": "characters/0127_middle_eastern_25_female/base_image/0127_middle_eastern_25_female_base.png",
+      "size_bytes": 1329139,
+      "size_mb": 1.27,
+      "created_timestamp": 1746898155.3907998,
+      "created_date": "2025-05-10T19:29:15.390800",
+      "modified_timestamp": 1746898155.3912694,
+      "modified_date": "2025-05-10T19:29:15.391269",
+      "md5_hash": "ef979cd68d567a4b7c18a508970dd2eb",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0127_middle_eastern_25_female/base_image/0127_middle_eastern_25_female_base.png",
+      "moved_relative_path": "data/actors/0127_middle_eastern_25_female/base_image/0127_middle_eastern_25_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1329139,
+    "total_size_mb": 1.27,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

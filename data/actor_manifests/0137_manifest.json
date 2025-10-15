@@ -1,0 +1,40 @@
+{
+  "character_id": "0137",
+  "character_name": "0137_indian_28_female",
+  "metadata": {
+    "img": "0137_indian_28_female.webp",
+    "age": "28",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Disha Patani | Kiara Advani] as a 28 year old Indian woman with long straight black hair",
+    "id": "0137",
+    "name": "0137_indian_28_female",
+    "image": "image138",
+    "outfit": "Glamorous fuchsia pink anarkali suit with gold embroidery, matching dupatta with gold border, ornate gold and diamond earrings, and gold embellished sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.073397",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0137_indian_28_female/base_image/0137_indian_28_female_base.png",
+      "relative_path": "characters/0137_indian_28_female/base_image/0137_indian_28_female_base.png",
+      "size_bytes": 1484871,
+      "size_mb": 1.42,
+      "created_timestamp": 1746898349.7573383,
+      "created_date": "2025-05-10T19:32:29.757338",
+      "modified_timestamp": 1746898349.7578225,
+      "modified_date": "2025-05-10T19:32:29.757823",
+      "md5_hash": "6cc0412a10e98041f990917c5e86747b",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0137_indian_28_female/base_image/0137_indian_28_female_base.png",
+      "moved_relative_path": "data/actors/0137_indian_28_female/base_image/0137_indian_28_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1484871,
+    "total_size_mb": 1.42,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

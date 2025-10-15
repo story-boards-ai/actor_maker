@@ -1,0 +1,40 @@
+{
+  "character_id": "0006",
+  "character_name": "0006_european_20_female",
+  "metadata": {
+    "img": "0006_european_20_female.webp",
+    "age": "20",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sienna Halloway as a gorgeous 20 year old european woman, (long blonde hair:1.1), little makeup",
+    "id": "0006",
+    "name": "0006_european_20_female",
+    "image": "image7",
+    "outfit": "Trendy summer outfit with a crop top, high-waisted shorts, and strappy sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.292121",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0006_european_20_female/base_image/0006_european_20_female_base.png",
+      "relative_path": "characters/0006_european_20_female/base_image/0006_european_20_female_base.png",
+      "size_bytes": 1282952,
+      "size_mb": 1.22,
+      "created_timestamp": 1746892643.2680538,
+      "created_date": "2025-05-10T17:57:23.268054",
+      "modified_timestamp": 1746894514.5593388,
+      "modified_date": "2025-05-10T18:28:34.559339",
+      "md5_hash": "dba5794754dd1a9502947a979adb7128",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0006_european_20_female/base_image/0006_european_20_female_base.png",
+      "moved_relative_path": "data/actors/0006_european_20_female/base_image/0006_european_20_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1282952,
+    "total_size_mb": 1.22,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

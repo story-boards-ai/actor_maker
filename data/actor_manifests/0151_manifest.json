@@ -1,0 +1,40 @@
+{
+  "character_id": "0151",
+  "character_name": "0151_indian_38_female",
+  "metadata": {
+    "img": "0151_indian_38_female.webp",
+    "age": "38",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Dia Mirza | Chitrangada Singh] as a 38 year old Indian woman with a long, layered black hairstyle and a poised expression",
+    "id": "0151",
+    "name": "0151_indian_38_female",
+    "image": "image152",
+    "outfit": "Elegant deep purple silk saree with intricate silver zari work, matching sleeveless blouse, diamond and amethyst jewelry set, and silver heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.177028",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0151_indian_38_female/base_image/0151_indian_38_female_base.png",
+      "relative_path": "characters/0151_indian_38_female/base_image/0151_indian_38_female_base.png",
+      "size_bytes": 1351616,
+      "size_mb": 1.29,
+      "created_timestamp": 1746898623.332935,
+      "created_date": "2025-05-10T19:37:03.332935",
+      "modified_timestamp": 1746898623.333343,
+      "modified_date": "2025-05-10T19:37:03.333343",
+      "md5_hash": "537fdf377b0da7050585b0693270b064",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0151_indian_38_female/base_image/0151_indian_38_female_base.png",
+      "moved_relative_path": "data/actors/0151_indian_38_female/base_image/0151_indian_38_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1351616,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

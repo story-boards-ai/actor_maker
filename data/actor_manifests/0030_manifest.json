@@ -1,0 +1,40 @@
+{
+  "character_id": "0030",
+  "character_name": "0030_european_30_female",
+  "metadata": {
+    "img": "0030_european_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Liora Hastings as a 30 year old gorgeous european woman with natural makeup, blonde long hair",
+    "id": "0030",
+    "name": "0030_european_30_female",
+    "image": "image31",
+    "outfit": "Elegant ivory silk blouse with a blush pink pencil skirt, nude pumps, and delicate rose gold jewelry."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.421906",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0030_european_30_female/base_image/0030_european_30_female_base.png",
+      "relative_path": "characters/0030_european_30_female/base_image/0030_european_30_female_base.png",
+      "size_bytes": 1176540,
+      "size_mb": 1.12,
+      "created_timestamp": 1746893458.483249,
+      "created_date": "2025-05-10T18:10:58.483249",
+      "modified_timestamp": 1746894982.7643116,
+      "modified_date": "2025-05-10T18:36:22.764312",
+      "md5_hash": "ad557ba312c78e49028bf8790c96c00a",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0030_european_30_female/base_image/0030_european_30_female_base.png",
+      "moved_relative_path": "data/actors/0030_european_30_female/base_image/0030_european_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1176540,
+    "total_size_mb": 1.12,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

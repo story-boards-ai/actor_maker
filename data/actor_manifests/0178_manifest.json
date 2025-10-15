@@ -1,0 +1,25 @@
+{
+  "character_id": "0178",
+  "character_name": "0178_middle_eastern_36_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "36",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amira Hakim as a 36 year old middle eastern woman, with shoulder length wavy black hair",
+    "id": "0178",
+    "name": "0178_middle_eastern_36_female",
+    "image": "image179"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.448589",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

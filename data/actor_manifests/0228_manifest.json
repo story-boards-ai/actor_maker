@@ -1,0 +1,25 @@
+{
+  "character_id": "0228",
+  "character_name": "0228_indian_10_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "10",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Aanya Patel as a 10 year old indian girl, with long black hair in two braids and an energetic, curious demeanor",
+    "id": "0228",
+    "name": "0228_indian_10_female",
+    "image": "image229"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.777949",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

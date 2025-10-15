@@ -1,0 +1,40 @@
+{
+  "character_id": "0062",
+  "character_name": "0062_asian_60_female",
+  "metadata": {
+    "img": "0062_asian_60_female.webp",
+    "age": "60",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Harriet Rommel as a 60 year old black woman, short grey hair",
+    "id": "0062",
+    "name": "0062_asian_60_female",
+    "image": "image63",
+    "outfit": "Traditional teal silk mandarin collar jacket with gold embroidery, black wide-leg pants, and comfortable black flats with jade accessories."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.595687",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0062_asian_60_female/base_image/0062_asian_60_female_base.png",
+      "relative_path": "characters/0062_asian_60_female/base_image/0062_asian_60_female_base.png",
+      "size_bytes": 1254111,
+      "size_mb": 1.2,
+      "created_timestamp": 1746907015.6480887,
+      "created_date": "2025-05-10T21:56:55.648089",
+      "modified_timestamp": 1746907015.6486747,
+      "modified_date": "2025-05-10T21:56:55.648675",
+      "md5_hash": "51b71e37342c091a18969ebc8ef55f1a",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0062_asian_60_female/base_image/0062_asian_60_female_base.png",
+      "moved_relative_path": "data/actors/0062_asian_60_female/base_image/0062_asian_60_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1254111,
+    "total_size_mb": 1.2,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

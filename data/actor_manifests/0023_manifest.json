@@ -1,0 +1,40 @@
+{
+  "character_id": "0023",
+  "character_name": "0023_european_17_female",
+  "metadata": {
+    "img": "0023_european_17_female.webp",
+    "age": "17",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Evangeline Sparrow as a 17 year old timid white girl, amber chin length hair, wispy bangs",
+    "id": "0023",
+    "name": "0023_european_17_female",
+    "image": "image24",
+    "outfit": "Pastel pink sweater over a white collared shirt, navy blue pleated skirt, and brown loafers with white socks."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.384698",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0023_european_17_female/base_image/0023_european_17_female_base.png",
+      "relative_path": "characters/0023_european_17_female/base_image/0023_european_17_female_base.png",
+      "size_bytes": 1217380,
+      "size_mb": 1.16,
+      "created_timestamp": 1746892346.3476446,
+      "created_date": "2025-05-10T17:52:26.347645",
+      "modified_timestamp": 1746894846.3946133,
+      "modified_date": "2025-05-10T18:34:06.394613",
+      "md5_hash": "2e4dfd6d1d9e05a8165cdff8e3fa7bb8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0023_european_17_female/base_image/0023_european_17_female_base.png",
+      "moved_relative_path": "data/actors/0023_european_17_female/base_image/0023_european_17_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1217380,
+    "total_size_mb": 1.16,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

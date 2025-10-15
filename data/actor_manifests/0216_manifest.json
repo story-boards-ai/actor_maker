@@ -1,0 +1,39 @@
+{
+  "character_id": "0216",
+  "character_name": "0216_black_13_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "13",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Zuri Adebayo as a 13 year old black girl, with medium length braided hair and a shy smile",
+    "id": "0216",
+    "name": "0216_black_13_female",
+    "image": "image217"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.712669",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0216_black_13_female/base_image/0216_black_13_female_base.png",
+      "relative_path": "characters/0216_black_13_female/base_image/0216_black_13_female_base.png",
+      "size_bytes": 1252908,
+      "size_mb": 1.19,
+      "created_timestamp": 1746900263.680667,
+      "created_date": "2025-05-10T20:04:23.680667",
+      "modified_timestamp": 1746900263.6812668,
+      "modified_date": "2025-05-10T20:04:23.681267",
+      "md5_hash": "da0464782afbe339f91c12780c3cc3d8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0216_black_13_female/base_image/0216_black_13_female_base.png",
+      "moved_relative_path": "data/actors/0216_black_13_female/base_image/0216_black_13_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1252908,
+    "total_size_mb": 1.19,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

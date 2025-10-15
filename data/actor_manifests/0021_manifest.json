@@ -1,0 +1,40 @@
+{
+  "character_id": "0021",
+  "character_name": "0021_south_american_25_female",
+  "metadata": {
+    "img": "0021_south_american_25_female.webp",
+    "age": "25",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Evangeline Sparrow as a 25 year old sexy gorgeous latina woman, dark shoulder length hair, wispy bangs",
+    "id": "0021",
+    "name": "0021_south_american_25_female",
+    "image": "image22",
+    "outfit": "Form-fitting red dress with a sweetheart neckline, black leather jacket, and silver stiletto heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.374108",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0021_south_american_25_female/base_image/0021_south_american_25_female_base.png",
+      "relative_path": "characters/0021_south_american_25_female/base_image/0021_south_american_25_female_base.png",
+      "size_bytes": 1060680,
+      "size_mb": 1.01,
+      "created_timestamp": 1746906798.212391,
+      "created_date": "2025-05-10T21:53:18.212391",
+      "modified_timestamp": 1746906798.212795,
+      "modified_date": "2025-05-10T21:53:18.212795",
+      "md5_hash": "4d65b22fb90aad946b3eceffc55cfba2",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0021_south_american_25_female/base_image/0021_south_american_25_female_base.png",
+      "moved_relative_path": "data/actors/0021_south_american_25_female/base_image/0021_south_american_25_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1060680,
+    "total_size_mb": 1.01,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

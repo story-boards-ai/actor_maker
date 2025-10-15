@@ -1,0 +1,25 @@
+{
+  "character_id": "0267",
+  "character_name": "0267_middle_eastern_55_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "55",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Fatima Karimi as a 55 year old middle eastern woman with medium-length, straight black hair and a colorful headscarf",
+    "id": "0267",
+    "name": "0267_middle_eastern_55_female",
+    "image": "image268"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.977365",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

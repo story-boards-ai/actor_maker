@@ -1,0 +1,39 @@
+{
+  "character_id": "0112",
+  "character_name": "0112_european_20_female",
+  "metadata": {
+    "img": "01123_european_20_female.webp",
+    "age": "20",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Chiara Ferraro as a 20 year old stunningly beautiful italian woman, long brown hair, little makeup",
+    "id": "0112",
+    "name": "0112_european_20_female",
+    "image": "image113"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.922562",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0112_european_20_female/base_image/0112_european_20_female_base.png",
+      "relative_path": "characters/0112_european_20_female/base_image/0112_european_20_female_base.png",
+      "size_bytes": 1151094,
+      "size_mb": 1.1,
+      "created_timestamp": 1746897788.4040859,
+      "created_date": "2025-05-10T19:23:08.404086",
+      "modified_timestamp": 1746897788.4042823,
+      "modified_date": "2025-05-10T19:23:08.404282",
+      "md5_hash": "43efa7c81caeffb6beeca4b7c10fc5e3",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0112_european_20_female/base_image/0112_european_20_female_base.png",
+      "moved_relative_path": "data/actors/0112_european_20_female/base_image/0112_european_20_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1151094,
+    "total_size_mb": 1.1,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

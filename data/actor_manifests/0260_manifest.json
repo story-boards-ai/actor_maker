@@ -1,0 +1,39 @@
+{
+  "character_id": "0260",
+  "character_name": "0260_hispanic_45_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "45",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Diego Ramirez as a 45 year old hispanic man with short, wavy black hair and a five o'clock shadow",
+    "id": "0260",
+    "name": "0260_hispanic_45_male",
+    "image": "image261"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.942578",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0260_hispanic_45_male/base_image/0260_hispanic_45_male_base.png",
+      "relative_path": "characters/0260_hispanic_45_male/base_image/0260_hispanic_45_male_base.png",
+      "size_bytes": 1268282,
+      "size_mb": 1.21,
+      "created_timestamp": 1746901215.7270384,
+      "created_date": "2025-05-10T20:20:15.727038",
+      "modified_timestamp": 1746901215.7273624,
+      "modified_date": "2025-05-10T20:20:15.727362",
+      "md5_hash": "350209b9691590e8b69fc076ce83f0fe",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0260_hispanic_45_male/base_image/0260_hispanic_45_male_base.png",
+      "moved_relative_path": "data/actors/0260_hispanic_45_male/base_image/0260_hispanic_45_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1268282,
+    "total_size_mb": 1.21,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

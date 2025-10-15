@@ -1,0 +1,39 @@
+{
+  "character_id": "0256",
+  "character_name": "0256_asian_33_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "33",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Hiroshi Nakamura as a 33 year old asian man with short, spiky black hair and a small scar on his left cheek",
+    "id": "0256",
+    "name": "0256_asian_33_male",
+    "image": "image257"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.914800",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0256_asian_33_male/base_image/0256_asian_33_male_base.png",
+      "relative_path": "characters/0256_asian_33_male/base_image/0256_asian_33_male_base.png",
+      "size_bytes": 1245878,
+      "size_mb": 1.19,
+      "created_timestamp": 1746901137.1558564,
+      "created_date": "2025-05-10T20:18:57.155856",
+      "modified_timestamp": 1746901137.156252,
+      "modified_date": "2025-05-10T20:18:57.156252",
+      "md5_hash": "25169efcd143ab0da4150e9d3da6753c",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0256_asian_33_male/base_image/0256_asian_33_male_base.png",
+      "moved_relative_path": "data/actors/0256_asian_33_male/base_image/0256_asian_33_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1245878,
+    "total_size_mb": 1.19,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

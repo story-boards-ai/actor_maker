@@ -1,0 +1,39 @@
+{
+  "character_id": "0244",
+  "character_name": "0244_hispanic_43_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "43",
+    "sex": "female",
+    "ethnicity": "hispanic",
+    "face_prompt": "Sofia Torres as a 43 year old hispanic woman, with shoulder-length wavy black hair and cat-eye glasses",
+    "id": "0244",
+    "name": "0244_hispanic_43_female",
+    "image": "image245"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.832225",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0244_hispanic_43_female/base_image/0244_hispanic_43_female_base.png",
+      "relative_path": "characters/0244_hispanic_43_female/base_image/0244_hispanic_43_female_base.png",
+      "size_bytes": 1266535,
+      "size_mb": 1.21,
+      "created_timestamp": 1746900904.2491224,
+      "created_date": "2025-05-10T20:15:04.249122",
+      "modified_timestamp": 1746900904.2493594,
+      "modified_date": "2025-05-10T20:15:04.249359",
+      "md5_hash": "b245e75e562603aebeec6322c15a69c8",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0244_hispanic_43_female/base_image/0244_hispanic_43_female_base.png",
+      "moved_relative_path": "data/actors/0244_hispanic_43_female/base_image/0244_hispanic_43_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1266535,
+    "total_size_mb": 1.21,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

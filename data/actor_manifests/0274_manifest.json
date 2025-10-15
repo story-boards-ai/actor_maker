@@ -1,0 +1,25 @@
+{
+  "character_id": "0274",
+  "character_name": "0274_european_9_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "9",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Liam Müller as a 9 year old european boy with short, messy blonde hair and a gap-toothed smile",
+    "id": "0274",
+    "name": "0274_european_9_male",
+    "image": "image275"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.994335",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

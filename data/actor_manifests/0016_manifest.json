@@ -1,0 +1,40 @@
+{
+  "character_id": "0016",
+  "character_name": "0016_european_55_female",
+  "metadata": {
+    "img": "0016_european_55_female.webp",
+    "age": "55",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Mireille Sutherland as a 55 year old european woman, with short blonde hair",
+    "id": "0016",
+    "name": "0016_european_55_female",
+    "image": "image17",
+    "outfit": "Refined business ensemble with a tailored pantsuit, silk scarf, and elegant low heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.346426",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0016_european_55_female/base_image/0016_european_55_female_base.png",
+      "relative_path": "characters/0016_european_55_female/base_image/0016_european_55_female_base.png",
+      "size_bytes": 1201076,
+      "size_mb": 1.15,
+      "created_timestamp": 1746892262.6714904,
+      "created_date": "2025-05-10T17:51:02.671490",
+      "modified_timestamp": 1746894709.8058784,
+      "modified_date": "2025-05-10T18:31:49.805878",
+      "md5_hash": "937d54176d3729eeb3d0a560076aa136",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0016_european_55_female/base_image/0016_european_55_female_base.png",
+      "moved_relative_path": "data/actors/0016_european_55_female/base_image/0016_european_55_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1201076,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

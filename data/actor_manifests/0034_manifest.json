@@ -1,0 +1,40 @@
+{
+  "character_id": "0034",
+  "character_name": "0034_european_10_female",
+  "metadata": {
+    "img": "0034_european_10_female.webp",
+    "age": "10",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "[Jessica Robinson | Raicarda DiCaprio] as a 10 year old european girl, light medium hair",
+    "id": "0034",
+    "name": "0034_european_10_female",
+    "image": "image35",
+    "outfit": "Playful turquoise t-shirt with rainbow unicorn print, pink corduroy overalls, and light-up purple sneakers."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.441782",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0034_european_10_female/base_image/0034_european_10_female_base.png",
+      "relative_path": "characters/0034_european_10_female/base_image/0034_european_10_female_base.png",
+      "size_bytes": 1359819,
+      "size_mb": 1.3,
+      "created_timestamp": 1746893502.612434,
+      "created_date": "2025-05-10T18:11:42.612434",
+      "modified_timestamp": 1746895060.4338713,
+      "modified_date": "2025-05-10T18:37:40.433871",
+      "md5_hash": "f914db0b6a0001ad148c7c89ec5f6fa4",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0034_european_10_female/base_image/0034_european_10_female_base.png",
+      "moved_relative_path": "data/actors/0034_european_10_female/base_image/0034_european_10_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1359819,
+    "total_size_mb": 1.3,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

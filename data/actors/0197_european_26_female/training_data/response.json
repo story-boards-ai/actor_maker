@@ -1,0 +1,32 @@
+{
+  "delayTime": 5073,
+  "executionTime": 340531,
+  "id": "b51182fc-4a08-49d6-9550-bb5a04e6508c-e1",
+  "output": {
+    "output": {
+      "actor_id": "0197_european_26_female",
+      "job_id": "7c51352f-0765-4d1f-9ec7-c19aa592a42b",
+      "s3_image_urls": [
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_0.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_1.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_2.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_3.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_4.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_5.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_6.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_7.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_8.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_9.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_10.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_11.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_12.png",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0197_european_26_female/0197_european_26_female_13.png"
+      ],
+      "type": "system",
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "g1xn0ll80orqhc"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0222",
+  "character_name": "0222_asian_45_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "45",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Yuna Kim as a 45 year old asian woman, with long black hair pulled back into a sleek ponytail and a professional demeanor",
+    "id": "0222",
+    "name": "0222_asian_45_female",
+    "image": "image223"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.753197",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

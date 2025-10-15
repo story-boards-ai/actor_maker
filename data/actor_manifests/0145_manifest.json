@@ -1,0 +1,40 @@
+{
+  "character_id": "0145",
+  "character_name": "0145_indian_16_female",
+  "metadata": {
+    "img": "0145_indian_16_female.webp",
+    "age": "16",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Ananya Panday | Sara Ali Khan] as a 16 year old Indian girl with long, flowing black hair and a bright smile",
+    "id": "0145",
+    "name": "0145_indian_16_female",
+    "image": "image146",
+    "outfit": "Youthful lavender cotton kurti with colorful floral embroidery, white leggings, silver charm bracelet, and white canvas sneakers with purple laces."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.137908",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0145_indian_16_female/base_image/0145_indian_16_female_base.png",
+      "relative_path": "characters/0145_indian_16_female/base_image/0145_indian_16_female_base.png",
+      "size_bytes": 1199031,
+      "size_mb": 1.14,
+      "created_timestamp": 1746907172.2306154,
+      "created_date": "2025-05-10T21:59:32.230615",
+      "modified_timestamp": 1746907172.2310226,
+      "modified_date": "2025-05-10T21:59:32.231023",
+      "md5_hash": "91ff63ae06d2ab67edde6d7eb7dd2e29",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0145_indian_16_female/base_image/0145_indian_16_female_base.png",
+      "moved_relative_path": "data/actors/0145_indian_16_female/base_image/0145_indian_16_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1199031,
+    "total_size_mb": 1.14,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

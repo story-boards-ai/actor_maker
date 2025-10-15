@@ -1,0 +1,25 @@
+{
+  "character_id": "0286",
+  "character_name": "0286_european_7_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "7",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Emma Novak as a 7 year old european girl with short, straight blonde hair and a gap-toothed smile",
+    "id": "0286",
+    "name": "0286_european_7_female",
+    "image": "image287"
+  },
+  "migration_timestamp": "2025-10-15T07:38:32.015440",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "character_directory_not_found"
+}

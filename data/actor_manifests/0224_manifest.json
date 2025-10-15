@@ -1,0 +1,39 @@
+{
+  "character_id": "0224",
+  "character_name": "0224_european_52_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "52",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sophia Müller as a 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air",
+    "id": "0224",
+    "name": "0224_european_52_female",
+    "image": "image225"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.760398",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0224_european_52_female/base_image/0224_european_52_female_base.png",
+      "relative_path": "characters/0224_european_52_female/base_image/0224_european_52_female_base.png",
+      "size_bytes": 1325946,
+      "size_mb": 1.26,
+      "created_timestamp": 1746900419.8543963,
+      "created_date": "2025-05-10T20:06:59.854396",
+      "modified_timestamp": 1746900419.8548248,
+      "modified_date": "2025-05-10T20:06:59.854825",
+      "md5_hash": "fc628941ee7c9d8bde9af7dccfb64bbe",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0224_european_52_female/base_image/0224_european_52_female_base.png",
+      "moved_relative_path": "data/actors/0224_european_52_female/base_image/0224_european_52_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1325946,
+    "total_size_mb": 1.26,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "character_id": "0237",
+  "character_name": "0237_european_50_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "50",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Lukas Becker as a 50 year old european man, with short blond hair and a clean-shaven face",
+    "id": "0237",
+    "name": "0237_european_50_male",
+    "image": "image238"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.820199",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0221",
+  "character_name": "0221_indian_51_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "51",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Rajesh Gupta as a 51 year old indian man, with short salt-and-pepper hair and a neatly trimmed mustache",
+    "id": "0221",
+    "name": "0221_indian_51_male",
+    "image": "image222"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.746155",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
+      "relative_path": "characters/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
+      "size_bytes": 1505977,
+      "size_mb": 1.44,
+      "created_timestamp": 1746900361.5359576,
+      "created_date": "2025-05-10T20:06:01.535958",
+      "modified_timestamp": 1746900361.536344,
+      "modified_date": "2025-05-10T20:06:01.536344",
+      "md5_hash": "89d2fe773012cb33ad09b2475192a139",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
+      "moved_relative_path": "data/actors/0221_indian_51_male/base_image/0221_indian_51_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1505977,
+    "total_size_mb": 1.44,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

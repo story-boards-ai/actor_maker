@@ -1,0 +1,40 @@
+{
+  "character_id": "0033",
+  "character_name": "0033_black_60_male",
+  "metadata": {
+    "img": "0033_black_60_male.webp",
+    "age": "60",
+    "sex": "male",
+    "ethnicity": "black",
+    "face_prompt": "Erwin Crane as a 60-year-old black man, with bald head ",
+    "id": "0033",
+    "name": "0033_black_60_male",
+    "image": "image34",
+    "outfit": "Distinguished navy pinstripe suit with a light yellow dress shirt, patterned burgundy tie, and polished black wingtips."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.436805",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0033_black_60_male/base_image/0033_black_60_male_base.png",
+      "relative_path": "characters/0033_black_60_male/base_image/0033_black_60_male_base.png",
+      "size_bytes": 1122791,
+      "size_mb": 1.07,
+      "created_timestamp": 1746906857.0222323,
+      "created_date": "2025-05-10T21:54:17.022232",
+      "modified_timestamp": 1746906857.022596,
+      "modified_date": "2025-05-10T21:54:17.022596",
+      "md5_hash": "4f33e05907004824db623977a36efe36",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0033_black_60_male/base_image/0033_black_60_male_base.png",
+      "moved_relative_path": "data/actors/0033_black_60_male/base_image/0033_black_60_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1122791,
+    "total_size_mb": 1.07,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

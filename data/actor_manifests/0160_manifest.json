@@ -1,0 +1,40 @@
+{
+  "character_id": "0160",
+  "character_name": "0160_black_20_female",
+  "metadata": {
+    "img": "0160_black_20_female.webp",
+    "age": "20",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "a woman ([Lauren Smith | Kayla Davis] as a (20 year old) black woman) , with curly short (black hair:1.1) ",
+    "id": "0160",
+    "name": "0160_black_20_female",
+    "image": "image161",
+    "outfit": "Vibrant emerald green satin slip dress, lightweight black cardigan, layered gold necklaces, and black strappy sandals with gold accents."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.346339",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0160_black_20_female/base_image/0160_black_20_female_base.png",
+      "relative_path": "characters/0160_black_20_female/base_image/0160_black_20_female_base.png",
+      "size_bytes": 1234933,
+      "size_mb": 1.18,
+      "created_timestamp": 1746898802.1721225,
+      "created_date": "2025-05-10T19:40:02.172122",
+      "modified_timestamp": 1746898802.1724198,
+      "modified_date": "2025-05-10T19:40:02.172420",
+      "md5_hash": "637a658d5cb498a46159e97c8db4823f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0160_black_20_female/base_image/0160_black_20_female_base.png",
+      "moved_relative_path": "data/actors/0160_black_20_female/base_image/0160_black_20_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1234933,
+    "total_size_mb": 1.18,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

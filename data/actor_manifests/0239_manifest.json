@@ -1,0 +1,25 @@
+{
+  "character_id": "0239",
+  "character_name": "0239_hispanic_57_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "57",
+    "sex": "male",
+    "ethnicity": "hispanic",
+    "face_prompt": "Miguel Sanchez as a 57 year old hispanic man, with short gray hair and a trimmed mustache",
+    "id": "0239",
+    "name": "0239_hispanic_57_male",
+    "image": "image240"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.823908",
+  "base_images": [],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "total_size_mb": 0.0,
+    "base_images_count": 0,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,39 @@
+{
+  "character_id": "0206",
+  "character_name": "0206_middle_eastern_52_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "52",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Farhad Naseri as a 52 year old middle eastern man, with short graying hair and a neatly trimmed salt-and-pepper beard",
+    "id": "0206",
+    "name": "0206_middle_eastern_52_male",
+    "image": "image207"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.646079",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0206_middle_eastern_52_male/base_image/0206_middle_eastern_52_male_base.png",
+      "relative_path": "characters/0206_middle_eastern_52_male/base_image/0206_middle_eastern_52_male_base.png",
+      "size_bytes": 1347483,
+      "size_mb": 1.29,
+      "created_timestamp": 1746900068.3172097,
+      "created_date": "2025-05-10T20:01:08.317210",
+      "modified_timestamp": 1746900068.3176033,
+      "modified_date": "2025-05-10T20:01:08.317603",
+      "md5_hash": "ce3a9e561f95747a5f88dd46adfee289",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0206_middle_eastern_52_male/base_image/0206_middle_eastern_52_male_base.png",
+      "moved_relative_path": "data/actors/0206_middle_eastern_52_male/base_image/0206_middle_eastern_52_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1347483,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0083",
+  "character_name": "0083_south_american_70_male",
+  "metadata": {
+    "img": "0083_south_american_70_male.webp",
+    "age": "70",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Dariusz Patel, as a 70 year old south american man, with very short curly grey hair and a friendly complexion",
+    "id": "0083",
+    "name": "0083_south_american_70_male",
+    "image": "image84",
+    "outfit": "Traditional beige guayabera shirt with detailed embroidery, light brown linen pants, gold watch, and comfortable brown leather sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.708736",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0083_south_american_70_male/base_image/0083_south_american_70_male_base.png",
+      "relative_path": "characters/0083_south_american_70_male/base_image/0083_south_american_70_male_base.png",
+      "size_bytes": 1356576,
+      "size_mb": 1.29,
+      "created_timestamp": 1746897096.1679723,
+      "created_date": "2025-05-10T19:11:36.167972",
+      "modified_timestamp": 1746897096.168331,
+      "modified_date": "2025-05-10T19:11:36.168331",
+      "md5_hash": "f87ba70f85bd865735346d866360464f",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0083_south_american_70_male/base_image/0083_south_american_70_male_base.png",
+      "moved_relative_path": "data/actors/0083_south_american_70_male/base_image/0083_south_american_70_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1356576,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

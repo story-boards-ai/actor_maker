@@ -1,0 +1,40 @@
+{
+  "character_id": "0139",
+  "character_name": "0139_indian_30_female",
+  "metadata": {
+    "img": "0139_indian_30_female.webp",
+    "age": "30",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Yami Gautam as a stunning bollywood star 30 year old Indian woman with mid-length curly black hair and expressive eyes",
+    "id": "0139",
+    "name": "0139_indian_30_female",
+    "image": "image140",
+    "outfit": "Exquisite emerald green silk saree with intricate gold embroidery, matching sleeveless blouse, ornate gold and diamond jewelry set, and gold embellished high heels."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.091992",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0139_indian_30_female/base_image/0139_indian_30_female_base.png",
+      "relative_path": "characters/0139_indian_30_female/base_image/0139_indian_30_female_base.png",
+      "size_bytes": 1471582,
+      "size_mb": 1.4,
+      "created_timestamp": 1746898390.6617157,
+      "created_date": "2025-05-10T19:33:10.661716",
+      "modified_timestamp": 1746898390.6621902,
+      "modified_date": "2025-05-10T19:33:10.662190",
+      "md5_hash": "265796887b7ff5d7f26167c7dede75f6",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0139_indian_30_female/base_image/0139_indian_30_female_base.png",
+      "moved_relative_path": "data/actors/0139_indian_30_female/base_image/0139_indian_30_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1471582,
+    "total_size_mb": 1.4,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0174",
+  "character_name": "0174_white_28_male",
+  "metadata": {
+    "img": "0174_white_28_male.webp",
+    "age": "28",
+    "sex": "male",
+    "ethnicity": "white",
+    "face_prompt": "a man ([Ryan Harper | Evan Mitchell] as a (28 year old) white man) , with dark blonde hair that is medium length, slightly curled at the ends, and styled in a relaxed, tousled manner",
+    "id": "0174",
+    "name": "0174_white_28_male",
+    "image": "image175",
+    "outfit": "Casual olive green button-down shirt with subtle check pattern, khaki chinos, brown leather belt with silver buckle, and brown suede desert boots."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.433762",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0174_white_28_male/base_image/0174_white_28_male_base.png",
+      "relative_path": "characters/0174_white_28_male/base_image/0174_white_28_male_base.png",
+      "size_bytes": 1203212,
+      "size_mb": 1.15,
+      "created_timestamp": 1746899102.0732305,
+      "created_date": "2025-05-10T19:45:02.073231",
+      "modified_timestamp": 1746899102.0736277,
+      "modified_date": "2025-05-10T19:45:02.073628",
+      "md5_hash": "bdfc7426b664a3ae840bb3ac98550978",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0174_white_28_male/base_image/0174_white_28_male_base.png",
+      "moved_relative_path": "data/actors/0174_white_28_male/base_image/0174_white_28_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1203212,
+    "total_size_mb": 1.15,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0141",
+  "character_name": "0141_indian_32_female",
+  "metadata": {
+    "img": "0141_indian_32_female.webp",
+    "age": "32",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "[Bhumi Pednekar | Kriti Sanon] as a 32 year old Indian woman with long wavy black hair",
+    "id": "0141",
+    "name": "0141_indian_32_female",
+    "image": "image142",
+    "outfit": "Elegant turquoise blue silk salwar kameez with silver embroidery, matching chiffon dupatta, silver chandelier earrings, and embellished silver sandals."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.113345",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0141_indian_32_female/base_image/0141_indian_32_female_base.png",
+      "relative_path": "characters/0141_indian_32_female/base_image/0141_indian_32_female_base.png",
+      "size_bytes": 1154859,
+      "size_mb": 1.1,
+      "created_timestamp": 1746898429.6307557,
+      "created_date": "2025-05-10T19:33:49.630756",
+      "modified_timestamp": 1746898429.6309524,
+      "modified_date": "2025-05-10T19:33:49.630952",
+      "md5_hash": "cbc0468a8e3dbd5700516a4e90c6a5ad",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0141_indian_32_female/base_image/0141_indian_32_female_base.png",
+      "moved_relative_path": "data/actors/0141_indian_32_female/base_image/0141_indian_32_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1154859,
+    "total_size_mb": 1.1,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

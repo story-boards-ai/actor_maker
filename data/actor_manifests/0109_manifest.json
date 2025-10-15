@@ -1,0 +1,39 @@
+{
+  "character_id": "0109",
+  "character_name": "0109_asian_60_male",
+  "metadata": {
+    "img": "01090_asian_60_male.webp",
+    "age": "60",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Tien Pham as a 60 year old asian man, with short straight gray hair with a side part",
+    "id": "0109",
+    "name": "0109_asian_60_male",
+    "image": "image110"
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.903991",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0109_asian_60_male/base_image/0109_asian_60_male_base.png",
+      "relative_path": "characters/0109_asian_60_male/base_image/0109_asian_60_male_base.png",
+      "size_bytes": 1352217,
+      "size_mb": 1.29,
+      "created_timestamp": 1746897728.0432422,
+      "created_date": "2025-05-10T19:22:08.043242",
+      "modified_timestamp": 1746897728.043448,
+      "modified_date": "2025-05-10T19:22:08.043448",
+      "md5_hash": "cacc5f6ae92d94f59eff8d938f0722ff",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0109_asian_60_male/base_image/0109_asian_60_male_base.png",
+      "moved_relative_path": "data/actors/0109_asian_60_male/base_image/0109_asian_60_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1352217,
+    "total_size_mb": 1.29,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

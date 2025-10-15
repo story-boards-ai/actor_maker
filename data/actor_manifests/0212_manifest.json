@@ -1,0 +1,39 @@
+{
+  "character_id": "0212",
+  "character_name": "0212_indian_53_male",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "53",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Vikram Patel as a 53 year old indian man, with short graying hair and a thick mustache",
+    "id": "0212",
+    "name": "0212_indian_53_male",
+    "image": "image213"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.692141",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0212_indian_53_male/base_image/0212_indian_53_male_base.png",
+      "relative_path": "characters/0212_indian_53_male/base_image/0212_indian_53_male_base.png",
+      "size_bytes": 1186460,
+      "size_mb": 1.13,
+      "created_timestamp": 1746900185.6880922,
+      "created_date": "2025-05-10T20:03:05.688092",
+      "modified_timestamp": 1746900185.6883688,
+      "modified_date": "2025-05-10T20:03:05.688369",
+      "md5_hash": "3217e96e8a460ff43ea37fbdab66e854",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0212_indian_53_male/base_image/0212_indian_53_male_base.png",
+      "moved_relative_path": "data/actors/0212_indian_53_male/base_image/0212_indian_53_male_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1186460,
+    "total_size_mb": 1.13,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

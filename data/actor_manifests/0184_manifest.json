@@ -1,0 +1,39 @@
+{
+  "character_id": "0184",
+  "character_name": "0184_european_21_female",
+  "metadata": {
+    "img": "XXXXXXX",
+    "age": "21",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sofia Rossi as a 21 year old european woman, with medium length curly brown hair and dimples",
+    "id": "0184",
+    "name": "0184_european_21_female",
+    "image": "image185"
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.472806",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0184_european_21_female/base_image/0184_european_21_female_base.png",
+      "relative_path": "characters/0184_european_21_female/base_image/0184_european_21_female_base.png",
+      "size_bytes": 1398772,
+      "size_mb": 1.33,
+      "created_timestamp": 1746899311.2055333,
+      "created_date": "2025-05-10T19:48:31.205533",
+      "modified_timestamp": 1746899311.2058113,
+      "modified_date": "2025-05-10T19:48:31.205811",
+      "md5_hash": "79909e968208241e7f2482756585dc1a",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0184_european_21_female/base_image/0184_european_21_female_base.png",
+      "moved_relative_path": "data/actors/0184_european_21_female/base_image/0184_european_21_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1398772,
+    "total_size_mb": 1.33,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

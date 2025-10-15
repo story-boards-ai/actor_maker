@@ -1,0 +1,40 @@
+{
+  "character_id": "0028",
+  "character_name": "0028_black_40_female",
+  "metadata": {
+    "img": "0028_black_40_female.webp",
+    "age": "40",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Felicity Harrow as a 40 year old black woman, modern short hair",
+    "id": "0028",
+    "name": "0028_black_40_female",
+    "image": "image29",
+    "outfit": "Bold purple sheath dress with a white structured blazer, black patent leather belt, and silver statement earrings."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.411801",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0028_black_40_female/base_image/0028_black_40_female_base.png",
+      "relative_path": "characters/0028_black_40_female/base_image/0028_black_40_female_base.png",
+      "size_bytes": 1097589,
+      "size_mb": 1.05,
+      "created_timestamp": 1746893436.5074568,
+      "created_date": "2025-05-10T18:10:36.507457",
+      "modified_timestamp": 1746894943.7443063,
+      "modified_date": "2025-05-10T18:35:43.744306",
+      "md5_hash": "160c45e33eeddf2db710e7a7e9a9d3cd",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0028_black_40_female/base_image/0028_black_40_female_base.png",
+      "moved_relative_path": "data/actors/0028_black_40_female/base_image/0028_black_40_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1097589,
+    "total_size_mb": 1.05,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

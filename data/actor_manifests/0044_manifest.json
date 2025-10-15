@@ -1,0 +1,40 @@
+{
+  "character_id": "0044",
+  "character_name": "0044_european_70_female",
+  "metadata": {
+    "img": "0044_european_70_female.webp",
+    "age": "70",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "[Erika Hannes | Sophie Hunger] as a 70year old european woman , grey ear length hair",
+    "id": "0044",
+    "name": "0044_european_70_female",
+    "image": "image45",
+    "outfit": "Elegant powder blue twinset cardigan and shell with a pearl necklace, gray wool slacks, and comfortable navy blue low-heeled pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:30.494917",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0044_european_70_female/base_image/0044_european_70_female_base.png",
+      "relative_path": "characters/0044_european_70_female/base_image/0044_european_70_female_base.png",
+      "size_bytes": 1345306,
+      "size_mb": 1.28,
+      "created_timestamp": 1746893702.2575111,
+      "created_date": "2025-05-10T18:15:02.257511",
+      "modified_timestamp": 1746895303.6855993,
+      "modified_date": "2025-05-10T18:41:43.685599",
+      "md5_hash": "8e99ee38320d5d9a4795d90fda8f09bb",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0044_european_70_female/base_image/0044_european_70_female_base.png",
+      "moved_relative_path": "data/actors/0044_european_70_female/base_image/0044_european_70_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1345306,
+    "total_size_mb": 1.28,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

@@ -1,0 +1,40 @@
+{
+  "character_id": "0133",
+  "character_name": "0133_asian_33_female",
+  "metadata": {
+    "img": "0133_asian_33_female.webp",
+    "age": "33",
+    "sex": "female",
+    "ethnicity": "asian",
+    "face_prompt": "Yu Ymamoto as a 33 year old japanese woman, black shoulder length hair, natural makeup",
+    "id": "0133",
+    "name": "0133_asian_33_female",
+    "image": "image134",
+    "outfit": "Sophisticated navy blue silk blouse with subtle cherry blossom pattern, cream tailored trousers, pearl stud earrings, and nude leather pumps."
+  },
+  "migration_timestamp": "2025-10-15T07:38:31.040986",
+  "base_images": [
+    {
+      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0133_asian_33_female/base_image/0133_asian_33_female_base.png",
+      "relative_path": "characters/0133_asian_33_female/base_image/0133_asian_33_female_base.png",
+      "size_bytes": 1111329,
+      "size_mb": 1.06,
+      "created_timestamp": 1746898271.9772592,
+      "created_date": "2025-05-10T19:31:11.977259",
+      "modified_timestamp": 1746898271.9774783,
+      "modified_date": "2025-05-10T19:31:11.977478",
+      "md5_hash": "33ea6255a92da17782860af55d5604f3",
+      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0133_asian_33_female/base_image/0133_asian_33_female_base.png",
+      "moved_relative_path": "data/actors/0133_asian_33_female/base_image/0133_asian_33_female_base.png"
+    }
+  ],
+  "scene_images": [],
+  "statistics": {
+    "total_files": 1,
+    "total_size_bytes": 1111329,
+    "total_size_mb": 1.06,
+    "base_images_count": 1,
+    "scene_images_count": 0
+  },
+  "status": "success"
+}

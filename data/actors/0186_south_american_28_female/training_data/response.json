@@ -1,0 +1,31 @@
+{
+  "delayTime": 177,
+  "executionTime": 345479,
+  "id": "dd8d155f-a4ea-4a60-87d0-654ef0b7e169-e1",
+  "output": {
+    "output": {
+      "character_id": "0186_south_american_28_female",
+      "job_id": "807926ae-8bed-45d0-8b70-f23c4a9e4b13",
+      "s3_image_urls": [
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_0.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_1.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_2.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_3.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_4.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_5.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_6.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_7.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_8.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_9.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_10.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_11.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_12.png",
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0186_south_american_28_female/training_data/0186_south_american_28_female_13.png"
+      ],
+      "user_id": "99999999-9999-9999-9999-999999999999"
+    },
+    "status": "success"
+  },
+  "status": "COMPLETED",
+  "workerId": "0v3sou7kc72rim"
+}
