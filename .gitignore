@@ -208,6 +208,12 @@ data/scenes/**/*.webp
 data/scenes/**/*.avif
 data/scenes/**/*.gif
 
+# Large resource images
+resources/input_images/*.png
+resources/input_images/*.jpg
+resources/style_images/**/*.png
+resources/style_images/**/*.jpg
+
 # User settings (per-style configuration)
 data/settings/
 
