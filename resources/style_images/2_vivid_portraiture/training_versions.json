@@ -1,0 +1,54 @@
+{
+  "versions": [
+    {
+      "id": "7836486d-26e5-4f87-9448-1a451c49fa75-e2",
+      "name": "V2",
+      "timestamp": "2025-10-14T10:03:16.817Z",
+      "parameters": {
+        "network_dim": 16,
+        "network_alpha": 16,
+        "learning_rate": 0.0003,
+        "max_train_steps": 3600,
+        "lr_scheduler": "cosine_with_restarts",
+        "lr_warmup_steps": 0,
+        "optimizer_type": "adamw8bit",
+        "batch_size": 2,
+        "num_repeats": 1,
+        "gradient_dtype": "bf16",
+        "save_every_n_steps": 500,
+        "class_tokens": "style SBai_style_2"
+      },
+      "status": "completed",
+      "selectionSetId": 2,
+      "imageCount": 57,
+      "loraUrl": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-styles-models/style_2_vV2.safetensors",
+      "lastSynced": "2025-10-14T11:10:28.238Z",
+      "isGood": true
+    },
+    {
+      "id": "47a3a40e-bd5f-4e08-97e2-06bc59cf2cc4-e1",
+      "name": "V1",
+      "timestamp": "2025-10-12T05:07:05.941Z",
+      "parameters": {
+        "network_dim": 16,
+        "network_alpha": 16,
+        "learning_rate": 0.0001,
+        "max_train_steps": 2000,
+        "lr_scheduler": "cosine_with_restarts",
+        "lr_warmup_steps": 0,
+        "optimizer_type": "adamw8bit",
+        "batch_size": 2,
+        "num_repeats": 10,
+        "gradient_dtype": "bf16",
+        "save_every_n_steps": 500,
+        "class_tokens": "style SBai_style_2"
+      },
+      "status": "completed",
+      "selectionSetId": 1,
+      "imageCount": 109,
+      "loraUrl": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-styles-models/style_2_vV1.safetensors",
+      "lastSynced": "2025-10-14T11:10:28.238Z",
+      "isGood": false
+    }
+  ]
+}

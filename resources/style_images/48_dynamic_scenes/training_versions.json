@@ -1,0 +1,55 @@
+{
+  "versions": [
+    {
+      "id": "33a2a6b2-e735-424a-a823-0a94a53a2f56-e1",
+      "name": "V2",
+      "timestamp": "2025-10-14T06:00:35.769Z",
+      "parameters": {
+        "network_dim": 16,
+        "network_alpha": 16,
+        "learning_rate": 0.0003,
+        "max_train_steps": 4100,
+        "lr_scheduler": "cosine_with_restarts",
+        "lr_warmup_steps": 0,
+        "optimizer_type": "adamw8bit",
+        "batch_size": 2,
+        "num_repeats": 1,
+        "gradient_dtype": "bf16",
+        "save_every_n_steps": 500,
+        "class_tokens": "style SBai_style_48"
+      },
+      "status": "completed",
+      "selectionSetId": 1,
+      "imageCount": 74,
+      "loraUrl": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-styles-models/style_48_vV2.safetensors",
+      "lastSynced": "2025-10-14T11:10:28.240Z",
+      "isGood": true
+    },
+    {
+      "id": "a87cdbe2-01e7-4aca-8e6d-23940881b38b-e2",
+      "name": "V1",
+      "timestamp": "2025-10-12T08:59:23.252Z",
+      "parameters": {
+        "network_dim": 16,
+        "network_alpha": 16,
+        "learning_rate": 0.0001,
+        "max_train_steps": 2000,
+        "lr_scheduler": "cosine_with_restarts",
+        "lr_warmup_steps": 0,
+        "optimizer_type": "adamw8bit",
+        "batch_size": 2,
+        "num_repeats": 10,
+        "gradient_dtype": "bf16",
+        "save_every_n_steps": 500,
+        "class_tokens": "style SBai_style_48"
+      },
+      "status": "completed",
+      "selectionSetId": 1,
+      "imageCount": 74,
+      "loraUrl": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-styles-models/style_48_vV1.safetensors",
+      "completedAt": "2025-10-12T09:29:12.948Z",
+      "lastSynced": "2025-10-14T11:10:28.239Z",
+      "isGood": false
+    }
+  ]
+}
