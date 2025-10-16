@@ -6,6 +6,27 @@
       "generated_at": "2025-10-16T11:47:03.874649",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0000_european_16_male/0000_european_16_male_14.jpg",
       "index": 14
+    },
+    "0000_european_16_male_15.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the man tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the man tying their bootlaces on a townhouse stoop und...",
+      "generated_at": "2025-10-16T13:00:58.919507",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0000_european_16_male/0000_european_16_male_15.jpg",
+      "index": 15
+    },
+    "0000_european_16_male_16.jpg": {
+      "prompt": "A black-and-white charcoal sketch of the man glancing over their shoulder in a narrow alley. Loose, expressive strokes, smudged shadows, high contrast, no color. Preserve identity. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white charcoal sketch of the man glancing over their shoulder in a narrow alley. Loose, ...",
+      "generated_at": "2025-10-16T13:01:08.028083",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0000_european_16_male/0000_european_16_male_16.jpg",
+      "index": 16
+    },
+    "0000_european_16_male_17.jpg": {
+      "prompt": "A watercolor painting of the man seated at a cafe window, looking out at a rainy street. Soft washes, wet-on-wet blending, visible brush strokes, muted palette. Preserve facial features. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor painting of the man seated at a cafe window, looking out at a rainy street. Soft washes...",
+      "generated_at": "2025-10-16T13:01:18.526935",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0000_european_16_male/0000_european_16_male_17.jpg",
+      "index": 17
     }
   }
 }

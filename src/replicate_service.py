@@ -16,19 +16,26 @@ logger = logging.getLogger(__name__)
 class ReplicateService:
     """Service for interacting with Replicate API for image generation and upscaling."""
     
-    def __init__(self, api_token: Optional[str] = None):
+    def __init__(self, api_token: Optional[str] = None, timeout: int = 300):
         """
         Initialize Replicate service.
         
         Args:
             api_token: Replicate API token (defaults to REPLICATE_API_TOKEN env var)
+            timeout: Timeout in seconds for prediction polling (default: 300s = 5 minutes)
         """
         self.api_token = api_token or os.getenv("REPLICATE_API_TOKEN")
         if not self.api_token:
             raise ValueError("REPLICATE_API_TOKEN environment variable is required")
         
-        self.client = replicate.Client(api_token=self.api_token)
-        logger.info("ReplicateService initialized")
+        # Set timeout for prediction polling to prevent infinite loops
+        import httpx
+        self.client = replicate.Client(
+            api_token=self.api_token,
+            timeout=httpx.Timeout(timeout=timeout, connect=30.0)
+        )
+        self.timeout = timeout
+        logger.info(f"ReplicateService initialized with {timeout}s timeout")
     
     def generate_grid_with_flux_kontext(
         self,

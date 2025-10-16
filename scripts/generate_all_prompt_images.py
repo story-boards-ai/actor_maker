@@ -10,6 +10,9 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
+import time
+import fcntl
+from contextlib import contextmanager
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -21,6 +24,96 @@ from src.actor_training_prompts import get_actor_training_prompts, get_actor_des
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Limit concurrent Replicate requests to prevent rate limiting
+MAX_CONCURRENT_REQUESTS = 2
+LOCK_DIR = project_root / "data" / ".locks"
+LOCK_DIR.mkdir(parents=True, exist_ok=True)
+
+
+@contextmanager
+def acquire_request_slot(slot_number: int, timeout: int = 300):
+    """
+    Acquire a request slot using file-based locking.
+    This works across multiple processes to enforce global concurrency limit.
+    
+    Args:
+        slot_number: Which slot to try to acquire (0 or 1 for 2 concurrent)
+        timeout: Maximum time to wait for slot in seconds
+    """
+    lock_file_path = LOCK_DIR / f"replicate_slot_{slot_number}.lock"
+    lock_file = open(lock_file_path, 'w')
+    
+    start_time = time.time()
+    acquired = False
+    
+    try:
+        # Try to acquire lock with timeout
+        while time.time() - start_time < timeout:
+            try:
+                fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                acquired = True
+                logger.info(f"Acquired request slot {slot_number}")
+                break
+            except BlockingIOError:
+                # Slot is busy, wait a bit
+                time.sleep(0.5)
+        
+        if not acquired:
+            raise TimeoutError(f"Could not acquire request slot {slot_number} within {timeout}s")
+        
+        yield
+        
+    finally:
+        if acquired:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+            logger.info(f"Released request slot {slot_number}")
+        lock_file.close()
+
+
+def acquire_any_request_slot(timeout: int = 300):
+    """
+    Try to acquire any available request slot.
+    
+    Args:
+        timeout: Maximum time to wait for any slot
+    """
+    start_time = time.time()
+    
+    while time.time() - start_time < timeout:
+        # Try each slot in order
+        for slot in range(MAX_CONCURRENT_REQUESTS):
+            lock_file_path = LOCK_DIR / f"replicate_slot_{slot}.lock"
+            lock_file = open(lock_file_path, 'w')
+            
+            try:
+                # Try non-blocking lock
+                fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                logger.info(f"Acquired request slot {slot} (max {MAX_CONCURRENT_REQUESTS} concurrent)")
+                
+                # Return context manager
+                return _slot_context(lock_file, slot)
+                
+            except BlockingIOError:
+                # This slot is busy, try next one
+                lock_file.close()
+                continue
+        
+        # All slots busy, wait a bit
+        time.sleep(0.5)
+    
+    raise TimeoutError(f"Could not acquire any request slot within {timeout}s")
+
+
+@contextmanager
+def _slot_context(lock_file, slot_number):
+    """Context manager for holding a lock file."""
+    try:
+        yield slot_number
+    finally:
+        fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+        lock_file.close()
+        logger.info(f"Released request slot {slot_number}")
 
 
 def generate_all_prompt_images(
@@ -109,16 +202,24 @@ def generate_all_prompt_images(
         logger.info(f"[{i}/{len(all_prompts)}] Generating with prompt: {prompt[:80]}...")
         
         try:
-            # Generate image
-            generated_url = replicate.generate_grid_with_flux_kontext(
-                prompt=prompt,
-                input_image_base64=base_image_base64,
-                aspect_ratio="1:1",
-                output_format="jpg"
-            )
-            
-            # Download generated image
-            generated_bytes = replicate.download_image_as_bytes(generated_url)
+            # Acquire file-based lock to limit concurrent requests across all processes
+            with acquire_any_request_slot(timeout=300) as slot:
+                logger.info(f"[{i}/{len(all_prompts)}] Using slot {slot}")
+                
+                # Generate image with timeout protection
+                try:
+                    generated_url = replicate.generate_grid_with_flux_kontext(
+                        prompt=prompt,
+                        input_image_base64=base_image_base64,
+                        aspect_ratio="1:1",
+                        output_format="jpg"
+                    )
+                except Exception as gen_error:
+                    logger.error(f"Generation failed or timed out: {gen_error}")
+                    raise
+                
+                # Download generated image
+                generated_bytes = replicate.download_image_as_bytes(generated_url)
             
             # Save locally
             local_filename = f"{actor_name}_{next_index}.jpg"
@@ -162,6 +263,20 @@ def generate_all_prompt_images(
             
             next_index += 1
             
+            # Save metadata and response.json after each successful image
+            # This ensures progress is preserved even if the script crashes
+            with open(metadata_path, 'w') as f:
+                json.dump(metadata, f, indent=2)
+            
+            with open(response_json_path, 'w') as f:
+                json.dump(response_data, f, indent=2)
+            
+            logger.info(f"Metadata saved for image {i}/{len(all_prompts)}")
+            
+            # Small delay between requests to be respectful to API
+            if i < len(all_prompts):
+                time.sleep(1)
+            
         except Exception as e:
             logger.error(f"Failed to generate image {i}: {e}")
             results.append({
@@ -170,8 +285,12 @@ def generate_all_prompt_images(
                 "prompt_preview": prompt[:80] + "..."
             })
             next_index += 1
+            
+            # Small delay even on error before retrying next prompt
+            if i < len(all_prompts):
+                time.sleep(2)
     
-    # Save metadata and response.json
+    # Final save of metadata and response.json (redundant but ensures completeness)
     with open(metadata_path, 'w') as f:
         json.dump(metadata, f, indent=2)
     

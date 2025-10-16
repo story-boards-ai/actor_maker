@@ -225,6 +225,9 @@ data/settings/
 # Pod endpoint cache
 .pod_endpoint
 
+# File-based locks for concurrency control
+data/.locks/
+
 # Build artifacts
 *.egg
 *.egg-info/

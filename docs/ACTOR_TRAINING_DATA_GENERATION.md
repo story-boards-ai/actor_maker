@@ -1,24 +1,29 @@
 # Actor Training Data Generation with Replicate
 
-This document describes the automated actor training data generation system that creates 12 diverse, cinematic training images from a single portrait using Replicate's flux-kontext-pro.
+This document describes the automated actor training data generation system that creates 17 diverse, cinematic training images from a single portrait using Replicate's flux-kontext-pro.
 
 ## Overview
 
 The actor training data generator uses carefully crafted cinematic prompts to create high-quality, diverse training images optimized for character/actor LoRA training:
 
 1. **Portrait Preparation**: Normalizes portrait to JPEG format
-2. **Prompt Generation**: Creates 12 diverse cinematic prompts based on actor type
+2. **Prompt Generation**: Creates 17 diverse cinematic prompts based on actor type
 3. **Image Generation**: Uses flux-kontext-pro with 16:9 aspect ratio
 4. **S3 Upload**: Stores training images in AWS S3
 5. **Debug Grid**: Creates overview grid for quick inspection
 
 ## Training Image Composition
 
-The generator creates **12 diverse training images**:
+The generator creates **17 diverse training images**:
 
-### Photorealistic (2 images)
+### Photorealistic (7 images)
 - Rain-slick street action scene at night
-- Close-up portrait with warm window lighting
+- Close-up candid portrait with direct eye contact (facial features)
+- Close-up with warm window lighting
+- Subway platform scene
+- Parking garage walk
+- Rooftop silhouette
+- Alley phone call
 
 ### Black & White Stylized (6 images)
 - Pen & ink line drawing

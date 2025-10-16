@@ -7,13 +7,18 @@
       "actor_id": "0001_european_20_female",
       "job_id": "757b284c-a7c5-4cdf-86c1-ccf963e4a111",
       "s3_image_urls": [
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_4.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_8.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_12.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_14.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_15.jpg",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_16.jpg",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_17.jpg"
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_18.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_19.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_20.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_23.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_24.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_26.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_28.jpg"
       ],
       "type": "system",
       "user_id": "99999999-9999-9999-9999-999999999999"

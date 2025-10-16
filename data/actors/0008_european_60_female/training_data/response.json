@@ -1,31 +1,18 @@
 {
-  "delayTime": 173,
-  "executionTime": 392797,
-  "id": "d706ecf3-c3f6-4b2e-8dc1-f05e0d53da89-e1",
   "output": {
     "output": {
-      "character_id": "0008_european_60_female",
-      "job_id": "0c681e8c-7611-45fb-9892-348a9a9ee5ec",
       "s3_image_urls": [
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_0.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_1.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_2.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_3.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_4.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_5.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_6.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_7.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_8.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_9.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_10.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_11.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_12.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0008_european_60_female/training_data/0008_european_60_female_13.png"
-      ],
-      "user_id": "99999999-9999-9999-9999-999999999999"
-    },
-    "status": "success"
-  },
-  "status": "COMPLETED",
-  "workerId": "depzc2euuqpp3h"
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_0.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_1.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_2.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_3.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_4.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_5.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_6.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_7.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_8.jpg",
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0008_european_60_female/0008_european_60_female_9.jpg"
+      ]
+    }
+  }
 }

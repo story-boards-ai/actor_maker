@@ -27,7 +27,8 @@ export const actorsLibraryData = [
       }
     },
     "description": "16 year old young man, with european complexion, with very short curly brown hair",
-    "url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0000.safetensors"
+    "url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0000.safetensors",
+    "good": true
   },
   {
     "id": 1,
@@ -54,7 +55,8 @@ export const actorsLibraryData = [
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0001_european_20_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0001_european_20_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 2,
@@ -216,7 +218,8 @@ export const actorsLibraryData = [
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0007_european_55_male_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0007_european_55_male_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 8,

@@ -5,15 +5,19 @@ Generates 12 diverse training images from a single portrait using cinematic prom
 
 import os
 import logging
+import json
 import base64
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 from io import BytesIO
 from PIL import Image
+from datetime import datetime
+import openai
 
 from .replicate_service import ReplicateService
 from .actor_training_prompts import get_actor_training_prompts, get_actor_descriptor
 from .utils.s3 import upload_image_to_s3
+from .training_data_manifest import TrainingDataManifest
 
 logger = logging.getLogger(__name__)
 
@@ -83,6 +87,7 @@ class ActorTrainingDataGenerator:
         
         # Generate images in batches
         generated_urls = []
+        image_metadata = {}  # Track metadata for manifest
         total_prompts = len(all_prompts)
         
         for start_idx in range(0, total_prompts, self.batch_size):
@@ -115,6 +120,16 @@ class ActorTrainingDataGenerator:
                         image_num=image_num
                     )
                     
+                    # Store metadata
+                    filename = f"actor_{actor_id}_td_{image_num:02d}.jpg"
+                    image_metadata[filename] = {
+                        "prompt": prompt,
+                        "prompt_preview": prompt[:100] + "..." if len(prompt) > 100 else prompt,
+                        "generated_at": datetime.now().isoformat(),
+                        "s3_url": s3_url,
+                        "index": image_num
+                    }
+                    
                     generated_urls.append(s3_url)
                     logger.info(f"Image {image_num}/{total_prompts} completed: {s3_url}")
                     
@@ -124,6 +139,26 @@ class ActorTrainingDataGenerator:
         
         logger.info(f"Training data generation complete: {len(generated_urls)}/{total_prompts} images generated")
         
+        # Save to centralized manifest
+        manifest_path = None
+        if len(image_metadata) > 0:
+            manifest = TrainingDataManifest(actor_id)
+            manifest.add_generation(
+                images=image_metadata,
+                generation_type="replicate_flux_kontext",
+                metadata={
+                    "actor_type": actor_type,
+                    "actor_sex": actor_sex,
+                    "portrait_url": portrait_url,
+                    "total_prompts": total_prompts
+                }
+            )
+            manifest.save()
+            manifest_path = str(manifest.manifest_file)
+            
+            # Also save debug manifest
+            self._save_training_manifest(actor_id, image_metadata)
+        
         # Create debug grid if in debug mode
         if len(generated_urls) > 0:
             self._create_debug_grid(generated_urls)
@@ -132,6 +167,7 @@ class ActorTrainingDataGenerator:
             "training_image_urls": generated_urls,
             "total_training_images": len(generated_urls),
             "target_training_images": total_prompts,
+            "manifest_path": manifest_path
         }
     
     def _prepare_portrait_image(
@@ -337,3 +373,28 @@ class ActorTrainingDataGenerator:
             
         except Exception as e:
             logger.error(f"Failed to create debug grid: {e}")
+    
+    def _save_training_manifest(self, actor_id: str, image_metadata: Dict[str, Any]) -> None:
+        """
+        Save training data manifest with prompts and metadata.
+        
+        Args:
+            actor_id: Actor ID for filename
+            image_metadata: Dictionary of image metadata
+        """
+        try:
+            manifest = {
+                "actor_id": actor_id,
+                "generated_at": datetime.now().isoformat(),
+                "total_images": len(image_metadata),
+                "images": image_metadata
+            }
+            
+            manifest_file = self.debug_dir / f"{actor_id}_prompt_metadata.json"
+            manifest_file.write_text(json.dumps(manifest, indent=2))
+            
+            logger.info(f"Saved training data manifest: {manifest_file}")
+            logger.info(f"Manifest contains {len(image_metadata)} images with prompts")
+            
+        except Exception as e:
+            logger.error(f"Failed to save training manifest: {e}")

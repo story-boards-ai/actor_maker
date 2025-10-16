@@ -26,6 +26,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from actor_training_data_generator import ActorTrainingDataGenerator
+from training_data_background import BackgroundTrainingDataGenerator
 
 # Configure logging
 logging.basicConfig(
@@ -39,11 +40,15 @@ def main():
     """Generate actor training data from a portrait image."""
     
     # Configuration
-    portrait_url = "https://your-portrait-image-url.jpg"  # Replace with actual URL
+    portrait_url = "https://your-portrait-url.jpg"  # Replace with actual URL
     user_id = "test_user_123"
     actor_id = "test_actor_456"
     actor_type = "human"  # Options: "human", "creature", "robotic", "anthropomorphic", "mythical"
     actor_sex = "male"    # Options: "male", "female", None
+    
+    # Set to True to run in background (can close terminal)
+    # Set to False to run in foreground (must keep terminal open)
+    run_in_background = True
     
     # Validate environment variables
     if not os.getenv("REPLICATE_API_TOKEN"):
@@ -53,29 +58,23 @@ def main():
     logger.info("=" * 80)
     logger.info("ACTOR TRAINING DATA GENERATOR")
     logger.info("=" * 80)
-    logger.info(f"Portrait Image: {portrait_url}")
+    logger.info(f"Portrait URL: {portrait_url}")
     logger.info(f"User ID: {user_id}")
     logger.info(f"Actor ID: {actor_id}")
     logger.info(f"Actor Type: {actor_type}")
     logger.info(f"Actor Sex: {actor_sex}")
+    logger.info(f"Run in Background: {run_in_background}")
     logger.info("=" * 80)
     
     try:
-        # Initialize generator
-        generator = ActorTrainingDataGenerator(
-            debug_dir="debug/actor_training_data",
-            batch_size=5  # Process 5 images at a time
-        )
+        # Generate training data (with optional background execution)
+        logger.info("Starting training data generation...")
         
-        # Generate training data
-        logger.info("Starting actor training data generation...")
-        logger.info("This will generate 12 diverse training images:")
-        logger.info("  - 2 photorealistic cinematic scenes")
-        logger.info("  - 6 black & white stylized illustrations")
-        logger.info("  - 4 color stylized illustrations")
-        logger.info("")
+        if run_in_background:
+            logger.info("Running in BACKGROUND mode - you can close this terminal!")
+            logger.info(f"Check status with: BackgroundTrainingDataGenerator.get_status('{actor_id}', 'actor')")
         
-        result = generator.generate_training_data(
+        result = BackgroundTrainingDataGenerator.generate_actor_training_data(
             portrait_url=portrait_url,
             user_id=user_id,
             actor_id=actor_id,

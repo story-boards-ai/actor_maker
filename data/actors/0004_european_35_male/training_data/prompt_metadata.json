@@ -1,0 +1,25 @@
+{
+  "images": {
+    "0004_european_35_male_14.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the man tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the man tying their bootlaces on a townhouse stoop und...",
+      "generated_at": "2025-10-16T13:02:11.472793",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0004_european_35_male/0004_european_35_male_14.jpg",
+      "index": 14
+    },
+    "0004_european_35_male_15.jpg": {
+      "prompt": "A gouache painting of the man ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.",
+      "prompt_preview": "A gouache painting of the man ascending a concrete stairwell, caught mid-step. Low angle, chunky bru...",
+      "generated_at": "2025-10-16T13:04:58.481260",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0004_european_35_male/0004_european_35_male_15.jpg",
+      "index": 15
+    },
+    "0004_european_35_male_16.jpg": {
+      "prompt": "A watercolor painting of the man seated at a cafe window, looking out at a rainy street. Soft washes, wet-on-wet blending, visible brush strokes, muted palette. Preserve facial features. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor painting of the man seated at a cafe window, looking out at a rainy street. Soft washes...",
+      "generated_at": "2025-10-16T13:04:58.744548",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0004_european_35_male/0004_european_35_male_16.jpg",
+      "index": 16
+    }
+  }
+}
