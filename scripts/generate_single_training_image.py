@@ -9,6 +9,7 @@ import os
 import json
 import logging
 from pathlib import Path
+from datetime import datetime
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -132,6 +133,28 @@ def generate_single_training_image(
         json.dump(response_data, f, indent=2)
     
     logger.info(f"Updated response.json with new image URL")
+    
+    # Save prompt metadata
+    metadata_path = training_data_dir / "prompt_metadata.json"
+    if metadata_path.exists():
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+    else:
+        metadata = {"images": {}}
+    
+    # Store prompt info for this image
+    metadata["images"][local_filename] = {
+        "prompt": prompt,
+        "prompt_preview": prompt[:100] + "..." if len(prompt) > 100 else prompt,
+        "generated_at": datetime.now().isoformat(),
+        "s3_url": s3_url,
+        "index": next_index
+    }
+    
+    with open(metadata_path, 'w') as f:
+        json.dump(metadata, f, indent=2)
+    
+    logger.info(f"Saved prompt metadata")
     
     return {
         "success": True,

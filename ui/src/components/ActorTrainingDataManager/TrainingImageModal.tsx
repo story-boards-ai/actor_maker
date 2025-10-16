@@ -33,6 +33,7 @@ export function TrainingImageModal({ image, open, onOpenChange, actorId, actorNa
   const [generating, setGenerating] = useState(false);
   const [generationMessage, setGenerationMessage] = useState('');
   const [showGenerator, setShowGenerator] = useState(false);
+  const [promptUsage, setPromptUsage] = useState<Record<string, number>>({});
 
   useEffect(() => {
     if (open && !image) {
@@ -52,6 +53,13 @@ export function TrainingImageModal({ image, open, onOpenChange, actorId, actorNa
       setPrompts(data.prompts || []);
       if (data.prompts?.length > 0) {
         setSelectedPromptId(data.prompts[0].id);
+      }
+      
+      // Load prompt usage
+      const usageResponse = await fetch(`/api/actors/${actorId}/prompt-usage`);
+      if (usageResponse.ok) {
+        const usageData = await usageResponse.json();
+        setPromptUsage(usageData.prompt_usage || {});
       }
     } catch (error) {
       console.error('Error loading prompts:', error);
@@ -139,17 +147,35 @@ export function TrainingImageModal({ image, open, onOpenChange, actorId, actorNa
                   onChange={(e) => setSelectedPromptId(e.target.value)}
                   style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', background: 'white', fontSize: '14px', cursor: 'pointer', color: '#1e293b' }}
                 >
-                  {prompts.map((prompt) => (
-                    <option key={prompt.id} value={prompt.id}>
-                      {prompt.label} ({prompt.category})
-                    </option>
-                  ))}
+                  {prompts.map((prompt) => {
+                    const usageCount = promptUsage[prompt.prompt] || 0;
+                    const usageIndicator = usageCount > 0 ? ` [${usageCount}x used]` : ' [unused]';
+                    return (
+                      <option key={prompt.id} value={prompt.id}>
+                        {prompt.label} ({prompt.category}){usageIndicator}
+                      </option>
+                    );
+                  })}
                 </select>
               </div>
 
               {selectedPrompt && (
                 <div style={{ marginBottom: '24px', padding: '16px', background: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                  <div style={{ fontSize: '12px', fontWeight: 600, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase' }}>Preview</div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                    <div style={{ fontSize: '12px', fontWeight: 600, color: '#64748b', textTransform: 'uppercase' }}>Preview</div>
+                    {(() => {
+                      const usageCount = promptUsage[selectedPrompt.prompt] || 0;
+                      return usageCount > 0 ? (
+                        <div style={{ fontSize: '12px', fontWeight: 600, color: '#3b82f6', background: '#dbeafe', padding: '4px 8px', borderRadius: '4px' }}>
+                          Used {usageCount}x
+                        </div>
+                      ) : (
+                        <div style={{ fontSize: '12px', fontWeight: 600, color: '#10b981', background: '#d1fae5', padding: '4px 8px', borderRadius: '4px' }}>
+                          Unused
+                        </div>
+                      );
+                    })()}
+                  </div>
                   <div style={{ fontSize: '14px', color: '#475569', lineHeight: '1.6' }}>{selectedPrompt.prompt}</div>
                 </div>
               )}

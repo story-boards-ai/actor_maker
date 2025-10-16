@@ -1,0 +1,25 @@
+{
+  "images": {
+    "0128_asian_21_female_14.jpg": {
+      "prompt": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.",
+      "prompt_preview": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-q...",
+      "generated_at": "2025-10-16T11:42:55.131567",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_14.jpg",
+      "index": 14
+    },
+    "0128_asian_21_female_15.jpg": {
+      "prompt": "A dynamic comic book illustration of the woman leaping a narrow rooftop gap at night with a city skyline behind. Low angle, foreshortened limbs, speed lines, bold inks, cel-shaded color, limited palette with halftone dots. Preserve identity and key attributes. Illustration style, not photorealistic.",
+      "prompt_preview": "A dynamic comic book illustration of the woman leaping a narrow rooftop gap at night with a city sky...",
+      "generated_at": "2025-10-16T11:43:20.887871",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_15.jpg",
+      "index": 15
+    },
+    "0128_asian_21_female_16.jpg": {
+      "prompt": "A black-and-white charcoal sketch of the woman glancing over their shoulder in a narrow alley. Loose, expressive strokes, smudged shadows, high contrast, no color. Preserve identity. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white charcoal sketch of the woman glancing over their shoulder in a narrow alley. Loose...",
+      "generated_at": "2025-10-16T11:43:51.661244",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_16.jpg",
+      "index": 16
+    }
+  }
+}

@@ -1,0 +1,225 @@
+#!/usr/bin/env python3
+"""
+Generate one training image for each available prompt.
+Useful for creating a balanced initial training dataset.
+"""
+
+import sys
+import os
+import json
+import logging
+from pathlib import Path
+from datetime import datetime
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from src.replicate_service import ReplicateService
+from src.utils.s3 import S3Client
+from src.actor_training_prompts import get_actor_training_prompts, get_actor_descriptor
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+def generate_all_prompt_images(
+    actor_name: str,
+    base_image_path: str,
+    actor_type: str = "person",
+    actor_sex: str = None
+) -> dict:
+    """
+    Generate one training image for each available prompt.
+    
+    Args:
+        actor_name: Name of the actor (e.g., "0000_european_16_male")
+        base_image_path: Path to base/poster image
+        actor_type: Type of actor (default: "person")
+        actor_sex: Sex of actor ("male", "female", or None)
+        
+    Returns:
+        dict with generation results
+    """
+    logger.info(f"Generating images for all prompts for actor: {actor_name}")
+    
+    # Get descriptor and prompts
+    descriptor = get_actor_descriptor(actor_type, actor_sex)
+    all_prompts = get_actor_training_prompts(descriptor)
+    
+    logger.info(f"Found {len(all_prompts)} prompts to generate")
+    
+    # Initialize services
+    replicate = ReplicateService()
+    s3_client = S3Client()
+    
+    # Read base image once
+    with open(base_image_path, 'rb') as f:
+        import base64
+        base_image_base64 = base64.b64encode(f.read()).decode('utf-8')
+    
+    logger.info(f"Base image loaded: {len(base_image_base64)} bytes")
+    
+    # Setup paths
+    training_data_dir = project_root / "data" / "actors" / actor_name / "training_data"
+    training_data_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Find starting index
+    existing_files = list(training_data_dir.glob(f"{actor_name}_*.png"))
+    existing_files += list(training_data_dir.glob(f"{actor_name}_*.jpg"))
+    existing_indices = []
+    for f in existing_files:
+        try:
+            parts = f.stem.split('_')
+            if parts[-1].isdigit():
+                existing_indices.append(int(parts[-1]))
+        except:
+            pass
+    
+    next_index = max(existing_indices, default=-1) + 1
+    
+    # Load existing metadata
+    metadata_path = training_data_dir / "prompt_metadata.json"
+    if metadata_path.exists():
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+    else:
+        metadata = {"images": {}}
+    
+    # Load response.json
+    response_json_path = training_data_dir / "response.json"
+    if response_json_path.exists():
+        with open(response_json_path, 'r') as f:
+            response_data = json.load(f)
+    else:
+        response_data = {"output": {"output": {"s3_image_urls": []}}}
+    
+    if "output" not in response_data:
+        response_data["output"] = {}
+    if "output" not in response_data["output"]:
+        response_data["output"]["output"] = {}
+    if "s3_image_urls" not in response_data["output"]["output"]:
+        response_data["output"]["output"]["s3_image_urls"] = []
+    
+    # Generate images
+    results = []
+    bucket_name = os.getenv("AWS_SYSTEM_ACTORS_BUCKET", "story-boards-assets")
+    
+    for i, prompt in enumerate(all_prompts, 1):
+        logger.info(f"[{i}/{len(all_prompts)}] Generating with prompt: {prompt[:80]}...")
+        
+        try:
+            # Generate image
+            generated_url = replicate.generate_grid_with_flux_kontext(
+                prompt=prompt,
+                input_image_base64=base_image_base64,
+                aspect_ratio="1:1",
+                output_format="jpg"
+            )
+            
+            # Download generated image
+            generated_bytes = replicate.download_image_as_bytes(generated_url)
+            
+            # Save locally
+            local_filename = f"{actor_name}_{next_index}.jpg"
+            local_path = training_data_dir / local_filename
+            
+            with open(local_path, 'wb') as f:
+                f.write(generated_bytes)
+            
+            logger.info(f"Saved locally: {local_path}")
+            
+            # Upload to S3
+            s3_key = f"system_actors/training_data/{actor_name}/{local_filename}"
+            result = s3_client.upload_image(
+                image_data=generated_bytes,
+                bucket=bucket_name,
+                key=s3_key,
+                extension='jpg'
+            )
+            s3_url = result['Location']
+            
+            logger.info(f"Uploaded to S3: {s3_url}")
+            
+            # Add to response.json
+            response_data["output"]["output"]["s3_image_urls"].append(s3_url)
+            
+            # Add to metadata
+            metadata["images"][local_filename] = {
+                "prompt": prompt,
+                "prompt_preview": prompt[:100] + "..." if len(prompt) > 100 else prompt,
+                "generated_at": datetime.now().isoformat(),
+                "s3_url": s3_url,
+                "index": next_index
+            }
+            
+            results.append({
+                "index": next_index,
+                "filename": local_filename,
+                "s3_url": s3_url,
+                "prompt_preview": prompt[:80] + "..."
+            })
+            
+            next_index += 1
+            
+        except Exception as e:
+            logger.error(f"Failed to generate image {i}: {e}")
+            results.append({
+                "index": next_index,
+                "error": str(e),
+                "prompt_preview": prompt[:80] + "..."
+            })
+            next_index += 1
+    
+    # Save metadata and response.json
+    with open(metadata_path, 'w') as f:
+        json.dump(metadata, f, indent=2)
+    
+    with open(response_json_path, 'w') as f:
+        json.dump(response_data, f, indent=2)
+    
+    logger.info(f"Completed! Generated {len(results)} images")
+    
+    successful = [r for r in results if 'error' not in r]
+    failed = [r for r in results if 'error' in r]
+    
+    return {
+        "success": True,
+        "total": len(all_prompts),
+        "successful": len(successful),
+        "failed": len(failed),
+        "results": results
+    }
+
+
+def main():
+    """Main entry point for CLI usage."""
+    if len(sys.argv) < 3:
+        print("Usage: python generate_all_prompt_images.py <actor_name> <base_image_path> [actor_type] [actor_sex]")
+        print("Example: python generate_all_prompt_images.py 0000_european_16_male /path/to/base.png person male")
+        sys.exit(1)
+    
+    actor_name = sys.argv[1]
+    base_image_path = sys.argv[2]
+    actor_type = sys.argv[3] if len(sys.argv) > 3 else "person"
+    actor_sex = sys.argv[4] if len(sys.argv) > 4 else None
+    
+    try:
+        result = generate_all_prompt_images(
+            actor_name=actor_name,
+            base_image_path=base_image_path,
+            actor_type=actor_type,
+            actor_sex=actor_sex
+        )
+        
+        # Output JSON for Node.js to parse
+        print(json.dumps(result))
+        
+    except Exception as e:
+        logger.error(f"Generation failed: {e}", exc_info=True)
+        print(json.dumps({"success": False, "error": str(e)}))
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

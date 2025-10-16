@@ -187,22 +187,23 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     }
   }
 
-  async function generateTrainingImages() {
+  async function generateAllPromptImages() {
     try {
       setSyncStatus({
         syncing: true,
-        progress: { current: 0, total: 20 },
-        message: 'Generating training images...'
+        progress: { current: 0, total: 8 },
+        message: 'Generating one image for each prompt...'
       });
 
-      const response = await fetch(`/api/actors/${actor.id}/training-data/generate`, {
+      const response = await fetch(`/api/actors/${actor.id}/training-data/generate-all-prompts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           actor_id: actor.id,
           actor_name: actor.name,
           base_image_path: baseImage,
-          count: 20
+          actor_type: 'person',
+          actor_sex: actor.sex
         })
       });
 
@@ -215,8 +216,8 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       
       setSyncStatus({
         syncing: false,
-        progress: { current: result.generated, total: 20 },
-        message: `✅ Generated ${result.generated} training images`
+        progress: { current: result.successful || 0, total: result.total || 8 },
+        message: `✅ Generated ${result.successful || 0} images (${result.failed || 0} failed)`
       });
 
       // Reload to show new images
@@ -420,11 +421,11 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
               </button>
 
               <button 
-                onClick={generateTrainingImages}
+                onClick={generateAllPromptImages}
                 disabled={!baseImage}
                 style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.2)', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: !baseImage ? 'not-allowed' : 'pointer', opacity: !baseImage ? 0.5 : 1 }}
               >
-                🎲 Generate Batch (20)
+                🎨 Generate All Prompts (8)
               </button>
 
               <button 

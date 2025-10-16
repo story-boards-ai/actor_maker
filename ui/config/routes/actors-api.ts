@@ -38,6 +38,15 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // POST /api/actors/:actorId/training-data/generate-all-prompts (MUST come before /generate)
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/generate-all-prompts') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate-all-prompts$/);
+      if (match) {
+        handleGenerateAllPromptImages(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     // POST /api/actors/:actorId/training-data/generate-single (MUST come before /generate)
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/generate-single') && req.method === 'POST') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate-single$/);
@@ -70,6 +79,15 @@ export function createActorsApi(projectRoot: string) {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-prompts$/);
       if (match) {
         handleGetTrainingPrompts(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
+    // GET /api/actors/:actorId/prompt-usage
+    if (url?.startsWith('/api/actors/') && url.includes('/prompt-usage') && req.method === 'GET') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/prompt-usage$/);
+      if (match) {
+        handleGetPromptUsage(req, res, projectRoot, match[1]);
         return;
       }
     }
@@ -448,6 +466,99 @@ function handleGenerateTrainingImages(
 }
 
 /**
+ * POST /api/actors/:actorId/training-data/generate-all-prompts
+ * Generates one image for each available prompt
+ */
+function handleGenerateAllPromptImages(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Generate All Prompts] Received body length:', body.length);
+      
+      if (!body || body.length === 0) {
+        throw new Error('Empty request body');
+      }
+
+      const { actor_name, base_image_path, actor_type, actor_sex } = JSON.parse(body);
+      
+      console.log('[Generate All Prompts] Parsed data:', { actor_name, base_image_path });
+
+      // Convert relative path to absolute path
+      const absoluteImagePath = base_image_path.startsWith('/data') 
+        ? path.join(projectRoot, base_image_path)
+        : base_image_path;
+
+      console.log('[Generate All Prompts] Absolute path:', absoluteImagePath);
+
+      // Call Python script to generate all prompt images
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_all_prompt_images.py');
+      const args = [scriptPath, actor_name, absoluteImagePath];
+      if (actor_type) args.push(actor_type);
+      if (actor_sex) args.push(actor_sex);
+
+      console.log('[Generate All Prompts] Spawning Python with args:', args);
+
+      const pythonProcess = spawn('python3', args);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        const chunk = data.toString();
+        output += chunk;
+        // Stream logs to console in real-time
+        console.log('[Generate All Prompts - Python]', chunk.trim());
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        const chunk = data.toString();
+        errorOutput += chunk;
+        // Stream error/info logs to console in real-time (Python logging goes to stderr)
+        console.log('[Generate All Prompts - Python Info]', chunk.trim());
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            console.log('[Generate All Prompts] Completed successfully:', result);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            console.log('[Generate All Prompts] Completed (no JSON output)');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+          }
+        } else {
+          console.error('All prompts generation failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Generation failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Generate All Prompts] Error:', error);
+      console.error('[Generate All Prompts] Body was:', body);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error',
+        bodyLength: body.length
+      }));
+    }
+  });
+}
+
+/**
  * POST /api/actors/:actorId/training-data/generate-single
  * Generates a single training image using Replicate flux-kontext-pro
  */
@@ -531,6 +642,61 @@ function handleGenerateSingleTrainingImage(
       }));
     }
   });
+}
+
+/**
+ * GET /api/actors/:actorId/prompt-usage
+ * Returns prompt usage statistics from metadata
+ */
+function handleGetPromptUsage(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    // Load actorsData to get actor info
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actor = actorsData.find((a: any) => a.id === parseInt(actorId));
+
+    if (!actor) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Load prompt metadata
+    const metadataPath = path.join(projectRoot, 'data', 'actors', actor.name, 'training_data', 'prompt_metadata.json');
+    
+    let promptUsage: Record<string, number> = {};
+    
+    if (fs.existsSync(metadataPath)) {
+      const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+      
+      // Count usage per prompt
+      Object.values(metadata.images || {}).forEach((img: any) => {
+        const prompt = img.prompt;
+        if (prompt) {
+          promptUsage[prompt] = (promptUsage[prompt] || 0) + 1;
+        }
+      });
+    }
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      actor_id: actor.id,
+      actor_name: actor.name,
+      prompt_usage: promptUsage
+    }));
+  } catch (error) {
+    console.error('Error loading prompt usage:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to load prompt usage', details: (error as Error).message }));
+  }
 }
 
 /**
