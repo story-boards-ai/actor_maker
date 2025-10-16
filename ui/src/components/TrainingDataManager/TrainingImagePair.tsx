@@ -13,6 +13,8 @@ interface TrainingImagePairProps {
   onRecreate: (baseImage: BaseImage) => void;
   onDelete: (trainingFilename: string) => void;
   onGenerate: (baseImage: BaseImage) => void;
+  actorId: string;
+  onGoodToggled?: () => void;
 }
 
 export function TrainingImagePair({
@@ -24,6 +26,8 @@ export function TrainingImagePair({
   onRecreate,
   onDelete,
   onGenerate,
+  actorId,
+  onGoodToggled,
 }: TrainingImagePairProps) {
   const hasTraining = trainingImage !== null;
 
@@ -34,6 +38,8 @@ export function TrainingImagePair({
         baseImage={baseImage}
         isSelected={baseImage.isSelected}
         onToggleSelection={onToggleSelection}
+        actorId={actorId}
+        onGoodToggled={onGoodToggled}
       />
 
       {/* Training Image or Placeholder */}

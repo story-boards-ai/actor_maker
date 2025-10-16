@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 import type { BaseImage, TrainingImage, ProcessingState, GenerationSettings } from '../../components/TrainingDataManager/types';
 import { stripColorReferences, isMonochromeStyle } from '../../utils/promptUtils';
 import { eventBus, EVENT_TYPES, type TrainingImageDeletedEvent } from '../../utils/eventBus';
@@ -7,7 +7,7 @@ import { BATCH_SIZE } from '../../utils/trainingDataManager/constants';
 import { isWorkflowLoaded } from '../../utils/trainingDataManager/validators';
 
 interface UseImageGenerationProps {
-  style: Style;
+  actor: Actor;
   baseImages: BaseImage[];
   setBaseImages: React.Dispatch<React.SetStateAction<BaseImage[]>>;
   trainingImages: TrainingImage[];
@@ -29,7 +29,7 @@ interface UseImageGenerationReturn {
 }
 
 export function useImageGeneration({
-  style,
+  actor,
   baseImages,
   setBaseImages,
   trainingImages,
@@ -115,7 +115,9 @@ export function useImageGeneration({
         let frontpad = settings.frontpad || '';
         let backpad = settings.backpad || '';
         
-        if (isMonochromeStyle(style)) {
+        // Actors don't have monochrome property, so this will always be false
+        const isMonochrome = 'monochrome' in actor && actor.monochrome === true;
+        if (isMonochrome) {
           console.log('⚫ Monochrome style detected - stripping color references');
           frontpad = stripColorReferences(frontpad);
           backpad = stripColorReferences(backpad);
@@ -126,7 +128,7 @@ export function useImageGeneration({
           let prompt = img.prompt || 'a movie scene';
           
           // Strip color references from prompt if monochrome
-          if (isMonochromeStyle(style)) {
+          if (isMonochrome) {
             prompt = stripColorReferences(prompt);
           }
           
@@ -147,13 +149,13 @@ export function useImageGeneration({
               images: imageData,
               workflow,
               settings: generationSettings,
-              styleId: style.id,
-              styleLoraName: style.lora_file,
+              styleId: actor.id.toString(),
+              styleLoraName: actor.url,
               loraStrengthModel: settings.loraStrengthModel,
               loraStrengthClip: settings.loraStrengthClip,
               promptFrontpad: frontpad,
               promptBackpad: backpad,
-              isMonochrome: isMonochromeStyle(style),
+              isMonochrome: isMonochrome,
               monochromeContrast: generationSettings.monochromeContrast,
               monochromeBrightness: generationSettings.monochromeBrightness
             }),
@@ -191,7 +193,7 @@ export function useImageGeneration({
                 if (baseImg) {
                   newTrainingImages.push({
                     filename: item.trainingFilename,
-                    path: `/resources/style_images/${style.id}_${style.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')}/${item.trainingFilename}`,
+                    path: `/resources/style_images/${actor.id}_${actor.name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}/${item.trainingFilename}`,
                     baseFilename: baseImg.filename
                   });
                 }
@@ -258,7 +260,7 @@ export function useImageGeneration({
       });
       setAbortController(null);
     }
-  }, [workflow, settings, style, setBaseImages, setTrainingImages, loadData, incrementRefreshKey]);
+  }, [workflow, settings, actor, setBaseImages, setTrainingImages, loadData, incrementRefreshKey]);
 
   const generateSelected = useCallback(async () => {
     const selected = baseImages.filter(img => img.isSelected);
@@ -289,7 +291,7 @@ export function useImageGeneration({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          styleId: style.id,
+          styleId: actor.id.toString(),
           filename: trainingFilename
         })
       });
@@ -297,12 +299,10 @@ export function useImageGeneration({
       if (!response.ok) {
         throw new Error('Failed to delete training image');
       }
-
-      console.log('✅ Training image deleted');
       
       // Emit event to notify other components
       const eventData: TrainingImageDeletedEvent = {
-        styleId: style.id,
+        styleId: actor.id.toString(),
         trainingImageFilename: trainingFilename,
       };
       eventBus.emit(EVENT_TYPES.TRAINING_IMAGE_DELETED, eventData);
@@ -312,7 +312,7 @@ export function useImageGeneration({
     } catch (err) {
       console.error('❌ Delete failed:', err);
     }
-  }, [style.id, loadData]);
+  }, [actor.id, loadData]);
 
   const recreateTrainingImage = useCallback(async (baseImage: BaseImage) => {
     await generateBatch([baseImage]);

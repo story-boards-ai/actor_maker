@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 import type { BaseImage, TrainingImage } from '../../components/TrainingDataManager/types';
 import { eventBus, EVENT_TYPES, type TrainingImageSavedEvent, type TrainingImageDeletedEvent, type TrainingImagesGeneratedEvent } from '../../utils/eventBus';
 import { createImageMap, parseTrainingImages } from '../../utils/trainingDataManager/imageMapping';
@@ -18,7 +18,7 @@ interface UseTrainingImagesReturn {
 }
 
 export function useTrainingImages(
-  style: Style,
+  actor: Actor,
   baseImages: BaseImage[],
   setBaseImages: React.Dispatch<React.SetStateAction<BaseImage[]>>
 ): UseTrainingImagesReturn {
@@ -36,7 +36,7 @@ export function useTrainingImages(
     const unsubscribeSaved = eventBus.on(
       EVENT_TYPES.TRAINING_IMAGE_SAVED,
       (data: TrainingImageSavedEvent) => {
-        if (data.styleId === style.id) {
+        if (data.styleId === actor.id.toString()) {
           console.log('[TrainingDataManager] Training image saved event received, refreshing...');
           loadData();
         }
@@ -46,7 +46,7 @@ export function useTrainingImages(
     const unsubscribeDeleted = eventBus.on(
       EVENT_TYPES.TRAINING_IMAGE_DELETED,
       (data: TrainingImageDeletedEvent) => {
-        if (data.styleId === style.id) {
+        if (data.styleId === actor.id.toString()) {
           console.log('[TrainingDataManager] Training image deleted event received, refreshing...');
           loadData();
         }
@@ -56,7 +56,7 @@ export function useTrainingImages(
     const unsubscribeGenerated = eventBus.on(
       EVENT_TYPES.TRAINING_IMAGES_GENERATED,
       (data: TrainingImagesGeneratedEvent) => {
-        if (data.styleId === style.id) {
+        if (data.styleId === actor.id.toString()) {
           console.log('[TrainingDataManager] Training images generated event received, refreshing...');
           loadData();
         }
@@ -69,7 +69,7 @@ export function useTrainingImages(
       unsubscribeDeleted();
       unsubscribeGenerated();
     };
-  }, [style.id]);
+  }, [actor.id]);
 
   async function loadWorkflow() {
     try {
@@ -91,12 +91,12 @@ export function useTrainingImages(
       setError(null);
 
       // Load base images (V2 - input images)
-      const baseResponse = await fetch(`/api/styles/${style.id}/training-images?version=v2`);
+      const baseResponse = await fetch(`/api/styles/${actor.id}/training-images?version=v2`);
       if (!baseResponse.ok) throw new Error('Failed to load base images');
       const baseData = await baseResponse.json();
 
       // Load existing training images (V1 - generated training images)
-      const trainingResponse = await fetch(`/api/styles/${style.id}/training-images?version=v1`);
+      const trainingResponse = await fetch(`/api/styles/${actor.id}/training-images?version=v1`);
       const trainingData = trainingResponse.ok ? await trainingResponse.json() : { images: [] };
       
       console.log('📦 Training images data loaded:', {
@@ -127,7 +127,8 @@ export function useTrainingImages(
             fs_path,
             prompt,
             isSelected: false,
-            isGenerating: false
+            isGenerating: false,
+            good: img.good || false
           };
         })
       );
@@ -150,7 +151,7 @@ export function useTrainingImages(
         setLoading(false);
       }
     }
-  }, [style.id, setBaseImages]);
+  }, [actor.id, setBaseImages]);
 
   const imageMap = useMemo(() => {
     return createImageMap(baseImages, trainingImages);

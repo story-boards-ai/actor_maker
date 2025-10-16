@@ -1,15 +1,15 @@
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 
 interface LoadingStateProps {
-  style: Style;
+  actor: Actor;
 }
 
-export function LoadingState({ style }: LoadingStateProps) {
+export function LoadingState({ actor }: LoadingStateProps) {
   return (
     <div className="training-data-manager">
       <div className="training-header">
         <div>
-          <h2>{style.title} - Training Data</h2>
+          <h2>{actor.name} - Training Data</h2>
           <p className="training-subtitle">Loading...</p>
         </div>
       </div>

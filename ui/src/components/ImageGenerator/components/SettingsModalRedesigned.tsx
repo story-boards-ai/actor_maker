@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import { toast } from 'sonner';
-import type { Style } from '../../../types';
-import './SettingsModalRedesigned.css';
+import { useEffect } from "react";
+import { toast } from "sonner";
+import type { Style, Actor } from "../../../types";
+import "./SettingsModalRedesigned.css";
 
 interface SettingsModalProps {
   show: boolean;
   selectedStyle: string;
-  styles: Style[];
+  styles: (Style | Actor)[];
   seed: number;
   seedLocked: boolean;
   steps: number;
@@ -23,7 +23,7 @@ interface SettingsModalProps {
   monochromeBrightness: number;
   frontpad: string;
   backpad: string;
-  saveStatus: 'idle' | 'saving' | 'saved' | 'error';
+  saveStatus: "idle" | "saving" | "saved" | "error";
   loading: boolean;
   onOpen?: () => void;
   onClose: () => void;
@@ -59,7 +59,7 @@ function sliderToDenoise(sliderValue: number): number {
 }
 
 function denoiseToSlider(denoise: number): number {
-  const slider = 1000 * (1 - Math.pow(1 - denoise, 1/3));
+  const slider = 1000 * (1 - Math.pow(1 - denoise, 1 / 3));
   return Math.round(Math.max(0, Math.min(1000, slider)));
 }
 
@@ -119,35 +119,51 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
 
   if (!show) return null;
 
-  const isMonochrome = selectedStyle && styles.find(s => s.id === selectedStyle)?.monochrome;
+  const selectedItem =
+    selectedStyle &&
+    styles.find((s) => {
+      // Handle both Style (string id) and Actor (number id)
+      return String(s.id) === String(selectedStyle);
+    });
+  const isMonochrome =
+    selectedItem && "monochrome" in selectedItem
+      ? selectedItem.monochrome
+      : false;
 
   return (
     <div className="settings-modal-overlay" onClick={onClose}>
-      <div className="settings-modal-redesigned" onClick={(e) => e.stopPropagation()}>
-        
+      <div
+        className="settings-modal-redesigned"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* HEADER */}
         <div className="settings-modal-header">
           <h2>Expert Settings</h2>
-          <button className="settings-modal-close" onClick={onClose} type="button">✕</button>
+          <button
+            className="settings-modal-close"
+            onClick={onClose}
+            type="button"
+          >
+            ✕
+          </button>
         </div>
 
         {/* CONTENT */}
         <div className="settings-modal-body">
-          
           {/* SECTION 1: GENERATION PARAMETERS */}
           <section className="settings-section">
             <h3 className="section-heading">Generation Parameters</h3>
-            
+
             <div className="settings-row">
               <div className="setting-control full-width">
                 <div className="control-header">
                   <label className="control-label">Seed</label>
                   <button
-                    className={`toggle-button ${seedLocked ? 'active' : ''}`}
+                    className={`toggle-button ${seedLocked ? "active" : ""}`}
                     onClick={() => setSeedLocked(!seedLocked)}
                     type="button"
                   >
-                    {seedLocked ? '🔒 Locked' : '🔓 Random'}
+                    {seedLocked ? "🔒 Locked" : "🔓 Random"}
                   </button>
                 </div>
                 <input
@@ -158,7 +174,9 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
                   className="number-input"
                 />
                 <p className="control-hint">
-                  {seedLocked ? 'Fixed seed produces consistent results' : 'Random seed generates different results each time'}
+                  {seedLocked
+                    ? "Fixed seed produces consistent results"
+                    : "Random seed generates different results each time"}
                 </p>
               </div>
             </div>
@@ -247,7 +265,7 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
           {/* SECTION 2: IMAGE DIMENSIONS */}
           <section className="settings-section">
             <h3 className="section-heading">Image Dimensions</h3>
-            
+
             <div className="settings-row">
               <div className="setting-control">
                 <label className="control-label">Width</label>
@@ -292,7 +310,7 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
           {/* SECTION 3: SAMPLING */}
           <section className="settings-section">
             <h3 className="section-heading">Sampling Configuration</h3>
-            
+
             <div className="settings-row">
               <div className="setting-control">
                 <label className="control-label">Sampler</label>
@@ -349,18 +367,22 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
                   ↺ Reset to Default
                 </button>
               </div>
-              
+
               <div className="settings-row">
                 <div className="setting-control">
                   <label className="control-label">Model Strength</label>
-                  <div className="slider-value">{loraStrengthModel.toFixed(2)}</div>
+                  <div className="slider-value">
+                    {loraStrengthModel.toFixed(2)}
+                  </div>
                   <input
                     type="range"
                     min="0"
                     max="2"
                     step="0.05"
                     value={loraStrengthModel}
-                    onChange={(e) => setLoraStrengthModel(parseFloat(e.target.value))}
+                    onChange={(e) =>
+                      setLoraStrengthModel(parseFloat(e.target.value))
+                    }
                     disabled={loading}
                     className="range-input"
                   />
@@ -372,14 +394,18 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
 
                 <div className="setting-control">
                   <label className="control-label">CLIP Strength</label>
-                  <div className="slider-value">{loraStrengthClip.toFixed(2)}</div>
+                  <div className="slider-value">
+                    {loraStrengthClip.toFixed(2)}
+                  </div>
                   <input
                     type="range"
                     min="0"
                     max="2"
                     step="0.05"
                     value={loraStrengthClip}
-                    onChange={(e) => setLoraStrengthClip(parseFloat(e.target.value))}
+                    onChange={(e) =>
+                      setLoraStrengthClip(parseFloat(e.target.value))
+                    }
                     disabled={loading}
                     className="range-input"
                   />
@@ -396,18 +422,22 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
           {isMonochrome && (
             <section className="settings-section">
               <h3 className="section-heading">Monochrome Processing</h3>
-              
+
               <div className="settings-row">
                 <div className="setting-control">
                   <label className="control-label">Contrast</label>
-                  <div className="slider-value">{monochromeContrast.toFixed(2)}x</div>
+                  <div className="slider-value">
+                    {monochromeContrast.toFixed(2)}x
+                  </div>
                   <input
                     type="range"
                     min="0.5"
                     max="2"
                     step="0.05"
                     value={monochromeContrast}
-                    onChange={(e) => setMonochromeContrast(parseFloat(e.target.value))}
+                    onChange={(e) =>
+                      setMonochromeContrast(parseFloat(e.target.value))
+                    }
                     disabled={loading}
                     className="range-input"
                   />
@@ -419,14 +449,18 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
 
                 <div className="setting-control">
                   <label className="control-label">Brightness</label>
-                  <div className="slider-value">{monochromeBrightness.toFixed(2)}x</div>
+                  <div className="slider-value">
+                    {monochromeBrightness.toFixed(2)}x
+                  </div>
                   <input
                     type="range"
                     min="0.5"
                     max="1.5"
                     step="0.05"
                     value={monochromeBrightness}
-                    onChange={(e) => setMonochromeBrightness(parseFloat(e.target.value))}
+                    onChange={(e) =>
+                      setMonochromeBrightness(parseFloat(e.target.value))
+                    }
                     disabled={loading}
                     className="range-input"
                   />
@@ -434,7 +468,9 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
                     <span>0.5</span>
                     <span>1.5</span>
                   </div>
-                  <p className="control-hint">Adjust overall brightness of B&W conversion</p>
+                  <p className="control-hint">
+                    Adjust overall brightness of B&W conversion
+                  </p>
                 </div>
               </div>
             </section>
@@ -444,7 +480,7 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
           {selectedStyle && (
             <section className="settings-section">
               <h3 className="section-heading">Style Prompts</h3>
-              
+
               <div className="setting-control full-width">
                 <label className="control-label">Front Pad</label>
                 <textarea
@@ -455,7 +491,9 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
                   placeholder="Text added before the main prompt..."
                   className="textarea-input"
                 />
-                <p className="control-hint">Text prepended to the beginning of the prompt</p>
+                <p className="control-hint">
+                  Text prepended to the beginning of the prompt
+                </p>
               </div>
 
               <div className="setting-control full-width">
@@ -468,7 +506,9 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
                   placeholder="Text added after the main prompt..."
                   className="textarea-input"
                 />
-                <p className="control-hint">Text appended to the end of the prompt</p>
+                <p className="control-hint">
+                  Text appended to the end of the prompt
+                </p>
               </div>
             </section>
           )}
@@ -477,12 +517,20 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
         {/* FOOTER */}
         <div className="settings-modal-footer">
           <button
-            className={`footer-button primary ${saveStatus !== 'idle' ? `status-${saveStatus}` : ''}`}
+            className={`footer-button primary ${
+              saveStatus !== "idle" ? `status-${saveStatus}` : ""
+            }`}
             onClick={onSave}
             type="button"
-            disabled={saveStatus === 'saving'}
+            disabled={saveStatus === "saving"}
           >
-            {saveStatus === 'saving' ? '⏳ Saving...' : saveStatus === 'saved' ? '✅ Saved!' : saveStatus === 'error' ? '❌ Error' : '💾 Save Settings'}
+            {saveStatus === "saving"
+              ? "⏳ Saving..."
+              : saveStatus === "saved"
+              ? "✅ Saved!"
+              : saveStatus === "error"
+              ? "❌ Error"
+              : "💾 Save Settings"}
           </button>
           {onSaveToRegistry && selectedStyle && (
             <button
@@ -490,10 +538,14 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
               onClick={async () => {
                 try {
                   await onSaveToRegistry();
-                  toast.success('Frontpad and Backpad saved to registry successfully!');
+                  toast.success(
+                    "Frontpad and Backpad saved to registry successfully!"
+                  );
                 } catch (error) {
-                  toast.error('Failed to save to registry. Check console for details.');
-                  console.error('Registry save error:', error);
+                  toast.error(
+                    "Failed to save to registry. Check console for details."
+                  );
+                  console.error("Registry save error:", error);
                 }
               }}
               type="button"

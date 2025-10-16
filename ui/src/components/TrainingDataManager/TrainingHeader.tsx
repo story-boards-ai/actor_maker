@@ -1,8 +1,8 @@
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 import type { ProcessingState } from './types';
 
 interface TrainingHeaderProps {
-  style: Style;
+  actor: Actor;
   baseImagesCount: number;
   totalTrainingImages: number;
   missingCount: number;
@@ -16,7 +16,7 @@ interface TrainingHeaderProps {
 }
 
 export function TrainingHeader({
-  style,
+  actor,
   baseImagesCount,
   totalTrainingImages,
   missingCount,
@@ -31,7 +31,7 @@ export function TrainingHeader({
   return (
     <div className="training-header">
       <div>
-        <h2>{style.title} - Training Data Manager</h2>
+        <h2>{actor.name} - Training Data Manager</h2>
         <p className="training-subtitle">
           {baseImagesCount} base images • {totalTrainingImages} training images • {missingCount} missing
           {selectedCount > 0 && ` • ${selectedCount} selected`}
@@ -78,7 +78,7 @@ export function TrainingHeader({
             <button
               className="training-button"
               onClick={onClose}
-              title="Close and return to style library"
+              title="Close and return to actor library"
             >
               ← Back
             </button>

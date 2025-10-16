@@ -11,6 +11,8 @@ interface TrainingGridProps {
   onRecreate: (baseImage: BaseImage) => void;
   onDelete: (trainingFilename: string) => void;
   onGenerate: (baseImage: BaseImage) => void;
+  actorId: string;
+  onGoodToggled?: () => void;
 }
 
 export function TrainingGrid({
@@ -22,6 +24,8 @@ export function TrainingGrid({
   onRecreate,
   onDelete,
   onGenerate,
+  actorId,
+  onGoodToggled,
 }: TrainingGridProps) {
   return (
     <div className="training-grid">
@@ -40,6 +44,8 @@ export function TrainingGrid({
             onRecreate={onRecreate}
             onDelete={onDelete}
             onGenerate={onGenerate}
+            actorId={actorId}
+            onGoodToggled={onGoodToggled}
           />
         );
       })}

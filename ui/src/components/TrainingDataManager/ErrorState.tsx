@@ -1,17 +1,17 @@
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 
 interface ErrorStateProps {
-  style: Style;
+  actor: Actor;
   error: string;
   onRetry: () => void;
 }
 
-export function ErrorState({ style, error, onRetry }: ErrorStateProps) {
+export function ErrorState({ actor, error, onRetry }: ErrorStateProps) {
   return (
     <div className="training-data-manager">
       <div className="training-header">
         <div>
-          <h2>{style.title} - Training Data</h2>
+          <h2>{actor.name} - Training Data</h2>
           <p className="training-subtitle">Error loading data</p>
         </div>
       </div>

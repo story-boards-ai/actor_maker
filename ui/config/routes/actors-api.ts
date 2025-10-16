@@ -107,6 +107,15 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // POST /api/actors/:actorId/training-data/:filename/toggle-good
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/') && url.includes('/toggle-good') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/([^/]+)\/toggle-good$/);
+      if (match) {
+        handleToggleTrainingImageGood(req, res, projectRoot, match[1], match[2]);
+        return;
+      }
+    }
+
     // POST /api/actors/:actorId/training-data/delete-all
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/delete-all') && req.method === 'POST') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/delete-all/);
@@ -196,6 +205,20 @@ function handleGetTrainingData(
     if (fs.existsSync(trainingDataPath)) {
       const trainingData = JSON.parse(fs.readFileSync(trainingDataPath, 'utf-8'));
       s3Urls = trainingData.output?.output?.s3_image_urls || [];
+    }
+
+    // Load prompt_metadata.json to get good status
+    const promptMetadataPath = path.join(
+      projectRoot,
+      'data',
+      'actors',
+      actor.name,
+      'training_data',
+      'prompt_metadata.json'
+    );
+    let promptMetadata: any = { images: {} };
+    if (fs.existsSync(promptMetadataPath)) {
+      promptMetadata = JSON.parse(fs.readFileSync(promptMetadataPath, 'utf-8'));
     }
 
     // Check for base/poster image in multiple locations
@@ -289,6 +312,9 @@ function handleGetTrainingData(
         status = 'mismatch';
       }
 
+      // Get good status from prompt_metadata
+      const goodStatus = promptMetadata.images?.[filename]?.good || false;
+
       return {
         index,
         filename,
@@ -298,7 +324,8 @@ function handleGetTrainingData(
         local_hash: localFile?.hash || null,
         s3_hash: manifestHash,
         hash_match: localFile && manifestHash && localFile.hash ? localFile.hash === manifestHash : null,
-        status
+        status,
+        good: goodStatus
       };
     });
 
@@ -984,6 +1011,87 @@ function handleToggleGood(
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to toggle good status' }));
+  }
+}
+
+/**
+ * POST /api/actors/:actorId/training-data/:filename/toggle-good
+ * Toggle training image as good/not good
+ */
+function handleToggleTrainingImageGood(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string,
+  filename: string
+) {
+  try {
+    // Decode the filename (it may be URL-encoded)
+    const decodedFilename = decodeURIComponent(filename);
+    
+    // Load actorsData to get actor name
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actor = actorsData.find((a: any) => a.id === parseInt(actorId));
+
+    if (!actor) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Path to prompt_metadata.json
+    const metadataPath = path.join(
+      projectRoot,
+      'data',
+      'actors',
+      actor.name,
+      'training_data',
+      'prompt_metadata.json'
+    );
+
+    // Load or create metadata
+    let metadata: any = { images: {} };
+    if (fs.existsSync(metadataPath)) {
+      metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+    }
+
+    // Ensure images object exists
+    if (!metadata.images) {
+      metadata.images = {};
+    }
+
+    // Ensure the image entry exists
+    if (!metadata.images[decodedFilename]) {
+      metadata.images[decodedFilename] = {};
+    }
+
+    // Toggle the 'good' flag
+    const currentGood = metadata.images[decodedFilename].good || false;
+    metadata.images[decodedFilename].good = !currentGood;
+
+    // Ensure directory exists
+    const metadataDir = path.dirname(metadataPath);
+    if (!fs.existsSync(metadataDir)) {
+      fs.mkdirSync(metadataDir, { recursive: true });
+    }
+
+    // Save back to file
+    fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      filename: decodedFilename,
+      good: metadata.images[decodedFilename].good
+    }));
+  } catch (error) {
+    console.error('Error toggling training image good status:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to toggle training image good status' }));
   }
 }
 

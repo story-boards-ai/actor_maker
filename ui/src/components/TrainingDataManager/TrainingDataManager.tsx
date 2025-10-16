@@ -11,7 +11,7 @@ import { TrainingToolbar } from './TrainingToolbar';
 import { TrainingGrid } from './TrainingGrid';
 import './TrainingDataManager.css';
 
-export function TrainingDataManager({ style, onClose, onSendToImageGen }: TrainingDataManagerProps) {
+export function TrainingDataManager({ actor, onClose, onSendToImageGen }: TrainingDataManagerProps) {
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   
   const {
@@ -42,7 +42,7 @@ export function TrainingDataManager({ style, onClose, onSendToImageGen }: Traini
     deleteTrainingImage,
     recreateTrainingImage,
     abortGeneration,
-  } = useTrainingDataManager(style);
+  } = useTrainingDataManager(actor);
 
   function handleSendToImageGen(baseImage: any, trainingImage?: any) {
     if (onSendToImageGen) {
@@ -57,12 +57,12 @@ export function TrainingDataManager({ style, onClose, onSendToImageGen }: Traini
 
   // Loading state
   if (loading) {
-    return <LoadingState style={style} />;
+    return <LoadingState actor={actor} />;
   }
 
   // Error state
   if (error) {
-    return <ErrorState style={style} error={error} onRetry={() => loadData(true)} />;
+    return <ErrorState actor={actor} error={error} onRetry={() => loadData(true)} />;
   }
 
   const totalTrainingImages = trainingImages.length;
@@ -70,7 +70,7 @@ export function TrainingDataManager({ style, onClose, onSendToImageGen }: Traini
   return (
     <div className="training-data-manager">
       <TrainingHeader
-        style={style}
+        actor={actor}
         baseImagesCount={baseImages.length}
         totalTrainingImages={totalTrainingImages}
         missingCount={missingCount}
@@ -103,14 +103,16 @@ export function TrainingDataManager({ style, onClose, onSendToImageGen }: Traini
         onRecreate={recreateTrainingImage}
         onDelete={deleteTrainingImage}
         onGenerate={(baseImage) => recreateTrainingImage(baseImage)}
+        actorId={actor.id.toString()}
+        onGoodToggled={() => loadData(true)}
       />
 
       {baseImages.length === 0 && <EmptyState />}
 
       <SettingsModalRedesigned
         show={showSettingsModal}
-        selectedStyle={style.id}
-        styles={[style]}
+        selectedStyle={actor.id.toString()}
+        styles={[actor]}
         seed={settings.seed}
         seedLocked={settings.seedLocked}
         steps={settings.steps}

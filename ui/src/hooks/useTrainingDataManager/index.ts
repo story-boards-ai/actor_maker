@@ -1,22 +1,22 @@
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 import { useGenerationSettings } from './useGenerationSettings';
 import { useImageSelection } from './useImageSelection';
 import { useTrainingImages } from './useTrainingImages';
 import { useImageGeneration } from './useImageGeneration';
 
-export function useTrainingDataManager(style: Style) {
+export function useTrainingDataManager(actor: Actor) {
   // 1. Settings management
-  const settings = useGenerationSettings(style);
+  const settings = useGenerationSettings(actor);
   
   // 2. Image selection
   const selection = useImageSelection();
   
   // 3. Training images data
-  const images = useTrainingImages(style, selection.baseImages, selection.setBaseImages);
+  const images = useTrainingImages(actor, selection.baseImages, selection.setBaseImages);
   
   // 4. Image generation
   const generation = useImageGeneration({
-    style,
+    actor,
     baseImages: selection.baseImages,
     setBaseImages: selection.setBaseImages,
     trainingImages: images.trainingImages,

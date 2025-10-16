@@ -25,7 +25,6 @@ export function TrainingImageCard({
           src={`${trainingImage.path}?v=${imageRefreshKey}`}
           alt={trainingImage.filename} 
           loading="lazy"
-          onLoad={() => console.log('✅ Training image loaded:', trainingImage.filename, 'Path:', trainingImage.path)}
           onError={(e) => {
             console.error('❌ Training image FAILED to load:', trainingImage.filename);
             console.error('   Path:', trainingImage.path);

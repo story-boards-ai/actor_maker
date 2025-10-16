@@ -1,7 +1,7 @@
-import type { Style } from '../../types';
+import type { Actor } from '../../types';
 
 export interface TrainingDataManagerProps {
-  style: Style;
+  actor: Actor;
   onClose: () => void;
   onSendToImageGen?: (baseImage: string, trainingImage?: string) => void;
 }
@@ -15,6 +15,7 @@ export interface BaseImage {
   hasPrompt: boolean;
   isSelected: boolean;
   isGenerating: boolean;
+  good?: boolean;
 }
 
 export interface TrainingImage {

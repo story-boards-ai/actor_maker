@@ -58,6 +58,34 @@ function handleStyleTrainingImages(styleId: string, version: string, projectRoot
     const inputImagesPath = path.join(projectRoot, 'resources', 'input_images')
     
     if (fs.existsSync(inputImagesPath) && fs.statSync(inputImagesPath).isDirectory()) {
+      // Load prompt_metadata.json for the actor to get good status
+      const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json')
+      let promptMetadata: any = { images: {} }
+      
+      if (fs.existsSync(actorsDataPath)) {
+        try {
+          const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'))
+          const actor = actorsData.find((a: any) => a.id === parseInt(styleId))
+          
+          if (actor) {
+            const promptMetadataPath = path.join(
+              projectRoot,
+              'data',
+              'actors',
+              actor.name,
+              'training_data',
+              'prompt_metadata.json'
+            )
+            
+            if (fs.existsSync(promptMetadataPath)) {
+              promptMetadata = JSON.parse(fs.readFileSync(promptMetadataPath, 'utf-8'))
+            }
+          }
+        } catch (err) {
+          console.error('[Images API] Error loading prompt metadata:', err)
+        }
+      }
+      
       const files = fs.readdirSync(inputImagesPath)
         .filter(file => /\.(jpg|jpeg|png|gif|webp|avif|bmp)$/i.test(file))
         .sort()
@@ -67,11 +95,15 @@ function handleStyleTrainingImages(styleId: string, version: string, projectRoot
           const promptPath = path.join(inputImagesPath, `${basename}.txt`)
           const hasPrompt = fs.existsSync(promptPath)
           
+          // Get good status from prompt_metadata
+          const goodStatus = promptMetadata.images?.[file]?.good || false
+          
           return {
             filename: file,
             path: `/resources/input_images/${encodedFile}`,
             hasPrompt,
             isBaseline: true,
+            good: goodStatus,
           }
         })
       
