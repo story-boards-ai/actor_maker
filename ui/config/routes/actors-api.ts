@@ -92,6 +92,15 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // POST /api/actors/:actorId/toggle-good
+    if (url?.startsWith('/api/actors/') && url.includes('/toggle-good') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/toggle-good$/);
+      if (match) {
+        handleToggleGood(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     // POST /api/actors/:actorId/training-data/delete-all
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/delete-all') && req.method === 'POST') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/delete-all/);
@@ -741,6 +750,30 @@ function handleGetTrainingPrompts(
         prompt: `Close-up of the ${descriptor} looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.`
       },
       {
+        id: 'subway_platform',
+        category: 'photorealistic',
+        label: 'Subway Platform Wait',
+        prompt: `The ${descriptor} stands alone on a dimly lit subway platform at night, hands in pockets, looking down the tunnel. Side angle, fluorescent overhead lights casting harsh shadows. Urban grit, tiled walls, no eye contact with camera.`
+      },
+      {
+        id: 'parking_garage',
+        category: 'photorealistic',
+        label: 'Parking Garage Walk',
+        prompt: `The ${descriptor} walks through a concrete parking garage, footsteps echoing, lit by overhead strip lights. Back three-quarter view, medium shot. Cold blue-green lighting, pillars casting long shadows. Character moving away from camera.`
+      },
+      {
+        id: 'rooftop_wide',
+        category: 'photorealistic',
+        label: 'Rooftop Wide Shot',
+        prompt: `Wide cinematic shot of the ${descriptor} standing small on a rooftop edge at dusk, city skyline sprawling behind them. Silhouette against orange-purple sky. Character facing away, looking at the cityscape. Dramatic scale, tiny figure in vast urban landscape.`
+      },
+      {
+        id: 'alley_phone',
+        category: 'photorealistic',
+        label: 'Alley Phone Call',
+        prompt: `The ${descriptor} leans against a brick wall in a narrow alley, holding a phone to their ear, head tilted down. Side profile, single streetlight creating dramatic rim lighting. Wet pavement reflecting light, steam rising from a grate. No direct eye contact.`
+      },
+      {
         id: 'pen_ink_stoop',
         category: 'bw_stylized',
         label: 'Pen & Ink - Townhouse Stoop',
@@ -791,6 +824,51 @@ function handleGetTrainingPrompts(
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to load training prompts', details: (error as Error).message }));
+  }
+}
+
+/**
+ * POST /api/actors/:actorId/toggle-good
+ * Toggle actor as good/not good
+ */
+function handleToggleGood(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    // Load actorsData
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actorIndex = actorsData.findIndex((a: any) => a.id === parseInt(actorId));
+
+    if (actorIndex === -1) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Toggle the 'good' flag
+    const currentGood = actorsData[actorIndex].good || false;
+    actorsData[actorIndex].good = !currentGood;
+
+    // Save back to file
+    fs.writeFileSync(actorsDataPath, JSON.stringify(actorsData, null, 2));
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      actor_id: parseInt(actorId),
+      good: actorsData[actorIndex].good
+    }));
+  } catch (error) {
+    console.error('Error toggling good status:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to toggle good status' }));
   }
 }
 

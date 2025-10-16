@@ -11,6 +11,8 @@ interface ActorCardProps {
 export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
   const [trainingCount, setTrainingCount] = useState<number | null>(null);
+  const [isGood, setIsGood] = useState(actor.good || false);
+  const [toggling, setToggling] = useState(false);
 
   // Build the image path - use the img field from actor data
   const imageSrc =
@@ -25,7 +27,31 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
   useEffect(() => {
     // Fetch training image count
     fetchTrainingImageCount(actor.id).then(setTrainingCount);
-  }, [actor.id]);
+    // Update good status if actor prop changes
+    setIsGood(actor.good || false);
+  }, [actor.id, actor.good]);
+
+  const toggleGood = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (toggling) return;
+
+    setToggling(true);
+    try {
+      const response = await fetch(`/api/actors/${actor.id}/toggle-good`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Failed to toggle good status');
+
+      const data = await response.json();
+      setIsGood(data.good);
+    } catch (error) {
+      console.error('Error toggling good status:', error);
+    } finally {
+      setToggling(false);
+    }
+  };
 
   return (
     <div className="actor-card">
@@ -43,17 +69,40 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
           </div>
         )}
         <div className="actor-card-overlay">
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <span className="actor-index">#{actor.id}</span>
-            {trainingCount !== null && (
-              <span 
-                className="actor-tag" 
-                style={{ background: trainingCount > 0 ? '#10b981' : '#94a3b8' }}
-                title={`${trainingCount} training images`}
-              >
-                📸 {trainingCount}
-              </span>
-            )}
+          <div style={{ display: 'flex', gap: '8px', justifyContent: 'space-between', width: '100%' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <span className="actor-index">#{actor.id}</span>
+              {trainingCount !== null && (
+                <span 
+                  className="actor-tag" 
+                  style={{ background: trainingCount > 0 ? '#10b981' : '#94a3b8' }}
+                  title={`${trainingCount} training images`}
+                >
+                  📸 {trainingCount}
+                </span>
+              )}
+            </div>
+            <button
+              onClick={toggleGood}
+              disabled={toggling}
+              style={{
+                background: isGood ? '#10b981' : 'rgba(255,255,255,0.2)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                cursor: toggling ? 'not-allowed' : 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px',
+                transition: 'all 0.2s ease',
+                opacity: toggling ? 0.5 : 1
+              }}
+              title={isGood ? 'Mark as not good' : 'Mark as good'}
+            >
+              {isGood ? '✓' : '○'}
+            </button>
           </div>
         </div>
       </div>

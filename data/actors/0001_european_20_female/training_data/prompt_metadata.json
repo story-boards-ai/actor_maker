@@ -1,0 +1,25 @@
+{
+  "images": {
+    "0001_european_20_female_15.jpg": {
+      "prompt": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.",
+      "prompt_preview": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-q...",
+      "generated_at": "2025-10-16T11:53:01.456489",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_15.jpg",
+      "index": 15
+    },
+    "0001_european_20_female_16.jpg": {
+      "prompt": "A gouache painting of the woman ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.",
+      "prompt_preview": "A gouache painting of the woman ascending a concrete stairwell, caught mid-step. Low angle, chunky b...",
+      "generated_at": "2025-10-16T11:53:25.359762",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_16.jpg",
+      "index": 16
+    },
+    "0001_european_20_female_17.jpg": {
+      "prompt": "The woman stands alone on a dimly lit subway platform at night, hands in pockets, looking down the tunnel. Side angle, fluorescent overhead lights casting harsh shadows. Urban grit, tiled walls, no eye contact with camera.",
+      "prompt_preview": "The woman stands alone on a dimly lit subway platform at night, hands in pockets, looking down the t...",
+      "generated_at": "2025-10-16T11:54:04.081071",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_17.jpg",
+      "index": 17
+    }
+  }
+}

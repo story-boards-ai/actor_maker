@@ -1,0 +1,11 @@
+{
+  "images": {
+    "0000_european_16_male_14.jpg": {
+      "prompt": "A dynamic comic book illustration of the man leaping a narrow rooftop gap at night with a city skyline behind. Low angle, foreshortened limbs, speed lines, bold inks, cel-shaded color, limited palette with halftone dots. Preserve identity and key attributes. Illustration style, not photorealistic.",
+      "prompt_preview": "A dynamic comic book illustration of the man leaping a narrow rooftop gap at night with a city skyli...",
+      "generated_at": "2025-10-16T11:47:03.874649",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0000_european_16_male/0000_european_16_male_14.jpg",
+      "index": 14
+    }
+  }
+}

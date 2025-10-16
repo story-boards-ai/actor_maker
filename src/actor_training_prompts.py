@@ -14,13 +14,28 @@ def get_actor_training_prompts(descriptor: str) -> List[str]:
         descriptor: Character descriptor (e.g., "man", "woman", "creature", "robotic character")
         
     Returns:
-        List of 12 training prompts (2 photorealistic + 6 B/W stylized + 4 color stylized)
+        List of 16 training prompts (6 photorealistic + 6 B/W stylized + 4 color stylized)
     """
     
     # Base photorealistic prompts - cinematic action scenes
     base_images_prompts = [
         # Nighttime urban, character visible
         f"The {descriptor} runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Three-quarter back angle. Reflections on the asphalt, no other figures in frame.",
+        
+        # Close-up, warm lighting
+        f"Close-up of the {descriptor} looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.",
+        
+        # Subway platform wait
+        f"The {descriptor} stands alone on a dimly lit subway platform at night, hands in pockets, looking down the tunnel. Side angle, fluorescent overhead lights casting harsh shadows. Urban grit, tiled walls, no eye contact with camera.",
+        
+        # Parking garage walk
+        f"The {descriptor} walks through a concrete parking garage, footsteps echoing, lit by overhead strip lights. Back three-quarter view, medium shot. Cold blue-green lighting, pillars casting long shadows. Character moving away from camera.",
+        
+        # Wide shot - rooftop
+        f"Wide cinematic shot of the {descriptor} standing small on a rooftop edge at dusk, city skyline sprawling behind them. Silhouette against orange-purple sky. Character facing away, looking at the cityscape. Dramatic scale, tiny figure in vast urban landscape.",
+        
+        # Alley phone call
+        f"The {descriptor} leans against a brick wall in a narrow alley, holding a phone to their ear, head tilted down. Side profile, single streetlight creating dramatic rim lighting. Wet pavement reflecting light, steam rising from a grate. No direct eye contact.",
         
         # Rear-view, foggy warehouse, top-lit
         f"A wide handheld shot from behind shows the {descriptor} walking into a smoky, abandoned warehouse at dawn. A harsh light overhead silhouettes the figure but keeps the outline sharp — the only rear-facing image.",
@@ -83,13 +98,10 @@ def get_actor_training_prompts(descriptor: str) -> List[str]:
         f"A gouache painting of the {descriptor} ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.",
     ]
     
-    # Restrict photorealistic to exactly two prompts for diversity
-    photo_realistic_prompts = [
-        base_images_prompts[0],  # rain-slick street run, action
-        base_images_prompts[3],  # close-up face in warm window light
-    ]
+    # Use all 6 photorealistic prompts for comprehensive coverage
+    photo_realistic_prompts = base_images_prompts
     
-    # Final ordered set: 2 photo + 6 B/W stylized + 4 color stylized = 12 total
+    # Final ordered set: 6 photo + 6 B/W stylized + 4 color stylized = 16 total
     all_training_prompts = [
         *photo_realistic_prompts,
         *bw_stylized_prompts,

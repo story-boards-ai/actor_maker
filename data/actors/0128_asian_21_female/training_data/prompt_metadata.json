@@ -20,6 +20,13 @@
       "generated_at": "2025-10-16T11:43:51.661244",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_16.jpg",
       "index": 16
+    },
+    "0128_asian_21_female_17.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop u...",
+      "generated_at": "2025-10-16T11:46:05.330357",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_17.jpg",
+      "index": 17
     }
   }
 }

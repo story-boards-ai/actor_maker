@@ -68,6 +68,7 @@ export interface Actor {
   };
   description: string;
   url: string;
+  good?: boolean;
   training_data?: {
     s3_urls: string[];
     local_path: string;
