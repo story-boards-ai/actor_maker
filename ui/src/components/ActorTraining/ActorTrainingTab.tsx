@@ -19,6 +19,7 @@ import {
   calculateRecommendedSteps,
 } from "./utils/calculations";
 import "./ActorTrainingTab.css";
+import { actorsLibraryData } from "../../../../data/actorsData";
 
 export function ActorTrainingTab() {
   // Load all actors
@@ -30,21 +31,15 @@ export function ActorTrainingTab() {
 
   // Load actors on mount
   useEffect(() => {
-    async function loadActors() {
-      try {
-        // Import actors from the data file
-        const module = await import("../../../data/actorsData");
-        const actorsList: Actor[] = module.actorsLibraryData;
-        console.log("[ActorTraining] Loaded actors:", actorsList.length);
-        setActors(actorsList);
-      } catch (err) {
-        console.error("Failed to load actors:", err);
-        toast.error("Failed to load actors");
-      } finally {
-        setActorsLoading(false);
-      }
+    try {
+      console.log("[ActorTraining] Loaded actors:", actorsLibraryData.length);
+      setActors(actorsLibraryData);
+    } catch (err) {
+      console.error("Failed to load actors:", err);
+      toast.error("Failed to load actors");
+    } finally {
+      setActorsLoading(false);
     }
-    loadActors();
   }, []);
 
   const selectedActor = actors.find((a) => a.id.toString() === selectedActorId);
