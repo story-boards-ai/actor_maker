@@ -2014,7 +2014,7 @@
     "age": "30",
     "sex": "male",
     "ethnicity": "south_american",
-    "face_prompt": "Andre Santos-MuÃ±oz, as a 30 year old south american man, with short brown hair, glasses",
+    "face_prompt": "Andre Santos-Mu\u00c3\u00b1oz, as a 30 year old south american man, with short brown hair, glasses",
     "name": "0074_south_american_30_male",
     "image": "image75",
     "outfit": "Casual teal button-up shirt with rolled sleeves, tortoiseshell glasses, dark brown chinos, and tan suede desert boots with colorful socks.",
@@ -2669,17 +2669,15 @@
     "description": "A 40 year old Middle Eastern man, with straight short brown hair",
     "url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0098_middle_eastern_40_male.safetensors",
     "poster_frames": {
-      "standard": {
-        "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_sm.webp",
-        "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_md.webp",
-        "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_lg.webp",
-        "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster.png"
-      },
       "accelerated": {
-        "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_sm.webp",
-        "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_md.webp",
-        "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster_lg.webp",
-        "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0098_middle_eastern_40_male_poster.png"
+        "webp_sm": "https://story-board-user-images.s3-accelerate.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_sm.webp",
+        "webp_md": "https://story-board-user-images.s3-accelerate.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_md.webp",
+        "webp_lg": "https://story-board-user-images.s3-accelerate.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_lg.webp"
+      },
+      "standard": {
+        "webp_sm": "https://story-board-user-images.s3.us-west-1.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_sm.webp",
+        "webp_md": "https://story-board-user-images.s3.us-west-1.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_md.webp",
+        "webp_lg": "https://story-board-user-images.s3.us-west-1.amazonaws.com/actors/0098_middle_eastern_40_male/poster_frame/0098_middle_eastern_40_male_poster_lg.webp"
       }
     }
   },
@@ -3229,7 +3227,7 @@
     "age": "45",
     "sex": "female",
     "ethnicity": "nordic",
-    "face_prompt": "Emilie JÃ¸rgensen as a 45 year old nordic woman, with straight blonde hair and ",
+    "face_prompt": "Emilie J\u00c3\u00b8rgensen as a 45 year old nordic woman, with straight blonde hair and ",
     "name": "0119_nordic_45_female",
     "image": "image120",
     "outfit": "Elegant cream cashmere sweater with cowl neck, tailored navy blue wool trousers, pearl drop earrings, and tan leather ankle boots.",
@@ -5659,7 +5657,7 @@
     "age": "24",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "Lena Müller as a 24 year old european woman, with shoulder length straight blonde hair and a small nose stud",
+    "face_prompt": "Lena M\u00fcller as a 24 year old european woman, with shoulder length straight blonde hair and a small nose stud",
     "name": "0209_european_24_female",
     "image": "image210",
     "outfit": "Powder-blue cropped denim jacket, butter-cream ribbed mock-neck tee, lavender A-line skirt, white platform sneakers with pastel rainbow stitching, and a silver charm bracelet.",
@@ -6469,7 +6467,7 @@
     "age": "52",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "Sophia Müller as a 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air",
+    "face_prompt": "Sophia M\u00fcller as a 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air",
     "name": "0239_european_52_female",
     "image": "image225",
     "outfit": "Tailored cobalt blue sheath dress with a structured white blazer, nude patent leather pumps, pearl drop earrings, and a navy leather tote bag.",
@@ -7225,7 +7223,7 @@
     "age": "62",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "Günther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
+    "face_prompt": "G\u00fcnther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
     "name": "0267_european_62_male",
     "image": "image253",
     "outfit": "Classic tweed blazer with elbow patches, light blue dress shirt, brown corduroy pants, brown leather shoes, and a gold pocket watch.",

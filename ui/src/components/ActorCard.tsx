@@ -133,22 +133,10 @@ export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame }
         </div>
 
         <div className="actor-card-info">
-          <div className="info-row">
-            <span className="info-label">Age</span>
-            <span className="info-value">{actor.age}</span>
-          </div>
-          <div className="info-row">
-            <span className="info-label">Ethnicity</span>
-            <span className="info-value">{actor.ethnicity}</span>
-          </div>
-          <div className="info-row">
-            <span className="info-label">Description</span>
-            <span className="info-value">{actor.face_prompt}</span>
-          </div>
           {actor.model_created_at && (
             <div className="info-row">
-              <span className="info-label">Model Date</span>
-              <span className="info-value info-subtle">
+              <span className="info-label">LoRA Created</span>
+              <span className="info-value">
                 {new Date(actor.model_created_at).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'short',

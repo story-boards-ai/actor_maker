@@ -5,6 +5,7 @@ Based on generatePosterFrameComfyUi.ts from the backend.
 import time
 import logging
 import requests
+import json
 from typing import Dict, Any, Optional
 from pathlib import Path
 
@@ -48,6 +49,7 @@ class PosterFrameGenerator:
         character_lora_name: str,
         custom_actor_description: str,
         user_id: Optional[str] = None,
+        character_lora_url: Optional[str] = None,
         style_lora_name: str = "SBai_style_101",
         style_lora_strength: float = 1.0,
         character_lora_strength: float = 0.7,
@@ -100,21 +102,68 @@ class PosterFrameGenerator:
             character_lora_strength=character_lora_strength
         )
         
-        # Prepare payload for RunPod
+        # Build model_urls array for LoRA downloads
+        model_urls = []
+        
+        # Add character LoRA if URL provided
+        if character_lora_url:
+            character_lora_id = character_lora_name if character_lora_name.endswith('.safetensors') else f"{character_lora_name}.safetensors"
+            model_urls.append({
+                "id": character_lora_id,
+                "url": character_lora_url
+            })
+            logger.debug(f"[{request_id}] Added character LoRA: {character_lora_id}")
+        
+        # Add style LoRA (system LoRA from story-boards-assets bucket)
+        if style_lora_name:
+            style_lora_id = style_lora_name if style_lora_name.endswith('.safetensors') else f"{style_lora_name}.safetensors"
+            style_lora_url = f"https://story-boards-assets.s3-accelerate.amazonaws.com/styles/{style_lora_id}"
+            model_urls.append({
+                "id": style_lora_id,
+                "url": style_lora_url
+            })
+            logger.debug(f"[{request_id}] Added style LoRA: {style_lora_id}")
+        
+        # Prepare payload for RunPod with model_urls
         payload = {
             "input": {
-                "workflow": workflow
+                "workflow": workflow,
+                "model_urls": model_urls,
+                "force_download": False
             }
         }
         
+        logger.info(f"[{request_id}] Payload includes {len(model_urls)} model URLs")
+        
+        # Save request to debug folder
+        debug_dir = Path(__file__).parent.parent / "debug"
+        debug_dir.mkdir(exist_ok=True)
+        
+        request_debug_file = debug_dir / "poster_frame_request.json"
+        with open(request_debug_file, 'w') as f:
+            json.dump(payload, f, indent=2)
+        logger.info(f"[{request_id}] Saved request to {request_debug_file}")
+        
         try:
             # Send request to RunPod serverless
-            logger.info(f"[{request_id}] Sending poster frame generation request to RunPod")
+            # Get the endpoint ID from config
+            from runpod.config import RunPodConfig
+            endpoint_id = RunPodConfig.get_serverless_endpoint("wizard")
+            logger.info(f"[{request_id}] Sending poster frame generation request to RunPod endpoint: {endpoint_id}")
+            
             result = self.runpod_client.generate_image(
                 payload=payload,
                 mode="wizard",  # Use wizard mode for poster frames
                 request_id=request_id
             )
+            
+            # Save response to debug folder
+            response_debug_file = debug_dir / "poster_frame_response.json"
+            with open(response_debug_file, 'w') as f:
+                # Create a safe copy without full base64 strings
+                safe_result = self._sanitize_for_debug(result)
+                json.dump(safe_result, f, indent=2)
+            logger.info(f"[{request_id}] Saved response to {response_debug_file}")
             
             if not result:
                 raise Exception("RunPod request returned None")
@@ -200,6 +249,49 @@ class PosterFrameGenerator:
         except Exception as e:
             logger.error(f"[{request_id}] ❌ Error generating poster frame: {str(e)}")
             raise
+    
+    def _sanitize_for_debug(self, data: Any) -> Any:
+        """
+        Sanitize data for debug output by truncating base64 strings.
+        
+        Args:
+            data: Data to sanitize
+        
+        Returns:
+            Sanitized copy of data
+        """
+        import copy
+        
+        if data is None:
+            return None
+        
+        # Make a deep copy to avoid modifying original
+        safe_data = copy.deepcopy(data)
+        
+        def truncate_base64(obj):
+            """Recursively truncate base64 strings in nested structures."""
+            if isinstance(obj, dict):
+                for key, value in obj.items():
+                    if isinstance(value, str):
+                        # Check if it's a base64 string (long string or data URI)
+                        if len(value) > 100 and ('base64' in value or value.startswith('/9j/')):
+                            obj[key] = f"<base64_data_{len(value)}_bytes>"
+                        elif value.startswith('data:image'):
+                            obj[key] = f"<data_uri_{len(value)}_bytes>"
+                    elif isinstance(value, (dict, list)):
+                        truncate_base64(value)
+            elif isinstance(obj, list):
+                for i, item in enumerate(obj):
+                    if isinstance(item, str):
+                        if len(item) > 100 and ('base64' in item or item.startswith('/9j/')):
+                            obj[i] = f"<base64_data_{len(item)}_bytes>"
+                        elif item.startswith('data:image'):
+                            obj[i] = f"<data_uri_{len(item)}_bytes>"
+                    elif isinstance(item, (dict, list)):
+                        truncate_base64(item)
+        
+        truncate_base64(safe_data)
+        return safe_data
     
     def _build_s3_key(self, actor_id: str, user_id: Optional[str] = None) -> str:
         """

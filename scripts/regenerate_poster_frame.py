@@ -161,8 +161,8 @@ def main():
     
     actor_id = sys.argv[1]
     actor_name = sys.argv[2]
-    lora_model_url = sys.argv[3] if len(sys.argv) > 3 else None
-    actor_description = sys.argv[4] if len(sys.argv) > 4 else None
+    lora_model_url = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else None
+    actor_description = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else None
     
     logger.info(f"=" * 80)
     logger.info(f"REGENERATING POSTER FRAME FOR ACTOR: {actor_name} (ID: {actor_id})")
@@ -194,10 +194,13 @@ def main():
         
         # Step 1: Generate poster frame via RunPod
         logger.info("Step 1: Generating poster frame via RunPod...")
+        logger.info(f"Character LoRA URL: {lora_model_url or 'Not provided'}")
+        
         result = generator.generate_poster_frame(
             actor_id=actor_id,
             character_lora_name=actor_name,
             custom_actor_description=actor_description,
+            character_lora_url=lora_model_url,
             user_id=None  # Use generic path
         )
         
