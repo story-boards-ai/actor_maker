@@ -258,19 +258,15 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
 
       const result = await response.json();
       
+      // Reset sync status without showing a message
       setSyncStatus({
         syncing: false,
         progress: { current: 0, total: 0 },
-        message: `✅ Deleted ${image.filename}`
+        message: ''
       });
 
       // Reload to update list
       await loadTrainingData();
-      
-      // Clear message after 3 seconds
-      setTimeout(() => {
-        setSyncStatus(prev => ({ ...prev, message: '' }));
-      }, 3000);
 
     } catch (err) {
       console.error('Delete failed:', err);

@@ -7,8 +7,6 @@
       "character_id": "0065_south_american_16_male",
       "job_id": "673adba0-0559-4990-ba4c-84fc93f6f239",
       "s3_image_urls": [
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_0.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_1.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_2.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_3.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_4.png",
@@ -18,9 +16,7 @@
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_8.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_9.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_10.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_11.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_12.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_13.png"
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0065_south_american_16_male/training_data/0065_south_american_16_male_11.png"
       ],
       "user_id": "99999999-9999-9999-9999-999999999999"
     },
