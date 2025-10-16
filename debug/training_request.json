@@ -15,7 +15,7 @@
       },
       "4": {
         "inputs": {
-          "steps": 2100,
+          "steps": 1200,
           "network_trainer": [
             "107",
             0
@@ -71,7 +71,7 @@
       },
       "95": {
         "inputs": {
-          "optimizer_type": "AdamW8bit",
+          "optimizer_type": "adamw8bit",
           "max_grad_norm": 1,
           "lr_scheduler": "constant",
           "lr_warmup_steps": 0,
@@ -133,10 +133,10 @@
         "inputs": {
           "output_name": "flux_lora_file_name",
           "output_dir": "/model_output",
-          "network_dim": 8,
-          "network_alpha": 8,
+          "network_dim": 16,
+          "network_alpha": 16,
           "learning_rate": 0.0003,
-          "max_train_steps": 2100,
+          "max_train_steps": 1200,
           "apply_t5_attn_mask": true,
           "cache_latents": "memory",
           "cache_text_encoder_outputs": "memory",
@@ -152,8 +152,8 @@
           "discrete_flow_shift": 3.1582000000000003,
           "highvram": true,
           "fp8_base": true,
-          "gradient_dtype": "fp32",
-          "save_dtype": "fp32",
+          "gradient_dtype": "bf16",
+          "save_dtype": "bf16",
           "attention_mode": "sdpa",
           "sample_prompts": [
             "146",
@@ -203,7 +203,7 @@
           "height": 512,
           "batch_size": 1,
           "dataset_path": "/training_data",
-          "class_tokens": "0006_european_20_female",
+          "class_tokens": "0001_european_20_female",
           "enable_bucket": true,
           "bucket_no_upscale": false,
           "num_repeats": 1,
@@ -234,7 +234,7 @@
       },
       "146": {
         "inputs": {
-          "string": "portrait of a young woman, 0006_european_20_female|a young woman walking in New York at night, 0006_european_20_female|a woman wearing a colorful outfit on a tropical beach, 0006_european_20_female|portrait of a young woman wearing a leather jacket in New York at sunset, 0006_european_20_female",
+          "string": "portrait of a young woman, 0001_european_20_female|a young woman walking in New York at night, 0001_european_20_female|a woman wearing a colorful outfit on a tropical beach, 0001_european_20_female|portrait of a young woman wearing a leather jacket in New York at sunset, 0001_european_20_female",
           "strip_newlines": true
         },
         "class_type": "StringConstantMultiline",
@@ -245,33 +245,28 @@
     },
     "training_data": {
       "s3_urls": [
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_4.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_5.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_6.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_9.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_10.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_11.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_14.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_16.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_17.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_18.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_19.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_20.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_22.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_24.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_25.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_26.jpg",
-        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_27.jpg"
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_8.png",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_12.png",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_14.png",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_15.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_16.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_18.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_19.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_20.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_23.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_24.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_26.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0001_european_20_female/0001_european_20_female_28.jpg"
       ]
     },
     "training_config": {
       "mode": "custom-actors",
       "user_id": "actor_maker_user",
       "tenant_id": "actor_maker",
-      "request_id": "6_1760619674463",
-      "model_name": "actor_6_V5",
+      "request_id": "1_1760623175837",
+      "model_name": "actor_1_V1",
       "learning_rate": 0.0003,
-      "max_train_steps": 2100
+      "max_train_steps": 1200
     }
   },
   "webhook": "https://cb5349cd8445.ngrok-free.app/api/training-webhook"

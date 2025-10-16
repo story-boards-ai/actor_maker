@@ -49,7 +49,6 @@ def delete_training_image(actor_name: str, filename: str, s3_url: str) -> dict:
         if local_path.exists():
             local_path.unlink()
             deleted_local = True
-            print(f"✅ Deleted local file: {filename}", file=sys.stderr)
         else:
             print(f"⏭️  Local file not found: {filename}", file=sys.stderr)
     except Exception as e:
@@ -66,7 +65,6 @@ def delete_training_image(actor_name: str, filename: str, s3_url: str) -> dict:
         if s3_client.file_exists(bucket, key):
             s3_client.delete_file(bucket, key)
             deleted_s3 = True
-            print(f"✅ Deleted from S3: {filename}", file=sys.stderr)
         else:
             print(f"⏭️  S3 file not found: {filename}", file=sys.stderr)
     except Exception as e:
@@ -145,12 +143,7 @@ def main():
         
         result = delete_training_image(actor_name, filename, s3_url)
         
-        if result['deleted']:
-            print(f"\n✅ Delete complete", file=sys.stderr)
-        else:
-            print(f"\n⚠️  Nothing was deleted", file=sys.stderr)
-        
-        # Output JSON result to stdout
+        # Output JSON result to stdout (no success message to frontend)
         print(json.dumps(result))
         
     except Exception as e:
