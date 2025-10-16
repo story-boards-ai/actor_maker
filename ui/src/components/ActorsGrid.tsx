@@ -2,21 +2,45 @@ import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { ActorCard } from "./ActorCard";
 import type { Actor } from "../types";
+import { fetchTrainingDataInfo, type TrainingDataInfo } from "../utils/trainingDataUtils";
 import "./ActorsGrid.css";
 
 interface ActorsGridProps {
   onOpenTrainingData?: (actor: Actor) => void;
 }
 
+type FilterType = 'missing_0_1' | 'has_15_plus' | 'good_only' | 'has_stylized' | 'no_training';
+
 export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
   const [actors, setActors] = useState<Actor[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [columns, setColumns] = useState(4);
+  const [activeFilters, setActiveFilters] = useState<Set<FilterType>>(new Set());
+  const [invertFilter, setInvertFilter] = useState(false);
+  const [trainingDataMap, setTrainingDataMap] = useState<Map<number, TrainingDataInfo>>(new Map());
 
   useEffect(() => {
     loadActors();
   }, []);
+
+  useEffect(() => {
+    // Load training data for all actors
+    if (actors.length > 0) {
+      loadTrainingData();
+    }
+  }, [actors]);
+
+  async function loadTrainingData() {
+    const dataMap = new Map<number, TrainingDataInfo>();
+    await Promise.all(
+      actors.map(async (actor) => {
+        const info = await fetchTrainingDataInfo(actor.id);
+        dataMap.set(actor.id, info);
+      })
+    );
+    setTrainingDataMap(dataMap);
+  }
 
   async function loadActors() {
     try {
@@ -90,6 +114,64 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
     );
   }
 
+  // Toggle filter on/off
+  const toggleFilter = (filterType: FilterType) => {
+    setActiveFilters(prev => {
+      const newFilters = new Set(prev);
+      if (newFilters.has(filterType)) {
+        newFilters.delete(filterType);
+      } else {
+        newFilters.add(filterType);
+      }
+      return newFilters;
+    });
+  };
+
+  // Clear all filters
+  const clearAllFilters = () => {
+    setActiveFilters(new Set());
+    setInvertFilter(false);
+  };
+
+  // Filter actors based on selected filters
+  const filteredActors = actors.filter(actor => {
+    // If no filters active and no inversion, show all
+    if (activeFilters.size === 0 && !invertFilter) return true;
+    
+    const trainingInfo = trainingDataMap.get(actor.id);
+    if (!trainingInfo) return false;
+
+    // Check each active filter
+    const filterResults: boolean[] = [];
+    
+    if (activeFilters.has('missing_0_1')) {
+      filterResults.push(trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1));
+    }
+    if (activeFilters.has('has_15_plus')) {
+      filterResults.push(trainingInfo.count >= 15);
+    }
+    if (activeFilters.has('good_only')) {
+      filterResults.push(actor.good === true);
+    }
+    if (activeFilters.has('has_stylized')) {
+      filterResults.push(trainingInfo.hasStylizedImages === true);
+    }
+    if (activeFilters.has('no_training')) {
+      filterResults.push(trainingInfo.count === 0);
+    }
+    
+    // If no filters active but inversion is on, match all
+    if (filterResults.length === 0) {
+      return invertFilter ? false : true;
+    }
+    
+    // Actor must match ALL active filters (AND logic)
+    const matches = filterResults.every(result => result === true);
+    
+    // Apply inversion if enabled
+    return invertFilter ? !matches : matches;
+  });
+
   if (actors.length === 0) {
     return (
       <div className="actors-grid-empty">
@@ -106,9 +188,132 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
         <div className="actors-header-left">
           <h2>Actor Library</h2>
           <p className="actors-count">
-            {actors.length} {actors.length === 1 ? "actor" : "actors"} available
+            {filteredActors.length} of {actors.length} {actors.length === 1 ? "actor" : "actors"}
+            {(activeFilters.size > 0 || invertFilter) && ` (${activeFilters.size} filter${activeFilters.size !== 1 ? 's' : ''}${invertFilter ? ' - inverted' : ''})`}
           </p>
         </div>
+        
+        {/* Filters */}
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <label style={{ fontSize: '14px', fontWeight: 500, color: '#64748b' }}>Filter:</label>
+          <button
+            onClick={() => setInvertFilter(!invertFilter)}
+            style={{
+              padding: '8px 12px',
+              background: invertFilter ? '#ef4444' : '#f1f5f9',
+              color: invertFilter ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+            title={invertFilter ? 'Invert filter: ON (showing opposite)' : 'Invert filter: OFF (showing matches)'}
+          >
+            {invertFilter ? '⊘' : '='}
+          </button>
+          <button
+            onClick={clearAllFilters}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.size === 0 && !invertFilter ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : '#f1f5f9',
+              color: activeFilters.size === 0 && !invertFilter ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            Clear All
+          </button>
+          <button
+            onClick={() => toggleFilter('missing_0_1')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('missing_0_1') ? '#ef4444' : '#f1f5f9',
+              color: activeFilters.has('missing_0_1') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            ⚠️ Missing 0/1
+          </button>
+          <button
+            onClick={() => toggleFilter('has_15_plus')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('has_15_plus') ? '#10b981' : '#f1f5f9',
+              color: activeFilters.has('has_15_plus') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            📸 15+ Images
+          </button>
+          <button
+            onClick={() => toggleFilter('good_only')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('good_only') ? '#10b981' : '#f1f5f9',
+              color: activeFilters.has('good_only') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            ✓ Good Only
+          </button>
+          <button
+            onClick={() => toggleFilter('has_stylized')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('has_stylized') ? '#8b5cf6' : '#f1f5f9',
+              color: activeFilters.has('has_stylized') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            🎨 Stylized
+          </button>
+          <button
+            onClick={() => toggleFilter('no_training')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('no_training') ? '#f59e0b' : '#f1f5f9',
+              color: activeFilters.has('no_training') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            ∅ No Training
+          </button>
+        </div>
+        
         <div className="column-control">
           <label className="column-control-label">Columns:</label>
           <button
@@ -138,17 +343,41 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
           </button>
         </div>
       </div>
-      <div className="actors-grid" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-        {actors.map((actor) => (
-          <ActorCard
-            key={actor.id}
-            actor={actor}
-            onOpenTrainingData={onOpenTrainingData}
-            onRegeneratePosterFrame={handleRegeneratePosterFrame}
-            onActorUpdated={loadActors}
-          />
-        ))}
-      </div>
+      {filteredActors.length === 0 ? (
+        <div className="actors-grid-empty">
+          <div className="empty-icon">🔍</div>
+          <h3>No Actors Match Filter</h3>
+          <p>Try adjusting your filter settings</p>
+          <button
+            onClick={clearAllFilters}
+            style={{
+              marginTop: '16px',
+              padding: '10px 20px',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer'
+            }}
+          >
+            Clear Filter
+          </button>
+        </div>
+      ) : (
+        <div className="actors-grid" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+          {filteredActors.map((actor) => (
+            <ActorCard
+              key={actor.id}
+              actor={actor}
+              onOpenTrainingData={onOpenTrainingData}
+              onRegeneratePosterFrame={handleRegeneratePosterFrame}
+              onActorUpdated={loadActors}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

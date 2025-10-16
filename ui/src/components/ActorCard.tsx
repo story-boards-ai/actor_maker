@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import type { Actor } from "../types";
-import { fetchTrainingImageCount } from "../utils/trainingDataUtils";
+import { fetchTrainingDataInfo, type TrainingDataInfo } from "../utils/trainingDataUtils";
 import "./ActorCard.css";
 
 interface ActorCardProps {
@@ -13,7 +13,7 @@ interface ActorCardProps {
 
 export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame, onActorUpdated }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
-  const [trainingCount, setTrainingCount] = useState<number | null>(null);
+  const [trainingInfo, setTrainingInfo] = useState<TrainingDataInfo | null>(null);
   const [isGood, setIsGood] = useState(actor.good || false);
   const [toggling, setToggling] = useState(false);
   const [regenerating, setRegenerating] = useState(false);
@@ -29,8 +29,8 @@ export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame, 
   };
 
   useEffect(() => {
-    // Fetch training image count
-    fetchTrainingImageCount(actor.id).then(setTrainingCount);
+    // Fetch training data info
+    fetchTrainingDataInfo(actor.id).then(setTrainingInfo);
     // Update good status if actor prop changes
     setIsGood(actor.good || false);
   }, [actor.id, actor.good]);
@@ -96,16 +96,32 @@ export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame, 
         )}
         <div className="actor-card-overlay">
           <div style={{ display: 'flex', gap: '8px', justifyContent: 'space-between', width: '100%' }}>
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               <span className="actor-index">#{actor.id}</span>
-              {trainingCount !== null && (
-                <span 
-                  className="actor-tag" 
-                  style={{ background: trainingCount > 0 ? '#10b981' : '#94a3b8' }}
-                  title={`${trainingCount} training images`}
-                >
-                  📸 {trainingCount}
-                </span>
+              {trainingInfo !== null && (
+                <>
+                  <span 
+                    className="actor-tag" 
+                    style={{ background: trainingInfo.count > 0 ? '#10b981' : '#94a3b8' }}
+                    title={`${trainingInfo.count} training images`}
+                  >
+                    📸 {trainingInfo.count}
+                  </span>
+                  {/* Indicators for missing training images 0 and 1 */}
+                  {trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1) && (
+                    <span
+                      className="actor-tag"
+                      style={{ 
+                        background: '#ef4444',
+                        fontSize: '11px',
+                        padding: '2px 6px'
+                      }}
+                      title={`Missing: ${!trainingInfo.hasImage0 ? 'image_0' : ''}${!trainingInfo.hasImage0 && !trainingInfo.hasImage1 ? ', ' : ''}${!trainingInfo.hasImage1 ? 'image_1' : ''}`}
+                    >
+                      ⚠️ {!trainingInfo.hasImage0 && '0'}{!trainingInfo.hasImage0 && !trainingInfo.hasImage1 && ','}{!trainingInfo.hasImage1 && '1'}
+                    </span>
+                  )}
+                </>
               )}
             </div>
             <button

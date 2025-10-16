@@ -256,7 +256,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
         throw new Error(errorData.error || 'Delete failed');
       }
 
-      const result = await response.json();
+      await response.json();
       
       // Reset sync status without showing a message
       setSyncStatus({
@@ -369,16 +369,15 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       {/* Header */}
       <div style={{ padding: '24px', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          {baseImage && (
-            <BaseImageThumbnail 
-              baseImage={baseImage}
-              actorName={actor.name}
-              onClick={() => setShowBaseImageModal(true)}
-            />
-          )}
+          <BaseImageThumbnail 
+            baseImage={baseImage}
+            actorName={actor.name}
+            onClick={() => setShowBaseImageModal(true)}
+          />
           <div>
             <h2 style={{ margin: 0, fontSize: '24px', fontWeight: 600 }}>{actor.name} - Training Data Manager</h2>
             <p style={{ margin: '8px 0 0 0', opacity: 0.9, fontSize: '14px' }}>
+              {!baseImage && <span style={{ color: '#fbbf24', fontWeight: 600 }}>⚠️ No base image • </span>}
               {s3Count} total • {localCount} local • {syncedCount} synced • {mismatchCount > 0 ? `${mismatchCount} mismatch • ` : ''}{actor.age}y {actor.sex} {actor.ethnicity}
             </p>
           </div>
@@ -488,11 +487,62 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       <ScrollArea.Root style={{ flex: 1, overflow: 'hidden' }}>
         <ScrollArea.Viewport style={{ width: '100%', height: '100%' }}>
           <div style={{ padding: '32px' }}>
+            {/* No Base Image Warning */}
+            {!baseImage && (
+              <div style={{ background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)', borderRadius: '12px', padding: '32px', marginBottom: '24px', boxShadow: '0 4px 12px rgba(251, 191, 36, 0.3)', border: '2px solid #f59e0b' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '24px' }}>
+                  <div style={{ fontSize: '64px', lineHeight: 1 }}>⚠️</div>
+                  <div style={{ flex: 1 }}>
+                    <h3 style={{ margin: '0 0 12px 0', fontSize: '24px', fontWeight: 600, color: '#78350f' }}>No Base Image Found</h3>
+                    <p style={{ margin: '0 0 20px 0', color: '#78350f', fontSize: '16px', lineHeight: 1.6 }}>
+                      This actor doesn't have a base image yet. A base image is required to generate training data for LoRA training.
+                      <br />
+                      <strong>Actor:</strong> {actor.age}y {actor.sex} {actor.ethnicity}
+                      {actor.description && <><br /><strong>Description:</strong> {actor.description}</>}
+                    </p>
+                    <button
+                      onClick={() => setShowBaseImageModal(true)}
+                      style={{
+                        padding: '14px 28px',
+                        background: '#78350f',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#451a03';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.3)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#78350f';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                      }}
+                    >
+                      <span style={{ fontSize: '20px' }}>🎨</span>
+                      <span>Create Base Image Now</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {trainingImages.length === 0 ? (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '400px', gap: '16px', textAlign: 'center' }}>
                 <div style={{ fontSize: '48px' }}>📸</div>
                 <h3 style={{ margin: 0, color: '#1e293b' }}>No Training Images</h3>
-                <p style={{ margin: 0, color: '#64748b' }}>Generate training images from the base image to get started</p>
+                <p style={{ margin: 0, color: '#64748b' }}>
+                  {baseImage ? 'Generate training images from the base image to get started' : 'Create a base image first, then generate training images'}
+                </p>
               </div>
             ) : (
               <div style={{ background: 'white', borderRadius: '12px', padding: '24px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
@@ -578,14 +628,13 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       </ScrollArea.Root>
 
       {/* Base Image Modal */}
-      {baseImage && (
-        <BaseImageModal
-          actor={actor}
-          baseImage={baseImage}
-          open={showBaseImageModal}
-          onOpenChange={setShowBaseImageModal}
-        />
-      )}
+      <BaseImageModal
+        actor={actor}
+        baseImage={baseImage}
+        open={showBaseImageModal}
+        onOpenChange={setShowBaseImageModal}
+        onBaseImageRegenerated={loadTrainingData}
+      />
 
       {/* Training Image Modal - View Mode */}
       <TrainingImageModal

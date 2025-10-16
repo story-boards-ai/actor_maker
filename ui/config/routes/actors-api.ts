@@ -17,6 +17,15 @@ export function createActorsApi(projectRoot: string) {
       return;
     }
 
+    // GET /api/actors/:actorId/training-data/prompts
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/prompts') && req.method === 'GET') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/prompts$/);
+      if (match) {
+        handleGetTrainingPrompts(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     // GET /api/actors/:actorId/training-data
     if (url?.startsWith('/api/actors/') && url.includes('/training-data') && req.method === 'GET') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data$/);
@@ -84,7 +93,7 @@ export function createActorsApi(projectRoot: string) {
     if (url?.startsWith('/api/actors/') && url.includes('/training-prompts') && req.method === 'GET') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-prompts$/);
       if (match) {
-        handleGetTrainingPrompts(req, res, projectRoot, match[1]);
+        handleGetPresetTrainingPrompts(req, res, projectRoot, match[1]);
         return;
       }
     }
@@ -154,6 +163,73 @@ export function createActorsApi(projectRoot: string) {
 
     next();
   };
+}
+
+/**
+ * Handle GET /api/actors/:actorId/training-data/prompts
+ * Returns all prompts from prompt_metadata.json for stylized image detection
+ */
+function handleGetTrainingPrompts(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    // Load actors data to get actor name
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    if (!fs.existsSync(actorsDataPath)) {
+      res.statusCode = 404;
+      res.end(JSON.stringify({ error: 'Actors data not found' }));
+      return;
+    }
+
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actor = actorsData.find((a: any) => a.id === parseInt(actorId));
+
+    if (!actor) {
+      res.statusCode = 404;
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Check for prompt_metadata.json
+    const promptMetadataPath = path.join(
+      projectRoot,
+      'data',
+      'actors',
+      actor.name,
+      'training_data',
+      'prompt_metadata.json'
+    );
+
+    if (!fs.existsSync(promptMetadataPath)) {
+      // No prompt metadata, return empty array
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ prompts: [] }));
+      return;
+    }
+
+    // Read and parse prompt metadata
+    const promptMetadata = JSON.parse(fs.readFileSync(promptMetadataPath, 'utf-8'));
+    const prompts: string[] = [];
+
+    // Extract all prompts from the images object
+    if (promptMetadata.images) {
+      Object.values(promptMetadata.images).forEach((imageData: any) => {
+        if (imageData.prompt) {
+          prompts.push(imageData.prompt);
+        }
+      });
+    }
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ prompts }));
+  } catch (error) {
+    console.error('Error fetching training prompts:', error);
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Failed to fetch training prompts' }));
+  }
 }
 
 /**
@@ -772,7 +848,7 @@ function handleGetPromptUsage(
  * GET /api/actors/:actorId/training-prompts
  * Returns available training prompts for the actor
  */
-function handleGetTrainingPrompts(
+function handleGetPresetTrainingPrompts(
   req: IncomingMessage,
   res: ServerResponse,
   projectRoot: string,

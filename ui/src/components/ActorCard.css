@@ -44,13 +44,13 @@
 
 .actor-card-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
 }
 
 .actor-index {

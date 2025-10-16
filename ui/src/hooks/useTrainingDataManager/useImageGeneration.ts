@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import type { Actor } from '../../types';
 import type { BaseImage, TrainingImage, ProcessingState, GenerationSettings } from '../../components/TrainingDataManager/types';
-import { stripColorReferences, isMonochromeStyle } from '../../utils/promptUtils';
+import { stripColorReferences } from '../../utils/promptUtils';
 import { eventBus, EVENT_TYPES, type TrainingImageDeletedEvent } from '../../utils/eventBus';
 import { BATCH_SIZE } from '../../utils/trainingDataManager/constants';
 import { isWorkflowLoaded } from '../../utils/trainingDataManager/validators';
@@ -32,7 +32,6 @@ export function useImageGeneration({
   actor,
   baseImages,
   setBaseImages,
-  trainingImages,
   setTrainingImages,
   workflow,
   settings,

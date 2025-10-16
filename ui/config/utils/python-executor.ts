@@ -4,6 +4,7 @@ import { getPythonExecutable } from './path-helpers'
 export interface PythonExecutionOptions {
   scriptPath?: string
   scriptCode?: string
+  args?: string[]  // Command-line arguments to pass to the script
   cwd: string
   stdinData?: any
   logPrefix?: string
@@ -20,7 +21,7 @@ export interface PythonExecutionResult {
  * Execute a Python script and return the result
  */
 export async function executePython(options: PythonExecutionOptions): Promise<PythonExecutionResult> {
-  const { scriptPath, scriptCode, cwd, stdinData, logPrefix = '[PYTHON]' } = options
+  const { scriptPath, scriptCode, args = [], cwd, stdinData, logPrefix = '[PYTHON]' } = options
   
   const pythonExecutable = getPythonExecutable(cwd)
   
@@ -35,8 +36,8 @@ export async function executePython(options: PythonExecutionOptions): Promise<Py
     // Execute inline Python code
     python = spawn(pythonExecutable, ['-c', scriptCode], spawnOptions)
   } else if (scriptPath) {
-    // Execute Python script file
-    python = spawn(pythonExecutable, [scriptPath], spawnOptions)
+    // Execute Python script file with optional arguments
+    python = spawn(pythonExecutable, [scriptPath, ...args], spawnOptions)
   } else {
     throw new Error('Either scriptPath or scriptCode must be provided')
   }

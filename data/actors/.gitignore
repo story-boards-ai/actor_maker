@@ -10,3 +10,6 @@
 
 # Keep directory structure
 !.gitkeep
+
+# Allow base images to be viewed
+!*/base_image/*_base.png
