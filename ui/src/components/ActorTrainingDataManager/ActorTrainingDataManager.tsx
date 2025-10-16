@@ -5,6 +5,7 @@ import * as Separator from '@radix-ui/react-separator';
 import * as Progress from '@radix-ui/react-progress';
 import { BaseImageModal } from './BaseImageModal';
 import { BaseImageThumbnail } from './BaseImageThumbnail';
+import { TrainingImageModal } from './TrainingImageModal';
 
 interface ActorTrainingDataManagerProps {
   actor: Actor;
@@ -35,12 +36,15 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showBaseImageModal, setShowBaseImageModal] = useState(false);
+  const [selectedTrainingImage, setSelectedTrainingImage] = useState<TrainingImage | null>(null);
+  const [showGenerateModal, setShowGenerateModal] = useState(false);
   const [gridSize, setGridSize] = useState(200); // 200px default
   const [syncStatus, setSyncStatus] = useState<SyncStatus>({
     syncing: false,
     progress: { current: 0, total: 0 },
     message: ''
   });
+  const [showDeleteAllConfirm, setShowDeleteAllConfirm] = useState(false);
 
   useEffect(() => {
     loadTrainingData();
@@ -277,6 +281,55 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     }
   }
 
+  async function deleteAllTrainingData() {
+    try {
+      setShowDeleteAllConfirm(false);
+      setSyncStatus({
+        syncing: true,
+        progress: { current: 0, total: trainingImages.length },
+        message: 'Deleting all training data...'
+      });
+
+      const response = await fetch(`/api/actors/${actor.id}/training-data/delete-all`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          actor_id: actor.id,
+          actor_name: actor.name
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Delete all failed');
+      }
+
+      const result = await response.json();
+      
+      setSyncStatus({
+        syncing: false,
+        progress: { current: result.deleted_local + result.deleted_s3, total: trainingImages.length },
+        message: `✅ Deleted all training data (${result.deleted_local} local, ${result.deleted_s3} S3)`
+      });
+
+      // Reload to update list
+      await loadTrainingData();
+      
+      // Clear message after 3 seconds
+      setTimeout(() => {
+        setSyncStatus(prev => ({ ...prev, message: '' }));
+      }, 3000);
+
+    } catch (err) {
+      console.error('Delete all failed:', err);
+      setSyncStatus({
+        syncing: false,
+        progress: { current: 0, total: 0 },
+        message: `❌ Delete all failed: ${err instanceof Error ? err.message : 'Unknown error'}`
+      });
+    }
+  }
+
   if (loading) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', background: '#f8fafc' }}>
@@ -359,11 +412,27 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
               </button>
 
               <button 
+                onClick={() => setShowGenerateModal(true)}
+                disabled={!baseImage}
+                style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.2)', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: !baseImage ? 'not-allowed' : 'pointer', opacity: !baseImage ? 0.5 : 1 }}
+              >
+                ✨ Generate Single Image
+              </button>
+
+              <button 
                 onClick={generateTrainingImages}
                 disabled={!baseImage}
                 style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.2)', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: !baseImage ? 'not-allowed' : 'pointer', opacity: !baseImage ? 0.5 : 1 }}
               >
-                ✨ Generate Images
+                🎲 Generate Batch (20)
+              </button>
+
+              <button 
+                onClick={() => setShowDeleteAllConfirm(true)}
+                disabled={trainingImages.length === 0}
+                style={{ padding: '10px 20px', background: '#ef4444', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: trainingImages.length === 0 ? 'not-allowed' : 'pointer', opacity: trainingImages.length === 0 ? 0.5 : 1 }}
+              >
+                🗑️ Delete All
               </button>
 
               <Separator.Root decorative orientation="vertical" style={{ width: '1px', background: 'rgba(255,255,255,0.3)', height: '32px' }} />
@@ -439,7 +508,11 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                     
                     return (
                       <div key={img.index} style={{ width: `${gridSize}px`, background: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: `2px solid ${borderColor}`, transition: 'transform 0.2s ease', position: 'relative' }}>
-                        <div style={{ position: 'relative', width: `${gridSize}px`, height: `${gridSize}px`, background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div 
+                          onClick={() => setSelectedTrainingImage(img)}
+                          style={{ position: 'relative', width: `${gridSize}px`, height: `${gridSize}px`, background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
+                          title="Click to view full size"
+                        >
                           <img 
                             src={img.local_exists ? img.local_path! : img.s3_url} 
                             alt={img.filename}
@@ -453,7 +526,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                           />
                           
                           {/* Badges */}
-                          <div style={{ position: 'absolute', top: '8px', left: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div style={{ position: 'absolute', top: '8px', left: '8px', display: 'flex', flexDirection: 'column', gap: '4px', pointerEvents: 'none' }}>
                             {img.local_exists && (
                               <div style={{ padding: '4px 8px', background: 'rgba(16,185,129,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="Exists locally">
                                 💾
@@ -478,7 +551,10 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                           
                           {/* Delete Button - Direct delete, no confirmation */}
                           <button
-                            onClick={() => deleteTrainingImage(img)}
+                            onClick={(e) => {
+                              e.stopPropagation(); // Prevent modal from opening
+                              deleteTrainingImage(img);
+                            }}
                             style={{ position: 'absolute', bottom: '8px', right: '8px', width: '32px', height: '32px', padding: 0, border: 'none', borderRadius: '6px', background: '#ef4444', color: 'white', fontSize: '16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(239,68,68,0.4)' }}
                             title="Delete from local and S3"
                           >
@@ -512,6 +588,99 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
           open={showBaseImageModal}
           onOpenChange={setShowBaseImageModal}
         />
+      )}
+
+      {/* Training Image Modal - View Mode */}
+      <TrainingImageModal
+        image={selectedTrainingImage}
+        open={selectedTrainingImage !== null}
+        onOpenChange={(open) => !open && setSelectedTrainingImage(null)}
+        actorId={actor.id}
+        actorName={actor.name}
+        baseImagePath={baseImage}
+        onImageGenerated={loadTrainingData}
+      />
+
+      {/* Training Image Modal - Generator Mode */}
+      <TrainingImageModal
+        image={null}
+        open={showGenerateModal}
+        onOpenChange={setShowGenerateModal}
+        actorId={actor.id}
+        actorName={actor.name}
+        baseImagePath={baseImage}
+        onImageGenerated={loadTrainingData}
+      />
+
+      {/* Delete All Confirmation Dialog */}
+      {showDeleteAllConfirm && (
+        <div 
+          style={{ 
+            position: 'fixed', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            background: 'rgba(0,0,0,0.5)', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            zIndex: 1000 
+          }}
+          onClick={() => setShowDeleteAllConfirm(false)}
+        >
+          <div 
+            style={{ 
+              background: 'white', 
+              borderRadius: '12px', 
+              padding: '32px', 
+              maxWidth: '500px', 
+              boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)' 
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{ fontSize: '48px', textAlign: 'center', marginBottom: '16px' }}>⚠️</div>
+            <h3 style={{ margin: '0 0 16px 0', fontSize: '24px', fontWeight: 600, color: '#1e293b', textAlign: 'center' }}>
+              Delete All Training Data?
+            </h3>
+            <p style={{ margin: '0 0 24px 0', color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>
+              This will permanently delete all <strong>{trainingImages.length} training images</strong> from both local storage and S3. 
+              This action cannot be undone.
+            </p>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+              <button
+                onClick={() => setShowDeleteAllConfirm(false)}
+                style={{ 
+                  padding: '12px 24px', 
+                  background: '#f1f5f9', 
+                  color: '#475569', 
+                  border: 'none', 
+                  borderRadius: '6px', 
+                  fontWeight: 500, 
+                  cursor: 'pointer',
+                  fontSize: '16px'
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={deleteAllTrainingData}
+                style={{ 
+                  padding: '12px 24px', 
+                  background: '#ef4444', 
+                  color: 'white', 
+                  border: 'none', 
+                  borderRadius: '6px', 
+                  fontWeight: 500, 
+                  cursor: 'pointer',
+                  fontSize: '16px'
+                }}
+              >
+                Delete All
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Add keyframes for spinner animation */}

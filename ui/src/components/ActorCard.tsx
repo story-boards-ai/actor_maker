@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { Actor } from "../types";
+import { fetchTrainingImageCount } from "../utils/trainingDataUtils";
 import "./ActorCard.css";
 
 interface ActorCardProps {
@@ -9,6 +10,7 @@ interface ActorCardProps {
 
 export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
+  const [trainingCount, setTrainingCount] = useState<number | null>(null);
 
   // Build the image path - use the img field from actor data
   const imageSrc =
@@ -19,6 +21,11 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
     console.error(`Image failed for ${actor.name}:`, imageSrc);
     setImageError(true);
   };
+
+  useEffect(() => {
+    // Fetch training image count
+    fetchTrainingImageCount(actor.id).then(setTrainingCount);
+  }, [actor.id]);
 
   return (
     <div className="actor-card">
@@ -36,8 +43,18 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
           </div>
         )}
         <div className="actor-card-overlay">
-          <span className="actor-index">#{actor.id}</span>
-          <span className="actor-tag">{actor.sex}</span>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <span className="actor-index">#{actor.id}</span>
+            {trainingCount !== null && (
+              <span 
+                className="actor-tag" 
+                style={{ background: trainingCount > 0 ? '#10b981' : '#94a3b8' }}
+                title={`${trainingCount} training images`}
+              >
+                📸 {trainingCount}
+              </span>
+            )}
+          </div>
         </div>
       </div>
 

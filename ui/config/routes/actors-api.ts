@@ -38,9 +38,18 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // POST /api/actors/:actorId/training-data/generate-single (MUST come before /generate)
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/generate-single') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate-single$/);
+      if (match) {
+        handleGenerateSingleTrainingImage(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     // POST /api/actors/:actorId/training-data/generate
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/generate') && req.method === 'POST') {
-      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate/);
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate$/);
       if (match) {
         handleGenerateTrainingImages(req, res, projectRoot, match[1]);
         return;
@@ -49,9 +58,27 @@ export function createActorsApi(projectRoot: string) {
 
     // POST /api/actors/:actorId/training-data/delete
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/delete') && req.method === 'POST') {
-      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/delete/);
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/delete$/);
       if (match) {
         handleDeleteTrainingImage(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
+    // GET /api/actors/:actorId/training-prompts
+    if (url?.startsWith('/api/actors/') && url.includes('/training-prompts') && req.method === 'GET') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-prompts$/);
+      if (match) {
+        handleGetTrainingPrompts(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
+    // POST /api/actors/:actorId/training-data/delete-all
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/delete-all') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/delete-all/);
+      if (match) {
+        handleDeleteAllTrainingData(req, res, projectRoot, match[1]);
         return;
       }
     }
@@ -421,6 +448,187 @@ function handleGenerateTrainingImages(
 }
 
 /**
+ * POST /api/actors/:actorId/training-data/generate-single
+ * Generates a single training image using Replicate flux-kontext-pro
+ */
+function handleGenerateSingleTrainingImage(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Generate Single] Received body length:', body.length);
+      console.log('[Generate Single] Body content:', body);
+      
+      if (!body || body.length === 0) {
+        throw new Error('Empty request body');
+      }
+
+      const { actor_name, base_image_path, prompt, actor_type, actor_sex } = JSON.parse(body);
+      
+      console.log('[Generate Single] Parsed data:', { actor_name, base_image_path, prompt });
+
+      // Convert relative path to absolute path
+      const absoluteImagePath = base_image_path.startsWith('/data') 
+        ? path.join(projectRoot, base_image_path)
+        : base_image_path;
+
+      console.log('[Generate Single] Absolute path:', absoluteImagePath);
+
+      // Call Python script to generate single training image
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_single_training_image.py');
+      const args = [scriptPath, actor_name, absoluteImagePath, prompt];
+      if (actor_type) args.push(actor_type);
+      if (actor_sex) args.push(actor_sex);
+
+      console.log('[Generate Single] Spawning Python with args:', args);
+
+      const pythonProcess = spawn('python3', args);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+          }
+        } else {
+          console.error('Single image generation failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Generation failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Generate Single] Error:', error);
+      console.error('[Generate Single] Body was:', body);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error',
+        bodyLength: body.length
+      }));
+    }
+  });
+}
+
+/**
+ * GET /api/actors/:actorId/training-prompts
+ * Returns available training prompts for the actor
+ */
+function handleGetTrainingPrompts(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    // Load actorsData to get actor info
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actor = actorsData.find((a: any) => a.id === parseInt(actorId));
+
+    if (!actor) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Determine descriptor based on actor attributes
+    const sex = actor.sex?.toLowerCase();
+    const descriptor = sex === 'male' ? 'man' : sex === 'female' ? 'woman' : 'person';
+
+    // Define preset prompts (matching actor_training_prompts.py structure)
+    const prompts = [
+      {
+        id: 'rain_street',
+        category: 'photorealistic',
+        label: 'Rain-Slick Street Run',
+        prompt: `The ${descriptor} runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Three-quarter back angle. Reflections on the asphalt, no other figures in frame.`
+      },
+      {
+        id: 'window_light',
+        category: 'photorealistic',
+        label: 'Close-up in Window Light',
+        prompt: `Close-up of the ${descriptor} looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.`
+      },
+      {
+        id: 'pen_ink_stoop',
+        category: 'bw_stylized',
+        label: 'Pen & Ink - Townhouse Stoop',
+        prompt: `A black-and-white pen and ink line drawing of the ${descriptor} tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.`
+      },
+      {
+        id: 'charcoal_alley',
+        category: 'bw_stylized',
+        label: 'Charcoal - Alley Glance',
+        prompt: `A black-and-white charcoal sketch of the ${descriptor} glancing over their shoulder in a narrow alley. Loose, expressive strokes, smudged shadows, high contrast, no color. Preserve identity. Illustration, not photorealistic.`
+      },
+      {
+        id: 'woodcut_stairs',
+        category: 'bw_stylized',
+        label: 'Woodcut - Fire Escape',
+        prompt: `A black-and-white woodcut print of the ${descriptor} climbing a fire escape at dusk. Bold angular cuts, stark black and white, no grayscale, heavy grain texture. Preserve key features. Illustration, not photorealistic.`
+      },
+      {
+        id: 'comic_rooftop',
+        category: 'color_stylized',
+        label: 'Comic Book - Rooftop Leap',
+        prompt: `A dynamic comic book illustration of the ${descriptor} leaping a narrow rooftop gap at night with a city skyline behind. Low angle, foreshortened limbs, speed lines, bold inks, cel-shaded color, limited palette with halftone dots. Preserve identity and key attributes. Illustration style, not photorealistic.`
+      },
+      {
+        id: 'watercolor_cafe',
+        category: 'color_stylized',
+        label: 'Watercolor - Cafe Window',
+        prompt: `A watercolor painting of the ${descriptor} seated at a cafe window, looking out at a rainy street. Soft washes, wet-on-wet blending, visible brush strokes, muted palette. Preserve facial features. Illustration, not photorealistic.`
+      },
+      {
+        id: 'gouache_stairwell',
+        category: 'color_stylized',
+        label: 'Gouache - Concrete Stairwell',
+        prompt: `A gouache painting of the ${descriptor} ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.`
+      }
+    ];
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      actor_id: actor.id,
+      actor_name: actor.name,
+      descriptor,
+      prompts
+    }));
+  } catch (error) {
+    console.error('Error loading training prompts:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to load training prompts', details: (error as Error).message }));
+  }
+}
+
+/**
  * POST /api/actors/:actorId/training-data/delete
  * Deletes a training image from both local storage and S3
  */
@@ -477,6 +685,68 @@ function handleDeleteTrainingImage(
       });
     } catch (error) {
       console.error('Error deleting training image:', error);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Invalid request body' }));
+    }
+  });
+}
+
+/**
+ * POST /api/actors/:actorId/training-data/delete-all
+ * Deletes all training data from both local storage and S3
+ */
+function handleDeleteAllTrainingData(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      const { actor_name } = JSON.parse(body);
+
+      // Call Python script to delete all training data
+      const scriptPath = path.join(projectRoot, 'scripts', 'delete_all_actor_training_data.py');
+      const pythonProcess = spawn('python3', [
+        scriptPath,
+        actor_name
+      ]);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ deleted: true, message: 'All training data deleted' }));
+          }
+        } else {
+          console.error('Delete all failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Delete all failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('Error deleting all training data:', error);
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid request body' }));
