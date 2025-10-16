@@ -15,21 +15,26 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
   const [columns, setColumns] = useState(4);
 
   useEffect(() => {
-    async function loadActors() {
-      try {
-        // Import the actorsData from the data directory
-        const module = await import("../../../data/actorsData.ts");
-        setActors(module.actorsLibraryData);
-      } catch (err) {
-        console.error("Error loading actors:", err);
-        setError(err instanceof Error ? err.message : "Failed to load actors");
-      } finally {
-        setLoading(false);
-      }
-    }
-
     loadActors();
   }, []);
+
+  async function loadActors() {
+    try {
+      setLoading(true);
+      // Fetch actors from API to get latest data including 'good' flags
+      const response = await fetch('/api/actors');
+      if (!response.ok) {
+        throw new Error(`Failed to load actors: ${response.statusText}`);
+      }
+      const actorsData = await response.json();
+      setActors(actorsData);
+    } catch (err) {
+      console.error("Error loading actors:", err);
+      setError(err instanceof Error ? err.message : "Failed to load actors");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   const handleRegeneratePosterFrame = async (actor: Actor) => {
     console.log("Regenerating poster frame for:", actor.name);
@@ -57,8 +62,7 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
       console.log("Poster frame regenerated:", result);
 
       // Reload actors to get updated poster frame URLs
-      const module = await import("../../../data/actorsData.ts");
-      setActors(module.actorsLibraryData);
+      await loadActors();
 
       toast.success(`Poster frame regenerated successfully for ${actor.name}!`);
     } catch (error) {
@@ -141,6 +145,7 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
             actor={actor}
             onOpenTrainingData={onOpenTrainingData}
             onRegeneratePosterFrame={handleRegeneratePosterFrame}
+            onActorUpdated={loadActors}
           />
         ))}
       </div>

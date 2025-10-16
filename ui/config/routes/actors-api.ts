@@ -11,6 +11,12 @@ export function createActorsApi(projectRoot: string) {
   return (req: IncomingMessage, res: ServerResponse, next: () => void) => {
     const url = req.url;
 
+    // GET /api/actors - Get all actors
+    if (url === '/api/actors' && req.method === 'GET') {
+      handleGetAllActors(req, res, projectRoot);
+      return;
+    }
+
     // GET /api/actors/:actorId/training-data
     if (url?.startsWith('/api/actors/') && url.includes('/training-data') && req.method === 'GET') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data$/);
@@ -1165,4 +1171,36 @@ function handleRegeneratePosterFrame(
       }));
     }
   });
+}
+
+/**
+ * GET /api/actors
+ * Get all actors from actorsData.json
+ */
+function handleGetAllActors(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string
+) {
+  try {
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    
+    if (!fs.existsSync(actorsDataPath)) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'actorsData.json not found' }));
+      return;
+    }
+
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(actorsData));
+  } catch (error) {
+    console.error('Error loading actors:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to load actors' }));
+  }
 }

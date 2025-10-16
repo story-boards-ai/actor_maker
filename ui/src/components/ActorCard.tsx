@@ -8,9 +8,10 @@ interface ActorCardProps {
   actor: Actor;
   onOpenTrainingData?: (actor: Actor) => void;
   onRegeneratePosterFrame?: (actor: Actor) => void;
+  onActorUpdated?: () => void;
 }
 
-export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame }: ActorCardProps) {
+export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame, onActorUpdated }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
   const [trainingCount, setTrainingCount] = useState<number | null>(null);
   const [isGood, setIsGood] = useState(actor.good || false);
@@ -49,6 +50,11 @@ export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame }
 
       const data = await response.json();
       setIsGood(data.good);
+      
+      // Notify parent to reload actors data
+      if (onActorUpdated) {
+        onActorUpdated();
+      }
     } catch (error) {
       console.error('Error toggling good status:', error);
     } finally {
