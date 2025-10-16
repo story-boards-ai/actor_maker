@@ -68,4 +68,11 @@ export interface Actor {
   };
   description: string;
   url: string;
+  training_data?: {
+    s3_urls: string[];
+    local_path: string;
+    base_image_path: string;
+    count: number;
+    synced: boolean;
+  };
 }

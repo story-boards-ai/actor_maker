@@ -18,6 +18,7 @@ import { createTestSuiteApi } from "./routes/test-suite-api";
 import { createTestSuiteJobApi } from "./routes/test-suite-job-api";
 import { createSettingsSetsApi } from "./routes/settings-sets-api";
 import { createAssessmentsApi } from "./routes/assessments-api";
+import { createActorsApi } from "./routes/actors-api";
 
 // Global variable to store actual running port
 let actualServerPort: number | undefined;
@@ -70,6 +71,7 @@ export function createServerPlugin(): Plugin {
             createTestSuiteJobApi(projectRoot),
             createSettingsSetsApi(projectRoot),
             createAssessmentsApi(projectRoot),
+            createActorsApi(projectRoot),
           ];
 
           // Execute middleware chain

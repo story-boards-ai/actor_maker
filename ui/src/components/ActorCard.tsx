@@ -4,9 +4,10 @@ import './ActorCard.css';
 
 interface ActorCardProps {
   actor: Actor;
+  onOpenTrainingData?: (actor: Actor) => void;
 }
 
-export function ActorCard({ actor }: ActorCardProps) {
+export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
 
   // Build the image path - use the img field from actor data
@@ -57,6 +58,18 @@ export function ActorCard({ actor }: ActorCardProps) {
             <span className="info-value">{actor.face_prompt}</span>
           </div>
         </div>
+
+        {onOpenTrainingData && (
+          <div className="actor-card-actions">
+            <button
+              className="actor-card-button"
+              onClick={() => onOpenTrainingData(actor)}
+              title="Manage training data"
+            >
+              📸 Training Data
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -9,10 +9,12 @@ import "./index.css";
 import { TrainingDataViewer } from "./components/TrainingDataViewer";
 import { TrainingDataManager } from "./components/TrainingDataManager";
 import { TrainingDataS3Manager } from "./components/TrainingDataS3Manager";
+import { ActorTrainingDataManager } from "./components/ActorTrainingDataManager";
 import { LoRATrainingTab } from "./components/LoRATrainingTab";
 import { Validator } from "./components/Validator/Validator";
 import { Toaster } from "sonner";
 import { ExportToBackendButton } from "./components/ExportToBackendButton";
+import type { Actor } from "./types";
 
 interface TrainingTab {
   id: string;
@@ -33,6 +35,12 @@ interface S3ManagerTab {
   label: string;
 }
 
+interface ActorTrainingTab {
+  id: string;
+  actor: Actor;
+  label: string;
+}
+
 
 function App() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -40,6 +48,7 @@ function App() {
   const [trainingManagerTab, setTrainingManagerTab] =
     useState<TrainingManagerTab | null>(null);
   const [s3ManagerTab, setS3ManagerTab] = useState<S3ManagerTab | null>(null);
+  const [actorTrainingTab, setActorTrainingTab] = useState<ActorTrainingTab | null>(null);
   const [pendingImageGenLoad, setPendingImageGenLoad] = useState<{
     image: string;
     style: Style;
@@ -88,6 +97,21 @@ function App() {
 
   const handleCloseS3Manager = () => {
     setS3ManagerTab(null);
+    setActiveTab("tab1"); // Go back to Actors Library
+  };
+
+  const handleOpenActorTraining = (actor: Actor) => {
+    const newTab: ActorTrainingTab = {
+      id: `actor-training-${actor.id}`,
+      actor,
+      label: `${actor.name} - Training`,
+    };
+    setActorTrainingTab(newTab);
+    setActiveTab(newTab.id);
+  };
+
+  const handleCloseActorTraining = () => {
+    setActorTrainingTab(null);
     setActiveTab("tab1"); // Go back to Actors Library
   };
 
@@ -189,10 +213,30 @@ function App() {
             </Tabs.Trigger>
           )}
 
+          {actorTrainingTab && (
+            <Tabs.Trigger
+              className="TabsTrigger training-tab"
+              value={actorTrainingTab.id}
+            >
+              {actorTrainingTab.label}
+              <span
+                className="tab-close-button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCloseActorTraining();
+                }}
+                role="button"
+                aria-label="Close tab"
+              >
+                ×
+              </span>
+            </Tabs.Trigger>
+          )}
+
         </Tabs.List>
 
         <Tabs.Content className="TabsContent" value="tab1">
-          <ActorsGrid />
+          <ActorsGrid onOpenTrainingData={handleOpenActorTraining} />
         </Tabs.Content>
 
         <Tabs.Content className="TabsContent" value="tab2">
@@ -250,6 +294,15 @@ function App() {
             <TrainingDataS3Manager
               style={s3ManagerTab.style}
               onClose={handleCloseS3Manager}
+            />
+          </Tabs.Content>
+        )}
+
+        {actorTrainingTab && (
+          <Tabs.Content className="TabsContent" value={actorTrainingTab.id}>
+            <ActorTrainingDataManager
+              actor={actorTrainingTab.actor}
+              onClose={handleCloseActorTraining}
             />
           </Tabs.Content>
         )}

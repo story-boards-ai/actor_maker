@@ -3,7 +3,11 @@ import { ActorCard } from './ActorCard';
 import type { Actor } from '../types';
 import './ActorsGrid.css';
 
-export function ActorsGrid() {
+interface ActorsGridProps {
+  onOpenTrainingData?: (actor: Actor) => void;
+}
+
+export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
   const [actors, setActors] = useState<Actor[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -70,6 +74,7 @@ export function ActorsGrid() {
           <ActorCard 
             key={actor.id} 
             actor={actor}
+            onOpenTrainingData={onOpenTrainingData}
           />
         ))}
       </div>
