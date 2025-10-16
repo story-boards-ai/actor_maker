@@ -208,8 +208,14 @@ data/scenes/**/*.webp
 data/scenes/**/*.avif
 data/scenes/**/*.gif
 
-# Large resource images and test results
-resources/
+# Large resource images (but keep JSON, text, and metadata files)
+resources/**/*.png
+resources/**/*.jpg
+resources/**/*.jpeg
+resources/**/*.webp
+resources/**/*.gif
+resources/**/*.bmp
+resources/**/*.tiff
 
 # User settings (per-style configuration)
 data/settings/
