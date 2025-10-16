@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import type { Actor } from '../types';
-import './ActorCard.css';
+import { useState, useEffect } from "react";
+import type { Actor } from "../types";
+import "./ActorCard.css";
 
 interface ActorCardProps {
   actor: Actor;
@@ -11,7 +11,9 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
 
   // Build the image path - use the img field from actor data
-  const imageSrc = actor.url || `/actors/${actor.img}`;
+  const imageSrc =
+    actor.poster_frames?.accelerated?.webp_md ||
+    actor.poster_frames?.standard?.webp_md;
 
   const handleImageError = () => {
     console.error(`Image failed for ${actor.name}:`, imageSrc);
@@ -22,9 +24,9 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
     <div className="actor-card">
       <div className="actor-card-image">
         {!imageError ? (
-          <img 
+          <img
             src={imageSrc}
-            alt={actor.name} 
+            alt={actor.name}
             loading="lazy"
             onError={handleImageError}
           />
@@ -38,12 +40,12 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
           <span className="actor-tag">{actor.sex}</span>
         </div>
       </div>
-      
+
       <div className="actor-card-content">
         <div className="actor-card-header">
           <h3 className="actor-card-title">{actor.name}</h3>
         </div>
-        
+
         <div className="actor-card-info">
           <div className="info-row">
             <span className="info-label">Age</span>
