@@ -659,6 +659,15 @@ async function handleNgrokStatus(req: IncomingMessage, res: ServerResponse) {
 
 async function handleNgrokStart(req: IncomingMessage, res: ServerResponse) {
   try {
+    // First, disconnect any existing tunnels to avoid conflicts
+    try {
+      await ngrok.disconnect();
+      console.log('[Ngrok] Disconnected any existing tunnels');
+    } catch (disconnectErr) {
+      // Ignore errors if no tunnels exist
+      console.log('[Ngrok] No existing tunnels to disconnect');
+    }
+    
     // Check if we already have a cached URL
     if (ngrokUrl) {
       res.statusCode = 200;

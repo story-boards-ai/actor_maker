@@ -33,7 +33,7 @@ class SystemActorsDataCopier:
             raise ValueError(f"Target directory does not exist: {target_root}")
     
     def copy_characters_json(self) -> None:
-        """Copy the main characters.json file."""
+        """Copy the main characters.json file, preserving 'good' flags from existing data."""
         source_file = self.source_root / "characters.json"
         target_file = self.target_root / "data" / "actorsData.json"
         
@@ -44,23 +44,47 @@ class SystemActorsDataCopier:
         # Create target directory if needed
         target_file.parent.mkdir(parents=True, exist_ok=True)
         
-        # Copy file
-        shutil.copy2(source_file, target_file)
-        print(f"✓ Copied characters.json -> actorsData.json")
-        
-        # Also create a TypeScript version
+        # Load source data
         with open(source_file, 'r') as f:
-            data = json.load(f)
+            source_data = json.load(f)
         
+        # Load existing target data to preserve 'good' flags
+        existing_good_flags = {}
+        if target_file.exists():
+            try:
+                with open(target_file, 'r') as f:
+                    existing_data = json.load(f)
+                    # Build a map of actor_id -> good flag
+                    for actor in existing_data:
+                        actor_id = actor.get('id')
+                        if actor_id is not None and 'good' in actor:
+                            existing_good_flags[actor_id] = actor['good']
+                print(f"  Preserving {len(existing_good_flags)} 'good' flags from existing data")
+            except Exception as e:
+                print(f"  Warning: Could not load existing data to preserve flags: {e}")
+        
+        # Merge: update source data with preserved 'good' flags
+        for actor in source_data:
+            actor_id = actor.get('id')
+            if actor_id in existing_good_flags:
+                actor['good'] = existing_good_flags[actor_id]
+        
+        # Save merged data
+        with open(target_file, 'w') as f:
+            json.dump(source_data, f, indent=2)
+        
+        print(f"✓ Copied characters.json -> actorsData.json (preserved 'good' flags)")
+        
+        # Also create a TypeScript version using the merged data
         target_ts = self.target_root / "data" / "actorsData.ts"
         with open(target_ts, 'w') as f:
             f.write("// Auto-generated from system_actors/characters.json\n")
             f.write("// This file contains all actor metadata including poster frames and LoRA URLs\n\n")
             f.write("export const actorsLibraryData = ")
-            json.dump(data, f, indent=2)
+            json.dump(source_data, f, indent=2)  # Use merged source_data instead of reloading
             f.write(";\n")
         
-        print(f"✓ Created TypeScript version: actorsData.ts")
+        print(f"✓ Created TypeScript version: actorsData.ts (with preserved 'good' flags)")
     
     def copy_character_data(self, character_name: str, copy_count: Dict[str, int]) -> bool:
         """
