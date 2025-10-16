@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import type { Style } from '../../../types';
 import './SettingsModalRedesigned.css';
 
@@ -489,9 +490,9 @@ export function SettingsModalRedesigned(props: SettingsModalProps) {
               onClick={async () => {
                 try {
                   await onSaveToRegistry();
-                  alert('✅ Frontpad and Backpad saved to registry successfully!');
+                  toast.success('Frontpad and Backpad saved to registry successfully!');
                 } catch (error) {
-                  alert('❌ Failed to save to registry. Check console for details.');
+                  toast.error('Failed to save to registry. Check console for details.');
                   console.error('Registry save error:', error);
                 }
               }}

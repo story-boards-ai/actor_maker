@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 import type { Actor } from "../types";
 import { fetchTrainingImageCount } from "../utils/trainingDataUtils";
 import "./ActorCard.css";
@@ -6,13 +7,15 @@ import "./ActorCard.css";
 interface ActorCardProps {
   actor: Actor;
   onOpenTrainingData?: (actor: Actor) => void;
+  onRegeneratePosterFrame?: (actor: Actor) => void;
 }
 
-export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
+export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame }: ActorCardProps) {
   const [imageError, setImageError] = useState(false);
   const [trainingCount, setTrainingCount] = useState<number | null>(null);
   const [isGood, setIsGood] = useState(actor.good || false);
   const [toggling, setToggling] = useState(false);
+  const [regenerating, setRegenerating] = useState(false);
 
   // Build the image path - use the img field from actor data
   const imageSrc =
@@ -50,6 +53,23 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
       console.error('Error toggling good status:', error);
     } finally {
       setToggling(false);
+    }
+  };
+
+  const handleRegeneratePosterFrame = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (regenerating || !onRegeneratePosterFrame) return;
+
+    setRegenerating(true);
+    toast.info(`Regenerating poster frame for ${actor.name}...`);
+    
+    try {
+      await onRegeneratePosterFrame(actor);
+    } catch (error) {
+      console.error('Error regenerating poster frame:', error);
+      toast.error('Failed to regenerate poster frame');
+    } finally {
+      setRegenerating(false);
     }
   };
 
@@ -125,17 +145,45 @@ export function ActorCard({ actor, onOpenTrainingData }: ActorCardProps) {
             <span className="info-label">Description</span>
             <span className="info-value">{actor.face_prompt}</span>
           </div>
+          {actor.model_created_at && (
+            <div className="info-row">
+              <span className="info-label">Model Date</span>
+              <span className="info-value info-subtle">
+                {new Date(actor.model_created_at).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+            </div>
+          )}
         </div>
 
-        {onOpenTrainingData && (
+        {(onOpenTrainingData || onRegeneratePosterFrame) && (
           <div className="actor-card-actions">
-            <button
-              className="actor-card-button"
-              onClick={() => onOpenTrainingData(actor)}
-              title="Manage training data"
-            >
-              📸 Training Data
-            </button>
+            {onOpenTrainingData && (
+              <button
+                className="actor-card-button"
+                onClick={() => onOpenTrainingData(actor)}
+                title="Manage training data"
+              >
+                📸 Training Data
+              </button>
+            )}
+            {onRegeneratePosterFrame && (
+              <button
+                className="actor-card-button-small"
+                onClick={handleRegeneratePosterFrame}
+                disabled={regenerating}
+                title="Regenerate poster frame"
+                style={{
+                  opacity: regenerating ? 0.5 : 1,
+                  cursor: regenerating ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {regenerating ? '⏳' : '🎨'}
+              </button>
+            )}
           </div>
         )}
       </div>

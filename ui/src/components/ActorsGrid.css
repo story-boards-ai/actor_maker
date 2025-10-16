@@ -26,6 +26,81 @@
   font-size: 1rem;
 }
 
+.column-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.column-control-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.column-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.column-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.column-btn:active {
+  transform: scale(0.95);
+}
+
+.column-input {
+  width: 50px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0 0.25rem;
+}
+
+.column-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Hide spinner buttons in number input */
+.column-input::-webkit-inner-spin-button,
+.column-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.column-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .sync-s3-button {
   display: flex;
   align-items: center;
@@ -73,7 +148,7 @@
 
 .actors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
@@ -166,13 +241,18 @@
 /* Responsive */
 @media (max-width: 640px) {
   .actors-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
   
   .actors-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .column-control {
+    width: 100%;
+    justify-content: center;
   }
   
   .sync-s3-button {
@@ -181,20 +261,4 @@
   }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
-  .actors-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .actors-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1441px) {
-  .actors-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
+/* Grid columns are now controlled dynamically via the column control */

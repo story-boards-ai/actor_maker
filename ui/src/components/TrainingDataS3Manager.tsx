@@ -242,24 +242,30 @@ export function TrainingDataS3Manager({ style, onClose }: TrainingDataS3ManagerP
   }
 
   async function deleteSet(setId: number) {
-    if (!confirm(`Delete Set ${setId}?`)) return;
+    // Show confirmation toast with action buttons
+    toast.warning(`Delete Set ${setId}?`, {
+      action: {
+        label: 'Delete',
+        onClick: async () => {
+          try {
+            const response = await fetch(`/api/styles/${style.id}/selection-sets/${setId}`, {
+              method: 'DELETE'
+            });
 
-    try {
-      const response = await fetch(`/api/styles/${style.id}/selection-sets/${setId}`, {
-        method: 'DELETE'
-      });
+            if (!response.ok) throw new Error('Failed to delete selection set');
 
-      if (!response.ok) throw new Error('Failed to delete selection set');
-
-      await loadSelectionSets();
-      if (currentSetId === setId) {
-        setCurrentSetId(null);
+            await loadSelectionSets();
+            if (currentSetId === setId) {
+              setCurrentSetId(null);
+            }
+            toast.success(`Deleted Set ${setId}`);
+          } catch (err) {
+            console.error('Delete error:', err);
+            toast.error('Failed to delete selection set');
+          }
+        }
       }
-      toast.success(`Deleted Set ${setId}`);
-    } catch (err) {
-      console.error('Delete error:', err);
-      toast.error('Failed to delete selection set');
-    }
+    });
   }
 
   function selectNotInS3() {

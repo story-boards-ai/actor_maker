@@ -191,7 +191,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     try {
       setSyncStatus({
         syncing: true,
-        progress: { current: 0, total: 16 },
+        progress: { current: 0, total: 25 },
         message: 'Generating one image for each prompt...'
       });
 
@@ -425,7 +425,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                 disabled={!baseImage}
                 style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.2)', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: !baseImage ? 'not-allowed' : 'pointer', opacity: !baseImage ? 0.5 : 1 }}
               >
-                🎨 Generate All Prompts (16)
+                🎨 Generate All Prompts (25)
               </button>
 
               <button 

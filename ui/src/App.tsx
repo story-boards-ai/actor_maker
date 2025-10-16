@@ -11,6 +11,7 @@ import { TrainingDataManager } from "./components/TrainingDataManager";
 import { TrainingDataS3Manager } from "./components/TrainingDataS3Manager";
 import { ActorTrainingDataManager } from "./components/ActorTrainingDataManager";
 import { LoRATrainingTab } from "./components/LoRATrainingTab";
+import { ActorTrainingTab } from "./components/ActorTraining";
 import { Validator } from "./components/Validator/Validator";
 import { Toaster } from "sonner";
 import { ExportToBackendButton } from "./components/ExportToBackendButton";
@@ -150,7 +151,7 @@ function App() {
             Validator
           </Tabs.Trigger>
           <Tabs.Trigger className="TabsTrigger" value="tab6">
-            LoRA Training
+            Actor Training
           </Tabs.Trigger>
 
           {trainingTab && (
@@ -259,7 +260,7 @@ function App() {
         </Tabs.Content>
 
         <Tabs.Content className="TabsContent" value="tab6">
-          <LoRATrainingTab />
+          <ActorTrainingTab />
         </Tabs.Content>
 
         {trainingTab && (

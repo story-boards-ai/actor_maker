@@ -1,3 +1,4 @@
+import { toast } from 'sonner';
 import type { SettingsSetSummary, AssessmentRating } from '../types/settings-set';
 
 interface LoadSettingsSetModalProps {
@@ -33,9 +34,13 @@ export function LoadSettingsSetModal(props: LoadSettingsSetModalProps) {
 
   const handleDelete = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    if (confirm('Are you sure you want to delete this settings set?')) {
-      props.onDelete(id);
-    }
+    const settingsSet = props.settingsSets.find(s => s.id === id);
+    toast.warning(`Delete "${settingsSet?.name || 'this settings set'}"?`, {
+      action: {
+        label: 'Delete',
+        onClick: () => props.onDelete(id)
+      }
+    });
   };
 
   return (

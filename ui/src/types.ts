@@ -69,6 +69,7 @@ export interface Actor {
   description: string;
   url: string;
   good?: boolean;
+  model_created_at?: string;
   training_data?: {
     s3_urls: string[];
     local_path: string;

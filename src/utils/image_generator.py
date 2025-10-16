@@ -10,10 +10,16 @@ from typing import Dict, Any, Optional, List
 from datetime import datetime
 import uuid
 
-from ..runpod.serverless import RunPodServerlessClient
-from ..runpod.config import RunPodConfig
-from ..workflows_lib.workflow_builder import WorkflowBuilder
-from ..styles.styles_registry import StylesRegistry
+try:
+    from ..runpod.serverless import RunPodServerlessClient
+    from ..runpod.config import RunPodConfig
+    from ..workflows_lib.workflow_builder import WorkflowBuilder
+    from ..styles.styles_registry import StylesRegistry
+except ImportError:
+    from runpod.serverless import RunPodServerlessClient
+    from runpod.config import RunPodConfig
+    from workflows_lib.workflow_builder import WorkflowBuilder
+    from styles.styles_registry import StylesRegistry
 
 logger = logging.getLogger(__name__)
 

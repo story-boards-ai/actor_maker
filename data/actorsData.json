@@ -80,7 +80,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0002_european_35_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0002_european_35_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 3,
@@ -134,7 +135,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0004_european_35_male_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0004_european_35_male_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 5,
@@ -161,7 +163,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0005_european_50_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0005_european_50_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 6,
@@ -188,7 +191,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0006_european_20_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0006_european_20_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 7,
@@ -243,7 +247,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0008_european_60_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0008_european_60_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 9,
@@ -270,7 +275,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 10,
@@ -297,7 +303,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0010_european_25_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0010_european_25_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 11,
@@ -324,7 +331,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0011_european_16_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0011_european_16_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 12,
