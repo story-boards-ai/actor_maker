@@ -8,11 +8,15 @@ interface ActorTrainingDataManagerProps {
 }
 
 interface TrainingImage {
-  url: string;
-  filename: string;
   index: number;
-  isLocal: boolean;
-  localPath?: string;
+  filename: string;
+  s3_url: string;
+  local_exists: boolean;
+  local_path: string | null;
+  local_hash: string | null;
+  s3_hash: string | null;
+  hash_match: boolean | null;
+  status: 's3_only' | 'local_only' | 'synced' | 'mismatch';
 }
 
 interface SyncStatus {
@@ -26,6 +30,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
   const [baseImage, setBaseImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showBaseImageModal, setShowBaseImageModal] = useState(false);
   const [syncStatus, setSyncStatus] = useState<SyncStatus>({
     syncing: false,
     progress: { current: 0, total: 0 },
@@ -36,6 +41,19 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     loadTrainingData();
   }, [actor.id]);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && showBaseImageModal) {
+        setShowBaseImageModal(false);
+      }
+    };
+
+    if (showBaseImageModal) {
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }
+  }, [showBaseImageModal]);
+
   async function loadTrainingData() {
     try {
       setLoading(true);
@@ -43,28 +61,18 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
 
       // Fetch training data info from backend
       const response = await fetch(`/api/actors/${actor.id}/training-data`);
-      if (!response.ok) throw new Error('Failed to load training data');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to load training data');
+      }
       
       const data = await response.json();
       
       // Set base image
       setBaseImage(data.base_image_path || null);
       
-      // Parse training images
-      const images: TrainingImage[] = data.s3_urls.map((url: string, index: number) => {
-        const filename = url.split('/').pop() || `image_${index}.png`;
-        return {
-          url,
-          filename,
-          index,
-          isLocal: data.local_images?.includes(filename) || false,
-          localPath: data.local_images?.includes(filename) 
-            ? `/data/actors/${actor.name}/training_data/${filename}` 
-            : undefined
-        };
-      });
-      
-      setTrainingImages(images);
+      // Set training images from new API structure
+      setTrainingImages(data.training_images || []);
     } catch (err) {
       console.error('Error loading training data:', err);
       setError(err instanceof Error ? err.message : 'Failed to load training data');
@@ -87,7 +95,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
         body: JSON.stringify({
           actor_id: actor.id,
           actor_name: actor.name,
-          s3_urls: trainingImages.map(img => img.url)
+          s3_urls: trainingImages.map(img => img.s3_url)
         })
       });
 
@@ -233,7 +241,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
           actor_id: actor.id,
           actor_name: actor.name,
           filename: image.filename,
-          s3_url: image.url
+          s3_url: image.s3_url
         })
       });
 
@@ -304,17 +312,26 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     );
   }
 
-  const localCount = trainingImages.filter(img => img.isLocal).length;
+  const localCount = trainingImages.filter(img => img.local_exists).length;
   const s3Count = trainingImages.length;
+  const syncedCount = trainingImages.filter(img => img.status === 'synced').length;
+  const mismatchCount = trainingImages.filter(img => img.status === 'mismatch').length;
 
   return (
     <div className="actor-training-manager">
       <div className="training-header">
-        <div>
-          <h2>{actor.name} - Training Data Manager</h2>
-          <p className="training-subtitle">
-            {s3Count} images in S3 • {localCount} local • {actor.age}y {actor.sex} {actor.ethnicity}
-          </p>
+        <div className="training-header-content">
+          {baseImage && (
+            <div className="base-image-thumbnail" onClick={() => setShowBaseImageModal(true)} title="Click to view full size">
+              <img src={baseImage} alt={`${actor.name} base`} />
+            </div>
+          )}
+          <div>
+            <h2>{actor.name} - Training Data Manager</h2>
+            <p className="training-subtitle">
+              {s3Count} total • {localCount} local • {syncedCount} synced • {mismatchCount > 0 ? `${mismatchCount} mismatch • ` : ''}{actor.age}y {actor.sex} {actor.ethnicity}
+            </p>
+          </div>
         </div>
 
         <div className="training-actions">
@@ -384,35 +401,66 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
         </div>
       )}
 
-      <div className="training-content">
-        {/* Base Image Section */}
-        {baseImage && (
-          <div className="base-image-section">
-            <h3>Base Image</h3>
-            <div className="base-image-container">
+      {/* Base Image Modal */}
+      {showBaseImageModal && baseImage && (
+        <div className="modal-overlay" onClick={() => setShowBaseImageModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowBaseImageModal(false)}>
+              ✕
+            </button>
+            <div className="modal-image-container">
               <img src={baseImage} alt={`${actor.name} base`} />
-              <div className="base-image-info">
-                <p><strong>Actor:</strong> {actor.name}</p>
-                <p><strong>Description:</strong> {actor.description}</p>
-              </div>
+            </div>
+            <div className="modal-info">
+              <h3>{actor.name}</h3>
+              <p><strong>Age:</strong> {actor.age} • <strong>Sex:</strong> {actor.sex} • <strong>Ethnicity:</strong> {actor.ethnicity}</p>
+              {actor.description && <p><strong>Description:</strong> {actor.description}</p>}
             </div>
           </div>
-        )}
+        </div>
+      )}
+
+      <div className="training-content">
 
         {/* Training Images Grid */}
         <div className="training-images-section">
           <h3>Training Images ({trainingImages.length})</h3>
           <div className="training-images-grid">
             {trainingImages.map((img) => (
-              <div key={img.index} className={`training-image-card ${img.isLocal ? 'local' : 's3-only'}`}>
+              <div key={img.index} className={`training-image-card status-${img.status}`}>
                 <div className="training-image-wrapper">
                   <img 
-                    src={img.isLocal ? img.localPath : img.url} 
+                    src={img.local_exists ? img.local_path! : img.s3_url} 
                     alt={img.filename}
                     loading="lazy"
+                    onError={(e) => {
+                      // Fallback to S3 URL if local fails
+                      if (img.local_exists && e.currentTarget.src !== img.s3_url) {
+                        e.currentTarget.src = img.s3_url;
+                      }
+                    }}
                   />
-                  <div className="training-image-badge">
-                    {img.isLocal ? '💾 Local' : '☁️ S3 Only'}
+                  <div className="training-image-badges">
+                    {img.local_exists && (
+                      <div className="training-image-badge local" title="Exists locally">
+                        💾
+                      </div>
+                    )}
+                    {img.s3_url && (
+                      <div className="training-image-badge s3" title="Exists in S3">
+                        ☁️
+                      </div>
+                    )}
+                    {img.status === 'synced' && (
+                      <div className="training-image-badge synced" title="Hashes match - fully synced">
+                        ✓
+                      </div>
+                    )}
+                    {img.status === 'mismatch' && (
+                      <div className="training-image-badge mismatch" title="Hash mismatch - files differ">
+                        ⚠️
+                      </div>
+                    )}
                   </div>
                   <button
                     className="training-image-delete"
@@ -423,7 +471,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                   </button>
                 </div>
                 <div className="training-image-info">
-                  <span className="training-image-filename">{img.filename}</span>
+                  <span className="training-image-filename" title={img.filename}>{img.filename}</span>
                   <span className="training-image-index">#{img.index}</span>
                 </div>
               </div>

@@ -48,7 +48,7 @@ export default defineConfig({
         });
       }
     },
-    // Serve actors directory
+    // Serve actors directory from public
     {
       name: 'serve-actors',
       configureServer(server) {
@@ -61,6 +61,36 @@ export default defineConfig({
           }
           
           if (fs.existsSync(filePath)) {
+            res.end(fs.readFileSync(filePath));
+          } else {
+            next();
+          }
+        });
+      }
+    },
+    // Serve data directory (training images, etc)
+    {
+      name: 'serve-data',
+      configureServer(server) {
+        server.middlewares.use('/data', (req, res, next) => {
+          const dataPath = path.resolve(__dirname, '../data');
+          const filePath = path.join(dataPath, req.url || '');
+          
+          // Set appropriate content types
+          if (req.url?.endsWith('.json')) {
+            res.setHeader('Content-Type', 'application/json');
+          } else if (req.url?.match(/\.(png|jpg|jpeg|webp)$/i)) {
+            const ext = path.extname(req.url).toLowerCase();
+            const contentTypes: Record<string, string> = {
+              '.png': 'image/png',
+              '.jpg': 'image/jpeg',
+              '.jpeg': 'image/jpeg',
+              '.webp': 'image/webp'
+            };
+            res.setHeader('Content-Type', contentTypes[ext] || 'application/octet-stream');
+          }
+          
+          if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
             res.end(fs.readFileSync(filePath));
           } else {
             next();

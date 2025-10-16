@@ -2,6 +2,7 @@ import { IncomingMessage, ServerResponse } from 'http';
 import * as path from 'path';
 import * as fs from 'fs';
 import { spawn } from 'child_process';
+import * as crypto from 'crypto';
 
 /**
  * API routes for actor training data management
@@ -61,7 +62,7 @@ export function createActorsApi(projectRoot: string) {
 
 /**
  * GET /api/actors/:actorId/training-data
- * Returns training data info including S3 URLs and local status
+ * Returns training data info including S3 URLs and local status with hash comparison
  */
 function handleGetTrainingData(
   req: IncomingMessage,
@@ -80,6 +81,18 @@ function handleGetTrainingData(
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Actor not found' }));
       return;
+    }
+
+    // Load manifest for hash information
+    const manifestPath = path.join(
+      projectRoot,
+      'data',
+      'actor_manifests',
+      `${actorId.padStart(4, '0')}_manifest.json`
+    );
+    let manifest: any = null;
+    if (fs.existsSync(manifestPath)) {
+      manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
     }
 
     // Load training data response.json to get S3 URLs
@@ -109,7 +122,7 @@ function handleGetTrainingData(
     );
     const hasBaseImage = fs.existsSync(baseImagePath);
 
-    // Check which images exist locally
+    // Get local images with hash calculation (only if manifest exists for comparison)
     const localImagesDir = path.join(
       projectRoot,
       'data',
@@ -117,27 +130,89 @@ function handleGetTrainingData(
       actor.name,
       'training_data'
     );
-    let localImages: string[] = [];
+    
+    const localImageMap = new Map<string, { path: string; hash: string | null }>();
+    const shouldCalculateHashes = manifest && manifest.training_data;
+    
     if (fs.existsSync(localImagesDir)) {
-      localImages = fs.readdirSync(localImagesDir)
-        .filter(f => f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg'));
+      const files = fs.readdirSync(localImagesDir)
+        .filter(f => (f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg')) && f !== 'response.json');
+      
+      for (const filename of files) {
+        const filePath = path.join(localImagesDir, filename);
+        
+        // Only calculate hash if we have manifest data to compare against
+        let hash: string | null = null;
+        if (shouldCalculateHashes) {
+          const fileBuffer = fs.readFileSync(filePath);
+          hash = crypto.createHash('md5').update(fileBuffer).digest('hex');
+        }
+        
+        localImageMap.set(filename, { path: filePath, hash });
+      }
     }
+
+    // Build training images array with status indicators
+    const trainingImages = s3Urls.map((s3Url, index) => {
+      const filename = s3Url.split('/').pop() || `image_${index}.png`;
+      const localFile = localImageMap.get(filename);
+      
+      // Get hash from manifest if available
+      let manifestHash: string | null = null;
+      if (manifest?.training_data) {
+        const manifestEntry = manifest.training_data.find((td: any) => 
+          td.filename === filename || td.s3_url === s3Url
+        );
+        if (manifestEntry) {
+          manifestHash = manifestEntry.md5_hash;
+        }
+      }
+
+      // Determine status based on available information
+      let status: 's3_only' | 'local_only' | 'synced' | 'mismatch';
+      if (!localFile) {
+        status = 's3_only';
+      } else if (!manifestHash) {
+        // No manifest hash available, assume synced if local exists
+        status = 'synced';
+      } else if (localFile.hash === manifestHash) {
+        status = 'synced';
+      } else if (localFile.hash === null) {
+        // Hash not calculated (optimization), assume synced
+        status = 'synced';
+      } else {
+        status = 'mismatch';
+      }
+
+      return {
+        index,
+        filename,
+        s3_url: s3Url,
+        local_exists: !!localFile,
+        local_path: localFile ? `/data/actors/${actor.name}/training_data/${filename}` : null,
+        local_hash: localFile?.hash || null,
+        s3_hash: manifestHash,
+        hash_match: localFile && manifestHash && localFile.hash ? localFile.hash === manifestHash : null,
+        status
+      };
+    });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       actor_id: actor.id,
       actor_name: actor.name,
-      s3_urls: s3Urls,
-      local_images: localImages,
+      training_images: trainingImages,
       base_image_path: hasBaseImage ? `/data/actors/${actor.name}/base_image/${actor.name}_base.png` : null,
-      synced: localImages.length === s3Urls.length
+      total_count: trainingImages.length,
+      local_count: trainingImages.filter(img => img.local_exists).length,
+      synced_count: trainingImages.filter(img => img.status === 'synced').length
     }));
   } catch (error) {
     console.error('Error loading actor training data:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to load training data' }));
+    res.end(JSON.stringify({ error: 'Failed to load training data', details: (error as Error).message }));
   }
 }
 

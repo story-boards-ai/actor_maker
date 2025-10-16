@@ -95,6 +95,32 @@ def delete_training_image(actor_name: str, filename: str, s3_url: str) -> dict:
     except Exception as e:
         print(f"⚠️  Failed to update response.json: {str(e)}", file=sys.stderr)
     
+    # Update manifest to remove training data entry
+    try:
+        # Extract actor ID from actor_name (format: 0000_european_16_male)
+        actor_id = actor_name.split('_')[0]
+        manifest_file = project_root / 'data' / 'actor_manifests' / f'{actor_id}_manifest.json'
+        
+        if manifest_file.exists():
+            with open(manifest_file, 'r') as f:
+                manifest_data = json.load(f)
+            
+            # Remove from training_data array if it exists
+            if 'training_data' in manifest_data:
+                original_count = len(manifest_data['training_data'])
+                manifest_data['training_data'] = [
+                    td for td in manifest_data['training_data']
+                    if td.get('filename') != filename and td.get('s3_url') != s3_url
+                ]
+                
+                if len(manifest_data['training_data']) < original_count:
+                    with open(manifest_file, 'w') as f:
+                        json.dump(manifest_data, f, indent=2)
+                    
+                    print(f"📝 Updated manifest file", file=sys.stderr)
+    except Exception as e:
+        print(f"⚠️  Failed to update manifest: {str(e)}", file=sys.stderr)
+    
     result = {
         'deleted': deleted_local or deleted_s3,
         'deleted_local': deleted_local,
