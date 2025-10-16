@@ -16,13 +16,39 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [columns, setColumns] = useState(4);
-  const [activeFilters, setActiveFilters] = useState<Set<FilterType>>(new Set());
-  const [invertFilter, setInvertFilter] = useState(false);
+  const [activeFilters, setActiveFilters] = useState<Set<FilterType>>(() => {
+    // Load saved filters from localStorage
+    const saved = localStorage.getItem('actorsGrid_filters');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return new Set(parsed);
+      } catch (e) {
+        console.error('Failed to parse saved filters:', e);
+      }
+    }
+    return new Set();
+  });
+  const [invertFilter, setInvertFilter] = useState(() => {
+    // Load saved invert state from localStorage
+    const saved = localStorage.getItem('actorsGrid_invertFilter');
+    return saved === 'true';
+  });
   const [trainingDataMap, setTrainingDataMap] = useState<Map<number, TrainingDataInfo>>(new Map());
 
   useEffect(() => {
     loadActors();
   }, []);
+
+  // Save filters to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('actorsGrid_filters', JSON.stringify(Array.from(activeFilters)));
+  }, [activeFilters]);
+
+  // Save invert state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('actorsGrid_invertFilter', String(invertFilter));
+  }, [invertFilter]);
 
   useEffect(() => {
     // Load training data for all actors

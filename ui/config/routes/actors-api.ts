@@ -299,7 +299,8 @@ function handleGetTrainingData(
 
     // Check for base/poster image in multiple locations
     const possibleImagePaths = [
-      // Try base_image folder first
+      // Try base_image folder first (both .jpg and .png)
+      path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.jpg`),
       path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.png`),
       // Try poster_frame folder
       path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.png`),

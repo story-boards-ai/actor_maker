@@ -22,6 +22,31 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def find_images_in_response(data: dict) -> list:
+    """
+    Recursively search for 'images' array in nested response structure.
+    
+    Args:
+        data: Response dictionary from RunPod
+    
+    Returns:
+        List of base64 image strings, or empty list if not found
+    """
+    if isinstance(data, dict):
+        # Check if current level has 'images' key
+        if 'images' in data and isinstance(data['images'], list):
+            return data['images']
+        
+        # Recursively search in nested dictionaries
+        for value in data.values():
+            if isinstance(value, dict):
+                result = find_images_in_response(value)
+                if result:
+                    return result
+    
+    return []
+
+
 def generate_base_image(
     description: str,
     actor_name: str,
@@ -112,20 +137,35 @@ Clean composition, no distracting elements."""
             "error": f"Workflow build error: {str(e)}"
         }
     
-    # Build RunPod payload
+    # Build RunPod payload in the same format as generation_request.json
+    # This is a fully-fledged image generation v4 request to RunPod
     payload = {
-        "input": {
-            "workflow": workflow,
-            "model_urls": [],  # No custom models needed
-            "force_download": False
-        }
+        "payload": {
+            "input": {
+                "workflow": workflow,
+                "model_urls": [],  # No custom models needed for base images
+                "force_download": False
+            }
+        },
+        "mode": "text-to-image"
     }
+    
+    # Save full payload to debug file for verification
+    try:
+        debug_dir = Path(__file__).parent.parent / "debug"
+        debug_dir.mkdir(exist_ok=True)
+        payload_debug_path = debug_dir / "base_image_full_payload.json"
+        with open(payload_debug_path, 'w') as f:
+            json.dump(payload, f, indent=2)
+        logger.info(f"✓ Full payload saved to: {payload_debug_path}")
+    except Exception as e:
+        logger.warning(f"Could not save debug payload: {e}")
     
     # Generate image using wizard endpoint (RUNPOD_SERVER_100_ID)
     logger.info("Sending request to RunPod serverless...")
     try:
         result = serverless_client.generate_image(
-            payload=payload,
+            payload=payload["payload"],  # Extract the inner payload
             mode="wizard",
             request_id=f"base_{actor_name}"
         )
@@ -154,12 +194,31 @@ Clean composition, no distracting elements."""
             "runpod_response": result
         }
     
-    logger.info("✓ Image generated successfully")
+    # Search for images array in the response (handles any nested structure)
+    images = find_images_in_response(result)
+    
+    if not images:
+        logger.error("No images found in response")
+        return {
+            "status": "FAILED",
+            "error": "No images found in RunPod response",
+            "runpod_response": result
+        }
+    
+    # Get the first image (base64 string)
+    first_image = images[0]
+    logger.info(f"✓ Image generated successfully (size: {len(first_image)} chars)")
     logger.info("="*80)
     
+    # Return clean response with the image in output.output.images format
+    # This matches what the TypeScript extractImageUrl function expects
     return {
         "status": "COMPLETED",
-        "output": result.get("output"),
+        "output": {
+            "output": {
+                "images": [first_image]
+            }
+        },
         "seed": workflow_params["seed"],
         "metadata": {
             "actor_name": actor_name,

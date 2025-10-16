@@ -121,11 +121,12 @@ class WorkflowBuilder:
             })
         
         # Build stack config
-        num_loras = max(1, len(lora_entries))
+        num_loras = len(lora_entries)
+        has_loras = num_loras > 0
         stack_config = {
-            "toggle": True,
+            "toggle": has_loras,  # Only enable if we have actual LoRAs
             "mode": "simple",
-            "num_loras": min(MAX_LORA_SLOTS, num_loras)
+            "num_loras": min(MAX_LORA_SLOTS, max(1, num_loras))  # At least 1 for the slot structure
         }
         
         # Add slots
@@ -225,6 +226,18 @@ class WorkflowBuilder:
         
         # Update LoRA stack
         workflow["43"]["inputs"] = lora_stack
+        
+        # Fix CLIP connection for node 6 based on whether LoRAs are enabled
+        # When LoRAs are disabled (toggle=false), node 40 doesn't output valid CLIP
+        # So we need to connect node 6 directly to node 3 (DualCLIPLoader)
+        if not lora_stack.get("toggle", False):
+            # No LoRAs - connect directly to DualCLIPLoader (node 3)
+            workflow["6"]["inputs"]["clip"] = ["3", 0]
+            logger.debug("No LoRAs enabled - connecting CLIPTextEncode directly to DualCLIPLoader")
+        else:
+            # LoRAs enabled - connect through LoRA stack (node 40)
+            workflow["6"]["inputs"]["clip"] = ["40", 1]
+            logger.debug("LoRAs enabled - connecting CLIPTextEncode through LoRA stack")
         
         logger.debug(
             f"Built workflow | prompt_len={len(positive_prompt)} | "

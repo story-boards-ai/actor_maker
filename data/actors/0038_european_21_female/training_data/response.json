@@ -7,8 +7,6 @@
       "character_id": "0038_european_21_female",
       "job_id": "79d9d971-32b1-4aa2-b4f2-25ce62efc49f",
       "s3_image_urls": [
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_0.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_1.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_2.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_3.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_4.png",
@@ -18,9 +16,7 @@
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_8.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_9.png",
         "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_10.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_11.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_12.png",
-        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_13.png"
+        "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0038_european_21_female/training_data/0038_european_21_female_12.png"
       ],
       "user_id": "99999999-9999-9999-9999-999999999999"
     },
