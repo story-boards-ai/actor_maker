@@ -195,7 +195,9 @@ htmlcov/
 
 # Actor and scene images (migrated from wm-characters)
 # Keep directory structure but ignore image files
+# EXCEPT base_image files which must be tracked
 data/actors/**/*.png
+!data/actors/*/base_image/*_base.png
 data/actors/**/*.jpg
 data/actors/**/*.jpeg
 data/actors/**/*.webp
