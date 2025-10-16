@@ -172,11 +172,31 @@ export function useTrainingOperations(props: UseTrainingOperationsProps) {
       addLog("info", "🚀 Initiating actor training process...");
 
       const imageCount = selectedActor.training_data.count;
-      const s3Urls = selectedActor.training_data.s3_urls;
+      
+      // Fetch full training data including S3 URLs
+      addLog("info", "📥 Fetching training data details...");
+      const trainingDataResponse = await fetch(`/api/actors/${selectedActorId}/training-data`);
+      if (!trainingDataResponse.ok) {
+        throw new Error("Failed to fetch training data");
+      }
+      const trainingDataDetails = await trainingDataResponse.json();
+      
+      // Convert HTTPS S3 URLs to s3:// format for RunPod
+      const s3Urls = trainingDataDetails.training_images.map((img: any) => {
+        const url = img.s3_url;
+        // Convert https://bucket-name.s3.region.amazonaws.com/key/path to s3://bucket-name/key/path
+        if (url.startsWith("https://") && url.includes(".s3.") && url.includes("amazonaws.com")) {
+          const match = url.match(/https:\/\/([^.]+)\.s3\.[^.]+\.amazonaws\.com\/(.+)/);
+          if (match) {
+            return `s3://${match[1]}/${match[2]}`;
+          }
+        }
+        return url;
+      });
 
       addLog("info", `📋 Actor: ${selectedActor.name}`);
       addLog("info", `📦 Training images: ${imageCount}`);
-      addLog("info", `📁 S3 URLs: ${s3Urls.length} files`);
+      addLog("info", `📁 S3 URLs: ${s3Urls.length} files (converted to s3:// format)`);
 
       const recommendedSteps = Math.max(1000, Math.min(3000, imageCount * 100));
       const finalSteps =

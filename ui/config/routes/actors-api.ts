@@ -125,6 +125,24 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // GET /api/actors/:actorId/training-versions
+    if (url?.startsWith('/api/actors/') && url.includes('/training-versions') && req.method === 'GET') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-versions$/);
+      if (match) {
+        handleGetActorTrainingVersions(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
+    // POST /api/actors/:actorId/training-versions
+    if (url?.startsWith('/api/actors/') && url.includes('/training-versions') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-versions$/);
+      if (match) {
+        handleSaveActorTrainingVersions(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     next();
   };
 }
@@ -1175,7 +1193,7 @@ function handleRegeneratePosterFrame(
 
 /**
  * GET /api/actors
- * Get all actors from actorsData.json
+ * Get all actors from actorsData.json enriched with training data information
  */
 function handleGetAllActors(
   req: IncomingMessage,
@@ -1194,13 +1212,143 @@ function handleGetAllActors(
 
     const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
     
+    // Enrich each actor with training data information
+    const enrichedActors = actorsData.map((actor: any) => {
+      const trainingDataDir = path.join(projectRoot, 'data', 'actors', actor.name, 'training_data');
+      
+      // Check if training data directory exists
+      if (fs.existsSync(trainingDataDir)) {
+        // Count training images (png and jpg files, excluding metadata files)
+        const files = fs.readdirSync(trainingDataDir);
+        const imageFiles = files.filter(f => 
+          (f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg')) && 
+          !f.includes('response') && 
+          !f.includes('request') && 
+          !f.includes('metadata')
+        );
+        
+        // Check if response.json exists (indicates S3 sync status)
+        const responseJsonPath = path.join(trainingDataDir, 'response.json');
+        const hasSyncedData = fs.existsSync(responseJsonPath);
+        
+        // Add training_data field to actor
+        return {
+          ...actor,
+          training_data: {
+            count: imageFiles.length,
+            synced: hasSyncedData
+          }
+        };
+      }
+      
+      // No training data directory
+      return actor;
+    });
+    
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(actorsData));
+    res.end(JSON.stringify(enrichedActors));
   } catch (error) {
     console.error('Error loading actors:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to load actors' }));
   }
+}
+
+/**
+ * GET /api/actors/:actorId/training-versions
+ * Get training versions for an actor
+ */
+function handleGetActorTrainingVersions(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    const versionsPath = getActorTrainingVersionsPath(actorId, projectRoot);
+    
+    if (!fs.existsSync(versionsPath)) {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ versions: [] }));
+      return;
+    }
+
+    const data = JSON.parse(fs.readFileSync(versionsPath, 'utf-8'));
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ versions: data.versions || [] }));
+  } catch (err: any) {
+    console.error('[Actor Training Versions] Get error:', err);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to load training versions' }));
+  }
+}
+
+/**
+ * POST /api/actors/:actorId/training-versions
+ * Save training versions for an actor
+ */
+function handleSaveActorTrainingVersions(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', () => {
+    try {
+      const { versions } = JSON.parse(body);
+      const versionsPath = getActorTrainingVersionsPath(actorId, projectRoot);
+      
+      // Ensure directory exists
+      const dir = path.dirname(versionsPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      fs.writeFileSync(versionsPath, JSON.stringify({ versions }, null, 2));
+      
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: true }));
+    } catch (err: any) {
+      console.error('[Actor Training Versions] Save error:', err);
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Failed to save training versions' }));
+    }
+  });
+}
+
+/**
+ * Get the path to training versions file for an actor
+ */
+function getActorTrainingVersionsPath(actorId: string, projectRoot: string): string {
+  // Load actorsData to get actor name
+  const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+  
+  if (fs.existsSync(actorsDataPath)) {
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actor = actorsData.find((a: any) => a.id === parseInt(actorId));
+    
+    if (actor) {
+      const actorDir = path.join(projectRoot, 'data', 'actors', actor.name);
+      if (!fs.existsSync(actorDir)) {
+        fs.mkdirSync(actorDir, { recursive: true });
+      }
+      return path.join(actorDir, 'training_versions.json');
+    }
+  }
+  
+  // Fallback: create in a generic location
+  const fallbackDir = path.join(projectRoot, 'data', 'actor_training_versions');
+  if (!fs.existsSync(fallbackDir)) {
+    fs.mkdirSync(fallbackDir, { recursive: true });
+  }
+  return path.join(fallbackDir, `${actorId}.json`);
 }

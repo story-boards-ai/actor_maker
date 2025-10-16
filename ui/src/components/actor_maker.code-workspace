@@ -1,14 +1,11 @@
 {
   "folders": [
-	{
-		"path": "../../.."
-	},
-	{
-		"path": "../../../../system_actors"
-	},
-	{
-		"path": "../../../../story-boards-backend"
-	}
-],
+    {
+      "path": "../../.."
+    },
+    {
+      "path": "../../../../story-boards-backend"
+    }
+  ],
   "settings": {}
 }

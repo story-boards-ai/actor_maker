@@ -19,7 +19,6 @@ import {
   calculateRecommendedSteps,
 } from "./utils/calculations";
 import "./ActorTrainingTab.css";
-import { actorsLibraryData } from "../../../../data/actorsData";
 
 export function ActorTrainingTab() {
   // Load all actors
@@ -29,17 +28,29 @@ export function ActorTrainingTab() {
   const [actorsLoading, setActorsLoading] = useState(true);
   const [showInfoModal, setShowInfoModal] = useState(false);
 
-  // Load actors on mount
+  // Load actors on mount from API
   useEffect(() => {
-    try {
-      console.log("[ActorTraining] Loaded actors:", actorsLibraryData.length);
-      setActors(actorsLibraryData);
-    } catch (err) {
-      console.error("Failed to load actors:", err);
-      toast.error("Failed to load actors");
-    } finally {
-      setActorsLoading(false);
-    }
+    const loadActors = async () => {
+      try {
+        const response = await fetch("/api/actors");
+        if (!response.ok) {
+          throw new Error("Failed to fetch actors");
+        }
+        const actorsData = await response.json();
+        console.log(
+          "[ActorTraining] Loaded actors from API:",
+          actorsData.length
+        );
+        setActors(actorsData);
+      } catch (err) {
+        console.error("Failed to load actors:", err);
+        toast.error("Failed to load actors");
+      } finally {
+        setActorsLoading(false);
+      }
+    };
+
+    loadActors();
   }, []);
 
   const selectedActor = actors.find((a) => a.id.toString() === selectedActorId);
@@ -55,10 +66,11 @@ export function ActorTrainingTab() {
       const isDefaultOrEmpty =
         !currentToken ||
         currentToken === "" ||
-        currentToken.startsWith("actor SBai_actor_");
+        currentToken.startsWith("actor ");
 
       if (isDefaultOrEmpty) {
-        const autoToken = `actor SBai_actor_${selectedActorId}`;
+        // Use the full actor name as the trigger token
+        const autoToken = `${selectedActor.name}`;
         state.setParameters((prev) => ({
           ...prev,
           class_tokens: autoToken,

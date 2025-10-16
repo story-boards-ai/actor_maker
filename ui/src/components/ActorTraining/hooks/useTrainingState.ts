@@ -24,8 +24,8 @@ const DEFAULT_PARAMETERS: TrainingParameters = {
   num_repeats: 10,
   lr_scheduler: "constant",
   lr_warmup_steps: 0,
-  optimizer_type: "AdamW8bit",
-  gradient_dtype: "fp32",
+  optimizer_type: "adamw8bit",
+  gradient_dtype: "bf16",
 };
 
 export function useTrainingState(

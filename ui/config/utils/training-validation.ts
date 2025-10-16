@@ -119,8 +119,10 @@ export function validateTrainingData(trainingDataPath: string): ValidationResult
 /**
  * Validate S3 URLs for training data
  * Checks that caption URLs exist for each image URL
+ * @param s3Urls - Array of S3 URLs to validate
+ * @param requireCaptions - Whether to require captions (default: false for actor training)
  */
-export function validateS3TrainingUrls(s3Urls: string[]): ValidationResult {
+export function validateS3TrainingUrls(s3Urls: string[], requireCaptions: boolean = false): ValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
   const stats = {
@@ -146,15 +148,29 @@ export function validateS3TrainingUrls(s3Urls: string[]): ValidationResult {
   stats.captionFiles = captionUrls.length;
 
   console.log('[S3 Validation] Found', stats.imageFiles, 'images and', stats.captionFiles, 'caption URLs');
+  console.log('[S3 Validation] Captions required:', requireCaptions);
 
-  // Check each image has a corresponding caption
-  for (const imageUrl of imageUrls) {
-    const baseName = path.parse(imageUrl).name;
-    const captionUrl = imageUrl.replace(/\.(jpg|jpeg|png|webp|avif)$/i, '.txt');
-    
-    if (!captionUrls.includes(captionUrl)) {
-      stats.missingCaptions++;
-      errors.push(`Missing caption URL for image: ${path.basename(imageUrl)}`);
+  // Check each image has a corresponding caption (only if required)
+  if (requireCaptions) {
+    for (const imageUrl of imageUrls) {
+      const baseName = path.parse(imageUrl).name;
+      const captionUrl = imageUrl.replace(/\.(jpg|jpeg|png|webp|avif)$/i, '.txt');
+      
+      if (!captionUrls.includes(captionUrl)) {
+        stats.missingCaptions++;
+        errors.push(`Missing caption URL for image: ${path.basename(imageUrl)}`);
+      }
+    }
+  } else {
+    // Captions are optional - just count missing ones as warnings
+    for (const imageUrl of imageUrls) {
+      const baseName = path.parse(imageUrl).name;
+      const captionUrl = imageUrl.replace(/\.(jpg|jpeg|png|webp|avif)$/i, '.txt');
+      
+      if (!captionUrls.includes(captionUrl)) {
+        stats.missingCaptions++;
+        warnings.push(`Missing caption URL for image: ${path.basename(imageUrl)} (optional)`);
+      }
     }
   }
 

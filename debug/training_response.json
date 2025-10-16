@@ -1,105 +1,37 @@
 {
-  "delayTime": 24921,
-  "executionTime": 3173383,
-  "id": "33c95471-5e61-406c-9287-1b8f8de0bae8-e1",
+  "delayTime": 19815,
+  "error": "Training workflow processing failed",
+  "executionTime": 1940,
+  "id": "cd7d6654-c0f1-47c8-85a6-64152f1f95db-e1",
   "input": {
     "training_config": {
       "learning_rate": 0.0003,
-      "max_train_steps": 3600,
-      "mode": "custom-styles",
-      "model_name": "style_82_vV6",
-      "request_id": "82_1760417836311",
+      "max_train_steps": 2100,
+      "mode": "custom-actors",
+      "model_name": "actor_6_V5",
+      "request_id": "6_1760619674463",
       "tenant_id": "actor_maker",
       "user_id": "actor_maker_user"
     },
     "training_data": {
       "s3_urls": [
-        "s3://story-boards-assets/styles/82/a_night_to_remember_scene_2_shot_1_1.jpg",
-        "s3://story-boards-assets/styles/82/a_night_to_remember_scene_2_shot_1_1.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_1.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_1.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_10.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_10.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_13.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_13.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_15.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_15.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_17.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_17.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_2.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_2.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_3.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_3.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_5.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_5.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_7.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_7.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_8.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_8.txt",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_9.jpg",
-        "s3://story-boards-assets/styles/82/abandoned_villa_exploration_scene_1_shot_9.txt",
-        "s3://story-boards-assets/styles/82/emilys_dream_mansion2_scene_1_shot_1.jpg",
-        "s3://story-boards-assets/styles/82/emilys_dream_mansion2_scene_1_shot_1.txt",
-        "s3://story-boards-assets/styles/82/input_001_training.jpg",
-        "s3://story-boards-assets/styles/82/input_001_training.txt",
-        "s3://story-boards-assets/styles/82/input_002_training.jpg",
-        "s3://story-boards-assets/styles/82/input_002_training.txt",
-        "s3://story-boards-assets/styles/82/input_005_training.jpg",
-        "s3://story-boards-assets/styles/82/input_005_training.txt",
-        "s3://story-boards-assets/styles/82/input_007_training.jpg",
-        "s3://story-boards-assets/styles/82/input_007_training.txt",
-        "s3://story-boards-assets/styles/82/input_012_training.jpg",
-        "s3://story-boards-assets/styles/82/input_012_training.txt",
-        "s3://story-boards-assets/styles/82/input_135_training.jpg",
-        "s3://story-boards-assets/styles/82/input_135_training.txt",
-        "s3://story-boards-assets/styles/82/input_136_training.jpg",
-        "s3://story-boards-assets/styles/82/input_136_training.txt",
-        "s3://story-boards-assets/styles/82/input_137_training.jpg",
-        "s3://story-boards-assets/styles/82/input_137_training.txt",
-        "s3://story-boards-assets/styles/82/input_138_training.jpg",
-        "s3://story-boards-assets/styles/82/input_138_training.txt",
-        "s3://story-boards-assets/styles/82/input_146_training.jpg",
-        "s3://story-boards-assets/styles/82/input_146_training.txt",
-        "s3://story-boards-assets/styles/82/input_147_training.jpg",
-        "s3://story-boards-assets/styles/82/input_147_training.txt",
-        "s3://story-boards-assets/styles/82/input_150_training.jpg",
-        "s3://story-boards-assets/styles/82/input_150_training.txt",
-        "s3://story-boards-assets/styles/82/input_153_training.jpg",
-        "s3://story-boards-assets/styles/82/input_153_training.txt",
-        "s3://story-boards-assets/styles/82/input_181_training.jpg",
-        "s3://story-boards-assets/styles/82/input_181_training.txt",
-        "s3://story-boards-assets/styles/82/input_184_training.jpg",
-        "s3://story-boards-assets/styles/82/input_184_training.txt",
-        "s3://story-boards-assets/styles/82/input_186_training.jpg",
-        "s3://story-boards-assets/styles/82/input_186_training.txt",
-        "s3://story-boards-assets/styles/82/input_192_training.jpg",
-        "s3://story-boards-assets/styles/82/input_192_training.txt",
-        "s3://story-boards-assets/styles/82/input_195_training.jpg",
-        "s3://story-boards-assets/styles/82/input_195_training.txt",
-        "s3://story-boards-assets/styles/82/input_196_training.jpg",
-        "s3://story-boards-assets/styles/82/input_196_training.txt",
-        "s3://story-boards-assets/styles/82/input_197_training.jpg",
-        "s3://story-boards-assets/styles/82/input_197_training.txt",
-        "s3://story-boards-assets/styles/82/input_235_training.jpg",
-        "s3://story-boards-assets/styles/82/input_235_training.txt",
-        "s3://story-boards-assets/styles/82/input_237_training.jpg",
-        "s3://story-boards-assets/styles/82/input_237_training.txt",
-        "s3://story-boards-assets/styles/82/input_238_training.jpg",
-        "s3://story-boards-assets/styles/82/input_238_training.txt",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_1_1.jpg",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_1_1.txt",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_2.jpg",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_2.txt",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_4.jpg",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_4.txt",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_6.jpg",
-        "s3://story-boards-assets/styles/82/life_in_different_places_scene_1_shot_6.txt",
-        "s3://story-boards-assets/styles/82/lost_in_the_forest_scene_1_shot_1_1.jpg",
-        "s3://story-boards-assets/styles/82/lost_in_the_forest_scene_1_shot_1_1.txt",
-        "s3://story-boards-assets/styles/82/lost_in_the_forest_scene_1_shot_1_3.jpg",
-        "s3://story-boards-assets/styles/82/lost_in_the_forest_scene_1_shot_1_3.txt",
-        "s3://story-boards-assets/styles/82/style_63.webp",
-        "s3://story-boards-assets/styles/82/style_63.txt"
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_4.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_5.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_6.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_9.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_10.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_11.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_14.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_16.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_17.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_18.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_19.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_20.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_22.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_24.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_25.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_26.jpg",
+        "s3://story-boards-assets/system_actors/training_data/0006_european_20_female/0006_european_20_female_27.jpg"
       ]
     },
     "workflow": {
@@ -121,8 +53,11 @@
         },
         "class_type": "FluxTrainLoop",
         "inputs": {
-          "network_trainer": ["107", 0],
-          "steps": 3600
+          "network_trainer": [
+            "107",
+            0
+          ],
+          "steps": 2100
         }
       },
       "14": {
@@ -132,7 +67,10 @@
         "class_type": "FluxTrainSave",
         "inputs": {
           "copy_to_comfy_lora_folder": false,
-          "network_trainer": ["4", 0],
+          "network_trainer": [
+            "4",
+            0
+          ],
           "save_state": false
         }
       },
@@ -159,7 +97,10 @@
         "class_type": "Display Any (rgthree)",
         "inputs": {
           "output": "",
-          "source": ["107", 1]
+          "source": [
+            "107",
+            1
+          ]
         }
       },
       "95": {
@@ -169,13 +110,13 @@
         "class_type": "OptimizerConfig",
         "inputs": {
           "extra_optimizer_args": "",
-          "lr_scheduler": "cosine_with_restarts",
+          "lr_scheduler": "constant",
           "lr_scheduler_num_cycles": 3,
           "lr_scheduler_power": 1,
           "lr_warmup_steps": 0,
           "max_grad_norm": 1,
           "min_snr_gamma": 5,
-          "optimizer_type": "adamw8bit"
+          "optimizer_type": "AdamW8bit"
         }
       },
       "97": {
@@ -186,7 +127,10 @@
         "inputs": {
           "height": 512,
           "log_scale": false,
-          "network_trainer": ["4", 0],
+          "network_trainer": [
+            "4",
+            0
+          ],
           "normalize_y": true,
           "plot_style": "seaborn-v0_8-dark-palette",
           "width": 768,
@@ -200,7 +144,10 @@
         "class_type": "SaveImage",
         "inputs": {
           "filename_prefix": "flux_lora_loss_plot",
-          "images": ["97", 0]
+          "images": [
+            "97",
+            0
+          ]
         }
       },
       "105": {
@@ -210,7 +157,10 @@
         "class_type": "Display Any (rgthree)",
         "inputs": {
           "output": "",
-          "source": ["107", 2]
+          "source": [
+            "107",
+            2
+          ]
         }
       },
       "107": {
@@ -227,27 +177,39 @@
           "cache_latents": "memory",
           "cache_text_encoder_outputs": "memory",
           "clip_l_lr": 0,
-          "dataset": ["109", 0],
+          "dataset": [
+            "109",
+            0
+          ],
           "discrete_flow_shift": 3.1582000000000003,
-          "flux_models": ["2", 0],
+          "flux_models": [
+            "2",
+            0
+          ],
           "fp8_base": true,
           "gradient_checkpointing": "enabled",
-          "gradient_dtype": "bf16",
+          "gradient_dtype": "fp32",
           "guidance_scale": 1,
           "highvram": true,
           "learning_rate": 0.0003,
           "logit_mean": 0,
           "logit_std": 1,
-          "max_train_steps": 3600,
+          "max_train_steps": 2100,
           "mode_scale": 1.29,
           "model_prediction_type": "raw",
-          "network_alpha": 16,
-          "network_dim": 16,
-          "optimizer_settings": ["95", 0],
+          "network_alpha": 8,
+          "network_dim": 8,
+          "optimizer_settings": [
+            "95",
+            0
+          ],
           "output_dir": "/model_output",
           "output_name": "flux_lora_file_name",
-          "sample_prompts": ["146", 0],
-          "save_dtype": "bf16",
+          "sample_prompts": [
+            "146",
+            0
+          ],
+          "save_dtype": "fp32",
           "sigmoid_scale": 1,
           "timestep_sampling": "shift",
           "train_text_encoder": "disabled",
@@ -275,10 +237,13 @@
         },
         "class_type": "TrainDatasetAdd",
         "inputs": {
-          "batch_size": 2,
+          "batch_size": 1,
           "bucket_no_upscale": false,
-          "class_tokens": "style SBai_style_82",
-          "dataset_config": ["108", 0],
+          "class_tokens": "0006_european_20_female",
+          "dataset_config": [
+            "108",
+            0
+          ],
           "dataset_path": "/training_data",
           "enable_bucket": true,
           "height": 512,
@@ -294,7 +259,10 @@
         },
         "class_type": "FluxTrainEnd",
         "inputs": {
-          "network_trainer": ["14", 0],
+          "network_trainer": [
+            "14",
+            0
+          ],
           "save_state": false
         }
       },
@@ -304,29 +272,18 @@
         },
         "class_type": "StringConstantMultiline",
         "inputs": {
-          "string": "portrait of a young woman, style SBai_style_82|a young woman walking in New York at night, style SBai_style_82|a woman wearing a colorful outfit on a tropical beach, style SBai_style_82|portrait of a young woman wearing a leather jacket in New York at sunset, style SBai_style_82",
+          "string": "portrait of a young woman, 0006_european_20_female|a young woman walking in New York at night, 0006_european_20_female|a woman wearing a colorful outfit on a tropical beach, 0006_european_20_female|portrait of a young woman wearing a leather jacket in New York at sunset, 0006_european_20_female",
           "strip_newlines": true
         }
       }
     }
   },
   "output": {
-    "job_id": "82_1760417836311",
-    "loraName": "style_82_vV6.safetensors",
-    "loraUrl": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-styles-models/style_82_vV6.safetensors",
-    "message": "LoRA training completed successfully in 3169.31 seconds",
-    "model_info": {
-      "download_url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-styles-models/style_82_vV6.safetensors",
-      "file_extension": ".safetensors",
-      "model_type": "lora",
-      "name": "style_82_vV6.safetensors",
-      "size_bytes": 153288040
-    },
-    "status": "success",
+    "job_id": "6_1760619674463",
     "tenant_id": "actor_maker",
-    "training_type": "style",
+    "training_type": "character",
     "user_id": "actor_maker_user"
   },
-  "status": "COMPLETED",
-  "webhook": "https://9f143ade6d9b.ngrok-free.app/api/training-webhook"
+  "status": "FAILED",
+  "webhook": "https://cb5349cd8445.ngrok-free.app/api/training-webhook"
 }

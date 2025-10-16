@@ -111,7 +111,14 @@ async function handleStartTraining(req: IncomingMessage, res: ServerResponse, pr
       // Validate training data before sending to RunPod
       if (trainingRequest.input?.training_data?.s3_urls) {
         const { validateS3TrainingUrls } = await import('../utils/training-validation');
-        const validation = validateS3TrainingUrls(trainingRequest.input.training_data.s3_urls);
+        
+        // Determine if captions are required based on training mode
+        const mode = trainingRequest.input?.training_config?.mode;
+        const requireCaptions = mode === 'custom-styles'; // Only require captions for styles, not actors
+        
+        console.log('[Training] Validation mode:', mode, 'requireCaptions:', requireCaptions);
+        
+        const validation = validateS3TrainingUrls(trainingRequest.input.training_data.s3_urls, requireCaptions);
         
         if (!validation.valid) {
           console.error('[Training] ❌ Validation failed:', validation.errors);
