@@ -111,16 +111,34 @@ function handleGetTrainingData(
       s3Urls = trainingData.output?.output?.s3_image_urls || [];
     }
 
-    // Check for base image
-    const baseImagePath = path.join(
-      projectRoot,
-      'data',
-      'actors',
-      actor.name,
-      'base_image',
-      `${actor.name}_base.png`
-    );
-    const hasBaseImage = fs.existsSync(baseImagePath);
+    // Check for base/poster image in multiple locations
+    const possibleImagePaths = [
+      // Try base_image folder first
+      path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.png`),
+      // Try poster_frame folder
+      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.png`),
+      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.jpg`),
+      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.png`),
+      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.jpg`),
+      // Try training_data folder for first image
+      path.join(projectRoot, 'data', 'actors', actor.name, 'training_data', `${actor.name}_0.png`),
+      path.join(projectRoot, 'data', 'actors', actor.name, 'training_data', `${actor.name}_1.png`)
+    ];
+    
+    let baseImagePath: string | null = null;
+    let baseImageRelativePath: string | null = null;
+    
+    for (const imagePath of possibleImagePaths) {
+      if (fs.existsSync(imagePath)) {
+        baseImagePath = imagePath;
+        // Convert to relative path for serving
+        const relativePath = imagePath.replace(path.join(projectRoot, 'data'), '/data');
+        baseImageRelativePath = relativePath;
+        break;
+      }
+    }
+    
+    const hasBaseImage = baseImagePath !== null;
 
     // Get local images with hash calculation (only if manifest exists for comparison)
     const localImagesDir = path.join(
@@ -203,7 +221,7 @@ function handleGetTrainingData(
       actor_id: actor.id,
       actor_name: actor.name,
       training_images: trainingImages,
-      base_image_path: hasBaseImage ? `/data/actors/${actor.name}/base_image/${actor.name}_base.png` : null,
+      base_image_path: baseImageRelativePath,
       total_count: trainingImages.length,
       local_count: trainingImages.filter(img => img.local_exists).length,
       synced_count: trainingImages.filter(img => img.status === 'synced').length
