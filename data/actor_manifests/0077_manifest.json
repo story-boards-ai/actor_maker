@@ -34,7 +34,169 @@
     "total_size_bytes": 1376931,
     "total_size_mb": 1.31,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 46483062,
+    "training_data_size_mb": 44.33,
+    "training_synced_count": 0,
+    "training_local_only_count": 14
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0077_asian_40_female_0.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_0.png",
+      "size_bytes": 3853134,
+      "size_mb": 3.67,
+      "modified_timestamp": 1760602854.3567438,
+      "modified_date": "2025-10-16T10:20:54.356744",
+      "md5_hash": "645b73f2e5fb5d1ed35002d30cbc8bb4",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_1.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_1.png",
+      "size_bytes": 9304808,
+      "size_mb": 8.87,
+      "modified_timestamp": 1760602855.6208694,
+      "modified_date": "2025-10-16T10:20:55.620869",
+      "md5_hash": "10ea609c332b198d08e7748762e415b0",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_10.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_10.png",
+      "size_bytes": 2957519,
+      "size_mb": 2.82,
+      "modified_timestamp": 1760602853.9567041,
+      "modified_date": "2025-10-16T10:20:53.956704",
+      "md5_hash": "4d11c7b6280893b5fd21ae2dd6022185",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_11.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_11.png",
+      "size_bytes": 2944375,
+      "size_mb": 2.81,
+      "modified_timestamp": 1760602854.428751,
+      "modified_date": "2025-10-16T10:20:54.428751",
+      "md5_hash": "9f2c8a5d77cb1b24f76ddd5788c0a03a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_12.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_12.png",
+      "size_bytes": 2944060,
+      "size_mb": 2.81,
+      "modified_timestamp": 1760602854.508759,
+      "modified_date": "2025-10-16T10:20:54.508759",
+      "md5_hash": "0a442205204186b0eb765242787b0c1a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_13.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_13.png",
+      "size_bytes": 3014225,
+      "size_mb": 2.87,
+      "modified_timestamp": 1760602854.9488027,
+      "modified_date": "2025-10-16T10:20:54.948803",
+      "md5_hash": "a99fa485309f3ae7fef1c077478796c6",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_2.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_2.png",
+      "size_bytes": 2582748,
+      "size_mb": 2.46,
+      "modified_timestamp": 1760602852.7325823,
+      "modified_date": "2025-10-16T10:20:52.732582",
+      "md5_hash": "a2101e1e921adc33425aab83c8affe27",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_3.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_3.png",
+      "size_bytes": 2489517,
+      "size_mb": 2.37,
+      "modified_timestamp": 1760602853.7406826,
+      "modified_date": "2025-10-16T10:20:53.740683",
+      "md5_hash": "e921b74d7c6acc40e0cfd58ac9cc42ab",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_4.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_4.png",
+      "size_bytes": 2724880,
+      "size_mb": 2.6,
+      "modified_timestamp": 1760602853.072616,
+      "modified_date": "2025-10-16T10:20:53.072616",
+      "md5_hash": "84018ae05f72408c734f33665f1f602a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_5.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_5.png",
+      "size_bytes": 2581594,
+      "size_mb": 2.46,
+      "modified_timestamp": 1760602853.2486336,
+      "modified_date": "2025-10-16T10:20:53.248634",
+      "md5_hash": "af8b62c6a1a3c5329bd62b300adf4c1c",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_6.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_6.png",
+      "size_bytes": 2803756,
+      "size_mb": 2.67,
+      "modified_timestamp": 1760602853.2046294,
+      "modified_date": "2025-10-16T10:20:53.204629",
+      "md5_hash": "723ea9097578b371d0df7d5b0c86f868",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_7.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_7.png",
+      "size_bytes": 2592272,
+      "size_mb": 2.47,
+      "modified_timestamp": 1760602853.0566146,
+      "modified_date": "2025-10-16T10:20:53.056615",
+      "md5_hash": "8952def5032c72340c91866d546ff79a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_8.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_8.png",
+      "size_bytes": 2945495,
+      "size_mb": 2.81,
+      "modified_timestamp": 1760602856.7689836,
+      "modified_date": "2025-10-16T10:20:56.768984",
+      "md5_hash": "adf8cd04fb9442d934811698fa46cce3",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0077_asian_40_female_9.png",
+      "local_path": "data/actors/0077_asian_40_female/training_data/0077_asian_40_female_9.png",
+      "size_bytes": 2744679,
+      "size_mb": 2.62,
+      "modified_timestamp": 1760602854.8447924,
+      "modified_date": "2025-10-16T10:20:54.844792",
+      "md5_hash": "ee31a86bece0edb1d000877206f09e8f",
+      "s3_url": null,
+      "status": "local_only"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:14.878849"
 }

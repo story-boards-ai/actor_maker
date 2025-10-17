@@ -34,7 +34,180 @@
     "total_size_bytes": 1500214,
     "total_size_mb": 1.43,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 15,
+    "training_data_size_bytes": 6874279,
+    "training_data_size_mb": 6.56,
+    "training_synced_count": 15,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0005_european_50_female_0.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_0.jpg",
+      "size_bytes": 400316,
+      "size_mb": 0.38,
+      "modified_timestamp": 1760613211.0203087,
+      "modified_date": "2025-10-16T13:13:31.020309",
+      "md5_hash": "b389eb3c2f3fefb12c16593f02c0a2c7",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_0.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_1.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_1.jpg",
+      "size_bytes": 330893,
+      "size_mb": 0.32,
+      "modified_timestamp": 1760613230.631901,
+      "modified_date": "2025-10-16T13:13:50.631901",
+      "md5_hash": "2bb03c3616490a205cd23aa008b0d9ef",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_1.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_10.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_10.jpg",
+      "size_bytes": 252771,
+      "size_mb": 0.24,
+      "modified_timestamp": 1760613510.2118902,
+      "modified_date": "2025-10-16T13:18:30.211890",
+      "md5_hash": "6f77ad487669d5d678291a919f3dabc4",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_10.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_13.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_13.jpg",
+      "size_bytes": 383086,
+      "size_mb": 0.37,
+      "modified_timestamp": 1760613556.825927,
+      "modified_date": "2025-10-16T13:19:16.825927",
+      "md5_hash": "f4745172e64b3aa6a04fce6a39531717",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_13.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_14.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_14.jpg",
+      "size_bytes": 338278,
+      "size_mb": 0.32,
+      "modified_timestamp": 1760613571.3471518,
+      "modified_date": "2025-10-16T13:19:31.347152",
+      "md5_hash": "6c025829bf193f69eb4258ecf2b1c304",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_14.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_15.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_15.jpg",
+      "size_bytes": 753298,
+      "size_mb": 0.72,
+      "modified_timestamp": 1760613586.194011,
+      "modified_date": "2025-10-16T13:19:46.194011",
+      "md5_hash": "332f743658c294c5a39075aeebf568ec",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_15.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_16.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_16.jpg",
+      "size_bytes": 648327,
+      "size_mb": 0.62,
+      "modified_timestamp": 1760613601.22728,
+      "modified_date": "2025-10-16T13:20:01.227280",
+      "md5_hash": "1631b7311dbf0c9351dc34ceacb09967",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_16.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_2.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_2.jpg",
+      "size_bytes": 361231,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760613385.7653773,
+      "modified_date": "2025-10-16T13:16:25.765377",
+      "md5_hash": "c3df6f4e916bc3502dfe3af22c863362",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_2.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_20.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_20.jpg",
+      "size_bytes": 1032685,
+      "size_mb": 0.98,
+      "modified_timestamp": 1760613787.952031,
+      "modified_date": "2025-10-16T13:23:07.952031",
+      "md5_hash": "0508873070eec0dd5ae90c6fc5c5d580",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_20.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_21.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_21.jpg",
+      "size_bytes": 705992,
+      "size_mb": 0.67,
+      "modified_timestamp": 1760613798.9153032,
+      "modified_date": "2025-10-16T13:23:18.915303",
+      "md5_hash": "52c180c9643efd3f2094f11266c7651e",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_21.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_23.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_23.jpg",
+      "size_bytes": 516009,
+      "size_mb": 0.49,
+      "modified_timestamp": 1760613819.8290548,
+      "modified_date": "2025-10-16T13:23:39.829055",
+      "md5_hash": "a7f60cfc8fefefc43e99ca89a9a36a5e",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_23.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_5.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_5.jpg",
+      "size_bytes": 227833,
+      "size_mb": 0.22,
+      "modified_timestamp": 1760613437.9344811,
+      "modified_date": "2025-10-16T13:17:17.934481",
+      "md5_hash": "39372309259b8982d917fc9f2881edfb",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_5.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_6.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_6.jpg",
+      "size_bytes": 314804,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760613455.3879743,
+      "modified_date": "2025-10-16T13:17:35.387974",
+      "md5_hash": "cbdf3735a5898b68ee0d3640394f5e3b",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_6.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_7.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_7.jpg",
+      "size_bytes": 231862,
+      "size_mb": 0.22,
+      "modified_timestamp": 1760613469.839366,
+      "modified_date": "2025-10-16T13:17:49.839366",
+      "md5_hash": "2e72f6db5596c9d92848b48685914f77",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_7.jpg",
+      "status": "synced"
+    },
+    {
+      "filename": "0005_european_50_female_8.jpg",
+      "local_path": "data/actors/0005_european_50_female/training_data/0005_european_50_female_8.jpg",
+      "size_bytes": 376894,
+      "size_mb": 0.36,
+      "modified_timestamp": 1760613483.4365234,
+      "modified_date": "2025-10-16T13:18:03.436523",
+      "md5_hash": "06e30bb4b5bf24b5443190715e1778f2",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_8.jpg",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:12.187210"
 }

@@ -6,7 +6,7 @@
     "age": "45",
     "sex": "female",
     "ethnicity": "nordic",
-    "face_prompt": "Emilie JÃ¸rgensen as a 45 year old nordic woman, with straight blonde hair and ",
+    "face_prompt": "Emilie J\u00c3\u00b8rgensen as a 45 year old nordic woman, with straight blonde hair and ",
     "id": "0119",
     "name": "0119_nordic_45_female",
     "image": "image120",
@@ -34,7 +34,125 @@
     "total_size_bytes": 1224166,
     "total_size_mb": 1.17,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 10,
+    "training_data_size_bytes": 25298480,
+    "training_data_size_mb": 24.13,
+    "training_synced_count": 10,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0119_nordic_45_female_11.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_11.png",
+      "size_bytes": 2764299,
+      "size_mb": 2.64,
+      "modified_timestamp": 1760602937.2656898,
+      "modified_date": "2025-10-16T10:22:17.265690",
+      "md5_hash": "6d4bac458885eea3a184408903a56775",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_12.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_12.png",
+      "size_bytes": 2783418,
+      "size_mb": 2.65,
+      "modified_timestamp": 1760602937.2936926,
+      "modified_date": "2025-10-16T10:22:17.293693",
+      "md5_hash": "b19990ff28d465c5ec33b186747c291e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_2.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_2.png",
+      "size_bytes": 2435386,
+      "size_mb": 2.32,
+      "modified_timestamp": 1760602935.3695025,
+      "modified_date": "2025-10-16T10:22:15.369503",
+      "md5_hash": "0c354325e53ae0f2f0896270657dfb0e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_2.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_3.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_3.png",
+      "size_bytes": 2323010,
+      "size_mb": 2.22,
+      "modified_timestamp": 1760602935.1054764,
+      "modified_date": "2025-10-16T10:22:15.105476",
+      "md5_hash": "ffd4e1e60792306ace55bc76e2673903",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_3.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_4.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_4.png",
+      "size_bytes": 2330417,
+      "size_mb": 2.22,
+      "modified_timestamp": 1760602938.0897713,
+      "modified_date": "2025-10-16T10:22:18.089771",
+      "md5_hash": "1dda5529e6149ba46212050c9ac21a57",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_4.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_5.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_5.png",
+      "size_bytes": 2353515,
+      "size_mb": 2.24,
+      "modified_timestamp": 1760602938.1057727,
+      "modified_date": "2025-10-16T10:22:18.105773",
+      "md5_hash": "90f893186ec1faa734fd8c1b285d4622",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_6.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_6.png",
+      "size_bytes": 2655711,
+      "size_mb": 2.53,
+      "modified_timestamp": 1760602936.9976633,
+      "modified_date": "2025-10-16T10:22:16.997663",
+      "md5_hash": "95ef8a416368cddeed769d65a87e59c1",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_7.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_7.png",
+      "size_bytes": 2286551,
+      "size_mb": 2.18,
+      "modified_timestamp": 1760602938.269789,
+      "modified_date": "2025-10-16T10:22:18.269789",
+      "md5_hash": "8198054eb88083020db48a253b82c64f",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_7.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_8.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_8.png",
+      "size_bytes": 2786064,
+      "size_mb": 2.66,
+      "modified_timestamp": 1760602936.2295873,
+      "modified_date": "2025-10-16T10:22:16.229587",
+      "md5_hash": "3c46793304de93cd8a916f442caac79c",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0119_nordic_45_female_9.png",
+      "local_path": "data/actors/0119_nordic_45_female/training_data/0119_nordic_45_female_9.png",
+      "size_bytes": 2580109,
+      "size_mb": 2.46,
+      "modified_timestamp": 1760602940.3419936,
+      "modified_date": "2025-10-16T10:22:20.341994",
+      "md5_hash": "051713f2bdbcc13e7f5e8837aaded151",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0119_nordic_45_female/training_data/0119_nordic_45_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:15.644386"
 }

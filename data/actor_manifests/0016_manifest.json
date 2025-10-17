@@ -34,7 +34,92 @@
     "total_size_bytes": 1201076,
     "total_size_mb": 1.15,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 7,
+    "training_data_size_bytes": 19637558,
+    "training_data_size_mb": 18.73,
+    "training_synced_count": 7,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0016_european_55_female_11.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_11.png",
+      "size_bytes": 2975078,
+      "size_mb": 2.84,
+      "modified_timestamp": 1760602742.8931074,
+      "modified_date": "2025-10-16T10:19:02.893107",
+      "md5_hash": "354ef98371cb8c58a40e367186b1a7d5",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_12.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_12.png",
+      "size_bytes": 2940140,
+      "size_mb": 2.8,
+      "modified_timestamp": 1760602744.4133031,
+      "modified_date": "2025-10-16T10:19:04.413303",
+      "md5_hash": "d7bf92893826b1548c86bb78abd163c5",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_13.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_13.png",
+      "size_bytes": 2961916,
+      "size_mb": 2.82,
+      "modified_timestamp": 1760602744.093262,
+      "modified_date": "2025-10-16T10:19:04.093262",
+      "md5_hash": "9694313161eb10dd3452b5b5d4ceb25f",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_5.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_5.png",
+      "size_bytes": 2722299,
+      "size_mb": 2.6,
+      "modified_timestamp": 1760602745.5694523,
+      "modified_date": "2025-10-16T10:19:05.569452",
+      "md5_hash": "d1e3bdeb074f4be88910fe305fe6b915",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_6.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_6.png",
+      "size_bytes": 2543944,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602747.7496698,
+      "modified_date": "2025-10-16T10:19:07.749670",
+      "md5_hash": "48625b6a61931ec25a0ea09203673c18",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_7.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_7.png",
+      "size_bytes": 2531401,
+      "size_mb": 2.41,
+      "modified_timestamp": 1760602742.1370099,
+      "modified_date": "2025-10-16T10:19:02.137010",
+      "md5_hash": "7791cac244c6651a30660fb4e97ca7ab",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_7.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0016_european_55_female_9.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_9.png",
+      "size_bytes": 2962780,
+      "size_mb": 2.83,
+      "modified_timestamp": 1760602742.8371,
+      "modified_date": "2025-10-16T10:19:02.837100",
+      "md5_hash": "157c2a72a5643a7c721b90e2af1dd55e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:12.405584"
 }

@@ -34,7 +34,169 @@
     "total_size_bytes": 1328297,
     "total_size_mb": 1.27,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 46262375,
+    "training_data_size_mb": 44.12,
+    "training_synced_count": 12,
+    "training_local_only_count": 2
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0084_middle_eastern_20_male_0.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_0.png",
+      "size_bytes": 3787792,
+      "size_mb": 3.61,
+      "modified_timestamp": 1760602867.4140408,
+      "modified_date": "2025-10-16T10:21:07.414041",
+      "md5_hash": "df73ac1dc8e97c2cfe36138e7040fc9b",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_1.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_1.png",
+      "size_bytes": 9340265,
+      "size_mb": 8.91,
+      "modified_timestamp": 1760602869.5182457,
+      "modified_date": "2025-10-16T10:21:09.518246",
+      "md5_hash": "dabbf46b060ad1d2dd621212423593f0",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_10.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_10.png",
+      "size_bytes": 2924124,
+      "size_mb": 2.79,
+      "modified_timestamp": 1760602868.2381217,
+      "modified_date": "2025-10-16T10:21:08.238122",
+      "md5_hash": "a50d07da1bf8ea6ef97216ae4dacf98b",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_11.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_11.png",
+      "size_bytes": 2951502,
+      "size_mb": 2.81,
+      "modified_timestamp": 1760602868.138112,
+      "modified_date": "2025-10-16T10:21:08.138112",
+      "md5_hash": "3a3b1260ae593e81684b60386ce68aec",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_12.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_12.png",
+      "size_bytes": 2963147,
+      "size_mb": 2.83,
+      "modified_timestamp": 1760602868.8901849,
+      "modified_date": "2025-10-16T10:21:08.890185",
+      "md5_hash": "a49fb5417be048514ca49f0464cb77e6",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_13.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_13.png",
+      "size_bytes": 3012465,
+      "size_mb": 2.87,
+      "modified_timestamp": 1760602868.7021666,
+      "modified_date": "2025-10-16T10:21:08.702167",
+      "md5_hash": "7f1ef5fab434b415fb209223a6ee9e9b",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_2.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_2.png",
+      "size_bytes": 2600160,
+      "size_mb": 2.48,
+      "modified_timestamp": 1760602867.354035,
+      "modified_date": "2025-10-16T10:21:07.354035",
+      "md5_hash": "421b72e6ec8257fafa6bbcc11bf88dcc",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_2.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_3.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_3.png",
+      "size_bytes": 2525246,
+      "size_mb": 2.41,
+      "modified_timestamp": 1760602867.638063,
+      "modified_date": "2025-10-16T10:21:07.638063",
+      "md5_hash": "f54fd0efa4194b0d4b397eebd1a3edb0",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_3.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_4.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_4.png",
+      "size_bytes": 2551438,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602867.4660459,
+      "modified_date": "2025-10-16T10:21:07.466046",
+      "md5_hash": "e1c433bc0a8f02c529483ab6714f5c80",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_4.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_5.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_5.png",
+      "size_bytes": 2623233,
+      "size_mb": 2.5,
+      "modified_timestamp": 1760602867.486048,
+      "modified_date": "2025-10-16T10:21:07.486048",
+      "md5_hash": "f2f23efb59a666bf2f7c5d04e3cc54ca",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_6.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_6.png",
+      "size_bytes": 2765466,
+      "size_mb": 2.64,
+      "modified_timestamp": 1760602868.1221106,
+      "modified_date": "2025-10-16T10:21:08.122111",
+      "md5_hash": "7be93a7e0481113f38ce3b1cedec8e1f",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_7.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_7.png",
+      "size_bytes": 2490558,
+      "size_mb": 2.38,
+      "modified_timestamp": 1760602869.8062737,
+      "modified_date": "2025-10-16T10:21:09.806274",
+      "md5_hash": "8647c8d93d74ac12c6e41d794bb9dc7e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_7.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_8.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_8.png",
+      "size_bytes": 2947290,
+      "size_mb": 2.81,
+      "modified_timestamp": 1760602867.638063,
+      "modified_date": "2025-10-16T10:21:07.638063",
+      "md5_hash": "de701e49956f84e0a79a89aa81fd0cd0",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0084_middle_eastern_20_male_9.png",
+      "local_path": "data/actors/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_9.png",
+      "size_bytes": 2779689,
+      "size_mb": 2.65,
+      "modified_timestamp": 1760602867.6340625,
+      "modified_date": "2025-10-16T10:21:07.634063",
+      "md5_hash": "b3af6e7a478067068314bf97a6561c72",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0084_middle_eastern_20_male/training_data/0084_middle_eastern_20_male_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:15.048734"
 }

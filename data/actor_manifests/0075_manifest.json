@@ -34,7 +34,169 @@
     "total_size_bytes": 1311370,
     "total_size_mb": 1.25,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 39265109,
+    "training_data_size_mb": 37.45,
+    "training_synced_count": 0,
+    "training_local_only_count": 14
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0075_south_american_30_female_0.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_0.png",
+      "size_bytes": 3295386,
+      "size_mb": 3.14,
+      "modified_timestamp": 1760602857.0650132,
+      "modified_date": "2025-10-16T10:20:57.065013",
+      "md5_hash": "a6b693d50681d741daf9679004d0abfe",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_1.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_1.png",
+      "size_bytes": 7973580,
+      "size_mb": 7.6,
+      "modified_timestamp": 1760602853.7086794,
+      "modified_date": "2025-10-16T10:20:53.708679",
+      "md5_hash": "99a344fcee60b5351bef0f05cadd2dc9",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_10.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_10.png",
+      "size_bytes": 2548110,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602851.1964312,
+      "modified_date": "2025-10-16T10:20:51.196431",
+      "md5_hash": "6424b08bb772f5ec8f4177a7c843d3df",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_11.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_11.png",
+      "size_bytes": 2518184,
+      "size_mb": 2.4,
+      "modified_timestamp": 1760602851.6644766,
+      "modified_date": "2025-10-16T10:20:51.664477",
+      "md5_hash": "2348aae183aef32e67caf4624d9ade6f",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_12.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_12.png",
+      "size_bytes": 2538415,
+      "size_mb": 2.42,
+      "modified_timestamp": 1760602850.9724095,
+      "modified_date": "2025-10-16T10:20:50.972409",
+      "md5_hash": "42ffb1dcda41b43dc3f7b1d393e6c767",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_13.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_13.png",
+      "size_bytes": 2536880,
+      "size_mb": 2.42,
+      "modified_timestamp": 1760602850.8283954,
+      "modified_date": "2025-10-16T10:20:50.828395",
+      "md5_hash": "c903e0a4202ebc66d448603c19e563cd",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_2.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_2.png",
+      "size_bytes": 2164852,
+      "size_mb": 2.06,
+      "modified_timestamp": 1760602850.0683215,
+      "modified_date": "2025-10-16T10:20:50.068321",
+      "md5_hash": "2688abe2ba40c107ad2f406d76028ae2",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_3.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_3.png",
+      "size_bytes": 2142156,
+      "size_mb": 2.04,
+      "modified_timestamp": 1760602849.248242,
+      "modified_date": "2025-10-16T10:20:49.248242",
+      "md5_hash": "95203eef4cc966c07ecd99720d1de5ba",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_4.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_4.png",
+      "size_bytes": 2139202,
+      "size_mb": 2.04,
+      "modified_timestamp": 1760602851.80049,
+      "modified_date": "2025-10-16T10:20:51.800490",
+      "md5_hash": "0a549df366686b467e8bfe26eca2e03c",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_5.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_5.png",
+      "size_bytes": 2120044,
+      "size_mb": 2.02,
+      "modified_timestamp": 1760602849.980313,
+      "modified_date": "2025-10-16T10:20:49.980313",
+      "md5_hash": "75ec264e65c4773b9762ee3bee92816f",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_6.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_6.png",
+      "size_bytes": 2282659,
+      "size_mb": 2.18,
+      "modified_timestamp": 1760602850.2563398,
+      "modified_date": "2025-10-16T10:20:50.256340",
+      "md5_hash": "48e8ab701cc2def4958122fc3c37965d",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_7.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_7.png",
+      "size_bytes": 2106942,
+      "size_mb": 2.01,
+      "modified_timestamp": 1760602849.7482905,
+      "modified_date": "2025-10-16T10:20:49.748291",
+      "md5_hash": "33cf760840b068c8db529a6379511efa",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_8.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_8.png",
+      "size_bytes": 2513452,
+      "size_mb": 2.4,
+      "modified_timestamp": 1760602850.0443192,
+      "modified_date": "2025-10-16T10:20:50.044319",
+      "md5_hash": "45ed7c189077414a732c54f2a92d63fa",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0075_south_american_30_female_9.png",
+      "local_path": "data/actors/0075_south_american_30_female/training_data/0075_south_american_30_female_9.png",
+      "size_bytes": 2385247,
+      "size_mb": 2.27,
+      "modified_timestamp": 1760602850.0683215,
+      "modified_date": "2025-10-16T10:20:50.068321",
+      "md5_hash": "d03744ad57ef0565e870fb9b54089ff1",
+      "s3_url": null,
+      "status": "local_only"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:14.772497"
 }

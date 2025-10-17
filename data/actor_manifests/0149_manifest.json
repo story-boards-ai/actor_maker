@@ -34,7 +34,169 @@
     "total_size_bytes": 1122260,
     "total_size_mb": 1.07,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 35796020,
+    "training_data_size_mb": 34.14,
+    "training_synced_count": 11,
+    "training_local_only_count": 3
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0149_indian_24_female_0.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_0.png",
+      "size_bytes": 3025720,
+      "size_mb": 2.89,
+      "modified_timestamp": 1760602982.2033608,
+      "modified_date": "2025-10-16T10:23:02.203361",
+      "md5_hash": "d1f1c1e44ee9fff6780003bdeb63d26c",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0149_indian_24_female_1.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_1.png",
+      "size_bytes": 7434439,
+      "size_mb": 7.09,
+      "modified_timestamp": 1760602982.831422,
+      "modified_date": "2025-10-16T10:23:02.831422",
+      "md5_hash": "5425dfb16ce02437c6cae963ceb0a1c5",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0149_indian_24_female_10.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_10.png",
+      "size_bytes": 2353314,
+      "size_mb": 2.24,
+      "modified_timestamp": 1760602980.0391495,
+      "modified_date": "2025-10-16T10:23:00.039150",
+      "md5_hash": "e0250d0e8ba91c2d68da833c0460ef34",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_11.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_11.png",
+      "size_bytes": 2303335,
+      "size_mb": 2.2,
+      "modified_timestamp": 1760602980.1071563,
+      "modified_date": "2025-10-16T10:23:00.107156",
+      "md5_hash": "e116186cd94ee9dea4d9affcd2324721",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_12.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_12.png",
+      "size_bytes": 2297115,
+      "size_mb": 2.19,
+      "modified_timestamp": 1760602980.1591613,
+      "modified_date": "2025-10-16T10:23:00.159161",
+      "md5_hash": "78732d5004c6cb4a3ca82f17e4df5589",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_13.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_13.png",
+      "size_bytes": 2155122,
+      "size_mb": 2.06,
+      "modified_timestamp": 1760602980.9832418,
+      "modified_date": "2025-10-16T10:23:00.983242",
+      "md5_hash": "7dff015edce02ca6f73bddf53bf31b52",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_2.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_2.png",
+      "size_bytes": 2050511,
+      "size_mb": 1.96,
+      "modified_timestamp": 1760602981.743316,
+      "modified_date": "2025-10-16T10:23:01.743316",
+      "md5_hash": "a293a35ffb90700fd489887cc4a761e9",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_2.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_3.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_3.png",
+      "size_bytes": 1873373,
+      "size_mb": 1.79,
+      "modified_timestamp": 1760602978.9550424,
+      "modified_date": "2025-10-16T10:22:58.955042",
+      "md5_hash": "e1a785a399c59bbc2948082245234b11",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_3.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_4.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_4.png",
+      "size_bytes": 1951087,
+      "size_mb": 1.86,
+      "modified_timestamp": 1760602979.4630926,
+      "modified_date": "2025-10-16T10:22:59.463093",
+      "md5_hash": "0456f584f34f377b4c0c27319a737098",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_4.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_5.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_5.png",
+      "size_bytes": 1925930,
+      "size_mb": 1.84,
+      "modified_timestamp": 1760602984.8236165,
+      "modified_date": "2025-10-16T10:23:04.823617",
+      "md5_hash": "9c63cf12d089a09cf9f6d0d690d72589",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_6.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_6.png",
+      "size_bytes": 1881209,
+      "size_mb": 1.79,
+      "modified_timestamp": 1760602979.6151078,
+      "modified_date": "2025-10-16T10:22:59.615108",
+      "md5_hash": "8606a899171d706a4cafa439ad94297e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_7.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_7.png",
+      "size_bytes": 1952427,
+      "size_mb": 1.86,
+      "modified_timestamp": 1760602978.8110282,
+      "modified_date": "2025-10-16T10:22:58.811028",
+      "md5_hash": "ec10159d29249e7321dce8e9b5120e5f",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_7.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0149_indian_24_female_8.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_8.png",
+      "size_bytes": 2317961,
+      "size_mb": 2.21,
+      "modified_timestamp": 1760602978.8470316,
+      "modified_date": "2025-10-16T10:22:58.847032",
+      "md5_hash": "bf857c5ea22ba6dfc25640650064a4df",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0149_indian_24_female_9.png",
+      "local_path": "data/actors/0149_indian_24_female/training_data/0149_indian_24_female_9.png",
+      "size_bytes": 2274477,
+      "size_mb": 2.17,
+      "modified_timestamp": 1760602979.7951255,
+      "modified_date": "2025-10-16T10:22:59.795125",
+      "md5_hash": "a1e38c586bb03cca24a81f5c68f407ee",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0149_indian_24_female/training_data/0149_indian_24_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:16.273779"
 }

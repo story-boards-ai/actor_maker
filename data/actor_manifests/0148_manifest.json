@@ -34,7 +34,48 @@
     "total_size_bytes": 1139270,
     "total_size_mb": 1.09,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 3,
+    "training_data_size_bytes": 7792923,
+    "training_data_size_mb": 7.43,
+    "training_synced_count": 3,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0148_indian_24_male_12.png",
+      "local_path": "data/actors/0148_indian_24_male/training_data/0148_indian_24_male_12.png",
+      "size_bytes": 2665921,
+      "size_mb": 2.54,
+      "modified_timestamp": 1760602980.8152254,
+      "modified_date": "2025-10-16T10:23:00.815225",
+      "md5_hash": "6e9e5318978a050c022c1b76eb94331c",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0148_indian_24_male_13.png",
+      "local_path": "data/actors/0148_indian_24_male/training_data/0148_indian_24_male_13.png",
+      "size_bytes": 2497938,
+      "size_mb": 2.38,
+      "modified_timestamp": 1760602980.3231773,
+      "modified_date": "2025-10-16T10:23:00.323177",
+      "md5_hash": "b3a0fb5e28582cc60247fa195e840d94",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0148_indian_24_male_9.png",
+      "local_path": "data/actors/0148_indian_24_male/training_data/0148_indian_24_male_9.png",
+      "size_bytes": 2629064,
+      "size_mb": 2.51,
+      "modified_timestamp": 1760602978.6390111,
+      "modified_date": "2025-10-16T10:22:58.639011",
+      "md5_hash": "535cb59a466987eaee95eb627c452c0b",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:16.226885"
 }

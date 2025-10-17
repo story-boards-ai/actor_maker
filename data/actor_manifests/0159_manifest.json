@@ -34,7 +34,169 @@
     "total_size_bytes": 1192854,
     "total_size_mb": 1.14,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 41997848,
+    "training_data_size_mb": 40.05,
+    "training_synced_count": 12,
+    "training_local_only_count": 2
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0159_black_18_female_0.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_0.png",
+      "size_bytes": 3495933,
+      "size_mb": 3.33,
+      "modified_timestamp": 1760603008.134966,
+      "modified_date": "2025-10-16T10:23:28.134966",
+      "md5_hash": "1566c33ffdfd7b2412fbc7c7be5a8f05",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0159_black_18_female_1.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_1.png",
+      "size_bytes": 7991232,
+      "size_mb": 7.62,
+      "modified_timestamp": 1760603000.7382636,
+      "modified_date": "2025-10-16T10:23:20.738264",
+      "md5_hash": "6579a490cac287ce7e349b39f0ff6d73",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0159_black_18_female_10.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_10.png",
+      "size_bytes": 2783657,
+      "size_mb": 2.65,
+      "modified_timestamp": 1760602998.8421063,
+      "modified_date": "2025-10-16T10:23:18.842106",
+      "md5_hash": "422ec5f4bb6ddb0ffe4141b99cb112a3",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_11.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_11.png",
+      "size_bytes": 2733685,
+      "size_mb": 2.61,
+      "modified_timestamp": 1760602999.4781592,
+      "modified_date": "2025-10-16T10:23:19.478159",
+      "md5_hash": "d2f53f0a419c6a5be2bfee6167e53964",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_12.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_12.png",
+      "size_bytes": 2723963,
+      "size_mb": 2.6,
+      "modified_timestamp": 1760602999.2181375,
+      "modified_date": "2025-10-16T10:23:19.218138",
+      "md5_hash": "d135465e31d1cbb0140747d60b56faf2",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_13.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_13.png",
+      "size_bytes": 2745986,
+      "size_mb": 2.62,
+      "modified_timestamp": 1760602999.586168,
+      "modified_date": "2025-10-16T10:23:19.586168",
+      "md5_hash": "0d8682a40b29db1ed326e30e3a16c209",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_2.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_2.png",
+      "size_bytes": 2480332,
+      "size_mb": 2.37,
+      "modified_timestamp": 1760602997.80202,
+      "modified_date": "2025-10-16T10:23:17.802020",
+      "md5_hash": "77e82a9ab73fa498ccd4dcac5154b752",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_2.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_3.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_3.png",
+      "size_bytes": 2307726,
+      "size_mb": 2.2,
+      "modified_timestamp": 1760603000.0022025,
+      "modified_date": "2025-10-16T10:23:20.002203",
+      "md5_hash": "7c4073c9a2a67230abd7b3dff1c13bc0",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_3.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_4.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_4.png",
+      "size_bytes": 2336055,
+      "size_mb": 2.23,
+      "modified_timestamp": 1760602997.9900358,
+      "modified_date": "2025-10-16T10:23:17.990036",
+      "md5_hash": "b715b8fe1e6fa13e407c4b0ad2801bc4",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_4.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_5.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_5.png",
+      "size_bytes": 2384828,
+      "size_mb": 2.27,
+      "modified_timestamp": 1760602997.7660172,
+      "modified_date": "2025-10-16T10:23:17.766017",
+      "md5_hash": "2ad1a822538e6c7ca5ae68903db66b57",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_6.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_6.png",
+      "size_bytes": 2334600,
+      "size_mb": 2.23,
+      "modified_timestamp": 1760602997.9540327,
+      "modified_date": "2025-10-16T10:23:17.954033",
+      "md5_hash": "accd5dea5379cebd2ecd17d85206806a",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_7.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_7.png",
+      "size_bytes": 2300196,
+      "size_mb": 2.19,
+      "modified_timestamp": 1760602997.810021,
+      "modified_date": "2025-10-16T10:23:17.810021",
+      "md5_hash": "a2eab1bda5117ced585f23b7c285c3a5",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_7.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_8.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_8.png",
+      "size_bytes": 2632843,
+      "size_mb": 2.51,
+      "modified_timestamp": 1760602997.7580166,
+      "modified_date": "2025-10-16T10:23:17.758017",
+      "md5_hash": "5d700dd4e7003e8e954999fb9ff4e042",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0159_black_18_female_9.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_9.png",
+      "size_bytes": 2746812,
+      "size_mb": 2.62,
+      "modified_timestamp": 1760602998.7741008,
+      "modified_date": "2025-10-16T10:23:18.774101",
+      "md5_hash": "7a5da8eddd7e2b993520a617bffe2fd5",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:16.575533"
 }

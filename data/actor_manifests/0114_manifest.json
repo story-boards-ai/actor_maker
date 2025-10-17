@@ -33,7 +33,14 @@
     "total_size_bytes": 1315295,
     "total_size_mb": 1.25,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 0,
+    "training_data_size_bytes": 0,
+    "training_data_size_mb": 0.0,
+    "training_synced_count": 0,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [],
+  "training_data_updated": "2025-10-17T16:46:15.511369"
 }

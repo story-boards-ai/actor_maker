@@ -34,7 +34,92 @@
     "total_size_bytes": 1203212,
     "total_size_mb": 1.15,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 7,
+    "training_data_size_bytes": 18807444,
+    "training_data_size_mb": 17.94,
+    "training_synced_count": 7,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0174_white_28_male_10.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_10.png",
+      "size_bytes": 2698500,
+      "size_mb": 2.57,
+      "modified_timestamp": 1760603026.4294634,
+      "modified_date": "2025-10-16T10:23:46.429463",
+      "md5_hash": "440a524280af14dd45294867272e7bf0",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_11.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_11.png",
+      "size_bytes": 2838776,
+      "size_mb": 2.71,
+      "modified_timestamp": 1760603027.057524,
+      "modified_date": "2025-10-16T10:23:47.057524",
+      "md5_hash": "39678c9d7568ee67fb2f4c23908c52d3",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_12.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_12.png",
+      "size_bytes": 2848905,
+      "size_mb": 2.72,
+      "modified_timestamp": 1760603026.7294924,
+      "modified_date": "2025-10-16T10:23:46.729492",
+      "md5_hash": "18d5fa60a645386abb0c79b72139e94c",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_13.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_13.png",
+      "size_bytes": 2861383,
+      "size_mb": 2.73,
+      "modified_timestamp": 1760603026.685488,
+      "modified_date": "2025-10-16T10:23:46.685488",
+      "md5_hash": "02a1ca302c53961e7ae3a3e424702f5b",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_5.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_5.png",
+      "size_bytes": 2524755,
+      "size_mb": 2.41,
+      "modified_timestamp": 1760603026.7814975,
+      "modified_date": "2025-10-16T10:23:46.781497",
+      "md5_hash": "2f8e7097b750e862bdf68399ea9c185e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_6.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_6.png",
+      "size_bytes": 2515328,
+      "size_mb": 2.4,
+      "modified_timestamp": 1760603026.1294343,
+      "modified_date": "2025-10-16T10:23:46.129434",
+      "md5_hash": "734a951e13354aec1650539284afc326",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0174_white_28_male_7.png",
+      "local_path": "data/actors/0174_white_28_male/training_data/0174_white_28_male_7.png",
+      "size_bytes": 2519797,
+      "size_mb": 2.4,
+      "modified_timestamp": 1760603025.8214045,
+      "modified_date": "2025-10-16T10:23:45.821404",
+      "md5_hash": "f11b1831bd532d09ce65bc8792eddcd8",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0174_white_28_male/training_data/0174_white_28_male_7.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:16.817848"
 }

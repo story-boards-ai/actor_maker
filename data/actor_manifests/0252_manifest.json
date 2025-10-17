@@ -6,7 +6,7 @@
     "age": "62",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "Günther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
+    "face_prompt": "G\u00fcnther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
     "id": "0252",
     "name": "0252_european_62_male",
     "image": "image253"
@@ -33,7 +33,14 @@
     "total_size_bytes": 1376405,
     "total_size_mb": 1.31,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 0,
+    "training_data_size_bytes": 0,
+    "training_data_size_mb": 0.0,
+    "training_synced_count": 0,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [],
+  "training_data_updated": "2025-10-17T16:46:16.848424"
 }

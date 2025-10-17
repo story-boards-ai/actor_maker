@@ -34,7 +34,169 @@
     "total_size_bytes": 1568567,
     "total_size_mb": 1.5,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 45718682,
+    "training_data_size_mb": 43.6,
+    "training_synced_count": 8,
+    "training_local_only_count": 6
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0042_black_25_female_0.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_0.png",
+      "size_bytes": 3780099,
+      "size_mb": 3.6,
+      "modified_timestamp": 1760602790.4083357,
+      "modified_date": "2025-10-16T10:19:50.408336",
+      "md5_hash": "ec3bb3fc6fa7c3c1019bc2317b6339e7",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0042_black_25_female_1.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_1.png",
+      "size_bytes": 8318842,
+      "size_mb": 7.93,
+      "modified_timestamp": 1760602792.272516,
+      "modified_date": "2025-10-16T10:19:52.272516",
+      "md5_hash": "a05b8ff5d3cc0a42585caca3238f63b7",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0042_black_25_female_10.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_10.png",
+      "size_bytes": 3039771,
+      "size_mb": 2.9,
+      "modified_timestamp": 1760602791.3164237,
+      "modified_date": "2025-10-16T10:19:51.316424",
+      "md5_hash": "705ee1bd931a89fe25531c3de7db3ff5",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_11.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_11.png",
+      "size_bytes": 3011219,
+      "size_mb": 2.87,
+      "modified_timestamp": 1760602791.6564565,
+      "modified_date": "2025-10-16T10:19:51.656456",
+      "md5_hash": "f132c2436d104da5996a5d1c56643496",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_11.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_12.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_12.png",
+      "size_bytes": 2993973,
+      "size_mb": 2.86,
+      "modified_timestamp": 1760602791.5764487,
+      "modified_date": "2025-10-16T10:19:51.576449",
+      "md5_hash": "efcaf00b36919d9b933c43c6ac643be9",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_13.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_13.png",
+      "size_bytes": 3042217,
+      "size_mb": 2.9,
+      "modified_timestamp": 1760602792.6125488,
+      "modified_date": "2025-10-16T10:19:52.612549",
+      "md5_hash": "cf6c382ef693c1e14ce51dba6e56c34a",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_2.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_2.png",
+      "size_bytes": 2623700,
+      "size_mb": 2.5,
+      "modified_timestamp": 1760602790.6883628,
+      "modified_date": "2025-10-16T10:19:50.688363",
+      "md5_hash": "c9af48f7c88ffcd61ce883a606df1830",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0042_black_25_female_3.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_3.png",
+      "size_bytes": 2779057,
+      "size_mb": 2.65,
+      "modified_timestamp": 1760602790.4243371,
+      "modified_date": "2025-10-16T10:19:50.424337",
+      "md5_hash": "ff4e2a6c835b4f278cef22a5fc781785",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0042_black_25_female_4.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_4.png",
+      "size_bytes": 2536636,
+      "size_mb": 2.42,
+      "modified_timestamp": 1760602790.4763422,
+      "modified_date": "2025-10-16T10:19:50.476342",
+      "md5_hash": "8254307a3089ba24f8b39008066ac11d",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_4.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_5.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_5.png",
+      "size_bytes": 2549181,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602790.6323574,
+      "modified_date": "2025-10-16T10:19:50.632357",
+      "md5_hash": "1156ba99a096e63398d03630b3dbec2a",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_6.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_6.png",
+      "size_bytes": 2550796,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602790.6323574,
+      "modified_date": "2025-10-16T10:19:50.632357",
+      "md5_hash": "0643887f263a11d968c155436e2b29ee",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_6.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_7.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_7.png",
+      "size_bytes": 2579812,
+      "size_mb": 2.46,
+      "modified_timestamp": 1760602790.5323477,
+      "modified_date": "2025-10-16T10:19:50.532348",
+      "md5_hash": "462c33ba14f037bb2f0c4390cbcee7c4",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0042_black_25_female_8.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_8.png",
+      "size_bytes": 2860856,
+      "size_mb": 2.73,
+      "modified_timestamp": 1760602790.628357,
+      "modified_date": "2025-10-16T10:19:50.628357",
+      "md5_hash": "549b9b88c766e3c704b7ba63f4b31e50",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0042_black_25_female/training_data/0042_black_25_female_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0042_black_25_female_9.png",
+      "local_path": "data/actors/0042_black_25_female/training_data/0042_black_25_female_9.png",
+      "size_bytes": 3052523,
+      "size_mb": 2.91,
+      "modified_timestamp": 1760602790.8283763,
+      "modified_date": "2025-10-16T10:19:50.828376",
+      "md5_hash": "fae158f08be1d86e5e858af7bba98152",
+      "s3_url": null,
+      "status": "local_only"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:13.393889"
 }

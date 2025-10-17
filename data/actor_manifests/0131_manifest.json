@@ -34,7 +34,70 @@
     "total_size_bytes": 1013522,
     "total_size_mb": 0.97,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 5,
+    "training_data_size_bytes": 11670950,
+    "training_data_size_mb": 11.13,
+    "training_synced_count": 5,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0131_asian_20_female_12.png",
+      "local_path": "data/actors/0131_asian_20_female/training_data/0131_asian_20_female_12.png",
+      "size_bytes": 2455217,
+      "size_mb": 2.34,
+      "modified_timestamp": 1760602955.7275078,
+      "modified_date": "2025-10-16T10:22:35.727508",
+      "md5_hash": "be95fcf7af1663df7d040997aa0bd690",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0131_asian_20_female/training_data/0131_asian_20_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0131_asian_20_female_13.png",
+      "local_path": "data/actors/0131_asian_20_female/training_data/0131_asian_20_female_13.png",
+      "size_bytes": 2277974,
+      "size_mb": 2.17,
+      "modified_timestamp": 1760602956.4075723,
+      "modified_date": "2025-10-16T10:22:36.407572",
+      "md5_hash": "f93e493dbd3a4cee2a6b7d193f09eede",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0131_asian_20_female/training_data/0131_asian_20_female_13.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0131_asian_20_female_5.png",
+      "local_path": "data/actors/0131_asian_20_female/training_data/0131_asian_20_female_5.png",
+      "size_bytes": 2062106,
+      "size_mb": 1.97,
+      "modified_timestamp": 1760602953.743313,
+      "modified_date": "2025-10-16T10:22:33.743313",
+      "md5_hash": "5e7c0b69bc0b7b70d89ee2def581f95e",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0131_asian_20_female/training_data/0131_asian_20_female_5.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0131_asian_20_female_8.png",
+      "local_path": "data/actors/0131_asian_20_female/training_data/0131_asian_20_female_8.png",
+      "size_bytes": 2435045,
+      "size_mb": 2.32,
+      "modified_timestamp": 1760602954.9634328,
+      "modified_date": "2025-10-16T10:22:34.963433",
+      "md5_hash": "1b7d685d7b52cafd6df390d278dd60cb",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0131_asian_20_female/training_data/0131_asian_20_female_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0131_asian_20_female_9.png",
+      "local_path": "data/actors/0131_asian_20_female/training_data/0131_asian_20_female_9.png",
+      "size_bytes": 2440608,
+      "size_mb": 2.33,
+      "modified_timestamp": 1760602962.408129,
+      "modified_date": "2025-10-16T10:22:42.408129",
+      "md5_hash": "c3d3924cd5312f8c9139a12e6ab1ff30",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0131_asian_20_female/training_data/0131_asian_20_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:15.885144"
 }

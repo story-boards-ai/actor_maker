@@ -34,7 +34,169 @@
     "total_size_bytes": 1122791,
     "total_size_mb": 1.07,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 39151073,
+    "training_data_size_mb": 37.34,
+    "training_synced_count": 0,
+    "training_local_only_count": 14
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0033_black_60_male_0.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_0.png",
+      "size_bytes": 3300150,
+      "size_mb": 3.15,
+      "modified_timestamp": 1760602776.093595,
+      "modified_date": "2025-10-16T10:19:36.093595",
+      "md5_hash": "e56e7aebab3c2cc9f10023971f6cd86d",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_1.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_1.png",
+      "size_bytes": 8174622,
+      "size_mb": 7.8,
+      "modified_timestamp": 1760602779.1499312,
+      "modified_date": "2025-10-16T10:19:39.149931",
+      "md5_hash": "e8c9a83af3e9af481c2799fecb5f5c96",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_10.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_10.png",
+      "size_bytes": 2313751,
+      "size_mb": 2.21,
+      "modified_timestamp": 1760602776.8736808,
+      "modified_date": "2025-10-16T10:19:36.873681",
+      "md5_hash": "2a0b62898b132cb922ff8d0e1d851ada",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_11.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_11.png",
+      "size_bytes": 2529045,
+      "size_mb": 2.41,
+      "modified_timestamp": 1760602777.129709,
+      "modified_date": "2025-10-16T10:19:37.129709",
+      "md5_hash": "80edcd41f59484aae479b8260a6b2a8d",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_12.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_12.png",
+      "size_bytes": 2467361,
+      "size_mb": 2.35,
+      "modified_timestamp": 1760602777.9497993,
+      "modified_date": "2025-10-16T10:19:37.949799",
+      "md5_hash": "6d0b289ddee5cf70e1f760800cf3224a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_13.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_13.png",
+      "size_bytes": 2482435,
+      "size_mb": 2.37,
+      "modified_timestamp": 1760602777.3417323,
+      "modified_date": "2025-10-16T10:19:37.341732",
+      "md5_hash": "e181965fd7e00fad6c8fe7800b389877",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_2.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_2.png",
+      "size_bytes": 2090461,
+      "size_mb": 1.99,
+      "modified_timestamp": 1760602776.221609,
+      "modified_date": "2025-10-16T10:19:36.221609",
+      "md5_hash": "7f0cf96bb5d0c50c9a3ecf4a317cc496",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_3.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_3.png",
+      "size_bytes": 2175607,
+      "size_mb": 2.07,
+      "modified_timestamp": 1760602776.3616245,
+      "modified_date": "2025-10-16T10:19:36.361624",
+      "md5_hash": "77c2ba5902228532f6b219ed56afefa4",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_4.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_4.png",
+      "size_bytes": 2096641,
+      "size_mb": 2.0,
+      "modified_timestamp": 1760602776.993694,
+      "modified_date": "2025-10-16T10:19:36.993694",
+      "md5_hash": "653c618558ab82cf42ea015dcb6912c6",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_5.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_5.png",
+      "size_bytes": 2276448,
+      "size_mb": 2.17,
+      "modified_timestamp": 1760602775.9255764,
+      "modified_date": "2025-10-16T10:19:35.925576",
+      "md5_hash": "3aa20ea0ef432c17bd743214f5c75472",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_6.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_6.png",
+      "size_bytes": 2153683,
+      "size_mb": 2.05,
+      "modified_timestamp": 1760602776.093595,
+      "modified_date": "2025-10-16T10:19:36.093595",
+      "md5_hash": "a0c561e292b9c232b0e62310d1c16db1",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_7.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_7.png",
+      "size_bytes": 2127966,
+      "size_mb": 2.03,
+      "modified_timestamp": 1760602776.59365,
+      "modified_date": "2025-10-16T10:19:36.593650",
+      "md5_hash": "70f7d7c7684c361385635912cb8b7460",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_8.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_8.png",
+      "size_bytes": 2493097,
+      "size_mb": 2.38,
+      "modified_timestamp": 1760602775.7775602,
+      "modified_date": "2025-10-16T10:19:35.777560",
+      "md5_hash": "2c88fcc8ce96782022867a8cd94f5d90",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0033_black_60_male_9.png",
+      "local_path": "data/actors/0033_black_60_male/training_data/0033_black_60_male_9.png",
+      "size_bytes": 2469806,
+      "size_mb": 2.36,
+      "modified_timestamp": 1760602777.1817148,
+      "modified_date": "2025-10-16T10:19:37.181715",
+      "md5_hash": "1a3499da1c052624e3a4f64cf366d036",
+      "s3_url": null,
+      "status": "local_only"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:13.032091"
 }

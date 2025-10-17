@@ -34,7 +34,169 @@
     "total_size_bytes": 1364291,
     "total_size_mb": 1.3,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 14,
+    "training_data_size_bytes": 43087613,
+    "training_data_size_mb": 41.09,
+    "training_synced_count": 0,
+    "training_local_only_count": 14
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0058_south_american_50_male_0.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_0.png",
+      "size_bytes": 3575707,
+      "size_mb": 3.41,
+      "modified_timestamp": 1760602820.995619,
+      "modified_date": "2025-10-16T10:20:20.995619",
+      "md5_hash": "88117d1d3bd7b30fbd364d5312c10a14",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_1.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_1.png",
+      "size_bytes": 8440555,
+      "size_mb": 8.05,
+      "modified_timestamp": 1760602820.4715707,
+      "modified_date": "2025-10-16T10:20:20.471571",
+      "md5_hash": "22701718a57b18af9d1f27477245c0b1",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_10.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_10.png",
+      "size_bytes": 2790277,
+      "size_mb": 2.66,
+      "modified_timestamp": 1760602821.5196671,
+      "modified_date": "2025-10-16T10:20:21.519667",
+      "md5_hash": "d3ccd40e03546e5b143b067bf2eb093f",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_11.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_11.png",
+      "size_bytes": 2782531,
+      "size_mb": 2.65,
+      "modified_timestamp": 1760602821.5636714,
+      "modified_date": "2025-10-16T10:20:21.563671",
+      "md5_hash": "7d5c9319a2f91f926e8b14c3026aa0f0",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_12.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_12.png",
+      "size_bytes": 2812535,
+      "size_mb": 2.68,
+      "modified_timestamp": 1760602821.3796544,
+      "modified_date": "2025-10-16T10:20:21.379654",
+      "md5_hash": "2db08c7622d484b35035e4ebe32fa85a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_13.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_13.png",
+      "size_bytes": 2809669,
+      "size_mb": 2.68,
+      "modified_timestamp": 1760602822.8997943,
+      "modified_date": "2025-10-16T10:20:22.899794",
+      "md5_hash": "6de68a8207412d1fc441471eaaf74457",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_2.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_2.png",
+      "size_bytes": 2401268,
+      "size_mb": 2.29,
+      "modified_timestamp": 1760602822.8157866,
+      "modified_date": "2025-10-16T10:20:22.815787",
+      "md5_hash": "3b20c1ab61d5c2efc1fdf255130af431",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_3.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_3.png",
+      "size_bytes": 2345481,
+      "size_mb": 2.24,
+      "modified_timestamp": 1760602819.8555138,
+      "modified_date": "2025-10-16T10:20:19.855514",
+      "md5_hash": "6919d218bf67b6150c14db9452279bc8",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_4.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_4.png",
+      "size_bytes": 2418838,
+      "size_mb": 2.31,
+      "modified_timestamp": 1760602825.5040345,
+      "modified_date": "2025-10-16T10:20:25.504035",
+      "md5_hash": "a0aea75843da5facc6c5d0556313de88",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_5.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_5.png",
+      "size_bytes": 2421812,
+      "size_mb": 2.31,
+      "modified_timestamp": 1760602820.89961,
+      "modified_date": "2025-10-16T10:20:20.899610",
+      "md5_hash": "46e16052c7d4d29dd353786032ce28b9",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_6.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_6.png",
+      "size_bytes": 2567754,
+      "size_mb": 2.45,
+      "modified_timestamp": 1760602819.423476,
+      "modified_date": "2025-10-16T10:20:19.423476",
+      "md5_hash": "c006cc67fbb68a35228b39d16afbf49a",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_7.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_7.png",
+      "size_bytes": 2350441,
+      "size_mb": 2.24,
+      "modified_timestamp": 1760602825.0239902,
+      "modified_date": "2025-10-16T10:20:25.023990",
+      "md5_hash": "9e7b3fb2628e06ca317e398123614af4",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_8.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_8.png",
+      "size_bytes": 2787544,
+      "size_mb": 2.66,
+      "modified_timestamp": 1760602822.4157498,
+      "modified_date": "2025-10-16T10:20:22.415750",
+      "md5_hash": "0b7049a21e4d9a915fc4fb563213ad67",
+      "s3_url": null,
+      "status": "local_only"
+    },
+    {
+      "filename": "0058_south_american_50_male_9.png",
+      "local_path": "data/actors/0058_south_american_50_male/training_data/0058_south_american_50_male_9.png",
+      "size_bytes": 2583201,
+      "size_mb": 2.46,
+      "modified_timestamp": 1760602824.6239533,
+      "modified_date": "2025-10-16T10:20:24.623953",
+      "md5_hash": "cad72974ab3e881ffb9ab1c29b07566c",
+      "s3_url": null,
+      "status": "local_only"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:14.142068"
 }

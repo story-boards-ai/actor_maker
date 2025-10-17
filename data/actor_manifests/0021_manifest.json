@@ -34,7 +34,59 @@
     "total_size_bytes": 1060680,
     "total_size_mb": 1.01,
     "base_images_count": 1,
-    "scene_images_count": 0
+    "scene_images_count": 0,
+    "training_images_count": 4,
+    "training_data_size_bytes": 10062409,
+    "training_data_size_mb": 9.6,
+    "training_synced_count": 4,
+    "training_local_only_count": 0
   },
-  "status": "success"
+  "status": "success",
+  "training_data": [
+    {
+      "filename": "0021_south_american_25_female_10.png",
+      "local_path": "data/actors/0021_south_american_25_female/training_data/0021_south_american_25_female_10.png",
+      "size_bytes": 2399316,
+      "size_mb": 2.29,
+      "modified_timestamp": 1760602753.3461273,
+      "modified_date": "2025-10-16T10:19:13.346127",
+      "md5_hash": "fd4649eafafd20518a2acc03b6c6627b",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0021_south_american_25_female/training_data/0021_south_american_25_female_10.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0021_south_american_25_female_12.png",
+      "local_path": "data/actors/0021_south_american_25_female/training_data/0021_south_american_25_female_12.png",
+      "size_bytes": 2542312,
+      "size_mb": 2.42,
+      "modified_timestamp": 1760602753.9221742,
+      "modified_date": "2025-10-16T10:19:13.922174",
+      "md5_hash": "e332c10733b0bc8a41671a66a3a0d5f4",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0021_south_american_25_female/training_data/0021_south_american_25_female_12.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0021_south_american_25_female_8.png",
+      "local_path": "data/actors/0021_south_american_25_female/training_data/0021_south_american_25_female_8.png",
+      "size_bytes": 2549478,
+      "size_mb": 2.43,
+      "modified_timestamp": 1760602752.342045,
+      "modified_date": "2025-10-16T10:19:12.342045",
+      "md5_hash": "1d3468a9075d74a58d1b461c7a767728",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0021_south_american_25_female/training_data/0021_south_american_25_female_8.png",
+      "status": "synced"
+    },
+    {
+      "filename": "0021_south_american_25_female_9.png",
+      "local_path": "data/actors/0021_south_american_25_female/training_data/0021_south_american_25_female_9.png",
+      "size_bytes": 2571303,
+      "size_mb": 2.45,
+      "modified_timestamp": 1760602752.8740885,
+      "modified_date": "2025-10-16T10:19:12.874089",
+      "md5_hash": "6f642faf94b9eff6185b13a922951aa4",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0021_south_american_25_female/training_data/0021_south_american_25_female_9.png",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-17T16:46:12.499538"
 }
