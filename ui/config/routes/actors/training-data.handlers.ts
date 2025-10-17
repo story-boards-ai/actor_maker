@@ -178,9 +178,13 @@ export function handleDeleteTrainingImage(
       const { spawn } = await import('child_process');
       const { actor_name, filename, s3_url } = JSON.parse(body);
 
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+
       // Call Python script to delete from local and S3
       const scriptPath = path.join(projectRoot, 'scripts', 'delete_actor_training_image.py');
-      const pythonProcess = spawn('python3', [
+      const pythonProcess = spawn(pythonCmd, [
         scriptPath,
         actor_name,
         filename,
@@ -243,9 +247,13 @@ export function handleDeleteAllTrainingData(
       const { spawn } = await import('child_process');
       const { actor_name } = JSON.parse(body);
 
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+
       // Call Python script to delete all training data
       const scriptPath = path.join(projectRoot, 'scripts', 'delete_all_actor_training_data.py');
-      const pythonProcess = spawn('python3', [
+      const pythonProcess = spawn(pythonCmd, [
         scriptPath,
         actor_name
       ]);

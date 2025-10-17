@@ -82,6 +82,97 @@ function isS3Url(url: string): boolean {
 }
 
 /**
+ * Download multiple images in batch using Python script
+ */
+async function downloadBatch(
+  images: Array<{ s3_url: string; filename: string }>,
+  actorId: string,
+  projectRoot: string
+): Promise<Array<{ success: boolean; entry?: CacheEntry; filename: string; error?: string }>> {
+  const scriptPath = path.join(projectRoot, 'scripts', 'cache_s3_image.py');
+  
+  // Prepare batch data
+  const downloads = images.map(img => {
+    const hash = crypto.createHash('md5').update(img.s3_url).digest('hex');
+    const ext = path.extname(img.filename) || '.jpg';
+    const cacheFilename = `${actorId}_${hash}${ext}`;
+    const cachePath = path.join(CACHE_DIR, 'images', actorId, cacheFilename);
+    const fullPath = path.join(projectRoot, cachePath);
+    
+    return {
+      s3_url: img.s3_url,
+      output_path: fullPath,
+      filename: img.filename,
+      cache_path: cachePath
+    };
+  });
+  
+  const batchData = JSON.stringify({ downloads });
+  
+  return new Promise((resolve, reject) => {
+    const pythonProcess = spawn('python3', [scriptPath, batchData]);
+    
+    let output = '';
+    let errorOutput = '';
+    
+    pythonProcess.stdout.on('data', (data) => {
+      output += data.toString();
+    });
+    
+    pythonProcess.stderr.on('data', (data) => {
+      errorOutput += data.toString();
+    });
+    
+    pythonProcess.on('close', (code) => {
+      if (code === 0 && output) {
+        try {
+          const batchResult = JSON.parse(output);
+          
+          if (batchResult.success && Array.isArray(batchResult.results)) {
+            // Map results back to our format
+            const results = batchResult.results.map((result: any) => {
+              const download = downloads.find(d => d.s3_url === result.s3_url);
+              
+              if (result.success && download) {
+                return {
+                  success: true,
+                  filename: download.filename,
+                  entry: {
+                    s3_url: result.s3_url,
+                    local_path: download.cache_path,
+                    cached_at: Date.now(),
+                    size_bytes: result.size_bytes,
+                    actor_id: actorId,
+                    filename: download.filename,
+                    etag: result.etag || undefined
+                  }
+                };
+              } else {
+                return {
+                  success: false,
+                  filename: download?.filename || 'unknown',
+                  error: result.error || 'Unknown error'
+                };
+              }
+            });
+            
+            resolve(results);
+          } else {
+            reject(new Error(batchResult.error || 'Batch download failed'));
+          }
+        } catch (e) {
+          console.error('Failed to parse batch output:', output);
+          reject(new Error('Failed to parse batch download result'));
+        }
+      } else {
+        console.error('Python batch script failed:', errorOutput);
+        reject(new Error(errorOutput || 'Batch download failed'));
+      }
+    });
+  });
+}
+
+/**
  * Download image from S3 and cache locally
  */
 async function downloadAndCache(
@@ -342,6 +433,8 @@ export function handlePrefetch(
       let cached = 0;
       let failed = 0;
 
+      // Batch download all uncached images at once
+      const uncachedImages = [];
       for (const img of images) {
         // Skip if already cached
         if (manifest.entries[img.s3_url]) {
@@ -351,20 +444,44 @@ export function handlePrefetch(
             continue;
           }
         }
+        uncachedImages.push(img);
+      }
 
-        // Download and cache with error handling
+      if (uncachedImages.length > 0) {
+        console.log(`Batch downloading ${uncachedImages.length} images for actor ${actor_id}...`);
+        
         try {
-          const entry = await downloadAndCache(img.s3_url, actor_id, img.filename, projectRoot);
-          if (entry) {
-            manifest.entries[img.s3_url] = entry;
-            cached++;
-          } else {
-            console.warn(`Failed to cache ${img.filename} for actor ${actor_id}`);
-            failed++;
+          const batchResults = await downloadBatch(uncachedImages, actor_id, projectRoot);
+          
+          let successCount = 0;
+          let failCount = 0;
+          
+          for (const result of batchResults) {
+            if (result.success && result.entry) {
+              manifest.entries[result.entry.s3_url] = result.entry;
+              cached++;
+              successCount++;
+            } else {
+              // Only log NoSuchKey errors at debug level (common for stale manifest entries)
+              if (result.error?.includes('NoSuchKey')) {
+                // Silently skip - these are stale manifest entries
+              } else {
+                console.warn(`Failed to cache ${result.filename}:`, result.error);
+              }
+              failed++;
+              failCount++;
+            }
+          }
+          
+          if (successCount > 0) {
+            console.log(`✓ Cached ${successCount} images for actor ${actor_id}`);
+          }
+          if (failCount > 0 && failCount < uncachedImages.length) {
+            console.log(`⚠ Skipped ${failCount} missing/stale images for actor ${actor_id}`);
           }
         } catch (error) {
-          console.error(`Error caching ${img.filename}:`, error instanceof Error ? error.message : error);
-          failed++;
+          console.error(`Batch download failed for actor ${actor_id}:`, error);
+          failed += uncachedImages.length;
         }
       }
 

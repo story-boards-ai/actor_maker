@@ -1,5 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http';
 import * as path from 'path';
+import * as fs from 'fs';
 import { spawn } from 'child_process';
 
 /**
@@ -88,22 +89,27 @@ export function handleGenerateAllPromptImages(
 
       const { actor_name, base_image_url, actor_type, actor_sex } = JSON.parse(body);
       
-      console.log('[Generate All Prompts] Parsed data:', { actor_name, base_image_url });
+      console.log('[Generate All Prompts] Parsed data:', { actor_id: actorId, actor_name, base_image_url });
 
       // base_image_url is now an S3 URL from manifest, use it directly
       const imageUrl = base_image_url;
 
       console.log('[Generate All Prompts] Using S3 URL:', imageUrl);
 
-      // Call Python script to generate all prompt images
-      const scriptPath = path.join(projectRoot, 'scripts', 'generate_all_prompt_images.py');
-      const args = [scriptPath, actor_name, imageUrl];
+      // Call S3-only Python script to generate all prompt images
+      const scriptPath = path.join(projectRoot, 'scripts', 'training_data', 'generate_all_prompt_images_s3.py');
+      const args = [scriptPath, actorId, actor_name, imageUrl];
       if (actor_type) args.push(actor_type);
       if (actor_sex) args.push(actor_sex);
 
       console.log('[Generate All Prompts] Spawning Python with args:', args);
 
-      const pythonProcess = spawn('python3', args);
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+      console.log('[Generate All Prompts] Using Python:', pythonCmd);
+      
+      const pythonProcess = spawn(pythonCmd, args);
 
       let output = '';
       let errorOutput = '';
@@ -180,22 +186,27 @@ export function handleGenerateSingleTrainingImage(
 
       const { actor_name, base_image_url, prompt, actor_type, actor_sex } = JSON.parse(body);
       
-      console.log('[Generate Single] Parsed data:', { actor_name, base_image_url, prompt });
+      console.log('[Generate Single] Parsed data:', { actor_id: actorId, actor_name, base_image_url, prompt });
 
       // base_image_url is now an S3 URL from manifest, use it directly
       const imageUrl = base_image_url;
 
       console.log('[Generate Single] Using S3 URL:', imageUrl);
 
-      // Call Python script to generate single training image
-      const scriptPath = path.join(projectRoot, 'scripts', 'generate_single_prompt_image.py');
-      const args = [scriptPath, actor_name, imageUrl, prompt];
+      // Call S3-only Python script to generate single training image
+      const scriptPath = path.join(projectRoot, 'scripts', 'training_data', 'generate_single_training_image_s3.py');
+      const args = [scriptPath, actorId, actor_name, imageUrl, prompt];
       if (actor_type) args.push(actor_type);
       if (actor_sex) args.push(actor_sex);
 
       console.log('[Generate Single] Spawning Python with args:', args);
 
-      const pythonProcess = spawn('python3', args);
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+      console.log('[Generate Single] Using Python:', pythonCmd);
+      
+      const pythonProcess = spawn(pythonCmd, args);
 
       let output = '';
       let errorOutput = '';
@@ -261,9 +272,14 @@ export function handleRegeneratePosterFrame(
 
       console.log('[Regenerate Poster Frame] Parsed data:', { actor_name, lora_model_url });
 
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+      console.log('[Regenerate Poster Frame] Using Python:', pythonCmd);
+
       // Call Python script to regenerate poster frame
       const scriptPath = path.join(projectRoot, 'scripts', 'regenerate_poster_frame.py');
-      const pythonProcess = spawn('python3', [
+      const pythonProcess = spawn(pythonCmd, [
         scriptPath,
         actorId,
         actor_name,
