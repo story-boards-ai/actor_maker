@@ -7,20 +7,15 @@
       "actor_id": "0047_black_40_male",
       "job_id": "f332bddf-b056-47cc-be24-72cc8ead3e73",
       "s3_image_urls": [
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_0.png",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_1.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_2.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_3.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_4.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_5.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_6.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_7.png",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_8.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_9.png",
         "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_10.png",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_11.png",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_12.png",
-        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_13.png"
+        "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0047_black_40_male/0047_black_40_male_12.png"
       ],
       "type": "system",
       "user_id": "99999999-9999-9999-9999-999999999999"

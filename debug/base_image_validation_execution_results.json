@@ -1,0 +1,385 @@
+{
+  "total_actions": 63,
+  "successful": 63,
+  "failed": 0,
+  "results": [
+    {
+      "actor_id": 2,
+      "actor_name": "0002_european_35_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 11,
+      "actor_name": "0011_european_16_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 14,
+      "actor_name": "0014_european_45_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 20,
+      "actor_name": "0020_black_20_female",
+      "action": "recreate_blurry",
+      "success": true
+    },
+    {
+      "actor_id": 25,
+      "actor_name": "0025_european_35_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 26,
+      "actor_name": "0026_black_35_female",
+      "action": "recreate_blurry",
+      "success": true
+    },
+    {
+      "actor_id": 36,
+      "actor_name": "0036_european_16_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 39,
+      "actor_name": "0039_asian_21_female",
+      "action": "recreate_blurry",
+      "success": true
+    },
+    {
+      "actor_id": 41,
+      "actor_name": "0041_european_25_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 51,
+      "actor_name": "0051_european_45_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 62,
+      "actor_name": "0062_asian_60_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 68,
+      "actor_name": "0068_south_american_25_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 82,
+      "actor_name": "0082_european_70_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 89,
+      "actor_name": "0089_south_american_65_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 94,
+      "actor_name": "0094_middle_eastern_25_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 98,
+      "actor_name": "0098_middle_eastern_40_male",
+      "action": "recreate_blurry",
+      "success": true
+    },
+    {
+      "actor_id": 101,
+      "actor_name": "0101_european_50_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 102,
+      "actor_name": "0102_middle_eastern_70_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 103,
+      "actor_name": "0103_south_american_70_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 106,
+      "actor_name": "0106_asian_50_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 107,
+      "actor_name": "0107_asian_55_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 108,
+      "actor_name": "0108_european_23_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 109,
+      "actor_name": "0109_asian_60_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 110,
+      "actor_name": "0110_asian_65_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 111,
+      "actor_name": "0111_nordic_65_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 113,
+      "actor_name": "0113_nordic_16_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 115,
+      "actor_name": "0115_asian_25_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 165,
+      "actor_name": "0165_black_30_female",
+      "action": "recreate_blurry",
+      "success": true
+    },
+    {
+      "actor_id": 175,
+      "actor_name": "0175_european_22_male",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 176,
+      "actor_name": "0176_european_27_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 177,
+      "actor_name": "0177_south_american_31_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 179,
+      "actor_name": "0179_black_24_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 181,
+      "actor_name": "0181_european_33_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 182,
+      "actor_name": "0182_indian_26_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 184,
+      "actor_name": "0184_european_21_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 185,
+      "actor_name": "0185_black_37_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 187,
+      "actor_name": "0187_asian_32_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 189,
+      "actor_name": "0189_black_23_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 190,
+      "actor_name": "0190_european_35_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 191,
+      "actor_name": "0191_asian_27_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 192,
+      "actor_name": "0192_south_american_31_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 194,
+      "actor_name": "0194_middle_eastern_38_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 199,
+      "actor_name": "0199_south_american_22_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 202,
+      "actor_name": "0202_indian_32_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 203,
+      "actor_name": "0203_black_25_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 204,
+      "actor_name": "0204_european_37_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 206,
+      "actor_name": "0206_south_american_33_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 207,
+      "actor_name": "0207_middle_eastern_26_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 209,
+      "actor_name": "0209_european_24_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 211,
+      "actor_name": "0211_asian_28_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 214,
+      "actor_name": "0214_middle_eastern_30_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 215,
+      "actor_name": "0215_black_27_female",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 216,
+      "actor_name": "0216_asian_34_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 217,
+      "actor_name": "0217_european_29_female",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 218,
+      "actor_name": "0218_indian_36_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 219,
+      "actor_name": "0219_asian_43_male",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 236,
+      "actor_name": "0236_indian_51_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 240,
+      "actor_name": "0240_south_american_41_male",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 242,
+      "actor_name": "0242_asian_54_male",
+      "action": "recreate_mismatch",
+      "success": true
+    },
+    {
+      "actor_id": 259,
+      "actor_name": "0259_south_american_43_female",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 274,
+      "actor_name": "0274_black_35_male",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 286,
+      "actor_name": "0286_black_12_female",
+      "action": "create_base_image",
+      "success": true
+    },
+    {
+      "actor_id": 287,
+      "actor_name": "0287_middle_eastern_11_male",
+      "action": "create_base_image",
+      "success": true
+    }
+  ]
+}

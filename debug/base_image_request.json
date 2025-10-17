@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "Professional full-body studio portrait photograph of a an attractive 35 year old asian man, with wavy medium short black hair, wearing Slim-fit navy blue suit with a light blue dress shirt (top button undone), brown leather belt, and matching brown leather derby shoes..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nCasual to semi-formal attire appropriate for the character.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
+            "text": "Professional full-body studio portrait photograph of a A 15 year old asian boy with short, spiky black hair and braces, wearing Casual red and black plaid shirt, dark blue jeans, white sneakers, and a black digital watch..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
             "clip": [
               "3",
               0
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 593538858
+            "noise_seed": 974758563
           },
           "class_type": "RandomNoise",
           "_meta": {

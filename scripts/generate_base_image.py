@@ -50,6 +50,7 @@ def find_images_in_response(data: dict) -> list:
 def generate_base_image(
     description: str,
     actor_name: str,
+    outfit: str = None,
     width: int = 1024,
     height: int = 1536,
     steps: int = 25,
@@ -62,6 +63,7 @@ def generate_base_image(
     Args:
         description: Character description (e.g., "european 25 year old male with short brown hair")
         actor_name: Actor folder name (e.g., "0000_european_16_male")
+        outfit: Outfit description (optional, e.g., "casual jeans and t-shirt")
         width: Image width (default: 1024 for portrait)
         height: Image height (default: 1536 for full body portrait)
         steps: Sampling steps (default: 25 for high quality)
@@ -75,6 +77,8 @@ def generate_base_image(
     logger.info("BASE IMAGE GENERATION")
     logger.info(f"Actor: {actor_name}")
     logger.info(f"Description: {description}")
+    if outfit:
+        logger.info(f"Outfit: {outfit}")
     logger.info(f"Dimensions: {width}x{height}")
     logger.info("="*80)
     
@@ -85,13 +89,18 @@ def generate_base_image(
     # - Professional lighting
     # - Centered composition
     # - Natural pose
-    prompt = f"""Professional full-body studio portrait photograph of a {description}.
+    
+    # Build character description with outfit if provided
+    character_desc = description
+    if outfit:
+        character_desc = f"{description}, wearing {outfit}"
+    
+    prompt = f"""Professional full-body studio portrait photograph of a {character_desc}.
 Standing pose, facing camera, centered in frame.
 Neutral gray or beige studio background with professional lighting.
 Natural relaxed pose with arms at sides or casually positioned.
 Sharp focus, high quality, photorealistic.
 Full body visible from head to toe.
-Casual to semi-formal attire appropriate for the character.
 Direct eye contact with camera or slight angle.
 Clean composition, no distracting elements."""
     

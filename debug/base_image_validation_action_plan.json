@@ -1,0 +1,453 @@
+{
+  "generated_at": "/home/markus/actor_maker",
+  "total_actors_checked": 288,
+  "actions_needed": 63,
+  "actions": [
+    {
+      "actor_id": 2,
+      "actor_name": "0002_european_35_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible. | Match: The woman appears to be of Asian ethnicity rather than European, which is a significant difference. Her hair is straight and just below the shoulders, matching the description, but the outfit differs notably: the blazer is black (not navy blue), the blouse is a shiny taupe color without pinstripes instead of white silk with subtle pinstripes, and while the skirt is a black pencil skirt, the overall outfit colors and blouse style do not reasonably match the described elegant business attire. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 11,
+      "actor_name": "0011_european_16_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is clearly visible. | Match: The individual appears to be a young European woman with long blonde hair which matches the description. However, the outfit differs significantly: she is wearing a grey long-sleeve crop top instead of a black designer logo top, light blue skinny jeans that are not ripped, and plain white sneakers rather than white high-top sneakers with red accents. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 14,
+      "actor_name": "0014_european_45_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without any blur or obstruction. | Match: The subject appears to be a European man of appropriate age with short straight blonde hair, matching the description. However, the outfit does not match the description: he is wearing a light grey polo shirt instead of a navy blue Ralph Lauren polo, dark shorts instead of white tailored chino shorts, and black shoes instead of brown leather boat shoes. These are significant outfit differences. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 20,
+      "actor_name": "0020_black_20_female",
+      "action": "recreate_blurry",
+      "reason": "Image is blurry/unrecognizable: Clarity: The image is very blurry and details are not distinguishable. | Match: Due to the poor clarity, it is not possible to reasonably assess if the image matches the actor description and outfit. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 25,
+      "actor_name": "0025_european_35_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible with no blurriness or obstruction. | Match: The person appears to be an Asian woman rather than a white woman, which is a significant difference. The outfit mostly matches the description with a navy blue blazer, light blue blouse, gray skirt, and black shoes, but the ethnicity difference is a major discrepancy. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 26,
+      "actor_name": "0026_black_35_female",
+      "action": "recreate_blurry",
+      "reason": "Image is blurry/unrecognizable: Clarity: The image is noticeably blurry, making facial features and finer details difficult to discern. | Match: Despite the blurriness, the person appears to be a black woman with dark shoulder-length hair, wearing a green dress, a black leather jacket, and leopard print boots, which reasonably matches the description and outfit. | Confidence: medium",
+      "success": true
+    },
+    {
+      "actor_id": 36,
+      "actor_name": "0036_european_16_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear and the person is fully visible without any blurriness or obstruction. | Match: The person does not match the actor description as she is not a white girl but appears to be of a different ethnicity. The outfit mostly matches the description except for the sneakers which are checkered Vans but in black and white pattern, consistent with the description. Hair is braided black, which matches, and the age appears close to 16. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 39,
+      "actor_name": "0039_asian_21_female",
+      "action": "recreate_blurry",
+      "reason": "Image is blurry/unrecognizable: Clarity: The image is very blurry, making it difficult to clearly recognize facial features or confirm detailed outfit characteristics. | Match: Due to the lack of clarity, it is not possible to confidently assess if the person matches the described age, ethnicity, hair style, or outfit. | Confidence: low",
+      "success": true
+    },
+    {
+      "actor_id": 41,
+      "actor_name": "0041_european_25_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible without any blurriness or obstruction. | Match: The individual in the image does not reasonably match the actor description: she appears to be of a different ethnicity than European. The outfit mostly matches the description with a deep purple off-shoulder sweater, black high-waisted skinny jeans, and silver ankle boots with silver hoop earrings, but the major discrepancy in ethnicity leads to a no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 51,
+      "actor_name": "0051_european_45_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible with no blurriness or obscuration. | Match: The subject appears younger than 45 and does not have very short shaggy black hair; the hair is short but styled differently. The ethnicity does not clearly match European, and there is no visible nose piercing. The outfit is similar in style and color but has differences in details such as the jeans being black instead of dark gray and the boots not being studded. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 62,
+      "actor_name": "0062_asian_60_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is clearly visible. | Match: The person appears to be an older Asian woman, not a black woman as described. The outfit includes a traditional teal silk mandarin collar jacket and black wide-leg pants, matching the outfit description well, but the ethnicity, a major characteristic, does not match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 68,
+      "actor_name": "0068_south_american_25_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without blurriness or obstruction. | Match: The subject is a male and appears to be in the approximate age range, but his ethnicity and hair color do not match the 'South American man with straight black hair' description. The outfit is similar in style with a maroon shirt and black pants, but the shirt is short-sleeved and lacks the described geometric pattern and gold accents. The sneakers are white but lack the described gold foil accents and red soles. Overall, there are significant differences in appearance and some outfit details. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 82,
+      "actor_name": "0082_european_70_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is well-lit, focused, and the subject is clearly visible and recognizable. | Match: The woman appears to be of Asian descent rather than European, which is a significant difference. However, her age and hair style roughly match the description. The outfit is similar in style and color tone but the dress is not a wrap dress and the cardigan lacks visible buttons. The shoes are beige and appropriate in style. Due to the major ethnicity mismatch, this is marked as no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 89,
+      "actor_name": "0089_south_american_65_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible and recognizable. | Match: The woman appears to be older, with wavy gray hair and wearing a colorful turquoise and orange floral print dress with three-quarter sleeves, matching the outfit description. However, her skin tone and facial features do not align with the South American ethnicity described, suggesting a different ethnic background. | Confidence: medium",
+      "success": true
+    },
+    {
+      "actor_id": 94,
+      "actor_name": "0094_middle_eastern_25_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible without any blurriness or obstruction. | Match: The man appears to be of a different ethnicity than Middle Eastern, with a different hair texture and style (curly and longer than very short straight black hair). The outfit is mostly similar but the shoes are different (black and white low-top sneakers instead of high-top). Due to significant differences in ethnicity and hair, it does not reasonably match the actor description. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 98,
+      "actor_name": "0098_middle_eastern_40_male",
+      "action": "recreate_blurry",
+      "reason": "Image is blurry/unrecognizable: Clarity: The image is very blurry, making it difficult to discern clear facial features and details. | Match: Due to the poor clarity, it is not possible to confidently assess if the person matches the age, ethnicity, hair color, or outfit description. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 101,
+      "actor_name": "0101_european_50_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person's features are clearly visible. | Match: The woman appears to be a European woman around the correct age with shoulder-length blonde hair and little makeup, matching the major characteristics. However, the outfit does not reasonably match the description: she is wearing a casual beige sweater and dark pants with brown boots, instead of an elegant cream-colored blazer, soft pink silk blouse, tailored navy blue trousers, nude pumps, and delicate gold jewelry. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 102,
+      "actor_name": "0102_middle_eastern_70_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible without any obstructions. | Match: The man appears to be overweight and likely close to the age range, with grey hair. However, he is wearing a casual shirt and pants rather than a beige linen thobe with embroidery. Also, the silver-rimmed glasses are worn, not hanging from a chain, and sandals are not visible; he is wearing black shoes. These outfit discrepancies are significant given the specific traditional outfit description. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 103,
+      "actor_name": "0103_south_american_70_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the person's face and outfit are fully visible. | Match: The person appears to be an older woman with gray hair, but her ethnicity appears East Asian rather than South American. Additionally, she is wearing a gray cardigan and loose pants instead of a vibrant turquoise and purple embroidered tunic with a purple shawl. The outfit and ethnicity represent significant differences from the description. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 106,
+      "actor_name": "0106_asian_50_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible and recognizable. | Match: The individual appears to be a middle-aged Asian man with salt-and-pepper hair and a beard, matching the actor description in major characteristics. However, the outfit is casual (dark long sleeve shirt and pants) and does not match the described formal dark charcoal three-piece suit, white dress shirt, burgundy tie, pocket square, or polished black oxford shoes. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 107,
+      "actor_name": "0107_asian_55_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the person is fully visible without any blurriness or obstruction. | Match: The person appears to be an Asian man of appropriate age with short black hair, matching the actor description. However, the outfit differs significantly from the described traditional dark blue silk mandarin collar shirt with black trim and black dress pants and leather loafers. Instead, he is wearing a casual grey pullover and dark pants, which does not reasonably match the traditional outfit described. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 108,
+      "actor_name": "0108_european_23_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible and unobscured. | Match: The person appears to be a young European woman with long brown hair and bangs, matching the actor description. However, the outfit does not match the description: she is wearing a plain long sleeve top and wide black pants with sandals, rather than a flowing floral midi dress in pastel colors with light brown ankle boots and a tan crossbody bag. Major outfit differences lead to a no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 109,
+      "actor_name": "0109_asian_60_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the person's features are easily recognizable. | Match: The individual appears to be a 60-year-old Asian man with short, straight gray hair with a side part, matching the description. However, the outfit does not reasonably match the description: he is wearing a brown casual shirt instead of a light gray tweed blazer over a white dress shirt. Although the pants and shoes are somewhat similar, the major difference in the top garment leads to a no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 110,
+      "actor_name": "0110_asian_65_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible and recognizable. | Match: The man matches the age, sex, and ethnicity criteria and has short grey hair, but the outfit significantly differs from the description. He is wearing a grey short-sleeve button-up shirt, dark pants, and black shoes, whereas the description specifies a dark blue linen shirt with rolled-up sleeves, beige chinos, brown leather belt, and brown leather sandals. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 111,
+      "actor_name": "0111_nordic_65_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible. | Match: The woman appears to be the correct age and sex with straight grey hair and golden earrings, matching the major characteristics. However, the outfit differs significantly from the description: she is wearing a grey cardigan over a matching top instead of an elegant cream-colored wool coat over a navy blue turtleneck sweater, and the trousers are black but the top layers do not match the described style and colors. This difference in major outfit elements leads to a no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 113,
+      "actor_name": "0113_nordic_16_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible. | Match: The woman appears to match the age and hair color criteria, but the outfit does not match the description. She is wearing an olive green long-sleeve shirt instead of a light blue oversized sweater with white snowflake patterns, no beanie, and brown boots that are ankle-high but more rugged in style. The outfit differences are significant enough to mark as no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 115,
+      "actor_name": "0115_asian_25_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible without any obstructions. | Match: The person appears to be an Asian man of appropriate age with similar hair style, but the outfit does not match the description: he is wearing a grey t-shirt and black pants instead of a dark green flannel shirt over a white t-shirt and dark blue jeans. Shoes and belt details also differ. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 165,
+      "actor_name": "0165_black_30_female",
+      "action": "recreate_blurry",
+      "reason": "Image is blurry/unrecognizable: Clarity: The image is very blurry, making it difficult to clearly recognize facial features, hair details, and outfit specifics. | Match: Due to the blurriness, it is not possible to confidently assess if the person matches the age, hair style, or outfit description provided. | Confidence: low",
+      "success": true
+    },
+    {
+      "actor_id": 175,
+      "actor_name": "0175_european_22_male",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 176,
+      "actor_name": "0176_european_27_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible without any blurriness or obstruction. | Match: The person in the image does not reasonably match the actor description; she appears to be of Asian descent rather than European, and there are no visible freckles. The outfit matches very closely with the description including the maroon velvet blazer, white camisole, charcoal trousers, black patent loafers, and a pendant necklace. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 177,
+      "actor_name": "0177_south_american_31_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible and recognizable. | Match: The person appears to be a South American man with short curly dark hair and a stubble beard, matching the description. However, the outfit does not reasonably match the described relaxed sky blue guayabera shirt, tan linen trousers, woven brown leather sandals, and beaded bracelet. Instead, he is wearing a grey t-shirt, dark jeans, and black sneakers with no visible accessories. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 179,
+      "actor_name": "0179_black_24_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person's features and outfit are clearly visible. | Match: The individual matches the actor's age, sex, and ethnicity with short dreadlocks, but the outfit significantly differs from the described vivid red and yellow patterned dashiki shirt and chunky wooden bead necklace, as he is wearing a black jacket, white shirt, black jeans, and no visible necklace. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 181,
+      "actor_name": "0181_european_33_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible. | Match: The man appears to be the correct age, sex, and ethnicity with short brown hair and a full beard, matching the actor description. However, the outfit is significantly different from the described outfit; he is wearing a button-up shirt rather than a layered charcoal wool cardigan and forest green t-shirt, and different shoes instead of brown hiking boots. These are major outfit discrepancies. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 182,
+      "actor_name": "0182_indian_26_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without any blurriness or obstruction. | Match: The woman appears to be of the correct ethnicity and age with long black hair and a bindi, but the hairstyle is loose and curly rather than braided. The outfit is completely different from the described vibrant magenta and gold salwar kameez with gold dupatta and traditional shoes; instead, she is wearing a plain, muted toned modern outfit without traditional accessories or the specified colors. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 184,
+      "actor_name": "0184_european_21_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without any blurriness or obstruction. | Match: The subject appears to be a young woman with curly brown hair, which matches the description, but her outfit does not reasonably match the playful yellow sundress with white polka dots, cropped blue denim jacket, tan wedge sandals, and dainty gold charm bracelet. Instead, she is wearing a beige long sleeve top and light blue jeans, barefoot. No significant indication of dimples is visible, but this is a minor detail. The outfit mismatch is significant. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 185,
+      "actor_name": "0185_black_37_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible with no obstructions. | Match: The man matches the age, sex, and ethnicity with a shaved head and goatee. However, the outfit does not reasonably match the description as he is wearing a dark button-up shirt, dark pants, and dress shoes instead of a black leather biker jacket, deep green crew neck t-shirt, slim-fit grey jeans, black combat boots, and a silver chain necklace. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 187,
+      "actor_name": "0187_asian_32_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear and the person is fully visible with no blurriness or obstruction. | Match: The individual appears to be an Asian man of appropriate age with short black hair. However, there is no visible scar on his cheek and the outfit does not match the description; he is wearing a loose green shirt and dark pants instead of a black bomber jacket, graphic red t-shirt, distressed blue jeans, and black running sneakers. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 189,
+      "actor_name": "0189_black_23_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without any blurriness or obstruction. | Match: The woman appears to be a black female, likely in the correct age range, with long braided hair, but there is no visible septum piercing. The outfit differs significantly from the description: she is wearing a long-sleeve cropped jacket and matching pants, not a bold yellow crop top with geometric patterns, denim shorts, white platform sandals, or colorful bangles. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 190,
+      "actor_name": "0190_european_35_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person's features are clearly visible. | Match: The man appears to be a European male with short wavy brown hair and facial hair consistent with a five o'clock shadow. However, the outfit does not reasonably match the description: he is wearing an olive-green button-up shirt instead of a navy blue cable-knit pullover with a white oxford shirt underneath, no tan corduroy pants but dark pants, no brown brogue shoes but black shoes, and no navy flat cap. These are significant outfit differences. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 191,
+      "actor_name": "0191_asian_27_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear and the subject is well-focused with no blurriness or obstruction. | Match: The subject appears to be an Asian woman of an appropriate age with shoulder-length black hair, but the hairstyle does not include wispy bangs. The outfit significantly differs from the description: she is wearing a brown crop top and olive pants instead of a soft blush pink oversized cardigan, white blouse, light grey culottes, rose gold ballet flats, and a pearl hair clip. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 192,
+      "actor_name": "0192_south_american_31_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible. | Match: The person in the image appears to be a man possibly in the correct age range with black hair and a beard, which somewhat aligns with the description. However, the hair is not clearly messy and no goatee is distinctly visible. The outfit is significantly different from the described relaxed teal linen shirt, white drawstring shorts, tan espadrilles, and woven leather bracelet; instead, he is wearing a plain short-sleeve shirt, dark jeans, and sneakers. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 194,
+      "actor_name": "0194_middle_eastern_38_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the subject is fully visible without any blurriness or obstruction. | Match: The man appears to be Middle Eastern with short curly black hair and a full beard, matching the actor description well. However, the outfit is a modern, casual shirt and pants in a grayish tone, not a sand-colored linen thobe with blue embroidery. Also, no navy loafers or silver wristwatch are visible. The outfit differs significantly from the description. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 199,
+      "actor_name": "0199_south_american_22_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible without any blurriness or obstruction. | Match: The subject appears to be a woman with medium length curly brown hair, fitting the age and ethnicity reasonably well. However, the outfit does not match the description: she is wearing a plain brown t-shirt and gray jeans, rather than a sun-washed coral wrap blouse with flutter sleeves and high-waisted light-sage culottes. Key outfit elements like shoes, accessories, and bag are also missing. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 202,
+      "actor_name": "0202_indian_32_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear and the person is easily recognizable, with no blurriness or obstruction. | Match: The person reasonably matches the actor description in terms of ethnicity, age range, and beard style, but the hair is not combed to the side as described. The outfit is significantly different from the described mandarin-collar jacket and formal elements; instead, the person is wearing a casual short-sleeve button-up shirt, dark jeans, and brown casual shoes, which does not match the described outfit style and colors. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 203,
+      "actor_name": "0203_black_25_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible with no obstructions. | Match: The subject is a black woman with short curly hair dyed purple at the tips, matching the major hair characteristics and ethnicity. However, the outfit does not match the description: she is wearing a black tank top and wide-leg denim pants with sandals, rather than the described electric plum cropped bomber, charcoal ribbed tank, cargo pants, metallic combat boots, and sunglasses. Additionally, the septum ring is not visible. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 204,
+      "actor_name": "0204_european_37_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is clearly visible without any blurriness or obstruction. | Match: The man appears to fit the age, sex, ethnicity, and hair description reasonably well. However, the outfit does not match the description significantly: he is wearing a short-sleeve gray t-shirt, blue jeans, and brown shoes rather than a slate-green field jacket, cream merino turtleneck, ebony corduroy pants, chestnut hiking boots, or carrying an amber leather weekender bag. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 206,
+      "actor_name": "0206_south_american_33_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person is fully visible. | Match: The person appears to be a young adult male with short curly black hair, but he does not have a thin mustache. His outfit (gray t-shirt, black pants, and black shoes) significantly differs from the described burnt-sienna suede trucker jacket, maize-yellow henley, stone-wash jeans, sand canvas high-tops, and braided hemp bracelet. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 207,
+      "actor_name": "0207_middle_eastern_26_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the person is fully visible with no blurriness or obstructions. | Match: The person appears to be a woman of Middle Eastern descent with medium length wavy black hair, matching the description. However, the outfit is significantly different: she is wearing a brown two-piece outfit with pants and a jacket rather than a moss-green high-neck pleated maxi dress with a tan sash belt and a copper chiffon scarf. The outfit difference is major enough to mark as no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 209,
+      "actor_name": "0209_european_24_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible without any blurriness or obstruction. | Match: The person matches the age, sex, and ethnicity criteria reasonably well and has shoulder-length blonde hair. However, the outfit is significantly different from the description, lacking the powder-blue cropped denim jacket, butter-cream ribbed mock-neck tee, lavender A-line skirt, white platform sneakers with pastel rainbow stitching, and silver charm bracelet. The current outfit consists of a beige t-shirt, grey pants, and beige sneakers, which is a notable deviation. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 211,
+      "actor_name": "0211_asian_28_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is clearly visible. | Match: The person appears to be an Asian woman with long black hair in a high ponytail, matching the description. However, the outfit does not match the description of an ice-grey athletic zip fleece, matte-black leggings with reflective stripes, glacier-white running shoes, and obsidian sports headband. Instead, she is wearing a beige long-sleeve top and loose gray pants, and no headband or visible athletic shoes are present. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 214,
+      "actor_name": "0214_middle_eastern_30_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible without any obstructions. | Match: The man appears to be Middle Eastern with short black hair and a trimmed beard, matching the actor description. However, his outfit does not reasonably match the described outfit: he is wearing a dark grey t-shirt and black pants, with sneakers, rather than a pebble-grey linen camp shirt, sand cotton tee, deep-olive cargo joggers, desert-tan moccasins, or a matte-black canvas sling bag. These are significant outfit discrepancies. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 215,
+      "actor_name": "0215_black_27_female",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible with no obstructions. | Match: The subject matches the major characteristics of being a black woman with medium length braided hair pulled back, likely in the correct age range. However, she does not have a nose ring and her outfit differs significantly from the described emerald sleeveless utility jumpsuit, matte-gold buckle belt, ebony ankle-strap block heels, and saffron silk hair wrap. Instead, she wears a brown sleeveless crop top and black pants, barefoot, and no visible hair wrap or belt. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 216,
+      "actor_name": "0216_asian_34_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the person's features are clearly visible. | Match: The person matches the age, sex, ethnicity, and hair style description well, but the outfit does not match the description. He is wearing a dark crew-neck shirt and pants, not the indigo denim chore jacket, cloud-white sweatshirt, charcoal jeans, or the other detailed outfit elements. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 217,
+      "actor_name": "0217_european_29_female",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 218,
+      "actor_name": "0218_indian_36_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear, well-lit, and the person is fully visible without any blurriness or obscured features. | Match: The man appears to be an Indian male with a beard and short hair, matching the description reasonably well. However, the outfit significantly differs from the described forest-green parka, oatmeal henley, tobacco chinos, olive desert boots, and ivory tote. Instead, he is wearing a greyish-green button-up shirt, blue jeans, and dark brown boots, with no tote visible. These outfit differences are major enough to mark as no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 219,
+      "actor_name": "0219_asian_43_male",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 236,
+      "actor_name": "0236_indian_51_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is sharp, well-lit, and the subject is fully visible from multiple angles. | Match: The subject is a middle-aged Indian man with salt-and-pepper hair and a mustache, matching the description well. However, he is wearing a gray checked blazer, not a steel gray Nehru jacket as described. The shirt is light blue and pants are navy blue, which aligns with the outfit description, but the major discrepancy in the jacket style leads to a no match. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 240,
+      "actor_name": "0240_south_american_41_male",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 242,
+      "actor_name": "0242_asian_54_male",
+      "action": "recreate_mismatch",
+      "reason": "Image does not match description: Clarity: The image is clear and the actor's face and outfit are well visible from multiple angles. | Match: The actor appears to be an older Asian man with short graying hair, matching the age and ethnicity criteria well. However, the outfit is a light grey checkered blazer with a white shirt and black trousers, which does not match the description of a classic charcoal grey mandarin-collar jacket with a jade tie pin. The overall outfit style is formal but differs significantly in jacket style and color, and the tie pin is not visible or matching. | Confidence: high",
+      "success": true
+    },
+    {
+      "actor_id": 259,
+      "actor_name": "0259_south_american_43_female",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 274,
+      "actor_name": "0274_black_35_male",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 286,
+      "actor_name": "0286_black_12_female",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    },
+    {
+      "actor_id": 287,
+      "actor_name": "0287_middle_eastern_11_male",
+      "action": "create_base_image",
+      "reason": "No base image exists",
+      "success": true
+    }
+  ],
+  "summary": {
+    "create_base_image": 8,
+    "recreate_blurry": 5,
+    "recreate_mismatch": 50
+  }
+}

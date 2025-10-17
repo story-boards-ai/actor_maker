@@ -307,6 +307,8 @@ function handleGetTrainingData(
     }
 
     // Check for base/poster image in multiple locations
+    // NOTE: Only check base_image and poster_frame folders
+    // Training images (_0, _1, etc.) should NOT be considered as base images
     const possibleImagePaths = [
       // Try base_image folder first (both .jpg and .png)
       path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.jpg`),
@@ -315,10 +317,7 @@ function handleGetTrainingData(
       path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.png`),
       path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.jpg`),
       path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.png`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.jpg`),
-      // Try training_data folder for first image
-      path.join(projectRoot, 'data', 'actors', actor.name, 'training_data', `${actor.name}_0.png`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'training_data', `${actor.name}_1.png`)
+      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.jpg`)
     ];
     
     let baseImagePath: string | null = null;

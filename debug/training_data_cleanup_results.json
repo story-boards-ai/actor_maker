@@ -1,0 +1,294 @@
+{
+  "total_actors": 288,
+  "actors_without_base_image": 57,
+  "training_data_deleted": 57,
+  "successful": 57,
+  "failed": 0,
+  "results": [
+    {
+      "actor_id": 172,
+      "actor_name": "0172_black_66_female",
+      "success": true
+    },
+    {
+      "actor_id": 183,
+      "actor_name": "0183_middle_eastern_39_male",
+      "success": true
+    },
+    {
+      "actor_id": 188,
+      "actor_name": "0188_european_25_female",
+      "success": true
+    },
+    {
+      "actor_id": 198,
+      "actor_name": "0198_asian_30_male",
+      "success": true
+    },
+    {
+      "actor_id": 200,
+      "actor_name": "0200_european_34_male",
+      "success": true
+    },
+    {
+      "actor_id": 201,
+      "actor_name": "0201_middle_eastern_28_female",
+      "success": true
+    },
+    {
+      "actor_id": 208,
+      "actor_name": "0208_black_31_male",
+      "success": true
+    },
+    {
+      "actor_id": 212,
+      "actor_name": "0212_european_32_male",
+      "success": true
+    },
+    {
+      "actor_id": 213,
+      "actor_name": "0213_south_american_25_female",
+      "success": true
+    },
+    {
+      "actor_id": 220,
+      "actor_name": "0220_south_american_48_female",
+      "success": true
+    },
+    {
+      "actor_id": 221,
+      "actor_name": "0221_middle_eastern_52_male",
+      "success": true
+    },
+    {
+      "actor_id": 222,
+      "actor_name": "0222_indian_46_female",
+      "success": true
+    },
+    {
+      "actor_id": 223,
+      "actor_name": "0223_european_55_male",
+      "success": true
+    },
+    {
+      "actor_id": 224,
+      "actor_name": "0224_black_50_female",
+      "success": true
+    },
+    {
+      "actor_id": 227,
+      "actor_name": "0227_indian_53_male",
+      "success": true
+    },
+    {
+      "actor_id": 228,
+      "actor_name": "0228_european_12_male",
+      "success": true
+    },
+    {
+      "actor_id": 229,
+      "actor_name": "0229_south_american_14_female",
+      "success": true
+    },
+    {
+      "actor_id": 230,
+      "actor_name": "0230_asian_11_male",
+      "success": true
+    },
+    {
+      "actor_id": 231,
+      "actor_name": "0231_black_13_female",
+      "success": true
+    },
+    {
+      "actor_id": 232,
+      "actor_name": "0232_european_82_male",
+      "success": true
+    },
+    {
+      "actor_id": 233,
+      "actor_name": "0233_asian_85_female",
+      "success": true
+    },
+    {
+      "actor_id": 234,
+      "actor_name": "0234_middle_eastern_44_male",
+      "success": true
+    },
+    {
+      "actor_id": 237,
+      "actor_name": "0237_asian_45_female",
+      "success": true
+    },
+    {
+      "actor_id": 238,
+      "actor_name": "0238_black_56_male",
+      "success": true
+    },
+    {
+      "actor_id": 239,
+      "actor_name": "0239_european_52_female",
+      "success": true
+    },
+    {
+      "actor_id": 241,
+      "actor_name": "0241_middle_eastern_48_female",
+      "success": true
+    },
+    {
+      "actor_id": 243,
+      "actor_name": "0243_indian_10_female",
+      "success": true
+    },
+    {
+      "actor_id": 244,
+      "actor_name": "0244_south_american_15_male",
+      "success": true
+    },
+    {
+      "actor_id": 245,
+      "actor_name": "0245_middle_eastern_13_female",
+      "success": true
+    },
+    {
+      "actor_id": 246,
+      "actor_name": "0246_south_american_84_male",
+      "success": true
+    },
+    {
+      "actor_id": 247,
+      "actor_name": "0247_black_87_female",
+      "success": true
+    },
+    {
+      "actor_id": 248,
+      "actor_name": "0248_asian_39_male",
+      "success": true
+    },
+    {
+      "actor_id": 249,
+      "actor_name": "0249_south_american_47_male",
+      "success": true
+    },
+    {
+      "actor_id": 250,
+      "actor_name": "0250_middle_eastern_53_male",
+      "success": true
+    },
+    {
+      "actor_id": 251,
+      "actor_name": "0251_indian_42_male",
+      "success": true
+    },
+    {
+      "actor_id": 252,
+      "actor_name": "0252_european_50_male",
+      "success": true
+    },
+    {
+      "actor_id": 254,
+      "actor_name": "0254_south_american_57_male",
+      "success": true
+    },
+    {
+      "actor_id": 255,
+      "actor_name": "0255_asian_49_male",
+      "success": true
+    },
+    {
+      "actor_id": 256,
+      "actor_name": "0256_indian_55_male",
+      "success": true
+    },
+    {
+      "actor_id": 257,
+      "actor_name": "0257_middle_eastern_51_male",
+      "success": true
+    },
+    {
+      "actor_id": 258,
+      "actor_name": "0258_european_46_male",
+      "success": true
+    },
+    {
+      "actor_id": 260,
+      "actor_name": "0260_black_58_male",
+      "success": true
+    },
+    {
+      "actor_id": 262,
+      "actor_name": "0262_indian_48_male",
+      "success": true
+    },
+    {
+      "actor_id": 263,
+      "actor_name": "0263_middle_eastern_37_male",
+      "success": true
+    },
+    {
+      "actor_id": 264,
+      "actor_name": "0264_asian_29_male",
+      "success": true
+    },
+    {
+      "actor_id": 267,
+      "actor_name": "0267_european_62_male",
+      "success": true
+    },
+    {
+      "actor_id": 268,
+      "actor_name": "0268_black_39_male",
+      "success": true
+    },
+    {
+      "actor_id": 269,
+      "actor_name": "0269_south_american_47_male",
+      "success": true
+    },
+    {
+      "actor_id": 270,
+      "actor_name": "0270_middle_eastern_55_male",
+      "success": true
+    },
+    {
+      "actor_id": 271,
+      "actor_name": "0271_asian_33_male",
+      "success": true
+    },
+    {
+      "actor_id": 272,
+      "actor_name": "0272_indian_41_male",
+      "success": true
+    },
+    {
+      "actor_id": 273,
+      "actor_name": "0273_european_58_male",
+      "success": true
+    },
+    {
+      "actor_id": 275,
+      "actor_name": "0275_south_american_45_male",
+      "success": true
+    },
+    {
+      "actor_id": 276,
+      "actor_name": "0276_middle_eastern_53_male",
+      "success": true
+    },
+    {
+      "actor_id": 278,
+      "actor_name": "0278_indian_49_female",
+      "success": true
+    },
+    {
+      "actor_id": 281,
+      "actor_name": "0281_south_american_43_female",
+      "success": true
+    },
+    {
+      "actor_id": 282,
+      "actor_name": "0282_middle_eastern_55_female",
+      "success": true
+    }
+  ]
+}
