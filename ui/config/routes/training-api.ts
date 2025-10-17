@@ -735,13 +735,7 @@ async function handleNgrokStart(req: IncomingMessage, res: ServerResponse) {
     // Note: The package will handle existing tunnels automatically
     ngrokUrl = await ngrok.connect({
       addr: port,
-      proto: 'http',
-      onStatusChange: (status) => {
-        console.log('[Ngrok] Status changed:', status);
-      },
-      onLogEvent: (log) => {
-        console.log('[Ngrok]', log);
-      }
+      proto: 'http'
     });
 
     console.log('[Ngrok] Tunnel started:', ngrokUrl);

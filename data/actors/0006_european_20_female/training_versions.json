@@ -1,6 +1,26 @@
 {
   "versions": [
     {
+      "id": "3c274376-7093-4316-9b76-fdcf1210a040-e2",
+      "name": "V7",
+      "timestamp": "2025-10-17T08:42:57.422Z",
+      "parameters": {
+        "learning_rate": 0.00025,
+        "max_train_steps": 2300,
+        "network_dim": 16,
+        "network_alpha": 8,
+        "class_tokens": "0006_european_20_female",
+        "batch_size": 1,
+        "num_repeats": 2,
+        "lr_scheduler": "cosine",
+        "lr_warmup_steps": 400,
+        "optimizer_type": "adamw8bit",
+        "gradient_dtype": "bf16"
+      },
+      "status": "pending",
+      "imageCount": 23
+    },
+    {
       "id": "cf00e2a4-72a9-42e0-a152-bdacd29ddf86-e2",
       "name": "V6",
       "timestamp": "2025-10-16T13:08:32.603Z",

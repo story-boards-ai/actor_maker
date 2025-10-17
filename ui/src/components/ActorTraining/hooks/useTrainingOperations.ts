@@ -198,11 +198,8 @@ export function useTrainingOperations(props: UseTrainingOperationsProps) {
       addLog("info", `📦 Training images: ${imageCount}`);
       addLog("info", `📁 S3 URLs: ${s3Urls.length} files (converted to s3:// format)`);
 
-      const recommendedSteps = Math.max(1000, Math.min(3000, imageCount * 100));
-      const finalSteps =
-        parameters.max_train_steps === 2000
-          ? recommendedSteps
-          : parameters.max_train_steps;
+      // Use the user's chosen parameters directly - don't override!
+      const finalSteps = parameters.max_train_steps;
 
       const nextVersionNumber = getNextVersionNumber(versions);
       const versionName = `V${nextVersionNumber}`;
