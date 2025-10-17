@@ -58,7 +58,7 @@ export function ActorTrainingTab() {
   // Training state
   const state = useTrainingState(selectedActorId, selectedActor);
 
-  // Auto-fill trigger token when actor is selected
+  // Auto-fill trigger token and optimal parameters when actor is selected
   useEffect(() => {
     if (selectedActorId && selectedActor) {
       // Only auto-fill if the current token is empty or matches the default pattern
@@ -71,10 +71,44 @@ export function ActorTrainingTab() {
       if (isDefaultOrEmpty) {
         // Use the full actor name as the trigger token
         const autoToken = `${selectedActor.name}`;
-        state.setParameters((prev) => ({
-          ...prev,
-          class_tokens: autoToken,
-        }));
+        
+        // Auto-adjust parameters based on training image count
+        const imageCount = selectedActor.training_data?.count || 0;
+        if (imageCount > 0) {
+          try {
+            const optimalParams = autoAdjustParameters(
+              { ...state.parameters, class_tokens: autoToken },
+              imageCount
+            );
+            state.setParameters(optimalParams);
+            
+            console.log(
+              `[ActorTraining] Auto-filled optimal parameters for ${imageCount} images:`,
+              {
+                steps: optimalParams.max_train_steps,
+                lr: optimalParams.learning_rate,
+                rank: optimalParams.network_dim,
+                alpha: optimalParams.network_alpha,
+                repeats: optimalParams.num_repeats,
+                scheduler: optimalParams.lr_scheduler,
+                warmup: optimalParams.lr_warmup_steps,
+              }
+            );
+          } catch (err) {
+            console.error("Failed to auto-adjust parameters:", err);
+            // Fallback to just setting the token
+            state.setParameters((prev) => ({
+              ...prev,
+              class_tokens: autoToken,
+            }));
+          }
+        } else {
+          // No training images, just set the token
+          state.setParameters((prev) => ({
+            ...prev,
+            class_tokens: autoToken,
+          }));
+        }
       }
     }
   }, [selectedActorId, selectedActor]);
@@ -140,29 +174,45 @@ export function ActorTrainingTab() {
   const imageCount = selectedActor?.training_data?.count || 0;
   const recommendedSteps = calculateRecommendedSteps(imageCount);
 
-  // Auto-adjust parameters handler
+  // Auto-adjust parameters handler (manual re-adjustment)
   const handleAutoAdjust = () => {
     try {
       const newParams = autoAdjustParameters(state.parameters, imageCount);
       state.setParameters(newParams);
 
+      // Calculate effective steps per image for user info
+      const totalIterations = imageCount * newParams.num_repeats;
       const actualStepsPerImage = Math.round(
-        newParams.max_train_steps / (imageCount * newParams.num_repeats)
+        newParams.max_train_steps / totalIterations
       );
 
+      // Determine preset name based on image count
+      let presetName = "Custom";
+      if (imageCount <= 15) {
+        presetName = "Preset A (Conservative)";
+      } else if (imageCount <= 30) {
+        presetName = "Preset B (Standard)";
+      } else if (imageCount <= 60) {
+        presetName = "Preset C (Gentle)";
+      }
+
       toast.success(
-        `Auto-adjusted for ${imageCount} images:\n` +
-          `${newParams.max_train_steps} total steps (${actualStepsPerImage} steps/image)\n` +
-          `LR: ${newParams.learning_rate}, Repeats: ${newParams.num_repeats}`
+        `${presetName} applied for ${imageCount} images:\n` +
+          `• ${newParams.max_train_steps} steps (${actualStepsPerImage} steps/iteration)\n` +
+          `• LR: ${newParams.learning_rate} (${newParams.lr_scheduler} scheduler)\n` +
+          `• Rank/Alpha: ${newParams.network_dim}/${newParams.network_alpha}\n` +
+          `• Repeats: ${newParams.num_repeats}, Warmup: ${newParams.lr_warmup_steps} steps`,
+        { duration: 5000 }
       );
 
       if (imageCount > 60) {
         toast.warning(
-          `${imageCount} images is large - consider curating to 30-60 best images for stronger identity`
+          `${imageCount} images is large - consider curating to 30-60 best images for stronger identity`,
+          { duration: 6000 }
         );
       }
     } catch (err: any) {
-      toast.error(err.message);
+      toast.error(err.message || "Failed to auto-adjust parameters");
     }
   };
 

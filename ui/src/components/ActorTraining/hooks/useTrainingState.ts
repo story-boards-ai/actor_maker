@@ -14,18 +14,21 @@ import {
   saveStoredDescription,
 } from "../utils/storage";
 
+// Default parameters based on FLUX LoRA Training Guide
+// Conservative preset for medium datasets (20-30 images)
+// Using rank 16/8 for consistent identity with smaller file sizes
 const DEFAULT_PARAMETERS: TrainingParameters = {
-  learning_rate: 0.0004,
-  max_train_steps: 2000,
-  network_dim: 8,
-  network_alpha: 8,
+  learning_rate: 0.00025, // 2.5e-4 (standard, safe starting point)
+  max_train_steps: 2000, // Target for 20-30 images
+  network_dim: 16, // Rank 16 for consistent identity, smaller files
+  network_alpha: 8, // Alpha = rank/2 (standard practice)
   class_tokens: "",
-  batch_size: 1,
-  num_repeats: 10,
-  lr_scheduler: "constant",
-  lr_warmup_steps: 0,
-  optimizer_type: "adamw8bit",
-  gradient_dtype: "bf16",
+  batch_size: 1, // Keep at 1 for VRAM efficiency
+  num_repeats: 2, // Guide: Keep repeats 1-3, adjust epochs to hit target steps
+  lr_scheduler: "cosine", // Cosine with warmup (recommended over constant)
+  lr_warmup_steps: 400, // 20% of 2000 steps (0.2 * max_train_steps)
+  optimizer_type: "adamw8bit", // AdamW 8-bit (standard)
+  gradient_dtype: "bf16", // BF16 recommended for FLUX
 };
 
 export function useTrainingState(
@@ -65,7 +68,12 @@ export function useTrainingState(
       if (stored) {
         setParameters(stored);
       } else {
-        setParameters(DEFAULT_PARAMETERS);
+        // Use defaults, but adjust warmup steps to match max_train_steps
+        const defaults = {
+          ...DEFAULT_PARAMETERS,
+          lr_warmup_steps: Math.floor(DEFAULT_PARAMETERS.max_train_steps * 0.2),
+        };
+        setParameters(defaults);
       }
 
       const storedDesc = loadStoredDescription(selectedActorId);
@@ -92,7 +100,13 @@ export function useTrainingState(
     if (selectedVersionId) {
       const version = versions.find((v) => v.id === selectedVersionId);
       if (version && version.parameters) {
-        setParameters(version.parameters);
+        // Ensure warmup steps are calculated if missing
+        const params = {
+          ...version.parameters,
+          lr_warmup_steps: version.parameters.lr_warmup_steps || 
+            Math.floor(version.parameters.max_train_steps * 0.2),
+        };
+        setParameters(params);
         setDescription(version.description || "");
       }
     }

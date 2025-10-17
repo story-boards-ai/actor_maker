@@ -175,3 +175,28 @@ docs.bfl.ai
 +1
 
 If you want, I can turn this into ready-to-run ComfyUI-FluxTrainer JSONs for your usual dataset sizes (10, 20, 30, 50 images) with the scheduler/LR/rank presets above, plus checkpoint-saving every 250 steps.
+
+⚖️ 4. How to balance repeats vs. epochs
+
+Both repeats and epochs multiply your total steps.
+It’s best to only tune one of them and use the other to hit your step target.
+
+Recommended rule of thumb:
+
+Keep repeats = 1–3 per image for most cases.
+
+Adjust epochs to reach your desired total steps.
+
+Example:
+Images Repeats Epochs Total Steps Notes
+20 1 50 1,000 Conservative — smoother progression
+20 2 25 1,000 Equivalent total, faster cycling
+20 10 5 1,000 Works too, but makes overfit checkpoints harder to interpret
+
+Rank & Alpha:
+Scenario Recommended
+Small dataset (10–30 imgs) rank = 16 or 32, alpha = rank/2
+Medium dataset (30–60 imgs) rank = 16–32, alpha = rank
+Style LoRA rank = 32–64, alpha = rank
+You want maximum safety Always fine with alpha = rank/2
+You want maximum strength (can overfit) alpha = rank

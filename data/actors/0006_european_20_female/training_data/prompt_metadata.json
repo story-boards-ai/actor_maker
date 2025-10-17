@@ -223,6 +223,13 @@
       "generated_at": "2025-10-17T10:18:34.006487",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_35.jpg",
       "index": 35
+    },
+    "0006_european_20_female_36.jpg": {
+      "prompt": "Candid shot: The woman climbs a rocky mountain trail at midday, hands gripping stone, eyes focused upward on the path ahead. Low angle shot, bright sunlight creating harsh shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera.",
+      "prompt_preview": "Candid shot: The woman climbs a rocky mountain trail at midday, hands gripping stone, eyes focused u...",
+      "generated_at": "2025-10-17T10:26:16.001033",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_36.jpg",
+      "index": 36
     }
   }
 }

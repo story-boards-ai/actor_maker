@@ -35,7 +35,7 @@ export function ParametersForm({
         </div>
 
         <div className="param-row">
-          <label>Network Dimension</label>
+          <label>Network Dimension (Rank)</label>
           <input
             type="number"
             value={parameters.network_dim}
@@ -46,7 +46,7 @@ export function ParametersForm({
             max={128}
             disabled={loading}
           />
-          <span className="param-hint">16 or 32 recommended</span>
+          <span className="param-hint">16 recommended (consistent identity, smaller files)</span>
         </div>
 
         <div className="param-row">
@@ -61,7 +61,7 @@ export function ParametersForm({
             max={128}
             disabled={loading}
           />
-          <span className="param-hint">Usually same as dim</span>
+          <span className="param-hint">Typically rank/2 (e.g., 32→16, 16→8)</span>
         </div>
 
         <div className="param-row">
@@ -77,7 +77,7 @@ export function ParametersForm({
             max={0.001}
             disabled={loading}
           />
-          <span className="param-hint">0.0001 safe, 0.0004 faster</span>
+          <span className="param-hint">2e-4 to 2.5e-4 safe (0.0002-0.00025)</span>
         </div>
 
         <div className="param-row">
@@ -133,12 +133,32 @@ export function ParametersForm({
                 }
                 disabled={loading}
               >
+                <option value="cosine">Cosine (Recommended)</option>
                 <option value="cosine_with_restarts">
                   Cosine with Restarts
                 </option>
-                <option value="cosine">Cosine</option>
+                <option value="constant">Constant</option>
                 <option value="linear">Linear</option>
               </select>
+              <span className="param-hint">Cosine with 20% warmup recommended</span>
+            </div>
+
+            <div className="param-row">
+              <label>LR Warmup Steps</label>
+              <input
+                type="number"
+                value={parameters.lr_warmup_steps}
+                onChange={(e) =>
+                  onUpdate({
+                    ...parameters,
+                    lr_warmup_steps: Number(e.target.value),
+                  })
+                }
+                min={0}
+                max={parameters.max_train_steps}
+                disabled={loading}
+              />
+              <span className="param-hint">20% of max steps (auto-calculated)</span>
             </div>
 
             <div className="param-row">
@@ -190,6 +210,7 @@ export function ParametersForm({
                 max={50}
                 disabled={loading}
               />
+              <span className="param-hint">Keep 1-3 (epochs adjust to hit target steps)</span>
             </div>
 
             <div className="param-row">
