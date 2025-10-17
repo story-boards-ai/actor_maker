@@ -194,5 +194,20 @@
     "created_date": "2025-06-18",
     "format": "safetensors"
   },
-  "lora_model_updated": "2025-10-17T21:51:48.855038"
+  "lora_model_updated": "2025-10-17T21:51:48.855038",
+  "custom_lora_models": [
+    {
+      "filename": "actor_1_V1.safetensors",
+      "version": "V1",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
+      "s3_accelerated_url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
+      "size_bytes": 153272040,
+      "size_mb": 146.17,
+      "md5_hash": "a6bf9c460cc69602af90090f91bbd2e7-19",
+      "last_modified": "2025-10-16T14:12:24+00:00",
+      "created_date": "2025-10-16",
+      "format": "safetensors"
+    }
+  ],
+  "custom_lora_models_updated": "2025-10-17T21:55:52.071851"
 }

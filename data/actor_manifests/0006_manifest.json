@@ -316,5 +316,32 @@
     "created_date": "2025-06-18",
     "format": "safetensors"
   },
-  "lora_model_updated": "2025-10-17T21:51:48.859415"
+  "lora_model_updated": "2025-10-17T21:51:48.859415",
+  "custom_lora_models": [
+    {
+      "filename": "actor_6_V6.safetensors",
+      "version": "V6",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V6.safetensors",
+      "s3_accelerated_url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V6.safetensors",
+      "size_bytes": 153271968,
+      "size_mb": 146.17,
+      "md5_hash": "09b191b701c0d24e07857537bf09df2d-19",
+      "last_modified": "2025-10-16T13:28:53+00:00",
+      "created_date": "2025-10-16",
+      "format": "safetensors"
+    },
+    {
+      "filename": "actor_6_V7.safetensors",
+      "version": "V7",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V7.safetensors",
+      "s3_accelerated_url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V7.safetensors",
+      "size_bytes": 153271968,
+      "size_mb": 146.17,
+      "md5_hash": "48153307acd92fd51daf318e8fa05ae2-19",
+      "last_modified": "2025-10-17T09:14:14+00:00",
+      "created_date": "2025-10-17",
+      "format": "safetensors"
+    }
+  ],
+  "custom_lora_models_updated": "2025-10-17T21:55:52.073668"
 }
