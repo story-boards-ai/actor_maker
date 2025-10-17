@@ -5,6 +5,9 @@
     },
     {
       "path": "../../../../story-boards-backend"
+    },
+    {
+      "path": "../../../../styles_maker"
     }
   ],
   "settings": {}

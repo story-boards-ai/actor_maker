@@ -10,11 +10,7 @@ interface AssessmentPanelProps {
 }
 
 const RATING_OPTIONS: Array<{ value: AssessmentRating; label: string; emoji: string; color: string }> = [
-  { value: 'excellent', label: 'Excellent', emoji: '⭐', color: '#10b981' },
-  { value: 'good', label: 'Good', emoji: '✅', color: '#3b82f6' },
-  { value: 'acceptable', label: 'Acceptable', emoji: '👍', color: '#8b5cf6' },
-  { value: 'poor', label: 'Poor', emoji: '⚠️', color: '#f59e0b' },
-  { value: 'failed', label: 'Failed', emoji: '❌', color: '#ef4444' },
+  { value: 'good', label: 'Good', emoji: '✅', color: '#10b981' },
 ];
 
 export function AssessmentPanel(props: AssessmentPanelProps) {

@@ -217,6 +217,11 @@ export function Validator() {
     }
   };
 
+  // Get frontpad and backpad from selected style
+  const selectedStyleData = state.styles.find((s) => s.id === state.selectedStyle);
+  const styleFrontpad = selectedStyleData?.frontpad || '';
+  const styleBackpad = selectedStyleData?.backpad || '';
+
   // Image generation
   const { generateImage } = useImageGeneration({
     selectedStyle: state.selectedStyle,
@@ -240,8 +245,8 @@ export function Validator() {
     cineLoraWeight: state.cineLoraWeight,
     monochromeContrast: state.monochromeContrast,
     monochromeBrightness: state.monochromeBrightness,
-    frontpad: state.frontpad,
-    backpad: state.backpad,
+    frontpad: styleFrontpad,
+    backpad: styleBackpad,
     selectedCharacters: state.selectedCharacters,
     useCameraLora: state.useCameraLora,
     setLoading: state.setLoading,
@@ -359,91 +364,27 @@ export function Validator() {
             onRatingChange={(rating) => {
               state.setCurrentRating(rating);
               
-              if (state.selectedStyle && state.selectedModel) {
-                console.log('[VALIDATOR] Rating changed:', rating);
-                
-                // Determine if this rating should mark the model as validated
-                const shouldMarkAsValidated = rating === 'good' || rating === 'excellent' || rating === 'acceptable';
-                const shouldClearValidated = rating === null;
-                
-                if (shouldMarkAsValidated) {
-                  // Mark this model version as the validated LoRA in styles_registry.json
-                  console.log('[VALIDATOR] Marking version as good/validated:', state.selectedModel);
-                  fetch(`/api/styles/${state.selectedStyle}/mark-good`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ versionId: state.selectedModel }),
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      console.log('[VALIDATOR] Model marked as validated successfully:', data);
-                      state.addLog(`✅ Model marked as validated in registry (${rating})`);
-                    })
-                    .catch(error => {
-                      console.error('[VALIDATOR] Failed to mark as validated:', error);
-                      state.addLog(`❌ Failed to mark model as validated`);
-                    });
-                } else if (shouldClearValidated) {
-                  // Clear the validated model from styles_registry.json
-                  console.log('[VALIDATOR] Clearing validated model from registry');
-                  fetch(`/api/styles/${state.selectedStyle}/clear-validated`, {
+              // Mark character model as good when rating is 'good'
+              if (rating === 'good' && state.selectedCharacters.length > 0) {
+                state.selectedCharacters.forEach(character => {
+                  console.log('[VALIDATOR] Marking character model as good:', character.id);
+                  fetch(`/api/actors/${character.id}/mark-good`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                   })
                     .then(response => response.json())
                     .then(data => {
-                      console.log('[VALIDATOR] Validated model cleared successfully:', data);
-                      state.addLog(`✅ Validated model cleared from registry`);
+                      console.log('[VALIDATOR] Character model marked as good:', data);
+                      state.addLog(`✅ Character model marked as good: ${character.name}`);
                     })
                     .catch(error => {
-                      console.error('[VALIDATOR] Failed to clear validated model:', error);
-                      state.addLog(`❌ Failed to clear validated model`);
+                      console.error('[VALIDATOR] Failed to mark character as good:', error);
+                      state.addLog(`❌ Failed to mark character as good: ${character.name}`);
                     });
-                }
-                
-                // Always save the assessment for tracking purposes
-                console.log('[VALIDATOR] Saving assessment:', rating);
-                fetch('/api/assessments/save', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    styleId: state.selectedStyle,
-                    modelId: state.selectedModel,
-                    rating: rating,
-                    comment: state.currentComment,
-                  }),
-                })
-                  .then(response => response.json())
-                  .then(data => {
-                    console.log('[VALIDATOR] Assessment saved successfully:', data);
-                  })
-                  .catch(error => {
-                    console.error('[VALIDATOR] Failed to save assessment:', error);
-                  });
-              } else {
-                console.warn('[VALIDATOR] Cannot save - missing styleId or modelId');
+                });
               }
             }}
             onCommentChange={state.setCurrentComment}
-            onCommentBlur={() => {
-              // Save assessment when comment loses focus
-              if (state.selectedStyle && state.selectedModel) {
-                console.log('[VALIDATOR] Saving assessment - Comment changed');
-                fetch('/api/assessments/save', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    styleId: state.selectedStyle,
-                    modelId: state.selectedModel,
-                    rating: state.currentRating,
-                    comment: state.currentComment,
-                  }),
-                })
-                  .then(response => response.json())
-                  .then(data => console.log('[VALIDATOR] Assessment saved successfully:', data))
-                  .catch(error => console.error('[VALIDATOR] Failed to save assessment:', error));
-              }
-            }}
             disabled={state.loading || testSuite.isRunning}
           />
 

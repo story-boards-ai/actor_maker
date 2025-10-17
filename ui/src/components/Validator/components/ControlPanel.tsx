@@ -6,7 +6,13 @@ import type { TestSuite } from "../types/test-suite";
 import type { ValidatorCharacter } from "../types/character";
 import { CharacterSelectionModal } from "./CharacterSelectionModal";
 
-type AssessmentRating = 'excellent' | 'good' | 'acceptable' | 'poor' | 'failed' | null;
+type AssessmentRating =
+  | "excellent"
+  | "good"
+  | "acceptable"
+  | "poor"
+  | "failed"
+  | null;
 
 interface ControlPanelProps {
   styles: Style[];
@@ -62,14 +68,6 @@ export function ControlPanel(props: ControlPanelProps) {
   const [registrySaved, setRegistrySaved] = React.useState(false);
   const [showCharacterModal, setShowCharacterModal] = React.useState(false);
 
-  const handleSaveToRegistry = async () => {
-    if (props.onSavePromptsToRegistry) {
-      await props.onSavePromptsToRegistry();
-      setRegistrySaved(true);
-      setTimeout(() => setRegistrySaved(false), 1500);
-    }
-  };
-
   const {
     styles,
     selectedStyle,
@@ -82,10 +80,6 @@ export function ControlPanel(props: ControlPanelProps) {
     fullPrompt,
     showPromptPreview,
     logs,
-    frontpad,
-    backpad,
-    loraWeight,
-    characterLoraWeight,
     cineLoraWeight,
     selectedCharacters,
     useCameraLora,
@@ -94,9 +88,6 @@ export function ControlPanel(props: ControlPanelProps) {
     onSelectModel,
     onToggleStyleModal,
     onPromptChange,
-    onFrontpadChange,
-    onBackpadChange,
-    onSavePromptsToRegistry,
     onCharacterSelect,
     onCharacterRemove,
     onUseCameraLoraChange,
@@ -123,95 +114,140 @@ export function ControlPanel(props: ControlPanelProps) {
 
   return (
     <div className="validator-control-panel">
-      {/* Style Selection */}
+      {/* Character Selection - First */}
       <div className="control-section">
-        <label className="control-label">
-          🎨 Style Selection
-        </label>
-        <button
-          onClick={() => onToggleStyleModal(true)}
-          disabled={loading}
-          className="style-selector-button"
+        <div
+          className="control-label"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
-          {selectedStyleData ? (
-            <div className="selected-style-preview">
-              <img 
-                src={`/public/${selectedStyleData.image_path}`} 
-                alt={selectedStyleData.title}
-                className="selected-style-image"
-              />
-              <div className="selected-style-info">
-                <span className="selected-style-name">{selectedStyleData.title}</span>
-                <span className="selected-style-meta">{selectedStyleData.lora_name}</span>
-              </div>
-            </div>
-          ) : (
-            <div className="style-selector-placeholder">
-              <span className="placeholder-icon">🎨</span>
-              <span>Select a Style</span>
-            </div>
-          )}
-        </button>
+          <span>👤 Character Selection</span>
+          <button
+            onClick={() => setShowCharacterModal(true)}
+            disabled={loading}
+            className="btn-add-character"
+            title="Select character"
+            style={{
+              padding: "4px 10px",
+              fontSize: "12px",
+              background: "rgba(251, 146, 60, 0.2)",
+              border: "1px solid rgba(251, 146, 60, 0.3)",
+              borderRadius: "4px",
+              color: "#fb923c",
+              cursor: loading ? "not-allowed" : "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+            }}
+          >
+            👤 Select Character
+          </button>
+        </div>
 
-        <StyleSelectorModal
-          styles={styles}
-          selectedStyle={selectedStyle}
-          onSelect={onSelectStyle}
-          open={showStyleModal}
-          onOpenChange={onToggleStyleModal}
-          assessments={assessments}
-        />
-
-        {selectedStyleData && (
-          <div className="style-info">
-            <div className="style-info-item">
-              <strong>Monochrome:</strong> {selectedStyleData.monochrome ? "Yes" : "No"}
+        {/* Selected Characters Display */}
+        {selectedCharacters.length > 0 ? (
+          <div
+            style={{
+              marginTop: "8px",
+              padding: "8px",
+              background: "rgba(251, 146, 60, 0.1)",
+              borderRadius: "6px",
+              border: "1px solid rgba(251, 146, 60, 0.2)",
+            }}
+          >
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+              {selectedCharacters.map((char) => (
+                <div
+                  key={char.id}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    padding: "4px 8px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    borderRadius: "4px",
+                    fontSize: "12px",
+                    color: "#fff",
+                  }}
+                >
+                  <span>{char.name.replace(/_/g, " ")}</span>
+                  <button
+                    onClick={() => onCharacterRemove(char.id)}
+                    style={{
+                      background: "none",
+                      border: "none",
+                      color: "#ef4444",
+                      cursor: "pointer",
+                      padding: "0 4px",
+                      fontSize: "14px",
+                    }}
+                    title="Remove character"
+                  >
+                    ✕
+                  </button>
+                </div>
+              ))}
             </div>
-            <div className="style-info-item">
-              <strong>LoRA Weight:</strong> {loraWeight.toFixed(2)}
-            </div>
-            <div className="style-info-item">
-              <strong>Character Weight:</strong> {characterLoraWeight.toFixed(2)}
-            </div>
-            <div className="style-info-item">
-              <strong>Cine Weight:</strong> {cineLoraWeight.toFixed(2)}
-            </div>
+          </div>
+        ) : (
+          <div
+            style={{
+              marginTop: "8px",
+              padding: "12px",
+              background: "rgba(0, 0, 0, 0.2)",
+              borderRadius: "6px",
+              textAlign: "center",
+              color: "rgba(255, 255, 255, 0.5)",
+              fontSize: "13px",
+            }}
+          >
+            No character selected
           </div>
         )}
       </div>
 
       {/* Model Selection */}
       <div className="control-section">
-        <div className="control-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span>🔥 Trained LoRA Model</span>
-          <button 
+        <div
+          className="control-label"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <span>🔥 Available models</span>
+          <button
             onClick={onReloadModels}
             className="btn-reload-models"
             title="Reload trained models"
-            style={{ 
-              padding: '4px 8px', 
-              fontSize: '12px', 
-              background: 'rgba(59, 130, 246, 0.2)',
-              border: '1px solid rgba(96, 165, 250, 0.3)',
-              borderRadius: '4px',
-              color: '#60a5fa',
-              cursor: 'pointer'
+            style={{
+              padding: "4px 8px",
+              fontSize: "12px",
+              background: "rgba(59, 130, 246, 0.2)",
+              border: "1px solid rgba(96, 165, 250, 0.3)",
+              borderRadius: "4px",
+              color: "#60a5fa",
+              cursor: "pointer",
             }}
           >
             🔄 Reload
           </button>
         </div>
-        {!selectedStyle ? (
+        {selectedCharacters.length === 0 ? (
           <div className="model-empty">
-            <p>Select a style first to see available models.</p>
+            <p>Select a character first to see available models.</p>
           </div>
         ) : filteredModels.length === 0 ? (
           <div className="model-empty">
-            <p>No trained models for this style yet.</p>
+            <p>No trained models for this character yet.</p>
             <p className="model-hint">
-              {trainedModels.length > 0 
-                ? 'Train a model for this style from the Training tab.' 
-                : 'Train LoRA models from the Training tab to use them here for validation.'}
+              {trainedModels.length > 0
+                ? "Train a model for this character from the Training tab."
+                : "Train LoRA models from the Training tab to use them here for validation."}
             </p>
           </div>
         ) : (
@@ -225,7 +261,8 @@ export function ControlPanel(props: ControlPanelProps) {
             >
               {filteredModels.map((model) => (
                 <option key={model.id} value={model.id}>
-                  {model.name} ({new Date(model.timestamp).toLocaleDateString()})
+                  {model.name} ({new Date(model.timestamp).toLocaleDateString()}
+                  )
                 </option>
               ))}
             </select>
@@ -235,15 +272,19 @@ export function ControlPanel(props: ControlPanelProps) {
                   <strong>Style:</strong> {selectedModelData.styleName}
                 </p>
                 {selectedModelData.description && (
-                  <p className="model-description">{selectedModelData.description}</p>
+                  <p className="model-description">
+                    {selectedModelData.description}
+                  </p>
                 )}
                 {selectedModelData.imageCount && (
-                  <p className="model-meta">Trained on {selectedModelData.imageCount} images</p>
+                  <p className="model-meta">
+                    Trained on {selectedModelData.imageCount} images
+                  </p>
                 )}
                 {selectedModelData.parameters && (
                   <p className="model-meta">
-                    Steps: {selectedModelData.parameters.max_train_steps}, 
-                    LR: {selectedModelData.parameters.learning_rate}
+                    Steps: {selectedModelData.parameters.max_train_steps}, LR:{" "}
+                    {selectedModelData.parameters.learning_rate}
                   </p>
                 )}
               </div>
@@ -255,9 +296,7 @@ export function ControlPanel(props: ControlPanelProps) {
       {/* Settings Sets Management */}
       {selectedStyle && selectedModel && (
         <div className="control-section settings-sets-section">
-          <div className="control-label">
-            💾 Settings Sets
-          </div>
+          <div className="control-label">💾 Settings Sets</div>
           <div className="settings-sets-buttons">
             <button
               onClick={onSaveSettingsSet}
@@ -277,85 +316,88 @@ export function ControlPanel(props: ControlPanelProps) {
             </button>
           </div>
           <p className="settings-sets-hint">
-            Save your current configuration with assessment and notes for future reference
+            Save your current configuration with assessment and notes for future
+            reference
           </p>
         </div>
       )}
 
-      {/* Main Prompt */}
+      {/* Main Prompt with Style Selector */}
       <div className="control-section">
-        <div className="control-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div
+          className="control-label"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <span>✏️ Main Prompt</span>
           <button
-            onClick={() => setShowCharacterModal(true)}
+            onClick={() => onToggleStyleModal(true)}
             disabled={loading}
             className="btn-add-character"
-            title="Add characters to prompt"
+            title="Select style"
             style={{
-              padding: '4px 10px',
-              fontSize: '12px',
-              background: 'rgba(251, 146, 60, 0.2)',
-              border: '1px solid rgba(251, 146, 60, 0.3)',
-              borderRadius: '4px',
-              color: '#fb923c',
-              cursor: loading ? 'not-allowed' : 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
+              padding: "6px 10px",
+              fontSize: "14px",
+              background: "rgba(139, 92, 246, 0.2)",
+              border: "1px solid rgba(147, 51, 234, 0.3)",
+              borderRadius: "4px",
+              color: "#a78bfa",
+              cursor: loading ? "not-allowed" : "pointer",
             }}
           >
-            👤 Add Character
+            🎨
           </button>
         </div>
-        
-        {/* Selected Characters Display */}
-        {selectedCharacters.length > 0 && (
-          <div style={{
-            marginBottom: '8px',
-            padding: '8px',
-            background: 'rgba(251, 146, 60, 0.1)',
-            borderRadius: '6px',
-            border: '1px solid rgba(251, 146, 60, 0.2)'
-          }}>
-            <div style={{ fontSize: '12px', color: '#fb923c', marginBottom: '4px', fontWeight: 600 }}>
-              Selected Characters:
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-              {selectedCharacters.map((char) => (
-                <div
-                  key={char.id}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    padding: '4px 8px',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    borderRadius: '4px',
-                    fontSize: '12px',
-                    color: '#fff'
-                  }}
-                >
-                  <span>{char.name.replace(/_/g, ' ')}</span>
-                  <button
-                    onClick={() => onCharacterRemove(char.id)}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      color: '#ef4444',
-                      cursor: 'pointer',
-                      padding: '0 4px',
-                      fontSize: '14px'
-                    }}
-                    title="Remove character"
-                  >
-                    ✕
-                  </button>
-                </div>
-              ))}
+
+        {/* Selected Style Display */}
+        {selectedStyleData && (
+          <div
+            style={{
+              marginBottom: "8px",
+              padding: "8px",
+              background: "rgba(139, 92, 246, 0.1)",
+              borderRadius: "6px",
+              border: "1px solid rgba(147, 51, 234, 0.2)",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <img
+              src={`/public/${selectedStyleData.image_path}`}
+              alt={selectedStyleData.title}
+              style={{
+                width: "40px",
+                height: "40px",
+                borderRadius: "4px",
+                objectFit: "cover",
+              }}
+            />
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: "13px", fontWeight: 600, color: "#fff" }}>
+                {selectedStyleData.title}
+              </div>
+              <div
+                style={{ fontSize: "11px", color: "rgba(255, 255, 255, 0.6)" }}
+              >
+                {selectedStyleData.lora_name}
+              </div>
             </div>
           </div>
         )}
-        
+
+        <StyleSelectorModal
+          styles={styles}
+          selectedStyle={selectedStyle}
+          onSelect={onSelectStyle}
+          open={showStyleModal}
+          onOpenChange={onToggleStyleModal}
+          assessments={assessments}
+        />
+
         <textarea
           id="prompt-input"
           value={prompt}
@@ -369,73 +411,33 @@ export function ControlPanel(props: ControlPanelProps) {
 
       {/* Camera LoRA Option */}
       <div className="control-section">
-        <label className="control-label" style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+        <label
+          className="control-label"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            cursor: "pointer",
+          }}
+        >
           <input
             type="checkbox"
             checked={useCameraLora}
             onChange={(e) => onUseCameraLoraChange(e.target.checked)}
             disabled={loading}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: "pointer" }}
           />
           <span>📷 Use Camera LoRA (FILM-V3-FLUX)</span>
         </label>
         {useCameraLora && (
-          <div className="style-info-item" style={{ marginTop: '4px', fontSize: '12px', color: '#999' }}>
-            Camera LoRA will be added to the LoRA stack with weight: {cineLoraWeight.toFixed(2)}
+          <div
+            className="style-info-item"
+            style={{ marginTop: "4px", fontSize: "12px", color: "#999" }}
+          >
+            Camera LoRA will be added to the LoRA stack with weight:{" "}
+            {cineLoraWeight.toFixed(2)}
           </div>
         )}
-      </div>
-
-      {/* Front Pad */}
-      <div className="control-section">
-        <label htmlFor="frontpad-input" className="control-label">
-          ⬆️ Front Pad (Prefix)
-          {onSavePromptsToRegistry && (
-            <button
-              type="button"
-              className={`save-registry-button ${registrySaved ? 'saved' : ''}`}
-              onClick={handleSaveToRegistry}
-              title="Save Front Pad and Back Pad to the style registry"
-            >
-              {registrySaved ? '✅ Saved!' : '💾 Save to Registry'}
-            </button>
-          )}
-        </label>
-        <textarea
-          id="frontpad-input"
-          value={frontpad}
-          onChange={(e) => onFrontpadChange(e.target.value)}
-          disabled={loading}
-          placeholder="Text added before the main prompt..."
-          className="frontpad-textarea"
-          rows={2}
-        />
-      </div>
-
-      {/* Back Pad */}
-      <div className="control-section">
-        <label htmlFor="backpad-input" className="control-label">
-          ⬇️ Back Pad (Suffix)
-          {onSavePromptsToRegistry && (
-            <button
-              type="button"
-              className={`save-registry-button ${registrySaved ? 'saved' : ''}`}
-              onClick={handleSaveToRegistry}
-              title="Save Front Pad and Back Pad to the style registry"
-            >
-              {registrySaved ? '✅ Saved!' : '💾 Save to Registry'}
-            </button>
-          )}
-        </label>
-        <textarea
-          id="backpad-input"
-          value={backpad}
-          onChange={(e) => onBackpadChange(e.target.value)}
-          disabled={loading}
-          placeholder="Text added after the main prompt..."
-          className="backpad-textarea"
-          rows={2}
-        />
       </div>
 
       {/* Action Buttons */}
@@ -443,17 +445,24 @@ export function ControlPanel(props: ControlPanelProps) {
         <div className="action-buttons">
           <button
             onClick={onGenerate}
-            disabled={loading || !selectedStyle || !selectedModel || !prompt || trainedModels.length === 0 || isRunningTestSuite}
+            disabled={
+              loading ||
+              !selectedStyle ||
+              !selectedModel ||
+              !prompt ||
+              trainedModels.length === 0 ||
+              isRunningTestSuite
+            }
             className="btn-generate"
             title={
-              trainedModels.length === 0 
-                ? "Train a LoRA model first" 
-                : !selectedModel 
-                ? "Select a trained model" 
-                : !selectedStyle 
-                ? "Select a style" 
-                : !prompt 
-                ? "Enter a prompt" 
+              trainedModels.length === 0
+                ? "Train a LoRA model first"
+                : !selectedModel
+                ? "Select a trained model"
+                : !selectedStyle
+                ? "Select a style"
+                : !prompt
+                ? "Enter a prompt"
                 : "Generate image"
             }
           >
@@ -471,55 +480,68 @@ export function ControlPanel(props: ControlPanelProps) {
 
       {/* Test Suite Section */}
       <div className="control-section test-suite-section">
-        <div className="control-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px' }}>
+        <div
+          className="control-label"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
           <span>🎬 Test Suite</span>
-          <div style={{ display: 'flex', gap: '6px' }}>
-            <button 
+          <div style={{ display: "flex", gap: "6px" }}>
+            <button
               onClick={onBrowseTestResults}
               className="btn-reload-models"
               disabled={isRunningTestSuite || !selectedStyle}
               title="Browse previous test results"
-              style={{ 
-                padding: '4px 8px', 
-                fontSize: '12px', 
-                background: 'rgba(96, 165, 250, 0.2)',
-                border: '1px solid rgba(96, 165, 250, 0.3)',
-                borderRadius: '4px',
-                color: '#60a5fa',
-                cursor: (isRunningTestSuite || !selectedStyle) ? 'not-allowed' : 'pointer'
+              style={{
+                padding: "4px 8px",
+                fontSize: "12px",
+                background: "rgba(96, 165, 250, 0.2)",
+                border: "1px solid rgba(96, 165, 250, 0.3)",
+                borderRadius: "4px",
+                color: "#60a5fa",
+                cursor:
+                  isRunningTestSuite || !selectedStyle
+                    ? "not-allowed"
+                    : "pointer",
               }}
             >
               📖 Browse
             </button>
-            <button 
+            <button
               onClick={onLoadTestSuites}
               className="btn-reload-models"
               disabled={isRunningTestSuite}
               title="Load test suites"
-              style={{ 
-                padding: '4px 8px', 
-                fontSize: '12px', 
-                background: 'rgba(139, 92, 246, 0.2)',
-                border: '1px solid rgba(147, 51, 234, 0.3)',
-                borderRadius: '4px',
-                color: '#a78bfa',
-                cursor: isRunningTestSuite ? 'not-allowed' : 'pointer'
+              style={{
+                padding: "4px 8px",
+                fontSize: "12px",
+                background: "rgba(139, 92, 246, 0.2)",
+                border: "1px solid rgba(147, 51, 234, 0.3)",
+                borderRadius: "4px",
+                color: "#a78bfa",
+                cursor: isRunningTestSuite ? "not-allowed" : "pointer",
               }}
             >
               📂 Load
             </button>
           </div>
         </div>
-        
+
         {testSuites.length === 0 ? (
           <div className="model-empty">
             <p>No test suites loaded.</p>
-            <p className="model-hint">Click "Load" to load available test suites.</p>
+            <p className="model-hint">
+              Click "Load" to load available test suites.
+            </p>
           </div>
         ) : (
           <>
             <select
-              value={selectedTestSuite || ''}
+              value={selectedTestSuite || ""}
               onChange={(e) => onSelectTestSuite?.(e.target.value || null)}
               disabled={loading || isRunningTestSuite}
               className="style-select"
@@ -531,24 +553,32 @@ export function ControlPanel(props: ControlPanelProps) {
                 </option>
               ))}
             </select>
-            
+
             {selectedTestSuite && (
               <div className="model-info">
-                {testSuites.find(s => s.id === selectedTestSuite)?.description}
+                {
+                  testSuites.find((s) => s.id === selectedTestSuite)
+                    ?.description
+                }
               </div>
             )}
-            
+
             {isRunningTestSuite && testSuiteProgress && (
               <div className="test-suite-progress">
                 <div className="progress-text">
                   <span>⚡ Running in background</span>
-                  <span>{testSuiteProgress.current} / {testSuiteProgress.total}</span>
+                  <span>
+                    {testSuiteProgress.current} / {testSuiteProgress.total}
+                  </span>
                 </div>
                 <div className="progress-bar-container">
-                  <div 
-                    className="progress-bar-fill" 
-                    style={{ 
-                      width: `${(testSuiteProgress.current / testSuiteProgress.total) * 100}%` 
+                  <div
+                    className="progress-bar-fill"
+                    style={{
+                      width: `${
+                        (testSuiteProgress.current / testSuiteProgress.total) *
+                        100
+                      }%`,
                     }}
                   />
                 </div>
@@ -557,10 +587,17 @@ export function ControlPanel(props: ControlPanelProps) {
                 </div>
               </div>
             )}
-            
+
             <button
               onClick={onRunTestSuite}
-              disabled={loading || isRunningTestSuite || !selectedStyle || !selectedModel || !selectedTestSuite || trainedModels.length === 0}
+              disabled={
+                loading ||
+                isRunningTestSuite ||
+                !selectedStyle ||
+                !selectedModel ||
+                !selectedTestSuite ||
+                trainedModels.length === 0
+              }
               className="btn-test-suite"
               title={
                 !selectedStyle || !selectedModel || trainedModels.length === 0
@@ -570,7 +607,9 @@ export function ControlPanel(props: ControlPanelProps) {
                   : "Run full test suite"
               }
             >
-              {isRunningTestSuite ? "⏳ Running Test Suite..." : "🎬 Run Test Suite"}
+              {isRunningTestSuite
+                ? "⏳ Running Test Suite..."
+                : "🎬 Run Test Suite"}
             </button>
           </>
         )}
@@ -594,7 +633,8 @@ export function ControlPanel(props: ControlPanelProps) {
           </div>
           {showPromptPreview && (
             <div className="prompt-preview-content">
-              {fullPrompt || "Prompt will appear here after generation starts..."}
+              {fullPrompt ||
+                "Prompt will appear here after generation starts..."}
             </div>
           )}
         </div>
@@ -620,7 +660,7 @@ export function ControlPanel(props: ControlPanelProps) {
           )}
         </div>
       </div>
-      
+
       {/* Character Selection Modal */}
       <CharacterSelectionModal
         open={showCharacterModal}

@@ -385,30 +385,42 @@ function handleSaveTrainingVersions(req: IncomingMessage, res: ServerResponse, p
 
 function handleGetAllTrainedModels(req: IncomingMessage, res: ServerResponse, projectRoot: string) {
   try {
-    const styleImagesDir = path.join(projectRoot, 'resources', 'style_images');
+    const allModels: any[] = [];
+
+    // Scan actor/character models from data/actors
+    const actorsDir = path.join(projectRoot, 'data', 'actors');
     
-    if (!fs.existsSync(styleImagesDir)) {
+    if (!fs.existsSync(actorsDir)) {
       res.statusCode = 200;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ models: [] }));
       return;
     }
 
-    const folders = fs.readdirSync(styleImagesDir);
-    const allModels: any[] = [];
+    const actorFolders = fs.readdirSync(actorsDir);
 
-    // Scan each style folder for training_versions.json
-    for (const folder of folders) {
-      const versionsPath = path.join(styleImagesDir, folder, 'training_versions.json');
+    for (const actorFolder of actorFolders) {
+      const versionsPath = path.join(actorsDir, actorFolder, 'training_versions.json');
       
       if (fs.existsSync(versionsPath)) {
         try {
           const data = JSON.parse(fs.readFileSync(versionsPath, 'utf-8'));
           const versions = data.versions || [];
           
-          // Extract style ID from folder name (e.g., "59_ethereal_washes" -> "59")
-          const styleIdMatch = folder.match(/^(\d+)_/);
-          const styleId = styleIdMatch ? styleIdMatch[1] : folder;
+          // Load actorsData to get actor ID
+          const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+          let actorId = actorFolder; // fallback to folder name
+          
+          if (fs.existsSync(actorsDataPath)) {
+            const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+            const actor = actorsData.find((a: any) => a.name === actorFolder);
+            if (actor) {
+              actorId = actor.id.toString();
+              console.log(`[Training Models] Actor ${actorFolder} -> ID: ${actorId} (type: ${typeof actorId})`);
+            } else {
+              console.warn(`[Training Models] Actor ${actorFolder} not found in actorsData.json`);
+            }
+          }
           
           // Only include completed versions with loraUrl
           const completedVersions = versions
@@ -416,8 +428,8 @@ function handleGetAllTrainedModels(req: IncomingMessage, res: ServerResponse, pr
             .map((v: any) => ({
               id: v.id,
               name: v.name || 'Unnamed',
-              styleId: styleId,
-              styleName: folder.replace(/^\d+_/, '').replace(/_/g, ' '),
+              styleId: actorId, // Use actor ID as styleId for filtering
+              styleName: actorFolder.replace(/_/g, ' '),
               loraUrl: v.loraUrl,
               timestamp: v.timestamp,
               parameters: v.parameters,
@@ -439,7 +451,7 @@ function handleGetAllTrainedModels(req: IncomingMessage, res: ServerResponse, pr
       return timeB - timeA;
     });
 
-    console.log(`[Training Models] Found ${allModels.length} trained models across ${folders.length} styles`);
+    console.log(`[Training Models] Found ${allModels.length} trained actor models`);
     
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

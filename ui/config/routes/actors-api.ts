@@ -116,6 +116,15 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
+    // POST /api/actors/:actorId/mark-good
+    if (url?.startsWith('/api/actors/') && url.includes('/mark-good') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/mark-good$/);
+      if (match) {
+        handleMarkGood(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
     // POST /api/actors/:actorId/training-data/:filename/toggle-good
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/') && url.includes('/toggle-good') && req.method === 'POST') {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/([^/]+)\/toggle-good$/);
@@ -1088,6 +1097,52 @@ function handleToggleGood(
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to toggle good status' }));
+  }
+}
+
+/**
+ * POST /api/actors/:actorId/mark-good
+ * Mark actor model as good (set to true, not toggle)
+ */
+function handleMarkGood(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  try {
+    // Load actorsData
+    const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
+    const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
+    const actorIndex = actorsData.findIndex((a: any) => a.id === parseInt(actorId));
+
+    if (actorIndex === -1) {
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Actor not found' }));
+      return;
+    }
+
+    // Set the 'good' flag to true
+    actorsData[actorIndex].good = true;
+
+    // Save back to file
+    fs.writeFileSync(actorsDataPath, JSON.stringify(actorsData, null, 2));
+
+    console.log(`[Actors] Marked actor ${actorId} as good`);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      actor_id: parseInt(actorId),
+      good: true
+    }));
+  } catch (error) {
+    console.error('Error marking actor as good:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to mark actor as good' }));
   }
 }
 

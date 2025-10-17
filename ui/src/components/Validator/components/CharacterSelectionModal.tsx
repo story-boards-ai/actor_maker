@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import type { ValidatorCharacter, ActorData } from '../types/character';
-import './CharacterSelectionModal.css';
+import { useState, useEffect } from "react";
+import type { ValidatorCharacter, ActorData } from "../types/character";
+import "./CharacterSelectionModal.css";
 
 interface CharacterSelectionModalProps {
   open: boolean;
@@ -16,43 +16,83 @@ export function CharacterSelectionModal({
   selectedCharacters,
 }: CharacterSelectionModalProps) {
   const [systemActors, setSystemActors] = useState<ActorData[]>([]);
+  const [actorsWithModels, setActorsWithModels] = useState<Set<string>>(
+    new Set()
+  );
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (open) {
       loadSystemActors();
+      loadActorsWithModels();
     }
   }, [open]);
+
+  async function loadActorsWithModels() {
+    try {
+      console.log("[CharacterModal] Fetching trained models...");
+      const response = await fetch("/api/training/models");
+
+      if (response.ok) {
+        const data = await response.json();
+        const models = data.models || [];
+
+        // Extract unique actor IDs that have trained models
+        const actorIds = new Set<string>();
+        models.forEach((model: any) => {
+          if (model.styleId) {
+            actorIds.add(model.styleId);
+          }
+        });
+
+        console.log(
+          "[CharacterModal] Actors with models:",
+          Array.from(actorIds)
+        );
+        setActorsWithModels(actorIds);
+      }
+    } catch (error) {
+      console.error("[CharacterModal] Failed to load trained models:", error);
+    }
+  }
 
   async function loadSystemActors() {
     try {
       setLoading(true);
-      console.log('[CharacterModal] Fetching actors from /actors/system-actors.json...');
-      
-      // Fetch from public JSON file
-      const response = await fetch('/actors/system-actors.json');
-      console.log('[CharacterModal] Response status:', response.status);
-      
+      console.log("[CharacterModal] Fetching actors from /api/actors...");
+
+      // Fetch from API endpoint which reads actorsData.json
+      const response = await fetch("/api/actors");
+      console.log("[CharacterModal] Response status:", response.status);
+
       if (response.ok) {
-        const data = await response.json();
-        console.log('[CharacterModal] Loaded data:', data);
-        console.log('[CharacterModal] Actors array:', data.actors);
-        console.log('[CharacterModal] Number of actors:', data.actors?.length || 0);
-        setSystemActors(data.actors || []);
+        const actors = await response.json();
+        console.log("[CharacterModal] Loaded actors:", actors);
+        console.log("[CharacterModal] Number of actors:", actors?.length || 0);
+        setSystemActors(actors || []);
       } else {
-        console.error('[CharacterModal] Failed to load actors, status:', response.status);
+        console.error(
+          "[CharacterModal] Failed to load actors, status:",
+          response.status
+        );
         const text = await response.text();
-        console.error('[CharacterModal] Response text:', text);
+        console.error("[CharacterModal] Response text:", text);
       }
     } catch (error) {
-      console.error('[CharacterModal] Failed to load system actors:', error);
+      console.error("[CharacterModal] Failed to load system actors:", error);
     } finally {
       setLoading(false);
     }
   }
 
   const filteredActors = systemActors.filter((actor) => {
+    // Only show actors that have trained models
+    const hasModels = actorsWithModels.has(actor.id.toString());
+
+    if (!hasModels) return false;
+
+    // Apply search filter
     if (!searchTerm) return true;
     const search = searchTerm.toLowerCase();
     return (
@@ -66,25 +106,30 @@ export function CharacterSelectionModal({
 
   const handleSelectActor = (actor: ActorData) => {
     const character: ValidatorCharacter = {
-      id: actor.name,
+      id: actor.id.toString(), // Use numeric ID as string to match backend
       name: actor.name,
-      type: 'system',
+      type: "system",
       description: actor.description,
       loraUrl: actor.url,
-      previewImage: actor.poster_frames?.accelerated?.webp_sm || actor.poster_frames?.accelerated?.webp_md,
+      previewImage:
+        actor.poster_frames?.accelerated?.webp_sm ||
+        actor.poster_frames?.accelerated?.webp_md,
     };
     onSelect(character);
   };
 
   const isSelected = (actorName: string) => {
-    return selectedCharacters.some((c) => c.id === actorName);
+    return selectedCharacters.some((c) => c.name === actorName);
   };
 
   if (!open) return null;
 
   return (
     <div className="character-modal-overlay" onClick={onClose}>
-      <div className="character-modal-content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="character-modal-content"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="character-modal-header">
           <h2>Select Character</h2>
           <button onClick={onClose} className="character-modal-close">
@@ -107,14 +152,18 @@ export function CharacterSelectionModal({
             <div className="character-loading">Loading actors...</div>
           ) : filteredActors.length === 0 ? (
             <div className="character-empty">
-              {searchTerm ? 'No actors match your search.' : 'No actors available.'}
+              {searchTerm
+                ? "No actors with trained models match your search."
+                : "No actors with trained models available. Train a model from the Training tab first."}
             </div>
           ) : (
             <div className="character-grid">
               {filteredActors.map((actor) => (
                 <div
                   key={actor.name}
-                  className={`character-card ${isSelected(actor.name) ? 'selected' : ''}`}
+                  className={`character-card ${
+                    isSelected(actor.name) ? "selected" : ""
+                  }`}
                   onClick={() => handleSelectActor(actor)}
                 >
                   {actor.poster_frames?.accelerated?.webp_sm && (
@@ -125,14 +174,18 @@ export function CharacterSelectionModal({
                     />
                   )}
                   <div className="character-info">
-                    <div className="character-name">{actor.name.replace(/_/g, ' ')}</div>
+                    <div className="character-name">
+                      {actor.name.replace(/_/g, " ")}
+                    </div>
                     <div className="character-meta">
                       {actor.age && <span>{actor.age}y</span>}
                       {actor.sex && <span>{actor.sex}</span>}
                       {actor.ethnicity && <span>{actor.ethnicity}</span>}
                     </div>
                     {actor.description && (
-                      <div className="character-description">{actor.description}</div>
+                      <div className="character-description">
+                        {actor.description}
+                      </div>
                     )}
                   </div>
                   {isSelected(actor.name) && (
