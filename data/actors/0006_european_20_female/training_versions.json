@@ -17,8 +17,10 @@
         "optimizer_type": "adamw8bit",
         "gradient_dtype": "bf16"
       },
-      "status": "pending",
-      "imageCount": 23
+      "status": "completed",
+      "imageCount": 23,
+      "loraUrl": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V7.safetensors",
+      "completedAt": "2025-10-17T09:14:16.685Z"
     },
     {
       "id": "cf00e2a4-72a9-42e0-a152-bdacd29ddf86-e2",

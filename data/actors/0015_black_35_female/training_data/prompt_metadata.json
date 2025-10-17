@@ -118,6 +118,20 @@
       "generated_at": "2025-10-16T15:37:37.904910",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0015_black_35_female/0015_black_35_female_16.jpg",
       "index": 16
+    },
+    "0015_black_35_female_17.jpg": {
+      "prompt": "Cinematic film scene: The woman runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing, character unaware of camera, looking away. Film-like cinematography, not symmetrical.",
+      "prompt_preview": "Cinematic film scene: The woman runs across a rain-slick street at night, mid-stride, lit by car hea...",
+      "generated_at": "2025-10-17T11:03:04.583795",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0015_black_35_female/0015_black_35_female_17.jpg",
+      "index": 17
+    },
+    "0015_black_35_female_18.jpg": {
+      "prompt": "An impressionistic oil painting of the woman examining exotic plants in a humid greenhouse, holding a specimen jar up to diffused light, eyes studying the contents. Side angle close shot from chest level at a diagonal, face turned slightly up toward the jar. Off-center framing with plants creating depth, loose expressive brushwork, lush greens with warm golden light, visible paint texture. Preserve recognizable features. Candid scientific observation, no eye contact. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "An impressionistic oil painting of the woman examining exotic plants in a humid greenhouse, holding ...",
+      "generated_at": "2025-10-17T11:03:14.043343",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0015_black_35_female/0015_black_35_female_18.jpg",
+      "index": 18
     }
   }
 }

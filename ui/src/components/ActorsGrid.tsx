@@ -9,7 +9,7 @@ interface ActorsGridProps {
   onOpenTrainingData?: (actor: Actor) => void;
 }
 
-type FilterType = 'missing_0_1' | 'has_15_plus' | 'good_only' | 'has_stylized' | 'no_training';
+type FilterType = 'missing_0_1' | 'has_15_plus' | 'good_only' | 'has_stylized' | 'no_training' | 'no_base_image';
 
 export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
   const [actors, setActors] = useState<Actor[]>([]);
@@ -167,35 +167,54 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
     const trainingInfo = trainingDataMap.get(actor.id);
     if (!trainingInfo) return false;
 
-    // Check each active filter
-    const filterResults: boolean[] = [];
-    
+    // Group 1: Training Data Status (mutually exclusive - use OR logic)
+    // These describe different states of training data that cannot coexist
+    const trainingStatusFilters = [];
+    if (activeFilters.has('no_training')) {
+      trainingStatusFilters.push(trainingInfo.count === 0);
+    }
     if (activeFilters.has('missing_0_1')) {
-      filterResults.push(trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1));
+      trainingStatusFilters.push(trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1));
     }
     if (activeFilters.has('has_15_plus')) {
-      filterResults.push(trainingInfo.count >= 15);
+      trainingStatusFilters.push(trainingInfo.count >= 15);
     }
-    if (activeFilters.has('good_only')) {
-      filterResults.push(actor.good === true);
-    }
+    
+    // Group 2: Content Type (independent - use AND logic)
+    const contentTypeFilters = [];
     if (activeFilters.has('has_stylized')) {
-      filterResults.push(trainingInfo.hasStylizedImages === true);
+      contentTypeFilters.push(trainingInfo.hasStylizedImages === true);
     }
-    if (activeFilters.has('no_training')) {
-      filterResults.push(trainingInfo.count === 0);
-    }
-    
-    // If no filters active but inversion is on, match all
-    if (filterResults.length === 0) {
-      return invertFilter ? false : true;
+    if (activeFilters.has('no_base_image')) {
+      contentTypeFilters.push(trainingInfo.hasBaseImage === false);
     }
     
-    // Actor must match ALL active filters (AND logic)
-    const matches = filterResults.every(result => result === true);
+    // Group 3: Quality Flags (independent - use AND logic)
+    const qualityFilters = [];
+    if (activeFilters.has('good_only')) {
+      qualityFilters.push(actor.good === true);
+    }
     
-    // Apply inversion if enabled
-    return invertFilter ? !matches : matches;
+    // Evaluate each group
+    // Training status: If any filters in this group, actor must match at least ONE (OR logic)
+    let matchesTrainingStatus = trainingStatusFilters.length === 0 || trainingStatusFilters.some(result => result === true);
+    
+    // Content type: Actor must match ALL filters in this group (AND logic)
+    let matchesContentType = contentTypeFilters.length === 0 || contentTypeFilters.every(result => result === true);
+    
+    // Quality: Actor must match ALL filters in this group (AND logic)
+    let matchesQuality = qualityFilters.length === 0 || qualityFilters.every(result => result === true);
+    
+    // Apply inversion to each group independently if enabled
+    if (invertFilter) {
+      // Invert each group's result (but keep "no filters = true" logic)
+      if (trainingStatusFilters.length > 0) matchesTrainingStatus = !matchesTrainingStatus;
+      if (contentTypeFilters.length > 0) matchesContentType = !matchesContentType;
+      if (qualityFilters.length > 0) matchesQuality = !matchesQuality;
+    }
+    
+    // Combine all groups with AND logic
+    return matchesTrainingStatus && matchesContentType && matchesQuality;
   });
 
   if (actors.length === 0) {
@@ -337,6 +356,22 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
             }}
           >
             ∅ No Training
+          </button>
+          <button
+            onClick={() => toggleFilter('no_base_image')}
+            style={{
+              padding: '8px 16px',
+              background: activeFilters.has('no_base_image') ? '#dc2626' : '#f1f5f9',
+              color: activeFilters.has('no_base_image') ? 'white' : '#475569',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            🖼️ No Base Image
           </button>
         </div>
         

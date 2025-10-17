@@ -194,13 +194,13 @@ export function BaseImageModal({ actor, baseImage, open, onOpenChange, onBaseIma
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay style={{ background: 'rgba(0,0,0,0.8)', position: 'fixed', inset: 0, zIndex: 1000 }} />
-        <Dialog.Content style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'white', borderRadius: '12px', maxWidth: '90vw', maxHeight: '90vh', overflow: 'auto', zIndex: 1001 }}>
+        <Dialog.Content style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'white', borderRadius: '12px', maxWidth: '90vw', maxHeight: '90vh', overflow: 'hidden', display: 'flex', flexDirection: 'column', zIndex: 1001 }}>
           <div 
-            style={{ position: 'relative' }}
+            style={{ position: 'relative', flex: '1', minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}
             onMouseEnter={() => setShowGenerateButton(true)}
             onMouseLeave={() => setShowGenerateButton(false)}
           >
-            <img src={baseImage} alt={`${actor.name} base`} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={baseImage} alt={`${actor.name} base`} style={{ maxWidth: '100%', maxHeight: 'calc(90vh - 200px)', width: 'auto', height: 'auto', display: 'block', objectFit: 'contain' }} />
             
             {/* Generate New Base Image Button */}
             {(showGenerateButton || isGenerating) && (

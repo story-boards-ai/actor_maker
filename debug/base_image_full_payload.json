@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "Professional full-body studio portrait photograph of a A 47 year old hispanic man with short, wavy salt-and-pepper hair and a mustache, wearing White linen guayabera shirt, beige linen pants, brown leather sandals, and a Panama hat with a black band..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nCasual to semi-formal attire appropriate for the character.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
+            "text": "Professional full-body studio portrait photograph of a A 24 year old european woman, with medium length wavy red hair and freckles, wearing Vintage-inspired forest green corduroy pinafore dress over a cream turtleneck, brown ankle boots, and a red tartan scarf..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nCasual to semi-formal attire appropriate for the character.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
             "clip": [
               "3",
               0
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 960070193
+            "noise_seed": 634912241
           },
           "class_type": "RandomNoise",
           "_meta": {

@@ -440,7 +440,8 @@
         "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0015_black_35_female_poster_lg.webp",
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0015_black_35_female_poster.png"
       }
-    }
+    },
+    "good": true
   },
   {
     "id": 16,

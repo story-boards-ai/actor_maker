@@ -1,6 +1,48 @@
 import * as path from 'path';
 import * as fs from 'fs';
 
+/**
+ * Convert path-style S3 URL to virtual-hosted-style
+ * From: https://s3-accelerate.amazonaws.com/bucket/key
+ * To: https://bucket.s3-accelerate.amazonaws.com/key
+ */
+function convertS3UrlToVirtualHostedStyle(url: string): string {
+  if (!url || typeof url !== 'string') {
+    return url;
+  }
+
+  try {
+    // Match path-style S3 URLs: https://s3-accelerate.amazonaws.com/bucket/key
+    const pathStyleMatch = url.match(/^https:\/\/s3-accelerate\.amazonaws\.com\/([^\/]+)\/(.+)$/);
+    
+    if (pathStyleMatch) {
+      const bucket = pathStyleMatch[1];
+      const key = pathStyleMatch[2];
+      const virtualHostedUrl = `https://${bucket}.s3-accelerate.amazonaws.com/${key}`;
+      console.log('[S3 URL Transform] Converted path-style to virtual-hosted:', url, '->', virtualHostedUrl);
+      return virtualHostedUrl;
+    }
+
+    // Also handle regional path-style URLs: https://s3.region.amazonaws.com/bucket/key
+    const regionalPathStyleMatch = url.match(/^https:\/\/s3\.([^\.]+)\.amazonaws\.com\/([^\/]+)\/(.+)$/);
+    
+    if (regionalPathStyleMatch) {
+      const region = regionalPathStyleMatch[1];
+      const bucket = regionalPathStyleMatch[2];
+      const key = regionalPathStyleMatch[3];
+      const virtualHostedUrl = `https://${bucket}.s3-accelerate.amazonaws.com/${key}`;
+      console.log('[S3 URL Transform] Converted regional path-style to accelerated virtual-hosted:', url, '->', virtualHostedUrl);
+      return virtualHostedUrl;
+    }
+
+    // URL is already in correct format or not an S3 URL
+    return url;
+  } catch (error) {
+    console.warn('[S3 URL Transform] Error converting URL, returning original:', error);
+    return url;
+  }
+}
+
 interface WebhookData {
   id: string;
   status: string;
@@ -102,11 +144,15 @@ export function processTrainingWebhook(
     const isSuccess = status === 'COMPLETED' || status === 'success';
     
     if (isSuccess) {
+      // Transform S3 URL to virtual-hosted-style format
+      const transformedLoraUrl = convertS3UrlToVirtualHostedStyle(loraUrl);
+      
       data.versions[versionIndex].status = 'completed';
-      data.versions[versionIndex].loraUrl = loraUrl;
+      data.versions[versionIndex].loraUrl = transformedLoraUrl;
       data.versions[versionIndex].completedAt = new Date().toISOString();
       console.log('[Training Webhook] ✅ Training completed successfully:', runpodJobId);
-      console.log('[Training Webhook] LoRA URL:', loraUrl);
+      console.log('[Training Webhook] LoRA URL (original):', loraUrl);
+      console.log('[Training Webhook] LoRA URL (transformed):', transformedLoraUrl);
     } else {
       data.versions[versionIndex].status = 'failed';
       data.versions[versionIndex].error = error || `Training ${status.toLowerCase()}`;

@@ -3,6 +3,7 @@ export interface TrainingDataInfo {
   hasImage0: boolean;
   hasImage1: boolean;
   hasStylizedImages: boolean;
+  hasBaseImage: boolean;
 }
 
 /**
@@ -29,7 +30,7 @@ export async function fetchTrainingDataInfo(actorId: number): Promise<TrainingDa
   try {
     const response = await fetch(`/api/actors/${actorId}/training-data`);
     if (!response.ok) {
-      return { count: 0, hasImage0: false, hasImage1: false, hasStylizedImages: false };
+      return { count: 0, hasImage0: false, hasImage1: false, hasStylizedImages: false, hasBaseImage: false };
     }
     const data = await response.json();
     
@@ -51,15 +52,19 @@ export async function fetchTrainingDataInfo(actorId: number): Promise<TrainingDa
     // Look for keywords in prompt metadata
     const hasStylizedImages = await checkForStylizedImages(actorId);
     
+    // Check if base image exists
+    const hasBaseImage = !!(data.base_image_path && data.base_image_path.trim() !== '');
+    
     return {
       count: data.total_count || 0,
       hasImage0,
       hasImage1,
-      hasStylizedImages
+      hasStylizedImages,
+      hasBaseImage
     };
   } catch (error) {
     console.error(`Failed to fetch training data info for actor ${actorId}:`, error);
-    return { count: 0, hasImage0: false, hasImage1: false, hasStylizedImages: false };
+    return { count: 0, hasImage0: false, hasImage1: false, hasStylizedImages: false, hasBaseImage: false };
   }
 }
 
