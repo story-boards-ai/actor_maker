@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "Professional full-body studio portrait photograph of a A 21 year old asian woman, dark medium length hair, natural makeup, outdoor clothes, wearing Navy blue puffer vest over a maroon long-sleeve henley, black stretch hiking pants, and gray and teal trail running shoes..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nCasual to semi-formal attire appropriate for the character.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
+            "text": "Professional full-body studio portrait photograph of a A 47 year old hispanic man with short, wavy salt-and-pepper hair and a mustache, wearing White linen guayabera shirt, beige linen pants, brown leather sandals, and a Panama hat with a black band..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nCasual to semi-formal attire appropriate for the character.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
             "clip": [
               "3",
               0
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 538002745
+            "noise_seed": 960070193
           },
           "class_type": "RandomNoise",
           "_meta": {

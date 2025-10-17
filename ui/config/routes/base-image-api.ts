@@ -150,6 +150,19 @@ function handleGenerateBaseImage(
             console.log('[BASE-IMAGE] Created directory:', baseImageDir)
           }
           
+          // Delete any existing base image files (both .png and .jpg)
+          const oldPngPath = path.join(baseImageDir, `${actorName}_base.png`)
+          const oldJpgPath = path.join(baseImageDir, `${actorName}_base.jpg`)
+          
+          if (fs.existsSync(oldPngPath)) {
+            fs.unlinkSync(oldPngPath)
+            console.log('[BASE-IMAGE] Deleted old PNG file:', oldPngPath)
+          }
+          if (fs.existsSync(oldJpgPath)) {
+            fs.unlinkSync(oldJpgPath)
+            console.log('[BASE-IMAGE] Deleted old JPG file:', oldJpgPath)
+          }
+          
           // Save with standard naming: {actorName}_base.jpg
           const filename = `${actorName}_base.jpg`
           const imagePath = path.join(baseImageDir, filename)
