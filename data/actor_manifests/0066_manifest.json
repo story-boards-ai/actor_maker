@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:30.619435",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0066_european_16_female/base_image/0066_european_16_female_base.png",
-      "relative_path": "characters/0066_european_16_female/base_image/0066_european_16_female_base.png",
-      "size_bytes": 1329638,
-      "size_mb": 1.27,
-      "created_timestamp": 1746893961.046668,
-      "created_date": "2025-05-10T18:19:21.046668",
-      "modified_timestamp": 1746896739.282073,
-      "modified_date": "2025-05-10T19:05:39.282073",
-      "md5_hash": "a4d40c403aeba55e0c7f9504a5b1fd5f",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0066_european_16_female/base_image/0066_european_16_female_base.png",
-      "moved_relative_path": "data/actors/0066_european_16_female/base_image/0066_european_16_female_base.png"
+      "filename": "0066_european_16_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0066_european_16_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -165,5 +158,19 @@
       "status": "synced"
     }
   ],
-  "training_data_updated": "2025-10-17T16:46:14.442241"
+  "training_data_updated": "2025-10-17T16:46:14.442241",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0066_european_16_female_poster.png"
+    }
+  }
 }

@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:30.640675",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0070_asian_25_female/base_image/0070_asian_25_female_base.png",
-      "relative_path": "characters/0070_asian_25_female/base_image/0070_asian_25_female_base.png",
-      "size_bytes": 1091654,
-      "size_mb": 1.04,
-      "created_timestamp": 1746894005.2028182,
-      "created_date": "2025-05-10T18:20:05.202818",
-      "modified_timestamp": 1746896817.549749,
-      "modified_date": "2025-05-10T19:06:57.549749",
-      "md5_hash": "cc8f8a109150f43f63b3e43bf35c5dd4",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0070_asian_25_female/base_image/0070_asian_25_female_base.png",
-      "moved_relative_path": "data/actors/0070_asian_25_female/base_image/0070_asian_25_female_base.png"
+      "filename": "0070_asian_25_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0070_asian_25_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -43,5 +36,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:14.555711"
+  "training_data_updated": "2025-10-17T16:46:14.555711",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0070_asian_25_female_poster.png"
+    }
+  }
 }

@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.410828",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0169_black_38_female/base_image/0169_black_38_female_base.png",
-      "relative_path": "characters/0169_black_38_female/base_image/0169_black_38_female_base.png",
-      "size_bytes": 1209906,
-      "size_mb": 1.15,
-      "created_timestamp": 1746898983.6434639,
-      "created_date": "2025-05-10T19:43:03.643464",
-      "modified_timestamp": 1746898983.6436956,
-      "modified_date": "2025-05-10T19:43:03.643696",
-      "md5_hash": "a483cccd7f799b6b714ef9ab5b0c747b",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0169_black_38_female/base_image/0169_black_38_female_base.png",
-      "moved_relative_path": "data/actors/0169_black_38_female/base_image/0169_black_38_female_base.png"
+      "filename": "0169_black_38_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0169_black_38_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -43,5 +36,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.737513"
+  "training_data_updated": "2025-10-17T16:46:16.737513",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0169_black_38_female_poster.png"
+    }
+  }
 }

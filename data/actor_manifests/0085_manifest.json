@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:30.719845",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0085_middle_eastern_35_male/base_image/0085_middle_eastern_35_male_base.png",
-      "relative_path": "characters/0085_middle_eastern_35_male/base_image/0085_middle_eastern_35_male_base.png",
-      "size_bytes": 1214789,
-      "size_mb": 1.16,
-      "created_timestamp": 1746897145.6602929,
-      "created_date": "2025-05-10T19:12:25.660293",
-      "modified_timestamp": 1746897145.6606364,
-      "modified_date": "2025-05-10T19:12:25.660636",
-      "md5_hash": "52f9219426d248414da37678c4e21b56",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0085_middle_eastern_35_male/base_image/0085_middle_eastern_35_male_base.png",
-      "moved_relative_path": "data/actors/0085_middle_eastern_35_male/base_image/0085_middle_eastern_35_male_base.png"
+      "filename": "0085_middle_eastern_35_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0085_middle_eastern_35_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -43,5 +36,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:15.049518"
+  "training_data_updated": "2025-10-17T16:46:15.049518",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0085_middle_eastern_35_male_poster.png"
+    }
+  }
 }

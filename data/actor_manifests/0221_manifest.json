@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.746155",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
-      "relative_path": "characters/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
-      "size_bytes": 1505977,
-      "size_mb": 1.44,
-      "created_timestamp": 1746900361.5359576,
-      "created_date": "2025-05-10T20:06:01.535958",
-      "modified_timestamp": 1746900361.536344,
-      "modified_date": "2025-05-10T20:06:01.536344",
-      "md5_hash": "89d2fe773012cb33ad09b2475192a139",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0221_indian_51_male/base_image/0221_indian_51_male_base.png",
-      "moved_relative_path": "data/actors/0221_indian_51_male/base_image/0221_indian_51_male_base.png"
+      "filename": "0221_indian_51_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0221_indian_51_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.835507"
+  "training_data_updated": "2025-10-17T16:46:16.835507",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0221_middle_eastern_52_male_poster.png"
+    }
+  }
 }

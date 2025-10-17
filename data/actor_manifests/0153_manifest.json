@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.191954",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0153_indian_45_female/base_image/0153_indian_45_female_base.png",
-      "relative_path": "characters/0153_indian_45_female/base_image/0153_indian_45_female_base.png",
-      "size_bytes": 1673900,
-      "size_mb": 1.6,
-      "created_timestamp": 1746898662.0101564,
-      "created_date": "2025-05-10T19:37:42.010156",
-      "modified_timestamp": 1746898662.0104544,
-      "modified_date": "2025-05-10T19:37:42.010454",
-      "md5_hash": "f4e292656a4e6cbe4dd1450214b43306",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0153_indian_45_female/base_image/0153_indian_45_female_base.png",
-      "moved_relative_path": "data/actors/0153_indian_45_female/base_image/0153_indian_45_female_base.png"
+      "filename": "0153_indian_45_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0153_indian_45_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -43,5 +36,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.322130"
+  "training_data_updated": "2025-10-17T16:46:16.322130",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster.png"
+    }
+  }
 }

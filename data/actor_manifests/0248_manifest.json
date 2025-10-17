@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.857452",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0248_middle_eastern_37_male/base_image/0248_middle_eastern_37_male_base.png",
-      "relative_path": "characters/0248_middle_eastern_37_male/base_image/0248_middle_eastern_37_male_base.png",
-      "size_bytes": 1374164,
-      "size_mb": 1.31,
-      "created_timestamp": 1746900981.8622992,
-      "created_date": "2025-05-10T20:16:21.862299",
-      "modified_timestamp": 1746900981.8625538,
-      "modified_date": "2025-05-10T20:16:21.862554",
-      "md5_hash": "9eb2c2467dfba8eacee9da0eb6fefa2c",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0248_middle_eastern_37_male/base_image/0248_middle_eastern_37_male_base.png",
-      "moved_relative_path": "data/actors/0248_middle_eastern_37_male/base_image/0248_middle_eastern_37_male_base.png"
+      "filename": "0248_middle_eastern_37_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0248_middle_eastern_37_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.845895"
+  "training_data_updated": "2025-10-17T16:46:16.845895",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0248_asian_39_male_poster.png"
+    }
+  }
 }

@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.498499",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0190_european_35_male/base_image/0190_european_35_male_base.png",
-      "relative_path": "characters/0190_european_35_male/base_image/0190_european_35_male_base.png",
-      "size_bytes": 1375825,
-      "size_mb": 1.31,
-      "created_timestamp": 1746899427.8939521,
-      "created_date": "2025-05-10T19:50:27.893952",
-      "modified_timestamp": 1746899427.894471,
-      "modified_date": "2025-05-10T19:50:27.894471",
-      "md5_hash": "09787970533b628889c110869db16a2c",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0190_european_35_male/base_image/0190_european_35_male_base.png",
-      "moved_relative_path": "data/actors/0190_european_35_male/base_image/0190_european_35_male_base.png"
+      "filename": "0190_european_35_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0190_european_35_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.821942"
+  "training_data_updated": "2025-10-17T16:46:16.821942",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0190_european_35_male_poster.png"
+    }
+  }
 }

@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:30.927335",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
-      "relative_path": "characters/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
-      "size_bytes": 1470794,
-      "size_mb": 1.4,
-      "created_timestamp": 1746897807.7593212,
-      "created_date": "2025-05-10T19:23:27.759321",
-      "modified_timestamp": 1746897807.7595894,
-      "modified_date": "2025-05-10T19:23:27.759589",
-      "md5_hash": "d3a45a5dab887921cfc28285f7b9b7b1",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png",
-      "moved_relative_path": "data/actors/0113_nordic_16_female/base_image/0113_nordic_16_female_base.png"
+      "filename": "0113_nordic_16_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0113_nordic_16_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:15.511118"
+  "training_data_updated": "2025-10-17T16:46:15.511118",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster.png"
+    }
+  }
 }

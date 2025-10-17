@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:30.308217",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0009_european_65_male/base_image/0009_european_65_male_base.png",
-      "relative_path": "characters/0009_european_65_male/base_image/0009_european_65_male_base.png",
-      "size_bytes": 1484270,
-      "size_mb": 1.42,
-      "created_timestamp": 1746856927.1580894,
-      "created_date": "2025-05-10T08:02:07.158089",
-      "modified_timestamp": 1746894573.3088548,
-      "modified_date": "2025-05-10T18:29:33.308855",
-      "md5_hash": "276a25e355b6d902a212b68f913183ac",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0009_european_65_male/base_image/0009_european_65_male_base.png",
-      "moved_relative_path": "data/actors/0009_european_65_male/base_image/0009_european_65_male_base.png"
+      "filename": "0009_european_65_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0009_european_65_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -209,5 +202,19 @@
       "status": "synced"
     }
   ],
-  "training_data_updated": "2025-10-17T16:46:12.270539"
+  "training_data_updated": "2025-10-17T16:46:12.270539",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0009_european_65_male_poster.png"
+    }
+  }
 }

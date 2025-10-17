@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.738083",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0220_hispanic_49_female/base_image/0220_hispanic_49_female_base.png",
-      "relative_path": "characters/0220_hispanic_49_female/base_image/0220_hispanic_49_female_base.png",
-      "size_bytes": 1675201,
-      "size_mb": 1.6,
-      "created_timestamp": 1746900342.0364857,
-      "created_date": "2025-05-10T20:05:42.036486",
-      "modified_timestamp": 1746900342.0368652,
-      "modified_date": "2025-05-10T20:05:42.036865",
-      "md5_hash": "0fb0ff3a48e4b43518d119af801d7a85",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0220_hispanic_49_female/base_image/0220_hispanic_49_female_base.png",
-      "moved_relative_path": "data/actors/0220_hispanic_49_female/base_image/0220_hispanic_49_female_base.png"
+      "filename": "0220_hispanic_49_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0220_hispanic_49_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.835015"
+  "training_data_updated": "2025-10-17T16:46:16.835015",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0220_south_american_48_female_poster.png"
+    }
+  }
 }

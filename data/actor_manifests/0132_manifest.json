@@ -15,17 +15,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.034639",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
-      "relative_path": "characters/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
-      "size_bytes": 1240239,
-      "size_mb": 1.18,
-      "created_timestamp": 1746898252.5634003,
-      "created_date": "2025-05-10T19:30:52.563400",
-      "modified_timestamp": 1746898252.563638,
-      "modified_date": "2025-05-10T19:30:52.563638",
-      "md5_hash": "57dbcdf16f659b6b1b84a5ca28cf17ba",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png",
-      "moved_relative_path": "data/actors/0132_middle_eastern_45_female/base_image/0132_middle_eastern_45_female_base.png"
+      "filename": "0132_middle_eastern_45_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0132_middle_eastern_45_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -198,5 +191,19 @@
       "status": "local_only"
     }
   ],
-  "training_data_updated": "2025-10-17T16:46:15.946664"
+  "training_data_updated": "2025-10-17T16:46:15.946664",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0132_middle_eastern_45_female_poster.png"
+    }
+  }
 }

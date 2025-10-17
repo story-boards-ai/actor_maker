@@ -14,17 +14,10 @@
   "migration_timestamp": "2025-10-15T07:38:31.712669",
   "base_images": [
     {
-      "path": "/Users/markusetter/projects/storyboards_ai/wm-characters/characters/0216_black_13_female/base_image/0216_black_13_female_base.png",
-      "relative_path": "characters/0216_black_13_female/base_image/0216_black_13_female_base.png",
-      "size_bytes": 1252908,
-      "size_mb": 1.19,
-      "created_timestamp": 1746900263.680667,
-      "created_date": "2025-05-10T20:04:23.680667",
-      "modified_timestamp": 1746900263.6812668,
-      "modified_date": "2025-05-10T20:04:23.681267",
-      "md5_hash": "da0464782afbe339f91c12780c3cc3d8",
-      "moved_to": "/Users/markusetter/projects/storyboards_ai/actor_maker/data/actors/0216_black_13_female/base_image/0216_black_13_female_base.png",
-      "moved_relative_path": "data/actors/0216_black_13_female/base_image/0216_black_13_female_base.png"
+      "filename": "0216_black_13_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0216_black_13_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
     }
   ],
   "scene_images": [],
@@ -42,5 +35,19 @@
   },
   "status": "success",
   "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.832885"
+  "training_data_updated": "2025-10-17T16:46:16.832885",
+  "poster_frames": {
+    "standard": {
+      "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster.png"
+    },
+    "accelerated": {
+      "webp_sm": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_sm.webp",
+      "webp_md": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_md.webp",
+      "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster_lg.webp",
+      "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0216_asian_34_male_poster.png"
+    }
+  }
 }
