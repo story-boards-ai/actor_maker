@@ -20,6 +20,7 @@ import { createSettingsSetsApi } from "./routes/settings-sets-api";
 import { createAssessmentsApi } from "./routes/assessments-api";
 import { createActorsApi } from "./routes/actors-api";
 import { createBaseImageApi } from "./routes/base-image-api";
+import { createCacheApi } from "./routes/cache-api";
 
 // Global variable to store actual running port
 let actualServerPort: number | undefined;
@@ -45,11 +46,13 @@ export function createServerPlugin(): Plugin {
     name: "serve-multiple-dirs",
     configureServer(server) {
       // Store the actual port when server starts
-      server.httpServer?.once('listening', () => {
+      server.httpServer?.once("listening", () => {
         const address = server.httpServer?.address();
-        if (address && typeof address === 'object') {
+        if (address && typeof address === "object") {
           actualServerPort = address.port;
-          console.log(`[Server Plugin] Detected server running on port ${actualServerPort}`);
+          console.log(
+            `[Server Plugin] Detected server running on port ${actualServerPort}`
+          );
         }
       });
 
@@ -58,6 +61,7 @@ export function createServerPlugin(): Plugin {
           // Create middleware chain
           const middlewares = [
             createFileServingMiddleware(projectRoot),
+            createCacheApi(projectRoot), // Cache API should be early for fast image serving
             createImagesApi(projectRoot),
             createPromptsApi(projectRoot),
             createCaptionsApi(projectRoot),

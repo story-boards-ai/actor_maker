@@ -238,3 +238,6 @@ build/
 ui/node_modules/
 ui/dist/
 ui/.vscode/
+
+# Image cache (local caching of S3 images)
+.image-cache/

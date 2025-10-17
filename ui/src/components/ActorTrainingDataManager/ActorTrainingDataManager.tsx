@@ -6,6 +6,9 @@ import * as Progress from '@radix-ui/react-progress';
 import { BaseImageModal } from './BaseImageModal';
 import { BaseImageThumbnail } from './BaseImageThumbnail';
 import { TrainingImageModal } from './TrainingImageModal';
+import { useImageCache } from '../../hooks/useImageCache';
+import { prefetchManager } from '../../utils/prefetchManager';
+import { CachedImage } from '../CachedImage';
 
 interface ActorTrainingDataManagerProps {
   actor: Actor;
@@ -54,9 +57,33 @@ export function ActorTrainingDataManager({
   });
   const [showDeleteAllConfirm, setShowDeleteAllConfirm] = useState(false);
 
+  // Image cache hook
+  const { invalidateImage } = useImageCache();
+
   useEffect(() => {
     loadTrainingData();
   }, [actor.id]);
+
+  // Trigger high-priority prefetch when actor training data loads
+  useEffect(() => {
+    if (trainingImages.length > 0) {
+      const imagesToPrefetch = trainingImages.map(img => ({
+        s3_url: img.s3_url,
+        filename: img.filename
+      }));
+
+      // Add base image if exists
+      if (baseImage) {
+        imagesToPrefetch.unshift({
+          s3_url: baseImage,
+          filename: `${actor.name}_base.jpg`
+        });
+      }
+
+      // Trigger high-priority prefetch for this actor
+      prefetchManager.prefetchActor(String(actor.id), imagesToPrefetch);
+    }
+  }, [trainingImages, baseImage, actor.id, actor.name]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -70,6 +97,32 @@ export function ActorTrainingDataManager({
       return () => document.removeEventListener('keydown', handleEscape);
     }
   }, [showBaseImageModal]);
+
+  // Keyboard navigation with arrow keys
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger if user is typing in an input field
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+
+      // Don't trigger if a modal is open
+      if (showBaseImageModal || selectedTrainingImage || showGenerateModal || showDeleteAllConfirm) {
+        return;
+      }
+
+      if (e.key === 'ArrowLeft' && hasPrevious && onNavigatePrevious) {
+        e.preventDefault();
+        onNavigatePrevious();
+      } else if (e.key === 'ArrowRight' && hasNext && onNavigateNext) {
+        e.preventDefault();
+        onNavigateNext();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [hasPrevious, hasNext, onNavigatePrevious, onNavigateNext, showBaseImageModal, selectedTrainingImage, showGenerateModal, showDeleteAllConfirm]);
 
   async function loadTrainingData() {
     try {
@@ -219,6 +272,9 @@ export function ActorTrainingDataManager({
       }
 
       await response.json();
+      
+      // Invalidate cache for deleted image
+      await invalidateImage(image.s3_url);
       
       // Reset sync status without showing a message
       setSyncStatus({
@@ -509,8 +565,8 @@ export function ActorTrainingDataManager({
                           style={{ position: 'relative', width: `${gridSize}px`, height: `${gridSize}px`, background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
                           title="Click to view full size"
                         >
-                          <img 
-                            src={img.s3_url} 
+                          <CachedImage
+                            s3_url={img.s3_url}
                             alt={img.filename}
                             loading="lazy"
                             style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}

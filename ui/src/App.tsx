@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { ActorsGrid } from "./components/ActorsGrid";
 import { PromptEditor } from "./components/PromptEditor";
@@ -10,12 +10,12 @@ import { TrainingDataViewer } from "./components/TrainingDataViewer";
 import { TrainingDataManager } from "./components/TrainingDataManager";
 import { TrainingDataS3Manager } from "./components/TrainingDataS3Manager";
 import { ActorTrainingDataManager } from "./components/ActorTrainingDataManager";
-import { LoRATrainingTab } from "./components/LoRATrainingTab";
 import { ActorTrainingTab } from "./components/ActorTraining";
 import { Validator } from "./components/Validator/Validator";
 import { Toaster } from "sonner";
 import { ExportToBackendButton } from "./components/ExportToBackendButton";
 import type { Actor } from "./types";
+import { prefetchManager } from "./utils/prefetchManager";
 
 interface TrainingTab {
   id: string;
@@ -42,59 +42,38 @@ interface ActorTrainingTab {
   label: string;
 }
 
-
 function App() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [trainingTab, setTrainingTab] = useState<TrainingTab | null>(null);
   const [trainingManagerTab, setTrainingManagerTab] =
     useState<TrainingManagerTab | null>(null);
   const [s3ManagerTab, setS3ManagerTab] = useState<S3ManagerTab | null>(null);
-  const [actorTrainingTab, setActorTrainingTab] = useState<ActorTrainingTab | null>(null);
+  const [actorTrainingTab, setActorTrainingTab] =
+    useState<ActorTrainingTab | null>(null);
   const [actors, setActors] = useState<Actor[]>([]);
   const [pendingImageGenLoad, setPendingImageGenLoad] = useState<{
     image: string;
     style: Style;
   } | null>(null);
 
-  const handleOpenTrainingTab = (style: Style, version: "v1" | "v2") => {
-    const newTab: TrainingTab = {
-      id: `training-${style.id}-${version}`,
-      style,
-      version,
-      label: `${style.title} ${version.toUpperCase()}`,
-    };
-    setTrainingTab(newTab);
-    setActiveTab(newTab.id);
-  };
+  // Start background prefetching when actors are loaded
+  useEffect(() => {
+    if (actors.length > 0) {
+      console.log("Starting background prefetch for", actors.length, "actors");
+
+      // Start prefetching in background (non-blocking)
+      prefetchManager.startPrefetch(actors);
+    }
+  }, [actors]);
 
   const handleCloseTrainingTab = () => {
     setTrainingTab(null);
     setActiveTab("tab1"); // Go back to Actors Library
   };
 
-  const handleOpenTrainingManager = (style: Style) => {
-    const newTab: TrainingManagerTab = {
-      id: `training-manager-${style.id}`,
-      style,
-      label: `${style.title} - Training Data`,
-    };
-    setTrainingManagerTab(newTab);
-    setActiveTab(newTab.id);
-  };
-
   const handleCloseTrainingManager = () => {
     setTrainingManagerTab(null);
     setActiveTab("tab1"); // Go back to Actors Library
-  };
-
-  const handleOpenS3Manager = (style: Style) => {
-    const newTab: S3ManagerTab = {
-      id: `s3-manager-${style.id}`,
-      style,
-      label: `${style.title} - S3 Training Data`,
-    };
-    setS3ManagerTab(newTab);
-    setActiveTab(newTab.id);
   };
 
   const handleCloseS3Manager = () => {
@@ -119,7 +98,9 @@ function App() {
 
   const handleNavigateActorPrevious = () => {
     if (!actorTrainingTab || actors.length === 0) return;
-    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    const currentIndex = actors.findIndex(
+      (a) => a.id === actorTrainingTab.actor.id
+    );
     if (currentIndex > 0) {
       handleOpenActorTraining(actors[currentIndex - 1]);
     }
@@ -127,7 +108,9 @@ function App() {
 
   const handleNavigateActorNext = () => {
     if (!actorTrainingTab || actors.length === 0) return;
-    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    const currentIndex = actors.findIndex(
+      (a) => a.id === actorTrainingTab.actor.id
+    );
     if (currentIndex < actors.length - 1) {
       handleOpenActorTraining(actors[currentIndex + 1]);
     }
@@ -137,19 +120,20 @@ function App() {
     if (!actorTrainingTab || actors.length === 0) {
       return { hasPrevious: false, hasNext: false };
     }
-    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    const currentIndex = actors.findIndex(
+      (a) => a.id === actorTrainingTab.actor.id
+    );
     return {
       hasPrevious: currentIndex > 0,
-      hasNext: currentIndex < actors.length - 1
+      hasNext: currentIndex < actors.length - 1,
     };
   };
-
 
   return (
     <div className="container">
       <Toaster position="top-right" richColors />
       <header className="header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <h1>Actors Maker</h1>
           <span className="header-separator">•</span>
           <p>LoRA actor model training and image generation toolkit</p>
@@ -261,11 +245,10 @@ function App() {
               </span>
             </Tabs.Trigger>
           )}
-
         </Tabs.List>
 
         <Tabs.Content className="TabsContent" value="tab1">
-          <ActorsGrid 
+          <ActorsGrid
             onOpenTrainingData={handleOpenActorTraining}
             onActorsLoaded={setActors}
           />
@@ -342,7 +325,6 @@ function App() {
             />
           </Tabs.Content>
         )}
-
       </Tabs.Root>
     </div>
   );
