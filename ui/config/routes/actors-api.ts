@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from 'http';
 import * as path from 'path';
 import * as fs from 'fs';
-import { spawn } from 'child_process';
+import { spawn, execSync } from 'child_process';
 import * as crypto from 'crypto';
 
 /**
@@ -877,167 +877,60 @@ function handleGetPresetTrainingPrompts(
       return;
     }
 
-    // Determine descriptor based on actor attributes
+    // Get prompts from Python module
+    const actorType = actor.type?.toLowerCase() || 'human';
+    const actorSex = actor.sex?.toLowerCase();
+    
+    // Call Python function to get training prompts
+    const pythonScript = path.join(projectRoot, 'src', 'get_training_prompts.py');
+    
+    let promptsJson: string;
+    try {
+      promptsJson = execSync(
+        `python3 "${pythonScript}" "${actorType}" "${actorSex || ''}"`,
+        { encoding: 'utf-8', cwd: projectRoot }
+      ).toString();
+    } catch (error) {
+      console.error('Error calling Python script:', error);
+      throw new Error('Failed to load training prompts from Python');
+    }
+    
+    const rawPrompts = JSON.parse(promptsJson);
+    
+    // Convert Python prompts to frontend format with IDs and labels
+    const prompts = rawPrompts.map((prompt: string, index: number) => {
+      // Determine category based on index (15 photo + 11 bw + 9 color = 35 total)
+      let category: string;
+      let label: string;
+      
+      if (index < 15) {
+        category = 'photorealistic';
+        label = `Photo ${index + 1}`;
+      } else if (index < 26) {
+        category = 'bw_stylized';
+        label = `B&W ${index - 14}`;
+      } else {
+        category = 'color_stylized';
+        label = `Color ${index - 25}`;
+      }
+      
+      // Extract a short label from the prompt
+      const firstSentence = prompt.split('.')[0];
+      const shortLabel = firstSentence.length > 40 
+        ? firstSentence.substring(0, 37) + '...'
+        : firstSentence;
+      
+      return {
+        id: `prompt_${index}`,
+        category,
+        label: shortLabel,
+        prompt
+      };
+    });
+    
+    // Calculate descriptor for response
     const sex = actor.sex?.toLowerCase();
     const descriptor = sex === 'male' ? 'man' : sex === 'female' ? 'woman' : 'person';
-
-    // Define preset prompts (matching actor_training_prompts.py structure)
-    // 25 total: 15 photorealistic (urban/nature/water/outdoor mix) + 6 B&W + 4 color
-    const prompts = [
-      // PHOTOREALISTIC PROMPTS (15 total)
-      {
-        id: 'rain_street',
-        category: 'photorealistic',
-        label: 'Urban Night - Rain Street',
-        prompt: `The ${descriptor} runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Three-quarter back angle. Reflections on the asphalt, no other figures in frame.`
-      },
-      {
-        id: 'forest_dawn',
-        category: 'photorealistic',
-        label: 'Nature - Misty Forest',
-        prompt: `The ${descriptor} walks through a misty forest at dawn, sunlight filtering through tall pine trees. Medium shot from behind, soft morning light creating long shadows. Character moving deeper into the woods.`
-      },
-      {
-        id: 'beach_golden',
-        category: 'photorealistic',
-        label: 'Water - Rocky Beach Sunset',
-        prompt: `The ${descriptor} stands at the edge of a rocky beach at golden hour, waves crashing nearby, gazing out at the ocean horizon. Side profile, warm orange sunset light, hair moving in the wind.`
-      },
-      {
-        id: 'portrait_natural',
-        category: 'photorealistic',
-        label: 'Urban - Close-up Portrait',
-        prompt: `Close-up portrait of the ${descriptor}'s face in natural lighting, eyes gazing off to the side. Photorealistic, sharp focus on facial features, neutral expression, head turned away from camera. Preserve all defining details.`
-      },
-      {
-        id: 'mountain_climb',
-        category: 'photorealistic',
-        label: 'Nature - Mountain Trail',
-        prompt: `The ${descriptor} climbs a rocky mountain trail at midday, hands gripping stone, eyes focused upward on the path. Low angle shot, bright sunlight creating harsh shadows, blue sky above.`
-      },
-      {
-        id: 'lake_dock',
-        category: 'photorealistic',
-        label: 'Water - Lake Dock Dusk',
-        prompt: `The ${descriptor} sits on a weathered wooden dock at dusk, feet dangling over calm lake water, watching ripples spread. Back three-quarter view, soft purple-blue twilight, silhouette against the water.`
-      },
-      {
-        id: 'window_light',
-        category: 'photorealistic',
-        label: 'Urban - Window Reflection',
-        prompt: `Close-up of the ${descriptor} looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.`
-      },
-      {
-        id: 'field_noon',
-        category: 'photorealistic',
-        label: 'Outdoor - Grass Field',
-        prompt: `The ${descriptor} walks through a tall grass field at noon, wind blowing the grass in waves. Wide shot from behind, bright daylight, character small in the vast landscape.`
-      },
-      {
-        id: 'subway_platform',
-        category: 'photorealistic',
-        label: 'Urban Night - Subway',
-        prompt: `The ${descriptor} stands alone on a dimly lit subway platform at night, hands in pockets, looking down the tunnel. Side angle, fluorescent overhead lights casting harsh shadows. Urban grit, tiled walls.`
-      },
-      {
-        id: 'forest_stream',
-        category: 'photorealistic',
-        label: 'Nature - Forest Stream',
-        prompt: `The ${descriptor} crouches by a forest stream, hands cupped in the water, eyes focused on the flowing current. Side angle, dappled sunlight through trees, green foliage surrounding.`
-      },
-      {
-        id: 'parking_garage',
-        category: 'photorealistic',
-        label: 'Urban - Parking Garage',
-        prompt: `The ${descriptor} walks through a concrete parking garage, lit by overhead strip lights. Medium shot, cold blue-green lighting, pillars casting long shadows.`
-      },
-      {
-        id: 'desert_canyon',
-        category: 'photorealistic',
-        label: 'Outdoor - Desert Canyon',
-        prompt: `The ${descriptor} stands at the edge of a desert canyon at sunset, red rock formations in the background, looking down into the canyon depths. Profile shot, warm golden-red light, dramatic landscape.`
-      },
-      {
-        id: 'rooftop_wide',
-        category: 'photorealistic',
-        label: 'Urban Dusk - Rooftop',
-        prompt: `Wide cinematic shot of the ${descriptor} standing small on a rooftop edge at dusk, city skyline sprawling behind them. Silhouette against orange-purple sky. Dramatic scale, tiny figure in vast urban landscape.`
-      },
-      {
-        id: 'storm_pier',
-        category: 'photorealistic',
-        label: 'Water - Storm Pier',
-        prompt: `The ${descriptor} walks along a rain-soaked pier during a storm, hood up, eyes focused on the wooden planks ahead. Medium shot from behind, dark gray sky, waves crashing against the pier supports.`
-      },
-      {
-        id: 'alley_phone',
-        category: 'photorealistic',
-        label: 'Urban Night - Alley Call',
-        prompt: `The ${descriptor} leans against a brick wall in a narrow alley, holding a phone to their ear, head tilted down. Side profile, single streetlight creating dramatic rim lighting. Wet pavement reflecting light.`
-      },
-      // B&W STYLIZED PROMPTS (6 total)
-      {
-        id: 'pen_ink_stoop',
-        category: 'bw_stylized',
-        label: 'Pen & Ink - Townhouse',
-        prompt: `A black-and-white pen and ink line drawing of the ${descriptor} tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. High-contrast lines with crosshatching and stippling. Illustration only, not photorealistic.`
-      },
-      {
-        id: 'graphite_train',
-        category: 'bw_stylized',
-        label: 'Graphite - Train Window',
-        prompt: `A graphite pencil sketch of the ${descriptor} seated by a train window at dawn, eyes gazing out at the passing landscape. Soft hatching and blending, visible pencil grain. Illustration, not photorealistic.`
-      },
-      {
-        id: 'charcoal_warehouse',
-        category: 'bw_stylized',
-        label: 'Charcoal - Warehouse Door',
-        prompt: `A charcoal drawing of the ${descriptor} bracing a shoulder against a half-rolled warehouse door, dust in the air. Rough strokes and smudged shadows. Illustration, not photorealistic.`
-      },
-      {
-        id: 'woodcut_alley',
-        category: 'bw_stylized',
-        label: 'Woodcut - Alley Sprint',
-        prompt: `A black-and-white woodcut print of the ${descriptor} sprinting down a narrow alley. Angular highlights and carved textures, thick black shapes and white cuts. Illustration, not photorealistic.`
-      },
-      {
-        id: 'vector_mono',
-        category: 'bw_stylized',
-        label: 'Vector - Poster Silhouette',
-        prompt: `A monochrome flat vector illustration of ${descriptor} in detailed hand-drawn concept sketch style. Clean lines, subtle hatching, minimal geometric shapes, hard edges. Illustration, not photorealistic.`
-      },
-      {
-        id: 'manga_phone',
-        category: 'bw_stylized',
-        label: 'Manga - Tense Call',
-        prompt: `A black-and-white manga illustration of the ${descriptor} making a tense phone call in an alley. Expressive inking with screentone patterns for shading, speed lines. Illustration, not photorealistic.`
-      },
-      // COLOR STYLIZED PROMPTS (4 total)
-      {
-        id: 'comic_rooftop',
-        category: 'color_stylized',
-        label: 'Comic - Rooftop Leap',
-        prompt: `A dynamic comic book illustration of the ${descriptor} leaping a narrow rooftop gap at night with a city skyline behind. Speed lines, bold inks, cel-shaded color, halftone dots. Illustration style, not photorealistic.`
-      },
-      {
-        id: 'vector_metro',
-        category: 'color_stylized',
-        label: 'Vector - Metro Platform',
-        prompt: `A flat vector illustration of the ${descriptor} waiting on a metro platform, holding a small duffel. Long geometric shadows, flat colors, simple shapes, crisp outlines, poster-like. Not photorealistic.`
-      },
-      {
-        id: 'watercolor_diner',
-        category: 'color_stylized',
-        label: 'Watercolor - Diner Window',
-        prompt: `A watercolor illustration of the ${descriptor} seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug. Paper texture visible, gentle bleeding. Illustration, not photorealistic.`
-      },
-      {
-        id: 'gouache_stairwell',
-        category: 'color_stylized',
-        label: 'Gouache - Stairwell',
-        prompt: `A gouache painting of the ${descriptor} ascending a concrete stairwell, caught mid-step. Chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Illustration, not photorealistic.`
-      }
-    ];
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

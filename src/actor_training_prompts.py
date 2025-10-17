@@ -86,6 +86,21 @@ def get_actor_training_prompts(descriptor: str) -> List[str]:
         
         # Manga screentone — phone call in alley
         f"A black-and-white manga illustration of the {descriptor} making a tense phone call in an alley, eyes closed or looking down, head tilted. Half-body shot, three-quarter angle, face turned away from viewer, expressive inking with screentone patterns for shading, speed lines in background. No grayscale gradients, no color. Preserve identity. Candid moment, no camera awareness. Illustration, not photorealistic.",
+        
+        # Ink wash — market crowd
+        f"A black-and-white ink wash drawing of the {descriptor} pushing through a crowded marketplace, arm extended forward parting the crowd, eyes focused downward on the path ahead. Wide shot from chest height, frontal three-quarter angle, face visible but looking down and to the side, loose gestural brushwork with varying ink densities, atmospheric crowd silhouettes in background. Preserve facial features. Candid action, no eye contact. Illustration, not photorealistic.",
+        
+        # Scratchboard — climbing action
+        f"A black-and-white scratchboard illustration of the {descriptor} scaling a rocky cliff face, both hands gripping stone above, eyes focused upward on the next handhold. Medium frontal shot from below, face angled up and away from viewer, white lines scratched from black surface, dramatic contrast with fine detail work. Preserve identity. Candid climbing action, no camera awareness. Illustration, not photorealistic.",
+        
+        # Linocut — rain crossing
+        f"A black-and-white linocut print of the {descriptor} running across a rain-soaked plaza, coat billowing, eyes squinting against the downpour looking ahead. Full body frontal shot from ground level, face visible but turned slightly down shielding from rain, bold carved shapes, strong vertical rain lines, high contrast black and white. Preserve recognizable features. Candid action in weather, no eye contact. Illustration, not photorealistic.",
+        
+        # Etching — workshop scene
+        f"A black-and-white etching of the {descriptor} hammering metal at an anvil in a workshop, sparks flying, eyes focused intently on the workpiece below. Medium frontal shot from slightly above, face lit by forge glow looking down at work, fine cross-hatched lines, rich blacks in shadows, detailed linework. Preserve facial structure. Candid crafting action, no camera awareness. Illustration, not photorealistic.",
+        
+        # Conte crayon — subway rush
+        f"A black-and-white conte crayon drawing of the {descriptor} rushing down subway stairs, hand on railing, eyes looking down at steps ahead. Frontal diagonal shot from platform level, face visible but angled downward in motion, soft smudged blacks with sharp highlights, textured paper grain visible, dynamic diagonal composition. Preserve identity cues. Candid hurried movement, no eye contact. Illustration, not photorealistic.",
     ]
     
     # Color stylized prompts - artistic illustration styles (CANDID POSES - NO CAMERA CONTACT)
@@ -101,12 +116,27 @@ def get_actor_training_prompts(descriptor: str) -> List[str]:
         
         # Gouache — stairwell action
         f"A gouache painting of the {descriptor} ascending a concrete stairwell, caught mid-step, eyes focused upward on the stairs ahead, head angled away from viewer. Low angle, face in profile or three-quarter view looking up the stairwell, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Candid action moment, no camera contact. Illustration, not photorealistic.",
+        
+        # Acrylic — street performance
+        f"A vibrant acrylic painting of the {descriptor} juggling flaming torches in a street performance, eyes tracking the arc of flames above, face tilted upward. Medium frontal shot from audience perspective, face visible but looking up at the torches, bold brushwork, rich saturated colors with orange flame glow, energetic paint application. Preserve identity. Candid performance action, no eye contact. Illustration, not photorealistic.",
+        
+        # Digital painting — motorcycle repair
+        f"A digital painting of the {descriptor} crouched beside a vintage motorcycle in a desert garage, wrench in hand, eyes focused on engine parts below. Wide frontal shot from standing height, face angled down examining the work, warm afternoon light, painterly digital brushstrokes, dusty oranges and teals, detailed mechanical elements. Preserve facial features. Candid repair work, no camera awareness. Illustration, not photorealistic.",
+        
+        # Oil painting — greenhouse botanist
+        f"An impressionistic oil painting of the {descriptor} examining exotic plants in a humid greenhouse, holding a specimen jar up to diffused light, eyes studying the contents. Close frontal shot from chest level, face turned slightly up toward the jar, loose expressive brushwork, lush greens with warm golden light, visible paint texture. Preserve recognizable features. Candid scientific observation, no eye contact. Illustration, not photorealistic.",
+        
+        # Pastel — beach cleanup
+        f"A soft pastel illustration of the {descriptor} bending to collect debris on a windswept beach at sunset, hair blowing, eyes focused on the sand ahead. Full body frontal shot from low angle, face angled downward searching the beach, blended pastel colors, warm sunset palette with cool shadows, atmospheric coastal scene. Preserve identity cues. Candid environmental action, no camera awareness. Illustration, not photorealistic.",
+        
+        # Mixed media collage — urban parkour
+        f"A mixed media collage illustration of the {descriptor} vaulting over a concrete barrier in an urban plaza, mid-leap with arms extended, eyes locked on the landing zone ahead. Dynamic frontal shot from ground level, face visible but focused downward on landing spot, layered textures combining paint and paper elements, bold graphic shapes, vibrant street art color palette. Preserve facial structure. Candid parkour action, no eye contact. Illustration, not photorealistic.",
     ]
     
     # Use all 15 photorealistic prompts for comprehensive coverage
     photo_realistic_prompts = base_images_prompts
     
-    # Final ordered set: 15 photo + 6 B/W stylized + 4 color stylized = 25 total
+    # Final ordered set: 15 photo + 11 B/W stylized + 9 color stylized = 35 total
     all_training_prompts = [
         *photo_realistic_prompts,
         *bw_stylized_prompts,

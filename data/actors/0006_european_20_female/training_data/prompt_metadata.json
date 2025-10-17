@@ -169,11 +169,60 @@
       "index": 27
     },
     "0006_european_20_female_28.jpg": {
-      "prompt": "A gouache painting of the character ascending a concrete stairwell, caught mid-step, eyes focused upward on the stairs ahead, head angled away from viewer. Low angle, face in profile or three-quarter view looking up the stairwell, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Candid action moment, no camera contact. Illustration, not photorealistic.",
-      "prompt_preview": "A gouache painting of the character ascending a concrete stairwell, caught mid-step, eyes focused up...",
-      "generated_at": "2025-10-16T13:22:34.549825",
+      "prompt": "The woman stands at the edge of a rocky beach at golden hour, waves crashing nearby, gazing out at the ocean horizon. Side profile, warm orange sunset light, hair moving in the wind.",
+      "prompt_preview": "The woman stands at the edge of a rocky beach at golden hour, waves crashing nearby, gazing out at t...",
+      "generated_at": "2025-10-17T09:54:26.676746",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_28.jpg",
       "index": 28
+    },
+    "0006_european_20_female_29.jpg": {
+      "prompt": "The woman walks through a tall grass field at noon, wind blowing the grass in waves. Wide shot from behind, bright daylight, character small in the vast landscape.",
+      "prompt_preview": "The woman walks through a tall grass field at noon, wind blowing the grass in waves. Wide shot from ...",
+      "generated_at": "2025-10-17T09:54:35.569454",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_29.jpg",
+      "index": 29
+    },
+    "0006_european_20_female_30.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. High-contrast lines with crosshatching and stippling. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop u...",
+      "generated_at": "2025-10-17T09:54:46.236832",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_30.jpg",
+      "index": 30
+    },
+    "0006_european_20_female_31.jpg": {
+      "prompt": "A black-and-white manga illustration of the woman making a tense phone call in an alley. Expressive inking with screentone patterns for shading, speed lines. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white manga illustration of the woman making a tense phone call in an alley. Expressive ...",
+      "generated_at": "2025-10-17T09:54:54.810257",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_31.jpg",
+      "index": 31
+    },
+    "0006_european_20_female_32.jpg": {
+      "prompt": "The woman crouches by a forest stream, hands cupped in the water, eyes focused on the flowing current. Side angle, dappled sunlight through trees, green foliage surrounding.",
+      "prompt_preview": "The woman crouches by a forest stream, hands cupped in the water, eyes focused on the flowing curren...",
+      "generated_at": "2025-10-17T09:57:49.747947",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_32.jpg",
+      "index": 32
+    },
+    "0006_european_20_female_33.jpg": {
+      "prompt": "A digital painting of the woman crouched beside a vintage motorcycle in a desert garage, wrench in hand, eyes focused on engine parts below. Wide frontal shot from standing height, face angled down examining the work, warm afternoon light, painterly digital brushstrokes, dusty oranges and teals, detailed mechanical elements. Preserve facial features. Candid repair work, no camera awareness. Illustration, not photorealistic.",
+      "prompt_preview": "A digital painting of the woman crouched beside a vintage motorcycle in a desert garage, wrench in h...",
+      "generated_at": "2025-10-17T10:17:44.042392",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_33.jpg",
+      "index": 33
+    },
+    "0006_european_20_female_34.jpg": {
+      "prompt": "An impressionistic oil painting of the woman examining exotic plants in a humid greenhouse, holding a specimen jar up to diffused light, eyes studying the contents. Close frontal shot from chest level, face turned slightly up toward the jar, loose expressive brushwork, lush greens with warm golden light, visible paint texture. Preserve recognizable features. Candid scientific observation, no eye contact. Illustration, not photorealistic.",
+      "prompt_preview": "An impressionistic oil painting of the woman examining exotic plants in a humid greenhouse, holding ...",
+      "generated_at": "2025-10-17T10:17:52.622843",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_34.jpg",
+      "index": 34
+    },
+    "0006_european_20_female_35.jpg": {
+      "prompt": "A black-and-white conte crayon drawing of the woman rushing down subway stairs, hand on railing, eyes looking down at steps ahead. Frontal diagonal shot from platform level, face visible but angled downward in motion, soft smudged blacks with sharp highlights, textured paper grain visible, dynamic diagonal composition. Preserve identity cues. Candid hurried movement, no eye contact. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white conte crayon drawing of the woman rushing down subway stairs, hand on railing, eye...",
+      "generated_at": "2025-10-17T10:18:34.006487",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0006_european_20_female/0006_european_20_female_35.jpg",
+      "index": 35
     }
   }
 }

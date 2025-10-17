@@ -47,10 +47,7 @@
         },
         "class_type": "FluxTrainLoop",
         "inputs": {
-          "network_trainer": [
-            "107",
-            0
-          ],
+          "network_trainer": ["107", 0],
           "steps": 1200
         }
       },
@@ -61,10 +58,7 @@
         "class_type": "FluxTrainSave",
         "inputs": {
           "copy_to_comfy_lora_folder": false,
-          "network_trainer": [
-            "4",
-            0
-          ],
+          "network_trainer": ["4", 0],
           "save_state": false
         }
       },
@@ -91,10 +85,7 @@
         "class_type": "Display Any (rgthree)",
         "inputs": {
           "output": "",
-          "source": [
-            "107",
-            1
-          ]
+          "source": ["107", 1]
         }
       },
       "95": {
@@ -121,10 +112,7 @@
         "inputs": {
           "height": 512,
           "log_scale": false,
-          "network_trainer": [
-            "4",
-            0
-          ],
+          "network_trainer": ["4", 0],
           "normalize_y": true,
           "plot_style": "seaborn-v0_8-dark-palette",
           "width": 768,
@@ -138,10 +126,7 @@
         "class_type": "SaveImage",
         "inputs": {
           "filename_prefix": "flux_lora_loss_plot",
-          "images": [
-            "97",
-            0
-          ]
+          "images": ["97", 0]
         }
       },
       "105": {
@@ -151,10 +136,7 @@
         "class_type": "Display Any (rgthree)",
         "inputs": {
           "output": "",
-          "source": [
-            "107",
-            2
-          ]
+          "source": ["107", 2]
         }
       },
       "107": {
@@ -171,15 +153,9 @@
           "cache_latents": "memory",
           "cache_text_encoder_outputs": "memory",
           "clip_l_lr": 0,
-          "dataset": [
-            "109",
-            0
-          ],
+          "dataset": ["109", 0],
           "discrete_flow_shift": 3.1582000000000003,
-          "flux_models": [
-            "2",
-            0
-          ],
+          "flux_models": ["2", 0],
           "fp8_base": true,
           "gradient_checkpointing": "enabled",
           "gradient_dtype": "bf16",
@@ -193,16 +169,10 @@
           "model_prediction_type": "raw",
           "network_alpha": 16,
           "network_dim": 16,
-          "optimizer_settings": [
-            "95",
-            0
-          ],
+          "optimizer_settings": ["95", 0],
           "output_dir": "/model_output",
           "output_name": "flux_lora_file_name",
-          "sample_prompts": [
-            "146",
-            0
-          ],
+          "sample_prompts": ["146", 0],
           "save_dtype": "bf16",
           "sigmoid_scale": 1,
           "timestep_sampling": "shift",
@@ -234,10 +204,7 @@
           "batch_size": 1,
           "bucket_no_upscale": false,
           "class_tokens": "0001_european_20_female",
-          "dataset_config": [
-            "108",
-            0
-          ],
+          "dataset_config": ["108", 0],
           "dataset_path": "/training_data",
           "enable_bucket": true,
           "height": 512,
@@ -253,10 +220,7 @@
         },
         "class_type": "FluxTrainEnd",
         "inputs": {
-          "network_trainer": [
-            "14",
-            0
-          ],
+          "network_trainer": ["14", 0],
           "save_state": false
         }
       },
@@ -275,10 +239,10 @@
   "output": {
     "job_id": "1_1760623175837",
     "loraName": "actor_1_V1.safetensors",
-    "loraUrl": "https://s3-accelerate.amazonaws.com/storyboard-user-files/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
+    "loraUrl": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
     "message": "LoRA training completed successfully in 747.84 seconds",
     "model_info": {
-      "download_url": "https://s3-accelerate.amazonaws.com/storyboard-user-files/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
+      "download_url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_1_V1.safetensors",
       "file_extension": ".safetensors",
       "model_type": "lora",
       "name": "actor_1_V1.safetensors",

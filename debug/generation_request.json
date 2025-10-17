@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "hand-drawn storyboard, sketch, dynamic perspective Superhero landing pose in destroyed city street, dramatic CGI effects, 2010s Marvel Cinematic Universe style, dynamic composition (strong hatching++), (graphite texture), (realistic perspective)",
+            "text": "style SBai_style_91, clean vector illustration, flat color style, strong silhouette, (0006_european_20_female as A gorgeous 20 year old european woman, (long blonde hair:1.1), little makeup), walks into a bar, (vector art++), (sharp linework+), no duplicates, (cel shading+), mid-century animation style, dynamic camera angle, non symetrical",
             "clip": [
               "40",
               1
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 231206
+            "noise_seed": 607695
           },
           "class_type": "RandomNoise",
           "_meta": {
@@ -141,7 +141,7 @@
         },
         "26": {
           "inputs": {
-            "guidance": 3.5,
+            "guidance": 20,
             "conditioning": [
               "6",
               0
@@ -231,15 +231,15 @@
           "inputs": {
             "toggle": true,
             "mode": "simple",
-            "num_loras": 1,
-            "lora_1_name": "style_2_vV2.safetensors",
-            "lora_1_strength": 0.8,
-            "lora_1_model_strength": 0.8,
-            "lora_1_clip_strength": 0.8,
-            "lora_2_name": "None",
-            "lora_2_strength": 1,
-            "lora_2_model_strength": 1,
-            "lora_2_clip_strength": 1,
+            "num_loras": 2,
+            "lora_1_name": "actor_6_V6.safetensors",
+            "lora_1_strength": 0.9,
+            "lora_1_model_strength": 0.9,
+            "lora_1_clip_strength": 0.9,
+            "lora_2_name": "style_91_4000.safetensors",
+            "lora_2_strength": 0.85,
+            "lora_2_model_strength": 0.85,
+            "lora_2_clip_strength": 0.85,
             "lora_3_name": "None",
             "lora_3_strength": 1,
             "lora_3_model_strength": 1,
@@ -281,13 +281,13 @@
       },
       "model_urls": [
         {
-          "id": "style_2_vV2.safetensors",
-          "url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/actor_maker_user/custom-styles-models/style_2_vV2.safetensors"
+          "id": "actor_6_V6.safetensors",
+          "url": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V6.safetensors"
         }
       ],
       "force_download": false
     }
   },
-  "styleId": "2",
+  "styleId": "91",
   "mode": "text-to-image"
 }

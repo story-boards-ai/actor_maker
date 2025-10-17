@@ -1,7 +1,7 @@
 {
-  "delayTime": 1557,
-  "executionTime": 5345,
-  "id": "sync-2c251f81-98a0-45db-ad48-9eb6bf7815a7-e1",
+  "delayTime": 19213,
+  "executionTime": 17700,
+  "id": "sync-92c876d4-8bc8-430f-a457-59b0f2c6059f-e1",
   "output": {
     "output": {
       "images": [
@@ -9,15 +9,15 @@
       ],
       "model_info": {
         "model_ids": [
-          "style_2_vV2.safetensors"
+          "actor_6_V6.safetensors"
         ],
         "model_paths": {
-          "style_2_vV2.safetensors": "/ComfyUI/models/loras/style_2_vV2.safetensors"
+          "actor_6_V6.safetensors": "/ComfyUI/models/loras/actor_6_V6.safetensors"
         }
       }
     },
     "status": "success"
   },
   "status": "COMPLETED",
-  "workerId": "qoycvvyspx1gab"
+  "workerId": "8ljepk8l8py4wm"
 }

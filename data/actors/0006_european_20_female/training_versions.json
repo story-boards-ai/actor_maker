@@ -19,7 +19,7 @@
       },
       "status": "completed",
       "imageCount": 21,
-      "loraUrl": "https://s3-accelerate.amazonaws.com/storyboard-user-files/actor_maker_user/custom-actors/models/actor_6_V6.safetensors"
+      "loraUrl": "https://storyboard-user-files.s3-accelerate.amazonaws.com/actor_maker_user/custom-actors/models/actor_6_V6.safetensors"
     },
     {
       "id": "cd7d6654-c0f1-47c8-85a6-64152f1f95db-e1",

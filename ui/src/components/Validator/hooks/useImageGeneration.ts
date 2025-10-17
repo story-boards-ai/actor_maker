@@ -146,67 +146,37 @@ export function useImageGeneration(props: UseImageGenerationProps) {
         `Settings: ${steps} steps, denoise ${denoise}, guidance ${guidance}, ${width}x${height}`
       );
 
-      // Extract LoRA filename from URL
+      // Extract LoRA filename from trained model URL
       const loraFilename = trainedModel.loraUrl.split('/').pop() || 'trained_model.safetensors';
       
-      // Calculate character LoRA strength multipliers based on count (MUST BE BEFORE USAGE)
-      const getCharacterLoraStrengthMultiplier = (count: number): number => {
-        if (count <= 0) return 1.0;
-        if (count === 1) return 0.85;
-        if (count === 2) return 0.75;
-        return 0.65; // 3+ characters
-      };
+      // Build LoRA stack: trained actor model first (slot 1), then style LoRA (slot 2)
+      let loraSlotIndex = 1;
 
-      const getCineLoraStrengthMultiplier = (count: number): number => {
-        if (count <= 0) return 1.0;
-        if (count === 1) return 0.95;
-        if (count === 2) return 0.85;
-        return 0.75; // 3+ characters
-      };
-
-      const characterCount = selectedCharacters.length;
-      const charLoraMultiplier = getCharacterLoraStrengthMultiplier(characterCount);
-      const cineLoraMultiplier = getCineLoraStrengthMultiplier(characterCount);
-      const adjustedCharacterLoraWeight = characterLoraWeight * charLoraMultiplier;
-      const adjustedCineLoraWeight = cineLoraWeight * cineLoraMultiplier;
-      
-      // Inject trained LoRA into LoRA stack (slot 1) and clear unused slots
-      workflowTemplate.workflow["43"].inputs.num_loras = 1;
+      // Slot 1: Add trained actor model LoRA
       workflowTemplate.workflow["43"].inputs.lora_1_name = loraFilename;
-      workflowTemplate.workflow["43"].inputs.lora_1_strength = loraWeight;
-      workflowTemplate.workflow["43"].inputs.lora_1_model_strength = loraWeight;
-      workflowTemplate.workflow["43"].inputs.lora_1_clip_strength = loraWeight;
-      
-      // Build LoRA stack: style LoRA (slot 1) + character LoRAs + camera LoRA
-      let loraSlotIndex = 2; // Start from slot 2 (slot 1 is style LoRA)
-      const characterLoraNames: string[] = [];
+      workflowTemplate.workflow["43"].inputs.lora_1_strength = characterLoraWeight;
+      workflowTemplate.workflow["43"].inputs.lora_1_model_strength = characterLoraWeight;
+      workflowTemplate.workflow["43"].inputs.lora_1_clip_strength = characterLoraWeight;
+      addLog(`  - Slot 1: Trained actor model ${loraFilename} (strength: ${characterLoraWeight})`);
+      loraSlotIndex++;
 
-      // Add character LoRAs to stack
-      if (selectedCharacters.length > 0) {
-        for (const character of selectedCharacters) {
-          if (loraSlotIndex > 10) {
-            addLog(`⚠️ Warning: Maximum 10 LoRA slots. Skipping remaining characters.`);
-            break;
-          }
-          const loraName = `${character.id}.safetensors`;
-          characterLoraNames.push(loraName);
-          workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_name`] = loraName;
-          workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_strength`] = adjustedCharacterLoraWeight;
-          workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_model_strength`] = adjustedCharacterLoraWeight;
-          workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_clip_strength`] = adjustedCharacterLoraWeight;
-          addLog(`  - Slot ${loraSlotIndex}: ${character.name} (${adjustedCharacterLoraWeight.toFixed(2)})`);
-          loraSlotIndex++;
-        }
-      }
+      // Slot 2: Add style LoRA (pre-loaded on RunPod, use lora_file from styles registry)
+      const styleLoraName = styleData.lora_file || `${styleData.lora_name}.safetensors`;
+      workflowTemplate.workflow["43"].inputs.lora_2_name = styleLoraName;
+      workflowTemplate.workflow["43"].inputs.lora_2_strength = loraWeight;
+      workflowTemplate.workflow["43"].inputs.lora_2_model_strength = loraWeight;
+      workflowTemplate.workflow["43"].inputs.lora_2_clip_strength = loraWeight;
+      addLog(`  - Slot 2: Style LoRA ${styleLoraName} (strength: ${loraWeight})`);
+      loraSlotIndex++;
 
       // Add camera LoRA if enabled
       if (useCameraLora && loraSlotIndex <= 10) {
         const cameraLoraName = "FILM-V3-FLUX.safetensors";
         workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_name`] = cameraLoraName;
-        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_strength`] = adjustedCineLoraWeight;
-        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_model_strength`] = adjustedCineLoraWeight;
-        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_clip_strength`] = adjustedCineLoraWeight;
-        addLog(`  - Slot ${loraSlotIndex}: Camera LoRA (${adjustedCineLoraWeight.toFixed(2)})`);
+        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_strength`] = cineLoraWeight;
+        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_model_strength`] = cineLoraWeight;
+        workflowTemplate.workflow["43"].inputs[`lora_${loraSlotIndex}_clip_strength`] = cineLoraWeight;
+        addLog(`  - Slot ${loraSlotIndex}: Camera LoRA (strength: ${cineLoraWeight})`);
         loraSlotIndex++;
       }
 
@@ -221,25 +191,10 @@ export function useImageGeneration(props: UseImageGenerationProps) {
         workflowTemplate.workflow["43"].inputs[`lora_${i}_clip_strength`] = 1;
       }
       
-      addLog(`Injected trained LoRA: ${loraFilename}`);
-      addLog(`  - Model strength: ${loraWeight}`);
-      addLog(`  - CLIP strength: ${loraWeight}`);
-      addLog(`  - LoRA URL: ${trainedModel.loraUrl}`);
-
-      // Log strength adjustments
-      if (characterCount > 0) {
-        addLog(`Character LoRAs: ${characterCount} selected`);
-        addLog(`  - Base strength: ${characterLoraWeight}`);
-        addLog(`  - Multiplier: ${charLoraMultiplier}`);
-        addLog(`  - Adjusted strength: ${adjustedCharacterLoraWeight.toFixed(2)}`);
-      }
-
-      if (useCameraLora) {
-        addLog(`Camera LoRA: FILM-V3-FLUX`);
-        addLog(`  - Base strength: ${cineLoraWeight}`);
-        addLog(`  - Multiplier: ${cineLoraMultiplier}`);
-        addLog(`  - Adjusted strength: ${adjustedCineLoraWeight.toFixed(2)}`);
-      }
+      addLog(`LoRA Stack configured: ${loraSlotIndex - 1} total LoRAs`);
+      addLog(`  - Trained actor model: ${loraFilename}`);
+      addLog(`  - Style LoRA: ${styleLoraName}`);
+      addLog(`  - Camera LoRA: ${useCameraLora ? 'enabled' : 'disabled'}`);
 
       // Process prompt with character tokens
       let baseDescription = prompt;
@@ -327,28 +282,17 @@ export function useImageGeneration(props: UseImageGenerationProps) {
 
       setFullPrompt(finalPrompt);
 
-      // Add all LoRAs to model_urls for download
+      // Add ONLY trained actor model to model_urls for download
+      // Style LoRAs and Camera LoRA are pre-loaded on RunPod container
+      // System actor LoRAs are not used in the stack, so no need to download
       const model_urls: Array<{ id: string; url: string }> = [
         {
           id: loraFilename,
           url: trainedModel.loraUrl
         }
       ];
-      addLog(`Added trained LoRA to model_urls: ${loraFilename}`);
-
-      // Add character LoRAs to model_urls
-      for (const character of selectedCharacters) {
-        if (character.loraUrl) {
-          const charLoraFilename = `${character.id}.safetensors`;
-          model_urls.push({
-            id: charLoraFilename,
-            url: character.loraUrl
-          });
-          addLog(`Added character LoRA to model_urls: ${character.name}`);
-        }
-      }
-
-      // Note: Camera LoRA (FILM-V3-FLUX) is assumed to already exist on the worker
+      addLog(`Added trained actor model to model_urls: ${loraFilename}`);
+      addLog(`model_urls: 1 LoRA to download (trained actor model only)`);
 
       const payload = {
         input: {
