@@ -1,0 +1,50 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    }
+  ],
+  "counts": {
+    "photorealistic": 2,
+    "bw_stylized": 0,
+    "color_stylized": 0
+  },
+  "recommendations": {
+    "delete_photorealistic": [],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 0,
+    "generate_bw_stylized": 4,
+    "generate_color_stylized": 3
+  },
+  "analysis": "Currently, there are too few images in the black and white stylized and color stylized categories. To meet the target distribution, we need to generate additional images for both categories.",
+  "total_images": 2,
+  "photorealistic_count": 2,
+  "bw_stylized_count": 0,
+  "color_stylized_count": 0,
+  "photorealistic_percentage": 100.0,
+  "bw_stylized_percentage": 0.0,
+  "color_stylized_percentage": 0.0,
+  "is_balanced": false,
+  "images_to_delete": [],
+  "images_to_generate": [
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are too few images in the black and white stylized and color stylized categories. To meet the target distribution, we need to generate additional images for both categories.",
+  "actor_id": "0003_european_20_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

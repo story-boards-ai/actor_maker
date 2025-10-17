@@ -1,0 +1,128 @@
+{
+  "actor_id": "0034_european_10_female",
+  "created_at": "2025-10-17T14:39:29.717046",
+  "updated_at": "2025-10-17T14:39:29.717046",
+  "total_images": 12,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:39:29.717047",
+      "image_count": 12,
+      "metadata": {
+        "source": "migrated_from_response",
+        "original_file": "response.json"
+      }
+    }
+  ],
+  "images": {
+    "0034_european_10_female_2.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717010",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_2.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_3.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717015",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_3.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_4.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717018",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_4.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_5.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717021",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_5.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_6.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717024",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_6.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_7.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717027",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_7.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_8.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717030",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_8.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_9.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717033",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_9.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_10.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717036",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_10.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_11.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717039",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_11.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_12.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717042",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_12.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0034_european_10_female_13.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.717045",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_13.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

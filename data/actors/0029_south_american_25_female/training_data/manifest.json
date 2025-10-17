@@ -1,0 +1,74 @@
+{
+  "actor_id": "0029_south_american_25_female",
+  "created_at": "2025-10-17T14:39:29.716291",
+  "updated_at": "2025-10-17T14:39:29.716292",
+  "total_images": 6,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:39:29.716292",
+      "image_count": 6,
+      "metadata": {
+        "source": "migrated_from_response",
+        "original_file": "response.json"
+      }
+    }
+  ],
+  "images": {
+    "0029_south_american_25_female_3.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716274",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_3.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0029_south_american_25_female_6.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716278",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_6.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0029_south_american_25_female_7.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716281",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_7.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0029_south_american_25_female_8.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716284",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_8.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0029_south_american_25_female_10.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716287",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_10.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0029_south_american_25_female_12.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.716290",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0029_south_american_25_female/training_data/0029_south_american_25_female_12.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

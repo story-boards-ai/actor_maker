@@ -1,0 +1,119 @@
+{
+  "actor_id": "0161_black_22_female",
+  "created_at": "2025-10-17T14:39:29.735550",
+  "updated_at": "2025-10-17T14:39:29.735550",
+  "total_images": 11,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:39:29.735551",
+      "image_count": 11,
+      "metadata": {
+        "source": "migrated_from_response",
+        "original_file": "response.json"
+      }
+    }
+  ],
+  "images": {
+    "0161_black_22_female_2.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735518",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_2.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_3.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735523",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_3.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_4.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735526",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_4.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_5.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735529",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_5.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_6.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735532",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_6.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_7.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735534",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_7.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_8.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735537",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_8.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_10.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735540",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_10.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_11.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735543",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_11.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_12.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735546",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_12.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0161_black_22_female_13.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.735549",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0161_black_22_female/training_data/0161_black_22_female_13.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "actor_id": "0148_indian_24_male",
+  "created_at": "2025-10-17T14:39:29.732890",
+  "updated_at": "2025-10-17T14:39:29.732891",
+  "total_images": 3,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:39:29.732892",
+      "image_count": 3,
+      "metadata": {
+        "source": "migrated_from_response",
+        "original_file": "response.json"
+      }
+    }
+  ],
+  "images": {
+    "0148_indian_24_male_9.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.732882",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_9.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0148_indian_24_male_12.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.732886",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_12.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0148_indian_24_male_13.png": {
+      "prompt": "",
+      "prompt_preview": "",
+      "generated_at": "2025-10-17T14:39:29.732890",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0148_indian_24_male/training_data/0148_indian_24_male_13.png",
+      "index": 0,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

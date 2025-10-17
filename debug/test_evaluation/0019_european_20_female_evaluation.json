@@ -1,0 +1,86 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    }
+  ],
+  "counts": {
+    "photorealistic": 7,
+    "bw_stylized": 0,
+    "color_stylized": 0
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      7
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 6,
+    "generate_bw_stylized": 4,
+    "generate_color_stylized": 3
+  },
+  "analysis": "Currently, there are too many photorealistic images, exceeding the target distribution. The quality of image 7 is low, warranting deletion. There are no black and white or color stylized images, necessitating the generation of additional images in those categories to meet the target distribution.",
+  "total_images": 7,
+  "photorealistic_count": 7,
+  "bw_stylized_count": 0,
+  "color_stylized_count": 0,
+  "photorealistic_percentage": 100.0,
+  "bw_stylized_percentage": 0.0,
+  "color_stylized_percentage": 0.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 6
+    },
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images, exceeding the target distribution. The quality of image 7 is low, warranting deletion. There are no black and white or color stylized images, necessitating the generation of additional images in those categories to meet the target distribution.",
+  "actor_id": "0019_european_20_female",
+  "composite_image": "debug/test_evaluation/current_composite.jpg"
+}

@@ -1,0 +1,128 @@
+{
+  "actor_id": "0007_european_55_male",
+  "created_at": "2025-10-17T14:30:14.005675",
+  "updated_at": "2025-10-17T14:30:14.005678",
+  "total_images": 12,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:30:14.005679",
+      "image_count": 12,
+      "metadata": {
+        "source": "migrated_from_prompt_metadata",
+        "original_file": "prompt_metadata.json"
+      }
+    }
+  ],
+  "images": {
+    "0007_european_55_male_1.jpg": {
+      "prompt": "The character runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Three-quarter back angle. Reflections on the asphalt, no other figures in frame.",
+      "prompt_preview": "The character runs across a rain-slick street at night, mid-stride, lit by car headlights from the s...",
+      "generated_at": "2025-10-16T11:38:48.493761",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_1.jpg",
+      "index": 1,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_2.jpg": {
+      "prompt": "A close-up of the character's face bathed in soft orange window light, jaw clenched, looking intently off-frame to the left. The camera is slightly below eye level. Preserve all defining details such as hairstyle, makeup, scars, or headgear if present. Background softly blurred.",
+      "prompt_preview": "A close-up of the character's face bathed in soft orange window light, jaw clenched, looking intentl...",
+      "generated_at": "2025-10-16T11:38:58.568087",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_2.jpg",
+      "index": 2,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_3.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the character tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the character tying their bootlaces on a townhouse sto...",
+      "generated_at": "2025-10-16T11:39:09.112294",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_3.jpg",
+      "index": 3,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_4.jpg": {
+      "prompt": "A graphite pencil sketch of the character seated by a train window at dawn, looking out with a reflective expression. Medium close-up from slightly below eye level. Soft hatching and blending, visible pencil grain, no color. Preserve facial structure and hairstyle. Illustration, not photorealistic.",
+      "prompt_preview": "A graphite pencil sketch of the character seated by a train window at dawn, looking out with a refle...",
+      "generated_at": "2025-10-16T11:39:17.628162",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_4.jpg",
+      "index": 4,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_5.jpg": {
+      "prompt": "A charcoal drawing of the character bracing a shoulder against a half-rolled warehouse door, dust in the air. Three-quarter view, dramatic top light, rough strokes and smudged shadows, no color. Preserve identity cues. Illustration, not photorealistic.",
+      "prompt_preview": "A charcoal drawing of the character bracing a shoulder against a half-rolled warehouse door, dust in...",
+      "generated_at": "2025-10-16T11:39:26.369482",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_5.jpg",
+      "index": 5,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_6.jpg": {
+      "prompt": "A black-and-white woodcut print style image of the character sprinting down a narrow alley, angular highlights and carved textures. Profile mid shot, strong diagonal composition, thick black shapes and white cuts, no halftones. Preserve recognizable features. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white woodcut print style image of the character sprinting down a narrow alley, angular ...",
+      "generated_at": "2025-10-16T11:39:34.832930",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_6.jpg",
+      "index": 6,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_7.jpg": {
+      "prompt": "A monochrome flat vector illustration of character in the style of a detailed hand-drawn concept sketch, with clean, confident lines, subtle hatching, and balanced proportions. Minimal geometric shapes, hard edges, no gradients, single black ink on white background. Poster-like framing. Preserve silhouette and key features.",
+      "prompt_preview": "A monochrome flat vector illustration of character in the style of a detailed hand-drawn concept ske...",
+      "generated_at": "2025-10-16T11:39:43.846552",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_7.jpg",
+      "index": 7,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_8.jpg": {
+      "prompt": "A black-and-white manga illustration of the character making a tense phone call in an alley. Half-body shot, three-quarter angle, expressive inking with screentone patterns for shading, speed lines in background. No grayscale gradients, no color. Preserve identity. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white manga illustration of the character making a tense phone call in an alley. Half-bo...",
+      "generated_at": "2025-10-16T11:39:53.540115",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_8.jpg",
+      "index": 8,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_9.jpg": {
+      "prompt": "A dynamic comic book illustration of the character leaping a narrow rooftop gap at night with a city skyline behind. Low angle, foreshortened limbs, speed lines, bold inks, cel-shaded color, limited palette with halftone dots. Preserve identity and key attributes. Illustration style, not photorealistic.",
+      "prompt_preview": "A dynamic comic book illustration of the character leaping a narrow rooftop gap at night with a city...",
+      "generated_at": "2025-10-16T11:40:03.775515",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_9.jpg",
+      "index": 9,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_10.jpg": {
+      "prompt": "A flat vector illustration of the character waiting on a metro platform, holding a small duffel, looking left as a train approaches. Medium profile shot with long geometric shadows, flat colors, simple shapes, crisp outlines, poster-like composition. Preserve recognizable features. Not photorealistic.",
+      "prompt_preview": "A flat vector illustration of the character waiting on a metro platform, holding a small duffel, loo...",
+      "generated_at": "2025-10-16T11:40:12.056133",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_10.jpg",
+      "index": 10,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_11.jpg": {
+      "prompt": "A watercolor illustration of the character seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug. Three-quarter view, soft backlight from the window, warm interior tones against cool exterior. Paper texture visible, gentle bleeding, hand-painted look. Preserve identity. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor illustration of the character seated alone in a diner booth by a rain-streaked window a...",
+      "generated_at": "2025-10-16T11:40:20.671869",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_11.jpg",
+      "index": 11,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0007_european_55_male_12.jpg": {
+      "prompt": "A gouache painting of the character ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.",
+      "prompt_preview": "A gouache painting of the character ascending a concrete stairwell, caught mid-step. Low angle, chun...",
+      "generated_at": "2025-10-16T11:40:29.297500",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_12.jpg",
+      "index": 12,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

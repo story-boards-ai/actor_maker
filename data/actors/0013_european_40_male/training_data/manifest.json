@@ -1,0 +1,65 @@
+{
+  "actor_id": "0013_european_40_male",
+  "created_at": "2025-10-17T14:30:14.007350",
+  "updated_at": "2025-10-17T14:30:14.007355",
+  "total_images": 5,
+  "generations": [
+    {
+      "generation_id": 1,
+      "type": "existing",
+      "generated_at": "2025-10-17T14:30:14.007356",
+      "image_count": 5,
+      "metadata": {
+        "source": "migrated_from_prompt_metadata",
+        "original_file": "prompt_metadata.json"
+      }
+    }
+  ],
+  "images": {
+    "0013_european_40_male_14.jpg": {
+      "prompt": "A graphite pencil sketch of the man seated by a train window at dawn, eyes gazing out at the passing landscape. Soft hatching and blending, visible pencil grain. Illustration, not photorealistic.",
+      "prompt_preview": "A graphite pencil sketch of the man seated by a train window at dawn, eyes gazing out at the passing...",
+      "generated_at": "2025-10-16T15:36:11.595549",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_14.jpg",
+      "index": 14,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0013_european_40_male_15.jpg": {
+      "prompt": "A black-and-white woodcut print of the man sprinting down a narrow alley. Angular highlights and carved textures, thick black shapes and white cuts. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white woodcut print of the man sprinting down a narrow alley. Angular highlights and car...",
+      "generated_at": "2025-10-16T15:36:20.202334",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_15.jpg",
+      "index": 15,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0013_european_40_male_16.jpg": {
+      "prompt": "A monochrome flat vector illustration of man in detailed hand-drawn concept sketch style. Clean lines, subtle hatching, minimal geometric shapes, hard edges. Illustration, not photorealistic.",
+      "prompt_preview": "A monochrome flat vector illustration of man in detailed hand-drawn concept sketch style. Clean line...",
+      "generated_at": "2025-10-16T15:36:29.327884",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_16.jpg",
+      "index": 16,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0013_european_40_male_17.jpg": {
+      "prompt": "A flat vector illustration of the man waiting on a metro platform, holding a small duffel. Long geometric shadows, flat colors, simple shapes, crisp outlines, poster-like. Not photorealistic.",
+      "prompt_preview": "A flat vector illustration of the man waiting on a metro platform, holding a small duffel. Long geom...",
+      "generated_at": "2025-10-16T15:36:37.094497",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_17.jpg",
+      "index": 17,
+      "generation_id": 1,
+      "generation_type": "existing"
+    },
+    "0013_european_40_male_18.jpg": {
+      "prompt": "A watercolor illustration of the man seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug. Paper texture visible, gentle bleeding. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor illustration of the man seated alone in a diner booth by a rain-streaked window at dusk...",
+      "generated_at": "2025-10-16T15:36:44.866613",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_18.jpg",
+      "index": 18,
+      "generation_id": 1,
+      "generation_type": "existing"
+    }
+  }
+}

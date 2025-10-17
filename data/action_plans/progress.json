@@ -1,0 +1,28 @@
+{
+  "started_at": "2025-10-17T14:57:44.710188",
+  "last_updated": "2025-10-17T14:58:13.145067",
+  "total_count": 107,
+  "completed_count": 0,
+  "failed_count": 3,
+  "skipped_count": 0,
+  "completed_actors": [],
+  "failed_actors": [
+    {
+      "actor_id": "0000_european_16_male",
+      "error": "'current_distribution'",
+      "timestamp": "2025-10-17T14:57:55.799230"
+    },
+    {
+      "actor_id": "0001_european_20_female",
+      "error": "'current_distribution'",
+      "timestamp": "2025-10-17T14:58:08.102180"
+    },
+    {
+      "actor_id": "0003_european_20_female",
+      "error": "'current_distribution'",
+      "timestamp": "2025-10-17T14:58:13.144874"
+    }
+  ],
+  "skipped_actors": [],
+  "current_actor": "0004_european_35_male"
+}

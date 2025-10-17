@@ -137,8 +137,41 @@ class TrainingDataManifest:
         self.add_generation(image_dict, generation_type="existing", metadata={"source": source})
     
     def get_all_images(self) -> Dict[str, Any]:
-        """Get all training images for this actor."""
-        return self.manifest["images"]
+        """
+        Get all training images for this actor.
+        Returns images from filesystem (like UI does), not just manifest.
+        """
+        # Get images from filesystem (same as UI)
+        images_dict = {}
+        
+        if self.actor_dir.exists():
+            # Find all image files
+            for img_file in self.actor_dir.iterdir():
+                if (img_file.is_file() and 
+                    img_file.suffix.lower() in ['.png', '.jpg', '.jpeg'] and
+                    'response' not in img_file.name and
+                    'request' not in img_file.name and
+                    'metadata' not in img_file.name):
+                    
+                    filename = img_file.name
+                    
+                    # Try to get metadata from manifest if it exists
+                    manifest_data = self.manifest["images"].get(filename, {})
+                    
+                    # Build image data
+                    images_dict[filename] = {
+                        "filename": filename,
+                        "local_path": str(img_file),
+                        "s3_url": manifest_data.get("s3_url", ""),
+                        "prompt": manifest_data.get("prompt", ""),
+                        "prompt_preview": manifest_data.get("prompt_preview", ""),
+                        "generated_at": manifest_data.get("generated_at", ""),
+                        "index": manifest_data.get("index", 0),
+                        "generation_id": manifest_data.get("generation_id", 0),
+                        "generation_type": manifest_data.get("generation_type", "unknown")
+                    }
+        
+        return images_dict
     
     def get_image_urls(self) -> List[str]:
         """Get list of all S3 URLs."""
@@ -220,13 +253,63 @@ class TrainingDataManifest:
     def list_all_actors(cls, manifest_dir: str = "data/actors") -> List[str]:
         """
         List all actors with training data.
+        Uses actorsData.json and checks for actual image files, matching UI behavior.
         
         Args:
             manifest_dir: Base directory for actor data
             
         Returns:
-            List of actor IDs
+            List of actor IDs (actor names)
         """
+        import json
+        
+        # Read actorsData.json (same as UI does)
+        actors_data_path = Path("data/actorsData.json")
+        if not actors_data_path.exists():
+            logger.warning("actorsData.json not found, falling back to directory scan")
+            return cls._list_actors_from_directories(manifest_dir)
+        
+        try:
+            actors_data = json.loads(actors_data_path.read_text())
+        except Exception as e:
+            logger.error(f"Failed to read actorsData.json: {e}")
+            return cls._list_actors_from_directories(manifest_dir)
+        
+        # Check each actor for training images (same logic as UI)
+        actors_with_training = []
+        base_dir = Path(manifest_dir)
+        
+        for actor in actors_data:
+            actor_name = actor.get("name")
+            if not actor_name:
+                continue
+            
+            training_data_dir = base_dir / actor_name / "training_data"
+            
+            if training_data_dir.exists():
+                # Count image files (same as UI: png, jpg, jpeg, excluding metadata)
+                try:
+                    image_files = [
+                        f for f in training_data_dir.iterdir()
+                        if f.is_file() and 
+                        f.suffix.lower() in ['.png', '.jpg', '.jpeg'] and
+                        'response' not in f.name and
+                        'request' not in f.name and
+                        'metadata' not in f.name
+                    ]
+                    
+                    if len(image_files) > 0:
+                        actors_with_training.append(actor_name)
+                        logger.debug(f"Found {len(image_files)} training images for {actor_name}")
+                except Exception as e:
+                    logger.error(f"Error checking training data for {actor_name}: {e}")
+        
+        logger.info(f"Found {len(actors_with_training)} actors with training data")
+        return sorted(actors_with_training)
+    
+    @classmethod
+    def _list_actors_from_directories(cls, manifest_dir: str) -> List[str]:
+        """Fallback method to list actors by scanning directories."""
         base_dir = Path(manifest_dir)
         if not base_dir.exists():
             return []
@@ -234,8 +317,13 @@ class TrainingDataManifest:
         actors = []
         for actor_dir in base_dir.iterdir():
             if actor_dir.is_dir():
-                manifest_file = actor_dir / "training_data" / "manifest.json"
-                if manifest_file.exists():
-                    actors.append(actor_dir.name)
+                training_data_dir = actor_dir / "training_data"
+                if training_data_dir.exists():
+                    # Check for image files
+                    image_files = list(training_data_dir.glob("*.png")) + \
+                                  list(training_data_dir.glob("*.jpg")) + \
+                                  list(training_data_dir.glob("*.jpeg"))
+                    if len(image_files) > 0:
+                        actors.append(actor_dir.name)
         
         return sorted(actors)

@@ -1,0 +1,173 @@
+{
+  "started_at": "2025-10-17T14:31:57.573045",
+  "last_updated": "2025-10-17T14:32:05.828144",
+  "total_count": 16,
+  "completed_count": 0,
+  "failed_count": 32,
+  "skipped_count": 0,
+  "completed_actors": [],
+  "failed_actors": [
+    {
+      "actor_id": "0000_european_16_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.573777"
+    },
+    {
+      "actor_id": "0001_european_20_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.577353"
+    },
+    {
+      "actor_id": "0002_european_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.578168"
+    },
+    {
+      "actor_id": "0004_european_35_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.578726"
+    },
+    {
+      "actor_id": "0005_european_50_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.579128"
+    },
+    {
+      "actor_id": "0006_european_20_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.579563"
+    },
+    {
+      "actor_id": "0007_european_55_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.580306"
+    },
+    {
+      "actor_id": "0008_european_60_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.580753"
+    },
+    {
+      "actor_id": "0009_european_65_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.581259"
+    },
+    {
+      "actor_id": "0010_european_25_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.582220"
+    },
+    {
+      "actor_id": "0011_european_16_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.582886"
+    },
+    {
+      "actor_id": "0012_european_30_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.583512"
+    },
+    {
+      "actor_id": "0013_european_40_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.584185"
+    },
+    {
+      "actor_id": "0015_black_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.584614"
+    },
+    {
+      "actor_id": "0055_european_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.585107"
+    },
+    {
+      "actor_id": "0128_asian_21_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:31:57.585569"
+    },
+    {
+      "actor_id": "0000_european_16_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.819346"
+    },
+    {
+      "actor_id": "0001_european_20_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.819908"
+    },
+    {
+      "actor_id": "0002_european_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.820403"
+    },
+    {
+      "actor_id": "0004_european_35_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.820863"
+    },
+    {
+      "actor_id": "0005_european_50_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.821436"
+    },
+    {
+      "actor_id": "0006_european_20_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.822008"
+    },
+    {
+      "actor_id": "0007_european_55_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.822457"
+    },
+    {
+      "actor_id": "0008_european_60_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.822862"
+    },
+    {
+      "actor_id": "0009_european_65_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.823293"
+    },
+    {
+      "actor_id": "0010_european_25_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.823808"
+    },
+    {
+      "actor_id": "0011_european_16_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.824281"
+    },
+    {
+      "actor_id": "0012_european_30_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.824834"
+    },
+    {
+      "actor_id": "0013_european_40_male",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.825956"
+    },
+    {
+      "actor_id": "0015_black_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.826729"
+    },
+    {
+      "actor_id": "0055_european_35_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.827550"
+    },
+    {
+      "actor_id": "0128_asian_21_female",
+      "error": "OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass api_key to the constructor.",
+      "timestamp": "2025-10-17T14:32:05.828141"
+    }
+  ],
+  "skipped_actors": [],
+  "current_actor": null
+}

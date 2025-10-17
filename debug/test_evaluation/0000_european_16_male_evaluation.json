@@ -1,0 +1,108 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "color_stylized",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 9,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 6
+    }
+  ],
+  "counts": {
+    "photorealistic": 8,
+    "bw_stylized": 4,
+    "color_stylized": 3
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      5
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 0,
+    "generate_bw_stylized": 0,
+    "generate_color_stylized": 1
+  },
+  "analysis": "Currently, there are 8 photorealistic images, which exceeds the target of 65%. One image (number 5) should be deleted to balance the distribution. The counts for black and white stylized images are on target, while color stylized images are slightly below the desired count. One additional color stylized image should be generated to meet the target.",
+  "total_images": 15,
+  "photorealistic_count": 8,
+  "bw_stylized_count": 4,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 53.333333333333336,
+  "bw_stylized_percentage": 26.666666666666668,
+  "color_stylized_percentage": 20.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are 8 photorealistic images, which exceeds the target of 65%. One image (number 5) should be deleted to balance the distribution. The counts for black and white stylized images are on target, while color stylized images are slightly below the desired count. One additional color stylized image should be generated to meet the target.",
+  "actor_id": "0000_european_16_male",
+  "composite_image": "debug/test_evaluation/0000_european_16_male_composite.jpg"
+}
