@@ -429,3 +429,51 @@ def delete_s3_url(file_url: str) -> None:
     """
     client = S3Client()
     client.delete_file_by_url(file_url)
+
+
+def upload_image_to_s3(
+    image_base64: str,
+    user_id: str,
+    folder: str,
+    filename: str,
+    bucket: Optional[str] = None
+) -> str:
+    """
+    Upload a base64-encoded image to S3.
+    
+    Args:
+        image_base64: Base64-encoded image data
+        user_id: User ID for S3 path organization
+        folder: Folder path within user's directory
+        filename: Filename for the uploaded image
+        bucket: Optional bucket name (defaults to AWS_USER_FILES_BUCKET)
+    
+    Returns:
+        Full S3 URL of the uploaded image
+    """
+    # Decode base64 to bytes
+    image_bytes = base64.b64decode(image_base64)
+    
+    # Use default bucket if not specified
+    if bucket is None:
+        bucket = S3Config.AWS_USER_FILES_BUCKET
+    
+    # Construct S3 key
+    key = f"{user_id}/{folder}/{filename}"
+    
+    # Upload to S3
+    client = S3Client()
+    result = client.upload_file(
+        file_data=image_bytes,
+        bucket=bucket,
+        key=key,
+        content_type="image/jpeg"
+    )
+    
+    # Return full S3 URL
+    s3_url = result.get("url")
+    if not s3_url:
+        # Construct URL manually if not in result
+        s3_url = f"https://{bucket}.s3.{S3Config.AWS_REGION}.amazonaws.com/{key}"
+    
+    return s3_url

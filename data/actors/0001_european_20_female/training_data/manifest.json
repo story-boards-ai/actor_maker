@@ -1,8 +1,8 @@
 {
   "actor_id": "0001_european_20_female",
   "created_at": "2025-10-17T14:30:14.004172",
-  "updated_at": "2025-10-17T14:30:14.004177",
-  "total_images": 15,
+  "updated_at": "2025-10-17T18:04:43.774379",
+  "total_images": 17,
   "generations": [
     {
       "generation_id": 1,
@@ -13,18 +13,20 @@
         "source": "migrated_from_prompt_metadata",
         "original_file": "prompt_metadata.json"
       }
+    },
+    {
+      "generation_id": 2,
+      "type": "balancer_replicate",
+      "generated_at": "2025-10-17T18:04:43.774372",
+      "image_count": 7,
+      "metadata": {
+        "actor_type": "human",
+        "actor_sex": null,
+        "balancer_run": "2025-10-17T18:04:43.774368"
+      }
     }
   ],
   "images": {
-    "0001_european_20_female_15.jpg": {
-      "prompt": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-quarter profile, shallow depth of field, no other figures visible.",
-      "prompt_preview": "Close-up of the woman looking out a rain-streaked window, warm interior light from the side. Three-q...",
-      "generated_at": "2025-10-16T11:53:01.456489",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_15.jpg",
-      "index": 15,
-      "generation_id": 1,
-      "generation_type": "existing"
-    },
     "0001_european_20_female_16.jpg": {
       "prompt": "A gouache painting of the woman ascending a concrete stairwell, caught mid-step. Low angle, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Illustration, not photorealistic.",
       "prompt_preview": "A gouache painting of the woman ascending a concrete stairwell, caught mid-step. Low angle, chunky b...",
@@ -61,15 +63,6 @@
       "generation_id": 1,
       "generation_type": "existing"
     },
-    "0001_european_20_female_20.jpg": {
-      "prompt": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop under a single streetlamp in light rain. Three-quarter side view, mid shot. High-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Illustration only, not photorealistic.",
-      "prompt_preview": "A black-and-white pen and ink line drawing of the woman tying their bootlaces on a townhouse stoop u...",
-      "generated_at": "2025-10-16T12:37:43.735617",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_20.jpg",
-      "index": 20,
-      "generation_id": 1,
-      "generation_type": "existing"
-    },
     "0001_european_20_female_21.jpg": {
       "prompt": "A black-and-white charcoal sketch of the woman glancing over their shoulder in a narrow alley. Loose, expressive strokes, smudged shadows, high contrast, no color. Preserve identity. Illustration, not photorealistic.",
       "prompt_preview": "A black-and-white charcoal sketch of the woman glancing over their shoulder in a narrow alley. Loose...",
@@ -88,39 +81,12 @@
       "generation_id": 1,
       "generation_type": "existing"
     },
-    "0001_european_20_female_23.jpg": {
-      "prompt": "A watercolor painting of the woman seated at a cafe window, looking out at a rainy street. Soft washes, wet-on-wet blending, visible brush strokes, muted palette. Preserve facial features. Illustration, not photorealistic.",
-      "prompt_preview": "A watercolor painting of the woman seated at a cafe window, looking out at a rainy street. Soft wash...",
-      "generated_at": "2025-10-16T12:45:38.070310",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_23.jpg",
-      "index": 23,
-      "generation_id": 1,
-      "generation_type": "existing"
-    },
-    "0001_european_20_female_24.jpg": {
-      "prompt": "The woman stands alone on a dimly lit subway platform at night, hands in pockets, looking down the tunnel. Side angle, fluorescent overhead lights casting harsh shadows. Urban grit, tiled walls, no eye contact with camera.",
-      "prompt_preview": "The woman stands alone on a dimly lit subway platform at night, hands in pockets, looking down the t...",
-      "generated_at": "2025-10-16T12:57:08.867250",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_24.jpg",
-      "index": 24,
-      "generation_id": 1,
-      "generation_type": "existing"
-    },
     "0001_european_20_female_25.jpg": {
       "prompt": "The woman walks through a concrete parking garage, footsteps echoing, lit by overhead strip lights. Back three-quarter view, medium shot. Cold blue-green lighting, pillars casting long shadows. Character moving away from camera.",
       "prompt_preview": "The woman walks through a concrete parking garage, footsteps echoing, lit by overhead strip lights. ...",
       "generated_at": "2025-10-16T12:57:18.769846",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_25.jpg",
       "index": 25,
-      "generation_id": 1,
-      "generation_type": "existing"
-    },
-    "0001_european_20_female_26.jpg": {
-      "prompt": "A black-and-white woodcut print of the woman climbing a fire escape at dusk. Bold angular cuts, stark black and white, no grayscale, heavy grain texture. Preserve key features. Illustration, not photorealistic.",
-      "prompt_preview": "A black-and-white woodcut print of the woman climbing a fire escape at dusk. Bold angular cuts, star...",
-      "generated_at": "2025-10-16T12:57:29.537909",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_26.jpg",
-      "index": 26,
       "generation_id": 1,
       "generation_type": "existing"
     },
@@ -150,6 +116,90 @@
       "index": 29,
       "generation_id": 1,
       "generation_type": "existing"
+    },
+    "0001_european_20_female_30.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of the person tying their bootlaces on a townhouse stoop under a single streetlamp in light rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of the person tying their bootlaces on a townhouse stoop ...",
+      "generated_at": "2025-10-17T18:03:47.932915",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_30.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_30.jpg",
+      "index": 30,
+      "type": "bw_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_31.jpg": {
+      "prompt": "A black-and-white ink wash drawing of the person pushing through a crowded marketplace, arm extended forward parting the crowd, eyes focused downward on the path ahead. High angle wide shot from above at a diagonal, frontal three-quarter angle, face visible but looking down and to the side. Off-center framing with character small in busy scene, loose gestural brushwork with varying ink densities, atmospheric crowd silhouettes in background. Preserve facial features. Candid action, no eye contact. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white ink wash drawing of the person pushing through a crowded marketplace, arm extended...",
+      "generated_at": "2025-10-17T18:03:58.131644",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_31.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_31.jpg",
+      "index": 31,
+      "type": "bw_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_32.jpg": {
+      "prompt": "A charcoal drawing of the person bracing a shoulder against a half-rolled warehouse door, dust in the air, eyes focused on the effort, head turned to the side. Low angle shot from ground level at a diagonal, three-quarter view, face looking away from viewer, dramatic top light. Off-center framing with door creating strong diagonal, rough strokes and smudged shadows, no color. Preserve identity cues. Candid action pose, no camera awareness. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A charcoal drawing of the person bracing a shoulder against a half-rolled warehouse door, dust in th...",
+      "generated_at": "2025-10-17T18:04:08.923606",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_32.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_32.jpg",
+      "index": 32,
+      "type": "bw_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_33.jpg": {
+      "prompt": "A monochrome flat vector illustration of person in the style of a detailed hand-drawn concept sketch, with clean, confident lines, subtle hatching, and balanced proportions. Extreme low angle looking upward, head turned to the side in profile or three-quarter view, eyes looking away from viewer. Off-center composition with negative space, minimal geometric shapes, hard edges, no gradients, single black ink on white background. Poster-like framing. Preserve silhouette and key features. Candid pose, no eye contact. Asymmetric framing, not centered.",
+      "prompt_preview": "A monochrome flat vector illustration of person in the style of a detailed hand-drawn concept sketch...",
+      "generated_at": "2025-10-17T18:04:17.978565",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_33.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_33.jpg",
+      "index": 33,
+      "type": "bw_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_34.jpg": {
+      "prompt": "A soft pastel illustration of the person bending to collect debris on a windswept beach at sunset, hair blowing, eyes focused on the sand ahead. Ground level side angle from low position at a diagonal, full body view, face angled downward searching the beach. Off-center framing with beach stretching into distance, blended pastel colors, warm sunset palette with cool shadows, atmospheric coastal scene. Preserve identity cues. Candid environmental action, no camera awareness. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A soft pastel illustration of the person bending to collect debris on a windswept beach at sunset, h...",
+      "generated_at": "2025-10-17T18:04:26.154302",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_34.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_34.jpg",
+      "index": 34,
+      "type": "color_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_35.jpg": {
+      "prompt": "A gouache painting of the person ascending a concrete stairwell, caught mid-step, eyes focused upward on the stairs ahead, head angled away from viewer. Extreme low angle from bottom of stairs looking up at steep angle, face in profile or three-quarter view looking up the stairwell. Off-center framing with stairs creating strong diagonal, chunky brush strokes, matte opaque paint, simplified forms with saturated accents. Preserve facial features and hairstyle. Candid action moment, no camera contact. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A gouache painting of the person ascending a concrete stairwell, caught mid-step, eyes focused upwar...",
+      "generated_at": "2025-10-17T18:04:34.879208",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_35.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_35.jpg",
+      "index": 35,
+      "type": "color_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
+    },
+    "0001_european_20_female_36.jpg": {
+      "prompt": "A flat vector illustration of the person waiting on a metro platform, holding a small duffel, eyes looking left as a train approaches, head turned in profile away from viewer. Side angle shot from platform edge at a diagonal, medium profile shot with long geometric shadows, face directed toward the approaching train. Off-center composition with platform creating depth, flat colors, simple shapes, crisp outlines, poster-like composition. Preserve recognizable features. Candid waiting pose, no camera awareness. Asymmetric framing, not centered. Not photorealistic.",
+      "prompt_preview": "A flat vector illustration of the person waiting on a metro platform, holding a small duffel, eyes l...",
+      "generated_at": "2025-10-17T18:04:43.774041",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_36.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_36.jpg",
+      "index": 36,
+      "type": "color_stylized",
+      "generated_by": "balancer",
+      "generation_id": 2,
+      "generation_type": "balancer_replicate"
     }
   }
 }
