@@ -49,5 +49,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0284_european_14_female_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0284_european_14_female_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0284_european_14_female.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0284_european_14_female.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0284_european_14_female.safetensors",
+    "size_bytes": 216912184,
+    "size_mb": 206.86,
+    "md5_hash": "27dc618c2596c2812b92a4d0497e8d5e-26",
+    "last_modified": "2025-05-17T16:15:04+00:00",
+    "created_date": "2025-05-17",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:49.041003"
 }

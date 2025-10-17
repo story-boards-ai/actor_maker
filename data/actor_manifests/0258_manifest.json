@@ -49,5 +49,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0258_european_46_male_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0258_european_46_male_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0258_european_46_male.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0258_european_46_male.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0258_european_46_male.safetensors",
+    "size_bytes": 216880152,
+    "size_mb": 206.83,
+    "md5_hash": "8a4ce52af24375a536bf5de29c3f2458-26",
+    "last_modified": "2025-05-17T10:32:29+00:00",
+    "created_date": "2025-05-17",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:49.030609"
 }

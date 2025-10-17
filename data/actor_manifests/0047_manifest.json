@@ -150,5 +150,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0047_black_40_male_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0047_black_40_male_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0047_black_40_male.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0047_black_40_male.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0047_black_40_male.safetensors",
+    "size_bytes": 216883648,
+    "size_mb": 206.84,
+    "md5_hash": "7d0ff6171048eb2282c5d4aebdd3550d-26",
+    "last_modified": "2025-05-17T12:04:19+00:00",
+    "created_date": "2025-05-17",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:48.892100"
 }

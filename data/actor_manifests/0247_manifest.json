@@ -49,5 +49,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0247_black_87_female_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0247_black_87_female_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0247_black_87_female.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0247_black_87_female.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0247_black_87_female.safetensors",
+    "size_bytes": 216881216,
+    "size_mb": 206.83,
+    "md5_hash": "79d6f82e8361d84be96003c0ad434020-26",
+    "last_modified": "2025-05-17T14:55:13+00:00",
+    "created_date": "2025-05-17",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:49.026193"
 }

@@ -205,5 +205,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0075_south_american_30_female_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0075_south_american_30_female_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0075_south_american_30_female.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0075_south_american_30_female.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0075_south_american_30_female.safetensors",
+    "size_bytes": 216872648,
+    "size_mb": 206.83,
+    "md5_hash": "93153f84fd2d016e4569f65f7348c8c4-26",
+    "last_modified": "2025-05-16T00:15:35+00:00",
+    "created_date": "2025-05-16",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:48.910939"
 }

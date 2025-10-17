@@ -49,5 +49,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0265_south_american_43_male_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0265_south_american_43_male_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0265_south_american_43_male.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0265_south_american_43_male.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0265_south_american_43_male.safetensors",
+    "size_bytes": 216874016,
+    "size_mb": 206.83,
+    "md5_hash": "04a285212824f3a9cf5e17646c60a6d4-26",
+    "last_modified": "2025-05-20T09:17:28+00:00",
+    "created_date": "2025-05-20",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:49.033955"
 }

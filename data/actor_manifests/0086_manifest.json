@@ -205,5 +205,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0086_middle_eastern_50_male_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0086_middle_eastern_50_male_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0086_middle_eastern_50_male.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0086_middle_eastern_50_male.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0086_middle_eastern_50_male.safetensors",
+    "size_bytes": 216891176,
+    "size_mb": 206.84,
+    "md5_hash": "2d0526f1b99d96e8ca953b1e8e786afc-26",
+    "last_modified": "2025-05-16T01:06:56+00:00",
+    "created_date": "2025-05-16",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:48.916768"
 }

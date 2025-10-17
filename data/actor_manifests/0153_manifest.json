@@ -50,5 +50,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0153_indian_45_female_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0153_indian_45_female.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0153_indian_45_female.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0153_indian_45_female.safetensors",
+    "size_bytes": 216872696,
+    "size_mb": 206.83,
+    "md5_hash": "8eb019f053bfab52f5139bc5992f61b1-26",
+    "last_modified": "2025-05-16T05:03:22+00:00",
+    "created_date": "2025-05-16",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:48.990947"
 }

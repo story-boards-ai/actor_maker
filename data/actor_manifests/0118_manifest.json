@@ -117,5 +117,17 @@
       "webp_lg": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0118_asian_45_male_poster_lg.webp",
       "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0118_asian_45_male_poster.png"
     }
-  }
+  },
+  "lora_model": {
+    "filename": "0118_asian_45_male.safetensors",
+    "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/lora_models/0118_asian_45_male.safetensors",
+    "s3_accelerated_url": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/lora_models/0118_asian_45_male.safetensors",
+    "size_bytes": 216873872,
+    "size_mb": 206.83,
+    "md5_hash": "226be2eb6adfa8abe6f2c39266a8b7ba-26",
+    "last_modified": "2025-05-16T02:11:39+00:00",
+    "created_date": "2025-05-16",
+    "format": "safetensors"
+  },
+  "lora_model_updated": "2025-10-17T21:51:48.930258"
 }
