@@ -64,8 +64,8 @@ export function handleGetTrainingPrompts(
 
 /**
  * GET /api/actors/:actorId/training-data
- * Returns training data info from manifest (source of truth)
- * Shows local files, S3 URLs, and sync status
+ * S3-ONLY endpoint - Returns training data from manifest (S3 URLs only)
+ * No local files - S3 is the single source of truth
  */
 export function handleGetTrainingData(
   req: IncomingMessage,
@@ -83,39 +83,7 @@ export function handleGetTrainingData(
       return;
     }
 
-    // Load manifest - THIS IS THE SOURCE OF TRUTH
-    const manifestPath = path.join(
-      projectRoot,
-      'data',
-      'actor_manifests',
-      `${actorId.padStart(4, '0')}_manifest.json`
-    );
-    
-    if (!fs.existsSync(manifestPath)) {
-      res.statusCode = 404;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ 
-        error: 'Manifest not found',
-        message: 'Run sync_training_data_to_manifests.py to create manifest with training data'
-      }));
-      return;
-    }
-
-    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
-
-    // Load prompt_metadata.json to get good status
-    const promptMetadataPath = path.join(
-      projectRoot,
-      'data',
-      'actors',
-      actor.name,
-      'training_data',
-      'prompt_metadata.json'
-    );
-    let promptMetadata: any = { images: {} };
-    if (fs.existsSync(promptMetadataPath)) {
-      promptMetadata = JSON.parse(fs.readFileSync(promptMetadataPath, 'utf-8'));
-    }
+    console.log(`[S3-ONLY] Loading training data for actor ${actorId}`);
 
     // Check for base/poster image in multiple locations
     const possibleImagePaths = [
@@ -135,91 +103,65 @@ export function handleGetTrainingData(
       }
     }
 
-    // Get training data from manifest
-    const manifestTrainingData = manifest.training_data || [];
+    // Load manifest - S3 URLs are the source of truth
+    const manifestPath = path.join(
+      projectRoot,
+      'data',
+      'actor_manifests',
+      `${actorId.padStart(4, '0')}_manifest.json`
+    );
     
-    // Scan local directory to detect any new files not in manifest
-    const localImagesDir = path.join(projectRoot, 'data', 'actors', actor.name, 'training_data');
-    const localFiles = new Set<string>();
+    const trainingImages: any[] = [];
+    let manifestUpdated: string | null = null;
     
-    if (fs.existsSync(localImagesDir)) {
-      const files = fs.readdirSync(localImagesDir)
-        .filter(f => (f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg')));
-      files.forEach(f => localFiles.add(f));
+    if (fs.existsSync(manifestPath)) {
+      console.log(`[S3-ONLY] Loading manifest from ${manifestPath}`);
+      try {
+        const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+        manifestUpdated = manifest.training_data_updated || null;
+        
+        // Get training data from manifest (S3 URLs only)
+        const manifestData = manifest.training_data || [];
+        
+        manifestData.forEach((entry: any, index: number) => {
+          if (entry.s3_url) {
+            trainingImages.push({
+              index,
+              filename: entry.filename,
+              s3_url: entry.s3_url,
+              size_mb: entry.size_mb || 0,
+              modified_date: entry.modified_date || null,
+              good: false // Will be enriched from prompt_metadata
+            });
+          }
+        });
+        
+        console.log(`[S3-ONLY] Found ${trainingImages.length} images in manifest`);
+      } catch (e) {
+        console.error(`[S3-ONLY] Error loading manifest:`, e);
+      }
+    } else {
+      console.log(`[S3-ONLY] No manifest found for actor ${actorId}`);
     }
 
-    // Build training images array from manifest
-    const trainingImages = manifestTrainingData.map((manifestEntry: any, index: number) => {
-      const filename = manifestEntry.filename;
-      const localExists = localFiles.has(filename);
-      
-      // Remove from localFiles set (we'll check what's left later)
-      if (localExists) {
-        localFiles.delete(filename);
-      }
-
-      // Determine sync status
-      let status: 's3_only' | 'local_only' | 'synced' | 'out_of_sync';
-      if (manifestEntry.s3_url && localExists) {
-        // Check if local file hash matches manifest hash
-        const localPath = path.join(localImagesDir, filename);
-        const localHash = crypto.createHash('md5').update(fs.readFileSync(localPath)).digest('hex');
-        
-        if (localHash === manifestEntry.md5_hash) {
-          status = 'synced';
-        } else {
-          status = 'out_of_sync';
-        }
-      } else if (manifestEntry.s3_url && !localExists) {
-        status = 's3_only';
-      } else if (!manifestEntry.s3_url && localExists) {
-        status = 'local_only';
-      } else {
-        status = 'local_only';
-      }
-
-      // Get good status from prompt_metadata
-      const goodStatus = promptMetadata.images?.[filename]?.good || false;
-
-      return {
-        index,
-        filename,
-        s3_url: manifestEntry.s3_url || null,
-        local_exists: localExists,
-        local_path: localExists ? `/data/actors/${actor.name}/training_data/${filename}` : null,
-        md5_hash: manifestEntry.md5_hash,
-        size_mb: manifestEntry.size_mb,
-        modified_date: manifestEntry.modified_date,
-        status,
-        good: goodStatus
-      };
-    });
-
-    // Add any local files not in manifest (orphaned files)
-    localFiles.forEach(filename => {
-      const localPath = path.join(localImagesDir, filename);
-      const stats = fs.statSync(localPath);
-      const localHash = crypto.createHash('md5').update(fs.readFileSync(localPath)).digest('hex');
-      
-      trainingImages.push({
-        index: trainingImages.length,
-        filename,
-        s3_url: null,
-        local_exists: true,
-        local_path: `/data/actors/${actor.name}/training_data/${filename}`,
-        md5_hash: localHash,
-        size_mb: Math.round((stats.size / (1024 * 1024)) * 100) / 100,
-        modified_date: new Date(stats.mtime).toISOString(),
-        status: 'local_only',
-        good: promptMetadata.images?.[filename]?.good || false
+    // Load prompt_metadata.json to get good status
+    const promptMetadataPath = path.join(
+      projectRoot,
+      'data',
+      'actors',
+      actor.name,
+      'training_data',
+      'prompt_metadata.json'
+    );
+    if (fs.existsSync(promptMetadataPath)) {
+      const promptMetadata = JSON.parse(fs.readFileSync(promptMetadataPath, 'utf-8'));
+      trainingImages.forEach(img => {
+        img.good = promptMetadata.images?.[img.filename]?.good || false;
       });
-    });
+    }
 
-    // Calculate counts
-    const syncedCount = trainingImages.filter(img => img.status === 'synced').length;
-    const localOnlyCount = trainingImages.filter(img => img.status === 'local_only').length;
-    const s3OnlyCount = trainingImages.filter(img => img.status === 's3_only').length;
-    const outOfSyncCount = trainingImages.filter(img => img.status === 'out_of_sync').length;
+    console.log(`[S3-ONLY] Returning ${trainingImages.length} S3 images`);
+
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -229,11 +171,7 @@ export function handleGetTrainingData(
       training_images: trainingImages,
       base_image_path: baseImageRelativePath,
       total_count: trainingImages.length,
-      synced_count: syncedCount,
-      local_only_count: localOnlyCount,
-      s3_only_count: s3OnlyCount,
-      out_of_sync_count: outOfSyncCount,
-      manifest_updated: manifest.training_data_updated || null
+      manifest_updated: manifestUpdated
     }));
   } catch (error) {
     console.error('Error loading actor training data:', error);

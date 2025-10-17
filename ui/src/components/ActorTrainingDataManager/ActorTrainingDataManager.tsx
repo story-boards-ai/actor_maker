@@ -16,12 +16,9 @@ interface TrainingImage {
   index: number;
   filename: string;
   s3_url: string;
-  local_exists: boolean;
-  local_path: string | null;
-  local_hash: string | null;
-  s3_hash: string | null;
-  hash_match: boolean | null;
-  status: 's3_only' | 'local_only' | 'synced' | 'mismatch';
+  size_mb: number;
+  modified_date: string | null;
+  good: boolean;
 }
 
 interface SyncStatus {
@@ -87,6 +84,58 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       setError(err instanceof Error ? err.message : 'Failed to load training data');
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function comprehensiveSync() {
+    try {
+      setSyncStatus({
+        syncing: true,
+        progress: { current: 0, total: 0 },
+        message: 'Auditing and syncing all training data...'
+      });
+
+      const response = await fetch(`/api/actors/${actor.id}/training-data/comprehensive-sync`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          actor_name: actor.name,
+          delete_orphans: false,
+          dry_run: false
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Comprehensive sync failed');
+      }
+
+      const result = await response.json();
+      
+      const totalActions = (result.uploaded || 0) + (result.downloaded || 0) + 
+                          (result.added_to_manifest || 0) + (result.updated_in_manifest || 0);
+      
+      setSyncStatus({
+        syncing: false,
+        progress: { current: totalActions, total: totalActions },
+        message: `✅ Sync complete: ${result.uploaded || 0} uploaded, ${result.downloaded || 0} downloaded, ${result.added_to_manifest || 0} added to manifest`
+      });
+
+      // Reload to show updated data
+      await loadTrainingData();
+      
+      // Clear message after 5 seconds
+      setTimeout(() => {
+        setSyncStatus(prev => ({ ...prev, message: '' }));
+      }, 5000);
+
+    } catch (err) {
+      console.error('Comprehensive sync failed:', err);
+      setSyncStatus({
+        syncing: false,
+        progress: { current: 0, total: 0 },
+        message: `❌ Sync failed: ${err instanceof Error ? err.message : 'Unknown error'}`
+      });
     }
   }
 
@@ -359,10 +408,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     );
   }
 
-  const localCount = trainingImages.filter(img => img.local_exists).length;
   const s3Count = trainingImages.length;
-  const syncedCount = trainingImages.filter(img => img.status === 'synced').length;
-  const mismatchCount = trainingImages.filter(img => img.status === 'mismatch').length;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', background: '#f8fafc' }}>
@@ -375,10 +421,10 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
             onClick={() => setShowBaseImageModal(true)}
           />
           <div>
-            <h2 style={{ margin: 0, fontSize: '24px', fontWeight: 600 }}>{actor.name} - Training Data Manager</h2>
+            <h2 style={{ margin: 0, fontSize: '24px', fontWeight: 600 }}>{actor.name} - Training Data</h2>
             <p style={{ margin: '8px 0 0 0', opacity: 0.9, fontSize: '14px' }}>
               {!baseImage && <span style={{ color: '#fbbf24', fontWeight: 600 }}>⚠️ No base image • </span>}
-              {s3Count} total • {localCount} local • {syncedCount} synced • {mismatchCount > 0 ? `${mismatchCount} mismatch • ` : ''}{actor.age}y {actor.sex} {actor.ethnicity}
+              {s3Count} images in S3 • {actor.age}y {actor.sex} {actor.ethnicity}
             </p>
           </div>
         </div>
@@ -391,22 +437,6 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
             </div>
           ) : (
             <>
-              <button 
-                onClick={syncFromS3}
-                disabled={s3Count === 0}
-                style={{ padding: '10px 20px', background: 'white', color: '#667eea', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: s3Count === 0 ? 'not-allowed' : 'pointer', opacity: s3Count === 0 ? 0.5 : 1 }}
-              >
-                ⬇️ Sync from S3
-              </button>
-              
-              <button 
-                onClick={syncToS3}
-                disabled={localCount === 0}
-                style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.2)', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: localCount === 0 ? 'not-allowed' : 'pointer', opacity: localCount === 0 ? 0.5 : 1 }}
-              >
-                ⬆️ Sync to S3
-              </button>
-
               <button 
                 onClick={() => setShowGenerateModal(true)}
                 disabled={!baseImage}

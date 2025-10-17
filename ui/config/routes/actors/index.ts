@@ -7,10 +7,6 @@ import {
   handleToggleTrainingImageGood
 } from './training-data.handlers';
 import {
-  handleSyncFromS3,
-  handleSyncToS3
-} from './s3-sync.handlers';
-import {
   handleGenerateTrainingImages,
   handleGenerateAllPromptImages,
   handleGenerateSingleTrainingImage,
@@ -57,23 +53,6 @@ export function createActorsApi(projectRoot: string) {
       }
     }
 
-    // POST /api/actors/:actorId/training-data/sync-from-s3
-    if (url?.startsWith('/api/actors/') && url.includes('/training-data/sync-from-s3') && req.method === 'POST') {
-      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/sync-from-s3/);
-      if (match) {
-        handleSyncFromS3(req, res, projectRoot, match[1]);
-        return;
-      }
-    }
-
-    // POST /api/actors/:actorId/training-data/sync-to-s3
-    if (url?.startsWith('/api/actors/') && url.includes('/training-data/sync-to-s3') && req.method === 'POST') {
-      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/sync-to-s3/);
-      if (match) {
-        handleSyncToS3(req, res, projectRoot, match[1]);
-        return;
-      }
-    }
 
     // POST /api/actors/:actorId/training-data/generate-all-prompts (MUST come before /generate)
     if (url?.startsWith('/api/actors/') && url.includes('/training-data/generate-all-prompts') && req.method === 'POST') {
