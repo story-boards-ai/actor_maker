@@ -1,0 +1,757 @@
+{
+  "created_at": "2025-10-17T15:20:12.632069",
+  "total_actors": 107,
+  "balanced": 1,
+  "needs_action": 106,
+  "actors": [
+    {
+      "success": true,
+      "actor_id": "0000_european_16_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0001_european_20_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0003_european_20_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 18
+    },
+    {
+      "success": true,
+      "actor_id": "0004_european_35_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0005_european_50_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 0
+    },
+    {
+      "success": true,
+      "actor_id": "0006_european_20_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 0
+    },
+    {
+      "success": true,
+      "actor_id": "0007_european_55_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0008_european_60_female",
+      "is_balanced": false,
+      "files_to_delete": 5,
+      "images_to_generate": 0
+    },
+    {
+      "success": true,
+      "actor_id": "0009_european_65_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 3
+    },
+    {
+      "success": true,
+      "actor_id": "0010_european_25_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0012_european_30_male",
+      "is_balanced": true,
+      "files_to_delete": 2,
+      "images_to_generate": 0
+    },
+    {
+      "success": true,
+      "actor_id": "0013_european_40_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 4
+    },
+    {
+      "success": true,
+      "actor_id": "0015_black_35_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0016_european_55_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0017_european_55_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 9
+    },
+    {
+      "success": true,
+      "actor_id": "0018_european_70_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 8
+    },
+    {
+      "success": true,
+      "actor_id": "0021_south_american_25_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0022_european_95_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0023_european_17_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0024_black_35_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0027_black_50_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0028_black_40_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 8
+    },
+    {
+      "success": true,
+      "actor_id": "0029_south_american_25_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0030_european_30_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0031_european_55_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0032_black_55_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0033_black_60_male",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0034_european_10_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0035_black_65_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0037_black_16_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0038_european_21_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0040_black_25_male",
+      "is_balanced": false,
+      "files_to_delete": 5,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0042_black_25_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 4
+    },
+    {
+      "success": true,
+      "actor_id": "0043_european_30_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0044_european_70_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0045_black_30_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0046_black_14_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0047_black_40_male",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0048_black_27_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0050_black_28_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0052_black_55_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0053_black_70_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0054_south_american_20_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0055_european_35_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0056_black_35_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0057_south_american_35_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0058_south_american_50_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0059_european_50_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0061_european_60_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0063_south_american_60_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0064_south_american_65_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0065_south_american_16_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0066_european_16_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0067_asian_16_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 5
+    },
+    {
+      "success": true,
+      "actor_id": "0069_european_25_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0072_european_30_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0073_asian_30_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0074_south_american_30_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0075_south_american_30_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0076_european_40_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 9
+    },
+    {
+      "success": true,
+      "actor_id": "0077_asian_40_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0078_south_american_40_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 15
+    },
+    {
+      "success": true,
+      "actor_id": "0080_european_45_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0083_south_american_70_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 10
+    },
+    {
+      "success": true,
+      "actor_id": "0084_middle_eastern_20_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0086_middle_eastern_50_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0088_middle_eastern_60_male",
+      "is_balanced": false,
+      "files_to_delete": 5,
+      "images_to_generate": 4
+    },
+    {
+      "success": true,
+      "actor_id": "0092_south_american_16_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0095_middle_eastern_30_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0096_south_american_30_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0097_south_american_40_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0099_middle_eastern_45_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0100_middle_eastern_55_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 3
+    },
+    {
+      "success": true,
+      "actor_id": "0104_asian_20_male",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0116_nordic_25_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0117_asian_40_male",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0118_asian_45_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0119_nordic_45_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 10
+    },
+    {
+      "success": true,
+      "actor_id": "0121_nordic_70_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0122_european_20_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 16
+    },
+    {
+      "success": true,
+      "actor_id": "0125_middle_eastern_55_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0127_middle_eastern_25_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 8
+    },
+    {
+      "success": true,
+      "actor_id": "0128_asian_21_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0129_middle_eastern_30_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0131_asian_20_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 15
+    },
+    {
+      "success": true,
+      "actor_id": "0132_middle_eastern_45_female",
+      "is_balanced": false,
+      "files_to_delete": 5,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0136_indian_28_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0137_indian_28_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0139_indian_30_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0143_indian_35_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 1
+    },
+    {
+      "success": true,
+      "actor_id": "0145_indian_16_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0147_indian_20_female",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0148_indian_24_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 17
+    },
+    {
+      "success": true,
+      "actor_id": "0149_indian_24_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0151_indian_38_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0152_indian_45_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 15
+    },
+    {
+      "success": true,
+      "actor_id": "0154_indian_60_male",
+      "is_balanced": false,
+      "files_to_delete": 3,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0155_indian_60_female",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0156_european_35_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0157_black_14_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0158_black_16_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0159_black_18_female",
+      "is_balanced": false,
+      "files_to_delete": 5,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0161_black_22_female",
+      "is_balanced": false,
+      "files_to_delete": 4,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0163_black_26_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 2
+    },
+    {
+      "success": true,
+      "actor_id": "0167_black_34_female",
+      "is_balanced": false,
+      "files_to_delete": 2,
+      "images_to_generate": 7
+    },
+    {
+      "success": true,
+      "actor_id": "0170_black_40_female",
+      "is_balanced": false,
+      "files_to_delete": 1,
+      "images_to_generate": 6
+    },
+    {
+      "success": true,
+      "actor_id": "0174_white_28_male",
+      "is_balanced": false,
+      "files_to_delete": 0,
+      "images_to_generate": 13
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 4
+    }
+  ],
+  "counts": {
+    "photorealistic": 10,
+    "bw_stylized": 2,
+    "color_stylized": 2
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      2,
+      5,
+      8
+    ],
+    "delete_bw_stylized": [
+      14
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 3,
+    "generate_bw_stylized": 2,
+    "generate_color_stylized": 1
+  },
+  "analysis": "Currently, there are too many photorealistic images, exceeding the target distribution. Several of these images have quality issues that warrant deletion. The counts for both bw_stylized and color_stylized are below the target, indicating a need for additional images in those categories.",
+  "total_images": 14,
+  "photorealistic_count": 10,
+  "bw_stylized_count": 2,
+  "color_stylized_count": 2,
+  "photorealistic_percentage": 71.42857142857143,
+  "bw_stylized_percentage": 14.285714285714285,
+  "color_stylized_percentage": 14.285714285714285,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 2,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    },
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images, exceeding the target distribution. Several of these images have quality issues that warrant deletion. The counts for both bw_stylized and color_stylized are below the target, indicating a need for additional images in those categories.",
+  "actor_id": "0075_south_american_30_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

@@ -7,7 +7,7 @@
     },
     {
       "image_number": 2,
-      "type": "photorealistic",
+      "type": "bw_stylized",
       "quality_score": 7
     },
     {
@@ -23,17 +23,17 @@
     {
       "image_number": 5,
       "type": "photorealistic",
-      "quality_score": 5
+      "quality_score": 7
     },
     {
       "image_number": 6,
       "type": "photorealistic",
-      "quality_score": 8
+      "quality_score": 5
     },
     {
       "image_number": 7,
       "type": "photorealistic",
-      "quality_score": 7
+      "quality_score": 8
     },
     {
       "image_number": 8,
@@ -47,49 +47,49 @@
     },
     {
       "image_number": 10,
-      "type": "bw_stylized",
-      "quality_score": 5
+      "type": "color_stylized",
+      "quality_score": 7
     },
     {
       "image_number": 11,
       "type": "bw_stylized",
-      "quality_score": 6
+      "quality_score": 5
     },
     {
       "image_number": 12,
-      "type": "color_stylized",
-      "quality_score": 7
+      "type": "photorealistic",
+      "quality_score": 9
     }
   ],
   "counts": {
-    "photorealistic": 7,
+    "photorealistic": 8,
     "bw_stylized": 3,
     "color_stylized": 2
   },
   "recommendations": {
     "delete_photorealistic": [
-      5
+      6
     ],
     "delete_bw_stylized": [
       9
     ],
     "delete_color_stylized": [],
-    "generate_photorealistic": 6,
+    "generate_photorealistic": 5,
     "generate_bw_stylized": 1,
     "generate_color_stylized": 1
   },
-  "analysis": "The current mix has too few photorealistic images and stylized images. The photorealistic category is underrepresented, while the bw_stylized category is slightly underrepresented as well. Deleting low-quality images will help improve the overall quality and balance of the dataset.",
-  "total_images": 12,
-  "photorealistic_count": 7,
+  "analysis": "The current mix has too many photorealistic images and too few color stylized images. Deleting low-quality images will help balance the distribution. Generating additional images in the underrepresented categories will achieve the target distribution.",
+  "total_images": 13,
+  "photorealistic_count": 8,
   "bw_stylized_count": 3,
   "color_stylized_count": 2,
-  "photorealistic_percentage": 58.333333333333336,
-  "bw_stylized_percentage": 25.0,
-  "color_stylized_percentage": 16.666666666666664,
+  "photorealistic_percentage": 61.53846153846154,
+  "bw_stylized_percentage": 23.076923076923077,
+  "color_stylized_percentage": 15.384615384615385,
   "is_balanced": false,
   "images_to_delete": [
     {
-      "image_number": 5,
+      "image_number": 6,
       "type": "photorealistic"
     },
     {
@@ -100,7 +100,7 @@
   "images_to_generate": [
     {
       "type": "photorealistic",
-      "count": 6
+      "count": 5
     },
     {
       "type": "bw_stylized",
@@ -111,7 +111,7 @@
       "count": 1
     }
   ],
-  "gpt_analysis": "The current mix has too few photorealistic images and stylized images. The photorealistic category is underrepresented, while the bw_stylized category is slightly underrepresented as well. Deleting low-quality images will help improve the overall quality and balance of the dataset.",
+  "gpt_analysis": "The current mix has too many photorealistic images and too few color stylized images. Deleting low-quality images will help balance the distribution. Generating additional images in the underrepresented categories will achieve the target distribution.",
   "actor_id": "0001_european_20_female",
   "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
 }

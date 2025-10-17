@@ -1,0 +1,127 @@
+{
+  "actor_id": "0007_european_55_male",
+  "created_at": "2025-10-17T15:01:36.124526",
+  "status": "pending",
+  "current_state": {
+    "total_images": 14,
+    "distribution": {
+      "photorealistic": 7,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 50.0,
+      "bw_stylized": 28.57142857142857,
+      "color_stylized": 21.428571428571427
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "filename": "0007_european_55_male_11.jpg",
+      "local_path": "data/actors/0007_european_55_male/training_data/0007_european_55_male_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_11.jpg",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "filename": "0007_european_55_male_5.jpg",
+      "local_path": "data/actors/0007_european_55_male/training_data/0007_european_55_male_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_5.jpg",
+      "quality_score": 3
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "filename": "0007_european_55_male_4.jpg",
+      "local_path": "data/actors/0007_european_55_male/training_data/0007_european_55_male_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_4.jpg",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are 7 photorealistic images, which is slightly above the target distribution. The black and white stylized images are at the target count, while color stylized images are at the target count as well. To balance the distribution, one photorealistic image should be generated, and low-quality black and white images should be deleted.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 10,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 3
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 4
+    }
+  ]
+}

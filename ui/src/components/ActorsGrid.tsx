@@ -171,47 +171,50 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
     // These describe different states of training data that cannot coexist
     const trainingStatusFilters = [];
     if (activeFilters.has('no_training')) {
-      trainingStatusFilters.push(trainingInfo.count === 0);
+      const matchesNoTraining = trainingInfo.count === 0;
+      trainingStatusFilters.push(invertFilter ? !matchesNoTraining : matchesNoTraining);
     }
     if (activeFilters.has('missing_0_1')) {
-      trainingStatusFilters.push(trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1));
+      // Normal: actors with images but missing 0 or 1
+      // Inverted: actors that have BOTH 0 and 1 (or have no images at all)
+      const matchesMissing = trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1);
+      trainingStatusFilters.push(invertFilter ? !matchesMissing : matchesMissing);
     }
     if (activeFilters.has('has_15_plus')) {
-      trainingStatusFilters.push(trainingInfo.count >= 15);
+      const matches15Plus = trainingInfo.count >= 15;
+      trainingStatusFilters.push(invertFilter ? !matches15Plus : matches15Plus);
     }
     
     // Group 2: Content Type (independent - use AND logic)
     const contentTypeFilters = [];
     if (activeFilters.has('has_stylized')) {
-      contentTypeFilters.push(trainingInfo.hasStylizedImages === true);
+      const matchesStylized = trainingInfo.hasStylizedImages === true;
+      contentTypeFilters.push(invertFilter ? !matchesStylized : matchesStylized);
     }
     if (activeFilters.has('no_base_image')) {
-      contentTypeFilters.push(trainingInfo.hasBaseImage === false);
+      const matchesNoBase = trainingInfo.hasBaseImage === false;
+      contentTypeFilters.push(invertFilter ? !matchesNoBase : matchesNoBase);
     }
     
     // Group 3: Quality Flags (independent - use AND logic)
     const qualityFilters = [];
     if (activeFilters.has('good_only')) {
-      qualityFilters.push(actor.good === true);
+      const matchesGood = actor.good === true;
+      qualityFilters.push(invertFilter ? !matchesGood : matchesGood);
     }
     
     // Evaluate each group
-    // Training status: If any filters in this group, actor must match at least ONE (OR logic)
-    let matchesTrainingStatus = trainingStatusFilters.length === 0 || trainingStatusFilters.some(result => result === true);
+    // Training status: 
+    // - Normal mode: actor must match at least ONE (OR logic)
+    // - Inverted mode: actor must match ALL (AND logic)
+    const matchesTrainingStatus = trainingStatusFilters.length === 0 || 
+      (invertFilter ? trainingStatusFilters.every(result => result === true) : trainingStatusFilters.some(result => result === true));
     
     // Content type: Actor must match ALL filters in this group (AND logic)
-    let matchesContentType = contentTypeFilters.length === 0 || contentTypeFilters.every(result => result === true);
+    const matchesContentType = contentTypeFilters.length === 0 || contentTypeFilters.every(result => result === true);
     
     // Quality: Actor must match ALL filters in this group (AND logic)
-    let matchesQuality = qualityFilters.length === 0 || qualityFilters.every(result => result === true);
-    
-    // Apply inversion to each group independently if enabled
-    if (invertFilter) {
-      // Invert each group's result (but keep "no filters = true" logic)
-      if (trainingStatusFilters.length > 0) matchesTrainingStatus = !matchesTrainingStatus;
-      if (contentTypeFilters.length > 0) matchesContentType = !matchesContentType;
-      if (qualityFilters.length > 0) matchesQuality = !matchesQuality;
-    }
+    const matchesQuality = qualityFilters.length === 0 || qualityFilters.every(result => result === true);
     
     // Combine all groups with AND logic
     return matchesTrainingStatus && matchesContentType && matchesQuality;

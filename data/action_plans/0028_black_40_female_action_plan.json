@@ -1,0 +1,140 @@
+{
+  "actor_id": "0028_black_40_female",
+  "created_at": "2025-10-17T15:04:44.525873",
+  "status": "pending",
+  "current_state": {
+    "total_images": 14,
+    "distribution": {
+      "photorealistic": 8,
+      "bw_stylized": 3,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 57.14285714285714,
+      "bw_stylized": 21.428571428571427,
+      "color_stylized": 21.428571428571427
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "filename": "0028_black_40_female_0.png",
+      "local_path": "data/actors/0028_black_40_female/training_data/0028_black_40_female_0.png",
+      "s3_url": "",
+      "quality_score": 4
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "filename": "0028_black_40_female_1.png",
+      "local_path": "data/actors/0028_black_40_female/training_data/0028_black_40_female_1.png",
+      "s3_url": "",
+      "quality_score": 3
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "filename": "0028_black_40_female_9.png",
+      "local_path": "data/actors/0028_black_40_female/training_data/0028_black_40_female_9.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0028_black_40_female/training_data/0028_black_40_female_9.png",
+      "quality_score": 3
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 5
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too few photorealistic images and too few stylized images. The photorealistic category needs to be increased to meet the target distribution, while the stylized categories are underrepresented. Deleting lower quality images will help improve the overall quality.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 4
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 3
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 10,
+      "type": "color_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 3
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 8
+    }
+  ]
+}

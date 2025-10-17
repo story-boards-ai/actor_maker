@@ -1,0 +1,64 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    }
+  ],
+  "counts": {
+    "photorealistic": 4,
+    "bw_stylized": 0,
+    "color_stylized": 0
+  },
+  "recommendations": {
+    "delete_photorealistic": [],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 9,
+    "generate_bw_stylized": 4,
+    "generate_color_stylized": 3
+  },
+  "analysis": "Currently, all images are categorized as photorealistic, exceeding the target distribution. There are no black and white or color stylized images, which are underrepresented. Additional images need to be generated to meet the target distribution.",
+  "total_images": 4,
+  "photorealistic_count": 4,
+  "bw_stylized_count": 0,
+  "color_stylized_count": 0,
+  "photorealistic_percentage": 100.0,
+  "bw_stylized_percentage": 0.0,
+  "color_stylized_percentage": 0.0,
+  "is_balanced": false,
+  "images_to_delete": [],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 9
+    },
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, all images are categorized as photorealistic, exceeding the target distribution. There are no black and white or color stylized images, which are underrepresented. Additional images need to be generated to meet the target distribution.",
+  "actor_id": "0122_european_20_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

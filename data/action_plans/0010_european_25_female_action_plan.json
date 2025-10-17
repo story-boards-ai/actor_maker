@@ -1,0 +1,187 @@
+{
+  "actor_id": "0010_european_25_female",
+  "created_at": "2025-10-17T15:02:26.135041",
+  "status": "pending",
+  "current_state": {
+    "total_images": 23,
+    "distribution": {
+      "photorealistic": 16,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 69.56521739130434,
+      "bw_stylized": 17.391304347826086,
+      "color_stylized": 13.043478260869565
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "filename": "0010_european_25_female_15.jpg",
+      "local_path": "data/actors/0010_european_25_female/training_data/0010_european_25_female_15.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0010_european_25_female/0010_european_25_female_15.jpg",
+      "quality_score": 6
+    },
+    {
+      "image_number": 17,
+      "type": "photorealistic",
+      "filename": "0010_european_25_female_3.jpg",
+      "local_path": "data/actors/0010_european_25_female/training_data/0010_european_25_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0010_european_25_female/0010_european_25_female_3.jpg",
+      "quality_score": 6
+    },
+    {
+      "image_number": 19,
+      "type": "bw_stylized",
+      "filename": "0010_european_25_female_0.jpg",
+      "local_path": "data/actors/0010_european_25_female/training_data/0010_european_25_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0010_european_25_female/0010_european_25_female_0.jpg",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images (16 instead of 13). The quality of some of these images is not ideal, leading to recommendations for deletion. The counts for black and white stylized and color stylized images are within acceptable limits, but the color stylized category is at the minimum threshold, suggesting a potential need for generation in the future.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 13,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 15,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 16,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 17,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 18,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 19,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 20,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 21,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 22,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 23,
+      "type": "color_stylized",
+      "quality_score": 8
+    },
+    {
+      "image_number": 24,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 25,
+      "type": "color_stylized",
+      "quality_score": 6
+    }
+  ]
+}

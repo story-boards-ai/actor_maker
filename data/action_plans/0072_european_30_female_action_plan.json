@@ -1,0 +1,140 @@
+{
+  "actor_id": "0072_european_30_female",
+  "created_at": "2025-10-17T15:11:29.679789",
+  "status": "pending",
+  "current_state": {
+    "total_images": 14,
+    "distribution": {
+      "photorealistic": 11,
+      "bw_stylized": 2,
+      "color_stylized": 1
+    },
+    "percentages": {
+      "photorealistic": 78.57142857142857,
+      "bw_stylized": 14.285714285714285,
+      "color_stylized": 7.142857142857142
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0072_european_30_female_8.png",
+      "local_path": "data/actors/0072_european_30_female/training_data/0072_european_30_female_8.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0072_european_30_female/training_data/0072_european_30_female_8.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "filename": "0072_european_30_female_4.png",
+      "local_path": "data/actors/0072_european_30_female/training_data/0072_european_30_female_4.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0072_european_30_female/training_data/0072_european_30_female_4.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "filename": "0072_european_30_female_1.png",
+      "local_path": "data/actors/0072_european_30_female/training_data/0072_european_30_female_1.png",
+      "s3_url": "",
+      "quality_score": 5
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 2
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and not enough stylized images. The photorealistic category has 11 images, exceeding the target of 65%. The black and white stylized category has only 2 images, while the color stylized category has only 1. Adjustments are needed to balance the distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 6
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 3
+    }
+  ],
+  "counts": {
+    "photorealistic": 10,
+    "bw_stylized": 4,
+    "color_stylized": 2
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      5,
+      3
+    ],
+    "delete_bw_stylized": [
+      14,
+      12
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 0,
+    "generate_bw_stylized": 0,
+    "generate_color_stylized": 1
+  },
+  "analysis": "Currently, there are too many photorealistic images and too few color stylized images. The recommendations focus on removing lower quality images from the photorealistic and bw_stylized categories while generating one additional color stylized image to meet the target distribution.",
+  "total_images": 16,
+  "photorealistic_count": 10,
+  "bw_stylized_count": 4,
+  "color_stylized_count": 2,
+  "photorealistic_percentage": 62.5,
+  "bw_stylized_percentage": 25.0,
+  "color_stylized_percentage": 12.5,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and too few color stylized images. The recommendations focus on removing lower quality images from the photorealistic and bw_stylized categories while generating one additional color stylized image to meet the target distribution.",
+  "actor_id": "0121_nordic_70_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

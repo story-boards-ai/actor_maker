@@ -1,0 +1,102 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 4
+    }
+  ],
+  "counts": {
+    "photorealistic": 5,
+    "bw_stylized": 2,
+    "color_stylized": 1
+  },
+  "recommendations": {
+    "delete_photorealistic": [],
+    "delete_bw_stylized": [
+      2,
+      5
+    ],
+    "delete_color_stylized": [
+      8
+    ],
+    "generate_photorealistic": 3,
+    "generate_bw_stylized": 2,
+    "generate_color_stylized": 2
+  },
+  "analysis": "Currently, there are too few images in the photorealistic and color stylized categories, while the bw_stylized category is also underrepresented. Deleting lower quality images will help balance the distribution and improve overall quality.",
+  "total_images": 8,
+  "photorealistic_count": 5,
+  "bw_stylized_count": 2,
+  "color_stylized_count": 1,
+  "photorealistic_percentage": 62.5,
+  "bw_stylized_percentage": 25.0,
+  "color_stylized_percentage": 12.5,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 2,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too few images in the photorealistic and color stylized categories, while the bw_stylized category is also underrepresented. Deleting lower quality images will help balance the distribution and improve overall quality.",
+  "actor_id": "0154_indian_60_male",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

@@ -1,0 +1,70 @@
+{
+  "actor_id": "0152_indian_45_male",
+  "created_at": "2025-10-17T15:18:12.235303",
+  "status": "pending",
+  "current_state": {
+    "total_images": 5,
+    "distribution": {
+      "photorealistic": 5,
+      "bw_stylized": 0,
+      "color_stylized": 0
+    },
+    "percentages": {
+      "photorealistic": 100.0,
+      "bw_stylized": 0.0,
+      "color_stylized": 0.0
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 8
+    },
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, all images are categorized as photorealistic, with no representation of black and white or color stylized types. To meet the target distribution, we need to generate additional images in the other two categories, particularly focusing on black and white stylized images.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 8
+    }
+  ]
+}

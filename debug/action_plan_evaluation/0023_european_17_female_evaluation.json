@@ -1,0 +1,132 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 3
+    }
+  ],
+  "counts": {
+    "photorealistic": 10,
+    "bw_stylized": 3,
+    "color_stylized": 2
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      7
+    ],
+    "delete_bw_stylized": [
+      12,
+      14
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 3,
+    "generate_bw_stylized": 1,
+    "generate_color_stylized": 1
+  },
+  "analysis": "Currently, there are too many photorealistic images and too few stylized images. The photorealistic category has 10 images, exceeding the target of 65%. The bw_stylized category has 3 images, which is below the target of 20%. The color_stylized category also has only 2 images, needing one more to meet the target. Adjustments include deleting low-quality images and generating new ones to balance the distribution.",
+  "total_images": 15,
+  "photorealistic_count": 10,
+  "bw_stylized_count": 3,
+  "color_stylized_count": 2,
+  "photorealistic_percentage": 66.66666666666666,
+  "bw_stylized_percentage": 20.0,
+  "color_stylized_percentage": 13.333333333333334,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    },
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and too few stylized images. The photorealistic category has 10 images, exceeding the target of 65%. The bw_stylized category has 3 images, which is below the target of 20%. The color_stylized category also has only 2 images, needing one more to meet the target. Adjustments include deleting low-quality images and generating new ones to balance the distribution.",
+  "actor_id": "0023_european_17_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

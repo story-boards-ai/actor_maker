@@ -1,0 +1,124 @@
+{
+  "actor_id": "0170_black_40_female",
+  "created_at": "2025-10-17T15:20:04.521034",
+  "status": "pending",
+  "current_state": {
+    "total_images": 14,
+    "distribution": {
+      "photorealistic": 12,
+      "bw_stylized": 1,
+      "color_stylized": 1
+    },
+    "percentages": {
+      "photorealistic": 85.71428571428571,
+      "bw_stylized": 7.142857142857142,
+      "color_stylized": 7.142857142857142
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "filename": "0170_black_40_female_5.png",
+      "local_path": "data/actors/0170_black_40_female/training_data/0170_black_40_female_5.png",
+      "s3_url": "",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 1
+    },
+    {
+      "type": "bw_stylized",
+      "count": 3
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "The current mix has too many photorealistic images, exceeding the target distribution. The quality of image 8 warrants deletion. There is a significant lack of both black and white stylized and color stylized images, necessitating generation to meet the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "quality_score": 4
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "color_stylized",
+      "quality_score": 8
+    }
+  ]
+}

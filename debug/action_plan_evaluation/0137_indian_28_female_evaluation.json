@@ -1,0 +1,128 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 10,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 3
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 8
+    }
+  ],
+  "counts": {
+    "photorealistic": 9,
+    "bw_stylized": 3,
+    "color_stylized": 3
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      5,
+      7
+    ],
+    "delete_bw_stylized": [
+      13
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 1,
+    "generate_bw_stylized": 1,
+    "generate_color_stylized": 0
+  },
+  "analysis": "Currently, there are too many photorealistic images and too few black and white stylized images. The photorealistic category has some low-quality images that should be deleted, while the black and white stylized category needs one more image to meet the target distribution.",
+  "total_images": 15,
+  "photorealistic_count": 9,
+  "bw_stylized_count": 3,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 60.0,
+  "bw_stylized_percentage": 20.0,
+  "color_stylized_percentage": 20.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 1
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and too few black and white stylized images. The photorealistic category has some low-quality images that should be deleted, while the black and white stylized category needs one more image to meet the target distribution.",
+  "actor_id": "0137_indian_28_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

@@ -1,0 +1,119 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 9,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 6
+    }
+  ],
+  "counts": {
+    "photorealistic": 7,
+    "bw_stylized": 4,
+    "color_stylized": 3
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      7
+    ],
+    "delete_bw_stylized": [
+      13
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 6,
+    "generate_bw_stylized": 0,
+    "generate_color_stylized": 0
+  },
+  "analysis": "Currently, there are too few photorealistic images and one low-quality image that needs deletion. The black and white stylized images are within the acceptable range, while color stylized images are at the target count. To achieve the desired distribution, additional photorealistic images should be generated.",
+  "total_images": 14,
+  "photorealistic_count": 7,
+  "bw_stylized_count": 4,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 50.0,
+  "bw_stylized_percentage": 28.57142857142857,
+  "color_stylized_percentage": 21.428571428571427,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 6
+    }
+  ],
+  "gpt_analysis": "Currently, there are too few photorealistic images and one low-quality image that needs deletion. The black and white stylized images are within the acceptable range, while color stylized images are at the target count. To achieve the desired distribution, additional photorealistic images should be generated.",
+  "actor_id": "0069_european_25_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

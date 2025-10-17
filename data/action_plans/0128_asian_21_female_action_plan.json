@@ -1,0 +1,119 @@
+{
+  "actor_id": "0128_asian_21_female",
+  "created_at": "2025-10-17T15:16:23.713056",
+  "status": "pending",
+  "current_state": {
+    "total_images": 15,
+    "distribution": {
+      "photorealistic": 8,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 53.333333333333336,
+      "bw_stylized": 26.666666666666668,
+      "color_stylized": 20.0
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "filename": "0128_asian_21_female_15.jpg",
+      "local_path": "data/actors/0128_asian_21_female/training_data/0128_asian_21_female_15.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0128_asian_21_female/0128_asian_21_female_15.jpg",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "filename": "0128_asian_21_female_8.png",
+      "local_path": "data/actors/0128_asian_21_female/training_data/0128_asian_21_female_8.png",
+      "s3_url": "",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are 8 photorealistic images, which is slightly above the target distribution. One image (number 9) has quality issues and should be deleted. The black and white stylized images are at the target count, while color stylized images are at the minimum. To balance the distribution, two more photorealistic images should be generated.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 8
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "color_stylized",
+      "quality_score": 9
+    },
+    {
+      "image_number": 13,
+      "type": "photorealistic",
+      "quality_score": 8
+    }
+  ]
+}

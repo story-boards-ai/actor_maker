@@ -1,0 +1,101 @@
+{
+  "actor_id": "0016_european_55_female",
+  "created_at": "2025-10-17T15:03:18.810685",
+  "status": "pending",
+  "current_state": {
+    "total_images": 6,
+    "distribution": {
+      "photorealistic": 5,
+      "bw_stylized": 1,
+      "color_stylized": 0
+    },
+    "percentages": {
+      "photorealistic": 83.33333333333334,
+      "bw_stylized": 16.666666666666664,
+      "color_stylized": 0.0
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "filename": "0016_european_55_female_13.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_13.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_13.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "filename": "0016_european_55_female_7.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_7.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_7.png",
+      "quality_score": 5
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "filename": "0016_european_55_female_5.png",
+      "local_path": "data/actors/0016_european_55_female/training_data/0016_european_55_female_5.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0016_european_55_female/training_data/0016_european_55_female_5.png",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and not enough of the other types. The photorealistic images need to be reduced by deleting lower quality ones, while more color stylized images should be generated to meet the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    }
+  ]
+}

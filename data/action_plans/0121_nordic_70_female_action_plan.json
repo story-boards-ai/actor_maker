@@ -1,0 +1,140 @@
+{
+  "actor_id": "0121_nordic_70_female",
+  "created_at": "2025-10-17T15:15:44.455229",
+  "status": "pending",
+  "current_state": {
+    "total_images": 16,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 4,
+      "color_stylized": 2
+    },
+    "percentages": {
+      "photorealistic": 62.5,
+      "bw_stylized": 25.0,
+      "color_stylized": 12.5
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0121_nordic_70_female_1.png",
+      "local_path": "data/actors/0121_nordic_70_female/training_data/0121_nordic_70_female_1.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "filename": "0121_nordic_70_female_3.png",
+      "local_path": "data/actors/0121_nordic_70_female/training_data/0121_nordic_70_female_3.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0121_nordic_70_female/training_data/0121_nordic_70_female_3.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "filename": "0121_nordic_70_female_12.png",
+      "local_path": "data/actors/0121_nordic_70_female/training_data/0121_nordic_70_female_12.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0121_nordic_70_female/training_data/0121_nordic_70_female_12.png",
+      "quality_score": 3
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "filename": "0121_nordic_70_female_2.png",
+      "local_path": "data/actors/0121_nordic_70_female/training_data/0121_nordic_70_female_2.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0121_nordic_70_female/training_data/0121_nordic_70_female_2.png",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and too few color stylized images. The recommendations focus on removing lower quality images from the photorealistic and bw_stylized categories while generating one additional color stylized image to meet the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 3
+    }
+  ]
+}

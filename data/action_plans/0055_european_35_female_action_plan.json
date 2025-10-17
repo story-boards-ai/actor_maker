@@ -1,0 +1,148 @@
+{
+  "actor_id": "0055_european_35_female",
+  "created_at": "2025-10-17T15:09:29.618283",
+  "status": "pending",
+  "current_state": {
+    "total_images": 13,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 2,
+      "color_stylized": 1
+    },
+    "percentages": {
+      "photorealistic": 76.92307692307693,
+      "bw_stylized": 15.384615384615385,
+      "color_stylized": 7.6923076923076925
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "filename": "0055_european_35_female_7.png",
+      "local_path": "data/actors/0055_european_35_female/training_data/0055_european_35_female_7.png",
+      "s3_url": "",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0055_european_35_female_13.png",
+      "local_path": "data/actors/0055_european_35_female/training_data/0055_european_35_female_13.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "filename": "0055_european_35_female_4.png",
+      "local_path": "data/actors/0055_european_35_female/training_data/0055_european_35_female_4.png",
+      "s3_url": "",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "filename": "0055_european_35_female_3.png",
+      "local_path": "data/actors/0055_european_35_female/training_data/0055_european_35_female_3.png",
+      "s3_url": "",
+      "quality_score": 5
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images (10) and not enough stylized images. The photorealistic category needs to be reduced by deleting lower quality images. Additionally, we need to generate more images in both the bw_stylized and color_stylized categories to meet the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 6
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "actor_id": "0001_european_20_female",
+  "created_at": "2025-10-17T15:00:18.150031",
+  "status": "pending",
+  "current_state": {
+    "total_images": 13,
+    "distribution": {
+      "photorealistic": 8,
+      "bw_stylized": 3,
+      "color_stylized": 2
+    },
+    "percentages": {
+      "photorealistic": 61.53846153846154,
+      "bw_stylized": 23.076923076923077,
+      "color_stylized": 15.384615384615385
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "filename": "0001_european_20_female_8.png",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_8.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 9,
+      "type": "bw_stylized",
+      "filename": "0001_european_20_female_20.jpg",
+      "local_path": "data/actors/0001_european_20_female/training_data/0001_european_20_female_20.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0001_european_20_female/0001_european_20_female_20.jpg",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 5
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    },
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "The current mix has too many photorealistic images and too few color stylized images. Deleting low-quality images will help balance the distribution. Generating additional images in the underrepresented categories will achieve the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 10,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 9
+    }
+  ]
+}

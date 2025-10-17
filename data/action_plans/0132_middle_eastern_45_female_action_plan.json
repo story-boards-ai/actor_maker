@@ -1,0 +1,152 @@
+{
+  "actor_id": "0132_middle_eastern_45_female",
+  "created_at": "2025-10-17T15:16:50.709986",
+  "status": "pending",
+  "current_state": {
+    "total_images": 15,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 3,
+      "color_stylized": 2
+    },
+    "percentages": {
+      "photorealistic": 66.66666666666666,
+      "bw_stylized": 20.0,
+      "color_stylized": 13.333333333333334
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0132_middle_eastern_45_female_0.png",
+      "local_path": "data/actors/0132_middle_eastern_45_female/training_data/0132_middle_eastern_45_female_0.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "filename": "0132_middle_eastern_45_female_1.png",
+      "local_path": "data/actors/0132_middle_eastern_45_female/training_data/0132_middle_eastern_45_female_1.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "bw_stylized",
+      "filename": "0132_middle_eastern_45_female_2.png",
+      "local_path": "data/actors/0132_middle_eastern_45_female/training_data/0132_middle_eastern_45_female_2.png",
+      "s3_url": "",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "filename": "0132_middle_eastern_45_female_12.png",
+      "local_path": "data/actors/0132_middle_eastern_45_female/training_data/0132_middle_eastern_45_female_12.png",
+      "s3_url": "",
+      "quality_score": 3
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "filename": "0132_middle_eastern_45_female_11.png",
+      "local_path": "data/actors/0132_middle_eastern_45_female/training_data/0132_middle_eastern_45_female_11.png",
+      "s3_url": "",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "bw_stylized",
+      "count": 1
+    },
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images, exceeding the target distribution. The black and white stylized images are below the target, and color stylized images are also underrepresented. Deleting lower quality images and generating new stylized images will help achieve the desired balance.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "bw_stylized",
+      "quality_score": 3
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 9
+    }
+  ]
+}

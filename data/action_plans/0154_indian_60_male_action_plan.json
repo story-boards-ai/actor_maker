@@ -1,0 +1,110 @@
+{
+  "actor_id": "0154_indian_60_male",
+  "created_at": "2025-10-17T15:18:19.345668",
+  "status": "pending",
+  "current_state": {
+    "total_images": 8,
+    "distribution": {
+      "photorealistic": 5,
+      "bw_stylized": 2,
+      "color_stylized": 1
+    },
+    "percentages": {
+      "photorealistic": 62.5,
+      "bw_stylized": 25.0,
+      "color_stylized": 12.5
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "filename": "0154_indian_60_male_3.png",
+      "local_path": "data/actors/0154_indian_60_male/training_data/0154_indian_60_male_3.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0154_indian_60_male/training_data/0154_indian_60_male_3.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "filename": "0154_indian_60_male_13.png",
+      "local_path": "data/actors/0154_indian_60_male/training_data/0154_indian_60_male_13.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0154_indian_60_male/training_data/0154_indian_60_male_13.png",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "filename": "0154_indian_60_male_6.png",
+      "local_path": "data/actors/0154_indian_60_male/training_data/0154_indian_60_male_6.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0154_indian_60_male/training_data/0154_indian_60_male_6.png",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too few images in the photorealistic and color stylized categories, while the bw_stylized category is also underrepresented. Deleting lower quality images will help balance the distribution and improve overall quality.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 4
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 15,
+      "type": "bw_stylized",
+      "quality_score": 3
+    }
+  ],
+  "counts": {
+    "photorealistic": 10,
+    "bw_stylized": 4,
+    "color_stylized": 3
+  },
+  "recommendations": {
+    "delete_photorealistic": [],
+    "delete_bw_stylized": [
+      2,
+      10,
+      15
+    ],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 3,
+    "generate_bw_stylized": 0,
+    "generate_color_stylized": 0
+  },
+  "analysis": "Currently, there are 10 photorealistic images, which exceeds the target of 13. The black and white stylized images are at the target count, while color stylized images are at the lower end of the target. To balance the dataset, we recommend generating 3 additional photorealistic images and deleting the lower quality black and white stylized images.",
+  "total_images": 17,
+  "photorealistic_count": 10,
+  "bw_stylized_count": 4,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 58.82352941176471,
+  "bw_stylized_percentage": 23.52941176470588,
+  "color_stylized_percentage": 17.647058823529413,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 2,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized"
+    },
+    {
+      "image_number": 15,
+      "type": "bw_stylized"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are 10 photorealistic images, which exceeds the target of 13. The black and white stylized images are at the target count, while color stylized images are at the lower end of the target. To balance the dataset, we recommend generating 3 additional photorealistic images and deleting the lower quality black and white stylized images.",
+  "actor_id": "0009_european_65_male",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

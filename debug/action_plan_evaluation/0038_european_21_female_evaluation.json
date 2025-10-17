@@ -1,0 +1,117 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "quality_score": 4
+    },
+    {
+      "image_number": 9,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 9
+    }
+  ],
+  "counts": {
+    "photorealistic": 10,
+    "bw_stylized": 2,
+    "color_stylized": 3
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      8
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 3,
+    "generate_bw_stylized": 2,
+    "generate_color_stylized": 0
+  },
+  "analysis": "The current mix has too many photorealistic images (10 instead of 9) and too few black and white stylized images (2 instead of 3). The photorealistic images include one low-quality image that should be deleted. Additionally, we need to generate 2 more black and white stylized images to meet the target distribution.",
+  "total_images": 15,
+  "photorealistic_count": 10,
+  "bw_stylized_count": 2,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 66.66666666666666,
+  "bw_stylized_percentage": 13.333333333333334,
+  "color_stylized_percentage": 20.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 8,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "The current mix has too many photorealistic images (10 instead of 9) and too few black and white stylized images (2 instead of 3). The photorealistic images include one low-quality image that should be deleted. Additionally, we need to generate 2 more black and white stylized images to meet the target distribution.",
+  "actor_id": "0038_european_21_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

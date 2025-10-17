@@ -79,11 +79,16 @@ def create_action_plan_for_actor(actor_id: str, evaluator: TrainingDataEvaluator
             
             # Current state
             "current_state": {
-                "total_images": len(images_list),
+                "total_images": evaluation.get("total_images", len(images_list)),
                 "distribution": {
-                    "photorealistic": evaluation["current_distribution"]["photorealistic"],
-                    "bw_stylized": evaluation["current_distribution"]["bw_stylized"],
-                    "color_stylized": evaluation["current_distribution"]["color_stylized"]
+                    "photorealistic": evaluation.get("photorealistic_count", 0),
+                    "bw_stylized": evaluation.get("bw_stylized_count", 0),
+                    "color_stylized": evaluation.get("color_stylized_count", 0)
+                },
+                "percentages": {
+                    "photorealistic": evaluation.get("photorealistic_percentage", 0),
+                    "bw_stylized": evaluation.get("bw_stylized_percentage", 0),
+                    "color_stylized": evaluation.get("color_stylized_percentage", 0)
                 }
             },
             

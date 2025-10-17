@@ -1,0 +1,146 @@
+{
+  "actor_id": "0013_european_40_male",
+  "created_at": "2025-10-17T15:03:01.411997",
+  "status": "pending",
+  "current_state": {
+    "total_images": 16,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 3,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 62.5,
+      "bw_stylized": 18.75,
+      "color_stylized": 18.75
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0013_european_40_male_6.png",
+      "local_path": "data/actors/0013_european_40_male/training_data/0013_european_40_male_6.png",
+      "s3_url": "",
+      "quality_score": 5
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "filename": "0013_european_40_male_14.jpg",
+      "local_path": "data/actors/0013_european_40_male/training_data/0013_european_40_male_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0013_european_40_male/0013_european_40_male_14.jpg",
+      "quality_score": 6
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "filename": "0013_european_40_male_12.png",
+      "local_path": "data/actors/0013_european_40_male/training_data/0013_european_40_male_12.png",
+      "s3_url": "",
+      "quality_score": 4
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images (10), which exceeds the target of 65%. The quality of some images is not ideal, prompting the deletion of lower-scoring images. The black and white stylized images are below the target percentage, necessitating the generation of one additional image to meet the desired distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 4,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 13,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 15,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 16,
+      "type": "color_stylized",
+      "quality_score": 5
+    }
+  ]
+}

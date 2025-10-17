@@ -1,0 +1,55 @@
+{
+  "actor_id": "0003_european_20_female",
+  "created_at": "2025-10-17T15:00:24.070858",
+  "status": "pending",
+  "current_state": {
+    "total_images": 2,
+    "distribution": {
+      "photorealistic": 2,
+      "bw_stylized": 0,
+      "color_stylized": 0
+    },
+    "percentages": {
+      "photorealistic": 100.0,
+      "bw_stylized": 0.0,
+      "color_stylized": 0.0
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 11
+    },
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are only photorealistic images present, with no black and white or color stylized images. To meet the target distribution, a significant number of photorealistic images need to be generated, along with the required stylized images.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "actor_id": "0009_european_65_male",
+  "created_at": "2025-10-17T15:02:07.828895",
+  "status": "pending",
+  "current_state": {
+    "total_images": 17,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    },
+    "percentages": {
+      "photorealistic": 58.82352941176471,
+      "bw_stylized": 23.52941176470588,
+      "color_stylized": 17.647058823529413
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "filename": "0009_european_65_male_6.png",
+      "local_path": "data/actors/0009_european_65_male/training_data/0009_european_65_male_6.png",
+      "s3_url": "",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "filename": "0009_european_65_male_15.jpg",
+      "local_path": "data/actors/0009_european_65_male/training_data/0009_european_65_male_15.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0009_european_65_male/0009_european_65_male_15.jpg",
+      "quality_score": 4
+    },
+    {
+      "image_number": 15,
+      "type": "bw_stylized",
+      "filename": "0009_european_65_male_18.jpg",
+      "local_path": "data/actors/0009_european_65_male/training_data/0009_european_65_male_18.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0009_european_65_male/0009_european_65_male_18.jpg",
+      "quality_score": 3
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, there are 10 photorealistic images, which exceeds the target of 13. The black and white stylized images are at the target count, while color stylized images are at the lower end of the target. To balance the dataset, we recommend generating 3 additional photorealistic images and deleting the lower quality black and white stylized images.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "bw_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 5,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 7,
+      "type": "color_stylized",
+      "quality_score": 7
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 10,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 15,
+      "type": "bw_stylized",
+      "quality_score": 3
+    }
+  ]
+}

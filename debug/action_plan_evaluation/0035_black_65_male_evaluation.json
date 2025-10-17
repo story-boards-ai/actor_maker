@@ -1,0 +1,126 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 14,
+      "type": "color_stylized",
+      "quality_score": 7
+    }
+  ],
+  "counts": {
+    "photorealistic": 12,
+    "bw_stylized": 1,
+    "color_stylized": 2
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      4,
+      7
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 1,
+    "generate_bw_stylized": 3,
+    "generate_color_stylized": 1
+  },
+  "analysis": "The current mix has too many photorealistic images (12), exceeding the target of 65%. The quality of some of these images is not ideal, necessitating the deletion of lower-scoring images. There is a significant lack of black and white stylized images (only 1), which needs to be addressed by generating more. The color stylized images are also below the target, requiring one additional image.",
+  "total_images": 15,
+  "photorealistic_count": 12,
+  "bw_stylized_count": 1,
+  "color_stylized_count": 2,
+  "photorealistic_percentage": 80.0,
+  "bw_stylized_percentage": 6.666666666666667,
+  "color_stylized_percentage": 13.333333333333334,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 4,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 1
+    },
+    {
+      "type": "bw_stylized",
+      "count": 3
+    },
+    {
+      "type": "color_stylized",
+      "count": 1
+    }
+  ],
+  "gpt_analysis": "The current mix has too many photorealistic images (12), exceeding the target of 65%. The quality of some of these images is not ideal, necessitating the deletion of lower-scoring images. There is a significant lack of black and white stylized images (only 1), which needs to be addressed by generating more. The color stylized images are also below the target, requiring one additional image.",
+  "actor_id": "0035_black_65_male",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

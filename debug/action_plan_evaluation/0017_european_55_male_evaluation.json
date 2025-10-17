@@ -1,0 +1,121 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 6
+    }
+  ],
+  "counts": {
+    "photorealistic": 11,
+    "bw_stylized": 0,
+    "color_stylized": 0
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      4,
+      7,
+      8,
+      11
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 2,
+    "generate_bw_stylized": 4,
+    "generate_color_stylized": 3
+  },
+  "analysis": "The current mix is heavily skewed towards photorealistic images, with no black and white or color stylized images present. To achieve the target distribution, we need to delete some lower-quality photorealistic images and generate additional images in the other categories.",
+  "total_images": 11,
+  "photorealistic_count": 11,
+  "bw_stylized_count": 0,
+  "color_stylized_count": 0,
+  "photorealistic_percentage": 100.0,
+  "bw_stylized_percentage": 0.0,
+  "color_stylized_percentage": 0.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 4,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 2
+    },
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "The current mix is heavily skewed towards photorealistic images, with no black and white or color stylized images present. To achieve the target distribution, we need to delete some lower-quality photorealistic images and generate additional images in the other categories.",
+  "actor_id": "0017_european_55_male",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

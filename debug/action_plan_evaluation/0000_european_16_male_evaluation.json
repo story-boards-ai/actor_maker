@@ -18,17 +18,17 @@
     {
       "image_number": 4,
       "type": "photorealistic",
-      "quality_score": 9
+      "quality_score": 7
     },
     {
       "image_number": 5,
-      "type": "photorealistic",
+      "type": "bw_stylized",
       "quality_score": 5
     },
     {
       "image_number": 6,
-      "type": "bw_stylized",
-      "quality_score": 4
+      "type": "color_stylized",
+      "quality_score": 8
     },
     {
       "image_number": 7,
@@ -37,57 +37,56 @@
     },
     {
       "image_number": 8,
-      "type": "color_stylized",
-      "quality_score": 6
+      "type": "bw_stylized",
+      "quality_score": 4
     },
     {
       "image_number": 9,
       "type": "photorealistic",
-      "quality_score": 8
+      "quality_score": 9
     },
     {
       "image_number": 10,
-      "type": "bw_stylized",
-      "quality_score": 3
+      "type": "photorealistic",
+      "quality_score": 8
     },
     {
       "image_number": 11,
       "type": "photorealistic",
-      "quality_score": 7
+      "quality_score": 6
     },
     {
       "image_number": 12,
-      "type": "photorealistic",
-      "quality_score": 9
+      "type": "color_stylized",
+      "quality_score": 7
     }
   ],
   "counts": {
     "photorealistic": 8,
     "bw_stylized": 2,
-    "color_stylized": 2
+    "color_stylized": 3
   },
   "recommendations": {
     "delete_photorealistic": [
       3,
-      5
+      11
     ],
     "delete_bw_stylized": [
-      6,
-      10
+      8
     ],
     "delete_color_stylized": [],
     "generate_photorealistic": 5,
     "generate_bw_stylized": 2,
-    "generate_color_stylized": 1
+    "generate_color_stylized": 0
   },
-  "analysis": "Currently, there are too many photorealistic images and too few black and white and color stylized images. Deleting lower quality images will help balance the distribution. Additional images need to be generated to meet the target distribution.",
-  "total_images": 12,
+  "analysis": "Currently, there are too many photorealistic images and not enough black and white stylized images. The photorealistic images need to be reduced by deleting lower quality ones, while more black and white stylized images should be generated to meet the target distribution.",
+  "total_images": 13,
   "photorealistic_count": 8,
   "bw_stylized_count": 2,
-  "color_stylized_count": 2,
-  "photorealistic_percentage": 66.66666666666666,
-  "bw_stylized_percentage": 16.666666666666664,
-  "color_stylized_percentage": 16.666666666666664,
+  "color_stylized_count": 3,
+  "photorealistic_percentage": 61.53846153846154,
+  "bw_stylized_percentage": 15.384615384615385,
+  "color_stylized_percentage": 23.076923076923077,
   "is_balanced": false,
   "images_to_delete": [
     {
@@ -95,15 +94,11 @@
       "type": "photorealistic"
     },
     {
-      "image_number": 5,
+      "image_number": 11,
       "type": "photorealistic"
     },
     {
-      "image_number": 6,
-      "type": "bw_stylized"
-    },
-    {
-      "image_number": 10,
+      "image_number": 8,
       "type": "bw_stylized"
     }
   ],
@@ -115,13 +110,9 @@
     {
       "type": "bw_stylized",
       "count": 2
-    },
-    {
-      "type": "color_stylized",
-      "count": 1
     }
   ],
-  "gpt_analysis": "Currently, there are too many photorealistic images and too few black and white and color stylized images. Deleting lower quality images will help balance the distribution. Additional images need to be generated to meet the target distribution.",
+  "gpt_analysis": "Currently, there are too many photorealistic images and not enough black and white stylized images. The photorealistic images need to be reduced by deleting lower quality ones, while more black and white stylized images should be generated to meet the target distribution.",
   "actor_id": "0000_european_16_male",
   "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
 }

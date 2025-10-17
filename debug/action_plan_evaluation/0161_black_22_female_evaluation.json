@@ -1,0 +1,132 @@
+{
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic",
+      "quality_score": 5
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 12,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 13,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic",
+      "quality_score": 6
+    }
+  ],
+  "counts": {
+    "photorealistic": 14,
+    "bw_stylized": 0,
+    "color_stylized": 0
+  },
+  "recommendations": {
+    "delete_photorealistic": [
+      5,
+      8,
+      10,
+      14
+    ],
+    "delete_bw_stylized": [],
+    "delete_color_stylized": [],
+    "generate_photorealistic": 0,
+    "generate_bw_stylized": 4,
+    "generate_color_stylized": 3
+  },
+  "analysis": "Currently, all images are categorized as photorealistic, exceeding the target distribution. There are no black and white or color stylized images present. To meet the target distribution, we need to delete lower quality photorealistic images and generate new black and white and color stylized images.",
+  "total_images": 14,
+  "photorealistic_count": 14,
+  "bw_stylized_count": 0,
+  "color_stylized_count": 0,
+  "photorealistic_percentage": 100.0,
+  "bw_stylized_percentage": 0.0,
+  "color_stylized_percentage": 0.0,
+  "is_balanced": false,
+  "images_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 8,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic"
+    },
+    {
+      "image_number": 14,
+      "type": "photorealistic"
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "bw_stylized",
+      "count": 4
+    },
+    {
+      "type": "color_stylized",
+      "count": 3
+    }
+  ],
+  "gpt_analysis": "Currently, all images are categorized as photorealistic, exceeding the target distribution. There are no black and white or color stylized images present. To meet the target distribution, we need to delete lower quality photorealistic images and generate new black and white and color stylized images.",
+  "actor_id": "0161_black_22_female",
+  "composite_image": "debug/action_plan_evaluation/current_composite.jpg"
+}

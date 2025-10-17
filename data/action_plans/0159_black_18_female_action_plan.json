@@ -1,0 +1,156 @@
+{
+  "actor_id": "0159_black_18_female",
+  "created_at": "2025-10-17T15:19:15.053970",
+  "status": "pending",
+  "current_state": {
+    "total_images": 14,
+    "distribution": {
+      "photorealistic": 10,
+      "bw_stylized": 3,
+      "color_stylized": 1
+    },
+    "percentages": {
+      "photorealistic": 71.42857142857143,
+      "bw_stylized": 21.428571428571427,
+      "color_stylized": 7.142857142857142
+    }
+  },
+  "target_state": {
+    "total_images": 20,
+    "distribution": {
+      "photorealistic": 13,
+      "bw_stylized": 4,
+      "color_stylized": 3
+    }
+  },
+  "is_balanced": false,
+  "files_to_delete": [
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "filename": "0159_black_18_female_11.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_11.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_11.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "filename": "0159_black_18_female_2.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_2.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_2.png",
+      "quality_score": 6
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "filename": "0159_black_18_female_4.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_4.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_4.png",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "filename": "0159_black_18_female_5.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_5.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_5.png",
+      "quality_score": 4
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "filename": "0159_black_18_female_9.png",
+      "local_path": "data/actors/0159_black_18_female/training_data/0159_black_18_female_9.png",
+      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0159_black_18_female/training_data/0159_black_18_female_9.png",
+      "quality_score": 5
+    }
+  ],
+  "images_to_generate": [
+    {
+      "type": "photorealistic",
+      "count": 3
+    },
+    {
+      "type": "bw_stylized",
+      "count": 1
+    },
+    {
+      "type": "color_stylized",
+      "count": 2
+    }
+  ],
+  "gpt_analysis": "Currently, there are too many photorealistic images and too few color stylized images. The quality of some photorealistic images is lower, necessitating deletion. Additionally, more color stylized images are needed to meet the target distribution.",
+  "image_classifications": [
+    {
+      "image_number": 1,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 2,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 3,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 4,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 5,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 6,
+      "type": "photorealistic",
+      "quality_score": 9
+    },
+    {
+      "image_number": 7,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 8,
+      "type": "color_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 9,
+      "type": "photorealistic",
+      "quality_score": 7
+    },
+    {
+      "image_number": 10,
+      "type": "photorealistic",
+      "quality_score": 6
+    },
+    {
+      "image_number": 11,
+      "type": "photorealistic",
+      "quality_score": 8
+    },
+    {
+      "image_number": 12,
+      "type": "bw_stylized",
+      "quality_score": 5
+    },
+    {
+      "image_number": 13,
+      "type": "bw_stylized",
+      "quality_score": 4
+    },
+    {
+      "image_number": 14,
+      "type": "bw_stylized",
+      "quality_score": 6
+    }
+  ]
+}
