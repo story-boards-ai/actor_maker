@@ -5,9 +5,9 @@ interface TrainingImage {
   index: number;
   filename: string;
   s3_url: string;
-  local_exists: boolean;
-  local_path: string | null;
-  status: "s3_only" | "local_only" | "synced" | "mismatch";
+  size_mb: number;
+  modified_date: string | null;
+  good: boolean;
 }
 
 interface TrainingPrompt {
@@ -128,7 +128,7 @@ export function TrainingImageModal({
               body: JSON.stringify({
                 actor_id: actorId,
                 actor_name: actorName,
-                base_image_path: baseImagePath,
+                base_image_url: baseImagePath,
                 prompt: prompt.prompt,
               }),
             }
@@ -176,20 +176,6 @@ export function TrainingImageModal({
   }
 
   if (!image && !showGenerator) return null;
-
-  const statusColors = {
-    synced: "#10b981",
-    s3_only: "#3b82f6",
-    local_only: "#f59e0b",
-    mismatch: "#ef4444",
-  };
-
-  const statusLabels = {
-    synced: "Fully Synced",
-    s3_only: "S3 Only",
-    local_only: "Local Only",
-    mismatch: "Hash Mismatch",
-  };
 
   // Render generator mode
   if (showGenerator && !image) {
@@ -556,14 +542,9 @@ export function TrainingImageModal({
           }}
         >
           <img
-            src={image.local_exists ? image.local_path! : image.s3_url}
+            src={image.s3_url}
             alt={image.filename}
             style={{ width: "100%", height: "auto", display: "block" }}
-            onError={(e) => {
-              if (image.local_exists && e.currentTarget.src !== image.s3_url) {
-                e.currentTarget.src = image.s3_url;
-              }
-            }}
           />
           <div style={{ padding: "24px" }}>
             <Dialog.Title
@@ -584,21 +565,14 @@ export function TrainingImageModal({
                 <strong>Index:</strong> #{image.index}
               </div>
               <div>
-                <strong>Status:</strong>{" "}
-                <span
-                  style={{ color: statusColors[image.status], fontWeight: 600 }}
-                >
-                  {statusLabels[image.status]}
-                </span>
+                <strong>Source:</strong> <span style={{ color: "#3b82f6", fontWeight: 600 }}>S3 Storage</span>
               </div>
-              {image.local_exists && (
+              <div>
+                <strong>Size:</strong> {image.size_mb.toFixed(2)} MB
+              </div>
+              {image.modified_date && (
                 <div>
-                  <strong>Source:</strong> Local
-                </div>
-              )}
-              {!image.local_exists && (
-                <div>
-                  <strong>Source:</strong> S3
+                  <strong>Modified:</strong> {new Date(image.modified_date).toLocaleDateString()}
                 </div>
               )}
             </div>

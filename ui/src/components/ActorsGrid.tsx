@@ -7,11 +7,12 @@ import "./ActorsGrid.css";
 
 interface ActorsGridProps {
   onOpenTrainingData?: (actor: Actor) => void;
+  onActorsLoaded?: (actors: Actor[]) => void;
 }
 
 type FilterType = 'missing_0_1' | 'has_15_plus' | 'good_only' | 'has_stylized' | 'no_training' | 'no_base_image';
 
-export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
+export function ActorsGrid({ onOpenTrainingData, onActorsLoaded }: ActorsGridProps = {}) {
   const [actors, setActors] = useState<Actor[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -78,6 +79,7 @@ export function ActorsGrid({ onOpenTrainingData }: ActorsGridProps = {}) {
       }
       const actorsData = await response.json();
       setActors(actorsData);
+      onActorsLoaded?.(actorsData);
     } catch (err) {
       console.error("Error loading actors:", err);
       setError(err instanceof Error ? err.message : "Failed to load actors");

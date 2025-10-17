@@ -50,6 +50,7 @@ function App() {
     useState<TrainingManagerTab | null>(null);
   const [s3ManagerTab, setS3ManagerTab] = useState<S3ManagerTab | null>(null);
   const [actorTrainingTab, setActorTrainingTab] = useState<ActorTrainingTab | null>(null);
+  const [actors, setActors] = useState<Actor[]>([]);
   const [pendingImageGenLoad, setPendingImageGenLoad] = useState<{
     image: string;
     style: Style;
@@ -114,6 +115,33 @@ function App() {
   const handleCloseActorTraining = () => {
     setActorTrainingTab(null);
     setActiveTab("tab1"); // Go back to Actors Library
+  };
+
+  const handleNavigateActorPrevious = () => {
+    if (!actorTrainingTab || actors.length === 0) return;
+    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    if (currentIndex > 0) {
+      handleOpenActorTraining(actors[currentIndex - 1]);
+    }
+  };
+
+  const handleNavigateActorNext = () => {
+    if (!actorTrainingTab || actors.length === 0) return;
+    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    if (currentIndex < actors.length - 1) {
+      handleOpenActorTraining(actors[currentIndex + 1]);
+    }
+  };
+
+  const getActorNavigationState = () => {
+    if (!actorTrainingTab || actors.length === 0) {
+      return { hasPrevious: false, hasNext: false };
+    }
+    const currentIndex = actors.findIndex(a => a.id === actorTrainingTab.actor.id);
+    return {
+      hasPrevious: currentIndex > 0,
+      hasNext: currentIndex < actors.length - 1
+    };
   };
 
 
@@ -237,7 +265,10 @@ function App() {
         </Tabs.List>
 
         <Tabs.Content className="TabsContent" value="tab1">
-          <ActorsGrid onOpenTrainingData={handleOpenActorTraining} />
+          <ActorsGrid 
+            onOpenTrainingData={handleOpenActorTraining}
+            onActorsLoaded={setActors}
+          />
         </Tabs.Content>
 
         <Tabs.Content className="TabsContent" value="tab2">
@@ -304,6 +335,10 @@ function App() {
             <ActorTrainingDataManager
               actor={actorTrainingTab.actor}
               onClose={handleCloseActorTraining}
+              onNavigatePrevious={handleNavigateActorPrevious}
+              onNavigateNext={handleNavigateActorNext}
+              hasPrevious={getActorNavigationState().hasPrevious}
+              hasNext={getActorNavigationState().hasNext}
             />
           </Tabs.Content>
         )}

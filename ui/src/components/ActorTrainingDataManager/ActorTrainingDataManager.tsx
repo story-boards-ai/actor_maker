@@ -10,6 +10,10 @@ import { TrainingImageModal } from './TrainingImageModal';
 interface ActorTrainingDataManagerProps {
   actor: Actor;
   onClose: () => void;
+  onNavigatePrevious?: () => void;
+  onNavigateNext?: () => void;
+  hasPrevious?: boolean;
+  hasNext?: boolean;
 }
 
 interface TrainingImage {
@@ -27,7 +31,14 @@ interface SyncStatus {
   message: string;
 }
 
-export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataManagerProps) {
+export function ActorTrainingDataManager({ 
+  actor, 
+  onClose, 
+  onNavigatePrevious, 
+  onNavigateNext, 
+  hasPrevious = false, 
+  hasNext = false 
+}: ActorTrainingDataManagerProps) {
   const [trainingImages, setTrainingImages] = useState<TrainingImage[]>([]);
   const [baseImage, setBaseImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -74,8 +85,8 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       
       const data = await response.json();
       
-      // Set base image
-      setBaseImage(data.base_image_path || null);
+      // Set base image (S3 URL from manifest)
+      setBaseImage(data.base_image_url || null);
       
       // Set training images from new API structure
       setTrainingImages(data.training_images || []);
@@ -87,139 +98,41 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     }
   }
 
-  async function comprehensiveSync() {
-    try {
-      setSyncStatus({
-        syncing: true,
-        progress: { current: 0, total: 0 },
-        message: 'Auditing and syncing all training data...'
-      });
+  // S3-only architecture: No sync functions needed
+  // All images are stored in S3, manifest is the source of truth
 
-      const response = await fetch(`/api/actors/${actor.id}/training-data/comprehensive-sync`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          actor_name: actor.name,
-          delete_orphans: false,
-          dry_run: false
-        })
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Comprehensive sync failed');
-      }
-
-      const result = await response.json();
-      
-      const totalActions = (result.uploaded || 0) + (result.downloaded || 0) + 
-                          (result.added_to_manifest || 0) + (result.updated_in_manifest || 0);
-      
-      setSyncStatus({
-        syncing: false,
-        progress: { current: totalActions, total: totalActions },
-        message: `✅ Sync complete: ${result.uploaded || 0} uploaded, ${result.downloaded || 0} downloaded, ${result.added_to_manifest || 0} added to manifest`
-      });
-
-      // Reload to show updated data
-      await loadTrainingData();
-      
-      // Clear message after 5 seconds
-      setTimeout(() => {
-        setSyncStatus(prev => ({ ...prev, message: '' }));
-      }, 5000);
-
-    } catch (err) {
-      console.error('Comprehensive sync failed:', err);
-      setSyncStatus({
-        syncing: false,
-        progress: { current: 0, total: 0 },
-        message: `❌ Sync failed: ${err instanceof Error ? err.message : 'Unknown error'}`
-      });
-    }
-  }
-
-  async function syncFromS3() {
+  async function deleteAllTrainingData() {
     try {
       setSyncStatus({
         syncing: true,
         progress: { current: 0, total: trainingImages.length },
-        message: 'Starting sync from S3...'
+        message: 'Deleting all training data...'
       });
 
-      const response = await fetch(`/api/actors/${actor.id}/training-data/sync-from-s3`, {
+      const response = await fetch(`/api/actors/${actor.id}/training-data/delete-all`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          actor_id: actor.id,
-          actor_name: actor.name,
-          s3_urls: trainingImages.map(img => img.s3_url)
-        })
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Sync failed');
-      }
-
-      const result = await response.json();
-      
-      setSyncStatus({
-        syncing: false,
-        progress: { current: result.downloaded, total: trainingImages.length },
-        message: `✅ Synced ${result.downloaded} images from S3`
-      });
-
-      // Reload to update local status
-      await loadTrainingData();
-      
-      // Clear message after 3 seconds
-      setTimeout(() => {
-        setSyncStatus(prev => ({ ...prev, message: '' }));
-      }, 3000);
-
-    } catch (err) {
-      console.error('Sync from S3 failed:', err);
-      setSyncStatus({
-        syncing: false,
-        progress: { current: 0, total: 0 },
-        message: `❌ Sync failed: ${err instanceof Error ? err.message : 'Unknown error'}`
-      });
-    }
-  }
-
-  async function syncToS3() {
-    try {
-      setSyncStatus({
-        syncing: true,
-        progress: { current: 0, total: trainingImages.length },
-        message: 'Starting sync to S3...'
-      });
-
-      const response = await fetch(`/api/actors/${actor.id}/training-data/sync-to-s3`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          actor_id: actor.id,
           actor_name: actor.name
         })
       });
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || 'Sync failed');
+        throw new Error(errorData.error || 'Delete failed');
       }
 
       const result = await response.json();
       
       setSyncStatus({
         syncing: false,
-        progress: { current: result.uploaded, total: trainingImages.length },
-        message: `✅ Synced ${result.uploaded} images to S3`
+        progress: { current: result.deleted || 0, total: trainingImages.length },
+        message: `✅ Deleted ${result.deleted || 0} training images`
       });
 
-      // Reload to update status
+      // Reload to show empty state
       await loadTrainingData();
+      setShowDeleteAllConfirm(false);
       
       // Clear message after 3 seconds
       setTimeout(() => {
@@ -227,11 +140,11 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       }, 3000);
 
     } catch (err) {
-      console.error('Sync to S3 failed:', err);
+      console.error('Delete all failed:', err);
       setSyncStatus({
         syncing: false,
         progress: { current: 0, total: 0 },
-        message: `❌ Sync failed: ${err instanceof Error ? err.message : 'Unknown error'}`
+        message: `❌ Delete failed: ${err instanceof Error ? err.message : 'Unknown error'}`
       });
     }
   }
@@ -250,7 +163,7 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
         body: JSON.stringify({
           actor_id: actor.id,
           actor_name: actor.name,
-          base_image_path: baseImage,
+          base_image_url: baseImage,
           actor_type: 'person',
           actor_sex: actor.sex
         })
@@ -327,55 +240,6 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
     }
   }
 
-  async function deleteAllTrainingData() {
-    try {
-      setShowDeleteAllConfirm(false);
-      setSyncStatus({
-        syncing: true,
-        progress: { current: 0, total: trainingImages.length },
-        message: 'Deleting all training data...'
-      });
-
-      const response = await fetch(`/api/actors/${actor.id}/training-data/delete-all`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          actor_id: actor.id,
-          actor_name: actor.name
-        })
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Delete all failed');
-      }
-
-      const result = await response.json();
-      
-      setSyncStatus({
-        syncing: false,
-        progress: { current: result.deleted_local + result.deleted_s3, total: trainingImages.length },
-        message: `✅ Deleted all training data (${result.deleted_local} local, ${result.deleted_s3} S3)`
-      });
-
-      // Reload to update list
-      await loadTrainingData();
-      
-      // Clear message after 3 seconds
-      setTimeout(() => {
-        setSyncStatus(prev => ({ ...prev, message: '' }));
-      }, 3000);
-
-    } catch (err) {
-      console.error('Delete all failed:', err);
-      setSyncStatus({
-        syncing: false,
-        progress: { current: 0, total: 0 },
-        message: `❌ Delete all failed: ${err instanceof Error ? err.message : 'Unknown error'}`
-      });
-    }
-  }
-
   if (loading) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', background: '#f8fafc' }}>
@@ -415,6 +279,60 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
       {/* Header */}
       <div style={{ padding: '24px', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          {/* Navigation Chevrons */}
+          {(hasPrevious || hasNext) && (
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <button
+                onClick={onNavigatePrevious}
+                disabled={!hasPrevious}
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  background: hasPrevious ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.1)',
+                  color: 'white',
+                  fontSize: '20px',
+                  cursor: hasPrevious ? 'pointer' : 'not-allowed',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s',
+                  opacity: hasPrevious ? 1 : 0.4
+                }}
+                title="Previous Actor"
+                onMouseEnter={(e) => hasPrevious && (e.currentTarget.style.background = 'rgba(255,255,255,0.3)')}
+                onMouseLeave={(e) => hasPrevious && (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+              >
+                ‹
+              </button>
+              <button
+                onClick={onNavigateNext}
+                disabled={!hasNext}
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  background: hasNext ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.1)',
+                  color: 'white',
+                  fontSize: '20px',
+                  cursor: hasNext ? 'pointer' : 'not-allowed',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s',
+                  opacity: hasNext ? 1 : 0.4
+                }}
+                title="Next Actor"
+                onMouseEnter={(e) => hasNext && (e.currentTarget.style.background = 'rgba(255,255,255,0.3)')}
+                onMouseLeave={(e) => hasNext && (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+              >
+                ›
+              </button>
+            </div>
+          )}
+          
           <BaseImageThumbnail 
             baseImage={baseImage}
             actorName={actor.name}
@@ -581,7 +499,8 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                 {/* FLEXBOX GRID - NO CSS GRID */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
                   {trainingImages.map((img) => {
-                    const borderColor = img.status === 'synced' ? '#10b981' : img.status === 's3_only' ? '#3b82f6' : img.status === 'local_only' ? '#f59e0b' : '#ef4444';
+                    // S3-only: all images are in S3, blue border
+                    const borderColor = '#3b82f6';
                     
                     return (
                       <div key={img.index} style={{ width: `${gridSize}px`, background: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: `2px solid ${borderColor}`, transition: 'transform 0.2s ease', position: 'relative' }}>
@@ -591,39 +510,17 @@ export function ActorTrainingDataManager({ actor, onClose }: ActorTrainingDataMa
                           title="Click to view full size"
                         >
                           <img 
-                            src={img.local_exists ? img.local_path! : img.s3_url} 
+                            src={img.s3_url} 
                             alt={img.filename}
                             loading="lazy"
                             style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-                            onError={(e) => {
-                              if (img.local_exists && e.currentTarget.src !== img.s3_url) {
-                                e.currentTarget.src = img.s3_url;
-                              }
-                            }}
                           />
                           
-                          {/* Badges */}
+                          {/* S3 Badge */}
                           <div style={{ position: 'absolute', top: '8px', left: '8px', display: 'flex', flexDirection: 'column', gap: '4px', pointerEvents: 'none' }}>
-                            {img.local_exists && (
-                              <div style={{ padding: '4px 8px', background: 'rgba(16,185,129,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="Exists locally">
-                                💾
-                              </div>
-                            )}
-                            {img.s3_url && (
-                              <div style={{ padding: '4px 8px', background: 'rgba(59,130,246,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="Exists in S3">
-                                ☁️
-                              </div>
-                            )}
-                            {img.status === 'synced' && (
-                              <div style={{ padding: '4px 8px', background: 'rgba(34,197,94,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="Hashes match - fully synced">
-                                ✓
-                              </div>
-                            )}
-                            {img.status === 'mismatch' && (
-                              <div style={{ padding: '4px 8px', background: 'rgba(239,68,68,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="Hash mismatch - files differ">
-                                ⚠️
-                              </div>
-                            )}
+                            <div style={{ padding: '4px 8px', background: 'rgba(59,130,246,0.9)', color: 'white', fontSize: '12px', borderRadius: '4px', minWidth: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="S3 Storage">
+                              ☁️
+                            </div>
                           </div>
                           
                           {/* Delete Button - Direct delete, no confirmation */}

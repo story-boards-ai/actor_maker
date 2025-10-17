@@ -1,7 +1,8 @@
 import type { Actor } from '../../types';
 
 export interface TrainingDataManagerProps {
-  actor: Actor;
+  actor?: Actor;
+  style?: any; // Legacy support for style-based training data
   onClose: () => void;
   onSendToImageGen?: (baseImage: string, trainingImage?: string) => void;
 }

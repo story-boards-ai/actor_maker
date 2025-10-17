@@ -73,7 +73,7 @@ export interface Actor {
   training_data?: {
     s3_urls: string[];
     local_path: string;
-    base_image_path: string;
+    base_image_url: string;
     count: number;
     synced: boolean;
   };

@@ -83,26 +83,6 @@ export function handleGetTrainingData(
       return;
     }
 
-    console.log(`[S3-ONLY] Loading training data for actor ${actorId}`);
-
-    // Check for base/poster image in multiple locations
-    const possibleImagePaths = [
-      path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.jpg`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'base_image', `${actor.name}_base.png`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.png`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}_poster.jpg`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.png`),
-      path.join(projectRoot, 'data', 'actors', actor.name, 'poster_frame', `${actor.name}.jpg`)
-    ];
-    
-    let baseImageRelativePath: string | null = null;
-    for (const imagePath of possibleImagePaths) {
-      if (fs.existsSync(imagePath)) {
-        baseImageRelativePath = imagePath.replace(path.join(projectRoot, 'data'), '/data');
-        break;
-      }
-    }
-
     // Load manifest - S3 URLs are the source of truth
     const manifestPath = path.join(
       projectRoot,
@@ -113,12 +93,18 @@ export function handleGetTrainingData(
     
     const trainingImages: any[] = [];
     let manifestUpdated: string | null = null;
+    let baseImageS3Url: string | null = null;
     
     if (fs.existsSync(manifestPath)) {
-      console.log(`[S3-ONLY] Loading manifest from ${manifestPath}`);
       try {
         const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
         manifestUpdated = manifest.training_data_updated || null;
+        
+        // Get base image from manifest (S3 URL)
+        const baseImages = manifest.base_images || [];
+        if (baseImages.length > 0 && baseImages[0].s3_url) {
+          baseImageS3Url = baseImages[0].s3_url;
+        }
         
         // Get training data from manifest (S3 URLs only)
         const manifestData = manifest.training_data || [];
@@ -136,12 +122,9 @@ export function handleGetTrainingData(
           }
         });
         
-        console.log(`[S3-ONLY] Found ${trainingImages.length} images in manifest`);
       } catch (e) {
-        console.error(`[S3-ONLY] Error loading manifest:`, e);
+        console.error(`Error loading manifest:`, e);
       }
-    } else {
-      console.log(`[S3-ONLY] No manifest found for actor ${actorId}`);
     }
 
     // Load prompt_metadata.json to get good status
@@ -160,16 +143,13 @@ export function handleGetTrainingData(
       });
     }
 
-    console.log(`[S3-ONLY] Returning ${trainingImages.length} S3 images`);
-
-
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       actor_id: actor.id,
       actor_name: actor.name,
       training_images: trainingImages,
-      base_image_path: baseImageRelativePath,
+      base_image_url: baseImageS3Url,
       total_count: trainingImages.length,
       manifest_updated: manifestUpdated
     }));

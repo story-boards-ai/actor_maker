@@ -86,20 +86,18 @@ export function handleGenerateAllPromptImages(
         throw new Error('Empty request body');
       }
 
-      const { actor_name, base_image_path, actor_type, actor_sex } = JSON.parse(body);
+      const { actor_name, base_image_url, actor_type, actor_sex } = JSON.parse(body);
       
-      console.log('[Generate All Prompts] Parsed data:', { actor_name, base_image_path });
+      console.log('[Generate All Prompts] Parsed data:', { actor_name, base_image_url });
 
-      // Convert relative path to absolute path
-      const absoluteImagePath = base_image_path.startsWith('/data') 
-        ? path.join(projectRoot, base_image_path)
-        : base_image_path;
+      // base_image_url is now an S3 URL from manifest, use it directly
+      const imageUrl = base_image_url;
 
-      console.log('[Generate All Prompts] Absolute path:', absoluteImagePath);
+      console.log('[Generate All Prompts] Using S3 URL:', imageUrl);
 
       // Call Python script to generate all prompt images
       const scriptPath = path.join(projectRoot, 'scripts', 'generate_all_prompt_images.py');
-      const args = [scriptPath, actor_name, absoluteImagePath];
+      const args = [scriptPath, actor_name, imageUrl];
       if (actor_type) args.push(actor_type);
       if (actor_sex) args.push(actor_sex);
 
@@ -180,20 +178,18 @@ export function handleGenerateSingleTrainingImage(
         throw new Error('Empty request body');
       }
 
-      const { actor_name, base_image_path, prompt, actor_type, actor_sex } = JSON.parse(body);
+      const { actor_name, base_image_url, prompt, actor_type, actor_sex } = JSON.parse(body);
       
-      console.log('[Generate Single] Parsed data:', { actor_name, base_image_path, prompt });
+      console.log('[Generate Single] Parsed data:', { actor_name, base_image_url, prompt });
 
-      // Convert relative path to absolute path
-      const absoluteImagePath = base_image_path.startsWith('/data') 
-        ? path.join(projectRoot, base_image_path)
-        : base_image_path;
+      // base_image_url is now an S3 URL from manifest, use it directly
+      const imageUrl = base_image_url;
 
-      console.log('[Generate Single] Absolute path:', absoluteImagePath);
+      console.log('[Generate Single] Using S3 URL:', imageUrl);
 
       // Call Python script to generate single training image
-      const scriptPath = path.join(projectRoot, 'scripts', 'generate_single_training_image.py');
-      const args = [scriptPath, actor_name, absoluteImagePath, prompt];
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_single_prompt_image.py');
+      const args = [scriptPath, actor_name, imageUrl, prompt];
       if (actor_type) args.push(actor_type);
       if (actor_sex) args.push(actor_sex);
 
