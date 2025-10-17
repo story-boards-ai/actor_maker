@@ -5,6 +5,7 @@ import type { TrainedModel } from "../hooks/useValidatorState";
 import type { TestSuite } from "../types/test-suite";
 import type { ValidatorCharacter } from "../types/character";
 import { CharacterSelectionModal } from "./CharacterSelectionModal";
+import { CINEMATIC_PROMPTS, replaceCharacterToken } from "../../../utils/cinematicPrompts";
 
 type AssessmentRating =
   | "excellent"
@@ -67,6 +68,7 @@ interface ControlPanelProps {
 export function ControlPanel(props: ControlPanelProps) {
   const [registrySaved, setRegistrySaved] = React.useState(false);
   const [showCharacterModal, setShowCharacterModal] = React.useState(false);
+  const [selectedCinematicPrompt, setSelectedCinematicPrompt] = React.useState<string>("");
 
   const {
     styles,
@@ -111,6 +113,31 @@ export function ControlPanel(props: ControlPanelProps) {
 
   const selectedStyleData = styles.find((s) => s.id === selectedStyle);
   const selectedModelData = trainedModels.find((m) => m.id === selectedModel);
+
+  // Handle cinematic prompt selection
+  const handleCinematicPromptChange = (promptId: string) => {
+    setSelectedCinematicPrompt(promptId);
+    
+    if (!promptId) {
+      return; // User selected the placeholder option
+    }
+
+    const cinematicPrompt = CINEMATIC_PROMPTS.find(p => p.id === promptId);
+    if (!cinematicPrompt) {
+      return;
+    }
+
+    // Get the first selected character's class token
+    const characterToken = selectedCharacters.length > 0 
+      ? selectedCharacters[0].classToken 
+      : "[character]";
+
+    // Replace [character] with actual class token
+    const finalPrompt = replaceCharacterToken(cinematicPrompt.prompt, characterToken);
+    
+    // Update the prompt
+    onPromptChange(finalPrompt);
+  };
 
   return (
     <div className="validator-control-panel">
@@ -397,6 +424,33 @@ export function ControlPanel(props: ControlPanelProps) {
           onOpenChange={onToggleStyleModal}
           assessments={assessments}
         />
+
+        {/* Cinematic Prompts Dropdown */}
+        <div style={{ marginBottom: "8px" }}>
+          <select
+            value={selectedCinematicPrompt}
+            onChange={(e) => handleCinematicPromptChange(e.target.value)}
+            disabled={loading}
+            className="style-select"
+            style={{
+              width: "100%",
+              padding: "8px",
+              fontSize: "13px",
+              background: "rgba(0, 0, 0, 0.3)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              borderRadius: "6px",
+              color: "#fff",
+              cursor: loading ? "not-allowed" : "pointer",
+            }}
+          >
+            <option value="">🎬 Select a cinematic prompt...</option>
+            {CINEMATIC_PROMPTS.map((cinematicPrompt) => (
+              <option key={cinematicPrompt.id} value={cinematicPrompt.id}>
+                {cinematicPrompt.label}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <textarea
           id="prompt-input"
