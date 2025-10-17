@@ -32,6 +32,31 @@ Each image should maintain the artistic style, color palette, visual characteris
     return prompt
 
 
+def build_single_image_prompt(description: str, image_type: str) -> str:
+    """
+    Build a prompt for generating a single training image.
+    
+    Args:
+        description: Description of what to generate
+        image_type: Type of image (photorealistic, bw_stylized, color_stylized)
+        
+    Returns:
+        Formatted prompt string for single image generation
+    """
+    # Style modifiers based on image type
+    style_modifiers = {
+        "photorealistic": "Cinematic film scene, realistic lighting, natural environment, photorealistic style",
+        "bw_stylized": "Black and white illustration, pen and ink style, high contrast, artistic illustration, NOT photorealistic",
+        "color_stylized": "Color illustration, artistic style, digital painting or watercolor, vibrant colors, NOT photorealistic"
+    }
+    
+    style = style_modifiers.get(image_type, "")
+    
+    prompt = f"{description} in this artistic style. {style}. Preserve the character's identity and key attributes."
+    
+    return prompt
+
+
 def build_uniqueness_analysis_prompt() -> str:
     """
     Build GPT Vision analysis prompt for identifying unique tiles.

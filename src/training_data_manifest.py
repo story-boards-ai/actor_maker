@@ -185,6 +185,26 @@ class TrainingDataManifest:
             if data.get("generation_id") == generation_id
         }
     
+    def remove_image(self, filename: str) -> bool:
+        """
+        Remove an image from the manifest.
+        
+        Args:
+            filename: Name of the image file to remove
+            
+        Returns:
+            True if image was removed, False if not found
+        """
+        if filename in self.manifest["images"]:
+            del self.manifest["images"][filename]
+            self.manifest["total_images"] = len(self.manifest["images"])
+            self.manifest["updated_at"] = datetime.now().isoformat()
+            logger.info(f"Removed image {filename} from manifest")
+            return True
+        else:
+            logger.warning(f"Image {filename} not found in manifest")
+            return False
+    
     def get_stats(self) -> Dict[str, Any]:
         """Get manifest statistics."""
         return {

@@ -1,7 +1,7 @@
 {
   "actor_id": "0000_european_16_male",
   "created_at": "2025-10-17T15:00:07.084323",
-  "status": "pending",
+  "status": "completed",
   "current_state": {
     "total_images": 13,
     "distribution": {
@@ -122,5 +122,10 @@
       "type": "color_stylized",
       "quality_score": 7
     }
-  ]
+  ],
+  "executed_at": "2025-10-17T15:49:12.013214",
+  "execution_summary": {
+    "deleted": 3,
+    "generated": 7
+  }
 }

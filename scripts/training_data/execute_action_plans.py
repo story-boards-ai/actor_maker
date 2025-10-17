@@ -30,6 +30,8 @@ import sys
 import json
 import logging
 import argparse
+import asyncio
+import os
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, Dict, Any, List
@@ -55,7 +57,17 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 from training_data_manifest import TrainingDataManifest
-# from training_data_generator import TrainingDataGenerator  # TODO: Uncomment when implementing generation
+from replicate_service import ReplicateService
+from actor_training_prompts import get_actor_training_prompts, get_actor_descriptor
+
+# Try to import S3 upload function (optional)
+try:
+    from utils.s3 import S3Client
+    s3_available = True
+except ImportError:
+    logger.warning("S3 upload not available")
+    s3_available = False
+    S3Client = None
 
 # Try to import S3Manager (optional)
 try:
@@ -68,20 +80,35 @@ except ImportError:
 class ActionPlanExecutor:
     """Execute action plans to balance training data."""
     
-    def __init__(self, dry_run: bool = True):
+    # Maximum concurrent image generation requests
+    MAX_CONCURRENT_REQUESTS = 2
+    
+    def __init__(self, dry_run: bool = True, user_id: str = "system"):
         """
         Initialize executor.
         
         Args:
             dry_run: If True, only show what would happen without making changes
+            user_id: User ID for S3 uploads
         """
         self.dry_run = dry_run
+        self.user_id = user_id
         self.s3_manager = S3Manager() if S3Manager else None
+        
+        # Initialize Replicate service
+        try:
+            self.replicate = ReplicateService()
+            logger.info("✅ Replicate service initialized")
+        except Exception as e:
+            logger.warning(f"⚠️  Replicate service not available: {e}")
+            self.replicate = None
         
         if dry_run:
             logger.info("🔍 DRY RUN MODE - No changes will be made")
         else:
             logger.warning("⚠️  EXECUTION MODE - Changes will be made!")
+        
+        logger.info(f"📊 Concurrency limit: {self.MAX_CONCURRENT_REQUESTS} concurrent image generation requests")
     
     def execute_action_plan(
         self,
@@ -255,7 +282,7 @@ class ActionPlanExecutor:
         manifest: TrainingDataManifest
     ) -> int:
         """
-        Execute image generation.
+        Execute image generation with concurrency control.
         
         Args:
             actor_id: Actor ID
@@ -274,31 +301,269 @@ class ActionPlanExecutor:
         logger.info(f"")
         logger.info(f"🎨 GENERATION ({total_to_generate} images)")
         logger.info(f"{'='*70}")
+        logger.info(f"Concurrency: Max {self.MAX_CONCURRENT_REQUESTS} requests at a time")
         
+        # Build list of all individual generation tasks
+        generation_tasks = []
         for gen_spec in images_to_generate:
             img_type = gen_spec["type"]
             count = gen_spec["count"]
             
-            logger.info(f"")
-            logger.info(f"Generating {count} {img_type} images")
-            
-            if self.dry_run:
-                logger.info(f"  [DRY RUN] Would generate {count} {img_type} images")
-                logger.info(f"  [DRY RUN] Would upload to S3")
-                logger.info(f"  [DRY RUN] Would add to manifest")
-            else:
-                logger.info(f"  ⚠️  Image generation not yet implemented")
-                logger.info(f"  TODO: Integrate with TrainingDataGenerator")
-                logger.info(f"  TODO: Upload to S3")
-                logger.info(f"  TODO: Add to manifest")
+            for i in range(count):
+                generation_tasks.append({
+                    "type": img_type,
+                    "index": i + 1,
+                    "total": count
+                })
         
         if self.dry_run:
+            # Dry run - just show what would happen
+            for gen_spec in images_to_generate:
+                img_type = gen_spec["type"]
+                count = gen_spec["count"]
+                
+                logger.info(f"")
+                logger.info(f"Generating {count} {img_type} images")
+                logger.info(f"  [DRY RUN] Would generate {count} {img_type} images")
+                logger.info(f"  [DRY RUN] Would process in batches of {self.MAX_CONCURRENT_REQUESTS}")
+                logger.info(f"  [DRY RUN] Would upload to S3")
+                logger.info(f"  [DRY RUN] Would add to manifest")
+            
             return total_to_generate
         else:
-            # TODO: Implement actual generation
-            logger.warning(f"")
-            logger.warning(f"⚠️  Generation not yet implemented - skipping")
-            return 0
+            # Actual execution with concurrency control
+            logger.info(f"")
+            logger.info(f"Processing {len(generation_tasks)} images in batches of {self.MAX_CONCURRENT_REQUESTS}")
+            
+            # Prepare prompts ONCE for all batches
+            prompt_state = self._prepare_prompts_for_actor(actor_id)
+            
+            generated_count = 0
+            
+            # Process in batches of MAX_CONCURRENT_REQUESTS
+            for i in range(0, len(generation_tasks), self.MAX_CONCURRENT_REQUESTS):
+                batch = generation_tasks[i:i + self.MAX_CONCURRENT_REQUESTS]
+                batch_num = (i // self.MAX_CONCURRENT_REQUESTS) + 1
+                total_batches = (len(generation_tasks) + self.MAX_CONCURRENT_REQUESTS - 1) // self.MAX_CONCURRENT_REQUESTS
+                
+                logger.info(f"")
+                logger.info(f"📦 Batch {batch_num}/{total_batches} ({len(batch)} images)")
+                
+                for task in batch:
+                    logger.info(f"  - {task['type']} image {task['index']}/{task['total']}")
+                
+                # Generate images in this batch
+                if not self.replicate:
+                    logger.error(f"  ❌ Replicate service not available - skipping generation")
+                    continue
+                
+                try:
+                    batch_results = self._generate_batch_images(actor_id, batch, manifest, prompt_state)
+                    generated_count += len(batch_results)
+                    logger.info(f"  ✅ Generated {len(batch_results)} images in this batch")
+                except Exception as e:
+                    logger.error(f"  ❌ Batch generation failed: {e}")
+                    continue
+            
+            # Save manifest with new images
+            if generated_count > 0:
+                manifest.save()
+                logger.info(f"")
+                logger.info(f"✅ Manifest saved with {generated_count} new images")
+            
+            return generated_count
+    
+    def _prepare_prompts_for_actor(self, actor_id: str) -> Dict[str, Any]:
+        """
+        Prepare and shuffle prompts for an actor once.
+        
+        Args:
+            actor_id: Actor ID
+            
+        Returns:
+            Dict with prompts and tracking state
+        """
+        # Get actor metadata to determine descriptor
+        try:
+            actors_data_file = Path("data/actorsData.json")
+            actors_data = json.loads(actors_data_file.read_text())
+            actor_info = next((a for a in actors_data if a["name"] == actor_id), None)
+            
+            if actor_info:
+                sex = actor_info.get("sex", "male")
+                descriptor = get_actor_descriptor("human", sex)
+            else:
+                descriptor = "person"
+        except Exception as e:
+            logger.warning(f"Could not load actor metadata: {e}")
+            descriptor = "person"
+        
+        logger.info(f"Using descriptor: {descriptor}")
+        
+        # Get all training prompts for this actor
+        all_prompts = get_actor_training_prompts(descriptor)
+        
+        # Separate prompts by type
+        photorealistic_prompts = all_prompts[:15].copy()
+        bw_stylized_prompts = all_prompts[15:26].copy()
+        color_stylized_prompts = all_prompts[26:35].copy()
+        
+        # Shuffle prompts for variety
+        import random
+        random.shuffle(photorealistic_prompts)
+        random.shuffle(bw_stylized_prompts)
+        random.shuffle(color_stylized_prompts)
+        
+        return {
+            "photorealistic": photorealistic_prompts,
+            "bw_stylized": bw_stylized_prompts,
+            "color_stylized": color_stylized_prompts,
+            "used_indices": {"photorealistic": 0, "bw_stylized": 0, "color_stylized": 0}
+        }
+    
+    def _generate_batch_images(
+        self,
+        actor_id: str,
+        batch: List[Dict[str, Any]],
+        manifest: TrainingDataManifest,
+        prompt_state: Dict[str, Any]
+    ) -> List[str]:
+        """
+        Generate a batch of images concurrently.
+        
+        Args:
+            actor_id: Actor ID
+            batch: List of generation tasks
+            manifest: Training data manifest
+            
+        Returns:
+            List of generated image URLs
+        """
+        # Get actor's base image for reference
+        actor_dir = Path(f"data/actors/{actor_id}")
+        base_image_dir = actor_dir / "base_image"
+        
+        # Find base image
+        base_image_path = None
+        if base_image_dir.exists():
+            for ext in ['.png', '.jpg', '.jpeg']:
+                potential_path = base_image_dir / f"{actor_id}_base{ext}"
+                if potential_path.exists():
+                    base_image_path = potential_path
+                    break
+        
+        if not base_image_path:
+            logger.error(f"No base image found for actor {actor_id}")
+            return []
+        
+        logger.info(f"Using base image: {base_image_path}")
+        
+        # Read local base image as base64
+        import base64
+        with open(base_image_path, 'rb') as f:
+            image_bytes = f.read()
+            source_image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+        
+        logger.info(f"Loaded base image ({len(source_image_base64)} chars base64)")
+        
+        # Get prompts from shared state
+        photorealistic_prompts = prompt_state["photorealistic"]
+        bw_stylized_prompts = prompt_state["bw_stylized"]
+        color_stylized_prompts = prompt_state["color_stylized"]
+        used_indices = prompt_state["used_indices"]
+        
+        generated_urls = []
+        
+        # Calculate starting index once for the batch
+        training_data_dir = actor_dir / "training_data"
+        training_data_dir.mkdir(parents=True, exist_ok=True)
+        existing_images = list(training_data_dir.glob("*.jpg")) + list(training_data_dir.glob("*.png"))
+        next_index = len(existing_images)
+        
+        # Generate each image in the batch
+        for task in batch:
+            img_type = task["type"]
+            
+            try:
+                # Select next prompt for this type
+                if img_type == "photorealistic":
+                    prompt_list = photorealistic_prompts
+                elif img_type == "bw_stylized":
+                    prompt_list = bw_stylized_prompts
+                else:  # color_stylized
+                    prompt_list = color_stylized_prompts
+                
+                # Get next prompt (cycle if needed)
+                prompt_index = used_indices[img_type] % len(prompt_list)
+                prompt = prompt_list[prompt_index]
+                used_indices[img_type] += 1
+                
+                logger.info(f"    Generating {img_type} image...")
+                logger.info(f"    Prompt: {prompt[:100]}...")
+                
+                # Generate image with Replicate (using grid method for single image)
+                image_url = self.replicate.generate_grid_with_flux_kontext(
+                    prompt=prompt,
+                    input_image_base64=source_image_base64,
+                    aspect_ratio="1:1",
+                    output_format="jpg"
+                )
+                
+                # Generate filename with incrementing index
+                filename = f"{actor_id}_{next_index}.jpg"
+                local_path = training_data_dir / filename
+                next_index += 1  # Increment for next image in batch
+                
+                # Download and save locally
+                import requests
+                response = requests.get(image_url)
+                response.raise_for_status()
+                local_path.write_bytes(response.content)
+                
+                logger.info(f"    ✅ Saved locally: {filename}")
+                
+                # Upload to S3 (optional)
+                s3_url = ""
+                if s3_available and S3Client:
+                    try:
+                        s3_client = S3Client()
+                        with open(local_path, 'rb') as f:
+                            result = s3_client.upload_image(
+                                image_data=f,
+                                bucket=os.getenv("AWS_BUCKET", "story-boards-assets"),
+                                key=f"system_actors/training_data/{actor_id}/{filename}"
+                            )
+                        # Extract just the URL string
+                        s3_url = result.get('Location', '') if isinstance(result, dict) else result
+                        logger.info(f"    ✅ Uploaded to S3: {s3_url}")
+                    except Exception as e:
+                        logger.warning(f"    ⚠️  S3 upload failed: {e}")
+                else:
+                    logger.info(f"    ⚠️  S3 not available - skipping upload")
+                
+                # Add to manifest
+                manifest.manifest["images"][filename] = {
+                    "filename": filename,
+                    "local_path": str(local_path),
+                    "s3_url": s3_url,
+                    "prompt": prompt,
+                    "prompt_preview": prompt[:100],
+                    "generated_at": datetime.now().isoformat(),
+                    "index": next_index,
+                    "generation_id": len(manifest.manifest["generations"]) + 1,
+                    "generation_type": img_type
+                }
+                manifest.manifest["total_images"] = len(manifest.manifest["images"])
+                manifest.manifest["updated_at"] = datetime.now().isoformat()
+                
+                generated_urls.append(image_url)
+                logger.info(f"    ✅ Added to manifest")
+                
+            except Exception as e:
+                logger.error(f"    ❌ Failed to generate {img_type} image: {e}")
+                continue
+        
+        return generated_urls
 
 
 def execute_all_action_plans(

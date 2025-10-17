@@ -1,0 +1,324 @@
+import { IncomingMessage, ServerResponse } from 'http';
+import * as path from 'path';
+import { spawn } from 'child_process';
+
+/**
+ * POST /api/actors/:actorId/training-data/generate
+ * Generates training images from base image
+ */
+export function handleGenerateTrainingImages(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      const { actor_name, base_image_path, count } = JSON.parse(body);
+
+      // Call Python script to generate training images
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_actor_training_images.py');
+      const pythonProcess = spawn('python3', [
+        scriptPath,
+        actor_name,
+        base_image_path,
+        count.toString()
+      ]);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ generated: count, message: 'Generation completed' }));
+          }
+        } else {
+          console.error('Generation failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Generation failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('Error parsing request:', error);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Invalid request body' }));
+    }
+  });
+}
+
+/**
+ * POST /api/actors/:actorId/training-data/generate-all-prompts
+ * Generates one image for each available prompt
+ */
+export function handleGenerateAllPromptImages(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Generate All Prompts] Received body length:', body.length);
+      
+      if (!body || body.length === 0) {
+        throw new Error('Empty request body');
+      }
+
+      const { actor_name, base_image_path, actor_type, actor_sex } = JSON.parse(body);
+      
+      console.log('[Generate All Prompts] Parsed data:', { actor_name, base_image_path });
+
+      // Convert relative path to absolute path
+      const absoluteImagePath = base_image_path.startsWith('/data') 
+        ? path.join(projectRoot, base_image_path)
+        : base_image_path;
+
+      console.log('[Generate All Prompts] Absolute path:', absoluteImagePath);
+
+      // Call Python script to generate all prompt images
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_all_prompt_images.py');
+      const args = [scriptPath, actor_name, absoluteImagePath];
+      if (actor_type) args.push(actor_type);
+      if (actor_sex) args.push(actor_sex);
+
+      console.log('[Generate All Prompts] Spawning Python with args:', args);
+
+      const pythonProcess = spawn('python3', args);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        const chunk = data.toString();
+        output += chunk;
+        // Stream logs to console in real-time
+        console.log('[Generate All Prompts - Python]', chunk.trim());
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        const chunk = data.toString();
+        errorOutput += chunk;
+        // Stream error/info logs to console in real-time (Python logging goes to stderr)
+        console.log('[Generate All Prompts - Python Info]', chunk.trim());
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            console.log('[Generate All Prompts] Completed successfully:', result);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            console.log('[Generate All Prompts] Completed (no JSON output)');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+          }
+        } else {
+          console.error('All prompts generation failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Generation failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Generate All Prompts] Error:', error);
+      console.error('[Generate All Prompts] Body was:', body);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error',
+        bodyLength: body.length
+      }));
+    }
+  });
+}
+
+/**
+ * POST /api/actors/:actorId/training-data/generate-single
+ * Generates a single training image using Replicate flux-kontext-pro
+ */
+export function handleGenerateSingleTrainingImage(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Generate Single] Received body length:', body.length);
+      console.log('[Generate Single] Body content:', body);
+      
+      if (!body || body.length === 0) {
+        throw new Error('Empty request body');
+      }
+
+      const { actor_name, base_image_path, prompt, actor_type, actor_sex } = JSON.parse(body);
+      
+      console.log('[Generate Single] Parsed data:', { actor_name, base_image_path, prompt });
+
+      // Convert relative path to absolute path
+      const absoluteImagePath = base_image_path.startsWith('/data') 
+        ? path.join(projectRoot, base_image_path)
+        : base_image_path;
+
+      console.log('[Generate Single] Absolute path:', absoluteImagePath);
+
+      // Call Python script to generate single training image
+      const scriptPath = path.join(projectRoot, 'scripts', 'generate_single_training_image.py');
+      const args = [scriptPath, actor_name, absoluteImagePath, prompt];
+      if (actor_type) args.push(actor_type);
+      if (actor_sex) args.push(actor_sex);
+
+      console.log('[Generate Single] Spawning Python with args:', args);
+
+      const pythonProcess = spawn('python3', args);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+          }
+        } else {
+          console.error('Single image generation failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Generation failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Generate Single] Error:', error);
+      console.error('[Generate Single] Body was:', body);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error',
+        bodyLength: body.length
+      }));
+    }
+  });
+}
+
+/**
+ * POST /api/actors/:actorId/regenerate-poster-frame
+ * Regenerates poster frame for an actor using their trained LoRA model
+ */
+export function handleRegeneratePosterFrame(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Regenerate Poster Frame] Received request for actor:', actorId);
+      
+      const { actor_name, lora_model_url, actor_description } = JSON.parse(body);
+
+      console.log('[Regenerate Poster Frame] Parsed data:', { actor_name, lora_model_url });
+
+      // Call Python script to regenerate poster frame
+      const scriptPath = path.join(projectRoot, 'scripts', 'regenerate_poster_frame.py');
+      const pythonProcess = spawn('python3', [
+        scriptPath,
+        actorId,
+        actor_name,
+        lora_model_url || '',
+        actor_description || ''
+      ]);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        const chunk = data.toString();
+        output += chunk;
+        console.log('[Regenerate Poster Frame - Python]', chunk.trim());
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        const chunk = data.toString();
+        errorOutput += chunk;
+        console.log('[Regenerate Poster Frame - Python Info]', chunk.trim());
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            console.log('[Regenerate Poster Frame] Completed successfully:', result);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            console.log('[Regenerate Poster Frame] Completed (no JSON output)');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Poster frame regenerated' }));
+          }
+        } else {
+          console.error('Poster frame regeneration failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Regeneration failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Regenerate Poster Frame] Error:', error);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error'
+      }));
+    }
+  });
+}
