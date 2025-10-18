@@ -1,0 +1,95 @@
+{
+  "images": {
+    "0060_south_american_55_male_0.jpg": {
+      "prompt": "A flat vector illustration of A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. waiting on a metro platform, holding a small duffel, eyes looking left as a train approaches, head turned in profile away from viewer. Side angle shot from platform edge at a 38-degree diagonal, medium profile shot with long geometric shadows, face directed toward the approaching train. Off-center composition with character in left third, platform creating diagonal depth lines, two-point perspective, flat colors, simple shapes, crisp outlines, poster-like composition. Preserve recognizable features. Candid waiting pose, no camera awareness. Asymmetric framing, shot from the side, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Not photorealistic.",
+      "prompt_preview": "A flat vector illustration of A 55 year old south american man, with short greying hair, wearing Tra...",
+      "generated_at": "2025-10-18T13:43:26.055778",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_0.jpg",
+      "index": 0
+    },
+    "0060_south_american_55_male_1.jpg": {
+      "prompt": "A vibrant acrylic painting of A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. juggling flaming torches in a street performance, eyes tracking the arc of flames above, face tilted upward. Dutch angle with 17-degree tilt, wide shot from audience perspective to the side at 45-degree angle, face visible but looking up at the torches. Off-center framing with character in right third, crowd silhouettes creating diagonal depth, two-point perspective, bold brushwork, rich saturated colors with orange flame glow, energetic paint application. Preserve identity. Candid performance action, no eye contact. Asymmetric composition, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A vibrant acrylic painting of A 55 year old south american man, with short greying hair, wearing Tra...",
+      "generated_at": "2025-10-18T13:43:29.251163",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_1.jpg",
+      "index": 1
+    },
+    "0060_south_american_55_male_2.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. walks through a tall grass field at noon, wind blowing the grass in waves. Crane shot from high above at a 60-degree angle from side, eyes scanning the horizon ahead. Asymmetric wide composition with character positioned in lower-right third, bright daylight, character small in the vast landscape, three-point perspective. Head turned away, moving forward diagonally through frame at 45-degree angle, completely unaware of observation. Film-like cinematography, dynamic composition, no visible vanishing point in center, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:43:36.311287",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_2.jpg",
+      "index": 2
+    },
+    "0060_south_american_55_male_3.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:43:37.831367",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_3.jpg",
+      "index": 3
+    },
+    "0060_south_american_55_male_4.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. crouches by a forest stream, hands cupped in the water. Ground-level camera positioned to the side at water height and 45-degree angle, eyes focused on the flowing current. Asymmetric framing with character in right third, stream creating strong diagonal line through frame, two-point perspective, dappled sunlight through trees creating angular light patterns, green foliage surrounding. Character absorbed in the moment, head bowed, unaware of camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:43:45.692053",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_4.jpg",
+      "index": 4
+    },
+    "0060_south_american_55_male_5.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. walks along a rain-soaked pier during a storm, hood up. Low tracking shot from behind and to the side at 45-degree angle, camera following, eyes focused on the wooden planks ahead. Asymmetric framing with character in right third, pier creating strong diagonal line through frame, two-point perspective, dark gray sky, waves crashing against the pier supports at angles. Character hunched against the wind, moving forward through frame diagonally, unaware of observation. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:43:49.338846",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_5.jpg",
+      "index": 5
+    },
+    "0060_south_american_55_male_6.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. stands at the edge of a rocky beach at golden hour, waves crashing nearby. Extreme low angle from beach level, shooting upward at a steep diagonal, eyes gazing out at the ocean horizon. Off-center composition with character in upper-right third, dramatic sky dominating frame, three-point perspective, warm orange sunset light illuminating the face from the side, hair moving in the wind. Character lost in thought, completely unaware of observation. Film-like cinematography, angled camera view, no visible vanishing point in center, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:43:58.583469",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_6.jpg",
+      "index": 6
+    },
+    "0060_south_american_55_male_7.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. sits on a weathered wooden dock at dusk, feet dangling over calm lake water. High angle shot from above and behind at a 45-degree diagonal, eyes watching ripples spread across the surface. Asymmetric composition with character positioned in right third, dock creating strong diagonal line leading into frame, two-point perspective, soft purple-blue twilight, silhouette against the water. Character in quiet contemplation, unaware of camera. Film-like cinematography, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:44:06.014749",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_7.jpg",
+      "index": 7
+    },
+    "0060_south_american_55_male_8.jpg": {
+      "prompt": "A black-and-white scratchboard illustration of A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. scaling a rocky cliff face, both hands gripping stone above, eyes focused upward on the next handhold. Extreme low angle from far below at 65-degree angle, medium shot looking up at steep angle, face angled up and away from viewer. Off-center framing with character in upper-left third, dramatic rock formations creating diagonal composition, three-point perspective, white lines scratched from black surface, dramatic contrast with fine detail work. Preserve identity. Candid climbing action, no camera awareness. Asymmetric framing, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white scratchboard illustration of A 55 year old south american man, with short greying ...",
+      "generated_at": "2025-10-18T13:44:09.435616",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_8.jpg",
+      "index": 8
+    },
+    "0060_south_american_55_male_9.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up profile of A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. looking out a rain-streaked window. Camera positioned to the side at 90-degree angle, capturing face in sharp profile positioned in left or right third of frame, eyes focused on the street below, warm interior light from the opposite side. Asymmetric framing with window edge creating strong diagonal line, gaze directed downward and away, shallow depth of field, no other figures visible. Character absorbed in thought, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up profile of A 55 year old south american man, with short greyi...",
+      "generated_at": "2025-10-18T13:44:16.387360",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_9.jpg",
+      "index": 9
+    },
+    "0060_south_american_55_male_10.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. walks through a concrete parking garage, lit by overhead strip lights. Tracking shot from the side at 45-degree angle, camera moving with character, eyes focused ahead on the path. Off-center framing with character in left third, pillars creating depth and strong diagonal lines, two-point perspective, cold blue-green lighting, pillars casting long angular shadows. Character moving through frame diagonally at angle, unaware of being observed. Film-like cinematography, angled camera view, diagonal depth instead of straight central lines, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:44:18.119763",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_10.jpg",
+      "index": 10
+    },
+    "0060_south_american_55_male_11.jpg": {
+      "prompt": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. climbs a rocky mountain trail at midday, hands gripping stone. Extreme low angle shot from below, camera tilted upward at a steep 60-degree angle from side position, eyes focused upward on the path ahead. Off-center framing with character in lower-left third, dramatic sky and rock formations creating diagonal composition, three-point perspective, bright sunlight creating harsh angular shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 55 year old south american man, with short greying hair, wearing Traditional...",
+      "generated_at": "2025-10-18T13:44:26.927489",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_11.jpg",
+      "index": 11
+    },
+    "0060_south_american_55_male_12.jpg": {
+      "prompt": "A mixed media collage illustration of A 55 year old south american man, with short greying hair, wearing Traditional cream guayabera shirt with detailed embroidery, light khaki linen pants, and brown leather sandals with a matching leather wristwatch. vaulting over a concrete barrier in an urban plaza, mid-leap with arms extended, eyes locked on the landing zone ahead. Extreme low angle diagonal shot from ground level to the side at 68-degree angle, face visible but focused downward on landing spot. Off-center framing with character in upper-left third, dramatic perspective, three-point perspective, layered textures combining paint and paper elements, bold graphic shapes, vibrant street art color palette. Preserve facial structure. Candid parkour action, no eye contact. Asymmetric composition, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A mixed media collage illustration of A 55 year old south american man, with short greying hair, wea...",
+      "generated_at": "2025-10-18T13:44:37.235142",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0060_south_american_55_male/0060_south_american_55_male_12.jpg",
+      "index": 12
+    }
+  }
+}

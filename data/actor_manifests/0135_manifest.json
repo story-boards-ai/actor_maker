@@ -28,15 +28,166 @@
     "total_size_mb": 1.16,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:15.947789",
+  "training_data": [
+    {
+      "filename": "0135_middle_eastern_70_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_0.jpg",
+      "md5_hash": "ad05a19fa634897459009f9ddc0f8a15",
+      "size_bytes": 547205,
+      "size_mb": 0.52,
+      "modified_timestamp": 1760792254.7259226,
+      "modified_date": "2025-10-18T14:57:34.725924",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_1.jpg",
+      "md5_hash": "f70425de921efac0939082177519d712",
+      "size_bytes": 329826,
+      "size_mb": 0.31,
+      "modified_timestamp": 1760792256.1689038,
+      "modified_date": "2025-10-18T14:57:36.168905",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_2.jpg",
+      "md5_hash": "d82c2d1019ccd7100df9a64aad064dd9",
+      "size_bytes": 233323,
+      "size_mb": 0.22,
+      "modified_timestamp": 1760792264.7880435,
+      "modified_date": "2025-10-18T14:57:44.788045",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_3.jpg",
+      "md5_hash": "f574adb20ea80c8132b96c55e52f248f",
+      "size_bytes": 823694,
+      "size_mb": 0.79,
+      "modified_timestamp": 1760792266.4148514,
+      "modified_date": "2025-10-18T14:57:46.414853",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_4.jpg",
+      "md5_hash": "74d686767264766f026a0c884e189908",
+      "size_bytes": 263405,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760792273.9498918,
+      "modified_date": "2025-10-18T14:57:53.949894",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_5.jpg",
+      "md5_hash": "2db4f1cfdd5e4c2bd391a90ed1523edb",
+      "size_bytes": 280203,
+      "size_mb": 0.27,
+      "modified_timestamp": 1760792275.6673617,
+      "modified_date": "2025-10-18T14:57:55.667364",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_6.jpg",
+      "md5_hash": "6242316d709fca32fe21048fc17acd90",
+      "size_bytes": 215714,
+      "size_mb": 0.21,
+      "modified_timestamp": 1760792282.918334,
+      "modified_date": "2025-10-18T14:58:02.918335",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_7.jpg",
+      "md5_hash": "17f70d2f6bcd84729f8f452700415443",
+      "size_bytes": 626185,
+      "size_mb": 0.6,
+      "modified_timestamp": 1760792284.521909,
+      "modified_date": "2025-10-18T14:58:04.521911",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_8.jpg",
+      "md5_hash": "d7f2e1cf6a2c6d1b2f129686886ce91c",
+      "size_bytes": 541313,
+      "size_mb": 0.52,
+      "modified_timestamp": 1760792294.1367176,
+      "modified_date": "2025-10-18T14:58:14.136719",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_9.jpg",
+      "md5_hash": "faa5376a79f51db7e0e73352dbe3cb75",
+      "size_bytes": 491278,
+      "size_mb": 0.47,
+      "modified_timestamp": 1760792295.919432,
+      "modified_date": "2025-10-18T14:58:15.919434",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_10.jpg",
+      "md5_hash": "a27347b3659f15305d422e56bc2f1819",
+      "size_bytes": 311168,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760792304.883526,
+      "modified_date": "2025-10-18T14:58:24.883528",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_11.jpg",
+      "md5_hash": "0e0979833e8b95ee82f2269f0014a4a2",
+      "size_bytes": 369326,
+      "size_mb": 0.35,
+      "modified_timestamp": 1760792306.4906178,
+      "modified_date": "2025-10-18T14:58:26.490619",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_12.jpg",
+      "md5_hash": "ba84c7b95aaaee8c41b1d7b3c7708eaf",
+      "size_bytes": 352757,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760792314.1534438,
+      "modified_date": "2025-10-18T14:58:34.153446",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_13.jpg",
+      "md5_hash": "a95e50753840b726914706dde9176102",
+      "size_bytes": 969840,
+      "size_mb": 0.92,
+      "modified_timestamp": 1760792317.6478338,
+      "modified_date": "2025-10-18T14:58:37.647834",
+      "status": "synced"
+    },
+    {
+      "filename": "0135_middle_eastern_70_female_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0135_middle_eastern_70_female/0135_middle_eastern_70_female_14.jpg",
+      "md5_hash": "a0c47aaf5254840543e7aceea369dcb6",
+      "size_bytes": 243067,
+      "size_mb": 0.23,
+      "modified_timestamp": 1760792324.420656,
+      "modified_date": "2025-10-18T14:58:44.420657",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T14:58:44.420665",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0135_middle_eastern_70_female_poster_sm.webp",

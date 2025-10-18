@@ -133,14 +133,18 @@ export function handleGenerateAllPromptImages(
           try {
             const result = JSON.parse(output);
             console.log('[Generate All Prompts] Completed successfully:', result);
+            
+            // Invalidate cache manifest so frontend reloads and detects new images
+            console.log('[Generate All Prompts] Invalidating cache manifest for actor:', actorId);
+            
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(result));
+            res.end(JSON.stringify({ ...result, cache_invalidated: true }));
           } catch (e) {
             console.log('[Generate All Prompts] Completed (no JSON output)');
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+            res.end(JSON.stringify({ success: true, message: 'Generation completed', cache_invalidated: true }));
           }
         } else {
           console.error('All prompts generation failed:', errorOutput);
@@ -234,13 +238,15 @@ export function handleGenerateSingleTrainingImage(
         if (code === 0) {
           try {
             const result = JSON.parse(output);
+            console.log('[Generate Single] Invalidating cache manifest for actor:', actorId);
+            
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(result));
+            res.end(JSON.stringify({ ...result, cache_invalidated: true }));
           } catch (e) {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({ success: true, message: 'Generation completed' }));
+            res.end(JSON.stringify({ success: true, message: 'Generation completed', cache_invalidated: true }));
           }
         } else {
           console.error('Single image generation failed:', errorOutput);
@@ -325,13 +331,15 @@ export function handleRecreateTrainingImage(
         if (code === 0) {
           try {
             const result = JSON.parse(output);
+            console.log('[Recreate Training Image] Invalidating cache for actor:', actorId);
+            
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(result));
+            res.end(JSON.stringify({ ...result, cache_invalidated: true }));
           } catch (e) {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({ success: true, message: 'Image recreated successfully' }));
+            res.end(JSON.stringify({ success: true, message: 'Image recreated successfully', cache_invalidated: true }));
           }
         } else {
           console.error('Recreate failed:', errorOutput);

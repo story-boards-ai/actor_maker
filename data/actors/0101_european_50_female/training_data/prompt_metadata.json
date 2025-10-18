@@ -1,0 +1,39 @@
+{
+  "images": {
+    "0101_european_50_female_0.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of A 50 year old european woman, shoulder length blonde hair, little makeup, wearing Elegant cream-colored blazer over a soft pink silk blouse, tailored navy blue trousers, nude pumps, and a delicate gold necklace with pearl earrings. tying their bootlaces on a townhouse stoop under a single streetlamp in light rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of A 50 year old european woman, shoulder length blonde h...",
+      "generated_at": "2025-10-18T14:07:43.441364",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0101_european_50_female/0101_european_50_female_0.jpg",
+      "index": 0
+    },
+    "0101_european_50_female_1.jpg": {
+      "prompt": "A graphite pencil sketch of A 50 year old european woman, shoulder length blonde hair, little makeup, wearing Elegant cream-colored blazer over a soft pink silk blouse, tailored navy blue trousers, nude pumps, and a delicate gold necklace with pearl earrings. seated by a train window at dawn, eyes gazing out at the passing landscape with a reflective expression, head turned away from viewer. Extreme side angle from aisle perspective, medium close-up from slightly below eye level, face in sharp profile looking outside. Off-center framing with window creating diagonal, soft hatching and blending, visible pencil grain, no color. Preserve facial structure and hairstyle. Candid moment, no eye contact with viewer. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A graphite pencil sketch of A 50 year old european woman, shoulder length blonde hair, little makeup...",
+      "generated_at": "2025-10-18T14:07:45.073695",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0101_european_50_female/0101_european_50_female_1.jpg",
+      "index": 1
+    },
+    "0101_european_50_female_2.jpg": {
+      "prompt": "A soft pastel illustration of A 50 year old european woman, shoulder length blonde hair, little makeup, wearing Elegant cream-colored blazer over a soft pink silk blouse, tailored navy blue trousers, nude pumps, and a delicate gold necklace with pearl earrings. bending to collect debris on a windswept beach at sunset, hair blowing, eyes focused on the sand ahead. Ground level side angle from low position at a 37-degree diagonal, full body view, face angled downward searching the beach. Off-center framing with character in right third, beach stretching into distance creating diagonal depth, two-point perspective, blended pastel colors, warm sunset palette with cool shadows, atmospheric coastal scene. Preserve identity cues. Candid environmental action, no camera awareness. Asymmetric composition, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A soft pastel illustration of A 50 year old european woman, shoulder length blonde hair, little make...",
+      "generated_at": "2025-10-18T14:07:52.044897",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0101_european_50_female/0101_european_50_female_2.jpg",
+      "index": 2
+    },
+    "0101_european_50_female_3.jpg": {
+      "prompt": "A black-and-white conte crayon drawing of A 50 year old european woman, shoulder length blonde hair, little makeup, wearing Elegant cream-colored blazer over a soft pink silk blouse, tailored navy blue trousers, nude pumps, and a delicate gold necklace with pearl earrings. rushing down subway stairs, hand on railing, eyes looking down at steps ahead. Tracking shot from the side at a 42-degree diagonal angle, frontal diagonal view from platform level, face visible but angled downward in motion. Off-center framing with character in left third, stairs creating strong diagonal lines, two-point perspective, soft smudged blacks with sharp highlights, textured paper grain visible, dynamic diagonal composition. Preserve identity cues. Candid hurried movement, no eye contact. Asymmetric framing, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white conte crayon drawing of A 50 year old european woman, shoulder length blonde hair,...",
+      "generated_at": "2025-10-18T14:07:55.809607",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0101_european_50_female/0101_european_50_female_3.jpg",
+      "index": 3
+    },
+    "0101_european_50_female_4.jpg": {
+      "prompt": "A watercolor illustration of A 50 year old european woman, shoulder length blonde hair, little makeup, wearing Elegant cream-colored blazer over a soft pink silk blouse, tailored navy blue trousers, nude pumps, and a delicate gold necklace with pearl earrings. seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug, eyes gazing out the window at the rain. High angle shot from outside looking in through window at a 48-degree diagonal, three-quarter view, head turned away from viewer looking outside. Off-center framing with character in right third, window frame creating strong diagonal line, two-point perspective, soft backlight from the window, warm interior tones against cool exterior. Paper texture visible, gentle bleeding, hand-painted look. Preserve identity. Candid contemplative moment, no eye contact. Asymmetric composition, angled camera view, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor illustration of A 50 year old european woman, shoulder length blonde hair, little makeu...",
+      "generated_at": "2025-10-18T14:08:01.273159",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0101_european_50_female/0101_european_50_female_4.jpg",
+      "index": 4
+    }
+  }
+}

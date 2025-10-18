@@ -296,6 +296,21 @@ class ImageCacheService {
       }
     }
   }
+
+  /**
+   * Reload the cache manifest from backend
+   * Call this after generating new images to detect them for caching
+   */
+  async reloadManifest(): Promise<void> {
+    console.log("[ImageCache] Reloading manifest...");
+    this.manifestLoaded = false;
+    await this.initialize();
+    console.log(
+      `[ImageCache] Manifest reloaded with ${
+        Object.keys(this.manifest?.entries || {}).length
+      } entries`
+    );
+  }
 }
 
 // Singleton instance

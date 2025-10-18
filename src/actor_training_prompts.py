@@ -4,6 +4,7 @@ These prompts are designed for character/actor LoRA training with cinematic scen
 """
 
 from typing import List
+from .prompt_color_stripper import strip_color_terms
 
 
 def get_actor_training_prompts(descriptor: str) -> List[str]:
@@ -137,10 +138,16 @@ def get_actor_training_prompts(descriptor: str) -> List[str]:
     # Use all 15 photorealistic prompts for comprehensive coverage
     photo_realistic_prompts = base_images_prompts
     
+    # Strip color terms from B&W prompts
+    # B&W prompts should not contain any color-related terms
+    bw_stylized_prompts_cleaned = [
+        strip_color_terms(prompt) for prompt in bw_stylized_prompts
+    ]
+    
     # Final ordered set: 15 photo + 11 B/W stylized + 9 color stylized = 35 total
     all_training_prompts = [
         *photo_realistic_prompts,
-        *bw_stylized_prompts,
+        *bw_stylized_prompts_cleaned,  # Use cleaned B&W prompts
         *color_stylized_prompts
     ]
     

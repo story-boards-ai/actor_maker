@@ -1,0 +1,67 @@
+{
+  "images": {
+    "0036_european_16_female_0.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. walks through a concrete parking garage, lit by overhead strip lights. Tracking shot from the side at 45-degree angle, camera moving with character, eyes focused ahead on the path. Off-center framing with character in left third, pillars creating depth and strong diagonal lines, two-point perspective, cold blue-green lighting, pillars casting long angular shadows. Character moving through frame diagonally at angle, unaware of being observed. Film-like cinematography, angled camera view, diagonal depth instead of straight central lines, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:37:06.539460",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_0.jpg",
+      "index": 0
+    },
+    "0036_european_16_female_1.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. walks along a rain-soaked pier during a storm, hood up. Low tracking shot from behind and to the side at 45-degree angle, camera following, eyes focused on the wooden planks ahead. Asymmetric framing with character in right third, pier creating strong diagonal line through frame, two-point perspective, dark gray sky, waves crashing against the pier supports at angles. Character hunched against the wind, moving forward through frame diagonally, unaware of observation. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:37:16.477813",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_1.jpg",
+      "index": 1
+    },
+    "0036_european_16_female_2.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:37:26.196359",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_2.jpg",
+      "index": 2
+    },
+    "0036_european_16_female_3.jpg": {
+      "prompt": "A black-and-white manga illustration of A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. making a tense phone call in an alley, eyes closed or looking down, head tilted. Canted angle with 22-degree tilt (tilted horizon), half-body shot, three-quarter angle from the side, face turned away from viewer. Off-center framing with character in right third, alley walls creating strong diagonal lines, two-point perspective, expressive inking with screentone patterns for shading, speed lines in background. No grayscale gradients, no color. Preserve identity. Candid moment, no camera awareness. Asymmetric composition, slightly tilted camera, diagonal depth, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white manga illustration of A 16 year old white girl, with braided black hair and friend...",
+      "generated_at": "2025-10-18T13:37:37.064664",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_3.jpg",
+      "index": 3
+    },
+    "0036_european_16_female_4.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. leans against a brick wall in a narrow alley, holding a phone to their ear. Dutch angle close-up from the side with 25-degree tilt, camera tilted, head tilted down, eyes closed or looking at the ground. Off-center framing with character in left third, wall creating strong diagonal line, side profile, single streetlight creating dramatic rim lighting from angle. Wet pavement reflecting light at angles, steam rising from a grate. No direct eye contact, absorbed in conversation. Film-like cinematography, angled camera view, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:37:46.232385",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_4.jpg",
+      "index": 4
+    },
+    "0036_european_16_female_5.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. stands at the edge of a rocky beach at golden hour, waves crashing nearby. Extreme low angle from beach level, shooting upward at a steep diagonal, eyes gazing out at the ocean horizon. Off-center composition with character in upper-right third, dramatic sky dominating frame, three-point perspective, warm orange sunset light illuminating the face from the side, hair moving in the wind. Character lost in thought, completely unaware of observation. Film-like cinematography, angled camera view, no visible vanishing point in center, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:37:56.244773",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_5.jpg",
+      "index": 5
+    },
+    "0036_european_16_female_6.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. stands alone on a dimly lit subway platform at night, hands in pockets. Canted angle with 20-degree tilt (tilted horizon), camera positioned low and to the side, eyes looking down the tunnel into the distance. Off-center framing with character in left third, strong diagonal lines from platform and tracks, two-point perspective, head turned away from camera, fluorescent overhead lights casting harsh angular shadows. Urban grit, tiled walls, character lost in thought, no eye contact. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:38:04.262226",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_6.jpg",
+      "index": 6
+    },
+    "0036_european_16_female_7.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. crouches by a forest stream, hands cupped in the water. Ground-level camera positioned to the side at water height and 45-degree angle, eyes focused on the flowing current. Asymmetric framing with character in right third, stream creating strong diagonal line through frame, two-point perspective, dappled sunlight through trees creating angular light patterns, green foliage surrounding. Character absorbed in the moment, head bowed, unaware of camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old white girl, with braided black hair and friendly eyes, wearing B...",
+      "generated_at": "2025-10-18T13:38:06.001568",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_7.jpg",
+      "index": 7
+    },
+    "0036_european_16_female_8.jpg": {
+      "prompt": "A dynamic comic book illustration of A 16 year old white girl, with braided black hair and friendly eyes, wearing Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers. leaping a narrow rooftop gap at night with a city skyline behind, eyes focused on the landing spot ahead, head turned away from viewer. Extreme low angle from street level looking up at 70-degree angle, foreshortened limbs, face in profile or three-quarter view looking at the opposite rooftop. Off-center framing with character in upper-right third, dramatic perspective, three-point perspective, speed lines, bold inks, cel-shaded color, limited palette with halftone dots. Preserve identity and key attributes. Candid action pose, no eye contact. Asymmetric composition, angled camera view, no central vanishing point, absolutely NOT centered or symmetrical. Illustration style, not photorealistic.",
+      "prompt_preview": "A dynamic comic book illustration of A 16 year old white girl, with braided black hair and friendly ...",
+      "generated_at": "2025-10-18T13:38:15.017452",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0036_european_16_female/0036_european_16_female_8.jpg",
+      "index": 8
+    }
+  }
+}

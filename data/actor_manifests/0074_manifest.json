@@ -103,17 +103,6 @@
       "status": "synced"
     },
     {
-      "filename": "0074_south_american_30_male_2.png",
-      "local_path": "data/actors/0074_south_american_30_male/training_data/0074_south_american_30_male_2.png",
-      "size_bytes": 2367311,
-      "size_mb": 2.26,
-      "modified_timestamp": 1760602848.9722152,
-      "modified_date": "2025-10-16T10:20:48.972215",
-      "md5_hash": "add3eec28783972320f55ff0ca9d0e4d",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0074_south_american_30_male/training_data/0074_south_american_30_male_2.png",
-      "status": "synced"
-    },
-    {
       "filename": "0074_south_american_30_male_3.png",
       "local_path": "data/actors/0074_south_american_30_male/training_data/0074_south_american_30_male_3.png",
       "size_bytes": 2322609,
@@ -133,17 +122,6 @@
       "modified_date": "2025-10-16T10:20:49.892304",
       "md5_hash": "52aa554a3155cb617025250249341dbb",
       "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0074_south_american_30_male/training_data/0074_south_american_30_male_4.png",
-      "status": "synced"
-    },
-    {
-      "filename": "0074_south_american_30_male_5.png",
-      "local_path": "data/actors/0074_south_american_30_male/training_data/0074_south_american_30_male_5.png",
-      "size_bytes": 2375256,
-      "size_mb": 2.27,
-      "modified_timestamp": 1760602849.084226,
-      "modified_date": "2025-10-16T10:20:49.084226",
-      "md5_hash": "375f5fe5855a73eb0ee2da00a4fbb788",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0074_south_american_30_male/training_data/0074_south_american_30_male_5.png",
       "status": "synced"
     },
     {
@@ -177,17 +155,6 @@
       "modified_date": "2025-10-16T10:20:56.488956",
       "md5_hash": "77c959c69f182ca1ca2f7a752b16076d",
       "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0074_south_american_30_male/training_data/0074_south_american_30_male_8.png",
-      "status": "synced"
-    },
-    {
-      "filename": "0074_south_american_30_male_9.png",
-      "local_path": "data/actors/0074_south_american_30_male/training_data/0074_south_american_30_male_9.png",
-      "size_bytes": 2572280,
-      "size_mb": 2.45,
-      "modified_timestamp": 1760602849.1482322,
-      "modified_date": "2025-10-16T10:20:49.148232",
-      "md5_hash": "f7959c1eaae45f5f69c79e033d7d5efd",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0074_south_american_30_male/training_data/0074_south_american_30_male_9.png",
       "status": "synced"
     }
   ],

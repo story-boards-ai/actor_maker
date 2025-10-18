@@ -13,6 +13,7 @@ from datetime import datetime
 import time
 import hashlib
 import requests
+import threading
 
 # Add project root to path
 project_root = Path(__file__).parent.parent.parent
@@ -23,6 +24,9 @@ from src.utils.s3 import S3Client
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Global lock for thread-safe manifest operations
+_manifest_lock = threading.Lock()
 
 
 def download_image_from_s3(s3_url: str) -> bytes:
@@ -206,63 +210,66 @@ def generate_single_training_image_s3(
     # Download generated image
     generated_bytes = replicate.download_image_as_bytes(generated_url)
     
-    # Load manifest to find next index
-    manifest_path = project_root / "data" / "actor_manifests" / f"{actor_id.zfill(4)}_manifest.json"
-    next_index = 0
-    
-    if manifest_path.exists():
-        try:
-            with open(manifest_path, 'r') as f:
-                manifest = json.load(f)
-            
-            # Find highest index from existing training data
-            existing_indices = []
-            for img in manifest.get("training_data", []):
-                filename = img.get("filename", "")
-                # Extract index from filename like "0012_european_30_male_5.jpg"
-                try:
-                    parts = filename.replace(".jpg", "").replace(".png", "").split("_")
-                    if parts[-1].isdigit():
-                        existing_indices.append(int(parts[-1]))
-                except:
-                    pass
-            
-            next_index = max(existing_indices, default=-1) + 1
-            logger.info(f"Using index: {next_index}")
-            
-        except Exception as e:
-            logger.warning(f"Could not load manifest, using index 0: {e}")
-    
-    # Generate filename
-    local_filename = f"{actor_name}_{next_index}.jpg"
-    
     # Calculate MD5 hash
     md5_hash = hashlib.md5(generated_bytes).hexdigest()
     
-    # Upload directly to S3 (no local save)
-    bucket_name = os.getenv("AWS_SYSTEM_ACTORS_BUCKET", "story-boards-assets")
-    s3_key = f"system_actors/training_data/{actor_name}/{local_filename}"
-    
-    result = s3_client.upload_image(
-        image_data=generated_bytes,
-        bucket=bucket_name,
-        key=s3_key,
-        extension='jpg'
-    )
-    s3_url = result['Location']
-    
-    logger.info(f"Uploaded to S3: {s3_url}")
-    
-    # Update manifest
-    try:
-        update_manifest(actor_id, {
-            "filename": local_filename,
-            "s3_url": s3_url,
-            "md5_hash": md5_hash,
-            "size_bytes": len(generated_bytes)
-        })
-    except Exception as e:
-        logger.error(f"Failed to update manifest: {e}")
+    # CRITICAL SECTION: Thread-safe index determination and manifest update
+    # This lock prevents race conditions when multiple threads generate images simultaneously
+    with _manifest_lock:
+        # Load manifest to find next index
+        manifest_path = project_root / "data" / "actor_manifests" / f"{actor_id.zfill(4)}_manifest.json"
+        next_index = 0
+        
+        if manifest_path.exists():
+            try:
+                with open(manifest_path, 'r') as f:
+                    manifest = json.load(f)
+                
+                # Find highest index from existing training data
+                existing_indices = []
+                for img in manifest.get("training_data", []):
+                    filename = img.get("filename", "")
+                    # Extract index from filename like "0012_european_30_male_5.jpg"
+                    try:
+                        parts = filename.replace(".jpg", "").replace(".png", "").split("_")
+                        if parts[-1].isdigit():
+                            existing_indices.append(int(parts[-1]))
+                    except:
+                        pass
+                
+                next_index = max(existing_indices, default=-1) + 1
+                logger.info(f"Using index: {next_index}")
+                
+            except Exception as e:
+                logger.warning(f"Could not load manifest, using index 0: {e}")
+        
+        # Generate filename
+        local_filename = f"{actor_name}_{next_index}.jpg"
+        
+        # Upload directly to S3 (no local save)
+        bucket_name = os.getenv("AWS_SYSTEM_ACTORS_BUCKET", "story-boards-assets")
+        s3_key = f"system_actors/training_data/{actor_name}/{local_filename}"
+        
+        result = s3_client.upload_image(
+            image_data=generated_bytes,
+            bucket=bucket_name,
+            key=s3_key,
+            extension='jpg'
+        )
+        s3_url = result['Location']
+        
+        logger.info(f"Uploaded to S3: {s3_url}")
+        
+        # Update manifest (still within lock to ensure atomicity)
+        try:
+            update_manifest(actor_id, {
+                "filename": local_filename,
+                "s3_url": s3_url,
+                "md5_hash": md5_hash,
+                "size_bytes": len(generated_bytes)
+            })
+        except Exception as e:
+            logger.error(f"Failed to update manifest: {e}")
     
     # Save prompt metadata
     metadata_path = project_root / "data" / "actors" / actor_name / "training_data" / "prompt_metadata.json"

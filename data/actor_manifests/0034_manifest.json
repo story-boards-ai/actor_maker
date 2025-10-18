@@ -59,28 +59,6 @@
       "status": "local_only"
     },
     {
-      "filename": "0034_european_10_female_10.png",
-      "local_path": "data/actors/0034_european_10_female/training_data/0034_european_10_female_10.png",
-      "size_bytes": 2705171,
-      "size_mb": 2.58,
-      "modified_timestamp": 1760602777.5897596,
-      "modified_date": "2025-10-16T10:19:37.589760",
-      "md5_hash": "362de8777cc93836f382ad162f4a75a2",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_10.png",
-      "status": "synced"
-    },
-    {
-      "filename": "0034_european_10_female_11.png",
-      "local_path": "data/actors/0034_european_10_female/training_data/0034_european_10_female_11.png",
-      "size_bytes": 2869744,
-      "size_mb": 2.74,
-      "modified_timestamp": 1760602777.7977824,
-      "modified_date": "2025-10-16T10:19:37.797782",
-      "md5_hash": "b1cb16ebff304a9df5e8767c9f1b7563",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_11.png",
-      "status": "synced"
-    },
-    {
       "filename": "0034_european_10_female_12.png",
       "local_path": "data/actors/0034_european_10_female/training_data/0034_european_10_female_12.png",
       "size_bytes": 2832884,
@@ -122,17 +100,6 @@
       "modified_date": "2025-10-16T10:19:36.853679",
       "md5_hash": "f5e5d2773ba4c67691fe3b7f0af38db4",
       "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_3.png",
-      "status": "synced"
-    },
-    {
-      "filename": "0034_european_10_female_4.png",
-      "local_path": "data/actors/0034_european_10_female/training_data/0034_european_10_female_4.png",
-      "size_bytes": 2383201,
-      "size_mb": 2.27,
-      "modified_timestamp": 1760602776.8456779,
-      "modified_date": "2025-10-16T10:19:36.845678",
-      "md5_hash": "b4326d7e6bb918b7e5f29bc83ff59bba",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0034_european_10_female/training_data/0034_european_10_female_4.png",
       "status": "synced"
     },
     {

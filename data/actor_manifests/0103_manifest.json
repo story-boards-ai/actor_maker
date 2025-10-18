@@ -27,15 +27,166 @@
     "total_size_mb": 1.38,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:15.458019",
+  "training_data": [
+    {
+      "filename": "0103_south_american_70_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_0.jpg",
+      "md5_hash": "d33ebedc13bb1f14466afcc6ecd9cd7b",
+      "size_bytes": 218632,
+      "size_mb": 0.21,
+      "modified_timestamp": 1760790788.8519807,
+      "modified_date": "2025-10-18T14:33:08.851982",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_1.jpg",
+      "md5_hash": "82bcad5e4fdc09ebe8930f3ddd64d5e0",
+      "size_bytes": 543737,
+      "size_mb": 0.52,
+      "modified_timestamp": 1760790790.4490726,
+      "modified_date": "2025-10-18T14:33:10.449074",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_2.jpg",
+      "md5_hash": "7c0bd16622ad032541e99f9f3c029e68",
+      "size_bytes": 396053,
+      "size_mb": 0.38,
+      "modified_timestamp": 1760790797.8652477,
+      "modified_date": "2025-10-18T14:33:17.865249",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_3.jpg",
+      "md5_hash": "5fcfd33627134f65635a833ec1a4f805",
+      "size_bytes": 424871,
+      "size_mb": 0.41,
+      "modified_timestamp": 1760790799.2997048,
+      "modified_date": "2025-10-18T14:33:19.299706",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_4.jpg",
+      "md5_hash": "d241f213653306351df307da3439a11e",
+      "size_bytes": 886378,
+      "size_mb": 0.85,
+      "modified_timestamp": 1760790807.213731,
+      "modified_date": "2025-10-18T14:33:27.213733",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_5.jpg",
+      "md5_hash": "1a25ecadf70857f50c16031223f75bc2",
+      "size_bytes": 143426,
+      "size_mb": 0.14,
+      "modified_timestamp": 1760790808.51096,
+      "modified_date": "2025-10-18T14:33:28.510962",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_6.jpg",
+      "md5_hash": "dbe8a388701054581fae35b6fa0f6f5a",
+      "size_bytes": 291398,
+      "size_mb": 0.28,
+      "modified_timestamp": 1760790815.1951394,
+      "modified_date": "2025-10-18T14:33:35.195141",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_7.jpg",
+      "md5_hash": "0072cf7717df89f569201f1b5cc73638",
+      "size_bytes": 319790,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760790818.8626862,
+      "modified_date": "2025-10-18T14:33:38.862688",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_8.jpg",
+      "md5_hash": "ad08fd6cf2b1bb598bd7dc3472212986",
+      "size_bytes": 788453,
+      "size_mb": 0.75,
+      "modified_timestamp": 1760790824.5674534,
+      "modified_date": "2025-10-18T14:33:44.567454",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_9.jpg",
+      "md5_hash": "e6339b2c8b3391df3ba14d268ea0f4a5",
+      "size_bytes": 269693,
+      "size_mb": 0.26,
+      "modified_timestamp": 1760790829.873676,
+      "modified_date": "2025-10-18T14:33:49.873677",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_10.jpg",
+      "md5_hash": "6d017c3c7ca92fdb62a5916ee9b74426",
+      "size_bytes": 380919,
+      "size_mb": 0.36,
+      "modified_timestamp": 1760790833.1144319,
+      "modified_date": "2025-10-18T14:33:53.114434",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_11.jpg",
+      "md5_hash": "13a1cad6fc160b6409c18bd5704063a7",
+      "size_bytes": 318697,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760790838.9989614,
+      "modified_date": "2025-10-18T14:33:58.998962",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_12.jpg",
+      "md5_hash": "d07b11f41c6bea02a95194a637721315",
+      "size_bytes": 779316,
+      "size_mb": 0.74,
+      "modified_timestamp": 1760790842.2085261,
+      "modified_date": "2025-10-18T14:34:02.208527",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_13.jpg",
+      "md5_hash": "24e44f3a2e8f3ba3d63ae5a81cc1c734",
+      "size_bytes": 645755,
+      "size_mb": 0.62,
+      "modified_timestamp": 1760790849.6030216,
+      "modified_date": "2025-10-18T14:34:09.603023",
+      "status": "synced"
+    },
+    {
+      "filename": "0103_south_american_70_female_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0103_south_american_70_female/0103_south_american_70_female_14.jpg",
+      "md5_hash": "851179b700a471559e6d70da10f61a46",
+      "size_bytes": 424518,
+      "size_mb": 0.4,
+      "modified_timestamp": 1760790851.0258384,
+      "modified_date": "2025-10-18T14:34:11.025840",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T14:34:11.025848",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0103_south_american_70_female_poster_sm.webp",

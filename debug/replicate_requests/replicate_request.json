@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-18T13:19:55.297858",
-  "actor_id": "285",
-  "actor_name": "0285_south_american_13_male",
-  "base_image_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0285_south_american_13_male_base.jpg",
-  "prompt": "Cinematic film scene: A 13 year old hispanic boy with curly, medium-length brown hair and glasses, wearing Blue and white striped t-shirt, dark blue athletic shorts, black soccer cleats, and a black digital sports watch. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+  "timestamp": "2025-10-18T15:38:52.884868",
+  "actor_id": "0187",
+  "actor_name": "0187_asian_32_male",
+  "base_image_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0187_asian_32_male_base.jpg",
+  "prompt": "A flat vector illustration of man in the style of a detailed hand-drawn concept sketch, with clean, confident lines, subtle hatching, and balanced proportions. Extreme low angle looking upward at 55-degree angle, head turned to the side in profile or three-quarter view, eyes looking away from viewer. Off-center composition with character in upper-left third, heavy negative space on opposite side, minimal geometric shapes, hard edges, no gradients, single ink on white background. Poster-like framing. Preserve silhouette and key features. Candid pose, no eye contact. Asymmetric framing, angled camera view, no central axis, absolutely NOT centered or symmetrical.",
   "aspect_ratio": "16:9",
   "output_format": "jpg",
   "model": "black-forest-labs/flux-kontext-pro",
-  "input_image_size_bytes": 332280
+  "input_image_size_bytes": 279220
 }

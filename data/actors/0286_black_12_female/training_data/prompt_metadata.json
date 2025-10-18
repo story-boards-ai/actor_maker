@@ -1,0 +1,11 @@
+{
+  "images": {
+    "0286_black_12_female_0.jpg": {
+      "prompt": "Cinematic film scene: Extreme high angle crane shot of the woman standing on a rooftop edge at dusk, city skyline sprawling behind them. Camera positioned high above at a steep 70-degree angle from side, looking down. Off-center framing with character small in frame positioned in upper-right third, silhouette against orange-purple sky, three-point perspective. Character facing away at angle, eyes scanning the cityscape below. Dramatic scale, tiny figure in vast urban landscape, completely unaware of camera. Film-like cinematography, angled camera view, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme high angle crane shot of the woman standing on a rooftop edge at dusk,...",
+      "generated_at": "2025-10-18T13:22:20.044219",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0286_black_12_female/0286_black_12_female_0.jpg",
+      "index": 0
+    }
+  }
+}

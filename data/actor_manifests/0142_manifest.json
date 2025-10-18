@@ -28,15 +28,166 @@
     "total_size_mb": 1.14,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.101423",
+  "training_data": [
+    {
+      "filename": "0142_indian_35_male_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_0.jpg",
+      "md5_hash": "36c8f0966e39957566923113d0a03a3b",
+      "size_bytes": 561550,
+      "size_mb": 0.54,
+      "modified_timestamp": 1760792570.4179852,
+      "modified_date": "2025-10-18T15:02:50.417986",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_1.jpg",
+      "md5_hash": "7dc485800d0cdf73204c3ad3a53b1f71",
+      "size_bytes": 262382,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760792572.0483067,
+      "modified_date": "2025-10-18T15:02:52.048309",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_2.jpg",
+      "md5_hash": "6e48615ea204f5a744382541f452efb9",
+      "size_bytes": 472591,
+      "size_mb": 0.45,
+      "modified_timestamp": 1760792579.823149,
+      "modified_date": "2025-10-18T15:02:59.823151",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_3.jpg",
+      "md5_hash": "3a08d3279bc76064949697cc74706959",
+      "size_bytes": 355566,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760792581.569651,
+      "modified_date": "2025-10-18T15:03:01.569652",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_4.jpg",
+      "md5_hash": "a49435d39fd592eaba3e2864b4bb397f",
+      "size_bytes": 356807,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760792589.6092432,
+      "modified_date": "2025-10-18T15:03:09.609244",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_5.jpg",
+      "md5_hash": "80981fcbbec71020f0ddbeff6df57ac8",
+      "size_bytes": 260992,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760792591.2467256,
+      "modified_date": "2025-10-18T15:03:11.246727",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_6.jpg",
+      "md5_hash": "d438edd2892c630c54b581e2800a5339",
+      "size_bytes": 242171,
+      "size_mb": 0.23,
+      "modified_timestamp": 1760792598.1737216,
+      "modified_date": "2025-10-18T15:03:18.173723",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_7.jpg",
+      "md5_hash": "d3d2f2c4bfd41f8d8de1924da3489e66",
+      "size_bytes": 356306,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760792599.632984,
+      "modified_date": "2025-10-18T15:03:19.632986",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_8.jpg",
+      "md5_hash": "76898dc392d5d95277a73ded99197f82",
+      "size_bytes": 227728,
+      "size_mb": 0.22,
+      "modified_timestamp": 1760792607.111626,
+      "modified_date": "2025-10-18T15:03:27.111627",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_9.jpg",
+      "md5_hash": "105f30fc318519a18c5c45ff52d63132",
+      "size_bytes": 923116,
+      "size_mb": 0.88,
+      "modified_timestamp": 1760792609.0659716,
+      "modified_date": "2025-10-18T15:03:29.065973",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_10.jpg",
+      "md5_hash": "b4bfc6c338abe1c347811171e34a7138",
+      "size_bytes": 641531,
+      "size_mb": 0.61,
+      "modified_timestamp": 1760792617.42444,
+      "modified_date": "2025-10-18T15:03:37.424441",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_11.jpg",
+      "md5_hash": "f48a87d34549c795c421b873f0407b7f",
+      "size_bytes": 301370,
+      "size_mb": 0.29,
+      "modified_timestamp": 1760792619.0283864,
+      "modified_date": "2025-10-18T15:03:39.028387",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_12.jpg",
+      "md5_hash": "ddf774b1af4c99d403d964938d599ad8",
+      "size_bytes": 326879,
+      "size_mb": 0.31,
+      "modified_timestamp": 1760792626.2403777,
+      "modified_date": "2025-10-18T15:03:46.240379",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_13.jpg",
+      "md5_hash": "14037a4eeb5173a80981b3d392af8b59",
+      "size_bytes": 991086,
+      "size_mb": 0.95,
+      "modified_timestamp": 1760792628.4692657,
+      "modified_date": "2025-10-18T15:03:48.469267",
+      "status": "synced"
+    },
+    {
+      "filename": "0142_indian_35_male_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0142_indian_35_male/0142_indian_35_male_14.jpg",
+      "md5_hash": "e751750562e4f62b5ec88c1091d97b89",
+      "size_bytes": 596027,
+      "size_mb": 0.57,
+      "modified_timestamp": 1760792636.8926516,
+      "modified_date": "2025-10-18T15:03:56.892653",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T15:03:56.892661",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0142_indian_35_male_poster_sm.webp",

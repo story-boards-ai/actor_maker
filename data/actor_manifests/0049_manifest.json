@@ -28,15 +28,96 @@
     "total_size_mb": 1.39,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 8,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 8,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:13.701580",
+  "training_data": [
+    {
+      "filename": "0049_black_40_male_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_0.jpg",
+      "md5_hash": "812a5d5ba605db99cc1e009001e05e4a",
+      "size_bytes": 339887,
+      "size_mb": 0.32,
+      "modified_timestamp": 1760787653.1539478,
+      "modified_date": "2025-10-18T13:40:53.153950",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_1.jpg",
+      "md5_hash": "d03e733936c97d21bc35b564b8d27a35",
+      "size_bytes": 619862,
+      "size_mb": 0.59,
+      "modified_timestamp": 1760787662.8383074,
+      "modified_date": "2025-10-18T13:41:02.838309",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_2.jpg",
+      "md5_hash": "58bef45dc4af5173daa806aed898fc09",
+      "size_bytes": 307000,
+      "size_mb": 0.29,
+      "modified_timestamp": 1760787671.6633782,
+      "modified_date": "2025-10-18T13:41:11.663379",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_3.jpg",
+      "md5_hash": "81adb4ce0d70a852f4b8615c4c93ae12",
+      "size_bytes": 483236,
+      "size_mb": 0.46,
+      "modified_timestamp": 1760787681.205575,
+      "modified_date": "2025-10-18T13:41:21.205578",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_4.jpg",
+      "md5_hash": "03b7d2ef62a6f72a2336f1d6f1ff325e",
+      "size_bytes": 156523,
+      "size_mb": 0.15,
+      "modified_timestamp": 1760787690.6150281,
+      "modified_date": "2025-10-18T13:41:30.615030",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_5.jpg",
+      "md5_hash": "d5939655fa9cd6236dde3fbd5ace59a1",
+      "size_bytes": 496348,
+      "size_mb": 0.47,
+      "modified_timestamp": 1760787701.6334016,
+      "modified_date": "2025-10-18T13:41:41.633404",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_6.jpg",
+      "md5_hash": "7224b46a0db51b103a5cfcb1af8925f3",
+      "size_bytes": 355032,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760787710.8475585,
+      "modified_date": "2025-10-18T13:41:50.847561",
+      "status": "synced"
+    },
+    {
+      "filename": "0049_black_40_male_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0049_black_40_male/0049_black_40_male_7.jpg",
+      "md5_hash": "54c30a039aad2d4495dce5934a61c727",
+      "size_bytes": 726044,
+      "size_mb": 0.69,
+      "modified_timestamp": 1760787721.2244759,
+      "modified_date": "2025-10-18T13:42:01.224478",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T13:42:01.224486",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0049_black_40_male_poster_sm.webp",

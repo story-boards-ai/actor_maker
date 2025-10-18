@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
+import { imageCache } from "../../utils/imageCache";
+import { prefetchManager } from "../../utils/prefetchManager";
 
 interface TrainingImage {
   index: number;
@@ -156,6 +159,16 @@ export function TrainingImageModal({
           failCount > 0 ? ` (${failCount} failed)` : ""
         }`
       );
+
+      // Reload cache manifest to detect new images
+      if (successCount > 0) {
+        console.log("[TrainingImageModal] Reloading cache manifest after generation...");
+        await imageCache.reloadManifest();
+        
+        // Trigger prefetch for this actor's new images
+        console.log("[TrainingImageModal] Triggering prefetch for actor:", actorId);
+        // The prefetch will happen in background when parent reloads
+      }
 
       // Reload prompt usage
       loadPrompts();

@@ -27,15 +27,166 @@
     "total_size_mb": 1.29,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.818906",
+  "training_data": [
+    {
+      "filename": "0177_south_american_31_male_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_0.jpg",
+      "md5_hash": "f6526c2cddc6f6d3225442d42d4ae72b",
+      "size_bytes": 813944,
+      "size_mb": 0.78,
+      "modified_timestamp": 1760793901.7529478,
+      "modified_date": "2025-10-18T15:25:01.752950",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_1.jpg",
+      "md5_hash": "4a077c53f8b2b5090cf24b9a124588f3",
+      "size_bytes": 255046,
+      "size_mb": 0.24,
+      "modified_timestamp": 1760793905.0101416,
+      "modified_date": "2025-10-18T15:25:05.010143",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_2.jpg",
+      "md5_hash": "84bd3f8eb45aeada8be9b83b656a463b",
+      "size_bytes": 591015,
+      "size_mb": 0.56,
+      "modified_timestamp": 1760793910.7007742,
+      "modified_date": "2025-10-18T15:25:10.700775",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_3.jpg",
+      "md5_hash": "8030af2e61bb13e429a437b02eb46b55",
+      "size_bytes": 826212,
+      "size_mb": 0.79,
+      "modified_timestamp": 1760793916.567944,
+      "modified_date": "2025-10-18T15:25:16.567945",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_4.jpg",
+      "md5_hash": "de495c96236ca4f36aebae090cf976f0",
+      "size_bytes": 365314,
+      "size_mb": 0.35,
+      "modified_timestamp": 1760793918.6163938,
+      "modified_date": "2025-10-18T15:25:18.616395",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_5.jpg",
+      "md5_hash": "faeb906e81dcd6943f973317d636a4bf",
+      "size_bytes": 602875,
+      "size_mb": 0.57,
+      "modified_timestamp": 1760793925.3277392,
+      "modified_date": "2025-10-18T15:25:25.327740",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_6.jpg",
+      "md5_hash": "e9e4e3daa3e04e4350416330cf935cb4",
+      "size_bytes": 602373,
+      "size_mb": 0.57,
+      "modified_timestamp": 1760793929.1094184,
+      "modified_date": "2025-10-18T15:25:29.109420",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_7.jpg",
+      "md5_hash": "ca1d381b6f017fd5dff81b903948fe19",
+      "size_bytes": 479175,
+      "size_mb": 0.46,
+      "modified_timestamp": 1760793935.3725512,
+      "modified_date": "2025-10-18T15:25:35.372552",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_8.jpg",
+      "md5_hash": "144142e99360c370b4b40b26431f139f",
+      "size_bytes": 973732,
+      "size_mb": 0.93,
+      "modified_timestamp": 1760793939.605878,
+      "modified_date": "2025-10-18T15:25:39.605879",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_9.jpg",
+      "md5_hash": "21e3045c68721b082b3e1983a8c5d419",
+      "size_bytes": 332189,
+      "size_mb": 0.32,
+      "modified_timestamp": 1760793945.46064,
+      "modified_date": "2025-10-18T15:25:45.460641",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_10.jpg",
+      "md5_hash": "bf35e40e30bf27cb29b1a23f96fd5205",
+      "size_bytes": 389601,
+      "size_mb": 0.37,
+      "modified_timestamp": 1760793948.9010031,
+      "modified_date": "2025-10-18T15:25:48.901004",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_11.jpg",
+      "md5_hash": "de4122822c9755da3a88044b06d405e7",
+      "size_bytes": 261430,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760793954.1454642,
+      "modified_date": "2025-10-18T15:25:54.145466",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_12.jpg",
+      "md5_hash": "8acf787ec9773eed19a1ed8a4aca548d",
+      "size_bytes": 347797,
+      "size_mb": 0.33,
+      "modified_timestamp": 1760793957.4246194,
+      "modified_date": "2025-10-18T15:25:57.424621",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_13.jpg",
+      "md5_hash": "e01e58889a77bbaa771b325f47b59a44",
+      "size_bytes": 321604,
+      "size_mb": 0.31,
+      "modified_timestamp": 1760793964.7172432,
+      "modified_date": "2025-10-18T15:26:04.717244",
+      "status": "synced"
+    },
+    {
+      "filename": "0177_south_american_31_male_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0177_south_american_31_male/0177_south_american_31_male_14.jpg",
+      "md5_hash": "9ed5c79e8a0a806d932564fdf90c503f",
+      "size_bytes": 438278,
+      "size_mb": 0.42,
+      "modified_timestamp": 1760793966.1523962,
+      "modified_date": "2025-10-18T15:26:06.152397",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T15:26:06.152405",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0177_south_american_31_male_poster_sm.webp",

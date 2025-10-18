@@ -9,6 +9,7 @@ import { TrainingImageModal } from "./TrainingImageModal";
 import { useImageCache } from "../../hooks/useImageCache";
 import { prefetchManager } from "../../utils/prefetchManager";
 import { CachedImage } from "../CachedImage";
+import { imageCache } from "../../utils/imageCache";
 
 interface ActorTrainingDataManagerProps {
   actor: Actor;
@@ -151,6 +152,10 @@ export function ActorTrainingDataManager({
     try {
       setLoading(true);
       setError(null);
+
+      // Reload cache manifest to detect any new images
+      // This ensures the prefetch system knows about newly generated images
+      await imageCache.reloadManifest();
 
       // Fetch training data info from backend
       const response = await fetch(`/api/actors/${actor.id}/training-data`);

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-18T13:17:32.936896",
-  "actor_id": "285",
-  "actor_name": "0285_south_american_13_male",
-  "error": "Object of type FileOutput is not JSON serializable",
+  "timestamp": "2025-10-18T14:40:11.700235",
+  "actor_id": "0109",
+  "actor_name": "0109_asian_60_male",
+  "error": "The input or output was flagged as sensitive. Please try again with different inputs. (E005)",
   "success": false
 }

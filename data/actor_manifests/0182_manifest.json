@@ -27,15 +27,166 @@
     "total_size_mb": 1.37,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.820040",
+  "training_data": [
+    {
+      "filename": "0182_indian_26_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_0.jpg",
+      "md5_hash": "5811dff2d635078d4e48b63d8b184f93",
+      "size_bytes": 476678,
+      "size_mb": 0.45,
+      "modified_timestamp": 1760794291.3463705,
+      "modified_date": "2025-10-18T15:31:31.346372",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_1.jpg",
+      "md5_hash": "7ead32aa8a3c0d394fdbaf41dede2e58",
+      "size_bytes": 552594,
+      "size_mb": 0.53,
+      "modified_timestamp": 1760794293.236954,
+      "modified_date": "2025-10-18T15:31:33.236955",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_2.jpg",
+      "md5_hash": "6fa945495636327f669598142219ce34",
+      "size_bytes": 979961,
+      "size_mb": 0.93,
+      "modified_timestamp": 1760794301.7472758,
+      "modified_date": "2025-10-18T15:31:41.747277",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_3.jpg",
+      "md5_hash": "8ffeef498e48f8080899db375676f873",
+      "size_bytes": 725282,
+      "size_mb": 0.69,
+      "modified_timestamp": 1760794303.3307219,
+      "modified_date": "2025-10-18T15:31:43.330724",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_4.jpg",
+      "md5_hash": "7eb96640d1f442ec986abac9777dcca0",
+      "size_bytes": 296275,
+      "size_mb": 0.28,
+      "modified_timestamp": 1760794311.0632381,
+      "modified_date": "2025-10-18T15:31:51.063239",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_5.jpg",
+      "md5_hash": "f8b53a51e529714f3bcba054bca59676",
+      "size_bytes": 386670,
+      "size_mb": 0.37,
+      "modified_timestamp": 1760794312.6751134,
+      "modified_date": "2025-10-18T15:31:52.675115",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_6.jpg",
+      "md5_hash": "ea7255fc634b83e6583a21d3527b7e7b",
+      "size_bytes": 318535,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760794320.5030725,
+      "modified_date": "2025-10-18T15:32:00.503075",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_7.jpg",
+      "md5_hash": "2e67a71a577f08dc7b3a9c0c79b1a548",
+      "size_bytes": 470523,
+      "size_mb": 0.45,
+      "modified_timestamp": 1760794322.4655788,
+      "modified_date": "2025-10-18T15:32:02.465580",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_8.jpg",
+      "md5_hash": "dd8e9fb1de539b86bd23317f3ace9aee",
+      "size_bytes": 422855,
+      "size_mb": 0.4,
+      "modified_timestamp": 1760794329.5104697,
+      "modified_date": "2025-10-18T15:32:09.510471",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_9.jpg",
+      "md5_hash": "5cb0dc359bc0f7e4077e3bb658c0f5d1",
+      "size_bytes": 358395,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760794331.1262214,
+      "modified_date": "2025-10-18T15:32:11.126223",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_10.jpg",
+      "md5_hash": "46e8ec4c9ad8c0e5664e825a67c42b05",
+      "size_bytes": 266780,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760794339.2428358,
+      "modified_date": "2025-10-18T15:32:19.242837",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_11.jpg",
+      "md5_hash": "311d7c08f529064de9df07eb50d22876",
+      "size_bytes": 384908,
+      "size_mb": 0.37,
+      "modified_timestamp": 1760794341.3250754,
+      "modified_date": "2025-10-18T15:32:21.325077",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_12.jpg",
+      "md5_hash": "a3e6a9efd40cb597fbd83f181b19b678",
+      "size_bytes": 162163,
+      "size_mb": 0.15,
+      "modified_timestamp": 1760794348.6913772,
+      "modified_date": "2025-10-18T15:32:28.691379",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_13.jpg",
+      "md5_hash": "8611ecf4f82228e4da9dc87688040489",
+      "size_bytes": 281854,
+      "size_mb": 0.27,
+      "modified_timestamp": 1760794351.8465555,
+      "modified_date": "2025-10-18T15:32:31.846556",
+      "status": "synced"
+    },
+    {
+      "filename": "0182_indian_26_female_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_14.jpg",
+      "md5_hash": "4078bdd4fdc47fc19947195b3a6dac08",
+      "size_bytes": 482747,
+      "size_mb": 0.46,
+      "modified_timestamp": 1760794357.7914376,
+      "modified_date": "2025-10-18T15:32:37.791440",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T15:32:37.791454",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0182_indian_26_female_poster_sm.webp",

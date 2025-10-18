@@ -1,0 +1,109 @@
+{
+  "images": {
+    "0144_indian_16_male_0.jpg": {
+      "prompt": "A black-and-white manga illustration of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. making a tense phone call in an alley, eyes closed or looking down, head tilted. Canted angle with 22-degree tilt (tilted horizon), half-body shot, three-quarter angle from the side, face turned away from viewer. Off-center framing with character in right third, alley walls creating strong diagonal lines, two-point perspective, expressive inking with screentone patterns for shading, speed lines in background. No grayscale gradients, no color. Preserve identity. Candid moment, no camera awareness. Asymmetric composition, slightly tilted camera, diagonal depth, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white manga illustration of A 16 year old Indian boy with tousled black hair and a youth...",
+      "generated_at": "2025-10-18T15:04:06.434601",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_0.jpg",
+      "index": 0
+    },
+    "0144_indian_16_male_1.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. walks along a rain-soaked pier during a storm, hood up. Low tracking shot from behind and to the side at 45-degree angle, camera following, eyes focused on the wooden planks ahead. Asymmetric framing with character in right third, pier creating strong diagonal line through frame, two-point perspective, dark gray sky, waves crashing against the pier supports at angles. Character hunched against the wind, moving forward through frame diagonally, unaware of observation. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:08.191088",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_1.jpg",
+      "index": 1
+    },
+    "0144_indian_16_male_2.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. climbs a rocky mountain trail at midday, hands gripping stone. Extreme low angle shot from below, camera tilted upward at a steep 60-degree angle from side position, eyes focused upward on the path ahead. Off-center framing with character in lower-left third, dramatic sky and rock formations creating diagonal composition, three-point perspective, bright sunlight creating harsh angular shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:15.312547",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_2.jpg",
+      "index": 2
+    },
+    "0144_indian_16_male_3.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. walks through a tall grass field at noon, wind blowing the grass in waves. Crane shot from high above at a 60-degree angle from side, eyes scanning the horizon ahead. Asymmetric wide composition with character positioned in lower-right third, bright daylight, character small in the vast landscape, three-point perspective. Head turned away, moving forward diagonally through frame at 45-degree angle, completely unaware of observation. Film-like cinematography, dynamic composition, no visible vanishing point in center, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:18.066806",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_3.jpg",
+      "index": 3
+    },
+    "0144_indian_16_male_4.jpg": {
+      "prompt": "A vibrant acrylic painting of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. juggling flaming torches in a street performance, eyes tracking the arc of flames above, face tilted upward. Dutch angle with 17-degree tilt, wide shot from audience perspective to the side at 45-degree angle, face visible but looking up at the torches. Off-center framing with character in right third, crowd silhouettes creating diagonal depth, two-point perspective, bold brushwork, rich saturated colors with orange flame glow, energetic paint application. Preserve identity. Candid performance action, no eye contact. Asymmetric composition, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A vibrant acrylic painting of A 16 year old Indian boy with tousled black hair and a youthful glow, ...",
+      "generated_at": "2025-10-18T15:04:23.826018",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_4.jpg",
+      "index": 4
+    },
+    "0144_indian_16_male_5.jpg": {
+      "prompt": "An impressionistic oil painting of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. examining exotic plants in a humid greenhouse, holding a specimen jar up to diffused light, eyes studying the contents. Side angle close shot from chest level at a 43-degree diagonal, face turned slightly up toward the jar. Off-center framing with character in left third, plants creating diagonal depth lines, two-point perspective, loose expressive brushwork, lush greens with warm golden light, visible paint texture. Preserve recognizable features. Candid scientific observation, no eye contact. Asymmetric composition, shot from the side, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "An impressionistic oil painting of A 16 year old Indian boy with tousled black hair and a youthful g...",
+      "generated_at": "2025-10-18T15:04:28.508546",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_5.jpg",
+      "index": 5
+    },
+    "0144_indian_16_male_6.jpg": {
+      "prompt": "A watercolor illustration of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug, eyes gazing out the window at the rain. High angle shot from outside looking in through window at a 48-degree diagonal, three-quarter view, head turned away from viewer looking outside. Off-center framing with character in right third, window frame creating strong diagonal line, two-point perspective, soft backlight from the window, warm interior tones against cool exterior. Paper texture visible, gentle bleeding, hand-painted look. Preserve identity. Candid contemplative moment, no eye contact. Asymmetric composition, angled camera view, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor illustration of A 16 year old Indian boy with tousled black hair and a youthful glow, w...",
+      "generated_at": "2025-10-18T15:04:34.367759",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_6.jpg",
+      "index": 6
+    },
+    "0144_indian_16_male_7.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. stands at the edge of a desert canyon at sunset, red rock formations in the background. Extreme wide shot from the side at 60-degree angle, eyes looking down into the canyon depths. Off-center composition with character positioned in lower-left third, dramatic landscape dominating frame, three-point perspective, warm golden-red light, dramatic landscape. Character silhouetted against the sky, facing away at angle, completely unaware of camera. Film-like cinematography, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:37.950459",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_7.jpg",
+      "index": 7
+    },
+    "0144_indian_16_male_8.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. walks through a misty forest at dawn, sunlight filtering through tall pine trees. Over-the-shoulder tracking shot from behind and to the side, camera following at 45-degree angle, eyes focused on the forest path ahead. Asymmetric framing with character in right third of frame, trees creating diagonal depth lines, two-point perspective, soft morning light creating long shadows at angles. Character moving deeper into the woods, head turned slightly, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:42.786141",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_8.jpg",
+      "index": 8
+    },
+    "0144_indian_16_male_9.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. stands alone on a dimly lit subway platform at night, hands in pockets. Canted angle with 20-degree tilt (tilted horizon), camera positioned low and to the side, eyes looking down the tunnel into the distance. Off-center framing with character in left third, strong diagonal lines from platform and tracks, two-point perspective, head turned away from camera, fluorescent overhead lights casting harsh angular shadows. Urban grit, tiled walls, character lost in thought, no eye contact. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:46.489182",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_9.jpg",
+      "index": 9
+    },
+    "0144_indian_16_male_10.jpg": {
+      "prompt": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. stands at the edge of a rocky beach at golden hour, waves crashing nearby. Extreme low angle from beach level, shooting upward at a steep diagonal, eyes gazing out at the ocean horizon. Off-center composition with character in upper-right third, dramatic sky dominating frame, three-point perspective, warm orange sunset light illuminating the face from the side, hair moving in the wind. Character lost in thought, completely unaware of observation. Film-like cinematography, angled camera view, no visible vanishing point in center, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 16 year old Indian boy with tousled black hair and a youthful glow, wearing ...",
+      "generated_at": "2025-10-18T15:04:50.922498",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_10.jpg",
+      "index": 10
+    },
+    "0144_indian_16_male_11.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up profile of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. looking out a rain-streaked window. Camera positioned to the side at 90-degree angle, capturing face in sharp profile positioned in left or right third of frame, eyes focused on the street below, warm interior light from the opposite side. Asymmetric framing with window edge creating strong diagonal line, gaze directed downward and away, shallow depth of field, no other figures visible. Character absorbed in thought, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up profile of A 16 year old Indian boy with tousled black hair a...",
+      "generated_at": "2025-10-18T15:04:55.307223",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_11.jpg",
+      "index": 11
+    },
+    "0144_indian_16_male_12.jpg": {
+      "prompt": "A black-and-white etching of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. hammering metal at an anvil in a workshop, sparks flying, eyes focused intently on the workpiece below. Side angle from elevated position at 45-degree angle, medium shot from slightly above and to the side, face lit by forge glow looking down at work. Off-center framing with character in right third, workshop tools creating diagonal depth lines, two-point perspective, fine cross-hatched lines, rich blacks in shadows, detailed linework. Preserve facial structure. Candid crafting action, no camera awareness. Asymmetric composition, shot from the side, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white etching of A 16 year old Indian boy with tousled black hair and a youthful glow, w...",
+      "generated_at": "2025-10-18T15:05:01.632001",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_12.jpg",
+      "index": 12
+    },
+    "0144_indian_16_male_13.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch.'s face in natural lighting, shot from below and to the side at 30-degree angle. Eyes gazing off-frame to the left or right, looking at something in the distance. Photorealistic, sharp focus on facial features, neutral expression, head turned away from camera at an angle. Asymmetric framing with face positioned in left or right third, heavy negative space on opposite side, slightly tilted camera. Preserve all defining details such as hairstyle, eye color, skin texture, and unique facial characteristics. No eye contact, unposed. Film-like cinematography, dynamic off-center framing, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up of A 16 year old Indian boy with tousled black hair and a you...",
+      "generated_at": "2025-10-18T15:05:05.952910",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_13.jpg",
+      "index": 13
+    },
+    "0144_indian_16_male_14.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of A 16 year old Indian boy with tousled black hair and a youthful glow, wearing Trendy red and black plaid shirt, light blue ripped jeans, black canvas high-top sneakers, and a simple black digital watch. tying their bootlaces on a townhouse stoop under a single streetlamp in rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of A 16 year old Indian boy with tousled black hair and a...",
+      "generated_at": "2025-10-18T15:05:13.008841",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0144_indian_16_male/0144_indian_16_male_14.jpg",
+      "index": 14
+    }
+  }
+}

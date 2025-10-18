@@ -29,15 +29,26 @@
     "total_size_mb": 0,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 1,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0,
-    "training_synced_count": 0,
+    "training_synced_count": 1,
     "training_local_only_count": 0
   },
   "status": "character_directory_not_found",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.861670",
+  "training_data": [
+    {
+      "filename": "0286_black_12_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0286_black_12_female/0286_black_12_female_0.jpg",
+      "md5_hash": "84283ee9266df2040b6ff244a3faf5bc",
+      "size_bytes": 220033,
+      "size_mb": 0.21,
+      "modified_timestamp": 1760786540.0435061,
+      "modified_date": "2025-10-18T13:22:20.043507",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T13:22:20.043516",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0286_black_12_female_poster_sm.webp",

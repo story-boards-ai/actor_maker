@@ -70,17 +70,6 @@
       "status": "synced"
     },
     {
-      "filename": "0073_asian_30_female_11.png",
-      "local_path": "data/actors/0073_asian_30_female/training_data/0073_asian_30_female_11.png",
-      "size_bytes": 2561915,
-      "size_mb": 2.44,
-      "modified_timestamp": 1760602848.6481836,
-      "modified_date": "2025-10-16T10:20:48.648184",
-      "md5_hash": "12a736361a6ed017a172ef6e2bc595c5",
-      "s3_url": "https://storyboard-user-files.s3.us-west-1.amazonaws.com/99999999-9999-9999-9999-999999999999/custom_actor/0073_asian_30_female/training_data/0073_asian_30_female_11.png",
-      "status": "synced"
-    },
-    {
       "filename": "0073_asian_30_female_12.png",
       "local_path": "data/actors/0073_asian_30_female/training_data/0073_asian_30_female_12.png",
       "size_bytes": 2625467,

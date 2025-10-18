@@ -21,6 +21,7 @@ import logging
 import random
 from pathlib import Path
 from typing import List, Dict, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Add project root to path
 project_root = Path(__file__).parent.parent.parent
@@ -158,10 +159,55 @@ def select_prompts_by_distribution(all_prompts: List[str], total_images: int = 1
     return selected
 
 
+def generate_single_image_task(
+    actor_id: str,
+    actor_name: str,
+    base_image_url: str,
+    prompt: str,
+    actor_type: str,
+    actor_sex: str,
+    aspect_ratio: str,
+    image_num: int,
+    total_images: int
+) -> Dict:
+    """
+    Task function for generating a single image (used in parallel execution).
+    
+    Returns:
+        Dict with success status and metadata
+    """
+    logger.info(f"\n--- Image {image_num}/{total_images} ---")
+    logger.info(f"Aspect ratio: {aspect_ratio}")
+    logger.info(f"Prompt preview: {prompt[:100]}...")
+    
+    try:
+        result = generate_single_training_image_s3(
+            actor_id=actor_id,
+            actor_name=actor_name,
+            base_image_url=base_image_url,
+            prompt=prompt,
+            actor_type=actor_type,
+            actor_sex=actor_sex,
+            aspect_ratio=aspect_ratio
+        )
+        
+        if result.get("success"):
+            logger.info(f"✅ Generated: {result.get('filename')}")
+            return {"success": True, "filename": result.get('filename')}
+        else:
+            logger.error(f"❌ Failed: {result.get('error')}")
+            return {"success": False, "error": result.get('error')}
+            
+    except Exception as e:
+        logger.error(f"❌ Exception during generation: {e}", exc_info=True)
+        return {"success": False, "error": str(e)}
+
+
 def generate_training_data_for_actor(
     actor: Dict,
     total_images: int = 15,
-    dry_run: bool = False
+    dry_run: bool = False,
+    max_workers: int = 2
 ) -> Dict:
     """
     Generate training data for a single actor.
@@ -198,16 +244,31 @@ def generate_training_data_for_actor(
     # Get actor descriptor and prompts
     actor_type = actor.get('type', 'human').lower()
     actor_sex = actor.get('sex', '').lower()
-    descriptor = get_actor_descriptor(actor_type, actor_sex)
+    generic_descriptor = get_actor_descriptor(actor_type, actor_sex)
     
-    logger.info(f"✓ Actor descriptor: {descriptor}")
+    # Build full character description with outfit (same as UI does)
+    full_character_description = actor.get('description', generic_descriptor)
+    if actor.get('outfit'):
+        full_character_description = f"{full_character_description}, wearing {actor['outfit']}"
     
-    # Get all available prompts
-    all_prompts = get_actor_training_prompts(descriptor)
+    logger.info(f"✓ Generic descriptor: {generic_descriptor}")
+    logger.info(f"✓ Full character description: {full_character_description}")
+    
+    # Get all available prompts with generic descriptor
+    all_prompts = get_actor_training_prompts(generic_descriptor)
     logger.info(f"✓ Loaded {len(all_prompts)} available prompts")
     
+    # Replace generic descriptor with full character description in all prompts
+    # This matches what the UI does in handleGetPresetTrainingPrompts
+    import re
+    descriptor_pattern = re.compile(rf'\b(the|The)\s+({re.escape(generic_descriptor)})\b')
+    customized_prompts = [
+        descriptor_pattern.sub(full_character_description, prompt)
+        for prompt in all_prompts
+    ]
+    
     # Select prompts by distribution
-    selected_prompts = select_prompts_by_distribution(all_prompts, total_images)
+    selected_prompts = select_prompts_by_distribution(customized_prompts, total_images)
     logger.info(f"✓ Selected {len(selected_prompts)} prompts for generation")
     
     if dry_run:
@@ -220,39 +281,48 @@ def generate_training_data_for_actor(
             "would_generate": len(selected_prompts)
         }
     
-    # Generate images
+    # Generate images in parallel
     success_count = 0
     failed_count = 0
     
+    # Prepare tasks with random aspect ratios
+    tasks = []
     for i, prompt in enumerate(selected_prompts, 1):
-        # Randomly select aspect ratio
         aspect_ratio = random.choice(["1:1", "16:9"])
+        tasks.append({
+            "actor_id": actor_id,
+            "actor_name": actor_name,
+            "base_image_url": base_image_url,
+            "prompt": prompt,
+            "actor_type": actor_type,
+            "actor_sex": actor_sex,
+            "aspect_ratio": aspect_ratio,
+            "image_num": i,
+            "total_images": len(selected_prompts)
+        })
+    
+    logger.info(f"\n🚀 Starting parallel generation with {max_workers} workers...")
+    
+    # Execute tasks in parallel
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        future_to_task = {
+            executor.submit(generate_single_image_task, **task): task
+            for task in tasks
+        }
         
-        logger.info(f"\n--- Image {i}/{len(selected_prompts)} ---")
-        logger.info(f"Aspect ratio: {aspect_ratio}")
-        logger.info(f"Prompt preview: {prompt[:100]}...")
-        
-        try:
-            result = generate_single_training_image_s3(
-                actor_id=actor_id,
-                actor_name=actor_name,
-                base_image_url=base_image_url,
-                prompt=prompt,
-                actor_type=actor_type,
-                actor_sex=actor_sex,
-                aspect_ratio=aspect_ratio
-            )
-            
-            if result.get("success"):
-                success_count += 1
-                logger.info(f"✅ Generated: {result.get('filename')}")
-            else:
+        # Process completed tasks as they finish
+        for future in as_completed(future_to_task):
+            task = future_to_task[future]
+            try:
+                result = future.result()
+                if result.get("success"):
+                    success_count += 1
+                else:
+                    failed_count += 1
+            except Exception as e:
                 failed_count += 1
-                logger.error(f"❌ Failed: {result.get('error')}")
-                
-        except Exception as e:
-            failed_count += 1
-            logger.error(f"❌ Exception during generation: {e}", exc_info=True)
+                logger.error(f"❌ Task exception: {e}", exc_info=True)
     
     logger.info(f"\n{'='*60}")
     logger.info(f"Completed {actor_name}: {success_count} success, {failed_count} failed")
@@ -297,6 +367,12 @@ def main():
         default=None,
         help='Process only a specific actor ID (e.g., "0012")'
     )
+    parser.add_argument(
+        '--workers',
+        type=int,
+        default=2,
+        help='Number of parallel workers for Replicate requests (default: 2)'
+    )
     
     args = parser.parse_args()
     
@@ -306,6 +382,7 @@ def main():
     logger.info(f"Images per actor: {args.count}")
     logger.info(f"Distribution: 60% photo, 20% B&W, 20% color")
     logger.info(f"Aspect ratios: Random 1:1 or 16:9")
+    logger.info(f"Parallel workers: {args.workers}")
     logger.info(f"Dry run: {args.dry_run}")
     logger.info("="*60)
     
@@ -356,7 +433,8 @@ def main():
         result = generate_training_data_for_actor(
             actor=actor,
             total_images=args.count,
-            dry_run=args.dry_run
+            dry_run=args.dry_run,
+            max_workers=args.workers
         )
         results.append(result)
     

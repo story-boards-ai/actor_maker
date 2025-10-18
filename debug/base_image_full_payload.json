@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "Professional full-body studio portrait photograph of a A 13 year old hispanic boy with curly, medium-length brown hair and glasses, wearing Blue and white striped t-shirt, dark blue athletic shorts, black soccer cleats, and a black digital sports watch..\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
+            "text": "Professional full-body studio portrait photograph of a 35 year old ligh skinned man, with curly very short short brown hair with buzzed sides and european complexion.\nStanding pose, facing camera, centered in frame.\nNeutral gray or beige studio background with professional lighting.\nNatural relaxed pose with arms at sides or casually positioned.\nSharp focus, high quality, photorealistic.\nFull body visible from head to toe.\nDirect eye contact with camera or slight angle.\nClean composition, no distracting elements.",
             "clip": [
               "3",
               0
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 108251661
+            "noise_seed": 142963990
           },
           "class_type": "RandomNoise",
           "_meta": {

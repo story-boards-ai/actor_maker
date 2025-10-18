@@ -21,6 +21,7 @@ import { createAssessmentsApi } from "./routes/assessments-api";
 import { createActorsApi } from "./routes/actors-api";
 import { createBaseImageApi } from "./routes/base-image-api";
 import { createCacheApi } from "./routes/cache-api";
+import { createScriptsApi } from "./routes/scripts-api";
 
 // Global variable to store actual running port
 let actualServerPort: number | undefined;
@@ -78,6 +79,7 @@ export function createServerPlugin(): Plugin {
             createAssessmentsApi(projectRoot),
             createActorsApi(projectRoot),
             createBaseImageApi(projectRoot),
+            createScriptsApi(projectRoot),
           ];
 
           // Execute middleware chain

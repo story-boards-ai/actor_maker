@@ -27,15 +27,166 @@
     "total_size_mb": 1.4,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:15.511118",
+  "training_data": [
+    {
+      "filename": "0113_nordic_16_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_0.jpg",
+      "md5_hash": "1b54f42e3ccd51d84380b11a31dfae6c",
+      "size_bytes": 354817,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760791492.8303354,
+      "modified_date": "2025-10-18T14:44:52.830336",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_1.jpg",
+      "md5_hash": "08ca85c40e4c7666489cad7f5dae9d2a",
+      "size_bytes": 515898,
+      "size_mb": 0.49,
+      "modified_timestamp": 1760791494.5333056,
+      "modified_date": "2025-10-18T14:44:54.533307",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_2.jpg",
+      "md5_hash": "65a749cb0796db77ae6d7495b089a5f4",
+      "size_bytes": 615941,
+      "size_mb": 0.59,
+      "modified_timestamp": 1760791503.6845996,
+      "modified_date": "2025-10-18T14:45:03.684602",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_3.jpg",
+      "md5_hash": "f1cfbe1b7e3cc4d5c3bf7275943848de",
+      "size_bytes": 211047,
+      "size_mb": 0.2,
+      "modified_timestamp": 1760791505.2204337,
+      "modified_date": "2025-10-18T14:45:05.220435",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_4.jpg",
+      "md5_hash": "b299e92dd4230a7c43055449ec548584",
+      "size_bytes": 543846,
+      "size_mb": 0.52,
+      "modified_timestamp": 1760791514.631329,
+      "modified_date": "2025-10-18T14:45:14.631330",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_5.jpg",
+      "md5_hash": "134bba0c34ebedf43d233de2e1db52d0",
+      "size_bytes": 337673,
+      "size_mb": 0.32,
+      "modified_timestamp": 1760791516.242922,
+      "modified_date": "2025-10-18T14:45:16.242923",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_6.jpg",
+      "md5_hash": "ca2ac90853aa8432bd55822b1b46f292",
+      "size_bytes": 326590,
+      "size_mb": 0.31,
+      "modified_timestamp": 1760791524.8390799,
+      "modified_date": "2025-10-18T14:45:24.839082",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_7.jpg",
+      "md5_hash": "36d32fb044f97ce2bfd7d958d298dd55",
+      "size_bytes": 379028,
+      "size_mb": 0.36,
+      "modified_timestamp": 1760791526.2688246,
+      "modified_date": "2025-10-18T14:45:26.268826",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_8.jpg",
+      "md5_hash": "119be70e5136e4c430d38d6e2e0b2c5e",
+      "size_bytes": 329125,
+      "size_mb": 0.31,
+      "modified_timestamp": 1760791533.7402868,
+      "modified_date": "2025-10-18T14:45:33.740288",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_9.jpg",
+      "md5_hash": "6caa7ef9f347595fc2382fdec7ec11a4",
+      "size_bytes": 257150,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760791535.5196004,
+      "modified_date": "2025-10-18T14:45:35.519602",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_10.jpg",
+      "md5_hash": "c67d434073f59f5efe083c1405c2fa25",
+      "size_bytes": 344478,
+      "size_mb": 0.33,
+      "modified_timestamp": 1760791543.7848516,
+      "modified_date": "2025-10-18T14:45:43.784853",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_11.jpg",
+      "md5_hash": "b2411c75cec40c101579a5c4f063ff5f",
+      "size_bytes": 406207,
+      "size_mb": 0.39,
+      "modified_timestamp": 1760791545.5179417,
+      "modified_date": "2025-10-18T14:45:45.517943",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_12.jpg",
+      "md5_hash": "f18f509480a5302d689238a232c81af8",
+      "size_bytes": 259666,
+      "size_mb": 0.25,
+      "modified_timestamp": 1760791553.2399926,
+      "modified_date": "2025-10-18T14:45:53.239994",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_13.jpg",
+      "md5_hash": "dcf392d7090e5fd891bdeafb0cb90f8e",
+      "size_bytes": 313836,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760791554.8260665,
+      "modified_date": "2025-10-18T14:45:54.826068",
+      "status": "synced"
+    },
+    {
+      "filename": "0113_nordic_16_female_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0113_nordic_16_female/0113_nordic_16_female_14.jpg",
+      "md5_hash": "d0b7311789d814302ad9eed5a6202077",
+      "size_bytes": 934965,
+      "size_mb": 0.89,
+      "modified_timestamp": 1760791563.3686967,
+      "modified_date": "2025-10-18T14:46:03.368698",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T14:46:03.368705",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0113_nordic_16_female_poster_sm.webp",

@@ -12,6 +12,7 @@ import { TrainingDataS3Manager } from "./components/TrainingDataS3Manager";
 import { ActorTrainingDataManager } from "./components/ActorTrainingDataManager";
 import { ActorTrainingTab } from "./components/ActorTraining";
 import { Validator } from "./components/Validator/Validator";
+import { ScriptsTab } from "./components/ScriptsTab";
 import { Toaster } from "sonner";
 import { ExportToBackendButton } from "./components/ExportToBackendButton";
 import type { Actor } from "./types";
@@ -168,6 +169,9 @@ function App() {
           <Tabs.Trigger className="TabsTrigger" value="tab6">
             Actor Training
           </Tabs.Trigger>
+          <Tabs.Trigger className="TabsTrigger" value="tab7">
+            Scripts
+          </Tabs.Trigger>
 
           {trainingTab && (
             <Tabs.Trigger
@@ -278,6 +282,10 @@ function App() {
 
         <Tabs.Content className="TabsContent" value="tab6">
           <ActorTrainingTab />
+        </Tabs.Content>
+
+        <Tabs.Content className="TabsContent" value="tab7">
+          <ScriptsTab />
         </Tabs.Content>
 
         {trainingTab && (

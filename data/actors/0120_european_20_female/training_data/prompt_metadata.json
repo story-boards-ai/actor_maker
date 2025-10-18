@@ -1,0 +1,109 @@
+{
+  "images": {
+    "0120_european_20_female_0.jpg": {
+      "prompt": "A black-and-white linocut print of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. running across a rain-soaked plaza, coat billowing, eyes squinting against the downpour looking ahead. Ground level diagonal shot from low angle to the side at 35-degree angle, full body, face visible but turned slightly down shielding from rain. Off-center composition with character in left third, plaza creating diagonal depth lines, two-point perspective, bold carved shapes, strong vertical rain lines at angles, high contrast black and white. Preserve recognizable features. Candid action in weather, no eye contact. Asymmetric framing, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white linocut print of A 20 year old european woman, very short light brown hair, little...",
+      "generated_at": "2025-10-18T14:48:45.484579",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_0.jpg",
+      "index": 0
+    },
+    "0120_european_20_female_1.jpg": {
+      "prompt": "A mixed media collage illustration of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. vaulting over a concrete barrier in an urban plaza, mid-leap with arms extended, eyes locked on the landing zone ahead. Extreme low angle diagonal shot from ground level to the side at 68-degree angle, face visible but focused downward on landing spot. Off-center framing with character in upper-left third, dramatic perspective, three-point perspective, layered textures combining paint and paper elements, bold graphic shapes, vibrant street art color palette. Preserve facial structure. Candid parkour action, no eye contact. Asymmetric composition, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A mixed media collage illustration of A 20 year old european woman, very short light brown hair, lit...",
+      "generated_at": "2025-10-18T14:48:47.271801",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_1.jpg",
+      "index": 1
+    },
+    "0120_european_20_female_2.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up profile of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. looking out a rain-streaked window. Camera positioned to the side at 90-degree angle, capturing face in sharp profile positioned in left or right third of frame, eyes focused on the street below, warm interior light from the opposite side. Asymmetric framing with window edge creating strong diagonal line, gaze directed downward and away, shallow depth of field, no other figures visible. Character absorbed in thought, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up profile of A 20 year old european woman, very short light bro...",
+      "generated_at": "2025-10-18T14:48:54.507245",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_2.jpg",
+      "index": 2
+    },
+    "0120_european_20_female_3.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. walks through a tall grass field at noon, wind blowing the grass in waves. Crane shot from high above at a 60-degree angle from side, eyes scanning the horizon ahead. Asymmetric wide composition with character positioned in lower-right third, bright daylight, character small in the vast landscape, three-point perspective. Head turned away, moving forward diagonally through frame at 45-degree angle, completely unaware of observation. Film-like cinematography, dynamic composition, no visible vanishing point in center, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:48:56.317835",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_3.jpg",
+      "index": 3
+    },
+    "0120_european_20_female_4.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. tying their bootlaces on a townhouse stoop under a single streetlamp in rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of A 20 year old european woman, very short light brown h...",
+      "generated_at": "2025-10-18T14:49:05.207338",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_4.jpg",
+      "index": 4
+    },
+    "0120_european_20_female_5.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. leans against a brick wall in a narrow alley, holding a phone to their ear. Dutch angle close-up from the side with 25-degree tilt, camera tilted, head tilted down, eyes closed or looking at the ground. Off-center framing with character in left third, wall creating strong diagonal line, side profile, single streetlight creating dramatic rim lighting from angle. Wet pavement reflecting light at angles, steam rising from a grate. No direct eye contact, absorbed in conversation. Film-like cinematography, angled camera view, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:06.826076",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_5.jpg",
+      "index": 5
+    },
+    "0120_european_20_female_6.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. sits on a weathered wooden dock at dusk, feet dangling over calm lake water. High angle shot from above and behind at a 45-degree diagonal, eyes watching ripples spread across the surface. Asymmetric composition with character positioned in right third, dock creating strong diagonal line leading into frame, two-point perspective, soft purple-blue twilight, silhouette against the water. Character in quiet contemplation, unaware of camera. Film-like cinematography, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:14.976883",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_6.jpg",
+      "index": 6
+    },
+    "0120_european_20_female_7.jpg": {
+      "prompt": "A black-and-white ink wash drawing of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. pushing through a crowded marketplace, arm extended forward parting the crowd, eyes focused downward on the path ahead. High angle wide shot from above at a 50-degree diagonal, frontal three-quarter angle, face visible but looking down and to the side. Off-center framing with character positioned in lower-right third, small in busy scene, three-point perspective, loose gestural brushwork with varying ink densities, atmospheric crowd silhouettes in background. Preserve facial features. Candid action, no eye contact. Asymmetric composition, angled camera view, no visible vanishing point in center, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white ink wash drawing of A 20 year old european woman, very short light brown hair, lit...",
+      "generated_at": "2025-10-18T14:49:16.747634",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_7.jpg",
+      "index": 7
+    },
+    "0120_european_20_female_8.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. walks through a misty forest at dawn, sunlight filtering through tall pine trees. Over-the-shoulder tracking shot from behind and to the side, camera following at 45-degree angle, eyes focused on the forest path ahead. Asymmetric framing with character in right third of frame, trees creating diagonal depth lines, two-point perspective, soft morning light creating long shadows at angles. Character moving deeper into the woods, head turned slightly, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:24.715501",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_8.jpg",
+      "index": 8
+    },
+    "0120_european_20_female_9.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. climbs a rocky mountain trail at midday, hands gripping stone. Extreme low angle shot from below, camera tilted upward at a steep 60-degree angle from side position, eyes focused upward on the path ahead. Off-center framing with character in lower-left third, dramatic sky and rock formations creating diagonal composition, three-point perspective, bright sunlight creating harsh angular shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:26.540513",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_9.jpg",
+      "index": 9
+    },
+    "0120_european_20_female_10.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. walks along a rain-soaked pier during a storm, hood up. Low tracking shot from behind and to the side at 45-degree angle, camera following, eyes focused on the wooden planks ahead. Asymmetric framing with character in right third, pier creating strong diagonal line through frame, two-point perspective, dark gray sky, waves crashing against the pier supports at angles. Character hunched against the wind, moving forward through frame diagonally, unaware of observation. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:34.968855",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_10.jpg",
+      "index": 10
+    },
+    "0120_european_20_female_11.jpg": {
+      "prompt": "A soft pastel illustration of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. bending to collect debris on a windswept beach at sunset, hair blowing, eyes focused on the sand ahead. Ground level side angle from low position at a 37-degree diagonal, full body view, face angled downward searching the beach. Off-center framing with character in right third, beach stretching into distance creating diagonal depth, two-point perspective, blended pastel colors, warm sunset palette with cool shadows, atmospheric coastal scene. Preserve identity cues. Candid environmental action, no camera awareness. Asymmetric composition, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A soft pastel illustration of A 20 year old european woman, very short light brown hair, little make...",
+      "generated_at": "2025-10-18T14:49:36.725387",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_11.jpg",
+      "index": 11
+    },
+    "0120_european_20_female_12.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. stands alone on a dimly lit subway platform at night, hands in pockets. Canted angle with 20-degree tilt (tilted horizon), camera positioned low and to the side, eyes looking down the tunnel into the distance. Off-center framing with character in left third, strong diagonal lines from platform and tracks, two-point perspective, head turned away from camera, fluorescent overhead lights casting harsh angular shadows. Urban grit, tiled walls, character lost in thought, no eye contact. Film-like cinematography, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:42.719353",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_12.jpg",
+      "index": 12
+    },
+    "0120_european_20_female_13.jpg": {
+      "prompt": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. stands at the edge of a desert canyon at sunset, red rock formations in the background. Extreme wide shot from the side at 60-degree angle, eyes looking down into the canyon depths. Off-center composition with character positioned in lower-left third, dramatic landscape dominating frame, three-point perspective, warm golden-red light, dramatic landscape. Character silhouetted against the sky, facing away at angle, completely unaware of camera. Film-like cinematography, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 20 year old european woman, very short light brown hair, little makeup, a li...",
+      "generated_at": "2025-10-18T14:49:45.743652",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_13.jpg",
+      "index": 13
+    },
+    "0120_european_20_female_14.jpg": {
+      "prompt": "A vibrant acrylic painting of A 20 year old european woman, very short light brown hair, little makeup, a little overweight, wearing Comfortable olive green oversized sweater with geometric pattern, black leggings, silver stud earrings, and gray canvas slip-on shoes. juggling flaming torches in a street performance, eyes tracking the arc of flames above, face tilted upward. Dutch angle with 17-degree tilt, wide shot from audience perspective to the side at 45-degree angle, face visible but looking up at the torches. Off-center framing with character in right third, crowd silhouettes creating diagonal depth, two-point perspective, bold brushwork, rich saturated colors with orange flame glow, energetic paint application. Preserve identity. Candid performance action, no eye contact. Asymmetric composition, slightly tilted camera, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A vibrant acrylic painting of A 20 year old european woman, very short light brown hair, little make...",
+      "generated_at": "2025-10-18T14:49:51.393011",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0120_european_20_female/0120_european_20_female_14.jpg",
+      "index": 14
+    }
+  }
+}

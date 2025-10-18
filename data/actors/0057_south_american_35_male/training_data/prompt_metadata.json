@@ -1,0 +1,109 @@
+{
+  "images": {
+    "0057_south_american_35_male_0.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. walks through a misty forest at dawn, sunlight filtering through tall pine trees. Over-the-shoulder tracking shot from behind and to the side, camera following at 45-degree angle, eyes focused on the forest path ahead. Asymmetric framing with character in right third of frame, trees creating diagonal depth lines, two-point perspective, soft morning light creating long shadows at angles. Character moving deeper into the woods, head turned slightly, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:25:28.331270",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_0.jpg",
+      "index": 0
+    },
+    "0057_south_american_35_male_1.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. crouches by a forest stream, hands cupped in the water. Ground-level camera positioned to the side at water height and 45-degree angle, eyes focused on the flowing current. Asymmetric framing with character in right third, stream creating strong diagonal line through frame, two-point perspective, dappled sunlight through trees creating angular light patterns, green foliage surrounding. Character absorbed in the moment, head bowed, unaware of camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:25:29.929599",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_1.jpg",
+      "index": 1
+    },
+    "0057_south_american_35_male_2.jpg": {
+      "prompt": "Cinematic film scene: Extreme high angle crane shot of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. standing on a rooftop edge at dusk, city skyline sprawling behind them. Camera positioned high above at a steep 70-degree angle from side, looking down. Off-center framing with character small in frame positioned in upper-right third, silhouette against orange-purple sky, three-point perspective. Character facing away at angle, eyes scanning the cityscape below. Dramatic scale, tiny figure in vast urban landscape, completely unaware of camera. Film-like cinematography, angled camera view, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme high angle crane shot of A 35 year old perubian man, with short straig...",
+      "generated_at": "2025-10-18T14:25:38.348665",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_2.jpg",
+      "index": 2
+    },
+    "0057_south_american_35_male_3.jpg": {
+      "prompt": "A flat vector illustration of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. waiting on a metro platform, holding a small duffel, eyes looking left as a train approaches, head turned in profile away from viewer. Side angle shot from platform edge at a 38-degree diagonal, medium profile shot with long geometric shadows, face directed toward the approaching train. Off-center composition with character in left third, platform creating diagonal depth lines, two-point perspective, flat colors, simple shapes, crisp outlines, poster-like composition. Preserve recognizable features. Candid waiting pose, no camera awareness. Asymmetric framing, shot from the side, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Not photorealistic.",
+      "prompt_preview": "A flat vector illustration of A 35 year old perubian man, with short straight black hair, wearing Ru...",
+      "generated_at": "2025-10-18T14:25:39.804829",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_3.jpg",
+      "index": 3
+    },
+    "0057_south_american_35_male_4.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up profile of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. looking out a rain-streaked window. Camera positioned to the side at 90-degree angle, capturing face in sharp profile positioned in left or right third of frame, eyes focused on the street below, warm interior light from the opposite side. Asymmetric framing with window edge creating strong diagonal line, gaze directed downward and away, shallow depth of field, no other figures visible. Character absorbed in thought, unaware of camera. Film-like cinematography, off-center framing, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up profile of A 35 year old perubian man, with short straight bl...",
+      "generated_at": "2025-10-18T14:25:47.222446",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_4.jpg",
+      "index": 4
+    },
+    "0057_south_american_35_male_5.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. stands at the edge of a rocky beach at golden hour, waves crashing nearby. Extreme low angle from beach level, shooting upward at a steep diagonal, eyes gazing out at the ocean horizon. Off-center composition with character in upper-right third, dramatic sky dominating frame, three-point perspective, warm orange sunset light illuminating the face from the side, hair moving in the wind. Character lost in thought, completely unaware of observation. Film-like cinematography, angled camera view, no visible vanishing point in center, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:25:48.656526",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_5.jpg",
+      "index": 5
+    },
+    "0057_south_american_35_male_6.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots.'s face in natural lighting, shot from below and to the side at 30-degree angle. Eyes gazing off-frame to the left or right, looking at something in the distance. Photorealistic, sharp focus on facial features, neutral expression, head turned away from camera at an angle. Asymmetric framing with face positioned in left or right third, heavy negative space on opposite side, slightly tilted camera. Preserve all defining details such as hairstyle, eye color, skin texture, and unique facial characteristics. No eye contact, unposed. Film-like cinematography, dynamic off-center framing, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up of A 35 year old perubian man, with short straight black hair...",
+      "generated_at": "2025-10-18T14:25:57.152139",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_6.jpg",
+      "index": 6
+    },
+    "0057_south_american_35_male_7.jpg": {
+      "prompt": "A black-and-white scratchboard illustration of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. scaling a rocky cliff face, both hands gripping stone above, eyes focused upward on the next handhold. Extreme low angle from far below at 65-degree angle, medium shot looking up at steep angle, face angled up and away from viewer. Off-center framing with character in upper-left third, dramatic rock formations creating diagonal composition, three-point perspective, lines scratched from surface, dramatic contrast with fine detail work. Preserve identity. Candid climbing action, no camera awareness. Asymmetric framing, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white scratchboard illustration of A 35 year old perubian man, with short straight black...",
+      "generated_at": "2025-10-18T14:25:58.725432",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_7.jpg",
+      "index": 7
+    },
+    "0057_south_american_35_male_8.jpg": {
+      "prompt": "A watercolor illustration of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. seated alone in a diner booth by a rain-streaked window at dusk, hand around a steaming mug, eyes gazing out the window at the rain. High angle shot from outside looking in through window at a 48-degree diagonal, three-quarter view, head turned away from viewer looking outside. Off-center framing with character in right third, window frame creating strong diagonal line, two-point perspective, soft backlight from the window, warm interior tones against cool exterior. Paper texture visible, gentle bleeding, hand-painted look. Preserve identity. Candid contemplative moment, no eye contact. Asymmetric composition, angled camera view, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A watercolor illustration of A 35 year old perubian man, with short straight black hair, wearing Rus...",
+      "generated_at": "2025-10-18T14:26:05.890626",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_8.jpg",
+      "index": 8
+    },
+    "0057_south_american_35_male_9.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. climbs a rocky mountain trail at midday, hands gripping stone. Extreme low angle shot from below, camera tilted upward at a steep 60-degree angle from side position, eyes focused upward on the path ahead. Off-center framing with character in lower-left third, dramatic sky and rock formations creating diagonal composition, three-point perspective, bright sunlight creating harsh angular shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera. Film-like cinematography, shot from the side, no central vanishing point, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:26:07.372973",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_9.jpg",
+      "index": 9
+    },
+    "0057_south_american_35_male_10.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. leans against a brick wall in a narrow alley, holding a phone to their ear. Dutch angle close-up from the side with 25-degree tilt, camera tilted, head tilted down, eyes closed or looking at the ground. Off-center framing with character in left third, wall creating strong diagonal line, side profile, single streetlight creating dramatic rim lighting from angle. Wet pavement reflecting light at angles, steam rising from a grate. No direct eye contact, absorbed in conversation. Film-like cinematography, angled camera view, no central axis, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:26:15.299995",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_10.jpg",
+      "index": 10
+    },
+    "0057_south_american_35_male_11.jpg": {
+      "prompt": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 35 year old perubian man, with short straight black hair, wearing Rustic bur...",
+      "generated_at": "2025-10-18T14:26:16.922390",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_11.jpg",
+      "index": 11
+    },
+    "0057_south_american_35_male_12.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. tying their bootlaces on a townhouse stoop under a single streetlamp in rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of A 35 year old perubian man, with short straight black ...",
+      "generated_at": "2025-10-18T14:26:26.406402",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_12.jpg",
+      "index": 12
+    },
+    "0057_south_american_35_male_13.jpg": {
+      "prompt": "A black-and-white conte crayon drawing of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. rushing down subway stairs, hand on railing, eyes looking down at steps ahead. Tracking shot from the side at a 42-degree diagonal angle, frontal diagonal view from platform level, face visible but angled downward in motion. Off-center framing with character in left third, stairs creating strong diagonal lines, two-point perspective, soft smudged blacks with sharp highlights, textured paper grain visible, dynamic diagonal composition. Preserve identity cues. Candid hurried movement, no eye contact. Asymmetric framing, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white conte crayon drawing of A 35 year old perubian man, with short straight black hair...",
+      "generated_at": "2025-10-18T14:26:28.312605",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_13.jpg",
+      "index": 13
+    },
+    "0057_south_american_35_male_14.jpg": {
+      "prompt": "A soft pastel illustration of A 35 year old perubian man, with short straight black hair, wearing Rustic burgundy button-up shirt with rolled sleeves, dark wash jeans with a brown leather belt, and caramel-colored suede desert boots. bending to collect debris on a windswept beach at sunset, hair blowing, eyes focused on the sand ahead. Ground level side angle from low position at a 37-degree diagonal, full body view, face angled downward searching the beach. Off-center framing with character in right third, beach stretching into distance creating diagonal depth, two-point perspective, blended pastel colors, warm sunset palette with cool shadows, atmospheric coastal scene. Preserve identity cues. Candid environmental action, no camera awareness. Asymmetric composition, angled camera view, diagonal depth instead of straight central lines, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A soft pastel illustration of A 35 year old perubian man, with short straight black hair, wearing Ru...",
+      "generated_at": "2025-10-18T14:26:36.166208",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0057_south_american_35_male/0057_south_american_35_male_14.jpg",
+      "index": 14
+    }
+  }
+}
