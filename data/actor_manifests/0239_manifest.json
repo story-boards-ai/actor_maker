@@ -14,20 +14,13 @@
     "description": "A 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air"
   },
   "migration_timestamp": "2025-10-15T07:38:31.823908",
-  "base_images": [
-    {
-      "filename": "0239_hispanic_57_male_base.jpg",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0239_hispanic_57_male_base.jpg",
-      "status": "synced",
-      "format": "jpeg"
-    }
-  ],
+  "base_images": [],
   "scene_images": [],
   "statistics": {
     "total_files": 0,
     "total_size_bytes": 0,
     "total_size_mb": 0.0,
-    "base_images_count": 1,
+    "base_images_count": 0,
     "scene_images_count": 0,
     "training_images_count": 0,
     "training_data_size_bytes": 0,

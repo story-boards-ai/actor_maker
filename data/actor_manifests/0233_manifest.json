@@ -14,20 +14,13 @@
     "description": "an 85 year old asian woman, with short gray hair and a gentle, wise expression"
   },
   "migration_timestamp": "2025-10-15T07:38:31.799840",
-  "base_images": [
-    {
-      "filename": "0233_asian_39_male_base.jpg",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0233_asian_39_male_base.jpg",
-      "status": "synced",
-      "format": "jpeg"
-    }
-  ],
+  "base_images": [],
   "scene_images": [],
   "statistics": {
     "total_files": 1,
     "total_size_bytes": 1087090,
     "total_size_mb": 1.04,
-    "base_images_count": 1,
+    "base_images_count": 0,
     "scene_images_count": 0,
     "training_images_count": 0,
     "training_data_size_bytes": 0,
