@@ -64,8 +64,8 @@ export function handleGetTrainingPrompts(
 
 /**
  * GET /api/actors/:actorId/training-data
- * S3-ONLY endpoint - Returns training data from manifest (S3 URLs only)
- * No local files - S3 is the single source of truth
+ * Returns training data from manifest (S3-only architecture)
+ * Only returns images with S3 URLs - manifest is the single source of truth
  */
 export function handleGetTrainingData(
   req: IncomingMessage,
@@ -94,27 +94,35 @@ export function handleGetTrainingData(
     const trainingImages: any[] = [];
     let manifestUpdated: string | null = null;
     let baseImageS3Url: string | null = null;
+    let hasBaseImage = false;
+    let trainingDataGood = false;
     
     if (fs.existsSync(manifestPath)) {
       try {
         const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
         manifestUpdated = manifest.training_data_updated || null;
+        trainingDataGood = manifest.training_data_good || false;
         
-        // Get base image from manifest (S3 URL)
+        // Get base image from manifest
         const baseImages = manifest.base_images || [];
-        if (baseImages.length > 0 && baseImages[0].s3_url) {
-          baseImageS3Url = baseImages[0].s3_url;
+        if (baseImages.length > 0) {
+          hasBaseImage = true;
+          if (baseImages[0].s3_url) {
+            baseImageS3Url = baseImages[0].s3_url;
+          }
         }
         
-        // Get training data from manifest (S3 URLs only)
+        // Get training data from manifest (S3-only architecture)
         const manifestData = manifest.training_data || [];
         
+        // For S3-only: only return images with S3 URLs
         manifestData.forEach((entry: any, index: number) => {
           if (entry.s3_url) {
             trainingImages.push({
               index,
               filename: entry.filename,
               s3_url: entry.s3_url,
+              status: entry.status || 'synced',
               size_mb: entry.size_mb || 0,
               modified_date: entry.modified_date || null,
               good: false // Will be enriched from prompt_metadata
@@ -150,8 +158,10 @@ export function handleGetTrainingData(
       actor_name: actor.name,
       training_images: trainingImages,
       base_image_url: baseImageS3Url,
+      has_base_image: hasBaseImage,
       total_count: trainingImages.length,
-      manifest_updated: manifestUpdated
+      manifest_updated: manifestUpdated,
+      training_data_good: trainingDataGood
     }));
   } catch (error) {
     console.error('Error loading actor training data:', error);

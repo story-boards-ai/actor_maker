@@ -14,13 +14,20 @@
     "description": "A 58 year old european man with short, gray hair and a well-groomed, graying beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.993013",
-  "base_images": [],
+  "base_images": [
+    {
+      "filename": "0273_european_58_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0273_european_58_male_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
+    }
+  ],
   "scene_images": [],
   "statistics": {
     "total_files": 0,
     "total_size_bytes": 0,
     "total_size_mb": 0,
-    "base_images_count": 0,
+    "base_images_count": 1,
     "scene_images_count": 0,
     "training_images_count": 0,
     "training_data_size_bytes": 0,

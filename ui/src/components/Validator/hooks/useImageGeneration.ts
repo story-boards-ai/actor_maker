@@ -116,11 +116,18 @@ export function useImageGeneration(props: UseImageGenerationProps) {
       addLog("Workflow template loaded");
 
       // Find the selected trained model
+      addLog(`🔍 Looking for model with ID: "${selectedModel}"`);
+      addLog(`📋 Available models: ${trainedModels.length} total`);
+      trainedModels.forEach((m, idx) => {
+        addLog(`  ${idx + 1}. ID: "${m.id}" | Name: "${m.name}"`);
+      });
+      
       const trainedModel = trainedModels.find(m => m.id === selectedModel);
       if (!trainedModel) {
+        addLog(`❌ Model lookup failed! selectedModel="${selectedModel}" not found in trainedModels`);
         throw new Error("Selected trained model not found. Please select a trained LoRA model.");
       }
-      addLog(`Selected trained model: ${trainedModel.styleName} - ${trainedModel.name}`);
+      addLog(`✅ Selected trained model: ${trainedModel.styleName} - ${trainedModel.name}`);
 
       // Always use flux1-dev-fp8 as base model for validation
       const baseModelName = "flux1-dev-fp8";

@@ -52,8 +52,8 @@ export async function fetchTrainingDataInfo(actorId: number): Promise<TrainingDa
     // Look for keywords in prompt metadata
     const hasStylizedImages = await checkForStylizedImages(actorId);
     
-    // Check if base image exists
-    const hasBaseImage = !!(data.base_image_path && data.base_image_path.trim() !== '');
+    // Check if base image exists (from manifest)
+    const hasBaseImage = data.has_base_image === true;
     
     return {
       count: data.total_count || 0,

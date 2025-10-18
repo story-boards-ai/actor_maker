@@ -14,13 +14,20 @@
     "description": "an 87 year old black woman, with short curly white hair and a warm, grandmotherly demeanor"
   },
   "migration_timestamp": "2025-10-15T07:38:31.850566",
-  "base_images": [],
+  "base_images": [
+    {
+      "filename": "0247_black_87_female_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0247_black_87_female_base.jpg",
+      "status": "synced",
+      "format": "jpeg"
+    }
+  ],
   "scene_images": [],
   "statistics": {
     "total_files": 1,
     "total_size_bytes": 1406865,
     "total_size_mb": 1.34,
-    "base_images_count": 0,
+    "base_images_count": 1,
     "scene_images_count": 0,
     "training_images_count": 0,
     "training_data_size_bytes": 0,

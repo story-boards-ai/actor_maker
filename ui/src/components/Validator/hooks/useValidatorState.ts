@@ -13,6 +13,14 @@ export interface TrainedModel {
   parameters?: any;
   imageCount?: number;
   description?: string;
+  good?: boolean;
+  version?: string;
+  isSystem?: boolean;
+  assessment?: {
+    rating: 'excellent' | 'good' | 'acceptable' | 'poor' | 'failed' | null;
+    comment: string;
+    updatedAt: string;
+  } | null;
 }
 
 export function useValidatorState() {
@@ -20,9 +28,19 @@ export function useValidatorState() {
   const [styles, setStyles] = useState<Style[]>([]);
   const [selectedStyle, setSelectedStyle] = useState<string>("");
   const [trainedModels, setTrainedModels] = useState<TrainedModel[]>([]);
-  const [selectedModel, setSelectedModel] = useState<string>("");
+  const [selectedModel, setSelectedModelInternal] = useState<string>("");
   const [showStyleModal, setShowStyleModal] = useState<boolean>(false);
   const [prompt, setPrompt] = useState<string>("");
+
+  // Wrapper to log model selection changes
+  const setSelectedModel = (modelId: string) => {
+    console.log('[Validator] setSelectedModel called:', {
+      oldModel: selectedModel,
+      newModel: modelId,
+      stack: new Error().stack?.split('\n').slice(2, 4).join('\n')
+    });
+    setSelectedModelInternal(modelId);
+  };
 
   // Assessment state
   const [currentRating, setCurrentRating] = useState<AssessmentRating>(null);
@@ -124,13 +142,21 @@ export function useValidatorState() {
 
   // Reset selected model when character changes
   useEffect(() => {
+    console.log('[Validator] Character/filteredModels changed:', {
+      selectedCharacters: selectedCharacters.length,
+      filteredModels: filteredModels.length,
+      currentSelectedModel: selectedModel
+    });
+    
     if (selectedCharacters.length > 0 && filteredModels.length > 0) {
       // Check if current model is still valid for selected character
       const isCurrentModelValid = filteredModels.some(
         (m) => m.id === selectedModel
       );
+      console.log('[Validator] Current model valid?', isCurrentModelValid);
       if (!isCurrentModelValid) {
         // Auto-select first model for this character
+        console.log('[Validator] Auto-selecting first model:', filteredModels[0].id);
         setSelectedModel(filteredModels[0].id);
         addLog(`🔄 Auto-selected model: ${filteredModels[0].name}`);
       }
@@ -140,6 +166,7 @@ export function useValidatorState() {
         `⚠️ No trained models for character "${selectedCharacters[0].name}"`
       );
     } else if (selectedCharacters.length === 0) {
+      console.log('[Validator] No characters selected, clearing model');
       setSelectedModel("");
     }
   }, [selectedCharacters, filteredModels]);

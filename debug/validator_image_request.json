@@ -35,7 +35,7 @@
         },
         "6": {
           "inputs": {
-            "text": "style SBai_style_68, (0006_european_20_female as A gorgeous 20 year old european woman, (long blonde hair:1.1), little makeup), 0006_european_20_female face illuminated by flickering firelight, eyes narrowed with intense focus and determination, jaw clenched, beads of sweat on forehead, leaning forward aggressively in a tense standoff, shadows dancing across their face, (candid:1.1), film scene, dynamic framing",
+            "text": "style SBai_style_91, clean vector illustration, flat color style, strong silhouette, (0006_european_20_female as A gorgeous 20 year old european woman, (long blonde hair:1.1), little makeup), 0006_european_20_female reaching the peak of a snow-covered mountain, arms raised triumphantly above head, face showing exhaustion and joy, ice crystals in hair, climbing gear visible, vast mountain range stretching endlessly below, moment of achievement, (vector art++), (sharp linework+), no duplicates, (cel shading+), mid-century animation style, dynamic camera angle, non symetrical",
             "clip": [
               "40",
               1
@@ -132,7 +132,7 @@
         },
         "25": {
           "inputs": {
-            "noise_seed": 130380
+            "noise_seed": 296075
           },
           "class_type": "RandomNoise",
           "_meta": {
@@ -141,7 +141,7 @@
         },
         "26": {
           "inputs": {
-            "guidance": 3.5,
+            "guidance": 20,
             "conditioning": [
               "6",
               0
@@ -236,7 +236,7 @@
             "lora_1_strength": 0.9,
             "lora_1_model_strength": 0.9,
             "lora_1_clip_strength": 0.9,
-            "lora_2_name": "SBai_style_68.safetensors",
+            "lora_2_name": "style_91_4000.safetensors",
             "lora_2_strength": 0.85,
             "lora_2_model_strength": 0.85,
             "lora_2_clip_strength": 0.85,
@@ -288,6 +288,6 @@
       "force_download": false
     }
   },
-  "styleId": "68",
+  "styleId": "91",
   "mode": "text-to-image"
 }

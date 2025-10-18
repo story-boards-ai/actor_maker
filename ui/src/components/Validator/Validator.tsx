@@ -217,6 +217,33 @@ export function Validator() {
     }
   };
 
+  // Toggle "good" flag on trained model
+  const handleToggleModelGood = async (modelId: string, actorId: string) => {
+    try {
+      state.addLog(`🔄 Toggling "good" flag for model ${modelId}...`);
+      
+      const response = await fetch('/api/training/models/toggle-good', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ modelId, actorId })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to toggle model good flag: ${response.status}`);
+      }
+
+      const result = await response.json();
+      state.addLog(`✅ Model marked as ${result.good ? 'good' : 'not good'}`);
+      
+      // Reload models to update the UI
+      await state.reloadModels();
+    } catch (err) {
+      const errorMsg = err instanceof Error ? err.message : 'Failed to toggle model good flag';
+      console.error('[Validator] Error toggling model good:', err);
+      state.addLog(`❌ ERROR: ${errorMsg}`);
+    }
+  };
+
   // Get frontpad and backpad from selected style
   const selectedStyleData = state.styles.find((s) => s.id === state.selectedStyle);
   const styleFrontpad = selectedStyleData?.frontpad || '';
@@ -329,6 +356,7 @@ export function Validator() {
           assessments={assessments}
           onSelectStyle={state.setSelectedStyle}
           onSelectModel={state.setSelectedModel}
+          onToggleModelGood={handleToggleModelGood}
           onToggleStyleModal={state.setShowStyleModal}
           onPromptChange={state.setPrompt}
           onFrontpadChange={state.setFrontpad}

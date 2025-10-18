@@ -81,7 +81,7 @@
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0002_european_35_female_poster.png"
       }
     },
-    "good": true
+    "good": false
   },
   {
     "id": 3,
@@ -164,7 +164,7 @@
         "png": "https://story-boards-assets.s3-accelerate.amazonaws.com/system_actors/poster_frames/0005_european_50_female_poster.png"
       }
     },
-    "good": true
+    "good": false
   },
   {
     "id": 6,

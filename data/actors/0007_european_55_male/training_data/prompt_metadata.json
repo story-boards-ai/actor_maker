@@ -1,0 +1,39 @@
+{
+  "images": {
+    "0007_european_55_male_13.jpg": {
+      "prompt": "Cinematic film scene: The man runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing, character unaware of camera, looking away. Film-like cinematography, not symmetrical.",
+      "prompt_preview": "Cinematic film scene: The man runs across a rain-slick street at night, mid-stride, lit by car headl...",
+      "generated_at": "2025-10-18T11:31:19.599471",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_13.jpg",
+      "index": 13
+    },
+    "0007_european_55_male_14.jpg": {
+      "prompt": "Cinematic film scene: The man climbs a rocky mountain trail at midday, hands gripping stone. Extreme low angle shot from below, camera tilted upward at a steep angle, eyes focused upward on the path ahead. Off-center framing with dramatic sky and rock formations, bright sunlight creating harsh shadows, blue sky above. Character mid-climb, absorbed in the effort, looking away from camera. Film-like cinematography, not symmetrical.",
+      "prompt_preview": "Cinematic film scene: The man climbs a rocky mountain trail at midday, hands gripping stone. Extreme...",
+      "generated_at": "2025-10-18T11:31:31.370711",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_14.jpg",
+      "index": 14
+    },
+    "0007_european_55_male_15.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up profile of the man looking out a rain-streaked window. Camera positioned to the side, capturing face in sharp profile, eyes focused on the street below, warm interior light from the opposite side. Asymmetric framing with window edge creating diagonal, gaze directed downward and away, shallow depth of field, no other figures visible. Character absorbed in thought, unaware of camera. Film-like cinematography, not symmetrical.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up profile of the man looking out a rain-streaked window. Camera...",
+      "generated_at": "2025-10-18T11:31:40.522764",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_15.jpg",
+      "index": 15
+    },
+    "0007_european_55_male_16.jpg": {
+      "prompt": "Cinematic film scene: The man walks through a tall grass field at noon, wind blowing the grass in waves. Crane shot from high above at an angle, eyes scanning the horizon ahead. Asymmetric wide composition with character off-center, bright daylight, character small in the vast landscape. Head turned away, moving forward diagonally through frame, completely unaware of observation. Film-like cinematography, not centered.",
+      "prompt_preview": "Cinematic film scene: The man walks through a tall grass field at noon, wind blowing the grass in wa...",
+      "generated_at": "2025-10-18T11:31:50.982284",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_16.jpg",
+      "index": 16
+    },
+    "0007_european_55_male_17.jpg": {
+      "prompt": "Cinematic film scene: The man walks along a rain-soaked pier during a storm, hood up. Low tracking shot from behind and to the side, camera following at an angle, eyes focused on the wooden planks ahead. Asymmetric framing with pier creating diagonal, dark gray sky, waves crashing against the pier supports. Character hunched against the wind, moving forward through frame, unaware of observation. Film-like cinematography, not centered.",
+      "prompt_preview": "Cinematic film scene: The man walks along a rain-soaked pier during a storm, hood up. Low tracking s...",
+      "generated_at": "2025-10-18T11:32:52.401415",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0007_european_55_male/0007_european_55_male_17.jpg",
+      "index": 17
+    }
+  }
+}

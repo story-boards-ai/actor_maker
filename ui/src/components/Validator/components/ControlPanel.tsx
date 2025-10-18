@@ -37,6 +37,7 @@ interface ControlPanelProps {
   assessments?: Record<string, AssessmentRating>;
   onSelectStyle: (styleId: string) => void;
   onSelectModel: (modelId: string) => void;
+  onToggleModelGood?: (modelId: string, actorId: string) => void;
   onToggleStyleModal: (open: boolean) => void;
   onPromptChange: (prompt: string) => void;
   onFrontpadChange: (frontpad: string) => void;
@@ -88,6 +89,7 @@ export function ControlPanel(props: ControlPanelProps) {
     assessments = {},
     onSelectStyle,
     onSelectModel,
+    onToggleModelGood,
     onToggleStyleModal,
     onPromptChange,
     onCharacterSelect,
@@ -295,9 +297,32 @@ export function ControlPanel(props: ControlPanelProps) {
             </select>
             {selectedModelData && (
               <div className="model-info">
-                <p className="model-description">
-                  <strong>Style:</strong> {selectedModelData.styleName}
-                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                  <p className="model-description" style={{ margin: 0 }}>
+                    <strong>Style:</strong> {selectedModelData.styleName}
+                  </p>
+                  {!selectedModelData.isSystem && onToggleModelGood && (
+                    <button
+                      onClick={() => onToggleModelGood(selectedModelData.id, selectedModelData.styleId)}
+                      disabled={loading}
+                      className="model-good-button"
+                      title={selectedModelData.good ? "Mark as not good" : "Mark as good"}
+                      style={{
+                        padding: '4px 12px',
+                        fontSize: '12px',
+                        borderRadius: '4px',
+                        border: selectedModelData.good ? '2px solid #10b981' : '2px solid rgba(255, 255, 255, 0.3)',
+                        background: selectedModelData.good ? 'rgba(16, 185, 129, 0.2)' : 'transparent',
+                        color: selectedModelData.good ? '#10b981' : 'rgba(255, 255, 255, 0.7)',
+                        cursor: loading ? 'not-allowed' : 'pointer',
+                        fontWeight: selectedModelData.good ? 600 : 400,
+                        transition: 'all 0.2s'
+                      }}
+                    >
+                      {selectedModelData.good ? '✅ Good' : '⭕ Mark Good'}
+                    </button>
+                  )}
+                </div>
                 {selectedModelData.description && (
                   <p className="model-description">
                     {selectedModelData.description}

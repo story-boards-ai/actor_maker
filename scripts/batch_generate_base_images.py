@@ -19,29 +19,38 @@ import time
 from pathlib import Path
 from typing import List, Dict, Any
 
-# Add project root to path
+# Load environment variables from .env file FIRST before any imports
+from dotenv import load_dotenv
 project_root = Path(__file__).parent.parent
+env_path = project_root / '.env'
+if env_path.exists():
+    loaded = load_dotenv(env_path, override=True)
+    print(f"[ENV] Loaded .env file: {loaded}")
+    print(f"[ENV] RUNPOD_API_KEY present: {bool(os.getenv('RUNPOD_API_KEY'))}")
+    print(f"[ENV] AWS_ACCESS_KEY present: {bool(os.getenv('AWS_ACCESS_KEY'))}")
+else:
+    print(f"[ENV] ERROR: .env file not found at {env_path}")
+    sys.exit(1)
+
+# Add project root to path
 sys.path.insert(0, str(project_root))
 
-from src.runpod.serverless import RunPodServerlessClient
-from src.workflows_lib.workflow_builder import WorkflowBuilder
-from src.utils.s3 import S3Client
-from PIL import Image
-import io
-
-# Setup logging
+# Setup logging AFTER loading env
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-# Actor IDs to process (extracted from your log)
-ACTOR_IDS = [
-    207, 208, 215, 222, 225, 228, 231, 235, 236, 237, 238, 239, 240, 241, 242, 243,
-    261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276,
-    277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287
-]
+# Import after env is loaded
+from src.runpod.serverless import RunPodServerlessClient
+from src.workflows_lib.workflow_builder import WorkflowBuilder
+from src.utils.s3 import S3Client
+from PIL import Image
+import io
+
+# Actor IDs will be determined dynamically by scanning manifests
+ACTOR_IDS = []
 
 
 def load_actors_data() -> List[Dict[str, Any]]:
@@ -62,6 +71,43 @@ def find_actor_by_id(actors: List[Dict], actor_id: int) -> Dict[str, Any]:
         if actor.get('id') == actor_id:
             return actor
     return None
+
+
+def find_actors_without_base_images() -> List[int]:
+    """
+    Scan all manifests and find actors that have no base image.
+    
+    Returns:
+        List of actor IDs that need base images
+    """
+    manifests_dir = project_root / "data" / "actor_manifests"
+    
+    if not manifests_dir.exists():
+        logger.error(f"Manifests directory not found: {manifests_dir}")
+        return []
+    
+    actors_needing_base_images = []
+    
+    for manifest_path in sorted(manifests_dir.glob("*_manifest.json")):
+        try:
+            with open(manifest_path, 'r') as f:
+                manifest = json.load(f)
+            
+            # Extract actor ID from filename (e.g., "0280_manifest.json" -> 280)
+            actor_id = int(manifest_path.stem.split('_')[0])
+            
+            # Check if base_images array is empty
+            base_images = manifest.get('base_images', [])
+            
+            if not base_images or len(base_images) == 0:
+                actors_needing_base_images.append(actor_id)
+                logger.debug(f"Actor {actor_id} needs base image")
+        
+        except Exception as e:
+            logger.warning(f"Error reading manifest {manifest_path.name}: {e}")
+    
+    logger.info(f"Found {len(actors_needing_base_images)} actors without base images")
+    return actors_needing_base_images
 
 
 def generate_base_image(actor: Dict[str, Any]) -> bytes:
@@ -268,7 +314,16 @@ def main():
     """Main entry point."""
     logger.info("="*80)
     logger.info("BATCH BASE IMAGE GENERATION")
-    logger.info(f"Processing {len(ACTOR_IDS)} actors")
+    logger.info("="*80)
+    
+    # Find actors without base images
+    actor_ids = find_actors_without_base_images()
+    
+    if not actor_ids:
+        logger.info("No actors need base images. All done!")
+        sys.exit(0)
+    
+    logger.info(f"Processing {len(actor_ids)} actors without base images")
     logger.info("="*80)
     
     # Load actors data
@@ -280,7 +335,7 @@ def main():
     failed_count = 0
     failed_actors = []
     
-    for actor_id in ACTOR_IDS:
+    for actor_id in actor_ids:
         actor = find_actor_by_id(actors, actor_id)
         
         if not actor:
@@ -302,7 +357,7 @@ def main():
     logger.info("="*80)
     logger.info("BATCH GENERATION SUMMARY")
     logger.info("="*80)
-    logger.info(f"Total actors: {len(ACTOR_IDS)}")
+    logger.info(f"Total actors: {len(actor_ids)}")
     logger.info(f"Successful: {success_count}")
     logger.info(f"Failed: {failed_count}")
     

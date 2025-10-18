@@ -568,7 +568,7 @@ async function saveTestResult(
 /**
  * Parse JSON body from request
  */
-function parseJsonBody(req: IncomingMessage): Promise<any> {
+export function parseJsonBody(req: IncomingMessage): Promise<any> {
   return new Promise((resolve, reject) => {
     let body = "";
     req.on("data", (chunk) => (body += chunk.toString()));

@@ -195,12 +195,22 @@ export function handleGenerateSingleTrainingImage(
 
       // Call S3-only Python script to generate single training image
       const scriptPath = path.join(projectRoot, 'scripts', 'training_data', 'generate_single_training_image_s3.py');
-      const args = [scriptPath, actorId, actor_name, imageUrl, prompt];
-      if (actor_type) args.push(actor_type);
-      if (actor_sex) args.push(actor_sex);
-      if (aspect_ratio) args.push(aspect_ratio);
+      
+      // Build args array - must maintain positional order for Python script
+      // Python expects: actor_id, actor_name, base_image_url, prompt, [actor_type], [actor_sex], [aspect_ratio]
+      const args = [
+        scriptPath, 
+        actorId, 
+        actor_name, 
+        imageUrl, 
+        prompt,
+        actor_type || 'person',  // Default to 'person' if not provided
+        actor_sex || '',         // Empty string if not provided
+        aspect_ratio || '1:1'    // Default to '1:1' if not provided
+      ];
 
       console.log('[Generate Single] Spawning Python with args:', args);
+      console.log('[Generate Single] Aspect ratio:', aspect_ratio);
 
       // Use venv Python if available, fallback to python3
       const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');

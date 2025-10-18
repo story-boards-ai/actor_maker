@@ -56,6 +56,7 @@ export function ActorTrainingDataManager({
     message: ''
   });
   const [showDeleteAllConfirm, setShowDeleteAllConfirm] = useState(false);
+  const [trainingDataGood, setTrainingDataGood] = useState(false);
 
   // Image cache hook
   const { invalidateImage } = useImageCache();
@@ -143,6 +144,9 @@ export function ActorTrainingDataManager({
       
       // Set training images from new API structure
       setTrainingImages(data.training_images || []);
+      
+      // Set training data good flag
+      setTrainingDataGood(data.training_data_good || false);
     } catch (err) {
       console.error('Error loading training data:', err);
       setError(err instanceof Error ? err.message : 'Failed to load training data');
@@ -153,6 +157,26 @@ export function ActorTrainingDataManager({
 
   // S3-only architecture: No sync functions needed
   // All images are stored in S3, manifest is the source of truth
+
+  async function toggleTrainingDataGood() {
+    try {
+      const response = await fetch('/api/training/training-data/toggle-good', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ actorId: String(actor.id).padStart(4, '0') })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to toggle training data good flag');
+      }
+
+      const result = await response.json();
+      setTrainingDataGood(result.good);
+    } catch (err) {
+      console.error('Error toggling training data good:', err);
+      alert('Failed to toggle training data good flag');
+    }
+  }
 
   async function deleteAllTrainingData() {
     try {
@@ -433,6 +457,28 @@ export function ActorTrainingDataManager({
                 style={{ padding: '10px 20px', background: '#ef4444', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 500, cursor: trainingImages.length === 0 ? 'not-allowed' : 'pointer', opacity: trainingImages.length === 0 ? 0.5 : 1 }}
               >
                 🗑️ Delete All
+              </button>
+
+              <Separator.Root decorative orientation="vertical" style={{ width: '1px', background: 'rgba(255,255,255,0.3)', height: '32px' }} />
+
+              {/* Mark Training Data as Good */}
+              <button
+                onClick={toggleTrainingDataGood}
+                disabled={trainingImages.length === 0}
+                style={{
+                  padding: '10px 20px',
+                  background: trainingDataGood ? 'rgba(16, 185, 129, 0.3)' : 'rgba(255,255,255,0.2)',
+                  color: 'white',
+                  border: trainingDataGood ? '2px solid #10b981' : '2px solid rgba(255,255,255,0.3)',
+                  borderRadius: '6px',
+                  fontWeight: trainingDataGood ? 600 : 500,
+                  cursor: trainingImages.length === 0 ? 'not-allowed' : 'pointer',
+                  opacity: trainingImages.length === 0 ? 0.5 : 1,
+                  transition: 'all 0.2s'
+                }}
+                title={trainingDataGood ? "Mark as not good" : "Mark training data as good"}
+              >
+                {trainingDataGood ? '✅ Training Data Good' : '⭕ Mark Training Data Good'}
               </button>
 
               <Separator.Root decorative orientation="vertical" style={{ width: '1px', background: 'rgba(255,255,255,0.3)', height: '32px' }} />

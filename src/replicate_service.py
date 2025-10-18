@@ -51,23 +51,35 @@ class ReplicateService:
             prompt: Text prompt describing the desired grid
             input_image_base64: Base64-encoded source image
             aspect_ratio: Output aspect ratio (default: "1:1" for square)
+                         Supported values: "1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3", "4:5", "5:4"
             output_format: Output format ("jpg" or "png")
             
         Returns:
             URL of the generated grid image
+            
+        Note:
+            The flux-kontext-pro model may not always respect the aspect_ratio parameter
+            when it differs significantly from the input image's aspect ratio. The model
+            tends to preserve the input image's composition and may default to matching
+            the input image's aspect ratio in some cases.
         """
         logger.info("Generating 3x3 tile grid with flux-kontext-pro")
         
+        # Build input data with explicit aspect_ratio
         input_data = {
             "prompt": prompt,
             "input_image": f"data:image/jpeg;base64,{input_image_base64}",
             "aspect_ratio": aspect_ratio,
             "output_format": output_format,
+            "prompt_upsampling": False,  # Disable prompt upsampling for consistency
+            "safety_tolerance": 2,  # Maximum allowed with input images
         }
         
-        logger.debug(f"Flux-kontext input: prompt_length={len(prompt)}, "
+        logger.info(f"Flux-kontext input: prompt_length={len(prompt)}, "
                     f"image_length={len(input_image_base64)}, "
-                    f"aspect_ratio={aspect_ratio}")
+                    f"aspect_ratio={aspect_ratio}, output_format={output_format}")
+        logger.info(f"Full input_data keys: {list(input_data.keys())}")
+        logger.info(f"Aspect ratio being sent: '{aspect_ratio}' (type: {type(aspect_ratio)})")
         
         try:
             output = self.client.run(
@@ -82,10 +94,17 @@ class ReplicateService:
                 raise ValueError("Replicate did not return an image URL")
             
             logger.info(f"Grid generated successfully: {result_url}")
+            
+            # Log a warning if aspect ratio might not be respected
+            if aspect_ratio != "1:1":
+                logger.warning(f"Requested aspect ratio {aspect_ratio}. Note: flux-kontext-pro may "
+                             f"preserve input image aspect ratio instead of forcing output aspect ratio.")
+            
             return result_url
             
         except Exception as e:
             logger.error(f"Flux-kontext generation failed: {e}")
+            logger.error(f"Input data was: {input_data}")
             raise
     
     def upscale_with_topaz(

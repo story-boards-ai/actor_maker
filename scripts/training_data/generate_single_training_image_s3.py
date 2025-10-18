@@ -257,9 +257,18 @@ def main():
     actor_name = sys.argv[2]
     base_image_url = sys.argv[3]
     prompt = sys.argv[4]
-    actor_type = sys.argv[5] if len(sys.argv) > 5 else "person"
-    actor_sex = sys.argv[6] if len(sys.argv) > 6 else None
-    aspect_ratio = sys.argv[7] if len(sys.argv) > 7 else "1:1"
+    actor_type = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else "person"
+    actor_sex = sys.argv[6] if len(sys.argv) > 6 and sys.argv[6] else None
+    aspect_ratio = sys.argv[7] if len(sys.argv) > 7 and sys.argv[7] else "1:1"
+    
+    logger.info(f"Arguments received:")
+    logger.info(f"  actor_id: {actor_id}")
+    logger.info(f"  actor_name: {actor_name}")
+    logger.info(f"  base_image_url: {base_image_url}")
+    logger.info(f"  prompt: {prompt[:50]}...")
+    logger.info(f"  actor_type: {actor_type}")
+    logger.info(f"  actor_sex: {actor_sex}")
+    logger.info(f"  aspect_ratio: {aspect_ratio}")
     
     try:
         result = generate_single_training_image_s3(
