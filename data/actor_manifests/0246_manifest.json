@@ -1,15 +1,17 @@
 {
   "character_id": "0246",
-  "character_name": "0246_asian_52_male",
+  "character_name": "0246_south_american_84_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "52",
+    "age": "84",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Hiroshi Sato as a 52 year old asian man, with short black hair and wire-rimmed glasses",
+    "ethnicity": "south_american",
+    "face_prompt": "Hector Morales as an 84 year old hispanic man, with thin gray hair and a weathered, but kind face",
     "id": "0246",
-    "name": "0246_asian_52_male",
-    "image": "image247"
+    "name": "0246_south_american_84_male",
+    "image": "image232",
+    "outfit": "Light beige guayabera shirt with subtle green embroidery, olive green slacks, brown leather moccasins, and a straw fedora with a green ribbon.",
+    "description": "an 84 year old hispanic man, with thin gray hair and a weathered, but kind face"
   },
   "migration_timestamp": "2025-10-15T07:38:31.845249",
   "base_images": [

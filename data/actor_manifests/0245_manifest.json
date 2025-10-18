@@ -1,15 +1,17 @@
 {
   "character_id": "0245",
-  "character_name": "0245_black_58_male",
+  "character_name": "0245_middle_eastern_13_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "58",
-    "sex": "male",
-    "ethnicity": "black",
-    "face_prompt": "Kwame Okafor as a 58 year old black man, with short graying dreadlocks and a goatee",
+    "age": "13",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Layla Khoury as a 13 year old middle eastern girl, with medium length brown hair and a bright, optimistic smile",
     "id": "0245",
-    "name": "0245_black_58_male",
-    "image": "image246"
+    "name": "0245_middle_eastern_13_female",
+    "image": "image231",
+    "outfit": "Sky blue tunic with white lace trim, soft grey leggings, silver ballet flats, and a pastel pink headband with a bow.",
+    "description": "A 13 year old middle eastern girl, with medium length brown hair and a bright, optimistic smile"
   },
   "migration_timestamp": "2025-10-15T07:38:31.838935",
   "base_images": [

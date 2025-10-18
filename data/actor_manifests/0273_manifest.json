@@ -1,15 +1,17 @@
 {
   "character_id": "0273",
-  "character_name": "0273_indian_10_female",
+  "character_name": "0273_european_58_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "10",
-    "sex": "female",
-    "ethnicity": "indian",
-    "face_prompt": "Priya Patel as a 10 year old indian girl with long, black hair in a high ponytail and a colorful bindi",
+    "age": "58",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Luca Rossi as a 58 year old european man with short, gray hair and a well-groomed, graying beard",
     "id": "0273",
-    "name": "0273_indian_10_female",
-    "image": "image274"
+    "name": "0273_european_58_male",
+    "image": "image259",
+    "outfit": "Classic charcoal gray three-piece suit with peak lapels, light blue dress shirt with a hidden button placket, burgundy silk tie with a micro-dot pattern, black leather cap-toe oxfords with a high shine, and a gold tie clip with a subtle engraved design.",
+    "description": "A 58 year old european man with short, gray hair and a well-groomed, graying beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.993013",
   "base_images": [

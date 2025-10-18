@@ -1,15 +1,17 @@
 {
   "character_id": "0266",
-  "character_name": "0266_hispanic_43_female",
+  "character_name": "0266_indian_51_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "43",
-    "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Valeria Torres as a 43 year old hispanic woman with shoulder-length, curly brown hair and a small nose stud",
+    "age": "51",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Vikram Singh as a 51 year old indian man with short, graying hair and a thick, graying mustache",
     "id": "0266",
-    "name": "0266_hispanic_43_female",
-    "image": "image267"
+    "name": "0266_indian_51_male",
+    "image": "image252",
+    "outfit": "Elegant cream-colored sherwani with golden embroidery, white churidar, brown leather mojari shoes, and a maroon turban with golden brooch.",
+    "description": "A 51 year old indian man with short, graying hair and a thick, graying mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.971079",
   "base_images": [

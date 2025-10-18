@@ -1,15 +1,17 @@
 {
   "character_id": "0259",
-  "character_name": "0259_black_35_male",
+  "character_name": "0259_south_american_43_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "35",
-    "sex": "male",
-    "ethnicity": "black",
-    "face_prompt": "Kofi Mensah as a 35 year old black man with short dreadlocks and a thin mustache",
+    "age": "43",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Sofia Torres as a 43 year old hispanic woman, with shoulder-length wavy black hair and cat-eye glasses",
     "id": "0259",
-    "name": "0259_black_35_male",
-    "image": "image260"
+    "name": "0259_south_american_43_female",
+    "image": "image245",
+    "outfit": "Fitted emerald green wrap dress with three-quarter sleeves, nude pumps, gold hoop earrings, and a black leather tote bag.",
+    "description": "A 43 year old hispanic woman, with shoulder-length wavy black hair and cat-eye glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.936652",
   "base_images": [

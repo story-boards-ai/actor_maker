@@ -6,11 +6,12 @@
     "age": "30",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Maya Baker | Simone Carter] as a (30 year old) black woman) , with braided medium length (black hair:1.1) ",
+    "face_prompt": "A woman ([Maya Baker | Simone Carter] as a (30 year old) black woman) , with braided medium length (black hair:1.1) ",
     "id": "0165",
     "name": "0165_black_30_female",
     "image": "image166",
-    "outfit": "Professional teal blue tailored blazer, ivory silk blouse, fitted black pencil skirt, delicate gold chain necklace, and black leather pumps with subtle gold hardware."
+    "outfit": "Professional teal blue tailored blazer, ivory silk blouse, fitted black pencil skirt, delicate gold chain necklace, and black leather pumps with subtle gold hardware.",
+    "description": "A 30 year old black woman, with braided medium length black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.380667",
   "base_images": [

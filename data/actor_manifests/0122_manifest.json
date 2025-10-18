@@ -6,11 +6,12 @@
     "age": "20",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman ([Tanja Pine | Valerie Momoa] as a gorgeous 20 year old swiss woman), short blonde hair, slim",
+    "face_prompt": "A woman ([Tanja Pine | Valerie Momoa] as a gorgeous 20 year old swiss woman), short blonde hair, slim",
     "id": "0122",
     "name": "0122_european_20_female",
     "image": "image123",
-    "outfit": "Trendy lavender cropped sweater, high-waisted light wash denim jeans, silver hoop earrings, and white leather platform sneakers with purple accents."
+    "outfit": "Trendy lavender cropped sweater, high-waisted light wash denim jeans, silver hoop earrings, and white leather platform sneakers with purple accents.",
+    "description": "A gorgeous 20 year old swiss woman), short blonde hair, slim"
   },
   "migration_timestamp": "2025-10-15T07:38:30.976647",
   "base_images": [

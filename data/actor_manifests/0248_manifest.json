@@ -1,15 +1,17 @@
 {
   "character_id": "0248",
-  "character_name": "0248_middle_eastern_37_male",
+  "character_name": "0248_asian_39_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "37",
+    "age": "39",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Tariq Haddad as a 37 year old middle eastern man with short, wavy black hair and a well-trimmed beard",
+    "ethnicity": "asian",
+    "face_prompt": "Kenji Nakamura as a 39 year old asian man, with short spiky black hair and rectangular glasses",
     "id": "0248",
-    "name": "0248_middle_eastern_37_male",
-    "image": "image249"
+    "name": "0248_asian_39_male",
+    "image": "image234",
+    "outfit": "Navy blue blazer with brass buttons, light blue dress shirt, khaki chinos, brown leather loafers, and a silver wristwatch.",
+    "description": "A 39 year old asian man, with short spiky black hair and rectangular glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.857452",
   "base_images": [

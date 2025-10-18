@@ -1,15 +1,17 @@
 {
   "character_id": "0206",
-  "character_name": "0206_middle_eastern_52_male",
+  "character_name": "0206_south_american_33_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "52",
+    "age": "33",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Farhad Naseri as a 52 year old middle eastern man, with short graying hair and a neatly trimmed salt-and-pepper beard",
+    "ethnicity": "south_american",
+    "face_prompt": "Santiago Ramirez as a 33 year old south american man, with short curly black hair and a thin mustache",
     "id": "0206",
-    "name": "0206_middle_eastern_52_male",
-    "image": "image207"
+    "name": "0206_south_american_33_male",
+    "image": "image207",
+    "outfit": "Burnt-sienna suede trucker jacket, maize-yellow henley, stone-wash straight jeans, sand canvas high-tops, and a braided hemp bracelet.",
+    "description": "A 33 year old south american man, with short curly black hair and a thin mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.646079",
   "base_images": [

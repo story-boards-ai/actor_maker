@@ -6,10 +6,12 @@
     "age": "70",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man [Hunter Streep | Wasimir Slovenko] as a overweight 70 year old Middle Eastern man, with thin grey hair",
+    "face_prompt": "A man [Hunter Streep | Wasimir Slovenko] as a overweight 70 year old Middle Eastern man, with thin grey hair",
     "id": "0102",
     "name": "0102_middle_eastern_70_male",
-    "image": "image103"
+    "image": "image103",
+    "outfit": "Comfortable beige linen thobe with subtle white embroidery, dark brown leather sandals, and silver-rimmed reading glasses hanging from a chain.",
+    "description": "A overweight 70 year old Middle Eastern man, with thin grey hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.850692",
   "base_images": [

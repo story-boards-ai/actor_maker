@@ -1,15 +1,17 @@
 {
   "character_id": "0222",
-  "character_name": "0222_asian_45_female",
+  "character_name": "0222_indian_46_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "45",
+    "age": "46",
     "sex": "female",
-    "ethnicity": "asian",
-    "face_prompt": "Yuna Kim as a 45 year old asian woman, with long black hair pulled back into a sleek ponytail and a professional demeanor",
+    "ethnicity": "indian",
+    "face_prompt": "Priya Kapoor as a 46 year old indian woman, with long black hair in a low bun and a red bindi on her forehead",
     "id": "0222",
-    "name": "0222_asian_45_female",
-    "image": "image223"
+    "name": "0222_indian_46_female",
+    "image": "image208",
+    "outfit": "Teal silk tunic with asymmetrical hem over ivory palazzo pants, pearl-grey kitten-heel sandals, and a sapphire beaded clutch.",
+    "description": "A 46 year old indian woman, with long black hair in a low bun and a red bindi on her forehead"
   },
   "migration_timestamp": "2025-10-15T07:38:31.753197",
   "base_images": [

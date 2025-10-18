@@ -1,15 +1,17 @@
 {
   "character_id": "0209",
-  "character_name": "0209_black_50_female",
+  "character_name": "0209_european_24_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "50",
+    "age": "24",
     "sex": "female",
-    "ethnicity": "black",
-    "face_prompt": "Nia Johnson as a 50 year old black woman, with chin length straightened black hair and a confident smile",
+    "ethnicity": "european",
+    "face_prompt": "Lena M\u00fcller as a 24 year old european woman, with shoulder length straight blonde hair and a small nose stud",
     "id": "0209",
-    "name": "0209_black_50_female",
-    "image": "image210"
+    "name": "0209_european_24_female",
+    "image": "image210",
+    "outfit": "Powder-blue cropped denim jacket, butter-cream ribbed mock-neck tee, lavender A-line skirt, white platform sneakers with pastel rainbow stitching, and a silver charm bracelet.",
+    "description": "A 24 year old european woman, with shoulder length straight blonde hair and a small nose stud"
   },
   "migration_timestamp": "2025-10-15T07:38:31.657990",
   "base_images": [

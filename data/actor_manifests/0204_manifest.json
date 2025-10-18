@@ -1,15 +1,17 @@
 {
   "character_id": "0204",
-  "character_name": "0204_asian_43_male",
+  "character_name": "0204_european_37_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "43",
+    "age": "37",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Hiroshi Tanaka as a 43 year old asian man, with short black hair graying at the temples and a serious expression",
+    "ethnicity": "european",
+    "face_prompt": "Aleksander Nowak as a 37 year old european man, with short blonde hair styled in a quiff and a short beard",
     "id": "0204",
-    "name": "0204_asian_43_male",
-    "image": "image205"
+    "name": "0204_european_37_male",
+    "image": "image205",
+    "outfit": "Slate-green field jacket, cream merino turtleneck, ebony corduroy pants, chestnut hiking boots, and an amber leather weekender bag.",
+    "description": "A 37 year old european man, with short blonde hair styled in a quiff and a short beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.630717",
   "base_images": [

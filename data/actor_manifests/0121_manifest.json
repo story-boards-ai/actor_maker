@@ -6,11 +6,12 @@
     "age": "70",
     "sex": "female",
     "ethnicity": "nordic",
-    "face_prompt": "a woman ([Petra Mortensen | Silvia Stormare] as a 70 year old Nordic woman), with wavy shoulder length grey hair with bangs and ",
+    "face_prompt": "A woman ([Petra Mortensen | Silvia Stormare] as a 70 year old Nordic woman), with wavy shoulder length grey hair with bangs",
     "id": "0121",
     "name": "0121_nordic_70_female",
     "image": "image122",
-    "outfit": "Elegant pale blue wool cardigan with silver buttons, cream silk blouse, light gray wool trousers, pearl necklace, and comfortable navy blue low-heeled shoes."
+    "outfit": "Elegant pale blue wool cardigan with silver buttons, cream silk blouse, light gray wool trousers, pearl necklace, and comfortable navy blue low-heeled shoes.",
+    "description": "A 70 year old Nordic woman), with wavy shoulder length grey hair with bangs"
   },
   "migration_timestamp": "2025-10-15T07:38:30.971096",
   "base_images": [

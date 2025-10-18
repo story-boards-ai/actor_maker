@@ -6,11 +6,12 @@
     "age": "14",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Keisha Brown | Tia Mitchell] as a (14 year old) black woman) , with curly shoulder length (black hair:1.1) ",
+    "face_prompt": "A woman ([Keisha Brown | Tia Mitchell] as a (14 year old) black woman) , with curly shoulder length (black hair:1.1) ",
     "id": "0157",
     "name": "0157_black_14_female",
     "image": "image158",
-    "outfit": "Youthful bright yellow graphic t-shirt with positive message, denim overalls, colorful beaded bracelets, and white canvas sneakers with rainbow laces."
+    "outfit": "Youthful bright yellow graphic t-shirt with positive message, denim overalls, colorful beaded bracelets, and white canvas sneakers with rainbow laces.",
+    "description": "A 14 year old black woman, with curly shoulder length black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.225629",
   "base_images": [

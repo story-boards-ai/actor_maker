@@ -1,15 +1,17 @@
 {
   "character_id": "0264",
-  "character_name": "0264_european_60_female",
+  "character_name": "0264_asian_29_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "60",
-    "sex": "female",
-    "ethnicity": "european",
-    "face_prompt": "Sofia Bianchi as a 60 year old european woman with chin-length, wavy silver hair and tortoiseshell glasses",
+    "age": "29",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae-sung Kim as a 29 year old asian man with medium-length, straight black hair and rectangular glasses",
     "id": "0264",
-    "name": "0264_european_60_female",
-    "image": "image265"
+    "name": "0264_asian_29_male",
+    "image": "image250",
+    "outfit": "Slim-fit navy blazer over a light blue button-down shirt, dark wash jeans, white sneakers, and a silver wristwatch.",
+    "description": "A 29 year old asian man with medium-length, straight black hair and rectangular glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.961166",
   "base_images": [

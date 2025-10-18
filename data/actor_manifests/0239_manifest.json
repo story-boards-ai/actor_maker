@@ -1,15 +1,17 @@
 {
   "character_id": "0239",
-  "character_name": "0239_hispanic_57_male",
+  "character_name": "0239_european_52_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "57",
-    "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Miguel Sanchez as a 57 year old hispanic man, with short gray hair and a trimmed mustache",
+    "age": "52",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sophia M\u00fcller as a 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air",
     "id": "0239",
-    "name": "0239_hispanic_57_male",
-    "image": "image240"
+    "name": "0239_european_52_female",
+    "image": "image225",
+    "outfit": "Tailored cobalt blue sheath dress with a structured white blazer, nude patent leather pumps, pearl drop earrings, and a navy leather tote bag.",
+    "description": "A 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air"
   },
   "migration_timestamp": "2025-10-15T07:38:31.823908",
   "base_images": [

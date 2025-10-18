@@ -1,15 +1,17 @@
 {
   "character_id": "0212",
-  "character_name": "0212_indian_53_male",
+  "character_name": "0212_european_32_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "53",
+    "age": "32",
     "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Vikram Patel as a 53 year old indian man, with short graying hair and a thick mustache",
+    "ethnicity": "european",
+    "face_prompt": "Enzo Russo as a 32 year old european man, with medium length wavy brown hair and a short boxed beard",
     "id": "0212",
-    "name": "0212_indian_53_male",
-    "image": "image213"
+    "name": "0212_european_32_male",
+    "image": "image213",
+    "outfit": "Burgundy corduroy blazer, sage crew-neck tee, midnight jeans, cognac Chelsea boots, and a moss wool flat cap.",
+    "description": "A 32 year old european man, with medium length wavy brown hair and a short boxed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.692141",
   "base_images": [

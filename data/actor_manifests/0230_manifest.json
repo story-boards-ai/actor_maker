@@ -1,15 +1,17 @@
 {
   "character_id": "0230",
-  "character_name": "0230_middle_eastern_13_female",
+  "character_name": "0230_asian_11_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "13",
-    "sex": "female",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Layla Khoury as a 13 year old middle eastern girl, with medium length brown hair and a bright, optimistic smile",
+    "age": "11",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Jae Park as an 11 year old asian boy, with short black hair and a cheerful, gap-toothed smile",
     "id": "0230",
-    "name": "0230_middle_eastern_13_female",
-    "image": "image231"
+    "name": "0230_asian_11_male",
+    "image": "image216",
+    "outfit": "Cobalt blue soccer jersey, bright-white athletic shorts, sunset-orange knee-high socks, and navy cleats with neon laces.",
+    "description": "an 11 year old asian boy, with short black hair and a cheerful, gap-toothed smile"
   },
   "migration_timestamp": "2025-10-15T07:38:31.785285",
   "base_images": [

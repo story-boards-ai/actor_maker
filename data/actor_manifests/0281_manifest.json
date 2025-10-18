@@ -1,15 +1,17 @@
 {
   "character_id": "0281",
-  "character_name": "0281_asian_12_male",
+  "character_name": "0281_south_american_43_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "12",
-    "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Takeshi Sato as a 12 year old asian boy with short, straight black hair and glasses",
+    "age": "43",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Valeria Torres as a 43 year old hispanic woman with shoulder-length, curly brown hair and a small nose stud",
     "id": "0281",
-    "name": "0281_asian_12_male",
-    "image": "image282"
+    "name": "0281_south_american_43_female",
+    "image": "image267",
+    "outfit": "Flowing red floral maxi dress with ruffled sleeves, brown leather wedges, gold bangle bracelets, and a gold pendant necklace.",
+    "description": "A 43 year old hispanic woman with shoulder-length, curly brown hair and a small nose stud"
   },
   "migration_timestamp": "2025-10-15T07:38:32.007202",
   "base_images": [

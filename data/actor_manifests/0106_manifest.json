@@ -6,10 +6,12 @@
     "age": "50",
     "sex": "male",
     "ethnicity": "asian",
-    "face_prompt": "a man ([Hiro Naguso | Mioto Kazumo] as a very good looking 50 year old asian man), with short salt-and-pepper hair and a short beard",
+    "face_prompt": "A man ([Hiro Naguso | Mioto Kazumo] as a very good looking 50 year old asian man), with short salt-and-pepper hair and a short beard",
     "id": "0106",
     "name": "0106_asian_50_male",
-    "image": "image107"
+    "image": "image107",
+    "outfit": "Dark charcoal three-piece suit with a crisp white dress shirt, burgundy silk tie, matching pocket square, and polished black oxford shoes.",
+    "description": "A very good looking 50 year old asian man), with short salt-and-pepper hair and a short beard"
   },
   "migration_timestamp": "2025-10-15T07:38:30.882940",
   "base_images": [

@@ -6,11 +6,12 @@
     "age": "22",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Ashley White | Sierra Jackson] as a (22 year old) black woman) , with straight long (black hair:1.1) ",
+    "face_prompt": "A woman ([Ashley White | Sierra Jackson] as a (22 year old) black woman) , with straight long (black hair:1.1) ",
     "id": "0161",
     "name": "0161_black_22_female",
     "image": "image162",
-    "outfit": "Chic burnt orange ribbed turtleneck sweater, high-waisted white wide-leg pants, geometric gold earrings, and camel-colored suede ankle boots."
+    "outfit": "Chic burnt orange ribbed turtleneck sweater, high-waisted white wide-leg pants, geometric gold earrings, and camel-colored suede ankle boots.",
+    "description": "A 22 year old black woman, with straight long black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.352668",
   "base_images": [

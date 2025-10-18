@@ -6,11 +6,12 @@
     "age": "30",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "a man ([Peter McCintosh | Howard Conings] as a 30 year old european man), with short blonde balding hair and a goatie beard",
+    "face_prompt": "A man ([Peter McCintosh | Howard Conings] as a 30 year old european man), with short blonde balding hair and a goatee beard",
     "id": "0012",
     "name": "0012_european_30_male",
     "image": "image13",
-    "outfit": "Casual tech startup attire with a plaid button-up shirt, dark jeans, and casual leather shoes."
+    "outfit": "Casual tech startup attire with a red and black plaid button-up shirt, dark blue jeans, and brown leather desert boots.",
+    "description": "A 30 year old european man), with short blonde balding hair and a goatee beard"
   },
   "migration_timestamp": "2025-10-15T07:38:30.325135",
   "base_images": [

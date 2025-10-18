@@ -1,15 +1,17 @@
 {
   "character_id": "0235",
-  "character_name": "0235_middle_eastern_53_male",
+  "character_name": "0235_south_american_49_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "53",
-    "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Tariq Haddad as a 53 year old middle eastern man, with short graying hair and a full beard",
+    "age": "49",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Valeria Torres as a 49 year old hispanic woman, with medium length curly brown hair and a warm, inviting smile",
     "id": "0235",
-    "name": "0235_middle_eastern_53_male",
-    "image": "image236"
+    "name": "0235_south_american_49_female",
+    "image": "image221",
+    "outfit": "Vibrant fuchsia blouse with ruffled sleeves, white linen skirt, gold strappy sandals, and a matching fuchsia clutch.",
+    "description": "A 49 year old hispanic woman, with medium length curly brown hair and a warm, inviting smile"
   },
   "migration_timestamp": "2025-10-15T07:38:31.813480",
   "base_images": [

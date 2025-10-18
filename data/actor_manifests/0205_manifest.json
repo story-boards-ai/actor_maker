@@ -1,15 +1,17 @@
 {
   "character_id": "0205",
-  "character_name": "0205_hispanic_48_female",
+  "character_name": "0205_asian_29_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "48",
+    "age": "29",
     "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Sofia Morales as a 48 year old hispanic woman, with shoulder length wavy brown hair and warm, friendly eyes",
+    "ethnicity": "asian",
+    "face_prompt": "Jia Li as a 29 year old asian woman, with long straight black hair half tied back and cat eye glasses",
     "id": "0205",
-    "name": "0205_hispanic_48_female",
-    "image": "image206"
+    "name": "0205_asian_29_female",
+    "image": "image206",
+    "outfit": "Soft lilac tailored blazer over a crisp mint scoop-neck top, ink-blue cigarette trousers, white leather low-tops with mint accents, and a rose-gold pendant necklace.",
+    "description": "A 29 year old asian woman, with long straight black hair half tied back and cat eye glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.638380",
   "base_images": [

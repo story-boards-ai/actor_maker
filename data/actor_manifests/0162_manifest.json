@@ -6,11 +6,12 @@
     "age": "24",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Brittany Clark | Monica Robinson] as a (24 year old) black woman) , with braided short (black hair:1.1) ",
+    "face_prompt": "A woman ([Brittany Clark | Monica Robinson] as a (24 year old) black woman) , with braided short (black hair:1.1) ",
     "id": "0162",
     "name": "0162_black_24_female",
     "image": "image163",
-    "outfit": "Bold magenta blazer with black lapels, fitted black tank top, dark wash skinny jeans, statement silver earrings, and black pointed-toe ankle boots."
+    "outfit": "Bold magenta blazer with black lapels, fitted black tank top, dark wash skinny jeans, statement silver earrings, and black pointed-toe ankle boots.",
+    "description": "A 24 year old black woman, with braided short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.360506",
   "base_images": [

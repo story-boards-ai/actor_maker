@@ -6,11 +6,12 @@
     "age": "20",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Lauren Smith | Kayla Davis] as a (20 year old) black woman) , with curly short (black hair:1.1) ",
+    "face_prompt": "A woman ([Lauren Smith | Kayla Davis] as a (20 year old) black woman) , with curly short (black hair:1.1) ",
     "id": "0160",
     "name": "0160_black_20_female",
     "image": "image161",
-    "outfit": "Vibrant emerald green satin slip dress, lightweight black cardigan, layered gold necklaces, and black strappy sandals with gold accents."
+    "outfit": "Vibrant emerald green satin slip dress, lightweight black cardigan, layered gold necklaces, and black strappy sandals with gold accents.",
+    "description": "A 20 year old black woman, with curly short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.346339",
   "base_images": [

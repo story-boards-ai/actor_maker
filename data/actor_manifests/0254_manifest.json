@@ -1,15 +1,17 @@
 {
   "character_id": "0254",
-  "character_name": "0254_hispanic_47_male",
+  "character_name": "0254_south_american_57_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "47",
+    "age": "57",
     "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Javier Moreno as a 47 year old hispanic man with short, wavy salt-and-pepper hair and a mustache",
+    "ethnicity": "south_american",
+    "face_prompt": "Miguel Sanchez as a 57 year old hispanic man, with short gray hair and a trimmed mustache",
     "id": "0254",
-    "name": "0254_hispanic_47_male",
-    "image": "image255"
+    "name": "0254_south_american_57_male",
+    "image": "image240",
+    "outfit": "White guayabera shirt with black embroidery, black dress pants, black leather loafers, and a silver wristwatch.",
+    "description": "A 57 year old hispanic man, with short gray hair and a trimmed mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.895914",
   "base_images": [

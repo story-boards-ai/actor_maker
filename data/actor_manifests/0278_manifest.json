@@ -1,15 +1,17 @@
 {
   "character_id": "0278",
-  "character_name": "0278_middle_eastern_15_female",
+  "character_name": "0278_indian_49_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "15",
+    "age": "49",
     "sex": "female",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Layla Khoury as a 15 year old middle eastern girl with long, wavy black hair and a nose ring",
+    "ethnicity": "indian",
+    "face_prompt": "Priya Gupta as a 49 year old indian woman with long, black hair worn in a single braid and gold hoop earrings",
     "id": "0278",
-    "name": "0278_middle_eastern_15_female",
-    "image": "image279"
+    "name": "0278_indian_49_female",
+    "image": "image264",
+    "outfit": "Elegant fuchsia silk sari with golden border, matching blouse, gold bangles, pearl earrings, and a bindi on the forehead.",
+    "description": "A 49 year old indian woman with long, black hair worn in a single braid and gold hoop earrings"
   },
   "migration_timestamp": "2025-10-15T07:38:32.000386",
   "base_images": [

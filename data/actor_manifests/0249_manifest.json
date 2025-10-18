@@ -1,15 +1,17 @@
 {
   "character_id": "0249",
-  "character_name": "0249_asian_29_male",
+  "character_name": "0249_south_american_47_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "29",
+    "age": "47",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Jae-sung Kim as a 29 year old asian man with medium-length, straight black hair and rectangular glasses",
+    "ethnicity": "south_american",
+    "face_prompt": "Alejandro Rojas as a 47 year old hispanic man, with short wavy salt-and-pepper hair and a goatee",
     "id": "0249",
-    "name": "0249_asian_29_male",
-    "image": "image250"
+    "name": "0249_south_american_47_male",
+    "image": "image235",
+    "outfit": "Burgundy linen shirt, dark gray dress pants, brown leather belt, black leather loafers, and a silver bracelet.",
+    "description": "A 47 year old hispanic man, with short wavy salt-and-pepper hair and a goatee"
   },
   "migration_timestamp": "2025-10-15T07:38:31.862872",
   "base_images": [

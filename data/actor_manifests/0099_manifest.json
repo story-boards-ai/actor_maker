@@ -2,15 +2,16 @@
   "character_id": "0099",
   "character_name": "0099_middle_eastern_45_male",
   "metadata": {
-    "img": "00990_middle_eastern_45_male.webp",
+    "img": "0990_middle_eastern_45_male.webp",
     "age": "45",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man [Haldwin Geronimo | Estephan Marcos] as a 45 year old middle Eastern man with deep lines and short salt-and-pepper hair",
+    "face_prompt": "A man [Haldwin Geronimo | Estephan Marcos] as a 45 year old middle Eastern man with deep lines and short salt-and-pepper hair",
     "id": "0099",
     "name": "0099_middle_eastern_45_male",
     "image": "image100",
-    "outfit": "Elegant dark gray three-piece suit with subtle pinstripes, light blue dress shirt, navy and silver patterned tie, and polished black oxford shoes."
+    "outfit": "Elegant dark gray three-piece suit with subtle pinstripes, light blue dress shirt, navy and silver patterned tie, and polished black oxford shoes.",
+    "description": "A 45 year old middle Eastern man with deep lines and short salt-and-pepper hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.800027",
   "base_images": [

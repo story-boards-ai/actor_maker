@@ -1,15 +1,17 @@
 {
   "character_id": "0260",
-  "character_name": "0260_hispanic_45_male",
+  "character_name": "0260_black_58_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "45",
+    "age": "58",
     "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Diego Ramirez as a 45 year old hispanic man with short, wavy black hair and a five o'clock shadow",
+    "ethnicity": "black",
+    "face_prompt": "Kwame Okafor as a 58 year old black man, with short graying dreadlocks and a goatee",
     "id": "0260",
-    "name": "0260_hispanic_45_male",
-    "image": "image261"
+    "name": "0260_black_58_male",
+    "image": "image246",
+    "outfit": "Tailored dark gray three-piece suit with a subtle herringbone pattern, light blue dress shirt with spread collar, burgundy silk tie with a small polka dot pattern, polished black leather oxfords with a high shine, and a vintage silver pocket watch with a black silk fob.",
+    "description": "A 58 year old black man, with short graying dreadlocks and a goatee"
   },
   "migration_timestamp": "2025-10-15T07:38:31.942578",
   "base_images": [

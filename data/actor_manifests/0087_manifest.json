@@ -6,11 +6,12 @@
     "age": "55",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man [Rudger Navaly | Jesus Theron] as a 55 year old Middle Eastern man, with short straight silver hair",
+    "face_prompt": "A man [Rudger Navaly | Jesus Theron] as a 55 year old Middle Eastern man, with short straight silver hair",
     "id": "0087",
     "name": "0087_middle_eastern_55_male",
     "image": "image88",
-    "outfit": "Sophisticated navy blue business suit with subtle pinstripes, light blue dress shirt, gold and red patterned tie, and black leather oxfords."
+    "outfit": "Sophisticated navy blue business suit with subtle pinstripes, light blue dress shirt, gold and red patterned tie, and black leather oxfords.",
+    "description": "A 55 year old Middle Eastern man, with short straight silver hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.729433",
   "base_images": [

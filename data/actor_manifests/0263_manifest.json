@@ -1,15 +1,17 @@
 {
   "character_id": "0263",
-  "character_name": "0263_indian_49_female",
+  "character_name": "0263_middle_eastern_37_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "49",
-    "sex": "female",
-    "ethnicity": "indian",
-    "face_prompt": "Priya Gupta as a 49 year old indian woman with long, black hair worn in a single braid and gold hoop earrings",
+    "age": "37",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Tariq Haddad as a 37 year old middle eastern man with short, wavy black hair and a well-trimmed beard",
     "id": "0263",
-    "name": "0263_indian_49_female",
-    "image": "image264"
+    "name": "0263_middle_eastern_37_male",
+    "image": "image249",
+    "outfit": "Light gray tailored suit with a white dress shirt, open collar, brown leather loafers, and a silver bracelet.",
+    "description": "A 37 year old middle eastern man with short, wavy black hair and a well-trimmed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.953967",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0280",
-  "character_name": "0280_european_13_female",
+  "character_name": "0280_black_37_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "13",
+    "age": "37",
     "sex": "female",
-    "ethnicity": "european",
-    "face_prompt": "Sofia Rossi as a 13 year old european girl with shoulder-length, curly brown hair and braces",
+    "ethnicity": "black",
+    "face_prompt": "Zuri Adebayo as a 37 year old black woman with long, braided black hair and large, gold statement earrings",
     "id": "0280",
-    "name": "0280_european_13_female",
-    "image": "image281"
+    "name": "0280_black_37_female",
+    "image": "image266",
+    "outfit": "Vibrant yellow wrap dress with a cinched waist, black patent leather pumps, gold hoop earrings, and a black leather tote.",
+    "description": "A 37 year old black woman with long, braided black hair and large, gold statement earrings"
   },
   "migration_timestamp": "2025-10-15T07:38:32.005641",
   "base_images": [

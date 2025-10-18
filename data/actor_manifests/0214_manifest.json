@@ -1,15 +1,17 @@
 {
   "character_id": "0214",
-  "character_name": "0214_hispanic_14_female",
+  "character_name": "0214_middle_eastern_30_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "14",
-    "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Isabella Gomez as a 14 year old hispanic girl, with long brown hair in a ponytail and braces",
+    "age": "30",
+    "sex": "male",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Karim Haddad as a 30 year old middle eastern man, with short black hair in a crew cut and a trimmed beard",
     "id": "0214",
-    "name": "0214_hispanic_14_female",
-    "image": "image215"
+    "name": "0214_middle_eastern_30_male",
+    "image": "image215",
+    "outfit": "Pebble-grey linen camp shirt left open over a sand cotton tee, deep-olive cargo joggers, desert-tan moccasins, and a matte-black canvas sling bag.",
+    "description": "A 30 year old middle eastern man, with short black hair in a crew cut and a trimmed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.704602",
   "base_images": [

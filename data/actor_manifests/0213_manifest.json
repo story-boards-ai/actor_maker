@@ -1,15 +1,17 @@
 {
   "character_id": "0213",
-  "character_name": "0213_european_12_male",
+  "character_name": "0213_south_american_25_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "12",
-    "sex": "male",
-    "ethnicity": "european",
-    "face_prompt": "Liam Novak as a 12 year old european boy, with shaggy blonde hair and a mischievous grin",
+    "age": "25",
+    "sex": "female",
+    "ethnicity": "south_american",
+    "face_prompt": "Valentina Rojas as a 25 year old south american woman, with long curly brown hair half tied back and hoop earrings",
     "id": "0213",
-    "name": "0213_european_12_male",
-    "image": "image214"
+    "name": "0213_south_american_25_female",
+    "image": "image214",
+    "outfit": "Canary-yellow off-shoulder cotton blouse, cobalt high-waist paper-bag shorts, white braided wedge sandals, and a stack of thin crimson bangles.",
+    "description": "A 25 year old south american woman, with long curly brown hair half tied back and hoop earrings"
   },
   "migration_timestamp": "2025-10-15T07:38:31.697660",
   "base_images": [

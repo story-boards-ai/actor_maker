@@ -1,15 +1,17 @@
 {
   "character_id": "0252",
-  "character_name": "0252_european_62_male",
+  "character_name": "0252_european_50_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "62",
+    "age": "50",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "G\u00fcnther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
+    "face_prompt": "Lukas Becker as a 50 year old european man, with short blond hair and a clean-shaven face",
     "id": "0252",
-    "name": "0252_european_62_male",
-    "image": "image253"
+    "name": "0252_european_50_male",
+    "image": "image238",
+    "outfit": "Slim-fit charcoal gray three-piece suit with subtle pinstripes, light blue French-cuff dress shirt with silver cufflinks, burgundy silk tie with a small geometric pattern, polished black leather oxfords with brogue detailing, and a silver tie clip with a subtle wave pattern.",
+    "description": "A 50 year old european man, with short blond hair and a clean-shaven face"
   },
   "migration_timestamp": "2025-10-15T07:38:31.882461",
   "base_images": [

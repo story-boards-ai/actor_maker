@@ -6,11 +6,12 @@
     "age": "36",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Carla Campbell | Latoya Mitchell] as a average (36 year old) black woman) , with braided long (black hair:1.1) ",
+    "face_prompt": "A woman ([Carla Campbell | Latoya Mitchell] as a average (36 year old) black woman) , with braided long (black hair:1.1) ",
     "id": "0168",
     "name": "0168_black_36_female",
     "image": "image169",
-    "outfit": "Vibrant orange and blue African print maxi dress with wide sleeves, wooden bangle bracelets, large gold hoop earrings, and brown leather sandals with beaded details."
+    "outfit": "Vibrant orange and blue African print maxi dress with wide sleeves, wooden bangle bracelets, large gold hoop earrings, and brown leather sandals with beaded details.",
+    "description": "A average 36 year old black woman, with braided long black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.400525",
   "base_images": [

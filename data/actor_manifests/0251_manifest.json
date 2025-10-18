@@ -1,15 +1,17 @@
 {
   "character_id": "0251",
-  "character_name": "0251_indian_51_male",
+  "character_name": "0251_indian_42_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "51",
+    "age": "42",
     "sex": "male",
     "ethnicity": "indian",
-    "face_prompt": "Vikram Singh as a 51 year old indian man with short, graying hair and a thick, graying mustache",
+    "face_prompt": "Siddharth Patel as a 42 year old indian man, with short black hair and a thick mustache",
     "id": "0251",
-    "name": "0251_indian_51_male",
-    "image": "image252"
+    "name": "0251_indian_42_male",
+    "image": "image237",
+    "outfit": "Steel blue kurta with white churidar, black leather mojari shoes, a silver watch, and a maroon silk shawl.",
+    "description": "A 42 year old indian man, with short black hair and a thick mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.875753",
   "base_images": [

@@ -6,11 +6,12 @@
     "age": "38",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Marie Howard | Latasha Henderson] as a (38 year old) black woman) , with curly medium length (black hair:1.1) ",
+    "face_prompt": "A woman ([Marie Howard | Latasha Henderson] as a (38 year old) black woman) , with curly medium length (black hair:1.1) ",
     "id": "0169",
     "name": "0169_black_38_female",
     "image": "image170",
-    "outfit": "Professional forest green tailored pantsuit with slim-fit trousers, ivory silk camisole, delicate gold pendant necklace, and black leather pointed-toe pumps."
+    "outfit": "Professional forest green tailored pantsuit with slim-fit trousers, ivory silk camisole, delicate gold pendant necklace, and black leather pointed-toe pumps.",
+    "description": "A 38 year old black woman, with curly medium length black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.410828",
   "base_images": [

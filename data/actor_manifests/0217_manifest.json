@@ -1,15 +1,17 @@
 {
   "character_id": "0217",
-  "character_name": "0217_european_82_male",
+  "character_name": "0217_european_29_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "82",
-    "sex": "male",
+    "age": "29",
+    "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "Enzo Rossi as an 82 year old european man, with thin white hair and a wrinkled, kindly face",
+    "face_prompt": "Olivia Janssen as a 29 year old european woman, with medium length wavy blonde hair and a beauty mark on her cheek",
     "id": "0217",
-    "name": "0217_european_82_male",
-    "image": "image218"
+    "name": "0217_european_29_female",
+    "image": "image218",
+    "outfit": "Rose-quartz satin blouse tucked into storm-grey pleated culottes, taupe sling-back kitten heels, and a minimalist obsidian pendant.",
+    "description": "A 29 year old european woman, with medium length wavy blonde hair and a beauty mark on her cheek"
   },
   "migration_timestamp": "2025-10-15T07:38:31.718534",
   "base_images": [

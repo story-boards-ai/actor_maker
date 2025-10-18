@@ -6,11 +6,12 @@
     "age": "35",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a man Christopher Mouser as a 35 year old european man, with curly short brown hair",
+    "face_prompt": "A man Christopher Mouser as a 35 year old european man, with curly short brown hair",
     "id": "0156",
     "name": "0156_european_35_female",
     "image": "image157",
-    "outfit": "Professional forest green blazer, crisp white button-up shirt, tailored black trousers, silver watch, and polished black oxford shoes."
+    "outfit": "Professional forest green blazer, crisp white button-up shirt, tailored black trousers, silver watch, and polished black oxford shoes.",
+    "description": "A 35 year old european man, with curly short brown hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.219877",
   "base_images": [

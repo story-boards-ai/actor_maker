@@ -1,15 +1,17 @@
 {
   "character_id": "0233",
-  "character_name": "0233_asian_39_male",
+  "character_name": "0233_asian_85_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "39",
-    "sex": "male",
+    "age": "85",
+    "sex": "female",
     "ethnicity": "asian",
-    "face_prompt": "Kenji Nakamura as a 39 year old asian man, with short spiky black hair and rectangular glasses",
+    "face_prompt": "Mei Ling as an 85 year old asian woman, with short gray hair and a gentle, wise expression",
     "id": "0233",
-    "name": "0233_asian_39_male",
-    "image": "image234"
+    "name": "0233_asian_85_female",
+    "image": "image219",
+    "outfit": "Soft lavender cashmere cardigan over a snow-white blouse, dove-grey pleated midi skirt, rose-beige comfort flats, and a delicate blush silk headscarf.",
+    "description": "an 85 year old asian woman, with short gray hair and a gentle, wise expression"
   },
   "migration_timestamp": "2025-10-15T07:38:31.799840",
   "base_images": [

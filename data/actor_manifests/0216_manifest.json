@@ -1,15 +1,17 @@
 {
   "character_id": "0216",
-  "character_name": "0216_black_13_female",
+  "character_name": "0216_asian_34_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "13",
-    "sex": "female",
-    "ethnicity": "black",
-    "face_prompt": "Zuri Adebayo as a 13 year old black girl, with medium length braided hair and a shy smile",
+    "age": "34",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Hiroshi Sato as a 34 year old asian man, with short spiky black hair and a small scar on his eyebrow",
     "id": "0216",
-    "name": "0216_black_13_female",
-    "image": "image217"
+    "name": "0216_asian_34_male",
+    "image": "image217",
+    "outfit": "Indigo denim chore jacket with copper rivets, cloud-white crew-neck sweatshirt, charcoal slim jeans, charcoal-white high-top sneakers, and a steel cuff watch.",
+    "description": "A 34 year old asian man, with short spiky black hair and a small scar on his eyebrow"
   },
   "migration_timestamp": "2025-10-15T07:38:31.712669",
   "base_images": [

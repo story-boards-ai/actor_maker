@@ -1,15 +1,17 @@
 {
   "character_id": "0220",
-  "character_name": "0220_hispanic_49_female",
+  "character_name": "0220_south_american_48_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "49",
+    "age": "48",
     "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Valeria Torres as a 49 year old hispanic woman, with medium length curly brown hair and a warm, inviting smile",
+    "ethnicity": "south_american",
+    "face_prompt": "Sofia Morales as a 48 year old hispanic woman, with shoulder length wavy brown hair and warm, friendly eyes",
     "id": "0220",
-    "name": "0220_hispanic_49_female",
-    "image": "image221"
+    "name": "0220_south_american_48_female",
+    "image": "image206",
+    "outfit": "Wine-red wrap dress with flutter sleeves, midnight shawl-collar cardigan, black kitten-heel pumps, and a hematite statement necklace.",
+    "description": "A 48 year old hispanic woman, with shoulder length wavy brown hair and warm, friendly eyes"
   },
   "migration_timestamp": "2025-10-15T07:38:31.738083",
   "base_images": [

@@ -6,11 +6,12 @@
     "age": "16",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a white woman ([Priska Barionah | Hannah Twain] as a 16 year old white girl), with braided black hair and friendly eyes",
+    "face_prompt": "A white woman ([Priska Barionah | Hannah Twain] as a 16 year old white girl), with braided black hair and friendly eyes",
     "id": "0036",
     "name": "0036_european_16_female",
     "image": "image37",
-    "outfit": "Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers."
+    "outfit": "Bright yellow hoodie over a white graphic t-shirt, light blue ripped jeans, and black and white checkered Vans sneakers.",
+    "description": "A 16 year old white girl, with braided black hair and friendly eyes"
   },
   "migration_timestamp": "2025-10-15T07:38:30.453447",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0242",
-  "character_name": "0242_middle_eastern_51_male",
+  "character_name": "0242_asian_54_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "51",
+    "age": "54",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Rashid Mansour as a 51 year old middle eastern man, with short black hair and a closely cropped beard",
+    "ethnicity": "asian",
+    "face_prompt": "Takeshi Sato as a 54 year old asian man, with short graying hair and a stern, focused gaze",
     "id": "0242",
-    "name": "0242_middle_eastern_51_male",
-    "image": "image243"
+    "name": "0242_asian_54_male",
+    "image": "image228",
+    "outfit": "Classic charcoal grey mandarin-collar jacket, crisp white shirt, black wool trousers, polished oxblood leather loafers, and a jade tie pin.",
+    "description": "A 54 year old asian man, with short graying hair and a stern, focused gaze"
   },
   "migration_timestamp": "2025-10-15T07:38:31.829465",
   "base_images": [

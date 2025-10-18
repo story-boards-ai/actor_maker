@@ -6,11 +6,12 @@
     "age": "25",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman ([Samantha POowell | Jessica Arba] as a 25 year old (caucasian woman:1.2)), with a very short brown straight bob haircut with straight bangs and a shaved nape",
+    "face_prompt": "A woman ([Samantha POowell | Jessica Arba] as a 25 year old (caucasian woman:1.2)), with a very short brown straight bob haircut with straight bangs and a shaved nape",
     "id": "0069",
     "name": "0069_european_25_female",
     "image": "image70",
-    "outfit": "Edgy black leather moto jacket over a dark purple crop top, distressed charcoal skinny jeans, and chunky black platform boots with silver buckles."
+    "outfit": "Edgy black leather moto jacket over a dark purple crop top, distressed charcoal skinny jeans, and chunky black platform boots with silver buckles.",
+    "description": "A 25 year old (caucasian woman:1.2)), with a very short brown straight bob haircut with straight bangs and a shaved nape"
   },
   "migration_timestamp": "2025-10-15T07:38:30.635107",
   "base_images": [

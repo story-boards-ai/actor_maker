@@ -1,15 +1,17 @@
 {
   "character_id": "0255",
-  "character_name": "0255_middle_eastern_55_male",
+  "character_name": "0255_asian_49_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "55",
+    "age": "49",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Rashid Mansour as a 55 year old middle eastern man with short, graying hair and a neatly trimmed salt-and-pepper beard",
+    "ethnicity": "asian",
+    "face_prompt": "Jae-sung Park as a 49 year old asian man, with short black hair and thin-framed glasses",
     "id": "0255",
-    "name": "0255_middle_eastern_55_male",
-    "image": "image256"
+    "name": "0255_asian_49_male",
+    "image": "image241",
+    "outfit": "Slim-fit black tailored suit with a white spread-collar dress shirt, black silk tie with a subtle texture, black leather cap-toe oxfords with a high shine, and a slim silver tie bar with a brushed finish.",
+    "description": "A 49 year old asian man, with short black hair and thin-framed glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.903006",
   "base_images": [

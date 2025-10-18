@@ -1,15 +1,17 @@
 {
   "character_id": "0234",
-  "character_name": "0234_hispanic_47_male",
+  "character_name": "0234_middle_eastern_44_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "47",
+    "age": "44",
     "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Alejandro Rojas as a 47 year old hispanic man, with short wavy salt-and-pepper hair and a goatee",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amir Karimi as a 44 year old middle eastern man, with short black hair and a well-groomed beard",
     "id": "0234",
-    "name": "0234_hispanic_47_male",
-    "image": "image235"
+    "name": "0234_middle_eastern_44_male",
+    "image": "image220",
+    "outfit": "Crisp white thobe with navy blue trim, dark gray tailored trousers, brown leather loafers, and a silver cufflink set.",
+    "description": "A 44 year old middle eastern man, with short black hair and a well-groomed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.806771",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0231",
-  "character_name": "0231_hispanic_84_male",
+  "character_name": "0231_black_13_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "84",
-    "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Hector Morales as an 84 year old hispanic man, with thin gray hair and a weathered, but kind face",
+    "age": "13",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Zuri Adebayo as a 13 year old black girl, with medium length braided hair and a shy smile",
     "id": "0231",
-    "name": "0231_hispanic_84_male",
-    "image": "image232"
+    "name": "0231_black_13_female",
+    "image": "image217",
+    "outfit": "Sunflower-yellow dungaree dress over a strawberry-pink T-shirt, sky-blue low-top sneakers, and a lilac bucket hat.",
+    "description": "A 13 year old black girl, with medium length braided hair and a shy smile"
   },
   "migration_timestamp": "2025-10-15T07:38:31.791764",
   "base_images": [

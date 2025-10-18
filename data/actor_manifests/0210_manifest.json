@@ -1,15 +1,17 @@
 {
   "character_id": "0210",
-  "character_name": "0210_hispanic_42_male",
+  "character_name": "0210_indian_35_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "42",
+    "age": "35",
     "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Javier Ruiz as a 42 year old hispanic man, with short messy black hair and a scruffy beard",
+    "ethnicity": "indian",
+    "face_prompt": "Vikram Singh as a 35 year old indian man, with short black hair slicked back and designer stubble",
     "id": "0210",
-    "name": "0210_hispanic_42_male",
-    "image": "image211"
+    "name": "0210_indian_35_male",
+    "image": "image211",
+    "outfit": "Rust-orange lightweight bomber, graphite polo, olive tapered chinos, sand loafers, and a black leather messenger bag with brass hardware.",
+    "description": "A 35 year old indian man, with short black hair slicked back and designer stubble"
   },
   "migration_timestamp": "2025-10-15T07:38:31.664767",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0208",
-  "character_name": "0208_european_55_male",
+  "character_name": "0208_black_31_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "55",
+    "age": "31",
     "sex": "male",
-    "ethnicity": "european",
-    "face_prompt": "Luca Moretti as a 55 year old european man, with short gray hair and a weathered, distinguished face",
+    "ethnicity": "black",
+    "face_prompt": "Oluwaseun Adebayo as a 31 year old black man, with short dreadlocks tied back and a goatee",
     "id": "0208",
-    "name": "0208_european_55_male",
-    "image": "image209"
+    "name": "0208_black_31_male",
+    "image": "image209",
+    "outfit": "Sea-foam linen short-sleeve shirt with coconut-shell buttons, snow-white relaxed chinos, cocoa boat shoes, and a turquoise beaded wristband.",
+    "description": "A 31 year old black man, with short dreadlocks tied back and a goatee"
   },
   "migration_timestamp": "2025-10-15T07:38:31.656420",
   "base_images": [

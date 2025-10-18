@@ -1,15 +1,17 @@
 {
   "character_id": "0275",
-  "character_name": "0275_asian_8_female",
+  "character_name": "0275_south_american_45_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "8",
-    "sex": "female",
-    "ethnicity": "asian",
-    "face_prompt": "Mei Ling as an 8 year old asian girl with short, bobbed black hair and a Hello Kitty t-shirt",
+    "age": "45",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Diego Ramirez as a 45 year old hispanic man with short, wavy black hair and a five o'clock shadow",
     "id": "0275",
-    "name": "0275_asian_8_female",
-    "image": "image276"
+    "name": "0275_south_american_45_male",
+    "image": "image261",
+    "outfit": "Light gray suit with a black dress shirt, black leather dress shoes, and a silver wristwatch.",
+    "description": "A 45 year old hispanic man with short, wavy black hair and a five o'clock shadow"
   },
   "migration_timestamp": "2025-10-15T07:38:31.995861",
   "base_images": [

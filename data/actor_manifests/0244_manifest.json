@@ -1,15 +1,17 @@
 {
   "character_id": "0244",
-  "character_name": "0244_hispanic_43_female",
+  "character_name": "0244_south_american_15_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "43",
-    "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Sofia Torres as a 43 year old hispanic woman, with shoulder-length wavy black hair and cat-eye glasses",
+    "age": "15",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Miguel Hernandez as a 15 year old hispanic boy, with short curly black hair and a friendly, outgoing personality",
     "id": "0244",
-    "name": "0244_hispanic_43_female",
-    "image": "image245"
+    "name": "0244_south_american_15_male",
+    "image": "image230",
+    "outfit": "Sporty red soccer jersey, navy blue athletic shorts with white stripes, black and white sneakers, and a woven friendship bracelet.",
+    "description": "A 15 year old hispanic boy, with short curly black hair and a friendly, outgoing personality"
   },
   "migration_timestamp": "2025-10-15T07:38:31.832225",
   "base_images": [

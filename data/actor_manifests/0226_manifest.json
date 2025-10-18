@@ -1,15 +1,17 @@
 {
   "character_id": "0226",
-  "character_name": "0226_middle_eastern_48_female",
+  "character_name": "0226_asian_47_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "48",
+    "age": "47",
     "sex": "female",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Fatima Nassari as a 48 year old middle eastern woman, with long dark hair worn in a loose braid and a serene, peaceful expression",
+    "ethnicity": "asian",
+    "face_prompt": "Mei Chen as a 47 year old asian woman, with medium length black hair in a bob cut and minimal makeup",
     "id": "0226",
-    "name": "0226_middle_eastern_48_female",
-    "image": "image227"
+    "name": "0226_asian_47_female",
+    "image": "image212",
+    "outfit": "Dove-grey waterfall cardigan, marigold knit shell top, ink-black straight jeans, pewter ballet flats, and a jade pendant.",
+    "description": "A 47 year old asian woman, with medium length black hair in a bob cut and minimal makeup"
   },
   "migration_timestamp": "2025-10-15T07:38:31.767033",
   "base_images": [

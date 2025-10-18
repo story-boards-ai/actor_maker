@@ -6,11 +6,12 @@
     "age": "18",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Naomi Wilson | Jasmine Taylor] as a (18 year old) black woman) , with braided long (black hair:1.1) ",
+    "face_prompt": "A woman ([Naomi Wilson | Jasmine Taylor] as a (18 year old) black woman) , with braided long (black hair:1.1) ",
     "id": "0159",
     "name": "0159_black_18_female",
     "image": "image160",
-    "outfit": "Stylish lavender off-shoulder crop top, high-waisted light wash distressed jeans, gold hoop earrings, and white chunky sneakers with purple accents."
+    "outfit": "Stylish lavender off-shoulder crop top, high-waisted light wash distressed jeans, gold hoop earrings, and white chunky sneakers with purple accents.",
+    "description": "A 18 year old black woman, with braided long black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.315955",
   "base_images": [

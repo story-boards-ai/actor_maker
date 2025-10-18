@@ -1,15 +1,17 @@
 {
   "character_id": "0243",
-  "character_name": "0243_european_46_male",
+  "character_name": "0243_indian_10_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "46",
-    "sex": "male",
-    "ethnicity": "european",
-    "face_prompt": "Matteo Ricci as a 46 year old european man, with short brown hair and a scruffy beard",
+    "age": "10",
+    "sex": "female",
+    "ethnicity": "indian",
+    "face_prompt": "Aanya Patel as a 10 year old indian girl, with long black hair in two braids and an energetic, curious demeanor",
     "id": "0243",
-    "name": "0243_european_46_male",
-    "image": "image244"
+    "name": "0243_indian_10_female",
+    "image": "image229",
+    "outfit": "Bright turquoise cotton kurta with yellow floral print, white leggings, pink sandals, and a playful yellow hair bow.",
+    "description": "A 10 year old indian girl, with long black hair in two braids and an energetic, curious demeanor"
   },
   "migration_timestamp": "2025-10-15T07:38:31.830846",
   "base_images": [

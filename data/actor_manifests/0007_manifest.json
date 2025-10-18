@@ -6,11 +6,12 @@
     "age": "55",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "a man ([Karen Bilbao | Harris Nobs] as a (55 year old) european man), with very short straight silver hair, clean shaven",
+    "face_prompt": "A man ([Karen Bilbao | Harris Nobs] as a (55 year old) european man), with very short straight silver hair, clean shaven",
     "id": "0007",
     "name": "0007_european_55_male",
     "image": "image8",
-    "outfit": "Professional business suit with a crisp white shirt, patterned tie, and polished oxford shoes."
+    "outfit": "Professional business attire featuring a crisp white dress shirt, navy blue tie with small silver diagonal stripes, and polished black oxford shoes.",
+    "description": "A (55 year old) european man), with very short straight silver hair, clean shaven"
   },
   "migration_timestamp": "2025-10-15T07:38:30.297393",
   "base_images": [

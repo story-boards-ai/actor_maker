@@ -1,15 +1,17 @@
 {
   "character_id": "0282",
-  "character_name": "0282_hispanic_11_female",
+  "character_name": "0282_middle_eastern_55_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "11",
+    "age": "55",
     "sex": "female",
-    "ethnicity": "hispanic",
-    "face_prompt": "Valentina Morales as an 11 year old hispanic girl with long, straight brown hair in a side braid and freckles",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Fatima Karimi as a 55 year old middle eastern woman with medium-length, straight black hair and a colorful headscarf",
     "id": "0282",
-    "name": "0282_hispanic_11_female",
-    "image": "image283"
+    "name": "0282_middle_eastern_55_female",
+    "image": "image268",
+    "outfit": "Elegant navy blue abaya with silver embroidery, matching hijab, silver ballet flats, and a silver filigree bracelet.",
+    "description": "A 55 year old middle eastern woman with medium-length, straight black hair and a colorful headscarf"
   },
   "migration_timestamp": "2025-10-15T07:38:32.008424",
   "base_images": [

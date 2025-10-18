@@ -1,15 +1,17 @@
 {
   "character_id": "0221",
-  "character_name": "0221_indian_51_male",
+  "character_name": "0221_middle_eastern_52_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "51",
+    "age": "52",
     "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Rajesh Gupta as a 51 year old indian man, with short salt-and-pepper hair and a neatly trimmed mustache",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Farhad Naseri as a 52 year old middle eastern man, with short graying hair and a neatly trimmed salt-and-pepper beard",
     "id": "0221",
-    "name": "0221_indian_51_male",
-    "image": "image222"
+    "name": "0221_middle_eastern_52_male",
+    "image": "image207",
+    "outfit": "Sandstone safari jacket, cream button-up shirt, seal-brown straight trousers, coffee leather loafers, and a bronze aviator watch.",
+    "description": "A 52 year old middle eastern man, with short graying hair and a neatly trimmed salt-and-pepper beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.746155",
   "base_images": [

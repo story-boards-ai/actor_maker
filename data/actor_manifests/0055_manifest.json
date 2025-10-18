@@ -6,11 +6,12 @@
     "age": "35",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman ([Rahel Vollweider | Tanja Vasinova] as a slender 35 year old european woman), with light skin, long brown hair in a ponytail, wearing glasses",
+    "face_prompt": "A woman ([Rahel Vollweider | Tanja Vasinova] as a slender 35 year old european woman), with light skin, long brown hair in a ponytail, wearing glasses",
     "id": "0055",
     "name": "0055_european_35_female",
     "image": "image56",
-    "outfit": "Professional sage green blouse with small white polka dots, charcoal gray pencil skirt, tortoiseshell glasses, and burgundy leather pumps."
+    "outfit": "Professional sage green blouse with small white polka dots, charcoal gray pencil skirt, tortoiseshell glasses, and burgundy leather pumps.",
+    "description": "A slender 35 year old european woman, with light skin, long brown hair in a ponytail, wearing glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:30.557339",
   "base_images": [

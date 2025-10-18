@@ -1,15 +1,17 @@
 {
   "character_id": "0247",
-  "character_name": "0247_indian_48_male",
+  "character_name": "0247_black_87_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "48",
-    "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Vikram Singh as a 48 year old indian man, with short black hair and a neatly trimmed beard",
+    "age": "87",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Ethel Johnson as an 87 year old black woman, with short curly white hair and a warm, grandmotherly demeanor",
     "id": "0247",
-    "name": "0247_indian_48_male",
-    "image": "image248"
+    "name": "0247_black_87_female",
+    "image": "image233",
+    "outfit": "Soft lavender floral dress with a white cardigan, pearl button earrings, black orthopedic shoes, and a woven straw handbag.",
+    "description": "an 87 year old black woman, with short curly white hair and a warm, grandmotherly demeanor"
   },
   "migration_timestamp": "2025-10-15T07:38:31.850566",
   "base_images": [

@@ -6,11 +6,12 @@
     "age": "60",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman([Eva Randall | Jessica Hardy] as a (60 year old) european woman) , with curly ear length (gray hair:1.1) ",
+    "face_prompt": "A woman([Eva Randall | Jessica Hardy] as a (60 year old) european woman), with curly ear length (gray hair:1.1)",
     "id": "0008",
     "name": "0008_european_60_female",
     "image": "image9",
-    "outfit": "Classic elegant attire with a silk blouse, tailored pants, and tasteful pearl jewelry."
+    "outfit": "Classic elegant ensemble with an emerald green silk blouse, black tailored pants, and tasteful pearl necklace and earrings.",
+    "description": "A (60 year old) european woman), with curly ear length (gray hair:1.1)"
   },
   "migration_timestamp": "2025-10-15T07:38:30.303323",
   "base_images": [

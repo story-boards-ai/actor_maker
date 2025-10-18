@@ -1,15 +1,17 @@
 {
   "character_id": "0270",
-  "character_name": "0270_hispanic_13_male",
+  "character_name": "0270_middle_eastern_55_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "13",
+    "age": "55",
     "sex": "male",
-    "ethnicity": "hispanic",
-    "face_prompt": "Diego Hernandez as a 13 year old hispanic boy with curly, medium-length brown hair and glasses",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Rashid Mansour as a 55 year old middle eastern man with short, graying hair and a neatly trimmed salt-and-pepper beard",
     "id": "0270",
-    "name": "0270_hispanic_13_male",
-    "image": "image271"
+    "name": "0270_middle_eastern_55_male",
+    "image": "image256",
+    "outfit": "Elegant white thobe with delicate gold thread embroidery in traditional Islamic patterns, black leather sandals with gold-tone buckles, a black leather belt with a silver buckle featuring a calligraphic design, and a gold wristwatch with a black leather strap.",
+    "description": "A 55 year old middle eastern man with short, graying hair and a neatly trimmed salt-and-pepper beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.987691",
   "base_images": [

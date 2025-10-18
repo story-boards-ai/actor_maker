@@ -6,11 +6,12 @@
     "age": "14",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man [Pablino Charaz | Achmud Achmad] as a 14 year old Middle Eastern boy, with short curly brown hair",
+    "face_prompt": "A man [Pablino Charaz | Achmud Achmad] as a 14 year old Middle Eastern boy, with short curly brown hair",
     "id": "0093",
     "name": "0093_middle_eastern_14_male",
     "image": "image94",
-    "outfit": "Casual royal blue and white striped t-shirt, khaki cargo shorts with multiple pockets, digital watch with black strap, and green and white athletic sneakers."
+    "outfit": "Casual royal blue and white striped t-shirt, khaki cargo shorts with multiple pockets, digital watch with black strap, and green and white athletic sneakers.",
+    "description": "A 14 year old Middle Eastern boy, with short curly brown hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.761994",
   "base_images": [

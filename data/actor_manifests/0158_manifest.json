@@ -6,11 +6,12 @@
     "age": "16",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Aaliyah Johnson | Brianna Harris] as a (16 year old) black woman) , with straight short (black hair:1.1) ",
+    "face_prompt": "A woman ([Aaliyah Johnson | Brianna Harris] as a (16 year old) black woman) , with straight short (black hair:1.1) ",
     "id": "0158",
     "name": "0158_black_16_female",
     "image": "image159",
-    "outfit": "Trendy royal blue cropped hoodie with white graphic print, high-waisted black denim shorts, colorful beaded necklace, and white platform sneakers."
+    "outfit": "Trendy royal blue cropped hoodie with white graphic print, high-waisted black denim shorts, colorful beaded necklace, and white platform sneakers.",
+    "description": "A 16 year old black teenage girl, with straight short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.236136",
   "base_images": [

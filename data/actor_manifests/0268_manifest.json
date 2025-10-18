@@ -1,15 +1,17 @@
 {
   "character_id": "0268",
-  "character_name": "0268_asian_15_male",
+  "character_name": "0268_black_39_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "15",
+    "age": "39",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Jae Park as a 15 year old asian boy with short, spiky black hair and braces",
+    "ethnicity": "black",
+    "face_prompt": "Kwame Osei as a 39 year old black man with short, curly black hair and a closely trimmed beard",
     "id": "0268",
-    "name": "0268_asian_15_male",
-    "image": "image269"
+    "name": "0268_black_39_male",
+    "image": "image254",
+    "outfit": "Modern dark gray suit with a subtle micro-check pattern, white dress shirt with a cutaway collar, black skinny tie with a matte finish, black leather Chelsea boots with elastic side panels, and a slim silver tie bar with a brushed finish.",
+    "description": "A 39 year old black man with short, curly black hair and a closely trimmed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.983597",
   "base_images": [

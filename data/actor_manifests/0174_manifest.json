@@ -6,11 +6,12 @@
     "age": "28",
     "sex": "male",
     "ethnicity": "white",
-    "face_prompt": "a man ([Ryan Harper | Evan Mitchell] as a (28 year old) white man) , with dark blonde hair that is medium length, slightly curled at the ends, and styled in a relaxed, tousled manner",
+    "face_prompt": "A man ([Ryan Harper | Evan Mitchell] as a (28 year old) white man) , with dark blonde hair that is medium length, slightly curled at the ends, and styled in a relaxed, tousled manner",
     "id": "0174",
     "name": "0174_white_28_male",
     "image": "image175",
-    "outfit": "Casual olive green button-down shirt with subtle check pattern, khaki chinos, brown leather belt with silver buckle, and brown suede desert boots."
+    "outfit": "Casual olive green button-down shirt with subtle check pattern, khaki chinos, brown leather belt with silver buckle, and brown suede desert boots.",
+    "description": "A 28 year old white man, with dark blonde hair that is medium length, slightly curled at the ends, and styled in a relaxed, tousled manner"
   },
   "migration_timestamp": "2025-10-15T07:38:31.433762",
   "base_images": [

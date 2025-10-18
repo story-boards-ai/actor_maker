@@ -1,15 +1,17 @@
 {
   "character_id": "0215",
-  "character_name": "0215_asian_11_male",
+  "character_name": "0215_black_27_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "11",
-    "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Jae Park as an 11 year old asian boy, with short black hair and a cheerful, gap-toothed smile",
+    "age": "27",
+    "sex": "female",
+    "ethnicity": "black",
+    "face_prompt": "Imani Okafor as a 27 year old black woman, with medium length braided hair pulled back and a nose ring",
     "id": "0215",
-    "name": "0215_asian_11_male",
-    "image": "image216"
+    "name": "0215_black_27_female",
+    "image": "image216",
+    "outfit": "Emerald sleeveless utility jumpsuit cinched with a matte-gold buckle belt, ebony ankle-strap block heels, and a saffron silk hair wrap.",
+    "description": "A 27 year old black woman, with medium length braided hair pulled back and a nose ring"
   },
   "migration_timestamp": "2025-10-15T07:38:31.711113",
   "base_images": [

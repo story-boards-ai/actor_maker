@@ -6,11 +6,12 @@
     "age": "45",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman ([Pamela Rivera | Kim Hae-Sung] as a 45 year old european woman), with curly black hair reaching her ears and , heavy makeup",
+    "face_prompt": "A woman ([Pamela Rivera | Kim Hae-Sung] as a 45 year old european woman), with curly black hair reaching her ears and , heavy makeup",
     "id": "0080",
     "name": "0080_european_45_female",
     "image": "image81",
-    "outfit": "Glamorous ruby red cocktail dress with black lace overlay, statement diamond earrings, sheer black stockings, and black patent leather stiletto heels."
+    "outfit": "Glamorous ruby red cocktail dress with black lace overlay, statement diamond earrings, sheer black stockings, and black patent leather stiletto heels.",
+    "description": "A 45 year old european woman), with curly black hair reaching her ears and , heavy makeup"
   },
   "migration_timestamp": "2025-10-15T07:38:30.692689",
   "base_images": [

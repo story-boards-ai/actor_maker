@@ -6,11 +6,12 @@
     "age": "20",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man ([Hank Frasor | Roger Gunman] as a 20 year old Middle Eastern man), with short curly black hair and a short goatee beard",
+    "face_prompt": "A man ([Hank Frasor | Roger Gunman] as a 20 year old Middle Eastern man), with short curly black hair and a short goatee beard",
     "id": "0084",
     "name": "0084_middle_eastern_20_male",
     "image": "image85",
-    "outfit": "Modern maroon and gold patterned button-up shirt, black slim-fit jeans, silver chain necklace, and white designer sneakers with black accents."
+    "outfit": "Modern maroon and gold paisley patterned button-up shirt with black contrast piping, black slim-fit jeans with subtle fading, a thick silver Cuban link chain necklace, and white designer sneakers with black contrast panels and gum soles.",
+    "description": "A 20 year old Middle Eastern man, with short curly black hair and a short goatee beard"
   },
   "migration_timestamp": "2025-10-15T07:38:30.714193",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0253",
-  "character_name": "0253_black_39_male",
+  "character_name": "0253_black_44_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "39",
-    "sex": "male",
+    "age": "44",
+    "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "Kwame Osei as a 39 year old black man with short, curly black hair and a closely trimmed beard",
+    "face_prompt": "Imani Williams as a 44 year old black woman, with long dreadlocks tied back and round glasses",
     "id": "0253",
-    "name": "0253_black_39_male",
-    "image": "image254"
+    "name": "0253_black_44_female",
+    "image": "image239",
+    "outfit": "Bold kente print maxi dress, gold bangle bracelets, brown leather sandals, and a matching kente print headwrap.",
+    "description": "A 44 year old black woman, with long dreadlocks tied back and round glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.889493",
   "base_images": [

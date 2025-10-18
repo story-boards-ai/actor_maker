@@ -1,15 +1,17 @@
 {
   "character_id": "0257",
-  "character_name": "0257_indian_41_male",
+  "character_name": "0257_middle_eastern_51_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "41",
+    "age": "51",
     "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Arjun Patel as a 41 year old indian man with short, straight black hair and a soul patch",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Rashid Mansour as a 51 year old middle eastern man, with short black hair and a closely cropped beard",
     "id": "0257",
-    "name": "0257_indian_41_male",
-    "image": "image258"
+    "name": "0257_middle_eastern_51_male",
+    "image": "image243",
+    "outfit": "Classic white thobe with intricate gold embroidery along the cuffs and placket, black leather sandals with gold accents, a black leather belt with an ornate silver buckle featuring Islamic geometric patterns, and a silver dress watch with Arabic numerals.",
+    "description": "A 51 year old middle eastern man, with short black hair and a closely cropped beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.923811",
   "base_images": [

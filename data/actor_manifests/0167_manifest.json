@@ -6,11 +6,12 @@
     "age": "34",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Chloe Parker | Asia Phillips] as a stunning (34 year old) black woman) , with straight short (black hair:1.1) ",
+    "face_prompt": "A woman ([Chloe Parker | Asia Phillips] as a stunning (34 year old) black woman) , with straight short (black hair:1.1) ",
     "id": "0167",
     "name": "0167_black_34_female",
     "image": "image168",
-    "outfit": "Sophisticated burgundy sheath dress with asymmetrical neckline, thin gold belt, diamond stud earrings, and nude patent leather pumps."
+    "outfit": "Sophisticated burgundy sheath dress with asymmetrical neckline, thin gold belt, diamond stud earrings, and nude patent leather pumps.",
+    "description": "A stunning 34 year old black woman, with straight short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.393594",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0267",
-  "character_name": "0267_middle_eastern_55_female",
+  "character_name": "0267_european_62_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "55",
-    "sex": "female",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Fatima Karimi as a 55 year old middle eastern woman with medium-length, straight black hair and a colorful headscarf",
+    "age": "62",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "G\u00fcnther Becker as a 62 year old european man with thinning, gray hair and round, wire-rimmed glasses",
     "id": "0267",
-    "name": "0267_middle_eastern_55_female",
-    "image": "image268"
+    "name": "0267_european_62_male",
+    "image": "image253",
+    "outfit": "Classic tweed blazer with elbow patches, light blue dress shirt, brown corduroy pants, brown leather shoes, and a gold pocket watch.",
+    "description": "A 62 year old european man with thinning, gray hair and round, wire-rimmed glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.977365",
   "base_images": [

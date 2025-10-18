@@ -1,15 +1,17 @@
 {
   "character_id": "0279",
-  "character_name": "0279_indian_14_male",
+  "character_name": "0279_european_60_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "14",
-    "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Arjun Gupta as a 14 year old indian boy with short, spiky black hair and a small scar on his chin",
+    "age": "60",
+    "sex": "female",
+    "ethnicity": "european",
+    "face_prompt": "Sofia Bianchi as a 60 year old european woman with chin-length, wavy silver hair and tortoiseshell glasses",
     "id": "0279",
-    "name": "0279_indian_14_male",
-    "image": "image280"
+    "name": "0279_european_60_female",
+    "image": "image265",
+    "outfit": "Classic navy blue dress with white polka dots, a red belt, nude pumps, pearl necklace, and matching pearl earrings.",
+    "description": "A 60 year old european woman with chin-length, wavy silver hair and tortoiseshell glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:32.003121",
   "base_images": [

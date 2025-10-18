@@ -1,15 +1,17 @@
 {
   "character_id": "0272",
-  "character_name": "0272_middle_eastern_11_male",
+  "character_name": "0272_indian_41_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "11",
+    "age": "41",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Amir Karimi as an 11 year old middle eastern boy with short, wavy black hair and a missing front tooth",
+    "ethnicity": "indian",
+    "face_prompt": "Arjun Patel as a 41 year old indian man with short, straight black hair and a soul patch",
     "id": "0272",
-    "name": "0272_middle_eastern_11_male",
-    "image": "image273"
+    "name": "0272_indian_41_male",
+    "image": "image258",
+    "outfit": "Navy blue Nehru jacket with gold buttons, white kurta, white churidar, black leather sandals, and a gold ring.",
+    "description": "A 41 year old indian man with short, straight black hair and a soul patch"
   },
   "migration_timestamp": "2025-10-15T07:38:31.991486",
   "base_images": [

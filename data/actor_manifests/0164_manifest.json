@@ -6,11 +6,12 @@
     "age": "28",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Whitney Adams | Kiara Nelson] as a overweight (28 year old) black woman) , with straight medium length (black hair:1.1) ",
+    "face_prompt": "A woman ([Whitney Adams | Kiara Nelson] as a overweight (28 year old) black woman) , with straight medium length (black hair:1.1) ",
     "id": "0164",
     "name": "0164_black_28_female",
     "image": "image165",
-    "outfit": "Flattering deep purple wrap dress with subtle floral pattern, black cardigan with three-quarter sleeves, silver pendant necklace, and comfortable black wedge sandals."
+    "outfit": "Flattering deep purple wrap dress with subtle floral pattern, black cardigan with three-quarter sleeves, silver pendant necklace, and comfortable black wedge sandals.",
+    "description": "A 28 year old overweight black woman, with straight medium length black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.374153",
   "base_images": [

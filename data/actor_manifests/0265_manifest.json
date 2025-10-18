@@ -1,15 +1,17 @@
 {
   "character_id": "0265",
-  "character_name": "0265_black_37_female",
+  "character_name": "0265_south_american_43_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "37",
-    "sex": "female",
-    "ethnicity": "black",
-    "face_prompt": "Zuri Adebayo as a 37 year old black woman with long, braided black hair and large, gold statement earrings",
+    "age": "43",
+    "sex": "male",
+    "ethnicity": "south_american",
+    "face_prompt": "Alejandro Vargas as a 43 year old hispanic man with short, spiky black hair and a goatee",
     "id": "0265",
-    "name": "0265_black_37_female",
-    "image": "image266"
+    "name": "0265_south_american_43_male",
+    "image": "image251",
+    "outfit": "Vintage dark brown distressed leather biker jacket with quilted shoulders, fitted white v-neck t-shirt, tailored black dress pants with a subtle sheen, dark brown leather Chelsea boots with a stacked heel, and a thick silver curb chain necklace.",
+    "description": "A 43 year old hispanic man with short, spiky black hair and a goatee"
   },
   "migration_timestamp": "2025-10-15T07:38:31.962741",
   "base_images": [

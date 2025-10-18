@@ -6,11 +6,12 @@
     "age": "24",
     "sex": "male",
     "ethnicity": "white",
-    "face_prompt": "a man ([Jake Morrison | Liam Wallace] as a (24 year old) white man) , with thick, wavy, chestnut hair that is kept short on the sides and longer on top, styled in a modern quiff",
+    "face_prompt": "A man ([Jake Morrison | Liam Wallace] as a (24 year old) white man) , with thick, wavy, chestnut hair that is kept short on the sides and longer on top, styled in a modern quiff",
     "id": "0173",
     "name": "0173_white_24_male",
     "image": "image174",
-    "outfit": "Trendy burgundy henley shirt with rolled sleeves, distressed dark blue jeans, brown leather belt, silver watch, and white canvas sneakers with burgundy accents."
+    "outfit": "Trendy burgundy henley shirt with rolled sleeves, distressed dark blue jeans, brown leather belt, silver watch, and white canvas sneakers with burgundy accents.",
+    "description": "A 24 year old white man, with thick, wavy, chestnut hair that is kept short on the sides and longer on top, styled in a modern quiff"
   },
   "migration_timestamp": "2025-10-15T07:38:31.432536",
   "base_images": [

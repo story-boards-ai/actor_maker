@@ -6,11 +6,12 @@
     "age": "30",
     "sex": "male",
     "ethnicity": "middle_eastern",
-    "face_prompt": "a man ([Roberto Ramirez | Tom Langer] as a 30 year old muscular middle eastern man), with wavy short brown hair and a mustache",
+    "face_prompt": "A man ([Roberto Ramirez | Tom Langer] as a 30 year old muscular middle eastern man, with wavy short brown hair and a mustache",
     "id": "0095",
     "name": "0095_middle_eastern_30_male",
     "image": "image96",
-    "outfit": "Fitted dark green henley shirt showing muscular physique, tan chinos, brown leather belt with silver buckle, and brown leather Chelsea boots."
+    "outfit": "Fitted dark green henley shirt showing muscular physique, tan chinos, brown leather belt with silver buckle, and brown leather Chelsea boots.",
+    "description": "A 30 year old muscular middle eastern man, with wavy short brown hair and a mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:30.773059",
   "base_images": [

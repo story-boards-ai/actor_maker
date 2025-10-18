@@ -1,15 +1,17 @@
 {
   "character_id": "0224",
-  "character_name": "0224_european_52_female",
+  "character_name": "0224_black_50_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "52",
+    "age": "50",
     "sex": "female",
-    "ethnicity": "european",
-    "face_prompt": "Sophia M\u00fcller as a 52 year old european woman, with shoulder length blonde hair and a confident, self-assured air",
+    "ethnicity": "black",
+    "face_prompt": "Nia Johnson as a 50 year old black woman, with chin length straightened black hair and a confident smile",
     "id": "0224",
-    "name": "0224_european_52_female",
-    "image": "image225"
+    "name": "0224_black_50_female",
+    "image": "image210",
+    "outfit": "Crisp white wrap blouse, charcoal pin-stripe ankle trousers, ruby pointed-toe flats, and a brushed-silver chain necklace.",
+    "description": "A 50 year old black woman, with chin length straightened black hair and a confident smile"
   },
   "migration_timestamp": "2025-10-15T07:38:31.760398",
   "base_images": [

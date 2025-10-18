@@ -6,11 +6,12 @@
     "age": "95",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman [Rebecca Sweden | Tonya Sporado] as a 95 year old european woman, light grey hair in a bun, wrinkled face, happy, makeup",
+    "face_prompt": "A woman [Rebecca Sweden | Tonya Sporado] as a 95 year old european woman, light grey hair in a bun, wrinkled face, happy, makeup",
     "id": "0022",
     "name": "0022_european_95_female",
     "image": "image23",
-    "outfit": "Traditional lavender floral print dress with a cream cardigan, pearl necklace, and comfortable beige orthopedic shoes."
+    "outfit": "Vintage-style lavender floral print dress with puffed sleeves, a cream cable-knit cardigan, double-strand pearl necklace, and comfortable beige orthopedic shoes with memory foam insoles.",
+    "description": "A 95 year old european woman, light grey hair in a bun, wrinkled face, happy, makeup"
   },
   "migration_timestamp": "2025-10-15T07:38:30.378713",
   "base_images": [

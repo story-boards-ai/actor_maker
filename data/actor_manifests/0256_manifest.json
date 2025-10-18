@@ -1,15 +1,17 @@
 {
   "character_id": "0256",
-  "character_name": "0256_asian_33_male",
+  "character_name": "0256_indian_55_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "33",
+    "age": "55",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Hiroshi Nakamura as a 33 year old asian man with short, spiky black hair and a small scar on his left cheek",
+    "ethnicity": "indian",
+    "face_prompt": "Arjun Mehta as a 55 year old indian man, with short graying hair and a well-trimmed beard",
     "id": "0256",
-    "name": "0256_asian_33_male",
-    "image": "image257"
+    "name": "0256_indian_55_male",
+    "image": "image242",
+    "outfit": "Elegant light beige kurta with delicate golden embroidery, paired with white churidar pants, brown leather mojari shoes, and a gold pocket watch.",
+    "description": "A 55 year old indian man, with short graying hair and a well-trimmed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.914800",
   "base_images": [

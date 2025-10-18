@@ -1,15 +1,17 @@
 {
   "character_id": "0227",
-  "character_name": "0227_asian_54_male",
+  "character_name": "0227_indian_53_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "54",
+    "age": "53",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Takeshi Sato as a 54 year old asian man, with short graying hair and a stern, focused gaze",
+    "ethnicity": "indian",
+    "face_prompt": "Vikram Patel as a 53 year old indian man, with short graying hair and a thick mustache",
     "id": "0227",
-    "name": "0227_asian_54_male",
-    "image": "image228"
+    "name": "0227_indian_53_male",
+    "image": "image213",
+    "outfit": "Cocoa-brown Nehru vest over a cream mandarin-collar shirt, midnight pleated trousers, espresso monk-strap shoes, and a tan leather watch strap.",
+    "description": "A 53 year old indian man, with short graying hair and a thick mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.772906",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0277",
-  "character_name": "0277_black_6_female",
+  "character_name": "0277_asian_31_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "6",
-    "sex": "female",
-    "ethnicity": "black",
-    "face_prompt": "Amara Okafor as a 6 year old black girl with short, curly black hair tied in two puffs and a missing front tooth",
+    "age": "31",
+    "sex": "male",
+    "ethnicity": "asian",
+    "face_prompt": "Takeshi Sato as a 31 year old asian man with medium-length, straight black hair pulled back into a small ponytail",
     "id": "0277",
-    "name": "0277_black_6_female",
-    "image": "image278"
+    "name": "0277_asian_31_male",
+    "image": "image263",
+    "outfit": "Sleek black leather moto jacket with asymmetrical zipper detailing, classic white crew-neck t-shirt, slim-fit black distressed jeans, black leather combat boots with silver hardware, and a layered silver chain necklace with a small pendant.",
+    "description": "A 31 year old asian man with medium-length, straight black hair pulled back into a small ponytail"
   },
   "migration_timestamp": "2025-10-15T07:38:31.998858",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0211",
-  "character_name": "0211_asian_47_female",
+  "character_name": "0211_asian_28_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "47",
+    "age": "28",
     "sex": "female",
     "ethnicity": "asian",
-    "face_prompt": "Mei Chen as a 47 year old asian woman, with medium length black hair in a bob cut and minimal makeup",
+    "face_prompt": "Soo-yeon Kim as a 28 year old asian woman, with long black hair in a high ponytail and winged eyeliner",
     "id": "0211",
-    "name": "0211_asian_47_female",
-    "image": "image212"
+    "name": "0211_asian_28_female",
+    "image": "image212",
+    "outfit": "Ice-grey athletic zip fleece, matte-black performance leggings with reflective charcoal stripes, glacier-white running shoes, and a sleek obsidian sports headband.",
+    "description": "A 28 year old asian woman, with long black hair in a high ponytail and winged eyeliner"
   },
   "migration_timestamp": "2025-10-15T07:38:31.681111",
   "base_images": [

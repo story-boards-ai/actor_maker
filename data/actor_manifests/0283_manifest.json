@@ -1,15 +1,17 @@
 {
   "character_id": "0283",
-  "character_name": "0283_black_10_male",
+  "character_name": "0283_asian_15_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "10",
+    "age": "15",
     "sex": "male",
-    "ethnicity": "black",
-    "face_prompt": "Kwame Mensah as a 10 year old black boy with short, curly black hair and a wide, friendly smile",
+    "ethnicity": "asian",
+    "face_prompt": "Jae Park as a 15 year old asian boy with short, spiky black hair and braces",
     "id": "0283",
-    "name": "0283_black_10_male",
-    "image": "image284"
+    "name": "0283_asian_15_male",
+    "image": "image269",
+    "outfit": "Casual red and black plaid shirt, dark blue jeans, white sneakers, and a black digital watch.",
+    "description": "A 15 year old asian boy with short, spiky black hair and braces"
   },
   "migration_timestamp": "2025-10-15T07:38:32.009650",
   "base_images": [

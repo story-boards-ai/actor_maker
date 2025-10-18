@@ -1,15 +1,17 @@
 {
   "character_id": "0223",
-  "character_name": "0223_black_56_male",
+  "character_name": "0223_european_55_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "56",
+    "age": "55",
     "sex": "male",
-    "ethnicity": "black",
-    "face_prompt": "Marcus Johnson as a 56 year old black man, with short graying dreadlocks and a friendly, approachable face",
+    "ethnicity": "european",
+    "face_prompt": "Luca Moretti as a 55 year old european man, with short gray hair and a weathered, distinguished face",
     "id": "0223",
-    "name": "0223_black_56_male",
-    "image": "image224"
+    "name": "0223_european_55_male",
+    "image": "image209",
+    "outfit": "Walnut tweed blazer with elbow patches, ice-blue Oxford shirt, charcoal wool trousers, burgundy leather brogues, and a silk forest-green pocket square.",
+    "description": "A 55 year old european man, with short gray hair and a weathered, distinguished face"
   },
   "migration_timestamp": "2025-10-15T07:38:31.754469",
   "base_images": [

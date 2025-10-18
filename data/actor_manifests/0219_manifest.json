@@ -1,15 +1,17 @@
 {
   "character_id": "0219",
-  "character_name": "0219_middle_eastern_44_male",
+  "character_name": "0219_asian_43_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "44",
+    "age": "43",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Amir Karimi as a 44 year old middle eastern man, with short black hair and a well-groomed beard",
+    "ethnicity": "asian",
+    "face_prompt": "Hiroshi Tanaka as a 43 year old asian man, with short black hair graying at the temples and a serious expression",
     "id": "0219",
-    "name": "0219_middle_eastern_44_male",
-    "image": "image220"
+    "name": "0219_asian_43_male",
+    "image": "image205",
+    "outfit": "Soft charcoal single-breasted suit worn casually with a sky-blue open-collar shirt, graphite suede desert boots, and a brushed nickel tie bar clipped to the lapel.",
+    "description": "A 43 year old asian man, with short black hair graying at the temples and a serious expression"
   },
   "migration_timestamp": "2025-10-15T07:38:31.731102",
   "base_images": [

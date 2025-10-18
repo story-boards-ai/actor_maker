@@ -1,15 +1,17 @@
 {
   "character_id": "0274",
-  "character_name": "0274_european_9_male",
+  "character_name": "0274_black_35_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "9",
+    "age": "35",
     "sex": "male",
-    "ethnicity": "european",
-    "face_prompt": "Liam M\u00fcller as a 9 year old european boy with short, messy blonde hair and a gap-toothed smile",
+    "ethnicity": "black",
+    "face_prompt": "Kofi Mensah as a 35 year old black man with short dreadlocks and a thin mustache",
     "id": "0274",
-    "name": "0274_european_9_male",
-    "image": "image275"
+    "name": "0274_black_35_male",
+    "image": "image260",
+    "outfit": "Black acid-wash denim jacket with white contrast stitching, fitted white crew-neck t-shirt, black skinny jeans with ripped details, crisp white high-top sneakers with black laces, and a medium-weight silver chain necklace with a small cross pendant.",
+    "description": "A 35 year old black man with short dreadlocks and a thin mustache"
   },
   "migration_timestamp": "2025-10-15T07:38:31.994335",
   "base_images": [

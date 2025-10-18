@@ -1,15 +1,17 @@
 {
   "character_id": "0241",
-  "character_name": "0241_indian_55_male",
+  "character_name": "0241_middle_eastern_48_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "55",
-    "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Arjun Mehta as a 55 year old indian man, with short graying hair and a well-trimmed beard",
+    "age": "48",
+    "sex": "female",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Fatima Nassari as a 48 year old middle eastern woman, with long dark hair worn in a loose braid and a serene, peaceful expression",
     "id": "0241",
-    "name": "0241_indian_55_male",
-    "image": "image242"
+    "name": "0241_middle_eastern_48_female",
+    "image": "image227",
+    "outfit": "Flowing deep plum abaya with silver embroidered cuffs, pale lavender hijab, black pointed flats, and a silver filigree bracelet.",
+    "description": "A 48 year old middle eastern woman, with long dark hair worn in a loose braid and a serene, peaceful expression"
   },
   "migration_timestamp": "2025-10-15T07:38:31.827517",
   "base_images": [

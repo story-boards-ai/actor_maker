@@ -1,15 +1,17 @@
 {
   "character_id": "0258",
-  "character_name": "0258_european_58_male",
+  "character_name": "0258_european_46_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "58",
+    "age": "46",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "Luca Rossi as a 58 year old european man with short, gray hair and a well-groomed, graying beard",
+    "face_prompt": "Matteo Ricci as a 46 year old european man, with short brown hair and a scruffy beard",
     "id": "0258",
-    "name": "0258_european_58_male",
-    "image": "image259"
+    "name": "0258_european_46_male",
+    "image": "image244",
+    "outfit": "Dark navy blue blazer over a light blue dress shirt, charcoal gray dress pants, brown leather oxfords, and a silver tie bar.",
+    "description": "A 46 year old european man, with short brown hair and a scruffy beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.929963",
   "base_images": [

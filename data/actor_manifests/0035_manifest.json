@@ -6,11 +6,12 @@
     "age": "65",
     "sex": "male",
     "ethnicity": "black",
-    "face_prompt": "a man ([Carl Hanson | Roberto Union] as a 65-year-old black man), with short afro hair and a weathered look",
+    "face_prompt": "A man ([Carl Hanson | Roberto Union] as a 65-year-old black man), with short afro hair and a weathered look",
     "id": "0035",
     "name": "0035_black_65_male",
     "image": "image36",
-    "outfit": "Comfortable forest green cardigan over a beige henley shirt, dark brown corduroy pants, and well-worn tan leather boots."
+    "outfit": "Comfortable forest green cardigan over a beige henley shirt, dark brown corduroy pants, and well-worn tan leather boots.",
+    "description": "A 65-year-old black man), with short afro hair and a weathered look"
   },
   "migration_timestamp": "2025-10-15T07:38:30.447077",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0232",
-  "character_name": "0232_black_87_female",
+  "character_name": "0232_european_82_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "87",
-    "sex": "female",
-    "ethnicity": "black",
-    "face_prompt": "Ethel Johnson as an 87 year old black woman, with short curly white hair and a warm, grandmotherly demeanor",
+    "age": "82",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Enzo Rossi as an 82 year old european man, with thin white hair and a wrinkled, kindly face",
     "id": "0232",
-    "name": "0232_black_87_female",
-    "image": "image233"
+    "name": "0232_european_82_male",
+    "image": "image218",
+    "outfit": "Heather-grey wool cardigan, slate checked dress shirt, chestnut corduroy slacks, mahogany walking loafers, and a burgundy silk neck scarf.",
+    "description": "an 82 year old european man, with thin white hair and a wrinkled, kindly face"
   },
   "migration_timestamp": "2025-10-15T07:38:31.793433",
   "base_images": [

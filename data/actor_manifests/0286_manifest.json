@@ -1,15 +1,17 @@
 {
   "character_id": "0286",
-  "character_name": "0286_european_7_female",
+  "character_name": "0286_black_12_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "7",
+    "age": "12",
     "sex": "female",
-    "ethnicity": "european",
-    "face_prompt": "Emma Novak as a 7 year old european girl with short, straight blonde hair and a gap-toothed smile",
+    "ethnicity": "black",
+    "face_prompt": "Zuri Johnson as a 12 year old black girl with shoulder-length, braided hair and a colorful headband",
     "id": "0286",
-    "name": "0286_european_7_female",
-    "image": "image287"
+    "name": "0286_black_12_female",
+    "image": "image272",
+    "outfit": "Purple unicorn hoodie, light blue skinny jeans, purple sneakers with rainbow laces, and colorful friendship bracelets.",
+    "description": "A 12 year old black girl with shoulder-length, braided hair and a colorful headband"
   },
   "migration_timestamp": "2025-10-15T07:38:32.015440",
   "base_images": [

@@ -1,15 +1,17 @@
 {
   "character_id": "0228",
-  "character_name": "0228_indian_10_female",
+  "character_name": "0228_european_12_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "10",
-    "sex": "female",
-    "ethnicity": "indian",
-    "face_prompt": "Aanya Patel as a 10 year old indian girl, with long black hair in two braids and an energetic, curious demeanor",
+    "age": "12",
+    "sex": "male",
+    "ethnicity": "european",
+    "face_prompt": "Liam Novak as a 12 year old european boy, with shaggy blonde hair and a mischievous grin",
     "id": "0228",
-    "name": "0228_indian_10_female",
-    "image": "image229"
+    "name": "0228_european_12_male",
+    "image": "image214",
+    "outfit": "Lime-green graphic hoodie featuring abstract waves, navy cargo shorts, slate skate sneakers, and a charcoal snap-back cap.",
+    "description": "A 12 year old european boy, with shaggy blonde hair and a mischievous grin"
   },
   "migration_timestamp": "2025-10-15T07:38:31.777949",
   "base_images": [

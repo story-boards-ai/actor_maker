@@ -6,11 +6,12 @@
     "age": "40",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Linda Bailey | Tara Patterson] as a radiant (40 year old) black woman) , with straight long (black hair:1.1) ",
+    "face_prompt": "A woman ([Linda Bailey | Tara Patterson] as a radiant (40 year old) black woman) , with straight long (black hair:1.1) ",
     "id": "0170",
     "name": "0170_black_40_female",
     "image": "image171",
-    "outfit": "Elegant royal blue cowl neck midi dress with draped silhouette, silver statement bracelet, diamond drop earrings, and silver metallic strappy heels."
+    "outfit": "Elegant royal blue cowl neck midi dress with draped silhouette, silver statement bracelet, diamond drop earrings, and silver metallic strappy heels.",
+    "description": "A radiant 40 year old black woman, with straight long black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.419492",
   "base_images": [

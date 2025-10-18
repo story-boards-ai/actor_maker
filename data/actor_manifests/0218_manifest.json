@@ -1,15 +1,17 @@
 {
   "character_id": "0218",
-  "character_name": "0218_asian_85_female",
+  "character_name": "0218_indian_36_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "85",
-    "sex": "female",
-    "ethnicity": "asian",
-    "face_prompt": "Mei Ling as an 85 year old asian woman, with short gray hair and a gentle, wise expression",
+    "age": "36",
+    "sex": "male",
+    "ethnicity": "indian",
+    "face_prompt": "Rohan Patel as a 36 year old indian man, with short black hair combed to the side and a neatly trimmed beard",
     "id": "0218",
-    "name": "0218_asian_85_female",
-    "image": "image219"
+    "name": "0218_indian_36_male",
+    "image": "image219",
+    "outfit": "Forest-green lightweight parka, oatmeal henley, tobacco straight-fit chinos, olive desert boots, and an ivory canvas tote.",
+    "description": "A 36 year old indian man, with short black hair combed to the side and a neatly trimmed beard"
   },
   "migration_timestamp": "2025-10-15T07:38:31.725431",
   "base_images": [

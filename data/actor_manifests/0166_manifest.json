@@ -6,11 +6,12 @@
     "age": "32",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Kristen Young | Tasha Turner] as a (32 year old) black woman) , with curly short (black hair:1.1) ",
+    "face_prompt": "A woman ([Kristen Young | Tasha Turner] as a (32 year old) black woman) , with curly short (black hair:1.1) ",
     "id": "0166",
     "name": "0166_black_32_female",
     "image": "image167",
-    "outfit": "Elegant mustard yellow midi dress with subtle pleating, fitted navy blue blazer, gold geometric drop earrings, and navy blue suede pumps."
+    "outfit": "Elegant mustard yellow midi dress with subtle pleating, fitted navy blue blazer, gold geometric drop earrings, and navy blue suede pumps.",
+    "description": "A 32 year old black woman, with curly short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.386814",
   "base_images": [

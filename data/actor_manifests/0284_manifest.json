@@ -1,15 +1,17 @@
 {
   "character_id": "0284",
-  "character_name": "0284_middle_eastern_9_female",
+  "character_name": "0284_european_14_female",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "9",
+    "age": "14",
     "sex": "female",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Amira Haddad as a 9 year old middle eastern girl with medium-length, wavy black hair and a colorful headband",
+    "ethnicity": "european",
+    "face_prompt": "Emma Novak as a 14 year old european girl with long, straight blonde hair and freckles",
     "id": "0284",
-    "name": "0284_middle_eastern_9_female",
-    "image": "image285"
+    "name": "0284_european_14_female",
+    "image": "image270",
+    "outfit": "Light blue denim overalls over a white t-shirt, pink sneakers, and a silver heart-shaped locket.",
+    "description": "A 14 year old european girl with long, straight blonde hair and freckles"
   },
   "migration_timestamp": "2025-10-15T07:38:32.010993",
   "base_images": [

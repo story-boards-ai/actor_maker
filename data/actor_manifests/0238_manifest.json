@@ -1,15 +1,17 @@
 {
   "character_id": "0238",
-  "character_name": "0238_black_44_female",
+  "character_name": "0238_black_56_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "44",
-    "sex": "female",
+    "age": "56",
+    "sex": "male",
     "ethnicity": "black",
-    "face_prompt": "Imani Williams as a 44 year old black woman, with long dreadlocks tied back and round glasses",
+    "face_prompt": "Marcus Johnson as a 56 year old black man, with short graying dreadlocks and a friendly, approachable face",
     "id": "0238",
-    "name": "0238_black_44_female",
-    "image": "image239"
+    "name": "0238_black_56_male",
+    "image": "image224",
+    "outfit": "Bold kente print dashiki shirt, black dress pants, brown leather sandals, and a wooden beaded necklace.",
+    "description": "A 56 year old black man, with short graying dreadlocks and a friendly, approachable face"
   },
   "migration_timestamp": "2025-10-15T07:38:31.822379",
   "base_images": [

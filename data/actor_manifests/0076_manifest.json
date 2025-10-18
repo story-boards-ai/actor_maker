@@ -6,11 +6,12 @@
     "age": "40",
     "sex": "female",
     "ethnicity": "european",
-    "face_prompt": "a woman Giselle Wakefield as an extremely atractive 40 year old european woman, with straight black shoulder length hair",
+    "face_prompt": "A woman Giselle Wakefield as an extremely atractive 40 year old european woman, with straight black shoulder length hair",
     "id": "0076",
     "name": "0076_european_40_female",
     "image": "image77",
-    "outfit": "Luxurious emerald green silk blouse, tailored cream wide-leg trousers, diamond stud earrings, and nude designer stiletto heels."
+    "outfit": "Luxurious emerald green silk blouse, tailored cream wide-leg trousers, diamond stud earrings, and nude designer stiletto heels.",
+    "description": "an extremely atractive 40 year old european woman, with straight black shoulder length hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.670642",
   "base_images": [

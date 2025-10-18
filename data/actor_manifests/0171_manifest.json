@@ -6,11 +6,12 @@
     "age": "42",
     "sex": "female",
     "ethnicity": "black",
-    "face_prompt": "a woman ([Sandra Hughes | Tamika Sanders] as a (42 year old) black woman) , with braided short (black hair:1.1) ",
+    "face_prompt": "A woman ([Sandra Hughes | Tamika Sanders] as a (42 year old) black woman) , with braided short (black hair:1.1) ",
     "id": "0171",
     "name": "0171_black_42_female",
     "image": "image172",
-    "outfit": "Sophisticated plum-colored wrap blouse with subtle sheen, tailored gray trousers, pearl and silver drop earrings, and black leather block heel pumps."
+    "outfit": "Sophisticated plum-colored wrap blouse with subtle sheen, tailored gray trousers, pearl and silver drop earrings, and black leather block heel pumps.",
+    "description": "A 42 year old black woman, with braided short black hair"
   },
   "migration_timestamp": "2025-10-15T07:38:31.425343",
   "base_images": [

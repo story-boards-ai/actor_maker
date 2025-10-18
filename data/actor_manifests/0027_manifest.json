@@ -6,11 +6,12 @@
     "age": "50",
     "sex": "male",
     "ethnicity": "black",
-    "face_prompt": "a man ([Roger Rogerson | Kanye Washington] as a 50-year-old black man), with short gray hair",
+    "face_prompt": "A man ([Roger Rogerson | Kanye Washington] as a 50-year-old black man), with short gray hair",
     "id": "0027",
     "name": "0027_black_50_male",
     "image": "image28",
-    "outfit": "Sophisticated camel-colored turtleneck sweater, dark brown corduroy pants, and tan suede desert boots with a gold watch."
+    "outfit": "Sophisticated camel-colored turtleneck sweater, dark brown corduroy pants, and tan suede desert boots with a gold watch.",
+    "description": "A 50-year-old black man), with short gray hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.405897",
   "base_images": [

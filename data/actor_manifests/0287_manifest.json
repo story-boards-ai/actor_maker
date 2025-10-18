@@ -1,15 +1,17 @@
 {
   "character_id": "0287",
-  "character_name": "0287_asian_6_male",
+  "character_name": "0287_middle_eastern_11_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "6",
+    "age": "11",
     "sex": "male",
-    "ethnicity": "asian",
-    "face_prompt": "Jae Park as a 6 year old asian boy with short, straight black hair and a mischievous grin",
+    "ethnicity": "middle_eastern",
+    "face_prompt": "Amir Karimi as an 11 year old middle eastern boy with short, wavy black hair and a missing front tooth",
     "id": "0287",
-    "name": "0287_asian_6_male",
-    "image": "image288"
+    "name": "0287_middle_eastern_11_male",
+    "image": "image273",
+    "outfit": "Red and white soccer jersey, black athletic shorts, white soccer socks, and black cleats with red stripes.",
+    "description": "an 11 year old middle eastern boy with short, wavy black hair and a missing front tooth"
   },
   "migration_timestamp": "2025-10-15T07:38:32.016798",
   "base_images": [

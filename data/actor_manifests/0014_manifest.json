@@ -6,11 +6,12 @@
     "age": "45",
     "sex": "male",
     "ethnicity": "european",
-    "face_prompt": "a good looking man ([Braien Vaiksaar | Erik van Gils] as a 45 year old european man), with short straight blonde hair",
+    "face_prompt": "A good looking man ([Braien Vaiksaar | Erik van Gils] as a 45 year old european man), with short straight blonde hair",
     "id": "0014",
     "name": "0014_european_45_male",
     "image": "image15",
-    "outfit": "Upscale casual attire with a designer polo shirt, tailored shorts, and boat shoes."
+    "outfit": "Upscale casual look featuring a navy blue Ralph Lauren polo shirt, white tailored chino shorts, and brown leather boat shoes.",
+    "description": "A 45 year old european man), with short straight blonde hair"
   },
   "migration_timestamp": "2025-10-15T07:38:30.335141",
   "base_images": [

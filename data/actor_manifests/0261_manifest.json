@@ -1,15 +1,17 @@
 {
   "character_id": "0261",
-  "character_name": "0261_middle_eastern_53_male",
+  "character_name": "0261_asian_52_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "53",
+    "age": "52",
     "sex": "male",
-    "ethnicity": "middle_eastern",
-    "face_prompt": "Farhad Karimi as a 53 year old middle eastern man with short, graying hair and a full, graying beard",
+    "ethnicity": "asian",
+    "face_prompt": "Hiroshi Sato as a 52 year old asian man, with short black hair and wire-rimmed glasses",
     "id": "0261",
-    "name": "0261_middle_eastern_53_male",
-    "image": "image262"
+    "name": "0261_asian_52_male",
+    "image": "image247",
+    "outfit": "Classic black tailored suit with notch lapels, crisp white dress shirt with French cuffs, black skinny silk tie with a subtle sheen, black leather double-monk strap dress shoes, and a silver tie clip with a minimalist design.",
+    "description": "A 52 year old asian man, with short black hair and wire-rimmed glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:31.948410",
   "base_images": [
