@@ -327,10 +327,27 @@ export function handleGetPresetTrainingPrompts(
         ? firstSentence.substring(0, 37) + '...'
         : firstSentence;
       
-      // Replace generic descriptor patterns with full character description
+      // For B&W prompts, strip color terms from the character description
+      let descriptorToUse = fullCharacterDescription;
+      if (category === 'bw_stylized') {
+        // Call Python script to strip color terms from the descriptor
+        try {
+          const stripScript = path.join(projectRoot, 'src', 'strip_colors_cli.py');
+          descriptorToUse = execSync(
+            `python3 "${stripScript}" "${fullCharacterDescription}"`,
+            { encoding: 'utf-8', cwd: projectRoot }
+          ).toString().trim();
+        } catch (error) {
+          console.error('Error stripping colors from descriptor:', error);
+          // Fall back to original descriptor if stripping fails
+          descriptorToUse = fullCharacterDescription;
+        }
+      }
+      
+      // Replace generic descriptor patterns with character description
       // Handle patterns like "the man", "the woman", "the person", "The man", etc.
       const descriptorPattern = new RegExp(`\\b(the|The)\\s+(${genericDescriptor})\\b`, 'g');
-      const customizedPrompt = prompt.replace(descriptorPattern, fullCharacterDescription);
+      const customizedPrompt = prompt.replace(descriptorPattern, descriptorToUse);
       
       return {
         id: `prompt_${index}`,

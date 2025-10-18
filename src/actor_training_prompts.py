@@ -4,7 +4,7 @@ These prompts are designed for character/actor LoRA training with cinematic scen
 """
 
 from typing import List
-from .prompt_color_stripper import strip_color_terms
+from prompt_color_stripper import strip_color_terms
 
 
 def get_actor_training_prompts(descriptor: str) -> List[str]:

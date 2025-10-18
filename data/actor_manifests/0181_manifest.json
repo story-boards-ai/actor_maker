@@ -27,10 +27,10 @@
     "total_size_mb": 1.26,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 15,
+    "training_images_count": 17,
     "training_data_size_bytes": 0,
-    "training_data_size_mb": 0.0,
-    "training_synced_count": 15,
+    "training_data_size_mb": 0,
+    "training_synced_count": 17,
     "training_local_only_count": 0
   },
   "status": "success",
@@ -63,16 +63,6 @@
       "size_mb": 0.22,
       "modified_timestamp": 1760794222.683863,
       "modified_date": "2025-10-18T15:30:22.683864",
-      "status": "synced"
-    },
-    {
-      "filename": "0181_european_33_male_3.jpg",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_3.jpg",
-      "md5_hash": "fb368ae278e5724ae7a0ec33b87b22dc",
-      "size_bytes": 735170,
-      "size_mb": 0.7,
-      "modified_timestamp": 1760794224.2861955,
-      "modified_date": "2025-10-18T15:30:24.286196",
       "status": "synced"
     },
     {
@@ -184,9 +174,39 @@
       "modified_timestamp": 1760794280.990202,
       "modified_date": "2025-10-18T15:31:20.990204",
       "status": "synced"
+    },
+    {
+      "filename": "0181_european_33_male_15.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_15.jpg",
+      "md5_hash": "357f546273af01312d1cfa797ef13cf5",
+      "size_bytes": 244961,
+      "size_mb": 0.23,
+      "modified_timestamp": 1760795047.6916397,
+      "modified_date": "2025-10-18T15:44:07.691642",
+      "status": "synced"
+    },
+    {
+      "filename": "0181_european_33_male_16.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_16.jpg",
+      "md5_hash": "96d7d0dfefe2eb26ce55ab35dc8c467f",
+      "size_bytes": 792917,
+      "size_mb": 0.76,
+      "modified_timestamp": 1760795059.6622446,
+      "modified_date": "2025-10-18T15:44:19.662246",
+      "status": "synced"
+    },
+    {
+      "filename": "0181_european_33_male_17.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_17.jpg",
+      "md5_hash": "5c41c6d79b922034a2d0387a85e6c7c4",
+      "size_bytes": 786448,
+      "size_mb": 0.75,
+      "modified_timestamp": 1760795070.6055667,
+      "modified_date": "2025-10-18T15:44:30.605570",
+      "status": "synced"
     }
   ],
-  "training_data_updated": "2025-10-18T15:31:20.990220",
+  "training_data_updated": "2025-10-18T15:44:30.605599",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0181_european_33_male_poster_sm.webp",
@@ -212,5 +232,6 @@
     "created_date": "2025-05-16",
     "format": "safetensors"
   },
-  "lora_model_updated": "2025-10-17T21:51:49.004271"
+  "lora_model_updated": "2025-10-17T21:51:49.004271",
+  "training_data_good": true
 }

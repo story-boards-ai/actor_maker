@@ -104,6 +104,41 @@
       "generated_at": "2025-10-18T15:32:37.792509",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_14.jpg",
       "index": 14
+    },
+    "0182_indian_26_female_15.jpg": {
+      "prompt": "Cinematic film scene: A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant magenta and gold salwar kameez, sheer gold dupatta, ornate jhumka earrings, and embroidered jutti shoes. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 26 year old indian woman, with long black braided hair and a bindi, wearing ...",
+      "generated_at": "2025-10-18T15:45:24.832027",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_15.jpg",
+      "index": 15
+    },
+    "0182_indian_26_female_16.jpg": {
+      "prompt": "A black-and-white pen and ink line drawing of A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant magenta and gold salwar kameez, sheer gold dupatta, ornate jhumka earrings, and embroidered jutti shoes. tying their bootlaces on a townhouse stoop under a single streetlamp in rain, head bowed down looking at their boots. High angle shot from above and to the side, three-quarter side view, mid shot, eyes focused on the laces. Off-center composition with stoop steps creating diagonal lines, high-contrast lines with crosshatching and stippling for shading, no grayscale gradients, clean white negative space. Preserve the subject's defining features. Candid pose, character unaware, no eye contact. Asymmetric framing, not centered. Illustration only, not photorealistic.",
+      "prompt_preview": "A black-and-white pen and ink line drawing of A 26 year old indian woman, with long black braided ha...",
+      "generated_at": "2025-10-18T15:45:34.994360",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_16.jpg",
+      "index": 16
+    },
+    "0182_indian_26_female_17.jpg": {
+      "prompt": "A graphite pencil sketch of A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant magenta and gold salwar kameez, sheer gold dupatta, ornate jhumka earrings, and embroidered jutti shoes. seated by a train window at dawn, eyes gazing out at the passing landscape with a reflective expression, head turned away from viewer. Extreme side angle from aisle perspective, medium close-up from slightly below eye level, face in sharp profile looking outside. Off-center framing with window creating diagonal, soft hatching and blending, visible pencil grain, no color. Preserve facial structure and hairstyle. Candid moment, no eye contact with viewer. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A graphite pencil sketch of A 26 year old indian woman, with long black braided hair and a bindi, we...",
+      "generated_at": "2025-10-18T15:45:44.985518",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_17.jpg",
+      "index": 17
+    },
+    "0182_indian_26_female_18.jpg": {
+      "prompt": "A drawing of A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant magenta and gold salwar kameez, sheer gold dupatta, ornate jhumka earrings, and embroidered jutti shoes. bracing a shoulder against a half-rolled warehouse door, dust in the air, eyes focused on the effort, head turned to the side. Low angle shot from ground level at a 40-degree diagonal, three-quarter view, face looking away from viewer, dramatic top. Off-center framing with character in right third, door creating strong diagonal line, two-point perspective, rough strokes and smudged shadows, no color. Preserve identity cues. Candid action pose, no camera awareness. Asymmetric composition, no central vanishing point, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A drawing of A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant m...",
+      "generated_at": "2025-10-18T15:45:55.777854",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_18.jpg",
+      "index": 18
+    },
+    "0182_indian_26_female_19.jpg": {
+      "prompt": "A black-and-white woodcut print style image of A 26 year old indian woman, with long black braided hair and a bindi, wearing Vibrant magenta and gold salwar kameez, sheer gold dupatta, ornate jhumka earrings, and embroidered jutti shoes. sprinting down a narrow alley, eyes focused ahead on the path, angular highlights and carved textures. Dutch angle with 18-degree tilt, profile mid shot from the side, head turned away from viewer, strong diagonal composition with alley walls creating depth. Off-center framing with character in left third, thick shapes and white cuts, no halftones, diagonal depth instead of straight central lines. Preserve recognizable features. Candid action, character looking forward. Asymmetric framing, shot from the side, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white woodcut print style image of A 26 year old indian woman, with long black braided h...",
+      "generated_at": "2025-10-18T15:46:07.561738",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0182_indian_26_female/0182_indian_26_female_19.jpg",
+      "index": 19
     }
   }
 }

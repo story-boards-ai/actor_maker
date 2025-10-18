@@ -104,6 +104,27 @@
       "generated_at": "2025-10-18T15:31:20.991248",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_14.jpg",
       "index": 14
+    },
+    "0181_european_33_male_15.jpg": {
+      "prompt": "Cinematic film scene: Extreme close-up of A 33 year old european man, with short brown hair and a full beard, wearing Layered charcoal wool cardigan over a forest green crew neck t-shirt, slim dark jeans, brown hiking boots, and a leather-strapped watch.'s face in natural lighting, shot from below and to the side at 30-degree angle. Eyes gazing off-frame to the left or right, looking at something in the distance. Photorealistic, sharp focus on facial features, neutral expression, head turned away from camera at an angle. Asymmetric framing with face positioned in left or right third, heavy negative space on opposite side, slightly tilted camera. Preserve all defining details such as hairstyle, eye color, skin texture, and unique facial characteristics. No eye contact, unposed. Film-like cinematography, dynamic off-center framing, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "Cinematic film scene: Extreme close-up of A 33 year old european man, with short brown hair and a fu...",
+      "generated_at": "2025-10-18T15:44:07.692712",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_15.jpg",
+      "index": 15
+    },
+    "0181_european_33_male_16.jpg": {
+      "prompt": "A black-and-white scratchboard illustration of A 33 year old european man, with short brown hair and a full beard, wearing Layered charcoal wool cardigan over a forest green crew neck t-shirt, slim dark jeans, brown hiking boots, and a leather-strapped watch. scaling a rocky cliff face, both hands gripping stone above, eyes focused upward on the next handhold. Extreme low angle from far below at 65-degree angle, medium shot looking up at steep angle, face angled up and away from viewer. Off-center framing with character in upper-left third, dramatic rock formations creating diagonal composition, three-point perspective, lines scratched from surface, dramatic contrast with fine detail work. Preserve identity. Candid climbing action, no camera awareness. Asymmetric framing, shot from the side, no central vanishing point, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white scratchboard illustration of A 33 year old european man, with short brown hair and...",
+      "generated_at": "2025-10-18T15:44:19.663035",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_16.jpg",
+      "index": 16
+    },
+    "0181_european_33_male_17.jpg": {
+      "prompt": "A black-and-white etching of A 33 year old european man, with short brown hair and a full beard, wearing Layered charcoal wool cardigan over a forest green crew neck t-shirt, slim dark jeans, brown hiking boots, and a leather-strapped watch. hammering metal at an anvil in a workshop, sparks flying, eyes focused intently on the workpiece below. Side angle from elevated position at 45-degree angle, medium shot from slightly above and to the side, face lit by forge glow looking down at work. Off-center framing with character in right third, workshop tools creating diagonal depth lines, two-point perspective, fine cross-hatched lines, rich blacks in shadows, detailed linework. Preserve facial structure. Candid crafting action, no camera awareness. Asymmetric composition, shot from the side, no central axis, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white etching of A 33 year old european man, with short brown hair and a full beard, wea...",
+      "generated_at": "2025-10-18T15:44:30.607161",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0181_european_33_male/0181_european_33_male_17.jpg",
+      "index": 17
     }
   }
 }

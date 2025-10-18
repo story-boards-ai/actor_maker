@@ -97,6 +97,13 @@
       "generated_at": "2025-10-18T15:38:56.384161",
       "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0187_asian_32_male/0187_asian_32_male_13.jpg",
       "index": 13
+    },
+    "0187_asian_32_male_14.jpg": {
+      "prompt": "A flat vector illustration of man in the style of a detailed hand-drawn concept sketch, with clean, confident lines, subtle hatching, and balanced proportions. Extreme low angle looking upward at 55-degree angle, head turned to the side in profile or three-quarter view, eyes looking away from viewer. Off-center composition with character in upper-left third, heavy negative space on opposite side, minimal geometric shapes, hard edges, no gradients, single ink on white background. Poster-like framing. Preserve silhouette and key features. Candid pose, no eye contact. Asymmetric framing, angled camera view, no central axis, absolutely NOT centered or symmetrical.",
+      "prompt_preview": "A flat vector illustration of man in the style of a detailed hand-drawn concept sketch, with clean, ...",
+      "generated_at": "2025-10-18T15:39:02.159054",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0187_asian_32_male/0187_asian_32_male_14.jpg",
+      "index": 14
     }
   }
 }

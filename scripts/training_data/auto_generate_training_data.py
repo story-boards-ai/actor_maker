@@ -28,6 +28,7 @@ project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.actor_training_prompts import get_actor_training_prompts, get_actor_descriptor
+from src.prompt_color_stripper import strip_color_terms, is_bw_prompt
 
 # Import the function directly by loading the module
 import importlib.util
@@ -259,13 +260,22 @@ def generate_training_data_for_actor(
     logger.info(f"✓ Loaded {len(all_prompts)} available prompts")
     
     # Replace generic descriptor with full character description in all prompts
-    # This matches what the UI does in handleGetPresetTrainingPrompts
+    # For B&W prompts, strip color terms from the character description first
     import re
     descriptor_pattern = re.compile(rf'\b(the|The)\s+({re.escape(generic_descriptor)})\b')
-    customized_prompts = [
-        descriptor_pattern.sub(full_character_description, prompt)
-        for prompt in all_prompts
-    ]
+    
+    customized_prompts = []
+    for prompt in all_prompts:
+        # Check if this is a B&W prompt
+        if is_bw_prompt(prompt):
+            # Strip colors from character description for B&W prompts
+            descriptor_for_bw = strip_color_terms(full_character_description, preserve_bw_terms=True)
+            customized_prompt = descriptor_pattern.sub(descriptor_for_bw, prompt)
+        else:
+            # Use full description with colors for photo and color prompts
+            customized_prompt = descriptor_pattern.sub(full_character_description, prompt)
+        
+        customized_prompts.append(customized_prompt)
     
     # Select prompts by distribution
     selected_prompts = select_prompts_by_distribution(customized_prompts, total_images)

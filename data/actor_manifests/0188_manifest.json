@@ -27,15 +27,166 @@
     "total_size_mb": 0.0,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 15,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 15,
     "training_local_only_count": 0
   },
   "status": "success",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.821473",
+  "training_data": [
+    {
+      "filename": "0188_european_25_female_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_0.jpg",
+      "md5_hash": "7ed4bc26b4748c22efff849933664a25",
+      "size_bytes": 270309,
+      "size_mb": 0.26,
+      "modified_timestamp": 1760794750.99177,
+      "modified_date": "2025-10-18T15:39:10.991771",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_1.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_1.jpg",
+      "md5_hash": "fc98ffbf7a7d30b444efd5946be59dba",
+      "size_bytes": 604960,
+      "size_mb": 0.58,
+      "modified_timestamp": 1760794752.6029,
+      "modified_date": "2025-10-18T15:39:12.602902",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_2.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_2.jpg",
+      "md5_hash": "dc31ecb8da1d6844866fe1f7e5509b9c",
+      "size_bytes": 231644,
+      "size_mb": 0.22,
+      "modified_timestamp": 1760794759.7474875,
+      "modified_date": "2025-10-18T15:39:19.747489",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_3.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_3.jpg",
+      "md5_hash": "622f173a26f2af50b3938896f615dffa",
+      "size_bytes": 356803,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760794761.201589,
+      "modified_date": "2025-10-18T15:39:21.201590",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_4.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_4.jpg",
+      "md5_hash": "4d7f87d0ddc540a2a54ec9585db36c66",
+      "size_bytes": 312092,
+      "size_mb": 0.3,
+      "modified_timestamp": 1760794768.5031178,
+      "modified_date": "2025-10-18T15:39:28.503119",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_5.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_5.jpg",
+      "md5_hash": "b9a397cbb16956ec93aee049fd24deac",
+      "size_bytes": 304330,
+      "size_mb": 0.29,
+      "modified_timestamp": 1760794773.3062115,
+      "modified_date": "2025-10-18T15:39:33.306213",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_6.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_6.jpg",
+      "md5_hash": "19d5e62f836c4641627812c2e9d2e286",
+      "size_bytes": 342062,
+      "size_mb": 0.33,
+      "modified_timestamp": 1760794778.5953224,
+      "modified_date": "2025-10-18T15:39:38.595324",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_7.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_7.jpg",
+      "md5_hash": "6b3422b84c9f6ec547c14be30b83f349",
+      "size_bytes": 256814,
+      "size_mb": 0.24,
+      "modified_timestamp": 1760794784.5403464,
+      "modified_date": "2025-10-18T15:39:44.540348",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_8.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_8.jpg",
+      "md5_hash": "aec082c8a206c88fdb088e5e26292b93",
+      "size_bytes": 401669,
+      "size_mb": 0.38,
+      "modified_timestamp": 1760794789.9452171,
+      "modified_date": "2025-10-18T15:39:49.945218",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_9.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_9.jpg",
+      "md5_hash": "3bc8856f7afb7fbe0d8eb9183e124af5",
+      "size_bytes": 355704,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760794793.943869,
+      "modified_date": "2025-10-18T15:39:53.943870",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_10.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_10.jpg",
+      "md5_hash": "54c87893f68200d866306914b6174db3",
+      "size_bytes": 677821,
+      "size_mb": 0.65,
+      "modified_timestamp": 1760794799.2208636,
+      "modified_date": "2025-10-18T15:39:59.220864",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_11.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_11.jpg",
+      "md5_hash": "58b6de885ecefed8d536c8443d81c771",
+      "size_bytes": 575344,
+      "size_mb": 0.55,
+      "modified_timestamp": 1760794806.3286645,
+      "modified_date": "2025-10-18T15:40:06.328666",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_12.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_12.jpg",
+      "md5_hash": "25d296567d17aa9c0a6541a519c7b673",
+      "size_bytes": 353456,
+      "size_mb": 0.34,
+      "modified_timestamp": 1760794808.505106,
+      "modified_date": "2025-10-18T15:40:08.505107",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_13.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_13.jpg",
+      "md5_hash": "bb774f2b03c29ff9f89935559d24e616",
+      "size_bytes": 466372,
+      "size_mb": 0.44,
+      "modified_timestamp": 1760794816.969474,
+      "modified_date": "2025-10-18T15:40:16.969476",
+      "status": "synced"
+    },
+    {
+      "filename": "0188_european_25_female_14.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0188_european_25_female/0188_european_25_female_14.jpg",
+      "md5_hash": "97bfe7fbf44adc608e9eb0c3e051e8c7",
+      "size_bytes": 305352,
+      "size_mb": 0.29,
+      "modified_timestamp": 1760794819.0575943,
+      "modified_date": "2025-10-18T15:40:19.057596",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T15:40:19.057605",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0188_european_25_female_poster_sm.webp",
