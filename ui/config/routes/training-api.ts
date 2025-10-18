@@ -1123,12 +1123,13 @@ async function handleToggleModelGood(
       return;
     }
 
-    // Load the manifest
+    // Load the manifest (pad actorId to 4 digits)
+    const actorIdPadded = actorId.toString().padStart(4, '0');
     const manifestPath = path.join(
       projectRoot,
       "data",
       "actor_manifests",
-      `${actorId}_manifest.json`
+      `${actorIdPadded}_manifest.json`
     );
 
     if (!fs.existsSync(manifestPath)) {
@@ -1177,13 +1178,17 @@ async function handleToggleModelGood(
     manifestData.custom_lora_models[modelIndex].good = !currentGood;
 
     console.log("[Toggle Model Good] Toggled:", {
+      actorId,
+      actorIdPadded,
       version,
       oldValue: currentGood,
       newValue: !currentGood,
+      manifestPath
     });
 
     // Save the manifest
     fs.writeFileSync(manifestPath, JSON.stringify(manifestData, null, 2));
+    console.log(`[Toggle Model Good] Saved manifest for actor ${actorId} (${actorIdPadded}), model ${version} marked as ${!currentGood ? 'good' : 'not good'}`);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");

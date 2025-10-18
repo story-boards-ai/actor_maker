@@ -42,6 +42,20 @@ export function handleGetAllActors(
         }
       }
       
+      // Calculate model status fields
+      const customModels = manifestData.custom_lora_models || [];
+      const customModelsCount = customModels.length;
+      
+      // Check if any custom model is marked as good (we'll add this field to manifests later)
+      // For now, use a placeholder - we'll need to add a "good" flag to custom_lora_models
+      const customModelsGood = false; // TODO: implement model good marking
+      
+      // Production sync status - placeholder for future implementation
+      const productionSynced = false; // TODO: implement production sync tracking
+      
+      // Training data good status from manifest
+      const trainingDataGood = manifestData.training_data_good || false;
+      
       // Check if training data directory exists
       if (fs.existsSync(trainingDataDir)) {
         // Count training images (png and jpg files, excluding metadata files)
@@ -65,7 +79,11 @@ export function handleGetAllActors(
             synced: hasSyncedData
           },
           lora_model: manifestData.lora_model,
-          custom_lora_models: manifestData.custom_lora_models
+          custom_lora_models: manifestData.custom_lora_models,
+          training_data_good: trainingDataGood,
+          custom_models_count: customModelsCount,
+          custom_models_good: customModelsGood,
+          production_synced: productionSynced
         };
       }
       
@@ -73,7 +91,11 @@ export function handleGetAllActors(
       return {
         ...actor,
         lora_model: manifestData.lora_model,
-        custom_lora_models: manifestData.custom_lora_models
+        custom_lora_models: manifestData.custom_lora_models,
+        training_data_good: trainingDataGood,
+        custom_models_count: customModelsCount,
+        custom_models_good: customModelsGood,
+        production_synced: productionSynced
       };
     });
     

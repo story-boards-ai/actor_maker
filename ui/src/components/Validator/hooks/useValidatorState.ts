@@ -87,7 +87,11 @@ export function useValidatorState() {
             styleName: char.name,
             loraUrl: customModel.s3_accelerated_url || customModel.s3_url,
             timestamp: customModel.last_modified || new Date().toISOString(),
-            description: `Custom LoRA model - ${customModel.version}`
+            description: `Custom LoRA model - ${customModel.version}`,
+            version: customModel.version,
+            isSystem: false,
+            good: customModel.good || false,
+            assessment: customModel.assessment || null
           });
         });
       }

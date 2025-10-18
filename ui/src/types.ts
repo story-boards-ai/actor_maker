@@ -77,4 +77,9 @@ export interface Actor {
     count: number;
     synced: boolean;
   };
+  // Model-related fields
+  training_data_good?: boolean; // Training data marked as good
+  custom_models_count?: number; // Number of custom trained models
+  custom_models_good?: boolean; // At least one custom model marked as good
+  production_synced?: boolean; // Good model synced to production
 }

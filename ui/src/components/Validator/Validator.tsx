@@ -393,23 +393,33 @@ export function Validator() {
               state.setCurrentRating(rating);
               
               // Mark character model as good when rating is 'good'
-              if (rating === 'good' && state.selectedCharacters.length > 0) {
-                state.selectedCharacters.forEach(character => {
-                  console.log('[VALIDATOR] Marking character model as good:', character.id);
-                  fetch(`/api/actors/${character.id}/mark-good`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      console.log('[VALIDATOR] Character model marked as good:', data);
-                      state.addLog(`✅ Character model marked as good: ${character.name}`);
+              if (rating === 'good' && state.selectedModel) {
+                // Find the selected model to determine if it's custom or system
+                const selectedModelData = state.filteredModels.find(m => m.id === state.selectedModel);
+                
+                if (selectedModelData && !selectedModelData.isSystem) {
+                  // Custom model - mark the specific model version as good
+                  console.log('[VALIDATOR] Marking custom model as good:', selectedModelData.id);
+                  handleToggleModelGood(selectedModelData.id, selectedModelData.styleId);
+                } else if (state.selectedCharacters.length > 0) {
+                  // System model or no model data - mark actor as good
+                  state.selectedCharacters.forEach(character => {
+                    console.log('[VALIDATOR] Marking actor as good:', character.id);
+                    fetch(`/api/actors/${character.id}/mark-good`, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
                     })
-                    .catch(error => {
-                      console.error('[VALIDATOR] Failed to mark character as good:', error);
-                      state.addLog(`❌ Failed to mark character as good: ${character.name}`);
-                    });
-                });
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log('[VALIDATOR] Actor marked as good:', data);
+                        state.addLog(`✅ Actor marked as good: ${character.name}`);
+                      })
+                      .catch(error => {
+                        console.error('[VALIDATOR] Failed to mark actor as good:', error);
+                        state.addLog(`❌ Failed to mark actor as good: ${character.name}`);
+                      });
+                  });
+                }
               }
             }}
             onCommentChange={state.setCurrentComment}

@@ -95,56 +95,80 @@ export function ActorCard({ actor, onOpenTrainingData, onRegeneratePosterFrame, 
           </div>
         )}
         <div className="actor-card-overlay">
-          <div style={{ display: 'flex', gap: '8px', justifyContent: 'space-between', width: '100%' }}>
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-              <span className="actor-index">#{actor.id}</span>
+          <div style={{ display: 'flex', gap: '8px', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start' }}>
+            <span className="actor-index">#{actor.id}</span>
+            
+            <div style={{ display: 'flex', gap: '6px' }}>
+              {/* Training Data Status Icon */}
               {trainingInfo !== null && (
-                <>
-                  <span 
-                    className="actor-tag" 
-                    style={{ background: trainingInfo.count > 0 ? '#10b981' : '#94a3b8' }}
-                    title={`${trainingInfo.count} training images`}
-                  >
-                    📸 {trainingInfo.count}
-                  </span>
-                  {/* Indicators for missing training images 0 and 1 */}
-                  {trainingInfo.count > 0 && (!trainingInfo.hasImage0 || !trainingInfo.hasImage1) && (
-                    <span
-                      className="actor-tag"
-                      style={{ 
-                        background: '#ef4444',
-                        fontSize: '11px',
-                        padding: '2px 6px'
-                      }}
-                      title={`Missing: ${!trainingInfo.hasImage0 ? 'image_0' : ''}${!trainingInfo.hasImage0 && !trainingInfo.hasImage1 ? ', ' : ''}${!trainingInfo.hasImage1 ? 'image_1' : ''}`}
-                    >
-                      ⚠️ {!trainingInfo.hasImage0 && '0'}{!trainingInfo.hasImage0 && !trainingInfo.hasImage1 && ','}{!trainingInfo.hasImage1 && '1'}
-                    </span>
-                  )}
-                </>
+                <div
+                  className="status-badge"
+                  style={{
+                    background: actor.training_data_good 
+                      ? 'rgba(16, 185, 129, 0.95)' // Green - marked good
+                      : trainingInfo.count === 0
+                      ? 'rgba(148, 163, 184, 0.95)' // Gray - no training data
+                      : 'rgba(59, 130, 246, 0.95)', // Blue - has data but not marked good
+                    color: 'white',
+                    padding: '6px 10px',
+                    borderRadius: '6px',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    backdropFilter: 'blur(8px)',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                  }}
+                  title={
+                    actor.training_data_good
+                      ? `Training data marked good (${trainingInfo.count} images)`
+                      : trainingInfo.count === 0
+                      ? 'No training data'
+                      : `${trainingInfo.count} training images (not marked good)`
+                  }
+                >
+                  {actor.training_data_good ? '✓' : trainingInfo.count === 0 ? '∅' : trainingInfo.count}
+                  <span style={{ fontSize: '11px' }}>📸</span>
+                </div>
               )}
+              
+              {/* Model Status Icon */}
+              <div
+                className="status-badge"
+                style={{
+                  background: actor.production_synced
+                    ? 'rgba(147, 51, 234, 0.95)' // Purple - synced to production
+                    : actor.custom_models_good
+                    ? 'rgba(16, 185, 129, 0.95)' // Green - has good model
+                    : (actor.custom_models_count || 0) > 0
+                    ? 'rgba(59, 130, 246, 0.95)' // Blue - has models but not marked good
+                    : 'rgba(148, 163, 184, 0.95)', // Gray - no custom models
+                  color: 'white',
+                  padding: '6px 10px',
+                  borderRadius: '6px',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  backdropFilter: 'blur(8px)',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                }}
+                title={
+                  actor.production_synced
+                    ? 'Model synced to production'
+                    : actor.custom_models_good
+                    ? `Good model available (${actor.custom_models_count || 0} total)`
+                    : (actor.custom_models_count || 0) > 0
+                    ? `${actor.custom_models_count} custom models (none marked good)`
+                    : 'No custom models'
+                }
+              >
+                {actor.production_synced ? '🚀' : actor.custom_models_good ? '✓' : (actor.custom_models_count || 0) > 0 ? actor.custom_models_count : '∅'}
+                <span style={{ fontSize: '11px' }}>🎯</span>
+              </div>
             </div>
-            <button
-              onClick={toggleGood}
-              disabled={toggling}
-              style={{
-                background: isGood ? '#10b981' : 'rgba(255,255,255,0.2)',
-                border: 'none',
-                borderRadius: '50%',
-                width: '32px',
-                height: '32px',
-                cursor: toggling ? 'not-allowed' : 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '18px',
-                transition: 'all 0.2s ease',
-                opacity: toggling ? 0.5 : 1
-              }}
-              title={isGood ? 'Mark as not good' : 'Mark as good'}
-            >
-              {isGood ? '✓' : '○'}
-            </button>
           </div>
         </div>
       </div>

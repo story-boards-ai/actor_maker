@@ -17,6 +17,12 @@ export interface ValidatorCharacter {
     last_modified: string;
     created_date: string;
     format: string;
+    good?: boolean;
+    assessment?: {
+      rating: 'excellent' | 'good' | 'acceptable' | 'poor' | 'failed' | null;
+      comment: string;
+      updatedAt: string;
+    } | null;
   }>;
 }
 

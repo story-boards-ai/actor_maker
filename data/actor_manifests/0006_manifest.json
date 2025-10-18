@@ -340,7 +340,8 @@
       "md5_hash": "48153307acd92fd51daf318e8fa05ae2-19",
       "last_modified": "2025-10-17T09:14:14+00:00",
       "created_date": "2025-10-17",
-      "format": "safetensors"
+      "format": "safetensors",
+      "good": true
     }
   ],
   "custom_lora_models_updated": "2025-10-17T21:55:52.073668",

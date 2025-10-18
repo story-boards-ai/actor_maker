@@ -14,12 +14,15 @@ interface ActorsGridProps {
 }
 
 type FilterType =
-  | "missing_0_1"
-  | "has_15_plus"
-  | "good_only"
-  | "has_stylized"
-  | "no_training"
-  | "no_base_image";
+  // Training Data Filters
+  | "no_training_data"
+  | "has_training_not_good"
+  | "training_data_good"
+  // Model Filters
+  | "no_custom_models"
+  | "has_models_not_good"
+  | "has_good_model"
+  | "production_synced";
 
 export function ActorsGrid({
   onOpenTrainingData,
@@ -187,71 +190,54 @@ export function ActorsGrid({
     if (!trainingInfo) return false;
 
     // Group 1: Training Data Status (mutually exclusive - use OR logic)
-    // These describe different states of training data that cannot coexist
-    const trainingStatusFilters = [];
-    if (activeFilters.has("no_training")) {
-      const matchesNoTraining = trainingInfo.count === 0;
-      trainingStatusFilters.push(
-        invertFilter ? !matchesNoTraining : matchesNoTraining
-      );
+    const trainingDataFilters = [];
+    if (activeFilters.has("no_training_data")) {
+      const matches = trainingInfo.count === 0;
+      trainingDataFilters.push(invertFilter ? !matches : matches);
     }
-    if (activeFilters.has("missing_0_1")) {
-      // Normal: actors with images but missing 0 or 1
-      // Inverted: actors that have BOTH 0 and 1 (or have no images at all)
-      const matchesMissing =
-        trainingInfo.count > 0 &&
-        (!trainingInfo.hasImage0 || !trainingInfo.hasImage1);
-      trainingStatusFilters.push(
-        invertFilter ? !matchesMissing : matchesMissing
-      );
+    if (activeFilters.has("has_training_not_good")) {
+      const matches = trainingInfo.count > 0 && !actor.training_data_good;
+      trainingDataFilters.push(invertFilter ? !matches : matches);
     }
-    if (activeFilters.has("has_15_plus")) {
-      const matches15Plus = trainingInfo.count >= 15;
-      trainingStatusFilters.push(invertFilter ? !matches15Plus : matches15Plus);
+    if (activeFilters.has("training_data_good")) {
+      const matches = actor.training_data_good === true;
+      trainingDataFilters.push(invertFilter ? !matches : matches);
     }
 
-    // Group 2: Content Type (independent - use AND logic)
-    const contentTypeFilters = [];
-    if (activeFilters.has("has_stylized")) {
-      const matchesStylized = trainingInfo.hasStylizedImages === true;
-      contentTypeFilters.push(
-        invertFilter ? !matchesStylized : matchesStylized
-      );
+    // Group 2: Model Status (mutually exclusive - use OR logic)
+    const modelStatusFilters = [];
+    if (activeFilters.has("no_custom_models")) {
+      const matches = (actor.custom_models_count || 0) === 0;
+      modelStatusFilters.push(invertFilter ? !matches : matches);
     }
-    if (activeFilters.has("no_base_image")) {
-      const matchesNoBase = trainingInfo.hasBaseImage === false;
-      contentTypeFilters.push(invertFilter ? !matchesNoBase : matchesNoBase);
+    if (activeFilters.has("has_models_not_good")) {
+      const matches = (actor.custom_models_count || 0) > 0 && !actor.custom_models_good;
+      modelStatusFilters.push(invertFilter ? !matches : matches);
+    }
+    if (activeFilters.has("has_good_model")) {
+      const matches = actor.custom_models_good === true;
+      modelStatusFilters.push(invertFilter ? !matches : matches);
+    }
+    if (activeFilters.has("production_synced")) {
+      const matches = actor.production_synced === true;
+      modelStatusFilters.push(invertFilter ? !matches : matches);
     }
 
-    // Group 3: Quality Flags (independent - use AND logic)
-    const qualityFilters = [];
-    if (activeFilters.has("good_only")) {
-      const matchesGood = actor.good === true;
-      qualityFilters.push(invertFilter ? !matchesGood : matchesGood);
-    }
-
-    // Evaluate each group
-    // Training status:
-    // - Normal mode: actor must match at least ONE (OR logic)
-    // - Inverted mode: actor must match ALL (AND logic)
-    const matchesTrainingStatus =
-      trainingStatusFilters.length === 0 ||
+    // Evaluate each group with OR logic (match ANY within group)
+    const matchesTrainingData =
+      trainingDataFilters.length === 0 ||
       (invertFilter
-        ? trainingStatusFilters.every((result) => result === true)
-        : trainingStatusFilters.some((result) => result === true));
+        ? trainingDataFilters.every((result) => result === true)
+        : trainingDataFilters.some((result) => result === true));
 
-    // Content type: Actor must match ALL filters in this group (AND logic)
-    const matchesContentType =
-      contentTypeFilters.length === 0 ||
-      contentTypeFilters.every((result) => result === true);
+    const matchesModelStatus =
+      modelStatusFilters.length === 0 ||
+      (invertFilter
+        ? modelStatusFilters.every((result) => result === true)
+        : modelStatusFilters.some((result) => result === true));
 
-    // Quality: Actor must match ALL filters in this group (AND logic)
-    const matchesQuality =
-      qualityFilters.length === 0 ||
-      qualityFilters.every((result) => result === true);
-
-    // Combine all groups with AND logic
-    return matchesTrainingStatus && matchesContentType && matchesQuality;
+    // Combine groups with AND logic
+    return matchesTrainingData && matchesModelStatus;
   });
 
   if (actors.length === 0) {
@@ -337,114 +323,128 @@ export function ActorsGrid({
           >
             Clear All
           </button>
-          <button
-            onClick={() => toggleFilter("missing_0_1")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("missing_0_1")
-                ? "#ef4444"
-                : "#f1f5f9",
-              color: activeFilters.has("missing_0_1") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            ⚠️ Missing 0/1
-          </button>
-          <button
-            onClick={() => toggleFilter("has_15_plus")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("has_15_plus")
-                ? "#10b981"
-                : "#f1f5f9",
-              color: activeFilters.has("has_15_plus") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            📸 15+ Images
-          </button>
-          <button
-            onClick={() => toggleFilter("good_only")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("good_only")
-                ? "#10b981"
-                : "#f1f5f9",
-              color: activeFilters.has("good_only") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            ✓ Good Only
-          </button>
-          <button
-            onClick={() => toggleFilter("has_stylized")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("has_stylized")
-                ? "#8b5cf6"
-                : "#f1f5f9",
-              color: activeFilters.has("has_stylized") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            🎨 Stylized
-          </button>
-          <button
-            onClick={() => toggleFilter("no_training")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("no_training")
-                ? "#f59e0b"
-                : "#f1f5f9",
-              color: activeFilters.has("no_training") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            ∅ No Training
-          </button>
-          <button
-            onClick={() => toggleFilter("no_base_image")}
-            style={{
-              padding: "8px 16px",
-              background: activeFilters.has("no_base_image")
-                ? "#dc2626"
-                : "#f1f5f9",
-              color: activeFilters.has("no_base_image") ? "white" : "#475569",
-              border: "none",
-              borderRadius: "6px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            🖼️ No Base Image
-          </button>
+          
+          {/* Training Data Filters */}
+          <div style={{ borderLeft: "2px solid #e2e8f0", paddingLeft: "8px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+            <span style={{ fontSize: "12px", fontWeight: 600, color: "#94a3b8", alignSelf: "center" }}>Training Data:</span>
+            <button
+              onClick={() => toggleFilter("no_training_data")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("no_training_data") ? "#94a3b8" : "#f1f5f9",
+                color: activeFilters.has("no_training_data") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              ∅ No Data
+            </button>
+            <button
+              onClick={() => toggleFilter("has_training_not_good")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("has_training_not_good") ? "#3b82f6" : "#f1f5f9",
+                color: activeFilters.has("has_training_not_good") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              📸 Has Data (Not Good)
+            </button>
+            <button
+              onClick={() => toggleFilter("training_data_good")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("training_data_good") ? "#10b981" : "#f1f5f9",
+                color: activeFilters.has("training_data_good") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              ✓ Marked Good
+            </button>
+          </div>
+          
+          {/* Model Filters */}
+          <div style={{ borderLeft: "2px solid #e2e8f0", paddingLeft: "8px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+            <span style={{ fontSize: "12px", fontWeight: 600, color: "#94a3b8", alignSelf: "center" }}>Models:</span>
+            <button
+              onClick={() => toggleFilter("no_custom_models")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("no_custom_models") ? "#94a3b8" : "#f1f5f9",
+                color: activeFilters.has("no_custom_models") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              ∅ No Models
+            </button>
+            <button
+              onClick={() => toggleFilter("has_models_not_good")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("has_models_not_good") ? "#3b82f6" : "#f1f5f9",
+                color: activeFilters.has("has_models_not_good") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              🎯 Has Models (Not Good)
+            </button>
+            <button
+              onClick={() => toggleFilter("has_good_model")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("has_good_model") ? "#10b981" : "#f1f5f9",
+                color: activeFilters.has("has_good_model") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              ✓ Good Model
+            </button>
+            <button
+              onClick={() => toggleFilter("production_synced")}
+              style={{
+                padding: "8px 16px",
+                background: activeFilters.has("production_synced") ? "#9333ea" : "#f1f5f9",
+                color: activeFilters.has("production_synced") ? "white" : "#475569",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+            >
+              🚀 Production Synced
+            </button>
+          </div>
         </div>
 
         <div className="column-control">

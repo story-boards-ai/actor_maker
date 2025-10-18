@@ -114,7 +114,7 @@ export function ControlPanel(props: ControlPanelProps) {
   } = props;
 
   const selectedStyleData = styles.find((s) => s.id === selectedStyle);
-  const selectedModelData = trainedModels.find((m) => m.id === selectedModel);
+  const selectedModelData = filteredModels.find((m) => m.id === selectedModel);
 
   // Handle cinematic prompt selection
   const handleCinematicPromptChange = (promptId: string) => {
