@@ -20,6 +20,7 @@ class PrefetchManager {
   private isPaused = false;
   private currentTask: PrefetchTask | null = null;
   private completedActors = new Set<string>();
+  private failedActors = new Set<string>(); // Track actors with missing/failed images
   private onProgressCallback: ((progress: PrefetchProgress) => void) | null = null;
 
   /**
@@ -27,13 +28,19 @@ class PrefetchManager {
    */
   async startPrefetch(actors: Actor[]): Promise<void> {
     if (this.isRunning) {
-      console.log('Prefetch already running');
+      console.log('[Prefetch] Already running, skipping duplicate call');
       return;
     }
 
-    console.log(`Starting prefetch for ${actors.length} actors`);
+    console.log(`[Prefetch] Starting for ${actors.length} actors`);
     this.isRunning = true;
-    this.completedActors.clear();
+    
+    // Initialize completedActors from cache manifest on first run
+    if (this.completedActors.size === 0) {
+      const cachedActorIds = await imageCache.getCachedActorIds();
+      cachedActorIds.forEach(id => this.completedActors.add(id));
+      console.log(`[Prefetch] Initialized with ${this.completedActors.size} already-cached actors`);
+    }
 
     // Build prefetch queue
     await this.buildQueue(actors);
@@ -46,6 +53,24 @@ class PrefetchManager {
    * Prefetch specific actor with high priority
    */
   async prefetchActor(actorId: string, images: Array<{ s3_url: string; filename: string }>): Promise<void> {
+    // Check if already completed
+    if (this.completedActors.has(actorId)) {
+      console.log(`[Prefetch] Actor ${actorId} already completed, skipping`);
+      return;
+    }
+
+    // Check if already in queue
+    if (this.queue.some(task => task.actorId === actorId)) {
+      console.log(`[Prefetch] Actor ${actorId} already in queue, skipping duplicate`);
+      return;
+    }
+
+    // Check if currently being processed
+    if (this.currentTask?.actorId === actorId) {
+      console.log(`[Prefetch] Actor ${actorId} currently being processed, skipping duplicate`);
+      return;
+    }
+
     // Check if already cached
     const uncached = [];
     for (const img of images) {
@@ -56,7 +81,8 @@ class PrefetchManager {
     }
 
     if (uncached.length === 0) {
-      console.log(`Actor ${actorId} already fully cached`);
+      console.log(`[Prefetch] Actor ${actorId} already fully cached`);
+      this.completedActors.add(actorId);
       return;
     }
 
@@ -69,6 +95,7 @@ class PrefetchManager {
 
     // Insert at front of queue
     this.queue.unshift(task);
+    console.log(`[Prefetch] Added actor ${actorId} to queue (high priority, ${uncached.length} images)`);
 
     // Start processing if not running
     if (!this.isRunning) {
@@ -136,10 +163,21 @@ class PrefetchManager {
    */
   private async buildQueue(actors: Actor[]): Promise<void> {
     this.queue = [];
+    console.log(`[Prefetch] Building queue for ${actors.length} actors, ${this.completedActors.size} already completed`);
 
     for (const actor of actors) {
       try {
         const actorIdStr = String(actor.id);
+        
+        // Skip if already completed in a previous run
+        if (this.completedActors.has(actorIdStr)) {
+          continue;
+        }
+        
+        // Skip if previously failed (images don't exist in S3)
+        if (this.failedActors.has(actorIdStr)) {
+          continue;
+        }
         
         // Fetch training data for actor
         const response = await fetch(`/api/actors/${actorIdStr}/training-data`);
@@ -188,7 +226,7 @@ class PrefetchManager {
       return priorityOrder[a.priority] - priorityOrder[b.priority];
     });
 
-    console.log(`Prefetch queue built: ${this.queue.length} actors need caching`);
+    console.log(`[Prefetch] Queue built: ${this.queue.length} actors need caching`);
   }
 
   /**
@@ -209,9 +247,17 @@ class PrefetchManager {
       try {
         console.log(`Prefetching actor ${this.currentTask.actorId} (${this.currentTask.images.length} images)`);
         
-        await imageCache.prefetchActor(this.currentTask.actorId, this.currentTask.images);
+        const result = await imageCache.prefetchActor(this.currentTask.actorId, this.currentTask.images);
         
-        this.completedActors.add(this.currentTask.actorId);
+        // If all images failed (likely missing from S3), mark as failed
+        if (result.cached === 0 && result.failed > 0) {
+          this.failedActors.add(this.currentTask.actorId);
+          console.log(`[Prefetch] Actor ${this.currentTask.actorId} marked as failed (${result.failed} missing images)`);
+        } else if (result.cached > 0) {
+          // At least some images were cached successfully
+          this.completedActors.add(this.currentTask.actorId);
+          console.log(`[Prefetch] Actor ${this.currentTask.actorId} completed (${result.cached} images cached)`);
+        }
         
         // Notify progress
         if (this.onProgressCallback) {
@@ -222,12 +268,13 @@ class PrefetchManager {
         await new Promise(resolve => setTimeout(resolve, 100));
       } catch (error) {
         console.error(`Failed to prefetch actor ${this.currentTask.actorId}:`, error);
+        this.failedActors.add(this.currentTask.actorId);
       }
     }
 
     this.isRunning = false;
     this.currentTask = null;
-    console.log('Prefetch completed');
+    console.log(`[Prefetch] Completed - ${this.completedActors.size} actors cached, ${this.failedActors.size} actors skipped (missing images)`);
 
     // Final progress update
     if (this.onProgressCallback) {

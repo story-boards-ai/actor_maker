@@ -96,7 +96,8 @@ def generate_single_training_image_s3(
     base_image_url: str,
     prompt: str,
     actor_type: str = "person",
-    actor_sex: str = None
+    actor_sex: str = None,
+    aspect_ratio: str = "1:1"
 ) -> dict:
     """
     Generate a single training image using S3-only architecture.
@@ -108,6 +109,7 @@ def generate_single_training_image_s3(
         prompt: Generation prompt
         actor_type: Type of actor (default: "person")
         actor_sex: Sex of actor ("male", "female", or None)
+        aspect_ratio: Aspect ratio for generated image ("1:1" or "16:9", default: "1:1")
         
     Returns:
         dict with generated image info
@@ -134,12 +136,12 @@ def generate_single_training_image_s3(
         }
     
     # Generate image with flux-kontext-pro
-    logger.info("Calling Replicate flux-kontext-pro...")
+    logger.info(f"Calling Replicate flux-kontext-pro with aspect ratio: {aspect_ratio}...")
     try:
         generated_url = replicate.generate_grid_with_flux_kontext(
             prompt=prompt,
             input_image_base64=base_image_base64,
-            aspect_ratio="1:1",
+            aspect_ratio=aspect_ratio,
             output_format="jpg"
         )
         logger.info(f"Image generated: {generated_url}")
@@ -247,8 +249,8 @@ def generate_single_training_image_s3(
 def main():
     """Main entry point for CLI usage."""
     if len(sys.argv) < 5:
-        print("Usage: python generate_single_training_image_s3.py <actor_id> <actor_name> <base_image_url> <prompt> [actor_type] [actor_sex]")
-        print("Example: python generate_single_training_image_s3.py 0012 0012_european_30_male https://s3.../base.jpg 'A person in a scene' person male")
+        print("Usage: python generate_single_training_image_s3.py <actor_id> <actor_name> <base_image_url> <prompt> [actor_type] [actor_sex] [aspect_ratio]")
+        print("Example: python generate_single_training_image_s3.py 0012 0012_european_30_male https://s3.../base.jpg 'A person in a scene' person male 1:1")
         sys.exit(1)
     
     actor_id = sys.argv[1]
@@ -257,6 +259,7 @@ def main():
     prompt = sys.argv[4]
     actor_type = sys.argv[5] if len(sys.argv) > 5 else "person"
     actor_sex = sys.argv[6] if len(sys.argv) > 6 else None
+    aspect_ratio = sys.argv[7] if len(sys.argv) > 7 else "1:1"
     
     try:
         result = generate_single_training_image_s3(
@@ -265,7 +268,8 @@ def main():
             base_image_url=base_image_url,
             prompt=prompt,
             actor_type=actor_type,
-            actor_sex=actor_sex
+            actor_sex=actor_sex,
+            aspect_ratio=aspect_ratio
         )
         
         # Output JSON for Node.js to parse

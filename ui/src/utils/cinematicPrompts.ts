@@ -11,54 +11,79 @@ export interface CinematicPrompt {
 
 export const CINEMATIC_PROMPTS: CinematicPrompt[] = [
   {
-    id: "hero-low-angle",
-    label: "Hero Shot - Low Angle",
-    prompt: "[character] standing heroically, low angle shot, dramatic lighting from below, cinematic composition, powerful stance, epic atmosphere"
+    id: "hero-moment",
+    label: "Heroic Moment",
+    prompt: "[character] standing tall on a cliff edge overlooking a vast valley at sunset, arms crossed confidently, wind blowing through hair and clothes, determined expression gazing into the distance, dramatic clouds swirling in the sky behind them, epic heroic stance"
   },
   {
-    id: "close-up-intense",
-    label: "Close-Up - Intense Moment",
-    prompt: "extreme close-up of [character]'s face, intense expression, shallow depth of field, dramatic side lighting, cinematic bokeh background"
+    id: "intense-confrontation",
+    label: "Intense Confrontation",
+    prompt: "[character] face illuminated by flickering firelight, eyes narrowed with intense focus and determination, jaw clenched, beads of sweat on forehead, leaning forward aggressively in a tense standoff, shadows dancing across their face"
   },
   {
-    id: "action-dutch-angle",
-    label: "Action - Dutch Angle",
-    prompt: "[character] in dynamic action pose, dutch angle camera tilt, motion blur, high contrast lighting, cinematic tension, dramatic composition"
+    id: "action-combat",
+    label: "Action Combat",
+    prompt: "[character] mid-fight in a rain-soaked alley, throwing a powerful punch with body twisted in dynamic motion, water splashing around their feet, opponent's silhouette in background, muscles tensed, face showing fierce concentration and adrenaline"
   },
   {
-    id: "over-shoulder",
-    label: "Over-the-Shoulder Shot",
-    prompt: "over-the-shoulder shot of [character], cinematic framing, shallow focus on subject, atmospheric lighting, film noir style"
+    id: "mysterious-arrival",
+    label: "Mysterious Arrival",
+    prompt: "[character] walking slowly through fog-filled street at night, long coat billowing behind them, hands in pockets, mysterious confident stride, neon signs glowing in the mist, puddles reflecting colorful lights, enigmatic expression"
   },
   {
-    id: "wide-establishing",
-    label: "Wide Establishing Shot",
-    prompt: "[character] in wide cinematic shot, epic landscape background, golden hour lighting, anamorphic lens flare, establishing shot composition"
+    id: "epic-journey",
+    label: "Epic Journey",
+    prompt: "[character] standing alone in the middle of an endless desert with towering sand dunes, backpack slung over shoulder, shielding eyes from the sun while looking toward the horizon, small figure against massive landscape, journey ahead"
   },
   {
-    id: "tracking-shot",
-    label: "Tracking Shot - Walking",
-    prompt: "[character] walking towards camera, tracking shot, cinematic motion, dramatic backlighting, urban environment, film grain"
+    id: "urban-pursuit",
+    label: "Urban Pursuit",
+    prompt: "[character] running full speed down a crowded city street at night, pushing past pedestrians, looking back over shoulder with worried expression, neon signs and car headlights blurring past, urgent escape in progress"
   },
   {
-    id: "high-angle-vulnerable",
-    label: "High Angle - Vulnerable",
-    prompt: "[character] from high angle perspective, vulnerable moment, soft dramatic lighting, cinematic depth, emotional atmosphere"
+    id: "moment-of-loss",
+    label: "Moment of Loss",
+    prompt: "[character] sitting slumped on the floor against a wall, head in hands, shoulders shaking with emotion, dim light from a nearby window casting long shadows, scattered papers or broken objects around them, devastated and alone"
   },
   {
-    id: "profile-silhouette",
-    label: "Profile Silhouette",
-    prompt: "[character] in profile silhouette, dramatic rim lighting, cinematic contrast, moody atmosphere, film noir composition"
+    id: "silhouette-contemplation",
+    label: "Silhouette Contemplation",
+    prompt: "[character] standing in profile at a large window, silhouetted against bright city lights or sunset, hand touching the glass, head slightly bowed in deep thought, isolated and contemplative, rain streaking down the window"
   },
   {
-    id: "two-shot-conversation",
-    label: "Two-Shot Conversation",
-    prompt: "[character] in two-shot composition, conversational framing, cinematic lighting setup, shallow depth of field, professional color grading"
+    id: "heated-argument",
+    label: "Heated Argument",
+    prompt: "[character] in the middle of an intense argument, gesturing emphatically with hands, face flushed with anger or passion, leaning across a table toward another person, papers scattered, coffee cups knocked over, emotional confrontation"
   },
   {
-    id: "extreme-wide-epic",
-    label: "Extreme Wide - Epic Scale",
-    prompt: "[character] in extreme wide shot, epic cinematic scale, dramatic sky, anamorphic widescreen composition, sweeping landscape, heroic framing"
+    id: "mountain-summit",
+    label: "Mountain Summit Victory",
+    prompt: "[character] reaching the peak of a snow-covered mountain, arms raised triumphantly above head, face showing exhaustion and joy, ice crystals in hair, climbing gear visible, vast mountain range stretching endlessly below, moment of achievement"
+  },
+  {
+    id: "rainy-goodbye",
+    label: "Rainy Goodbye",
+    prompt: "[character] standing in pouring rain without an umbrella, hair and clothes completely soaked, reaching out with one hand toward someone walking away in the distance, face showing heartbreak and desperation, rain creating curtains of water"
+  },
+  {
+    id: "underground-discovery",
+    label: "Underground Discovery",
+    prompt: "[character] holding a flashlight in a dark underground tunnel or cave, beam of light revealing ancient symbols on walls, face showing awe and wonder, dust particles floating in the light beam, crouching to examine mysterious artifacts"
+  },
+  {
+    id: "rooftop-escape",
+    label: "Rooftop Escape",
+    prompt: "[character] leaping between rooftops high above the city, body stretched in mid-air jump, arms windmilling for balance, expression of fear and determination, city lights far below, dangerous parkour escape"
+  },
+  {
+    id: "car-chase-driver",
+    label: "Car Chase Driver",
+    prompt: "[character] gripping the steering wheel tightly with white knuckles, face lit by dashboard glow and passing streetlights, eyes wide with intensity focused on the road, jaw set, city lights streaking past the windows, high-speed pursuit"
+  },
+  {
+    id: "peaceful-morning",
+    label: "Peaceful Morning",
+    prompt: "[character] sitting on a wooden porch with steaming coffee mug in hands, wrapped in a cozy blanket, watching the sunrise over misty hills, gentle smile, peaceful and content expression, birds flying in the golden morning light"
   }
 ];
 

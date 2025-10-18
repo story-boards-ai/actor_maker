@@ -387,60 +387,71 @@ function handleGetAllTrainedModels(req: IncomingMessage, res: ServerResponse, pr
   try {
     const allModels: any[] = [];
 
-    // Scan actor/character models from data/actors
-    const actorsDir = path.join(projectRoot, 'data', 'actors');
+    // Load from actor manifest files
+    const manifestsDir = path.join(projectRoot, 'data', 'actor_manifests');
     
-    if (!fs.existsSync(actorsDir)) {
+    if (!fs.existsSync(manifestsDir)) {
+      console.warn('[Training Models] Manifests directory not found:', manifestsDir);
       res.statusCode = 200;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ models: [] }));
       return;
     }
 
-    const actorFolders = fs.readdirSync(actorsDir);
+    const manifestFiles = fs.readdirSync(manifestsDir).filter(f => f.endsWith('_manifest.json'));
+    console.log(`[Training Models] Found ${manifestFiles.length} manifest files`);
 
-    for (const actorFolder of actorFolders) {
-      const versionsPath = path.join(actorsDir, actorFolder, 'training_versions.json');
+    for (const manifestFile of manifestFiles) {
+      const manifestPath = path.join(manifestsDir, manifestFile);
       
-      if (fs.existsSync(versionsPath)) {
-        try {
-          const data = JSON.parse(fs.readFileSync(versionsPath, 'utf-8'));
-          const versions = data.versions || [];
-          
-          // Load actorsData to get actor ID
-          const actorsDataPath = path.join(projectRoot, 'data', 'actorsData.json');
-          let actorId = actorFolder; // fallback to folder name
-          
-          if (fs.existsSync(actorsDataPath)) {
-            const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
-            const actor = actorsData.find((a: any) => a.name === actorFolder);
-            if (actor) {
-              actorId = actor.id.toString();
-              console.log(`[Training Models] Actor ${actorFolder} -> ID: ${actorId} (type: ${typeof actorId})`);
-            } else {
-              console.warn(`[Training Models] Actor ${actorFolder} not found in actorsData.json`);
+      try {
+        const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+        const actorId = manifest.character_id || manifest.metadata?.id;
+        const actorName = manifest.character_name || manifest.metadata?.name;
+        
+        if (!actorId || !actorName) {
+          console.warn(`[Training Models] Skipping manifest with missing ID/name: ${manifestFile}`);
+          continue;
+        }
+
+        // Add system LoRA model if available
+        if (manifest.lora_model?.s3_url) {
+          allModels.push({
+            id: `${actorId}_system`,
+            name: `${actorName} (System LoRA)`,
+            styleId: actorId,
+            styleName: actorName.replace(/_/g, ' '),
+            loraUrl: manifest.lora_model.s3_accelerated_url || manifest.lora_model.s3_url,
+            timestamp: manifest.lora_model_updated || manifest.lora_model.last_modified,
+            parameters: null,
+            imageCount: manifest.statistics?.training_images_count || 0,
+            description: 'System-trained LoRA model',
+            isSystem: true,
+          });
+        }
+
+        // Add custom LoRA models if available
+        if (manifest.custom_lora_models && Array.isArray(manifest.custom_lora_models)) {
+          for (const customModel of manifest.custom_lora_models) {
+            if (customModel.s3_url) {
+              allModels.push({
+                id: `${actorId}_${customModel.version}`,
+                name: `${actorName} (${customModel.version})`,
+                styleId: actorId,
+                styleName: actorName.replace(/_/g, ' '),
+                loraUrl: customModel.s3_accelerated_url || customModel.s3_url,
+                timestamp: customModel.last_modified,
+                parameters: null,
+                imageCount: manifest.statistics?.training_images_count || 0,
+                description: `Custom trained model - ${customModel.version}`,
+                version: customModel.version,
+                isSystem: false,
+              });
             }
           }
-          
-          // Only include completed versions with loraUrl
-          const completedVersions = versions
-            .filter((v: any) => v.status === 'completed' && v.loraUrl)
-            .map((v: any) => ({
-              id: v.id,
-              name: v.name || 'Unnamed',
-              styleId: actorId, // Use actor ID as styleId for filtering
-              styleName: actorFolder.replace(/_/g, ' '),
-              loraUrl: v.loraUrl,
-              timestamp: v.timestamp,
-              parameters: v.parameters,
-              imageCount: v.imageCount,
-              description: v.description,
-            }));
-          
-          allModels.push(...completedVersions);
-        } catch (parseErr) {
-          console.warn(`[Training Models] Failed to parse ${versionsPath}:`, parseErr);
         }
+      } catch (parseErr) {
+        console.warn(`[Training Models] Failed to parse ${manifestPath}:`, parseErr);
       }
     }
 
@@ -451,7 +462,7 @@ function handleGetAllTrainedModels(req: IncomingMessage, res: ServerResponse, pr
       return timeB - timeA;
     });
 
-    console.log(`[Training Models] Found ${allModels.length} trained actor models`);
+    console.log(`[Training Models] Found ${allModels.length} trained actor models from manifests`);
     
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

@@ -29,7 +29,7 @@ export function Validator() {
   const testSuite = useTestSuiteJob({
     selectedStyle: state.selectedStyle,
     selectedModel: state.selectedModel,
-    trainedModels: state.trainedModels,
+    trainedModels: state.filteredModels,
     styles: state.styles,
     seed: state.seed,
     seedLocked: state.seedLocked,
@@ -62,7 +62,7 @@ export function Validator() {
   const settingsSets = useSettingsSets({
     selectedStyle: state.selectedStyle,
     selectedModel: state.selectedModel,
-    trainedModels: state.trainedModels,
+    trainedModels: state.filteredModels,
     styles: state.styles,
     currentRating: state.currentRating,
     currentComment: state.currentComment,
@@ -226,7 +226,7 @@ export function Validator() {
   const { generateImage } = useImageGeneration({
     selectedStyle: state.selectedStyle,
     selectedModel: state.selectedModel,
-    trainedModels: state.trainedModels,
+    trainedModels: state.filteredModels,
     prompt: state.prompt,
     styles: state.styles,
     seed: state.seed,

@@ -56,15 +56,18 @@ function App() {
     style: Style;
   } | null>(null);
 
-  // Start background prefetching when actors are loaded
+  // Start background prefetching when actors are first loaded
+  // Only run once, not on every actors array change
   useEffect(() => {
     if (actors.length > 0) {
-      console.log("Starting background prefetch for", actors.length, "actors");
+      console.log("[App] Actors loaded, starting background prefetch for", actors.length, "actors");
 
       // Start prefetching in background (non-blocking)
+      // The prefetch manager will handle duplicate calls internally
       prefetchManager.startPrefetch(actors);
     }
-  }, [actors]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [actors.length]); // Only re-run if the NUMBER of actors changes, not the array itself
 
   const handleCloseTrainingTab = () => {
     setTrainingTab(null);

@@ -1,21 +1,23 @@
 {
   "character_id": "0285",
-  "character_name": "0285_indian_8_male",
+  "character_name": "0285_south_american_13_male",
   "metadata": {
     "img": "XXXXXXX",
-    "age": "8",
+    "age": "13",
     "sex": "male",
-    "ethnicity": "indian",
-    "face_prompt": "Rohan Patel as an 8 year old indian boy with short, wavy black hair and a missing front tooth",
+    "ethnicity": "south_american",
+    "face_prompt": "Diego Hernandez as a 13 year old hispanic boy with curly, medium-length brown hair and glasses",
     "id": "0285",
-    "name": "0285_indian_8_male",
-    "image": "image286"
+    "name": "0285_south_american_13_male",
+    "image": "image271",
+    "outfit": "Blue and white striped t-shirt, dark blue athletic shorts, black soccer cleats, and a black digital sports watch.",
+    "description": "A 13 year old hispanic boy with curly, medium-length brown hair and glasses"
   },
   "migration_timestamp": "2025-10-15T07:38:32.013257",
   "base_images": [
     {
-      "filename": "0285_indian_8_male_base.jpg",
-      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0285_indian_8_male_base.jpg",
+      "filename": "0285_south_american_13_male_base.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/base_images/0285_south_american_13_male_base.jpg",
       "status": "synced",
       "format": "jpeg"
     }

@@ -1,6 +1,7 @@
 export interface ValidatorCharacter {
   id: string;
   name: string;
+  classToken: string;
   type: 'system' | 'custom';
   description?: string;
   loraUrl?: string;

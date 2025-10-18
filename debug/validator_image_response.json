@@ -1,7 +1,7 @@
 {
-  "delayTime": 19213,
-  "executionTime": 17700,
-  "id": "sync-92c876d4-8bc8-430f-a457-59b0f2c6059f-e1",
+  "delayTime": 15307,
+  "executionTime": 16905,
+  "id": "sync-a3ce3934-237e-4301-b4e0-73ffc1622fb4-e1",
   "output": {
     "output": {
       "images": [
@@ -9,10 +9,10 @@
       ],
       "model_info": {
         "model_ids": [
-          "actor_6_V6.safetensors"
+          "actor_6_V7.safetensors"
         ],
         "model_paths": {
-          "actor_6_V6.safetensors": "/ComfyUI/models/loras/actor_6_V6.safetensors"
+          "actor_6_V7.safetensors": "/ComfyUI/models/loras/actor_6_V7.safetensors"
         }
       }
     },

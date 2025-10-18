@@ -504,13 +504,13 @@ export function ControlPanel(props: ControlPanelProps) {
               !selectedStyle ||
               !selectedModel ||
               !prompt ||
-              trainedModels.length === 0 ||
+              filteredModels.length === 0 ||
               isRunningTestSuite
             }
             className="btn-generate"
             title={
-              trainedModels.length === 0
-                ? "Train a LoRA model first"
+              filteredModels.length === 0
+                ? "Select a character with trained models first"
                 : !selectedModel
                 ? "Select a trained model"
                 : !selectedStyle
@@ -650,11 +650,11 @@ export function ControlPanel(props: ControlPanelProps) {
                 !selectedStyle ||
                 !selectedModel ||
                 !selectedTestSuite ||
-                trainedModels.length === 0
+                filteredModels.length === 0
               }
               className="btn-test-suite"
               title={
-                !selectedStyle || !selectedModel || trainedModels.length === 0
+                !selectedStyle || !selectedModel || filteredModels.length === 0
                   ? "Select style and model first"
                   : !selectedTestSuite
                   ? "Select a test suite first"

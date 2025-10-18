@@ -99,6 +99,7 @@ export function CharacterSelectionModal({
     const character: ValidatorCharacter = {
       id: actor.id.toString(), // Use numeric ID as string to match backend
       name: actor.name,
+      classToken: actor.name, // Use actor name as class token (e.g., "0006_european_20_female")
       type: "system",
       description: actor.description,
       loraUrl: actor.lora_model?.s3_accelerated_url || actor.lora_model?.s3_url || actor.url,

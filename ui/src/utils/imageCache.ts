@@ -38,7 +38,7 @@ class ImageCacheService {
    */
   disableCaching(): void {
     this.cachingEnabled = false;
-    console.log('[ImageCache] Caching disabled - using S3 URLs directly');
+    console.log("[ImageCache] Caching disabled - using S3 URLs directly");
   }
 
   /**
@@ -47,28 +47,61 @@ class ImageCacheService {
   async initialize(): Promise<void> {
     if (this.manifestLoaded) return;
 
-    try {
-      const response = await fetch("/api/cache/manifest");
-      if (response.ok) {
-        this.manifest = await response.json();
-      } else {
-        // Create new manifest
-        this.manifest = {
-          version: "1.0",
-          entries: {},
-          last_updated: Date.now(),
-        };
+    // Retry logic for initial load (server might not be ready yet)
+    let retries = 3;
+    let lastError: Error | null = null;
+
+    while (retries > 0) {
+      try {
+        const response = await fetch("/api/cache/manifest");
+        if (response.ok) {
+          this.manifest = await response.json();
+          this.manifestLoaded = true;
+          console.log(
+            `[ImageCache] Loaded manifest with ${
+              Object.keys(this.manifest?.entries || {}).length
+            } entries`
+          );
+          return;
+        } else if (response.status === 404) {
+          // Manifest doesn't exist yet, create empty one
+          this.manifest = {
+            version: "1.0",
+            entries: {},
+            last_updated: Date.now(),
+          };
+          this.manifestLoaded = true;
+          console.log(
+            "[ImageCache] No manifest found, starting with empty cache"
+          );
+          return;
+        }
+        // Other error status, retry
+        lastError = new Error(`HTTP ${response.status}`);
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error(String(error));
       }
-      this.manifestLoaded = true;
-    } catch (error) {
-      console.error("Failed to load cache manifest:", error);
-      this.manifest = {
-        version: "1.0",
-        entries: {},
-        last_updated: Date.now(),
-      };
-      this.manifestLoaded = true;
+
+      retries--;
+      if (retries > 0) {
+        console.warn(
+          `[ImageCache] Failed to load manifest, retrying... (${retries} attempts left)`
+        );
+        await new Promise((resolve) => setTimeout(resolve, 500)); // Wait 500ms before retry
+      }
     }
+
+    // All retries failed, start with empty manifest
+    console.error(
+      "[ImageCache] Failed to load manifest after all retries:",
+      lastError
+    );
+    this.manifest = {
+      version: "1.0",
+      entries: {},
+      last_updated: Date.now(),
+    };
+    this.manifestLoaded = true;
   }
 
   /**
@@ -84,11 +117,8 @@ class ImageCacheService {
 
     const entry = this.manifest?.entries[s3_url];
     if (entry) {
-      // Check if cache file exists
-      const exists = await this.checkCacheExists(entry.local_path);
-      if (exists) {
-        return `/api/cache/image?path=${encodeURIComponent(entry.local_path)}`;
-      }
+      // Trust the manifest - if it's in the manifest, serve from cache
+      return `/api/cache/image?path=${encodeURIComponent(entry.local_path)}`;
     }
 
     // Not cached, return S3 URL
@@ -97,13 +127,24 @@ class ImageCacheService {
 
   /**
    * Check if image is cached
+   * By default, trusts the manifest without verifying file existence.
+   * Set verifyExists=true to make an API call to verify the file actually exists.
    */
-  async isCached(s3_url: string): Promise<boolean> {
+  async isCached(
+    s3_url: string,
+    verifyExists: boolean = false
+  ): Promise<boolean> {
     await this.initialize();
 
     const entry = this.manifest?.entries[s3_url];
     if (!entry) return false;
 
+    // Trust the manifest by default for performance
+    if (!verifyExists) {
+      return true;
+    }
+
+    // Only verify file existence if explicitly requested
     return await this.checkCacheExists(entry.local_path);
   }
 
@@ -132,12 +173,22 @@ class ImageCacheService {
   }
 
   /**
+   * Get set of actor IDs that have cached images
+   */
+  async getCachedActorIds(): Promise<Set<string>> {
+    await this.initialize();
+    const entries = Object.values(this.manifest?.entries || {});
+    return new Set(entries.map((e) => e.actor_id));
+  }
+
+  /**
    * Prefetch images for an actor
+   * Returns the number of successfully cached images
    */
   async prefetchActor(
     actorId: string,
     images: Array<{ s3_url: string; filename: string }>
-  ): Promise<void> {
+  ): Promise<{ cached: number; failed: number; total: number }> {
     await this.initialize();
 
     const uncachedImages = [];
@@ -149,12 +200,12 @@ class ImageCacheService {
     }
 
     if (uncachedImages.length === 0) {
-      return; // All cached
+      return { cached: 0, failed: 0, total: 0 }; // All already cached
     }
 
     // Request backend to cache these images
     try {
-      await fetch("/api/cache/prefetch", {
+      const response = await fetch("/api/cache/prefetch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -163,11 +214,16 @@ class ImageCacheService {
         }),
       });
 
+      const result = await response.json();
+
       // Reload manifest after prefetch
       this.manifestLoaded = false;
       await this.initialize();
+
+      return result;
     } catch (error) {
       console.error("Prefetch failed:", error);
+      return { cached: 0, failed: uncachedImages.length, total: uncachedImages.length };
     }
   }
 

@@ -48,6 +48,7 @@ export function TrainingImageModal({
     current: 0,
     total: 0,
   });
+  const [aspectRatio, setAspectRatio] = useState<"1:1" | "16:9">("1:1");
 
   useEffect(() => {
     if (open && !image) {
@@ -130,6 +131,7 @@ export function TrainingImageModal({
                 actor_name: actorName,
                 base_image_url: baseImagePath,
                 prompt: prompt.prompt,
+                aspect_ratio: aspectRatio,
               }),
             }
           );
@@ -257,6 +259,71 @@ export function TrainingImageModal({
                     }}
                   >
                     Clear
+                  </button>
+                </div>
+              </div>
+
+              {/* Aspect Ratio Toggle */}
+              <div
+                style={{
+                  marginBottom: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 600,
+                    color: "#475569",
+                  }}
+                >
+                  Aspect Ratio:
+                </span>
+                <div
+                  style={{
+                    display: "inline-flex",
+                    background: "#f1f5f9",
+                    borderRadius: "8px",
+                    padding: "4px",
+                  }}
+                >
+                  <button
+                    onClick={() => setAspectRatio("1:1")}
+                    disabled={generating}
+                    style={{
+                      padding: "8px 16px",
+                      background: aspectRatio === "1:1" ? "white" : "transparent",
+                      color: aspectRatio === "1:1" ? "#667eea" : "#64748b",
+                      border: "none",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      cursor: generating ? "not-allowed" : "pointer",
+                      boxShadow: aspectRatio === "1:1" ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
+                      transition: "all 0.2s ease",
+                    }}
+                  >
+                    1:1 Square
+                  </button>
+                  <button
+                    onClick={() => setAspectRatio("16:9")}
+                    disabled={generating}
+                    style={{
+                      padding: "8px 16px",
+                      background: aspectRatio === "16:9" ? "white" : "transparent",
+                      color: aspectRatio === "16:9" ? "#667eea" : "#64748b",
+                      border: "none",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      cursor: generating ? "not-allowed" : "pointer",
+                      boxShadow: aspectRatio === "16:9" ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
+                      transition: "all 0.2s ease",
+                    }}
+                  >
+                    16:9 Cinematic
                   </button>
                 </div>
               </div>

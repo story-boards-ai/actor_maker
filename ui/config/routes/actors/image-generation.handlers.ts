@@ -184,9 +184,9 @@ export function handleGenerateSingleTrainingImage(
         throw new Error('Empty request body');
       }
 
-      const { actor_name, base_image_url, prompt, actor_type, actor_sex } = JSON.parse(body);
+      const { actor_name, base_image_url, prompt, actor_type, actor_sex, aspect_ratio } = JSON.parse(body);
       
-      console.log('[Generate Single] Parsed data:', { actor_id: actorId, actor_name, base_image_url, prompt });
+      console.log('[Generate Single] Parsed data:', { actor_id: actorId, actor_name, base_image_url, prompt, aspect_ratio });
 
       // base_image_url is now an S3 URL from manifest, use it directly
       const imageUrl = base_image_url;
@@ -198,6 +198,7 @@ export function handleGenerateSingleTrainingImage(
       const args = [scriptPath, actorId, actor_name, imageUrl, prompt];
       if (actor_type) args.push(actor_type);
       if (actor_sex) args.push(actor_sex);
+      if (aspect_ratio) args.push(aspect_ratio);
 
       console.log('[Generate Single] Spawning Python with args:', args);
 

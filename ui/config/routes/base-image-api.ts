@@ -180,6 +180,9 @@ function handleGenerateBaseImage(
               saveBase64Image(imageUrl, debugImagePath)
               console.log('[BASE-IMAGE] Debug copy saved to:', debugImagePath)
               
+              // Upload to S3 and update manifest
+              await uploadBaseImageToS3AndUpdateManifest(projectRoot, actorName, imagePath, filename)
+              
               // Add local path to response
               parsedResult.localPath = relativeUrl
               parsedResult.filename = filename
@@ -206,4 +209,44 @@ function handleGenerateBaseImage(
       res.end(JSON.stringify({ error: String(err) }))
     }
   })
+}
+
+/**
+ * Upload base image to S3 and update manifest with S3 URL
+ */
+async function uploadBaseImageToS3AndUpdateManifest(
+  projectRoot: string,
+  actorName: string,
+  imagePath: string,
+  filename: string
+) {
+  try {
+    console.log('[BASE-IMAGE] Uploading to S3...')
+    
+    // Call Python script to upload to S3 and update manifest
+    const pythonPath = path.join(projectRoot, 'scripts', 'upload_base_image_to_s3.py')
+    const args = [actorName, imagePath]
+    
+    const result = await executePython({
+      scriptPath: pythonPath,
+      args,
+      cwd: projectRoot,
+      logPrefix: '[BASE-IMAGE-S3]',
+    })
+    
+    if (result.exitCode !== 0) {
+      console.error('[BASE-IMAGE] S3 upload FAILED')
+      console.error('[BASE-IMAGE] Exit code:', result.exitCode)
+      console.error('[BASE-IMAGE] STDERR:', result.stderr)
+      throw new Error(`S3 upload failed: ${result.stderr}`)
+    }
+    
+    const uploadResult = JSON.parse(result.stdout)
+    console.log('[BASE-IMAGE] ✅ Uploaded to S3:', uploadResult.s3_url)
+    console.log('[BASE-IMAGE] ✅ Manifest updated')
+    
+  } catch (err) {
+    console.error('[BASE-IMAGE] Error uploading to S3:', err)
+    throw err
+  }
 }
