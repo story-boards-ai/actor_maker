@@ -87,8 +87,17 @@ class ReplicateService:
                 input=input_data
             )
             
-            # Extract URL from output
-            result_url = output[0] if isinstance(output, list) else output
+            # Extract URL from output - handle FileOutput objects
+            if isinstance(output, list):
+                result_url = output[0]
+            else:
+                result_url = output
+            
+            # Convert FileOutput to string URL if needed
+            if hasattr(result_url, 'url'):
+                result_url = result_url.url
+            elif hasattr(result_url, '__str__'):
+                result_url = str(result_url)
             
             if not result_url:
                 raise ValueError("Replicate did not return an image URL")

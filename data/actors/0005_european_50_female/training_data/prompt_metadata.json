@@ -1,0 +1,46 @@
+{
+  "images": {
+    "0005_european_50_female_24.jpg": {
+      "prompt": "Cinematic film scene: The woman walks through a concrete parking garage, lit by overhead strip lights. Tracking shot from the side at an angle, camera moving with character, eyes focused ahead on the path. Off-center framing with pillars creating depth and diagonal lines, cold blue-green lighting, pillars casting long shadows. Character moving through frame diagonally, unaware of being observed. Film-like cinematography, not symmetrical.",
+      "prompt_preview": "Cinematic film scene: The woman walks through a concrete parking garage, lit by overhead strip light...",
+      "generated_at": "2025-10-18T12:44:51.545239",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_24.jpg",
+      "index": 24
+    },
+    "0005_european_50_female_25.jpg": {
+      "prompt": "A black-and-white woodcut print style image of the woman sprinting down a narrow alley, eyes focused ahead on the path, angular highlights and carved textures. Dutch angle (tilted), profile mid shot from the side, head turned away from viewer, strong diagonal composition with alley walls creating depth. Off-center framing, thick black shapes and white cuts, no halftones. Preserve recognizable features. Candid action, character looking forward. Asymmetric framing, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white woodcut print style image of the woman sprinting down a narrow alley, eyes focused...",
+      "generated_at": "2025-10-18T12:45:44.291216",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_25.jpg",
+      "index": 25
+    },
+    "0005_european_50_female_26.jpg": {
+      "prompt": "A black-and-white manga illustration of the woman making a tense phone call in an alley, eyes closed or looking down, head tilted. Canted angle (tilted horizon), half-body shot, three-quarter angle from the side, face turned away from viewer. Off-center framing with alley walls creating diagonal, expressive inking with screentone patterns for shading, speed lines in background. No grayscale gradients, no color. Preserve identity. Candid moment, no camera awareness. Asymmetric composition, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white manga illustration of the woman making a tense phone call in an alley, eyes closed...",
+      "generated_at": "2025-10-18T12:45:58.690952",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_26.jpg",
+      "index": 26
+    },
+    "0005_european_50_female_27.jpg": {
+      "prompt": "A black-and-white conte crayon drawing of the woman rushing down subway stairs, hand on railing, eyes looking down at steps ahead. Tracking shot from the side at a diagonal angle, frontal diagonal view from platform level, face visible but angled downward in motion. Off-center framing with stairs creating strong diagonal, soft smudged blacks with sharp highlights, textured paper grain visible, dynamic diagonal composition. Preserve identity cues. Candid hurried movement, no eye contact. Asymmetric framing, not centered. Illustration, not photorealistic.",
+      "prompt_preview": "A black-and-white conte crayon drawing of the woman rushing down subway stairs, hand on railing, eye...",
+      "generated_at": "2025-10-18T12:46:11.637104",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_27.jpg",
+      "index": 27
+    },
+    "0005_european_50_female_28.jpg": {
+      "prompt": "A mixed media collage illustration of the woman vaulting over a concrete barrier in an urban plaza, mid-leap with arms extended, eyes locked on the landing zone ahead. Extreme low angle diagonal shot from ground level to the side at 68-degree angle, face visible but focused downward on landing spot. Off-center framing with character in upper-left third, dramatic perspective, three-point perspective, layered textures combining paint and paper elements, bold graphic shapes, vibrant street art color palette. Preserve facial structure. Candid parkour action, no eye contact. Asymmetric composition, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A mixed media collage illustration of the woman vaulting over a concrete barrier in an urban plaza, ...",
+      "generated_at": "2025-10-18T12:56:44.594109",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_28.jpg",
+      "index": 28
+    },
+    "0005_european_50_female_29.jpg": {
+      "prompt": "A mixed media collage illustration of the woman vaulting over a concrete barrier in an urban plaza, mid-leap with arms extended, eyes locked on the landing zone ahead. Extreme low angle diagonal shot from ground level to the side at 68-degree angle, face visible but focused downward on landing spot. Off-center framing with character in upper-left third, dramatic perspective, three-point perspective, layered textures combining paint and paper elements, bold graphic shapes, vibrant street art color palette. Preserve facial structure. Candid parkour action, no eye contact. Asymmetric composition, shot from the side, no visible vanishing point in center, absolutely NOT centered or symmetrical. Illustration, not photorealistic.",
+      "prompt_preview": "A mixed media collage illustration of the woman vaulting over a concrete barrier in an urban plaza, ...",
+      "generated_at": "2025-10-18T12:56:14.141723",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0005_european_50_female/0005_european_50_female_29.jpg",
+      "index": 29
+    }
+  }
+}

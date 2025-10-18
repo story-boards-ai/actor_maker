@@ -264,6 +264,97 @@ export function handleGenerateSingleTrainingImage(
 }
 
 /**
+ * POST /api/actors/:actorId/training-data/recreate
+ * Recreates a training image with the same prompt and parameters, overwriting the existing file in S3
+ */
+export function handleRecreateTrainingImage(
+  req: IncomingMessage,
+  res: ServerResponse,
+  projectRoot: string,
+  actorId: string
+) {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', async () => {
+    try {
+      console.log('[Recreate Training Image] Received body length:', body.length);
+      
+      if (!body || body.length === 0) {
+        throw new Error('Empty request body');
+      }
+
+      const { actor_name, filename, prompt, aspect_ratio, base_image_url } = JSON.parse(body);
+      
+      console.log('[Recreate Training Image] Parsed data:', { actor_id: actorId, actor_name, filename, aspect_ratio });
+
+      // Call S3-only Python script to recreate the training image
+      // This will overwrite the existing file in S3 with the same filename
+      const scriptPath = path.join(projectRoot, 'scripts', 'training_data', 'recreate_training_image_s3.py');
+      
+      const args = [
+        scriptPath, 
+        actorId, 
+        actor_name, 
+        base_image_url, 
+        prompt,
+        filename,  // Pass filename to overwrite
+        aspect_ratio || '1:1'
+      ];
+
+      console.log('[Recreate Training Image] Spawning Python with args:', args);
+
+      // Use venv Python if available, fallback to python3
+      const pythonPath = path.join(projectRoot, 'venv', 'bin', 'python');
+      const pythonCmd = fs.existsSync(pythonPath) ? pythonPath : 'python3';
+      console.log('[Recreate Training Image] Using Python:', pythonCmd);
+      
+      const pythonProcess = spawn(pythonCmd, args);
+
+      let output = '';
+      let errorOutput = '';
+
+      pythonProcess.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      pythonProcess.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      pythonProcess.on('close', (code) => {
+        if (code === 0) {
+          try {
+            const result = JSON.parse(output);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result));
+          } catch (e) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, message: 'Image recreated successfully' }));
+          }
+        } else {
+          console.error('Recreate failed:', errorOutput);
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: errorOutput || 'Recreate failed' }));
+        }
+      });
+    } catch (error) {
+      console.error('[Recreate Training Image] Error:', error);
+      console.error('[Recreate Training Image] Body was:', body);
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Invalid request body', 
+        details: error instanceof Error ? error.message : 'Unknown error',
+        bodyLength: body.length
+      }));
+    }
+  });
+}
+
+/**
  * POST /api/actors/:actorId/regenerate-poster-frame
  * Regenerates poster frame for an actor using their trained LoRA model
  */

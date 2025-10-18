@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-10-18T13:17:32.936896",
+  "actor_id": "285",
+  "actor_name": "0285_south_american_13_male",
+  "error": "Object of type FileOutput is not JSON serializable",
+  "success": false
+}

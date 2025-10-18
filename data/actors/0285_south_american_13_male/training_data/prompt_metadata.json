@@ -1,0 +1,11 @@
+{
+  "images": {
+    "0285_south_american_13_male_0.jpg": {
+      "prompt": "Cinematic film scene: A 13 year old hispanic boy with curly, medium-length brown hair and glasses, wearing Blue and white striped t-shirt, dark blue athletic shorts, black soccer cleats, and a black digital sports watch. runs across a rain-slick street at night, mid-stride, lit by car headlights from the side. Dutch angle with 15-degree tilt, low camera position, three-quarter back view with strong diagonal composition. Eyes focused ahead on the street, body leaning into motion. Reflections on the asphalt, no other figures in frame. Dynamic off-center framing with character positioned in lower-left third of frame, asymmetrical composition, no central vanishing point, diagonal depth instead of straight central lines, character unaware of camera, looking away. Film-like cinematography, absolutely NOT symmetrical or centered.",
+      "prompt_preview": "Cinematic film scene: A 13 year old hispanic boy with curly, medium-length brown hair and glasses, w...",
+      "generated_at": "2025-10-18T13:20:03.196455",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0285_south_american_13_male/0285_south_american_13_male_0.jpg",
+      "index": 0
+    }
+  }
+}

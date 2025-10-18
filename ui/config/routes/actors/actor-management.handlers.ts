@@ -293,7 +293,18 @@ export function handleGetPresetTrainingPrompts(
     
     const rawPrompts = JSON.parse(promptsJson);
     
+    // Build full character description with outfit
+    const sex = actor.sex?.toLowerCase();
+    const genericDescriptor = sex === 'male' ? 'man' : sex === 'female' ? 'woman' : 'person';
+    
+    // Create full character description: "description, wearing outfit"
+    let fullCharacterDescription = actor.description || genericDescriptor;
+    if (actor.outfit) {
+      fullCharacterDescription = `${fullCharacterDescription}, wearing ${actor.outfit}`;
+    }
+    
     // Convert Python prompts to frontend format with IDs and labels
+    // Replace generic descriptor with full character description
     const prompts = rawPrompts.map((prompt: string, index: number) => {
       // Determine category based on index (15 photo + 11 bw + 9 color = 35 total)
       let category: string;
@@ -316,17 +327,21 @@ export function handleGetPresetTrainingPrompts(
         ? firstSentence.substring(0, 37) + '...'
         : firstSentence;
       
+      // Replace generic descriptor patterns with full character description
+      // Handle patterns like "the man", "the woman", "the person", "The man", etc.
+      const descriptorPattern = new RegExp(`\\b(the|The)\\s+(${genericDescriptor})\\b`, 'g');
+      const customizedPrompt = prompt.replace(descriptorPattern, fullCharacterDescription);
+      
       return {
         id: `prompt_${index}`,
         category,
         label: shortLabel,
-        prompt
+        prompt: customizedPrompt
       };
     });
     
     // Calculate descriptor for response
-    const sex = actor.sex?.toLowerCase();
-    const descriptor = sex === 'male' ? 'man' : sex === 'female' ? 'woman' : 'person';
+    const descriptor = fullCharacterDescription;
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

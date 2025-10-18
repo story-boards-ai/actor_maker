@@ -137,6 +137,30 @@ def generate_single_training_image_s3(
     
     # Generate image with flux-kontext-pro
     logger.info(f"Calling Replicate flux-kontext-pro with aspect ratio: {aspect_ratio}...")
+    logger.info(f"Full prompt being sent: {prompt}")
+    
+    # Log the full request to debug folder (overwrites previous)
+    debug_dir = project_root / "debug" / "replicate_requests"
+    debug_dir.mkdir(parents=True, exist_ok=True)
+    
+    request_data = {
+        "timestamp": datetime.now().isoformat(),
+        "actor_id": actor_id,
+        "actor_name": actor_name,
+        "base_image_url": base_image_url,
+        "prompt": prompt,
+        "aspect_ratio": aspect_ratio,
+        "output_format": "jpg",
+        "model": "black-forest-labs/flux-kontext-pro",
+        "input_image_size_bytes": len(base_image_base64)
+    }
+    
+    # Use actor_name only (no timestamp) - overwrites previous request
+    debug_file = debug_dir / f"replicate_request.json"
+    with open(debug_file, 'w') as f:
+        json.dump(request_data, f, indent=2)
+    logger.info(f"Logged request to: {debug_file}")
+    
     try:
         generated_url = replicate.generate_grid_with_flux_kontext(
             prompt=prompt,
@@ -145,8 +169,35 @@ def generate_single_training_image_s3(
             output_format="jpg"
         )
         logger.info(f"Image generated: {generated_url}")
+        
+        # Log the response (overwrites previous)
+        response_data = {
+            "timestamp": datetime.now().isoformat(),
+            "actor_id": actor_id,
+            "actor_name": actor_name,
+            "generated_url": generated_url,
+            "success": True
+        }
+        response_file = debug_dir / f"replicate_response.json"
+        with open(response_file, 'w') as f:
+            json.dump(response_data, f, indent=2)
+        logger.info(f"Logged response to: {response_file}")
+        
     except Exception as e:
         logger.error(f"Generation failed: {e}")
+        
+        # Log the error (overwrites previous)
+        error_data = {
+            "timestamp": datetime.now().isoformat(),
+            "actor_id": actor_id,
+            "actor_name": actor_name,
+            "error": str(e),
+            "success": False
+        }
+        error_file = debug_dir / f"replicate_error.json"
+        with open(error_file, 'w') as f:
+            json.dump(error_data, f, indent=2)
+        
         return {
             "success": False,
             "error": f"Generation failed: {str(e)}"

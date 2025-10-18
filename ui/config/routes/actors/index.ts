@@ -10,6 +10,7 @@ import {
   handleGenerateTrainingImages,
   handleGenerateAllPromptImages,
   handleGenerateSingleTrainingImage,
+  handleRecreateTrainingImage,
   handleRegeneratePosterFrame
 } from './image-generation.handlers';
 import {
@@ -68,6 +69,15 @@ export function createActorsApi(projectRoot: string) {
       const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/generate-single$/);
       if (match) {
         handleGenerateSingleTrainingImage(req, res, projectRoot, match[1]);
+        return;
+      }
+    }
+
+    // POST /api/actors/:actorId/training-data/recreate
+    if (url?.startsWith('/api/actors/') && url.includes('/training-data/recreate') && req.method === 'POST') {
+      const match = url.match(/\/api\/actors\/([^/]+)\/training-data\/recreate$/);
+      if (match) {
+        handleRecreateTrainingImage(req, res, projectRoot, match[1]);
         return;
       }
     }

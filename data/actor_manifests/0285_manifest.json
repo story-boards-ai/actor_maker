@@ -29,15 +29,26 @@
     "total_size_mb": 0,
     "base_images_count": 1,
     "scene_images_count": 0,
-    "training_images_count": 0,
+    "training_images_count": 1,
     "training_data_size_bytes": 0,
     "training_data_size_mb": 0.0,
-    "training_synced_count": 0,
+    "training_synced_count": 1,
     "training_local_only_count": 0
   },
   "status": "character_directory_not_found",
-  "training_data": [],
-  "training_data_updated": "2025-10-17T16:46:16.860237",
+  "training_data": [
+    {
+      "filename": "0285_south_american_13_male_0.jpg",
+      "s3_url": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/training_data/0285_south_american_13_male/0285_south_american_13_male_0.jpg",
+      "md5_hash": "eb342cc1838ea5cfc24b0a8dcf44bb0f",
+      "size_bytes": 292943,
+      "size_mb": 0.28,
+      "modified_timestamp": 1760786403.1959727,
+      "modified_date": "2025-10-18T13:20:03.195973",
+      "status": "synced"
+    }
+  ],
+  "training_data_updated": "2025-10-18T13:20:03.195981",
   "poster_frames": {
     "standard": {
       "webp_sm": "https://story-boards-assets.s3.us-west-1.amazonaws.com/system_actors/poster_frames/0285_south_american_13_male_poster_sm.webp",
