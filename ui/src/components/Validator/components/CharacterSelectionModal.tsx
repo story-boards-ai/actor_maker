@@ -25,37 +25,8 @@ export function CharacterSelectionModal({
   useEffect(() => {
     if (open) {
       loadSystemActors();
-      loadActorsWithModels();
     }
   }, [open]);
-
-  async function loadActorsWithModels() {
-    try {
-      console.log("[CharacterModal] Fetching trained models...");
-      const response = await fetch("/api/training/models");
-
-      if (response.ok) {
-        const data = await response.json();
-        const models = data.models || [];
-
-        // Extract unique actor IDs that have trained models
-        const actorIds = new Set<string>();
-        models.forEach((model: any) => {
-          if (model.styleId) {
-            actorIds.add(model.styleId);
-          }
-        });
-
-        console.log(
-          "[CharacterModal] Actors with models:",
-          Array.from(actorIds)
-        );
-        setActorsWithModels(actorIds);
-      }
-    } catch (error) {
-      console.error("[CharacterModal] Failed to load trained models:", error);
-    }
-  }
 
   async function loadSystemActors() {
     try {
@@ -70,7 +41,27 @@ export function CharacterSelectionModal({
         const actors = await response.json();
         console.log("[CharacterModal] Loaded actors:", actors);
         console.log("[CharacterModal] Number of actors:", actors?.length || 0);
+        
+        // Filter actors that have LoRA models in their manifests
+        const actorIds = new Set<string>();
+        actors.forEach((actor: any) => {
+          // Check if actor has system LoRA model or custom LoRA models
+          const hasSystemLora = actor.lora_model && actor.lora_model.filename;
+          const hasCustomLoras = actor.custom_lora_models && actor.custom_lora_models.length > 0;
+          
+          if (hasSystemLora || hasCustomLoras) {
+            actorIds.add(actor.id.toString());
+          }
+        });
+
+        console.log(
+          "[CharacterModal] Actors with LoRA models:",
+          Array.from(actorIds),
+          `(${actorIds.size} out of ${actors.length})`
+        );
+        
         setSystemActors(actors || []);
+        setActorsWithModels(actorIds);
       } else {
         console.error(
           "[CharacterModal] Failed to load actors, status:",
@@ -104,16 +95,17 @@ export function CharacterSelectionModal({
     );
   });
 
-  const handleSelectActor = (actor: ActorData) => {
+  const handleSelectActor = (actor: any) => {
     const character: ValidatorCharacter = {
       id: actor.id.toString(), // Use numeric ID as string to match backend
       name: actor.name,
       type: "system",
       description: actor.description,
-      loraUrl: actor.url,
+      loraUrl: actor.lora_model?.s3_accelerated_url || actor.lora_model?.s3_url || actor.url,
       previewImage:
         actor.poster_frames?.accelerated?.webp_sm ||
         actor.poster_frames?.accelerated?.webp_md,
+      customLoraModels: actor.custom_lora_models || [],
     };
     onSelect(character);
   };
@@ -153,8 +145,8 @@ export function CharacterSelectionModal({
           ) : filteredActors.length === 0 ? (
             <div className="character-empty">
               {searchTerm
-                ? "No actors with trained models match your search."
-                : "No actors with trained models available. Train a model from the Training tab first."}
+                ? "No actors with LoRA models match your search."
+                : "No actors with LoRA models available. Actors need to have lora_model or custom_lora_models in their manifests."}
             </div>
           ) : (
             <div className="character-grid">

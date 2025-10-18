@@ -34,28 +34,49 @@ export function useValidatorState() {
   >([]);
   const [useCameraLora, setUseCameraLora] = useState<boolean>(false);
 
-  // Filter models by selected character (not by style)
+  // Filter models by selected character - use manifest LoRA models
   const filteredModels = useMemo(() => {
     if (selectedCharacters.length === 0) return trainedModels;
     
-    console.log('[Validator] Filtering models:', {
-      totalModels: trainedModels.length,
-      selectedCharacters: selectedCharacters.map(c => ({ id: c.id, name: c.name })),
-      modelStyleIds: trainedModels.map(m => m.styleId)
+    console.log('[Validator] Building models from character manifests:', {
+      selectedCharacters: selectedCharacters.map(c => ({ id: c.id, name: c.name }))
     });
     
-    // Show all models for the selected character
-    // Character models are stored with character ID in the styleId field
-    const filtered = trainedModels.filter((model) =>
-      selectedCharacters.some((char) => {
-        const match = model.styleId === char.id || model.styleId === char.id.toString();
-        console.log('[Validator] Comparing:', { modelStyleId: model.styleId, charId: char.id, match });
-        return match;
-      })
-    );
+    // Build models list from character's lora_model and custom_lora_models
+    const models: TrainedModel[] = [];
     
-    console.log('[Validator] Filtered result:', filtered.length, 'models');
-    return filtered;
+    selectedCharacters.forEach((char) => {
+      // Add system LoRA model if available
+      if (char.loraUrl) {
+        models.push({
+          id: `${char.id}_system`,
+          name: `${char.name} (System LoRA)`,
+          styleId: char.id,
+          styleName: char.name,
+          loraUrl: char.loraUrl,
+          timestamp: new Date().toISOString(),
+          description: 'System-trained LoRA model'
+        });
+      }
+      
+      // Add custom LoRA models if available
+      if (char.customLoraModels && char.customLoraModels.length > 0) {
+        char.customLoraModels.forEach((customModel: any) => {
+          models.push({
+            id: `${char.id}_${customModel.version}`,
+            name: `${char.name} (${customModel.version})`,
+            styleId: char.id,
+            styleName: char.name,
+            loraUrl: customModel.s3_accelerated_url || customModel.s3_url,
+            timestamp: customModel.last_modified || new Date().toISOString(),
+            description: `Custom LoRA model - ${customModel.version}`
+          });
+        });
+      }
+    });
+    
+    console.log('[Validator] Built models from manifests:', models.length, 'models');
+    return models;
   }, [trainedModels, selectedCharacters]);
 
   // Generation parameters - all editable

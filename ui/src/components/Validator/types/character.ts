@@ -5,6 +5,18 @@ export interface ValidatorCharacter {
   description?: string;
   loraUrl?: string;
   previewImage?: string;
+  customLoraModels?: Array<{
+    filename: string;
+    version: string;
+    s3_url: string;
+    s3_accelerated_url: string;
+    size_bytes: number;
+    size_mb: number;
+    md5_hash: string;
+    last_modified: string;
+    created_date: string;
+    format: string;
+  }>;
 }
 
 export interface ActorData {

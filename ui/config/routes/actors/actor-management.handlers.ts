@@ -25,9 +25,22 @@ export function handleGetAllActors(
 
     const actorsData = JSON.parse(fs.readFileSync(actorsDataPath, 'utf-8'));
     
-    // Enrich each actor with training data information
+    // Enrich each actor with training data information and manifest data
     const enrichedActors = actorsData.map((actor: any) => {
       const trainingDataDir = path.join(projectRoot, 'data', 'actors', actor.name, 'training_data');
+      
+      // Load manifest file to get lora_model and custom_lora_models
+      const actorIdPadded = actor.id.toString().padStart(4, '0');
+      const manifestPath = path.join(projectRoot, 'data', 'actor_manifests', `${actorIdPadded}_manifest.json`);
+      let manifestData: any = {};
+      
+      if (fs.existsSync(manifestPath)) {
+        try {
+          manifestData = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+        } catch (error) {
+          console.error(`Error loading manifest for actor ${actor.id}:`, error);
+        }
+      }
       
       // Check if training data directory exists
       if (fs.existsSync(trainingDataDir)) {
@@ -44,18 +57,24 @@ export function handleGetAllActors(
         const responseJsonPath = path.join(trainingDataDir, 'response.json');
         const hasSyncedData = fs.existsSync(responseJsonPath);
         
-        // Add training_data field to actor
+        // Add training_data field, lora_model, and custom_lora_models to actor
         return {
           ...actor,
           training_data: {
             count: imageFiles.length,
             synced: hasSyncedData
-          }
+          },
+          lora_model: manifestData.lora_model,
+          custom_lora_models: manifestData.custom_lora_models
         };
       }
       
-      // No training data directory
-      return actor;
+      // No training data directory, but still include manifest data
+      return {
+        ...actor,
+        lora_model: manifestData.lora_model,
+        custom_lora_models: manifestData.custom_lora_models
+      };
     });
     
     res.statusCode = 200;
